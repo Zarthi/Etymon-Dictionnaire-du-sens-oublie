@@ -3,6 +3,8 @@ name: Validation et déploiement
 on:
   push:
   pull_request:
+  # Publication manuelle seulement : onglet Actions, « Run workflow » sur main.
+  workflow_dispatch:
 
 jobs:
   validation:
@@ -23,14 +25,14 @@ jobs:
       - name: Tests
         run: npm test
       - name: Publication du site construit
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
   deploiement:
-    # Seule la branche main est publiée, et seulement si la validation a réussi.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Publication déclenchée à la main, depuis main, et seulement si la validation a réussi.
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     needs: validation
     runs-on: ubuntu-latest
     permissions:

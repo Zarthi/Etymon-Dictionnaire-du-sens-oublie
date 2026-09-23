@@ -5,8 +5,8 @@ langue source directe, le sens de cet étymon, et en une à trois phrases ce que
 
 > **Étonner** — du latin populaire *\*extonare* : « ébranler comme d'un coup de tonnerre ».
 
-Site : https://zarthi.github.io/Etymon-Dictionnaire-du-sens-oublie/
-(application installable, utilisable hors ligne, sans serveur ni appel réseau).
+Application web installable, utilisable hors ligne, sans serveur ni appel réseau
+(pas encore publiée).
 
 Chaque fiche s'appuie sur des sources citées et vérifiables : Littré, Gaffiot, Bailly,
 vérifiées sur le TLFi. Aucune étymologie n'est publiée sans avoir été relue et validée.
@@ -29,7 +29,8 @@ npm run dev          # app en local, brouillons compris
 | `npm test` | tests (Vitest) |
 | `npm run build` | site de production dans `dist/`, fiches validées seulement |
 
-Chaque push sur `main` qui passe la validation est publié sur GitHub Pages.
+Chaque push est validé par la CI. La publication sur GitHub Pages se déclenche à la main
+(onglet Actions, « Run workflow »), une fois Pages activé dans les réglages du dépôt.
 
 ## Ajouter une fiche
 
