@@ -1,0 +1,19 @@
+# Fiche fictive, pour les tests uniquement.
+mot: épreuve
+etymon: probatio
+reconstruit: false
+langue: latin
+sens: preuve de test
+explication: >
+  Fiche fictive. Elle sert de doublet à la fiche essai !
+incertain: true
+doublets: [essai]
+famille: [prouver]
+themes: []
+sources: [Gaffiot, TLFi]
+lectureTraditionnelle:
+  texte: Lecture fictive, pour les tests.
+  auteur: Auteur fictif
+  source: Ouvrage fictif, livre I
+statut: brouillon
+historique: []

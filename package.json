@@ -5,21 +5,34 @@
   "description": "Étymon : dictionnaire du sens oublié",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run assembler && vite",
+    "build": "npm run assembler && vite build",
     "preview": "vite preview",
+    "valider": "node scripts/valider-fiches.ts",
+    "assembler": "node scripts/assembler-fiches.ts",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "simple-git-hooks"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@tsconfig/svelte": "^5.0.8",
     "@types/node": "^26.6.2",
+    "simple-git-hooks": "^2.14.0",
     "svelte": "^5.57.1",
     "svelte-check": "^4.7.6",
     "typescript": "~6.0",
     "vite": "^8.3.0",
     "vite-plugin-pwa": "^1.3.0",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run valider"
   }
 }

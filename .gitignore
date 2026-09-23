@@ -5,3 +5,4 @@ src/generes/
 *.log
 .vscode/*
 !.vscode/extensions.json
+.vitest/

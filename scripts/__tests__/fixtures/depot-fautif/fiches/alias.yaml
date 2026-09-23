@@ -1,0 +1,15 @@
+# Étymon reconstruit non mis entre guillemets : alias YAML.
+mot: alias
+etymon: *aliasum
+reconstruit: true
+langue: latin
+sens: test
+explication: Test.
+incertain: false
+doublets: []
+famille: []
+themes: []
+sources: [Littré]
+lectureTraditionnelle: null
+statut: brouillon
+historique: []
