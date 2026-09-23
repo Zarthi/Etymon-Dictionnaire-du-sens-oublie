@@ -1,0 +1,21 @@
+mot: adolescent
+etymon: adolescens
+reconstruit: false
+langue: latin
+sens: qui est en train de grandir
+explication: >
+  Adolescere, c'est croître. L'adolescent est celui qui grandit encore ;
+  l'adulte, adultus, celui qui a fini de grandir. Les deux mots sont les deux
+  temps d'un même verbe.
+incertain: false
+racine: null
+doublets: []
+famille: [ adulte ]
+themes: [ famille, corps, temps ]
+sources:
+  - ouvrage: Littré
+    entree: adolescent
+    url: https://www.littre.org/definition/adolescent
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

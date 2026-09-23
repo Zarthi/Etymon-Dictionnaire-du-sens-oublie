@@ -1,0 +1,24 @@
+mot: anathème
+etymon: anathema
+reconstruit: false
+langue: latin ecclésiastique
+sens: chose vouée à Dieu, puis chose maudite
+explication: >
+  L'anathème est d'abord une offrande suspendue dans un temple, ce qui est mis à
+  part pour le dieu. Ce qui est voué à Dieu est retiré aux hommes : le mot a
+  glissé de l'offrande à la malédiction.
+incertain: false
+racine:
+  forme: anáthēma
+  langue: grec ancien
+  sens: offrande déposée dans un temple
+doublets: []
+famille: [ thème, thèse ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: Littré
+    entree: anathème
+    url: https://www.littre.org/definition/anath%C3%A8me
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

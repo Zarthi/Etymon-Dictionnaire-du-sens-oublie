@@ -1,0 +1,21 @@
+mot: amateur
+etymon: amator
+reconstruit: false
+langue: latin
+sens: celui qui aime
+explication: >
+  L'amateur est celui qui aime : amator. L'amateur d'art aime les œuvres ; c'est
+  ensuite qu'on l'a opposé au professionnel, et qu'il a pris un air de
+  dilettante. Le sens premier était un éloge.
+incertain: false
+racine: null
+doublets: []
+famille: [ aimer, amour, amant ]
+themes: [ émotions, travail ]
+sources:
+  - ouvrage: Littré
+    entree: amateur
+    url: https://www.littre.org/definition/amateur
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,21 @@
+mot: aveugle
+etymon: "*aboculus"
+reconstruit: true
+langue: latin populaire
+sens: privé d'yeux
+explication: >
+  Ab oculis, sans yeux : l'aveugle est celui à qui les yeux ont été ôtés. Le
+  latin classique disait caecus ; le mot populaire dit la privation, non
+  l'obscurité.
+incertain: false
+racine: null
+doublets: []
+famille: [ oculaire, œil ]
+themes: [ corps, santé ]
+sources:
+  - ouvrage: Littré
+    entree: aveugle
+    url: https://www.littre.org/definition/aveugle
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

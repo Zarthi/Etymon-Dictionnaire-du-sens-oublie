@@ -1,0 +1,20 @@
+mot: abstrait
+etymon: abstractus
+reconstruit: false
+langue: latin
+sens: tiré à l'écart, arraché
+explication: >
+  Abstraire, c'est tirer hors de : abstrahere, arracher une chose à ce qui
+  l'entoure. L'idée abstraite n'est pas vague, elle a été extraite du concret.
+incertain: false
+racine: null
+doublets: []
+famille: [ extraire, distraire, soustraire ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: Littré
+    entree: abstrait
+    url: https://www.littre.org/definition/abstrait
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

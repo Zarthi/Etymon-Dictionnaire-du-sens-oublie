@@ -1,0 +1,21 @@
+mot: arbitre
+etymon: arbiter
+reconstruit: false
+langue: latin
+sens: témoin oculaire, juge choisi
+explication: >
+  L'arbiter romain est le témoin, celui qui a vu, puis le juge que les parties
+  choisissent. Le libre arbitre est ce pouvoir de juger par soi-même, de
+  trancher en témoin de sa propre cause.
+incertain: false
+racine: null
+doublets: []
+famille: [ arbitraire ]
+themes: [ droit, morale, esprit ]
+sources:
+  - ouvrage: Littré
+    entree: arbitre
+    url: https://www.littre.org/definition/arbitre
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

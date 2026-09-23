@@ -1,0 +1,21 @@
+mot: ambition
+etymon: ambitio
+reconstruit: false
+langue: latin
+sens: action d'aller autour, brigue des suffrages
+explication: >
+  Ambire, c'est aller autour. L'ambitio romaine est la tournée du candidat qui
+  sollicite les votes. L'ambition est d'abord une démarche, le tour que l'on
+  fait pour obtenir une charge.
+incertain: false
+racine: null
+doublets: []
+famille: [ ambiant, ambiance ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: Littré
+    entree: ambition
+    url: https://www.littre.org/definition/ambition
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

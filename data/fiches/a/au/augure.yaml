@@ -1,0 +1,21 @@
+mot: augure
+etymon: augurium
+reconstruit: false
+langue: latin
+sens: présage tiré du vol des oiseaux
+explication: >
+  L'augure romain observe les oiseaux pour y lire la volonté des dieux. Un
+  événement de bon augure est un vol favorable ; inaugurer, c'est ouvrir un lieu
+  après avoir pris les augures.
+incertain: false
+racine: null
+doublets: []
+famille: [ inaugurer, augural ]
+themes: [ religion, savoir ]
+sources:
+  - ouvrage: Littré
+    entree: augure
+    url: https://www.littre.org/definition/augure
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

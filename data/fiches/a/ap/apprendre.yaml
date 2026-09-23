@@ -1,0 +1,21 @@
+mot: apprendre
+etymon: apprehendere
+reconstruit: false
+langue: latin
+sens: saisir, prendre
+explication: >
+  Apprendre, c'est prendre : apprehendere, saisir avec la main. Ce qu'on
+  apprend, on s'en empare, on le tient. Appréhender, forme savante du même mot,
+  a gardé la prise, et y a ajouté la crainte.
+incertain: false
+racine: null
+doublets: []
+famille: [ prendre, appréhender, prise ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: Littré
+    entree: apprendre
+    url: https://www.littre.org/definition/apprendre
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

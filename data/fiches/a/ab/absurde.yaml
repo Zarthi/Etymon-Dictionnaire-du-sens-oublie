@@ -1,0 +1,21 @@
+mot: absurde
+etymon: absurdus
+reconstruit: false
+langue: latin
+sens: discordant, qui sonne faux
+explication: >
+  L'absurde est d'abord une fausse note : ab-surdus, ce qui rend un son sourd,
+  dissonant. Une chose absurde ne choque pas seulement la raison, elle écorche
+  l'oreille.
+incertain: false
+racine: null
+doublets: []
+famille: [ sourd ]
+themes: [ esprit, parole ]
+sources:
+  - ouvrage: Littré
+    entree: absurde
+    url: https://www.littre.org/definition/absurde
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

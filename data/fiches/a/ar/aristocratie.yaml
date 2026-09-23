@@ -1,0 +1,21 @@
+mot: aristocratie
+etymon: aristokratía
+reconstruit: false
+langue: grec ancien
+sens: gouvernement des meilleurs
+explication: >
+  Aristos est le meilleur ; l'aristocratie est le pouvoir des meilleurs, par
+  opposition à celui du peuple ou d'un seul. Le mot désigne un idéal avant de
+  nommer une classe héréditaire.
+incertain: false
+racine: null
+doublets: []
+famille: [ démocratie, monarchie ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: Littré
+    entree: aristocratie
+    url: https://www.littre.org/definition/aristocratie
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

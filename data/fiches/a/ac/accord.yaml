@@ -1,0 +1,20 @@
+mot: accord
+etymon: "*accordare"
+reconstruit: true
+langue: latin populaire
+sens: mettre cœur à cœur
+explication: >
+  S'accorder, c'est d'abord mettre les cœurs ensemble : cor, cordis. L'accord
+  des personnes, avant celui des instruments, est une entente de cœur.
+incertain: false
+racine: null
+doublets: []
+famille: [ cœur, concorde, discorde, courage ]
+themes: [ émotions, société, parole ]
+sources:
+  - ouvrage: Littré
+    entree: accorder
+    url: https://www.littre.org/definition/accorder
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

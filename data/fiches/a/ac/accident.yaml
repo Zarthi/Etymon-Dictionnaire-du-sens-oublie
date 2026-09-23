@@ -1,0 +1,21 @@
+mot: accident
+etymon: accidens
+reconstruit: false
+langue: latin
+sens: ce qui survient, ce qui tombe sur
+explication: >
+  Accidere, c'est tomber sur. L'accident est ce qui arrive sans être attendu,
+  heureux ou non ; la philosophie en garde le sens de ce qui s'ajoute à une
+  chose sans tenir à son essence.
+incertain: false
+racine: null
+doublets: []
+famille: [ incident, coïncider, chute ]
+themes: [ esprit, savoir, temps ]
+sources:
+  - ouvrage: Littré
+    entree: accident
+    url: https://www.littre.org/definition/accident
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

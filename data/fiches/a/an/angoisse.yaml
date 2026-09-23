@@ -1,0 +1,21 @@
+mot: angoisse
+etymon: angustia
+reconstruit: false
+langue: latin
+sens: étroitesse, passage resserré
+explication: >
+  Angustia est l'étroitesse, le défilé où l'on ne passe qu'à peine. L'angoisse
+  est le sentiment d'être à l'étroit : la gorge se serre, la poitrine se
+  resserre. Le corps y dit ce que le mot dit.
+incertain: false
+racine: null
+doublets: []
+famille: [ angine, anxiété ]
+themes: [ émotions, corps ]
+sources:
+  - ouvrage: Littré
+    entree: angoisse
+    url: https://www.littre.org/definition/angoisse
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

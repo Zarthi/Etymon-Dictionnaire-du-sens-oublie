@@ -1,0 +1,24 @@
+mot: agonie
+etymon: agonia
+reconstruit: false
+langue: latin ecclésiastique
+sens: angoisse, lutte intérieure
+explication: >
+  L'agonie est un combat : agōn, la lutte des athlètes, puis l'angoisse du
+  Christ à Gethsémani. Le mot ne désigne pas l'affaiblissement final, mais le
+  dernier corps à corps.
+incertain: false
+racine:
+  forme: agōn
+  langue: grec ancien
+  sens: lutte, combat
+doublets: []
+famille: [ antagoniste, protagoniste ]
+themes: [ corps, santé, religion ]
+sources:
+  - ouvrage: Littré
+    entree: agonie
+    url: https://www.littre.org/definition/agonie
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

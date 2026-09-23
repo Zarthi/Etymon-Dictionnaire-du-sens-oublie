@@ -1,0 +1,21 @@
+mot: accueillir
+etymon: "*accolligere"
+reconstruit: true
+langue: latin populaire
+sens: recueillir, rassembler auprès de soi
+explication: >
+  Accueillir, c'est cueillir vers soi : accolligere, recueillir, rassembler.
+  Celui qu'on accueille est ramassé, mis à l'abri, comme une récolte qu'on
+  rentre.
+incertain: false
+racine: null
+doublets: []
+famille: [ cueillir, recueillir, collecte ]
+themes: [ maison, société ]
+sources:
+  - ouvrage: Littré
+    entree: accueillir
+    url: https://www.littre.org/definition/accueillir
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

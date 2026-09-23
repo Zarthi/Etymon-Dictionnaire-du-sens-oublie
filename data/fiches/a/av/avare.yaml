@@ -1,0 +1,21 @@
+mot: avare
+etymon: avarus
+reconstruit: false
+langue: latin
+sens: avide, qui désire ardemment
+explication: >
+  Avere, c'est désirer ardemment ; l'avarus est un homme avide. L'avare n'est
+  pas d'abord celui qui retient, mais celui qui veut toujours plus. La rétention
+  n'est que l'envers de l'appétit.
+incertain: false
+racine: null
+doublets: []
+famille: [ avide, avidité ]
+themes: [ morale, argent ]
+sources:
+  - ouvrage: Littré
+    entree: avare
+    url: https://www.littre.org/definition/avare
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,21 @@
+mot: aliéner
+etymon: alienare
+reconstruit: false
+langue: latin
+sens: rendre autre, céder à un autre
+explication: >
+  Alienus, c'est ce qui appartient à un autre. Aliéner un bien, c'est le faire
+  passer à autrui ; être aliéné, c'est devenir autre à soi-même, étranger à sa
+  propre raison.
+incertain: false
+racine: null
+doublets: []
+famille: [ autre, autrui, alias ]
+themes: [ droit, esprit, société ]
+sources:
+  - ouvrage: Littré
+    entree: aliéner
+    url: https://www.littre.org/definition/ali%C3%A9ner
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

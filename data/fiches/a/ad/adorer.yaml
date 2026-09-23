@@ -1,0 +1,20 @@
+mot: adorer
+etymon: adorare
+reconstruit: false
+langue: latin
+sens: adresser une prière, parler à
+explication: >
+  Adorer, c'est parler à : ad-orare, adresser sa parole, sa prière. On adore
+  d'abord en s'adressant à quelqu'un, avant que le mot ne dise l'amour éperdu.
+incertain: false
+racine: null
+doublets: []
+famille: [ oraison, orateur, oracle ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: Littré
+    entree: adorer
+    url: https://www.littre.org/definition/adorer
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,24 @@
+mot: architecte
+etymon: architectus
+reconstruit: false
+langue: latin
+sens: maître d'œuvre, constructeur
+explication: >
+  Le tektōn grec est le charpentier, l'artisan qui assemble ; l'architecte est
+  celui qui commande aux charpentiers. Le mot dit un métier de chantier, avant
+  l'art du dessin.
+incertain: false
+racine:
+  forme: arkhitéktōn
+  langue: grec ancien
+  sens: chef des charpentiers
+doublets: []
+famille: [ technique, tectonique ]
+themes: [ travail, maison ]
+sources:
+  - ouvrage: Littré
+    entree: architecte
+    url: https://www.littre.org/definition/architecte
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

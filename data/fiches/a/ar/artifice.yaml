@@ -1,0 +1,21 @@
+mot: artifice
+etymon: artificium
+reconstruit: false
+langue: latin
+sens: métier, habileté, ouvrage d'art
+explication: >
+  L'artifice est l'œuvre de l'art, ce que l'habileté humaine produit. Le mot n'a
+  d'abord rien de trompeur : le feu d'artifice en garde le sens d'ouvrage
+  savant. La ruse est venue ensuite.
+incertain: false
+racine: null
+doublets: []
+famille: [ art, artisan, artificiel ]
+themes: [ travail, savoir ]
+sources:
+  - ouvrage: Littré
+    entree: artifice
+    url: https://www.littre.org/definition/artifice
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

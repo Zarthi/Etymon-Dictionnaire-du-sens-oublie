@@ -1,0 +1,21 @@
+mot: anxiété
+etymon: anxietas
+reconstruit: false
+langue: latin
+sens: resserrement, oppression
+explication: >
+  Angere, c'est serrer, étrangler. L'anxieux est un homme serré, oppressé, comme
+  l'angoissé est un homme à l'étroit. Les deux mots viennent du même geste qui
+  prend à la gorge.
+incertain: false
+racine: null
+doublets: []
+famille: [ angoisse, angine ]
+themes: [ émotions, corps ]
+sources:
+  - ouvrage: Littré
+    entree: anxiété
+    url: https://www.littre.org/definition/anxi%C3%A9t%C3%A9
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

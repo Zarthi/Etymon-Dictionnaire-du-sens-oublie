@@ -1,0 +1,21 @@
+mot: ange
+etymon: angelus
+reconstruit: false
+langue: latin ecclésiastique
+sens: messager
+explication: >
+  L'ange est un messager : angelos, celui qui porte une nouvelle. Le mot ne dit
+  rien de sa nature, seulement sa fonction : il est envoyé, il annonce.
+  L'Évangile, la bonne nouvelle, porte la même racine.
+incertain: false
+racine: null
+doublets: []
+famille: [ évangile, archange ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: Littré
+    entree: ange
+    url: https://www.littre.org/definition/ange
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

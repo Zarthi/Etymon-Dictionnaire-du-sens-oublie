@@ -1,0 +1,24 @@
+mot: abandonner
+etymon: à bandon
+reconstruit: false
+langue: ancien français
+sens: au pouvoir de, à la discrétion de
+explication: >
+  Mettre à bandon, c'était laisser une chose au pouvoir d'un autre, à sa
+  discrétion. Abandonner, ce n'est pas d'abord délaisser, mais remettre entre
+  d'autres mains.
+incertain: false
+racine:
+  forme: "*ban"
+  langue: francique
+  sens: proclamation, pouvoir de commander
+doublets: []
+famille: [ ban, bannir ]
+themes: [ société, émotions ]
+sources:
+  - ouvrage: Littré
+    entree: abandonner
+    url: https://www.littre.org/definition/abandonner
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,21 @@
+mot: anarchie
+etymon: anarkhía
+reconstruit: false
+langue: grec ancien
+sens: absence de chef, de commandement
+explication: >
+  Arkhē est à la fois le commencement et le commandement ; l'anarchie est
+  l'absence de l'un et de l'autre. Le mot dit un vide de principe, avant de
+  nommer une doctrine.
+incertain: false
+racine: null
+doublets: []
+famille: [ monarchie, hiérarchie, archétype ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: Littré
+    entree: anarchie
+    url: https://www.littre.org/definition/anarchie
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

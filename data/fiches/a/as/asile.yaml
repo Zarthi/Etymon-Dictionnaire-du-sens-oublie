@@ -1,0 +1,24 @@
+mot: asile
+etymon: asylum
+reconstruit: false
+langue: latin
+sens: lieu inviolable, refuge
+explication: >
+  Sylan, c'est piller, saisir ; l'asylon est le lieu où la saisie est interdite,
+  le temple où le fugitif est hors d'atteinte. L'asile est un sanctuaire avant
+  d'être un hospice.
+incertain: false
+racine:
+  forme: ásylon
+  langue: grec ancien
+  sens: qu'on ne peut piller
+doublets: []
+famille: []
+themes: [ droit, religion, maison ]
+sources:
+  - ouvrage: TLFi
+    entree: asile
+    url: https://www.cnrtl.fr/etymologie/asile
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,21 @@
+mot: apathie
+etymon: apátheia
+reconstruit: false
+langue: grec ancien
+sens: absence de passion, impassibilité
+explication: >
+  Pour les stoïciens, l'apatheia est une vertu : l'âme que les passions
+  n'atteignent plus. Nous en avons fait un défaut, l'absence d'énergie. L'idéal
+  du sage est devenu un symptôme.
+incertain: false
+racine: null
+doublets: []
+famille: [ pathétique, sympathie, passion ]
+themes: [ morale, émotions ]
+sources:
+  - ouvrage: Littré
+    entree: apathie
+    url: https://www.littre.org/definition/apathie
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

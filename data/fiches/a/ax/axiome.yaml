@@ -1,0 +1,24 @@
+mot: axiome
+etymon: axioma
+reconstruit: false
+langue: latin
+sens: proposition qui s'impose d'elle-même
+explication: >
+  Axios, c'est digne, qui vaut. L'axiome est ce qu'on juge digne d'être admis
+  sans preuve, ce dont la valeur s'impose. Il n'est pas une vérité démontrée,
+  mais une estime accordée.
+incertain: false
+racine:
+  forme: axíōma
+  langue: grec ancien
+  sens: ce qui est jugé digne, estimé
+doublets: []
+famille: []
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: Littré
+    entree: axiome
+    url: https://www.littre.org/definition/axiome
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

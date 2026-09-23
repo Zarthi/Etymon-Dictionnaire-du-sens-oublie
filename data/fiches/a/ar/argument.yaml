@@ -1,0 +1,21 @@
+mot: argument
+etymon: argumentum
+reconstruit: false
+langue: latin
+sens: ce qui fait voir clair, preuve
+explication: >
+  Arguere, c'est faire voir, montrer clairement. L'argument est ce qui éclaire
+  une question, la preuve qu'on apporte. Il ne désigne pas la dispute, mais ce
+  qui devrait y mettre fin.
+incertain: false
+racine: null
+doublets: []
+famille: [ arguer ]
+themes: [ parole, esprit, savoir ]
+sources:
+  - ouvrage: Littré
+    entree: argument
+    url: https://www.littre.org/definition/argument
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,21 @@
+mot: ambiguïté
+etymon: ambiguitas
+reconstruit: false
+langue: latin
+sens: incertitude de ce qui va des deux côtés
+explication: >
+  Ambigere, c'est pousser des deux côtés à la fois : ambi, de part et d'autre,
+  et agere, mener. L'ambigu tire dans deux directions ; on ne sait de quel côté
+  il ira.
+incertain: false
+racine: null
+doublets: []
+famille: [ ambiant, ambidextre ]
+themes: [ parole, esprit ]
+sources:
+  - ouvrage: Littré
+    entree: ambiguité
+    url: https://www.littre.org/definition/ambiguit%C3%A9
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

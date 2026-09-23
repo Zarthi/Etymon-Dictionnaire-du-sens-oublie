@@ -1,0 +1,21 @@
+mot: ascèse
+etymon: áskēsis
+reconstruit: false
+langue: grec ancien
+sens: exercice, entraînement
+explication: >
+  Askēsis est l'entraînement de l'athlète, l'exercice répété qui forme le corps.
+  Les philosophes puis les moines ont repris le mot pour l'exercice de l'âme.
+  L'ascète est un athlète, non un affamé.
+incertain: false
+racine: null
+doublets: []
+famille: [ ascétique ]
+themes: [ morale, religion, corps ]
+sources:
+  - ouvrage: Littré
+    entree: ascète
+    url: https://www.littre.org/definition/asc%C3%A8te
+lectureTraditionnelle: null
+statut: brouillon
+historique: []
