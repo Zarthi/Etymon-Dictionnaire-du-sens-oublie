@@ -105,6 +105,9 @@ describe("validerFiches : fiche conforme", () => {
     });
     expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
   });
+  it("accepte une fiche a-verifier sans source (rédigée de mémoire)", () => {
+    expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
+  });
   it("accepte un suffixe numérique pour les homonymes", () => {
     expect(erreursDe({}, "e/et/etonner-2.yaml")).toEqual([]);
   });
@@ -147,6 +150,7 @@ describe("validerFiches : structure", () => {
     ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "pas une url" }] }],
     ["sources.0", { sources: ["Littré"] }],
     ["sources", { sources: [] }],
+    ["sources", { sources: [], statut: "validee" }],
     ["incertain", { incertain: "non" }],
     ["reconstruit", { reconstruit: "oui" }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],

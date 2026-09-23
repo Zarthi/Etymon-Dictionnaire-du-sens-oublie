@@ -6,3 +6,4 @@ src/generes/
 .vscode/*
 !.vscode/extensions.json
 .vitest/
+sources/

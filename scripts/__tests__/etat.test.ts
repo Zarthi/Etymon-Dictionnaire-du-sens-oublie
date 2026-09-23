@@ -14,11 +14,12 @@ const candidats: Candidat[] = [
 
 describe("resumer", () => {
   it("compte fiches et candidats par statut", () => {
-    const fiches = [fiche("a", "validee"), fiche("b", "brouillon", true), fiche("c", "brouillon")];
+    const fiches = [fiche("a", "validee"), fiche("b", "brouillon", true), fiche("c", "brouillon"), fiche("d", "a-verifier")];
     expect(resumer(fiches, candidats)).toEqual({
-      fiches: 3,
+      fiches: 4,
       validees: 1,
       brouillons: 2,
+      aVerifier: 1,
       incertaines: 1,
       candidatsAFaire: 3,
       candidatsSansSource: 1,

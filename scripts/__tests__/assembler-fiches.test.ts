@@ -14,6 +14,11 @@ describe("assembler", () => {
     expect([...lots.keys()]).toEqual(["es"]);
   });
 
+  it("n'inclut jamais une fiche a-verifier, même avec les brouillons", () => {
+    const entree = [avec("merci", "validee"), avec("ennui", "a-verifier")];
+    expect(assembler(entree, { avecBrouillons: true }).index.map((e) => e.id)).toEqual(["merci"]);
+  });
+
   it("ajoute les brouillons seulement sur demande (relecture en développement)", () => {
     const entree = [avec("merci", "validee"), avec("ennui", "brouillon")];
     expect(assembler(entree).index.map((e) => e.id)).toEqual(["merci"]);

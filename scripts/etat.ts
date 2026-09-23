@@ -9,6 +9,7 @@ export function resumer(fiches: FicheIdentifiee[], candidats: Candidat[]) {
     fiches: fiches.length,
     validees: compter(fiches, (f) => f.statut === "validee"),
     brouillons: compter(fiches, (f) => f.statut === "brouillon"),
+    aVerifier: compter(fiches, (f) => f.statut === "a-verifier"),
     incertaines: compter(fiches, (f) => f.incertain),
     candidatsAFaire: compter(candidats, (c) => c.statut === "a-faire"),
     candidatsSansSource: compter(candidats, (c) => c.statut === "sans-source"),
@@ -39,7 +40,7 @@ if (import.meta.main) {
   const [commande, argument] = process.argv.slice(2);
   if (commande === undefined) {
     const r = resumer(fiches, candidats);
-    console.log(`Fiches      : ${r.fiches} (${r.validees} validée(s), ${r.brouillons} brouillon(s), ${r.incertaines} incertaine(s))`);
+    console.log(`Fiches      : ${r.fiches} (${r.validees} validée(s), ${r.brouillons} brouillon(s), ${r.aVerifier} à vérifier, ${r.incertaines} incertaine(s))`);
     console.log(`Candidats   : ${r.candidatsAFaire} à faire, ${r.candidatsSansSource} sans source, ${r.candidatsEcartes} écarté(s)`);
     console.log(`Validation  : ${erreurs.length === 0 ? "conforme" : `${erreurs.length} erreur(s), voir npm run valider`}`);
   } else if (commande === "brouillons") {

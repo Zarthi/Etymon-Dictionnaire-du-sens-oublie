@@ -10,14 +10,15 @@ export const DOSSIER_SORTIE = fileURLToPath(new URL("../src/generes", import.met
 /**
  * Données de l'app, à partir des fiches `validee` triées par id (ordre stable pour le mot du jour) :
  * un index léger pour la recherche et le tirage, et les fiches complètes regroupées par préfixe.
- * `avecBrouillons` ajoute les brouillons, pour les relire en développement seulement.
+ * `avecBrouillons` ajoute les brouillons, pour les relire en développement seulement ;
+ * les fiches `a-verifier`, rédigées de mémoire, n'apparaissent jamais.
  */
 export function assembler(
   fiches: FicheIdentifiee[],
   { avecBrouillons = false } = {},
 ): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
   const retenues = fiches
-    .filter((f) => avecBrouillons || f.statut === "validee")
+    .filter((f) => f.statut === "validee" || (avecBrouillons && f.statut === "brouillon"))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const lots = new Map<string, FicheIdentifiee[]>();
   for (const fiche of retenues) {

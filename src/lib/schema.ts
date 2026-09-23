@@ -37,15 +37,20 @@ export const schemaFiche = z
     doublets: z.array(z.string()),
     famille: z.array(z.string()),
     themes: z.array(z.enum(themes)),
-    sources: z.array(schemaSource).min(1),
+    sources: z.array(schemaSource),
     lectureTraditionnelle: z
       .object({ texte: z.string().trim().min(1), auteur: z.string().min(1), source: z.string().min(1) })
       .strict()
       .nullable(),
-    statut: z.enum(["brouillon", "validee"]),
+    statut: z.enum(["a-verifier", "brouillon", "validee"]),
     historique: z.array(z.object({ date, note: z.string().min(1) }).strict()),
   })
-  .strict();
+  .strict()
+  // Seule une fiche rédigée de mémoire, pas encore vérifiée, peut n'avoir aucune source.
+  .refine((f) => f.statut === "a-verifier" || f.sources.length > 0, {
+    message: "au moins une source consultée (seules les fiches a-verifier peuvent n'en avoir aucune)",
+    path: ["sources"],
+  });
 
 /** Mot envisagé pour le dictionnaire, tant qu'il n'a pas de fiche. */
 export const schemaCandidat = z
