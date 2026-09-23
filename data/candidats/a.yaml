@@ -1,23 +1,23 @@
 
-- { mot: abîme, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: abolir, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: acquérir, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
-- { mot: adversaire, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
-- { mot: agenda, statut: ecarte, raison: "Curiosité (« choses à faire »), mot secondaire (§3.3)." }
-- { mot: aimer, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: alarme, statut: ecarte, raison: "Curiosité (« aux armes »), pas un sens oublié qui éclaire (§3.3)." }
-- { mot: allégorie, statut: ecarte, raison: "Terme technique, sens transparent (§3.3)." }
-- { mot: allégresse, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: alliance, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
-- { mot: altruisme, statut: ecarte, raison: "Mot forgé au XIXe siècle, sens transparent (§3.3)." }
-- { mot: ami, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: amour, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: apparence, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
-- { mot: approuver, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
-- { mot: arme, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: assassin, statut: ecarte, raison: "Curiosité d'origine débattue, mot secondaire (§3.3)." }
-- { mot: athée, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: attribut, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
-- { mot: audace, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: aurore, statut: ecarte, raison: "Sens conservé : l'étymon n'éclaire rien d'oublié (§3.3)." }
-- { mot: autonome, statut: ecarte, raison: "Sens transparent, rien à dévoiler (§3.3)." }
+- { mot: abîme, statut: a-faire }
+- { mot: abolir, statut: a-faire }
+- { mot: acquérir, statut: a-faire }
+- { mot: adversaire, statut: a-faire }
+- { mot: agenda, statut: a-faire }
+- { mot: aimer, statut: a-faire }
+- { mot: alarme, statut: a-faire }
+- { mot: allégorie, statut: a-faire }
+- { mot: allégresse, statut: a-faire }
+- { mot: alliance, statut: a-faire }
+- { mot: altruisme, statut: a-faire }
+- { mot: ami, statut: a-faire }
+- { mot: amour, statut: a-faire }
+- { mot: apparence, statut: a-faire }
+- { mot: approuver, statut: a-faire }
+- { mot: arme, statut: a-faire }
+- { mot: assassin, statut: a-faire }
+- { mot: athée, statut: a-faire }
+- { mot: attribut, statut: a-faire }
+- { mot: audace, statut: a-faire }
+- { mot: aurore, statut: a-faire }
+- { mot: autonome, statut: a-faire }
