@@ -14,11 +14,11 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - name: Validation des fiches et des comptes
+      - name: Validation des fiches, candidats et comptes
         run: npm run valider
+      - name: Build (assemble aussi src/generes/, requis par la vérification des types)
+        run: npm run build
       - name: Vérification des types
         run: npm run check
       - name: Tests
         run: npm test
-      - name: Build
-        run: npm run build

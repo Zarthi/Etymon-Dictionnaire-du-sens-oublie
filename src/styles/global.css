@@ -1,8 +1,13 @@
 :root {
   --fond: #faf8f3;
+  --surface: #ffffff;
+  --bordure: #e3ddd2;
+  --survol: #f3eee5;
   --texte: #2b2622;
-  --texte-discret: #7a716a;
+  --texte-discret: #6f665e;
   --accent: #8a3b12;
+  --tradition: #4b5e8a;
+  --brouillon: #9a6a00;
   --police-fiche: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --police-interface: system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light dark;
@@ -11,9 +16,14 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --fond: #1c1a18;
+    --surface: #25221f;
+    --bordure: #3a3531;
+    --survol: #2f2b27;
     --texte: #ece6dc;
     --texte-discret: #a39a8f;
     --accent: #e0a070;
+    --tradition: #9fb2dc;
+    --brouillon: #e0b450;
   }
 }
 
