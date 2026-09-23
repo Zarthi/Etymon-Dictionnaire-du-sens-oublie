@@ -16,6 +16,14 @@ export function resumer(fiches: FicheIdentifiee[], candidats: Candidat[]) {
   };
 }
 
+/** Fiches en brouillon, triées par id : mot, emplacement et incertitude, pour la relecture. */
+export function listerBrouillons(fiches: FicheIdentifiee[]) {
+  return fiches
+    .filter((f) => f.statut === "brouillon")
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
+    .map((f) => ({ mot: f.mot, chemin: `data/fiches/${cheminFiche(f.id)}`, incertain: f.incertain }));
+}
+
 /** Les `nombre` premiers candidats à traiter, dans l'ordre des listes. */
 export function prochainsCandidats(candidats: Candidat[], nombre: number): string[] {
   return candidats.filter((c) => c.statut === "a-faire").slice(0, nombre).map((c) => c.mot);
@@ -23,7 +31,7 @@ export function prochainsCandidats(candidats: Candidat[], nombre: number): strin
 
 const AIDE = `Usage : npm run etat [-- commande]
   (aucune)          résumé de l'avancement
-  brouillons        chemins des fiches à relire
+  brouillons        fiches à relire (aussi : npm run brouillons)
   candidats [n]     les n prochains mots à traiter (20 par défaut)`;
 
 if (import.meta.main) {
@@ -35,7 +43,11 @@ if (import.meta.main) {
     console.log(`Candidats   : ${r.candidatsAFaire} à faire, ${r.candidatsSansSource} sans source, ${r.candidatsEcartes} écarté(s)`);
     console.log(`Validation  : ${erreurs.length === 0 ? "conforme" : `${erreurs.length} erreur(s), voir npm run valider`}`);
   } else if (commande === "brouillons") {
-    for (const f of fiches.filter((f) => f.statut === "brouillon")) console.log(`data/fiches/${cheminFiche(f.id)}`);
+    const liste = listerBrouillons(fiches);
+    const largeur = Math.max(0, ...liste.map((b) => b.mot.length));
+    for (const b of liste) console.log(`${b.mot.padEnd(largeur)}  ${b.incertain ? "incertain " : "          "}${b.chemin}`);
+    console.log(`
+${liste.length} brouillon(s) à relire.`);
   } else if (commande === "candidats") {
     for (const mot of prochainsCandidats(candidats, Number(argument ?? 20))) console.log(mot);
   } else {

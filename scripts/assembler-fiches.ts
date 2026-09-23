@@ -8,29 +8,35 @@ import { arreterSiErreurs, validerDepot } from "./valider-fiches.ts";
 export const DOSSIER_SORTIE = fileURLToPath(new URL("../src/generes", import.meta.url));
 
 /**
- * Données de l'app, à partir des seules fiches `validee` triées par id (ordre stable pour le mot du jour) :
+ * Données de l'app, à partir des fiches `validee` triées par id (ordre stable pour le mot du jour) :
  * un index léger pour la recherche et le tirage, et les fiches complètes regroupées par préfixe.
+ * `avecBrouillons` ajoute les brouillons, pour les relire en développement seulement.
  */
-export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
-  const validees = fiches
-    .filter((f) => f.statut === "validee")
+export function assembler(
+  fiches: FicheIdentifiee[],
+  { avecBrouillons = false } = {},
+): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
+  const retenues = fiches
+    .filter((f) => avecBrouillons || f.statut === "validee")
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const lots = new Map<string, FicheIdentifiee[]>();
-  for (const fiche of validees) {
+  for (const fiche of retenues) {
     const lot = lots.get(prefixe(fiche.id)) ?? [];
     lot.push(fiche);
     lots.set(prefixe(fiche.id), lot);
   }
-  return { index: validees.map(({ id, mot }) => ({ id, mot })), lots };
+  return { index: retenues.map(({ id, mot }) => ({ id, mot })), lots };
 }
 
 if (import.meta.main) {
   const { fiches, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
-  const { index, lots } = assembler(fiches);
+  const avecBrouillons = process.argv.includes("--brouillons");
+  const { index, lots } = assembler(fiches, { avecBrouillons });
   await rm(DOSSIER_SORTIE, { recursive: true, force: true });
   await mkdir(join(DOSSIER_SORTIE, "fiches"), { recursive: true });
   await writeFile(join(DOSSIER_SORTIE, "index.json"), JSON.stringify(index) + "\n");
   for (const [p, lot] of lots) await writeFile(join(DOSSIER_SORTIE, "fiches", `${p}.json`), JSON.stringify(lot) + "\n");
-  console.log(`✓ ${index.length} fiche(s) validée(s) assemblée(s) en ${lots.size} lot(s) dans src/generes/`);
+  const nature = avecBrouillons ? "validée(s) ou brouillon(s)" : "validée(s)";
+  console.log(`✓ ${index.length} fiche(s) ${nature} assemblée(s) en ${lots.size} lot(s) dans src/generes/`);
 }

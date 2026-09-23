@@ -5,12 +5,13 @@
   "description": "Étymon : dictionnaire du sens oublié",
   "type": "module",
   "scripts": {
-    "dev": "npm run assembler && vite",
+    "dev": "node scripts/assembler-fiches.ts --brouillons && vite",
     "build": "npm run assembler && vite build",
     "preview": "vite preview",
     "valider": "node scripts/valider-fiches.ts",
     "assembler": "node scripts/assembler-fiches.ts",
     "etat": "node scripts/etat.ts",
+    "brouillons": "node scripts/etat.ts brouillons",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
     "prepare": "simple-git-hooks"

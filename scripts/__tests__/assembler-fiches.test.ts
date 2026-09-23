@@ -14,6 +14,13 @@ describe("assembler", () => {
     expect([...lots.keys()]).toEqual(["es"]);
   });
 
+  it("ajoute les brouillons seulement sur demande (relecture en développement)", () => {
+    const entree = [avec("merci", "validee"), avec("ennui", "brouillon")];
+    expect(assembler(entree).index.map((e) => e.id)).toEqual(["merci"]);
+    expect(assembler(entree, { avecBrouillons: true }).index.map((e) => e.id)).toEqual(["ennui", "merci"]);
+    expect(assembler(entree, { avecBrouillons: true }).lots.get("en")?.[0].statut).toBe("brouillon");
+  });
+
   it("produit un index léger (id et mot seulement), trié par id quel que soit l'ordre d'entrée", () => {
     const entree = [avec("zero", "validee"), avec("chiffre", "validee"), avec("ennui", "brouillon"), avec("chetif", "validee")];
     const attendu = [
