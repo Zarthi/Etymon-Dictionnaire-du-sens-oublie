@@ -7,7 +7,7 @@ export default defineConfig({
     svelte(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["icone.svg"],
+      includeAssets: ["icone.svg", "apple-touch-icon.png"],
       manifest: {
         name: "Étymon : dictionnaire du sens oublié",
         short_name: "Étymon",
@@ -17,10 +17,15 @@ export default defineConfig({
         display: "standalone",
         background_color: "#faf8f3",
         theme_color: "#faf8f3",
-        icons: [{ src: "icone.svg", sizes: "any", type: "image/svg+xml", purpose: "any" }],
+        icons: [
+          { src: "icone-192.png", sizes: "192x192", type: "image/png" },
+          { src: "icone-512.png", sizes: "512x512", type: "image/png" },
+          { src: "icone-maskable-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+          { src: "icone.svg", sizes: "any", type: "image/svg+xml" },
+        ],
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,svg,json,woff2}"],
+        globPatterns: ["**/*.{js,css,html,svg,png,json,woff2}"],
       },
     }),
   ],
