@@ -33,7 +33,8 @@ export function extraireEntrees(xml: string): EntreeLittre[] {
       .map(([, texte]) => texteBrut(texte))
       .filter((texte) => texte !== "")
       .join(" ");
-    if (etymologie !== "") entrees.push({ terme: texteBrut(terme).toLowerCase(), etymologie });
+    // La vedette porte parfois le féminin : « ABSOLU, UE ». On ne garde que la première forme.
+    if (etymologie !== "") entrees.push({ terme: texteBrut(terme).toLowerCase().split(",")[0].trim(), etymologie });
   }
   return entrees;
 }
@@ -48,9 +49,22 @@ export function urlLittre(terme: string): string {
   return `https://www.littre.org/definition/${encodeURIComponent(terme)}`;
 }
 
-/** Lettres seules, sans accents ni ponctuation : « ex-tonare » → « extonare ». */
+/** Entrées du Littré pour un mot, au singulier ou au pluriel (« ANCÊTRES »). */
+export function chercher(index: IndexLittre, mot: string): EntreeLittre[] | undefined {
+  const cle = normaliser(mot);
+  return index[cle] ?? index[`${cle}s`] ?? index[cle.replace(/s$/, "")];
+}
+
+/** Translittération des lettres grecques, pour comparer aux étymons écrits en alphabet latin. */
+const GREC: Record<string, string> = {
+  α: "a", β: "b", γ: "g", δ: "d", ε: "e", ζ: "z", η: "e", θ: "th", ι: "i", κ: "k", ϰ: "k", λ: "l", μ: "m",
+  ν: "n", ξ: "x", ο: "o", π: "p", ρ: "r", σ: "s", ς: "s", τ: "t", υ: "y", φ: "ph", χ: "kh", ψ: "ps", ω: "o",
+};
+
+/** Lettres latines seules, sans accents ni ponctuation, grec translittéré : « ex-tonare » → « extonare ». */
 function lettres(texte: string): string {
-  return normaliser(texte).replace(/[^a-z]/g, "");
+  const sansAccents = texte.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+  return [...sansAccents].map((c) => GREC[c] ?? c).join("").replace(/[^a-z]/g, "");
 }
 
 /**
@@ -76,12 +90,12 @@ export type Verdict =
   | { resultat: "absent" };
 
 /**
- * Verdict du Littré sur l'étymon d'une fiche rédigée de mémoire.
- * Seule une concordance sans doute exprimé permet de passer la fiche en brouillon.
+ * Verdict du Littré sur une fiche rédigée de mémoire : l'étymon ou la racine doit figurer
+ * dans son étymologie. Seule une concordance sans doute exprimé permet de passer la fiche en brouillon.
  */
-export function verdict(etymon: string, entrees: EntreeLittre[] | undefined): Verdict {
+export function verdict(formes: string[], entrees: EntreeLittre[] | undefined): Verdict {
   if (!entrees || entrees.length === 0) return { resultat: "absent" };
-  const concordante = entrees.find((e) => concorde(etymon, e.etymologie));
+  const concordante = entrees.find((e) => formes.some((f) => concorde(f, e.etymologie)));
   if (!concordante) return { resultat: "discordance", entree: entrees[0] };
   return { resultat: douteux(concordante.etymologie) ? "doute" : "concorde", entree: concordante };
 }

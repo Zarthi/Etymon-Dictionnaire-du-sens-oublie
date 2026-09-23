@@ -1,5 +1,4 @@
-import { normaliser } from "../src/lib/recherche.ts";
-import { urlLittre } from "./lib/littre.ts";
+import { chercher, urlLittre } from "./lib/littre.ts";
 import { chargerIndexLittre } from "./littre.ts";
 
 /** Affiche l'étymologie du Littré (et son lien) pour chaque mot demandé. */
@@ -11,7 +10,7 @@ if (import.meta.main) {
   }
   const index = await chargerIndexLittre();
   for (const mot of mots) {
-    const entrees = index[normaliser(mot)] ?? [];
+    const entrees = chercher(index, mot) ?? [];
     if (entrees.length === 0) console.log(`\n■ ${mot} : absent du Littré (ou sans étymologie)`);
     for (const { terme, etymologie } of entrees) console.log(`\n■ ${terme}  ${urlLittre(terme)}\n${etymologie}`);
   }

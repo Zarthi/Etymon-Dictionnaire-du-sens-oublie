@@ -1,8 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseDocument } from "yaml";
-import { normaliser } from "../src/lib/recherche.ts";
-import { urlLittre, verdict } from "./lib/littre.ts";
+import { chercher, urlLittre, verdict } from "./lib/littre.ts";
 import { cheminFiche } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
 import { arreterSiErreurs, DOSSIER_DATA, validerDepot } from "./valider-fiches.ts";
@@ -20,7 +19,8 @@ if (import.meta.main) {
   let promues = 0;
 
   for (const fiche of fiches.filter((f) => f.statut === "a-verifier")) {
-    const v = verdict(fiche.etymon, index[normaliser(fiche.mot)]);
+    const formes = fiche.racine ? [fiche.etymon, fiche.racine.forme] : [fiche.etymon];
+    const v = verdict(formes, chercher(index, fiche.mot));
     if (v.resultat === "concorde") {
       const chemin = join(DOSSIER_DATA, "fiches", cheminFiche(fiche.id));
       const document = parseDocument(await readFile(chemin, "utf8"));
