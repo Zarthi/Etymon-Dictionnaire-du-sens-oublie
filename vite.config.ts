@@ -3,6 +3,8 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  // Chemins relatifs : le site fonctionne à la racine comme dans un sous-dossier (GitHub Pages).
+  base: "./",
   plugins: [
     svelte(),
     VitePWA({
