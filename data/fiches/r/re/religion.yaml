@@ -1,0 +1,30 @@
+mot: religion
+etymon: religio
+reconstruit: false
+langue: latin
+sens: attention scrupuleuse, scrupule
+explication: >
+  Le mot latin désignait d'abord le scrupule, l'attention inquiète portée à ce
+  qui est sacré. Son origine est discutée : Cicéron le rattachait à relegere,
+  reprendre et parcourir avec soin.
+incertain: true
+racine: null
+doublets: []
+famille: []
+themes: [religion]
+sources:
+  - ouvrage: Littré
+    entree: religion
+    url: "https://www.littre.org/definition/religion"
+  - ouvrage: Gaffiot
+    entree: religio
+    url: "https://gaffiot.fr/#religio"
+  - ouvrage: TLFi
+    entree: religion
+    url: "https://www.cnrtl.fr/etymologie/religion"
+lectureTraditionnelle:
+  texte: "Lactance fait venir religio de religare, relier : l'homme est lié à Dieu par le lien de la piété. Il écarte expressément l'explication de Cicéron par relegere."
+  auteur: Lactance
+  source: Institutions divines, IV, 28, 3
+statut: brouillon
+historique: []

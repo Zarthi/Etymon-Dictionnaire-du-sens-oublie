@@ -1,0 +1,27 @@
+mot: zéro
+etymon: zero
+reconstruit: false
+langue: italien
+sens: zéro, rien
+explication: >
+  Zéro et chiffre sont un même mot arabe venu par deux chemins : l'italien pour
+  l'un, le latin médiéval pour l'autre. Chiffre désignait d'abord le zéro, avant
+  que zéro ne le supplante dans ce sens.
+incertain: false
+racine:
+  forme: ṣifr
+  langue: arabe
+  sens: vide
+doublets: [chiffre]
+famille: []
+themes: [savoir]
+sources:
+  - ouvrage: Littré
+    entree: zéro
+    url: "https://www.littre.org/definition/z%C3%A9ro"
+  - ouvrage: TLFi
+    entree: zéro
+    url: "https://www.cnrtl.fr/etymologie/z%C3%A9ro"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

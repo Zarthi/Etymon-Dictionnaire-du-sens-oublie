@@ -1,0 +1,26 @@
+mot: potion
+etymon: potio
+reconstruit: false
+langue: latin
+sens: boisson, breuvage
+explication: >
+  Potion est l'emprunt savant du mot latin qui, par la voie populaire, a donné
+  poison. Il a gardé le sens de breuvage, spécialisé en remède.
+incertain: false
+racine: null
+doublets: [poison]
+famille: []
+themes: [santé]
+sources:
+  - ouvrage: Littré
+    entree: potion
+    url: "https://www.littre.org/definition/potion"
+  - ouvrage: Gaffiot
+    entree: potio
+    url: "https://gaffiot.fr/#potio"
+  - ouvrage: TLFi
+    entree: potion
+    url: "https://www.cnrtl.fr/etymologie/potion"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []
