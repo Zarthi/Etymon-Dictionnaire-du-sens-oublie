@@ -1,0 +1,27 @@
+mot: chiffre
+etymon: cifra
+reconstruit: false
+langue: latin médiéval
+sens: zéro
+explication: >
+  Le chiffre fut d'abord le zéro, signe vide de toute valeur dans la numération
+  venue des Arabes. Le nom de ce signe nouveau s'est ensuite étendu à tous les
+  signes de numération.
+incertain: false
+racine:
+  forme: ṣifr
+  langue: arabe
+  sens: vide
+doublets: []
+famille: []
+themes: [savoir]
+sources:
+  - ouvrage: Littré
+    entree: chiffre
+    url: "https://www.littre.org/definition/chiffre"
+  - ouvrage: TLFi
+    entree: chiffre
+    url: "https://www.cnrtl.fr/etymologie/chiffre"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

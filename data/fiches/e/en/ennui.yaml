@@ -1,0 +1,26 @@
+mot: ennui
+etymon: in odio
+reconstruit: false
+langue: latin
+sens: en haine
+explication: >
+  Être « en haine » à quelqu'un, c'était lui être odieux. L'ennui fut d'abord un
+  tourment, un chagrin profond, avant de s'affaiblir en simple lassitude.
+incertain: true
+racine: null
+doublets: []
+famille: [ennuyer]
+themes: [émotions]
+sources:
+  - ouvrage: Littré
+    entree: ennui
+    url: "https://www.littre.org/definition/ennui"
+  - ouvrage: Gaffiot
+    entree: odium
+    url: "https://gaffiot.fr/#odium"
+  - ouvrage: TLFi
+    entree: ennui
+    url: "https://www.cnrtl.fr/etymologie/ennui"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

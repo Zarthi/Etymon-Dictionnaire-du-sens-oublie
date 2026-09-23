@@ -1,0 +1,23 @@
+mot: soldat
+etymon: soldato
+reconstruit: false
+langue: italien
+sens: payé d'une solde
+explication: >
+  Le soldat est d'abord celui qu'on paie : le mot italien est le participe de
+  soldare, payer une solde. L'homme d'armes est nommé par son salaire.
+incertain: false
+racine: null
+doublets: []
+famille: [solde, solder]
+themes: [guerre, argent]
+sources:
+  - ouvrage: Littré
+    entree: soldat
+    url: "https://www.littre.org/definition/soldat"
+  - ouvrage: TLFi
+    entree: soldat
+    url: "https://www.cnrtl.fr/etymologie/soldat"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

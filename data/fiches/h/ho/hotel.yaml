@@ -1,0 +1,26 @@
+mot: hôtel
+etymon: hospitale
+reconstruit: false
+langue: latin
+sens: chambre des hôtes
+explication: >
+  Le mot latin désignait la chambre où l'on recevait les hôtes. Hôtel en est la
+  forme populaire ; hôpital, refait sur le latin, en est l'autre héritier.
+incertain: false
+racine: null
+doublets: [hopital]
+famille: [hôte]
+themes: [maison]
+sources:
+  - ouvrage: Littré
+    entree: hôtel
+    url: "https://www.littre.org/definition/h%C3%B4tel"
+  - ouvrage: Gaffiot
+    entree: hospitalis
+    url: "https://gaffiot.fr/#hospitalis"
+  - ouvrage: TLFi
+    entree: hôtel
+    url: "https://www.cnrtl.fr/etymologie/h%C3%B4tel"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

@@ -1,0 +1,23 @@
+mot: banqueroute
+etymon: banca rotta
+reconstruit: false
+langue: italien
+sens: banc rompu
+explication: >
+  On brisait le comptoir du banquier ou du marchand en faillite. Le mot garde la
+  trace de ce geste public.
+incertain: false
+racine: null
+doublets: []
+famille: [banque]
+themes: [argent, commerce]
+sources:
+  - ouvrage: Littré
+    entree: banqueroute
+    url: "https://www.littre.org/definition/banqueroute"
+  - ouvrage: TLFi
+    entree: banqueroute
+    url: "https://www.cnrtl.fr/etymologie/banqueroute"
+lectureTraditionnelle: null
+statut: brouillon
+historique: []
