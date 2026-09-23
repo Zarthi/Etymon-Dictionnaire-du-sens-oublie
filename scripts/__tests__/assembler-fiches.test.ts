@@ -8,30 +8,27 @@ const { fiches } = await validerDepot(fileURLToPath(new URL("fixtures/depot-conf
 const avec = (id: string, statut: FicheIdentifiee["statut"]): FicheIdentifiee => ({ ...fiches[0], id, mot: id, statut });
 
 describe("assembler", () => {
-  it("ne garde que les fiches validées", () => {
+  it("garde toutes les fiches, quel que soit leur statut", () => {
     const { index, lots } = assembler(fiches);
-    expect(index).toEqual([{ id: "essai", mot: "essai" }]);
-    expect([...lots.keys()]).toEqual(["es"]);
+    expect(index).toEqual([
+      { id: "epreuve", mot: "épreuve", statut: "brouillon" },
+      { id: "essai", mot: "essai", statut: "validee" },
+    ]);
+    expect([...lots.keys()]).toEqual(["ep", "es"]);
   });
 
-  it("n'inclut jamais une fiche a-verifier, même avec les brouillons", () => {
+  it("transmet le statut, y compris a-verifier, pour que l'app le signale", () => {
     const entree = [avec("merci", "validee"), avec("ennui", "a-verifier")];
-    expect(assembler(entree, { avecBrouillons: true }).index.map((e) => e.id)).toEqual(["merci"]);
+    expect(assembler(entree).index.map((e) => e.statut)).toEqual(["a-verifier", "validee"]);
+    expect(assembler(entree).lots.get("en")?.[0].statut).toBe("a-verifier");
   });
 
-  it("ajoute les brouillons seulement sur demande (relecture en développement)", () => {
-    const entree = [avec("merci", "validee"), avec("ennui", "brouillon")];
-    expect(assembler(entree).index.map((e) => e.id)).toEqual(["merci"]);
-    expect(assembler(entree, { avecBrouillons: true }).index.map((e) => e.id)).toEqual(["ennui", "merci"]);
-    expect(assembler(entree, { avecBrouillons: true }).lots.get("en")?.[0].statut).toBe("brouillon");
-  });
-
-  it("produit un index léger (id et mot seulement), trié par id quel que soit l'ordre d'entrée", () => {
-    const entree = [avec("zero", "validee"), avec("chiffre", "validee"), avec("ennui", "brouillon"), avec("chetif", "validee")];
+  it("produit un index léger (id, mot, statut), trié par id quel que soit l'ordre d'entrée", () => {
+    const entree = [avec("zero", "validee"), avec("chiffre", "validee"), avec("chetif", "brouillon")];
     const attendu = [
-      { id: "chetif", mot: "chetif" },
-      { id: "chiffre", mot: "chiffre" },
-      { id: "zero", mot: "zero" },
+      { id: "chetif", mot: "chetif", statut: "brouillon" },
+      { id: "chiffre", mot: "chiffre", statut: "validee" },
+      { id: "zero", mot: "zero", statut: "validee" },
     ];
     expect(assembler(entree).index).toEqual(attendu);
     expect(assembler(entree.toReversed()).index).toEqual(attendu);

@@ -8,6 +8,7 @@
   --accent: #8a3b12;
   --tradition: #4b5e8a;
   --brouillon: #9a6a00;
+  --non-verifie: #a33a2b;
   --police-fiche: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --police-interface: system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light dark;
@@ -24,6 +25,7 @@
     --accent: #e0a070;
     --tradition: #9fb2dc;
     --brouillon: #e0b450;
+    --non-verifie: #f08a78;
   }
 }
 

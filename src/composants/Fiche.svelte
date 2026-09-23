@@ -13,8 +13,14 @@
 </svelte:head>
 
 <article>
-  {#if fiche.statut === "brouillon"}
-    <p class="brouillon">Brouillon, non validé</p>
+  {#if fiche.statut !== "validee"}
+    <p class="statut {fiche.statut}">
+      {#if fiche.statut === "a-verifier"}
+        <strong>Étymologie non vérifiée</strong> · rédigée, pas encore contrôlée sur les sources.
+      {:else}
+        <strong>En relecture</strong> · sources consultées, relecture en cours.
+      {/if}
+    </p>
   {/if}
 
   <h1>{fiche.mot}</h1>
@@ -39,7 +45,7 @@
   {/if}
 
   <footer>
-    <p>
+    <p hidden={fiche.sources.length === 0}>
       Sources&nbsp;:
       {#each fiche.sources as source, i (i)}{#if i > 0},{/if}
         {#if source.url}
@@ -61,15 +67,25 @@
   article {
     font-family: var(--police-fiche);
   }
-  .brouillon {
-    display: inline-block;
-    margin: 0 0 0.75rem;
-    padding: 0.1rem 0.5rem;
+  .statut {
+    margin: 0 0 1rem;
+    padding: 0.4rem 0.7rem;
     font-family: var(--police-interface);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--texte-discret);
+    border-left: 3px solid var(--brouillon);
+    background: var(--surface);
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+  .statut strong {
     color: var(--brouillon);
-    border: 1px solid currentColor;
-    border-radius: 999px;
+    font-weight: 600;
+  }
+  .statut.a-verifier {
+    border-left-color: var(--non-verifie);
+  }
+  .statut.a-verifier strong {
+    color: var(--non-verifie);
   }
   h1 {
     margin: 0;

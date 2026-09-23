@@ -8,7 +8,7 @@ export type Fiche = z.infer<typeof schemaFiche>;
 export type FicheIdentifiee = Fiche & { id: string };
 
 /** Entrée de `index.json` : de quoi chercher et tirer un mot sans charger les fiches. */
-export type EntreeIndex = Pick<FicheIdentifiee, "id" | "mot">;
+export type EntreeIndex = Pick<FicheIdentifiee, "id" | "mot" | "statut">;
 
 export type Candidat = z.infer<typeof schemaCandidat>;
 

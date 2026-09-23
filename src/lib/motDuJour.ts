@@ -16,14 +16,17 @@ function pgcd(a: number, b: number): number {
  * Mot du jour, déterministe à partir de la date.
  * Le pas, premier avec le nombre de mots, parcourt tout l'index avant de revenir au même mot,
  * en sautant loin dans l'alphabet d'un jour à l'autre.
+ * Vitrine du site, il est tiré parmi les fiches validées dès qu'il en existe une.
  */
 export function motDuJour(index: EntreeIndex[], date: string): EntreeIndex | undefined {
-  const n = index.length;
+  const validees = index.filter((e) => e.statut === "validee");
+  const choix = validees.length > 0 ? validees : index;
+  const n = choix.length;
   if (n === 0) return undefined;
   const jour = Math.floor(Date.parse(`${date}T00:00:00Z`) / MS_PAR_JOUR);
   let pas = Math.floor(n * 0.618) + 1;
   while (pgcd(pas, n) !== 1) pas++;
-  return index[(((jour * pas) % n) + n) % n];
+  return choix[(((jour * pas) % n) + n) % n];
 }
 
 /** Mot tiré au hasard, différent de `exclu` quand c'est possible. */

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { dateDuJour, motAuHasard, motDuJour } from "./motDuJour.ts";
 
-const index = Array.from({ length: 10 }, (_, i) => ({ id: `mot${i}`, mot: `mot${i}` }));
+const index = Array.from({ length: 10 }, (_, i) => ({ id: `mot${i}`, mot: `mot${i}`, statut: "validee" as const }));
 
 /** Dates consécutives à partir de `debut`, au format AAAA-MM-JJ. */
 function jours(debut: string, nombre: number): string[] {
@@ -32,9 +32,16 @@ describe("motDuJour", () => {
   });
   it("parcourt tout l'index quelle que soit sa taille", () => {
     for (const n of [1, 2, 3, 12, 97, 100]) {
-      const liste = index.slice(0, 1).concat(Array.from({ length: n - 1 }, (_, i) => ({ id: `x${i}`, mot: `x${i}` })));
+      const liste = index.slice(0, 1).concat(Array.from({ length: n - 1 }, (_, i) => ({ id: `x${i}`, mot: `x${i}`, statut: "validee" as const })));
       expect(new Set(jours("2026-01-01", n).map((d) => motDuJour(liste, d)?.id)).size).toBe(n);
     }
+  });
+  it("se limite aux fiches validées s'il y en a, sinon puise dans toutes", () => {
+    const melange = index.map((e, i) => ({ ...e, statut: i < 3 ? ("validee" as const) : ("a-verifier" as const) }));
+    const tires = new Set(jours("2026-09-23", 30).map((d) => motDuJour(melange, d)?.id));
+    expect(tires).toEqual(new Set(["mot0", "mot1", "mot2"]));
+    const aucune = index.map((e) => ({ ...e, statut: "brouillon" as const }));
+    expect(motDuJour(aucune, "2026-09-23")).toBeDefined();
   });
   it("ne renvoie rien pour un index vide", () => {
     expect(motDuJour([], "2026-09-23")).toBeUndefined();

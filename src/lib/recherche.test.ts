@@ -3,7 +3,7 @@ import { chercher, distance, normaliser, preparer } from "./recherche.ts";
 
 const index = preparer(
   ["étonner", "étonnement", "détonation", "ennui", "chétif", "chiffre", "cœur", "hôpital", "hôtel", "banqueroute"].map(
-    (mot) => ({ id: mot, mot }),
+    (mot) => ({ id: mot, mot, statut: "validee" as const }),
   ),
 );
 const mots = (saisie: string, limite?: number) => chercher(index, saisie, limite).map((e) => e.mot);

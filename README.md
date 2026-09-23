@@ -18,7 +18,7 @@ Node 24 ou plus récent.
 
 ```bash
 npm install
-npm run dev          # app en local, brouillons compris
+npm run dev          # app en local
 ```
 
 | Commande | Rôle |
@@ -27,7 +27,7 @@ npm run dev          # app en local, brouillons compris
 | `npm run etat` | avancement : fiches par statut, candidats restants |
 | `npm run brouillons` | fiches en brouillon à relire |
 | `npm test` | tests (Vitest) |
-| `npm run build` | site de production dans `dist/`, fiches validées seulement |
+| `npm run build` | site de production dans `dist/` (fiches non validées signalées comme telles) |
 
 Chaque push est validé par la CI. La publication sur GitHub Pages se déclenche à la main
 (onglet Actions, « Run workflow »), une fois Pages activé dans les réglages du dépôt.

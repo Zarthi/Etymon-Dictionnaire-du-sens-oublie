@@ -5,7 +5,7 @@
   "description": "Étymon : dictionnaire du sens oublié",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/assembler-fiches.ts --brouillons && vite",
+    "dev": "node scripts/assembler-fiches.ts && vite",
     "build": "npm run assembler && vite build",
     "preview": "vite preview",
     "valider": "node scripts/valider-fiches.ts",

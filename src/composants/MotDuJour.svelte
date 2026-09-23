@@ -10,6 +10,9 @@
   <button type="button" onclick={() => onOuvrir(fiche.id)}>
     <span class="mot">{fiche.mot}</span>
     <span class="etymon">{origine(fiche.langue)} <em>{fiche.etymon}</em>&nbsp;: «&nbsp;{fiche.sens}&nbsp;»</span>
+    {#if fiche.statut !== "validee"}
+      <span class="statut">{fiche.statut === "a-verifier" ? "Étymologie non vérifiée" : "En relecture"}</span>
+    {/if}
   </button>
 </section>
 
@@ -48,5 +51,12 @@
     margin-top: 0.3rem;
     font-size: 1.1rem;
     color: var(--texte-discret);
+  }
+  .statut {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--police-interface);
+    font-size: 0.8rem;
+    color: var(--brouillon);
   }
 </style>
