@@ -10,7 +10,13 @@ incertain: true
 doublets: [essai]
 famille: [prouver]
 themes: []
-sources: [Gaffiot, TLFi]
+sources:
+  - ouvrage: Gaffiot
+    entree: probatio
+    page: 1238
+  - ouvrage: TLFi
+    entree: épreuve
+    url: https://example.org/tlfi/epreuve
 lectureTraditionnelle:
   texte: Lecture fictive, pour les tests.
   auteur: Auteur fictif

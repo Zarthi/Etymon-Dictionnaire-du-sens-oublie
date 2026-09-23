@@ -1,27 +1,40 @@
 import { readdir, readFile } from "node:fs/promises";
-import { basename, join } from "node:path";
+import { basename, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import { validerComptes, validerFiches, type Erreur } from "./lib/validation.ts";
+import { validerCandidats, validerComptes, validerFiches, type Erreur, type FichierSource } from "./lib/validation.ts";
 
 export const DOSSIER_DATA = fileURLToPath(new URL("../data", import.meta.url));
 
-/** Valide les fiches (`fiches/*.yaml`) et les comptes (`comptes.json`) d'un dossier de données. */
+/** Fichiers d'un dossier et de ses sous-dossiers (fichiers cachés exclus), chemins relatifs en « / ». */
+async function lireDossier(dossier: string): Promise<FichierSource[]> {
+  const entrees = await readdir(dossier, { recursive: true, withFileTypes: true });
+  const chemins = entrees
+    .filter((e) => e.isFile() && !e.name.startsWith("."))
+    .map((e) => relative(dossier, join(e.parentPath, e.name)).split(sep).join("/"))
+    .sort();
+  return Promise.all(chemins.map(async (fichier) => ({ fichier, texte: await readFile(join(dossier, fichier), "utf8") })));
+}
+
+const prefixer = (prefixe: string) => (e: Erreur): Erreur => ({ ...e, fichier: `${prefixe}/${e.fichier}` });
+
+/** Valide les fiches, les candidats et les comptes d'un dossier de données. */
 export async function validerDepot(dossierData = DOSSIER_DATA) {
   const nomDepot = basename(dossierData);
-  const dossierFiches = join(dossierData, "fiches");
-  const noms = (await readdir(dossierFiches)).filter((nom) => !nom.startsWith(".")).sort();
-  const sources = await Promise.all(
-    noms.map(async (nom) => ({
-      fichier: `${nomDepot}/fiches/${nom}`,
-      texte: await readFile(join(dossierFiches, nom), "utf8"),
-    })),
+  const { fiches, erreurs: erreursFiches } = validerFiches(await lireDossier(join(dossierData, "fiches")));
+  const { candidats, erreurs: erreursCandidats } = validerCandidats(
+    await lireDossier(join(dossierData, "candidats")),
+    new Set(fiches.map((f) => f.id)),
   );
-  const { fiches, erreurs: erreursFiches } = validerFiches(sources);
   const { comptes, erreurs: erreursComptes } = validerComptes({
-    fichier: `${nomDepot}/comptes.json`,
+    fichier: "comptes.json",
     texte: await readFile(join(dossierData, "comptes.json"), "utf8"),
   });
-  return { fiches, comptes, erreurs: [...erreursFiches, ...erreursComptes] };
+  const erreurs = [
+    ...erreursFiches.map(prefixer(`${nomDepot}/fiches`)),
+    ...erreursCandidats.map(prefixer(`${nomDepot}/candidats`)),
+    ...erreursComptes.map(prefixer(nomDepot)),
+  ];
+  return { fiches, candidats, comptes, erreurs };
 }
 
 export function formaterErreur({ fichier, champ, regle }: Erreur): string {
@@ -37,11 +50,9 @@ export function arreterSiErreurs(erreurs: Erreur[]): void {
 }
 
 if (import.meta.main) {
-  const { fiches, comptes, erreurs } = await validerDepot();
+  const { fiches, candidats, comptes, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
-  const validees = fiches.filter((f) => f.statut === "validee").length;
   console.log(
-    `✓ ${fiches.length} fiche(s) conforme(s) (${validees} validée(s), ${fiches.length - validees} brouillon(s)), ` +
-      `${comptes.length} ligne(s) de comptes conforme(s).`,
+    `✓ ${fiches.length} fiche(s), ${candidats.length} candidat(s) et ${comptes.length} ligne(s) de comptes conformes.`,
   );
 }

@@ -1,0 +1,34 @@
+import { describe, expect, it } from "vitest";
+import type { Candidat, FicheIdentifiee } from "../../src/lib/types.ts";
+import { prochainsCandidats, resumer } from "../etat.ts";
+
+const fiche = (id: string, statut: FicheIdentifiee["statut"], incertain = false) => ({ id, statut, incertain }) as FicheIdentifiee;
+const candidats: Candidat[] = [
+  { mot: "ennui", statut: "a-faire" },
+  { mot: "chétif", statut: "sans-source", raison: "Aucune entrée." },
+  { mot: "étonner", statut: "a-faire" },
+  { mot: "pizza", statut: "ecarte", raison: "Emprunt plat." },
+  { mot: "merci", statut: "a-faire" },
+];
+
+describe("resumer", () => {
+  it("compte fiches et candidats par statut", () => {
+    const fiches = [fiche("a", "validee"), fiche("b", "brouillon", true), fiche("c", "brouillon")];
+    expect(resumer(fiches, candidats)).toEqual({
+      fiches: 3,
+      validees: 1,
+      brouillons: 2,
+      incertaines: 1,
+      candidatsAFaire: 3,
+      candidatsSansSource: 1,
+      candidatsEcartes: 1,
+    });
+  });
+});
+
+describe("prochainsCandidats", () => {
+  it("donne les n premiers mots à faire, dans l'ordre des listes", () => {
+    expect(prochainsCandidats(candidats, 2)).toEqual(["ennui", "étonner"]);
+    expect(prochainsCandidats(candidats, 10)).toEqual(["ennui", "étonner", "merci"]);
+  });
+});

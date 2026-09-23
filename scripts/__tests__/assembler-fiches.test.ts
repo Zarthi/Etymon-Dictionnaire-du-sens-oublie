@@ -1,24 +1,36 @@
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import type { FicheIdentifiee } from "../../src/lib/types.ts";
 import { assembler } from "../assembler-fiches.ts";
 import { validerDepot } from "../valider-fiches.ts";
-import type { FicheIdentifiee } from "../../src/lib/types.ts";
 
 const { fiches } = await validerDepot(fileURLToPath(new URL("fixtures/depot-conforme", import.meta.url)));
-const avec = (id: string, statut: FicheIdentifiee["statut"]): FicheIdentifiee => ({ ...fiches[0], id, statut });
+const avec = (id: string, statut: FicheIdentifiee["statut"]): FicheIdentifiee => ({ ...fiches[0], id, mot: id, statut });
 
 describe("assembler", () => {
   it("ne garde que les fiches validées", () => {
-    expect(assembler(fiches).map((f) => f.id)).toEqual(["essai"]);
+    const { index, lots } = assembler(fiches);
+    expect(index).toEqual([{ id: "essai", mot: "essai" }]);
+    expect([...lots.keys()]).toEqual(["es"]);
   });
 
-  it("trie par id, indépendamment de l'ordre d'entrée", () => {
-    const entree = [avec("zero", "validee"), avec("chiffre", "validee"), avec("ennui", "brouillon"), avec("merci", "validee")];
-    expect(assembler(entree).map((f) => f.id)).toEqual(["chiffre", "merci", "zero"]);
-    expect(assembler(entree.toReversed()).map((f) => f.id)).toEqual(["chiffre", "merci", "zero"]);
+  it("produit un index léger (id et mot seulement), trié par id quel que soit l'ordre d'entrée", () => {
+    const entree = [avec("zero", "validee"), avec("chiffre", "validee"), avec("ennui", "brouillon"), avec("chetif", "validee")];
+    const attendu = [
+      { id: "chetif", mot: "chetif" },
+      { id: "chiffre", mot: "chiffre" },
+      { id: "zero", mot: "zero" },
+    ];
+    expect(assembler(entree).index).toEqual(attendu);
+    expect(assembler(entree.toReversed()).index).toEqual(attendu);
   });
 
-  it("conserve le contenu complet de la fiche", () => {
-    expect(assembler(fiches)[0]).toEqual(fiches.find((f) => f.id === "essai"));
+  it("regroupe les fiches complètes par préfixe de deux lettres", () => {
+    const { lots } = assembler([avec("chiffre", "validee"), avec("chetif", "validee"), avec("zero", "validee")]);
+    expect(Object.fromEntries([...lots].map(([p, lot]) => [p, lot.map((f) => f.id)]))).toEqual({
+      ch: ["chetif", "chiffre"],
+      ze: ["zero"],
+    });
+    expect(lots.get("ze")?.[0]).toEqual(avec("zero", "validee"));
   });
 });

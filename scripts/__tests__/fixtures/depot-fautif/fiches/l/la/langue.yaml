@@ -1,0 +1,17 @@
+# Langue hors liste, source interdite, source sans page ni url.
+mot: langue
+etymon: lingua
+reconstruit: false
+langue: klingon
+sens: test
+explication: Test.
+incertain: false
+doublets: []
+famille: []
+themes: []
+sources:
+  - { ouvrage: Wiktionnaire, entree: langue, url: https://example.org/langue }
+  - { ouvrage: Littré, entree: langue }
+lectureTraditionnelle: null
+statut: brouillon
+historique: []

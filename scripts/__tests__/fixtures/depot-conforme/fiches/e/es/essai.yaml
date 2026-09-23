@@ -11,7 +11,10 @@ racine: null
 doublets: [epreuve]
 famille: []
 themes: [savoir]
-sources: [Littré]
+sources:
+  - ouvrage: Littré
+    entree: essai
+    url: https://example.org/littre/essai
 lectureTraditionnelle: null
 statut: validee
 historique:

@@ -1,6 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { stringify } from "yaml";
-import { compterPhrases, slug, validerComptes, validerFiches, verifierTypographie, type Erreur } from "../lib/validation.ts";
+import {
+  cheminFiche,
+  compterPhrases,
+  slug,
+  validerCandidats,
+  validerComptes,
+  validerFiches,
+  verifierTypographie,
+  type Erreur,
+} from "../lib/validation.ts";
 
 const NBSP = " ";
 
@@ -17,13 +26,16 @@ const ficheBase = {
   doublets: [],
   famille: ["tonner", "tonnerre", "détonation"],
   themes: ["émotions", "météo"],
-  sources: ["Littré", "Gaffiot"],
+  sources: [
+    { ouvrage: "Littré", entree: "étonner", url: "https://example.org/littre/etonner" },
+    { ouvrage: "Gaffiot", entree: "extono", page: 1 },
+  ],
   lectureTraditionnelle: null,
   statut: "brouillon",
   historique: [],
 };
 
-function valider(surcharges: Record<string, unknown> = {}, fichier = "etonner.yaml") {
+function valider(surcharges: Record<string, unknown> = {}, fichier = "e/et/etonner.yaml") {
   return validerFiches([{ fichier, texte: stringify({ ...ficheBase, ...surcharges }) }]);
 }
 
@@ -91,35 +103,35 @@ describe("validerFiches : fiche conforme", () => {
       lectureTraditionnelle: { texte: "Lecture sourcée.", auteur: "Lactance", source: "Institutions divines, IV, 28" },
       historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
     });
-    expect(validerFiches([{ fichier: "etonner.yaml", texte }]).erreurs).toEqual([]);
+    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
   });
   it("accepte un suffixe numérique pour les homonymes", () => {
-    expect(erreursDe({}, "etonner-2.yaml")).toEqual([]);
+    expect(erreursDe({}, "e/et/etonner-2.yaml")).toEqual([]);
   });
 });
 
 describe("validerFiches : lecture YAML", () => {
   it("explique le piège de l'étymon reconstruit non mis entre guillemets", () => {
     const texte = stringify(ficheBase).replace('"*extonare"', "*extonare");
-    const { erreurs } = validerFiches([{ fichier: "etonner.yaml", texte }]);
+    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte }]);
     expect(erreurs.length).toBeGreaterThan(0);
     expect(erreurs[0].regle).toMatch(/YAML illisible/);
     expect(erreurs[0].regle).toMatch(/entre guillemets/);
   });
   it("refuse « : » non protégé dans une valeur", () => {
     const texte = stringify(ficheBase).replace("sens: frapper du tonnerre", "sens: frapper: fort");
-    expect(validerFiches([{ fichier: "etonner.yaml", texte }]).erreurs[0].regle).toMatch(/YAML illisible/);
+    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs[0].regle).toMatch(/YAML illisible/);
   });
   it("refuse une clé en double", () => {
     const texte = stringify(ficheBase) + "mot: autre\n";
-    expect(validerFiches([{ fichier: "etonner.yaml", texte }]).erreurs[0].regle).toMatch(/YAML illisible/);
+    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs[0].regle).toMatch(/YAML illisible/);
   });
 });
 
 describe("validerFiches : structure", () => {
   it("signale un champ obligatoire manquant", () => {
     const { sens: _, ...sansSens } = ficheBase;
-    const { erreurs } = validerFiches([{ fichier: "etonner.yaml", texte: stringify(sansSens) }]);
+    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(sansSens) }]);
     expect(erreurs.map((e) => e.champ)).toEqual(["sens"]);
   });
   it("refuse un champ inconnu", () => {
@@ -129,7 +141,11 @@ describe("validerFiches : structure", () => {
     ["statut", { statut: "publiee" }],
     ["langue", { langue: "klingon" }],
     ["themes.0", { themes: ["inconnu"] }],
-    ["sources.0", { sources: ["Wiktionnaire"] }],
+    ["sources.0.ouvrage", { sources: [{ ouvrage: "Wiktionnaire", entree: "étonner", page: 1 }] }],
+    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner" }] }],
+    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "http://example.org/etonner" }] }],
+    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "pas une url" }] }],
+    ["sources.0", { sources: ["Littré"] }],
     ["sources", { sources: [] }],
     ["incertain", { incertain: "non" }],
     ["reconstruit", { reconstruit: "oui" }],
@@ -141,23 +157,40 @@ describe("validerFiches : structure", () => {
   });
 });
 
+describe("cheminFiche", () => {
+  it.each([
+    ["etonner", "e/et/etonner.yaml"],
+    ["zero", "z/ze/zero.yaml"],
+    ["a", "a/a/a.yaml"],
+  ])("%s → %s", (id, attendu) => expect(cheminFiche(id)).toBe(attendu));
+});
+
+describe("validerFiches : emplacement", () => {
+  it.each(["etonner.yaml", "e/etonner.yaml", "e/ep/etonner.yaml", "x/et/etonner.yaml", "e/et/x/etonner.yaml"])(
+    "refuse une fiche rangée dans %s",
+    (fichier) => {
+      expect(erreursDe({}, fichier)).toEqual(["(emplacement) : la fiche doit être rangée dans « e/et/etonner.yaml »"]);
+    },
+  );
+});
+
 describe("validerFiches : cohérence", () => {
-  it.each(["étonner.yaml", "Etonner.yaml", "etonner_2.yaml"])("refuse l'id non ASCII minuscule %s", (fichier) => {
+  it.each(["e/et/étonner.yaml", "e/et/Etonner.yaml", "e/et/etonner_2.yaml"])("refuse l'id non ASCII minuscule %s", (fichier) => {
     expect(erreursDe({}, fichier)).toEqual([expect.stringMatching(/^id : .*ASCII/)]);
   });
   it("refuse un id sans rapport avec le mot", () => {
-    expect(erreursDe({}, "etonne.yaml")).toEqual(["id : le nom de fichier doit correspondre au mot : « etonner.yaml »"]);
+    expect(erreursDe({}, "e/et/etonne.yaml")).toEqual(["id : le nom de fichier doit correspondre au mot : « etonner.yaml »"]);
   });
   it("refuse une autre extension que .yaml", () => {
-    expect(erreursDe({}, "etonner.yml")).toEqual(["(fichier) : extension attendue : .yaml"]);
+    expect(erreursDe({}, "e/et/etonner.yml")).toEqual(["(fichier) : extension attendue : .yaml"]);
   });
   it("refuse un id en double", () => {
     const texte = stringify(ficheBase);
     const { erreurs } = validerFiches([
-      { fichier: "a/etonner.yaml", texte },
-      { fichier: "b/etonner.yaml", texte },
+      { fichier: "e/et/etonner.yaml", texte },
+      { fichier: "e/et/etonner.yaml", texte },
     ]);
-    expect(erreurs).toEqual([{ fichier: "b/etonner.yaml", champ: "id", regle: "id « etonner » en double" }]);
+    expect(erreurs).toEqual([{ fichier: "e/et/etonner.yaml", champ: "id", regle: "id « etonner » en double" }]);
   });
   it.each([
     [{ reconstruit: false }],
@@ -170,7 +203,7 @@ describe("validerFiches : cohérence", () => {
   });
 
   const fiche = (mot: string, doublets: string[]) => ({
-    fichier: `${mot}.yaml`,
+    fichier: cheminFiche(mot),
     texte: stringify({ ...ficheBase, mot, etymon: "potio", reconstruit: false, doublets }),
   });
   it("accepte des doublets réciproques", () => {
@@ -178,18 +211,18 @@ describe("validerFiches : cohérence", () => {
   });
   it("signale un doublet introuvable", () => {
     expect(validerFiches([fiche("poison", ["potion"])]).erreurs).toEqual([
-      { fichier: "poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
+      { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
     ]);
   });
   it("signale un doublet non réciproque", () => {
     expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", [])]).erreurs).toEqual([
-      { fichier: "poison.yaml", champ: "doublets", regle: "relation non réciproque : « potion » ne cite pas « poison »" },
+      { fichier: "p/po/poison.yaml", champ: "doublets", regle: "relation non réciproque : « potion » ne cite pas « poison »" },
     ]);
   });
   it("ne signale pas comme introuvable un doublet présent mais invalide", () => {
-    const invalide = { fichier: "potion.yaml", texte: "mot: potion\n" };
+    const invalide = { fichier: "p/po/potion.yaml", texte: "mot: potion\n" };
     const { erreurs } = validerFiches([fiche("poison", ["potion"]), invalide]);
-    expect(erreurs.every((e) => e.fichier === "potion.yaml")).toBe(true);
+    expect(erreurs.every((e) => e.fichier === "p/po/potion.yaml")).toBe(true);
   });
 });
 
@@ -246,5 +279,57 @@ describe("validerComptes", () => {
   });
   it("signale un JSON illisible", () => {
     expect(validerComptes({ fichier: "comptes.json", texte: "[{" }).erreurs[0].regle).toMatch(/JSON illisible/);
+  });
+});
+
+describe("validerCandidats", () => {
+  const valider = (fichiers: Record<string, string>, idsFiches: string[] = []) =>
+    validerCandidats(
+      Object.entries(fichiers).map(([fichier, texte]) => ({ fichier, texte })),
+      new Set(idsFiches),
+    );
+  const regles = (resultat: ReturnType<typeof valider>) =>
+    resultat.erreurs.map((e) => `${e.fichier} › ${e.champ} : ${e.regle}`);
+
+  it("accepte des listes conformes", () => {
+    const { candidats, erreurs } = valider({
+      "e.yaml": "- { mot: étonner, statut: a-faire }\n- { mot: ennui, statut: sans-source, raison: Aucune entrée. }\n",
+      "c.yaml": "- { mot: chétif, statut: ecarte, raison: Hors critère. }\n",
+    });
+    expect(erreurs).toEqual([]);
+    expect(candidats.map((c) => c.mot)).toEqual(["étonner", "ennui", "chétif"]);
+  });
+  it("exige une raison pour un mot sans source ou écarté", () => {
+    expect(regles(valider({ "e.yaml": "- { mot: ennui, statut: ecarte }\n" }))).toEqual([
+      "e.yaml › 0.raison : raison obligatoire pour un mot sans source ou écarté",
+    ]);
+  });
+  it("refuse un statut inconnu", () => {
+    expect(valider({ "e.yaml": "- { mot: ennui, statut: fait }\n" }).erreurs.map((e) => e.champ)).toEqual(["0.statut"]);
+  });
+  it("refuse une liste qui n'en est pas une", () => {
+    expect(valider({ "e.yaml": "mot: ennui\n" }).erreurs.map((e) => e.champ)).toEqual(["(racine)"]);
+  });
+  it.each(["E.yaml", "ab.yaml", "e.yml", "é.yaml"])("refuse le nom de liste %s", (fichier) => {
+    expect(valider({ [fichier]: "[]\n" }).erreurs.map((e) => e.champ)).toEqual(["(fichier)"]);
+  });
+  it("range chaque mot dans la liste de son initiale sans accent", () => {
+    expect(valider({ "e.yaml": "- { mot: étonner, statut: a-faire }\n" }).erreurs).toEqual([]);
+    expect(regles(valider({ "e.yaml": "- { mot: chétif, statut: a-faire }\n" }))).toEqual([
+      "e.yaml › 0.mot : « chétif » doit être rangé dans « c.yaml »",
+    ]);
+  });
+  it("refuse un candidat qui a déjà une fiche", () => {
+    expect(regles(valider({ "e.yaml": "- { mot: étonner, statut: a-faire }\n" }, ["etonner"]))).toEqual([
+      "e.yaml › 0.mot : « étonner » a déjà une fiche : le retirer des candidats",
+    ]);
+  });
+  it("refuse un candidat en double, même dans une autre casse", () => {
+    expect(regles(valider({ "e.yaml": "- { mot: ennui, statut: a-faire }\n- { mot: Ennui, statut: a-faire }\n" }))).toEqual([
+      "e.yaml › 1.mot : « Ennui » figure déjà dans e.yaml",
+    ]);
+  });
+  it("signale un alias YAML", () => {
+    expect(valider({ "e.yaml": "- { mot: *ennui, statut: a-faire }\n" }).erreurs[0].regle).toMatch(/alias/);
   });
 });

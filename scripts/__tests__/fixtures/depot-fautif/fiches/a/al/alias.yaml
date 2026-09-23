@@ -9,7 +9,8 @@ incertain: false
 doublets: []
 famille: []
 themes: []
-sources: [Littré]
+sources:
+  - { ouvrage: Littré, entree: alias, page: 1 }
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

@@ -1,21 +1,36 @@
-import { mkdir, writeFile } from "node:fs/promises";
-import { dirname } from "node:path";
+import { mkdir, rm, writeFile } from "node:fs/promises";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import type { FicheIdentifiee } from "../src/lib/types.ts";
+import { prefixe } from "../src/lib/decoupage.ts";
+import type { EntreeIndex, FicheIdentifiee } from "../src/lib/types.ts";
 import { arreterSiErreurs, validerDepot } from "./valider-fiches.ts";
 
-export const FICHIER_SORTIE = fileURLToPath(new URL("../src/generes/fiches.json", import.meta.url));
+export const DOSSIER_SORTIE = fileURLToPath(new URL("../src/generes", import.meta.url));
 
-/** Fiches visibles dans l'app : statut `validee`, triées par id (ordre stable pour le mot du jour). */
-export function assembler(fiches: FicheIdentifiee[]): FicheIdentifiee[] {
-  return fiches.filter((f) => f.statut === "validee").sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+/**
+ * Données de l'app, à partir des seules fiches `validee` triées par id (ordre stable pour le mot du jour) :
+ * un index léger pour la recherche et le tirage, et les fiches complètes regroupées par préfixe.
+ */
+export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
+  const validees = fiches
+    .filter((f) => f.statut === "validee")
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  const lots = new Map<string, FicheIdentifiee[]>();
+  for (const fiche of validees) {
+    const lot = lots.get(prefixe(fiche.id)) ?? [];
+    lot.push(fiche);
+    lots.set(prefixe(fiche.id), lot);
+  }
+  return { index: validees.map(({ id, mot }) => ({ id, mot })), lots };
 }
 
 if (import.meta.main) {
   const { fiches, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
-  const assemblees = assembler(fiches);
-  await mkdir(dirname(FICHIER_SORTIE), { recursive: true });
-  await writeFile(FICHIER_SORTIE, JSON.stringify(assemblees) + "\n");
-  console.log(`✓ ${assemblees.length} fiche(s) validée(s) assemblée(s) dans src/generes/fiches.json`);
+  const { index, lots } = assembler(fiches);
+  await rm(DOSSIER_SORTIE, { recursive: true, force: true });
+  await mkdir(join(DOSSIER_SORTIE, "fiches"), { recursive: true });
+  await writeFile(join(DOSSIER_SORTIE, "index.json"), JSON.stringify(index) + "\n");
+  for (const [p, lot] of lots) await writeFile(join(DOSSIER_SORTIE, "fiches", `${p}.json`), JSON.stringify(lot) + "\n");
+  console.log(`✓ ${index.length} fiche(s) validée(s) assemblée(s) en ${lots.size} lot(s) dans src/generes/`);
 }

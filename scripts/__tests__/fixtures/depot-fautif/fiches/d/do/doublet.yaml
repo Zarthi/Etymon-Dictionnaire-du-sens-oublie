@@ -10,7 +10,8 @@ incertain: false
 doublets: [absent]
 famille: []
 themes: []
-sources: [Littré]
+sources:
+  - { ouvrage: Littré, entree: doublet, url: https://example.org/doublet }
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

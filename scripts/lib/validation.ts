@@ -1,7 +1,8 @@
 import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
-import { schemaComptes, schemaFiche } from "../../src/lib/schema.ts";
-import type { Fiche, FicheIdentifiee, LigneComptes } from "../../src/lib/types.ts";
+import { prefixe } from "../../src/lib/decoupage.ts";
+import { schemaCandidats, schemaComptes, schemaFiche } from "../../src/lib/schema.ts";
+import type { Candidat, Fiche, FicheIdentifiee, LigneComptes } from "../../src/lib/types.ts";
 
 z.config(z.locales.fr());
 
@@ -24,6 +25,12 @@ const RAPPEL_YAML =
 const LONGUEUR_MAX_EXPLICATION = 300;
 const PHRASES_MAX_EXPLICATION = 3;
 const ESPACES_INSECABLES = [" ", " "];
+const ID_VALIDE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+/** Emplacement d'une fiche, relatif au dossier des fiches : `e/et/etonner.yaml`. */
+export function cheminFiche(id: string): string {
+  return `${id[0]}/${prefixe(id)}/${id}.yaml`;
+}
 
 /** Forme ASCII minuscule sans accent d'un mot, mots séparés par des tirets. */
 export function slug(mot: string): string {
@@ -85,9 +92,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
   const erreurs: Erreur[] = [];
   const ajouter = (champ: string, regle: string) => erreurs.push({ fichier, champ, regle });
 
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) {
-    ajouter("id", "le nom de fichier doit être en ASCII minuscule sans accent (mots séparés par des tirets)");
-  } else if (id !== slug(fiche.mot) && !new RegExp(`^${slug(fiche.mot)}-\\d+$`).test(id)) {
+  if (ID_VALIDE.test(id) && id !== slug(fiche.mot) && !new RegExp(`^${slug(fiche.mot)}-\\d+$`).test(id)) {
     ajouter("id", `le nom de fichier doit correspondre au mot : « ${slug(fiche.mot)}.yaml »`);
   }
 
@@ -139,7 +144,7 @@ function verifierDoublets(fiches: FicheIdentifiee[], idsPresents: Set<string>, f
 }
 
 /**
- * Valide un ensemble de fiches YAML.
+ * Valide un ensemble de fiches YAML, chemins relatifs au dossier des fiches (ex. `e/et/etonner.yaml`).
  * `fiches` contient les fiches structurellement conformes ; le lot n'est utilisable que si `erreurs` est vide.
  */
 export function validerFiches(sources: FichierSource[]): { fiches: FicheIdentifiee[]; erreurs: Erreur[] } {
@@ -149,7 +154,7 @@ export function validerFiches(sources: FichierSource[]): { fiches: FicheIdentifi
   const fichierDe = new Map<string, string>();
 
   for (const { fichier, texte } of sources) {
-    const id = /([^/\\]+)\.yaml$/.exec(fichier)?.[1];
+    const id = /([^/]+)\.yaml$/.exec(fichier)?.[1];
     if (id === undefined) {
       erreurs.push({ fichier, champ: "(fichier)", regle: "extension attendue : .yaml" });
       continue;
@@ -160,6 +165,12 @@ export function validerFiches(sources: FichierSource[]): { fiches: FicheIdentifi
     }
     idsPresents.add(id);
     fichierDe.set(id, fichier);
+
+    if (!ID_VALIDE.test(id)) {
+      erreurs.push({ fichier, champ: "id", regle: "le nom de fichier doit être en ASCII minuscule sans accent (mots séparés par des tirets)" });
+    } else if (fichier !== cheminFiche(id)) {
+      erreurs.push({ fichier, champ: "(emplacement)", regle: `la fiche doit être rangée dans « ${cheminFiche(id)} »` });
+    }
 
     const lecture = lireYaml(fichier, texte);
     if ("erreurs" in lecture) {
@@ -177,6 +188,48 @@ export function validerFiches(sources: FichierSource[]): { fiches: FicheIdentifi
 
   erreurs.push(...verifierDoublets(fiches, idsPresents, fichierDe));
   return { fiches, erreurs };
+}
+
+/**
+ * Valide les listes de candidats, une par initiale (ex. `e.yaml`).
+ * Un mot qui a déjà une fiche doit être retiré des candidats.
+ */
+export function validerCandidats(
+  sources: FichierSource[],
+  idsFiches: Set<string>,
+): { candidats: Candidat[]; erreurs: Erreur[] } {
+  const erreurs: Erreur[] = [];
+  const candidats: Candidat[] = [];
+  const fichierDe = new Map<string, string>();
+
+  for (const { fichier, texte } of sources) {
+    const lettre = /^([a-z])\.yaml$/.exec(fichier)?.[1];
+    if (lettre === undefined) {
+      erreurs.push({ fichier, champ: "(fichier)", regle: "nom attendu : une initiale ASCII minuscule, ex. « e.yaml »" });
+      continue;
+    }
+    const lecture = lireYaml(fichier, texte);
+    if ("erreurs" in lecture) {
+      erreurs.push(...lecture.erreurs);
+      continue;
+    }
+    const resultat = schemaCandidats.safeParse(lecture.valeur);
+    if (!resultat.success) {
+      erreurs.push(...erreursZod(fichier, resultat.error));
+      continue;
+    }
+    resultat.data.forEach((candidat, i) => {
+      const id = slug(candidat.mot);
+      const ajouter = (regle: string) => erreurs.push({ fichier, champ: `${i}.mot`, regle });
+      if (!id.startsWith(lettre)) ajouter(`« ${candidat.mot} » doit être rangé dans « ${id[0]}.yaml »`);
+      if (idsFiches.has(id)) ajouter(`« ${candidat.mot} » a déjà une fiche : le retirer des candidats`);
+      const autre = fichierDe.get(id);
+      if (autre !== undefined) ajouter(`« ${candidat.mot} » figure déjà dans ${autre}`);
+      fichierDe.set(id, fichier);
+      candidats.push(candidat);
+    });
+  }
+  return { candidats, erreurs };
 }
 
 /** Valide le fichier des comptes (JSON). */

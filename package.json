@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "valider": "node scripts/valider-fiches.ts",
     "assembler": "node scripts/assembler-fiches.ts",
+    "etat": "node scripts/etat.ts",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
     "prepare": "simple-git-hooks"

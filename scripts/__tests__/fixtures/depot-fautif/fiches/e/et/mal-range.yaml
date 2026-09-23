@@ -1,15 +1,16 @@
-# Langue hors liste et source interdite.
-mot: langue
-etymon: lingua
+# Fiche conforme mais mal rangée : attendue dans m/ma/.
+mot: mal rangé
+etymon: malum
 reconstruit: false
-langue: klingon
+langue: latin
 sens: test
 explication: Test.
 incertain: false
 doublets: []
 famille: []
 themes: []
-sources: [Wiktionnaire]
+sources:
+  - { ouvrage: Littré, entree: mal, page: 1 }
 lectureTraditionnelle: null
 statut: brouillon
 historique: []
