@@ -1,0 +1,33 @@
+:root {
+  --fond: #faf8f3;
+  --texte: #2b2622;
+  --texte-discret: #7a716a;
+  --accent: #8a3b12;
+  --police-fiche: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --police-interface: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #1c1a18;
+    --texte: #ece6dc;
+    --texte-discret: #a39a8f;
+    --accent: #e0a070;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--police-interface);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
