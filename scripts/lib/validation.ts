@@ -1,6 +1,7 @@
 import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
 import { prefixe } from "../../src/lib/decoupage.ts";
+import { normaliser } from "../../src/lib/recherche.ts";
 import { schemaCandidats, schemaComptes, schemaFiche } from "../../src/lib/schema.ts";
 import type { Candidat, Fiche, FicheIdentifiee, LigneComptes } from "../../src/lib/types.ts";
 
@@ -34,12 +35,7 @@ export function cheminFiche(id: string): string {
 
 /** Forme ASCII minuscule sans accent d'un mot, mots séparés par des tirets. */
 export function slug(mot: string): string {
-  return mot
-    .toLowerCase()
-    .replaceAll("œ", "oe")
-    .replaceAll("æ", "ae")
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
+  return normaliser(mot)
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }

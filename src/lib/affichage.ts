@@ -1,0 +1,14 @@
+/** « du latin », « de l'italien » : complément d'origine, avec élision devant voyelle ou h muet. */
+export function origine(langue: string): string {
+  return /^[aeiouyàâéèêh]/i.test(langue) ? `de l'${langue}` : `du ${langue}`;
+}
+
+/** Date ISO en toutes lettres : « 23 septembre 2026 ». */
+export function dateLongue(dateIso: string): string {
+  return new Date(`${dateIso}T00:00:00Z`).toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
