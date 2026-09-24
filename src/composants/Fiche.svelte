@@ -53,9 +53,9 @@
     {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
   </p>
 
-  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} {mentions} /></p>
-
   <Etymologie etymologie={fiche.etymologie} />
+
+  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} {mentions} /></p>
 
   {#each fiche.ecartees as e, i (i)}
     <!-- Idée reçue (populaire) ou hypothèse savante abandonnée : présentée, jamais confondue avec l'étymologie. -->
@@ -81,6 +81,14 @@
 
   <Sources sources={fiche.sources} />
 
+  {#snippet versTradition()}
+    <!-- Où la tradition parle, pour un mot qu'elle n'a pas lu ou pour aller plus loin : un lien, sans rien lui prêter. -->
+    <p class="vers-tradition">
+      <span class="intitule">Du côté de la tradition</span>
+      {#each fiche.renvoisTradition as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}>{motDe(id)}</a>{/each}
+    </p>
+  {/snippet}
+
   {#if lectures.length > 0}
     <!-- Toujours signalées, repliées par défaut : l'étymologie d'abord, la tradition à côté. -->
     <details class="traditions" open={deplierLectures}>
@@ -91,7 +99,10 @@
       {#each lectures as lecture, i (i)}
         <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
       {/each}
+      {#if fiche.renvoisTradition.length > 0}{@render versTradition()}{/if}
     </details>
+  {:else if fiche.renvoisTradition.length > 0}
+    <div class="traditions">{@render versTradition()}</div>
   {/if}
 
   <footer>
@@ -149,12 +160,12 @@
     line-height: 1.1;
   }
   .etymon {
-    margin: 0.5rem 0 1.25rem;
+    margin: 0.5rem 0 0;
     font-size: 1.25rem;
   }
 
   .explication {
-    margin: 0;
+    margin: 1.25rem 0 0;
     font-size: 1.15rem;
     line-height: 1.6;
   }
@@ -199,6 +210,21 @@
   .auteurs {
     font-size: 0.85rem;
     color: var(--texte-discret);
+  }
+  .vers-tradition {
+    font-family: var(--police-interface);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.6rem;
+    margin: 0;
+  }
+  details .vers-tradition {
+    margin-top: 1rem;
+  }
+  .vers-tradition a {
+    color: inherit;
+    font-style: italic;
   }
   .incertain {
     font-family: var(--police-interface);

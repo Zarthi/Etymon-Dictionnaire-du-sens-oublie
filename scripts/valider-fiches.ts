@@ -4,6 +4,7 @@ import { basename, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   referentiel,
+  slug,
   validerAuteurs,
   validerCandidats,
   validerComptes,
@@ -38,11 +39,14 @@ export async function validerDepot(dossierData = DOSSIER_DATA) {
     new Map(auteurs.map((a) => [a.id, a])),
   );
   const ref = referentiel(auteurs, ouvrages);
-  const { fiches, erreurs: erreursFiches } = validerFiches(await lireDossier(join(dossierData, "fiches")), ref);
+  // Les candidats d'abord (les fiches présentes se lisent aux noms de fichiers) : un renvoi peut viser un candidat à faire.
+  const sourcesFiches = await lireDossier(join(dossierData, "fiches"));
   const { candidats, erreurs: erreursCandidats } = validerCandidats(
     await lireDossier(join(dossierData, "candidats")),
-    new Set(fiches.map((f) => f.id)),
+    new Set(sourcesFiches.map((s) => basename(s.fichier, ".yaml"))),
   );
+  const attendus = new Set(candidats.filter((c) => c.statut === "a-faire").map((c) => slug(c.mot)));
+  const { fiches, erreurs: erreursFiches } = validerFiches(sourcesFiches, ref, attendus);
   const { comptes, erreurs: erreursComptes } = validerComptes({
     fichier: "comptes.json",
     texte: await readFile(join(dossierData, "comptes.json"), "utf8"),

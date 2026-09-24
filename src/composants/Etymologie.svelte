@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { de, origine, par } from "../lib/affichage.ts";
+  import { de, origine, sur } from "../lib/affichage.ts";
   import { indexPremier, translitterationDe } from "../lib/etymologie.ts";
   import { auteurs, ouvrages } from "../lib/fiches.ts";
   import { lienAuteur, lienOuvrage } from "../lib/liens.ts";
@@ -7,24 +7,32 @@
   import Forme from "./Forme.svelte";
 
   /**
-   * La chaîne étymologique, sous le sens premier affiché en tête (SensPremier) :
-   * - composition du sens premier : « Composé de φίλος, « ami », et σοφία, « sagesse ». » ;
-   * - mot forgé : « Forgé par Thomas More (1516), dans Utopia. » ;
-   * - voie, du plus proche au plus lointain : « Par l'allemand Schizophrenie, forgé par Eugen Bleuler (1911). » ;
-   * - plus haut : « Plus haut : de l'indo-européen … » ;
-   * - alternatives : « Origine débattue : de relegere, « … » (Cicéron), ou de religare, « … » (Lactance). »
+   * La chaîne étymologique en une phrase, du plus proche au plus lointain, sous le sens premier
+   * affiché en tête (SensPremier), dont le sens n'est pas répété :
+   * « De l'allemand Schizophrenie, forgé par Eugen Bleuler (1911), sur le grec σχίζω, « fendre », et φρήν, « diaphragme ». »
+   * Puis les alternatives : « Origine débattue : de relegere, « … » (Cicéron), ou de religare, « … » (Lactance). »
    */
   let { etymologie }: { etymologie: Maillon[] } = $props();
 
-  const iPremier = $derived(indexPremier(etymologie));
-  const premier = $derived(etymologie[iPremier]);
-  const simples = (liste: Maillon[]) => liste.filter((m) => !m.alternatives);
-  const voie = $derived(simples(etymologie.slice(0, iPremier)));
-  const plusHaut = $derived(simples(etymologie.slice(iPremier + 1)));
+  const premier = $derived(etymologie[indexPremier(etymologie)]);
+  const chaine = $derived(etymologie.filter((m) => !m.alternatives));
   const alternatives = $derived(etymologie.filter((m) => m.alternatives));
   const nom = (id: string) => auteurs.get(id)?.nom ?? id;
   const titre = (id: string) => ouvrages.get(id)?.titre ?? id;
   const prep = (f: { forme: string; translitteration?: string }) => de(translitterationDe(f) ?? f.forme);
+  const majuscule = (texte: string) => texte.charAt(0).toUpperCase() + texte.slice(1);
+
+  /** Ce qui introduit un maillon : sa langue, ou « de » dans la même langue ; « sur » la matière d'un mot forgé. */
+  function introduction(i: number): string {
+    const m = chaine[i];
+    if (i === 0) return m.langue === "français" && !m.forme ? "Composé " : `${majuscule(origine(m.langue))} `;
+    const avant = chaine[i - 1];
+    if (avant.forge && !avant.elements) return `, ${sur(m.langue)} `;
+    // Après une composition sans forme (altruisme), le maillon suivant remonte l'un des éléments, pas la phrase qui précède.
+    if (avant.elements && !avant.forme) return `\u00a0; plus haut, ${origine(m.langue)} `;
+    if (m.langue === avant.langue && m.forme) return `, ${prep({ forme: m.forme, translitteration: m.translitteration })}`;
+    return `, ${origine(m.langue)} `;
+  }
 </script>
 
 {#snippet noms(ids: string[], liaison: string)}{#each ids as id, i (id)}{#if i > 0}{i === ids.length - 1 ? liaison : ", "}{/if}<a
@@ -32,58 +40,36 @@
       href={lienAuteur(id)}>{nom(id)}</a
     >{/each}{/snippet}
 
-<!-- Éléments d'une composition ; `apresLangue` : la langue vient d'être dite, pas de « de » devant le premier. -->
+<!-- Éléments d'une composition ; `apresLangue` : la langue vient d'être dite (« du grec σχίζω et φρήν »), sinon « de » devant chacun. -->
 {#snippet elementsDe(elements: Element[], langue: string, apresLangue = false)}{#each elements as e, i (i)}{#if i > 0}{i ===
       elements.length - 1
         ? ", et "
-        : ", "}{/if}{#if e.langue && e.langue !== langue}{origine(e.langue)}{" "}{:else if i > 0 || !apresLangue}{prep(e)}{/if}<Forme
+        : ", "}{/if}{#if e.langue && e.langue !== langue}{origine(e.langue)}{" "}{:else if !apresLangue}{prep(e)}{/if}<Forme
       forme={e.forme}
       translitteration={e.translitteration}
     />, «&nbsp;{e.sens}&nbsp;»{/each}{/snippet}
 
-{#snippet forge(m: Maillon)}{#if m.forge}, forgé par {@render noms(m.forge.par, " ou ")} ({m.forge.date}){#if m.forge.ouvrage}, dans
-      <a class="ouvrage" href={lienOuvrage(m.forge.ouvrage)}><cite>{titre(m.forge.ouvrage)}</cite></a>{/if}{/if}{/snippet}
-
-{#snippet modele(m: Maillon, majuscule: boolean)}{#if m.modele}{@const calque = m.modele.relation === "calque"}{majuscule
-      ? calque
-        ? "Calque"
-        : "Sur le modèle"
-      : calque
-        ? ", calque"
-        : ", sur le modèle"}{" "}{calque || m.modele.langue !== m.langue ? `${origine(m.modele.langue)} ` : prep(m.modele)}<Forme
-      forme={m.modele.forme}
-      translitteration={m.modele.translitteration}
-    />{#if m.modele.sens}, «&nbsp;{m.modele.sens}&nbsp;»{/if}{/if}{/snippet}
-
-<!-- Un maillon dans une phrase : forme, sens, forge, modèle ; sa langue est dite par l'appelant. -->
-{#snippet maillon(m: Maillon)}{#if m.forme}<Forme
+<!-- Un maillon dans la phrase : forme, sens (sauf le sens premier, déjà en tête), composition, forge, modèle. -->
+{#snippet maillon(m: Maillon, francais: boolean)}{#if m.forme}<Forme
       forme={m.forme}
       translitteration={m.translitteration}
       lien={m.personne ? lienAuteur(m.personne) : m.ouvrage ? lienOuvrage(m.ouvrage) : undefined}
-    />{#if m.sens}, «&nbsp;{m.sens}&nbsp;»{/if}{:else if m.elements}{@render elementsDe(m.elements, m.langue, true)}{/if}{@render forge(m)}{@render modele(m, false)}{/snippet}
+    />{#if m.sens && m !== premier}, «&nbsp;{m.sens}&nbsp;»{/if}{#if m.elements}, composé {@render elementsDe(
+        m.elements,
+        m.langue,
+      )}{/if}{:else if m.elements}{@render elementsDe(m.elements, m.langue, !francais)}{/if}{#if m.forge}, forgé par {@render noms(
+      m.forge.par,
+      " ou ",
+    )} ({m.forge.date}){#if m.forge.ouvrage}, dans
+      <a class="ouvrage" href={lienOuvrage(m.forge.ouvrage)}><cite>{titre(m.forge.ouvrage)}</cite></a>{/if}{/if}{#if m.modele}{@const calque =
+      m.modele.relation === "calque"}{calque ? ", calque " : ", sur le modèle "}{calque || m.modele.langue !== m.langue
+      ? `${origine(m.modele.langue)} `
+      : prep(m.modele)}<Forme forme={m.modele.forme} translitteration={m.modele.translitteration} />{#if m.modele.sens}, «&nbsp;{m.modele
+          .sens}&nbsp;»{/if}{/if}{/snippet}
 
-{#if premier.forme && premier.elements}
-  <p class="chaine"><strong>Composé</strong>&nbsp;: {@render elementsDe(premier.elements, premier.langue)}.</p>
-{/if}
-{#if premier.forge}
+{#if chaine.length > 0}
   <p class="chaine">
-    <strong>Forgé</strong> par {@render noms(premier.forge.par, " ou ")} ({premier.forge.date}){#if premier.forge.ouvrage}, dans
-      <a class="ouvrage" href={lienOuvrage(premier.forge.ouvrage)}><cite>{titre(premier.forge.ouvrage)}</cite></a>{/if}.
-  </p>
-{/if}
-{#if premier.modele}
-  <p class="chaine">{@render modele(premier, true)}.</p>
-{/if}
-{#if voie.length > 0}
-  <p class="chaine">
-    <strong>Voie</strong>&nbsp;: {#each voie as m, i (i)}{#if i > 0},{" "}{/if}{i === 0 ? par(m.langue) : origine(m.langue)}
-      {@render maillon(m)}{/each}.
-  </p>
-{/if}
-{#if plusHaut.length > 0}
-  <p class="chaine">
-    <strong>Plus haut</strong>&nbsp;: {#each plusHaut as m, i (i)}{#if i > 0}&nbsp;;{" "}{/if}{origine(m.langue)}
-      {@render maillon(m)}{/each}.
+    {#each chaine as m, i (i)}{introduction(i)}{@render maillon(m, i === 0 && m.langue === "français" && !m.forme)}{/each}.
   </p>
 {/if}
 {#each alternatives as m, i (i)}
@@ -105,9 +91,6 @@
   .chaine {
     margin: 0.6rem 0 0;
     color: var(--texte-discret);
-  }
-  .chaine:first-child {
-    margin-top: 1rem;
   }
   strong {
     font-family: var(--police-interface);

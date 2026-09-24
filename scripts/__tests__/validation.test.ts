@@ -182,6 +182,7 @@ describe("validerFiches : fiches conformes", () => {
       { forme: "Schizophrenie", langue: "allemand", forge: { par: ["eugen-bleuler"], date: 1911 } },
       {
         langue: "grec ancien",
+        sens: "esprit fendu",
         elements: [
           { forme: "σχίζω", sens: "fendre" },
           { forme: "φρήν", sens: "diaphragme" },
@@ -345,8 +346,10 @@ describe("validerFiches : chaîne étymologique", () => {
       "etymologie.0.translitteration : obligatoire pour une écriture ni latine ni grecque",
     ]);
   });
-  it("exige un sens quelque part, et un seul maillon premier", () => {
-    expect(erreursDe({ etymologie: [{ forme: "x", langue: "latin" }] })).toEqual(["etymologie : aucun maillon ne porte de sens : le sens premier est introuvable"]);
+  it("exige un sens premier, même pour une composition, et un seul maillon premier", () => {
+    const regle = "etymologie : aucun maillon ne porte de sens (une composition porte le sens littéral de ses éléments : « esprit fendu »)";
+    expect(erreursDe({ etymologie: [{ forme: "x", langue: "latin" }] })).toEqual([regle]);
+    expect(erreursDe({ etymologie: [{ langue: "grec ancien", elements: [{ forme: "σχίζω", sens: "fendre" }, { forme: "φρήν", sens: "diaphragme" }] }] })).toEqual([regle]);
     const deuxPremiers = [
       { forme: "x", langue: "latin", sens: "a", premier: true },
       { forme: "y", langue: "latin", sens: "b", premier: true },
@@ -361,7 +364,7 @@ describe("validerFiches : chaîne étymologique", () => {
     expect(erreursDe({ etymologie })).toEqual(["etymologie.1.alternatives.formes.0.selon : des tenants seulement pour une origine débattue (mode: debattue)"]);
   });
   it("refuse un nom de personne ou un titre sans forme", () => {
-    const etymologie = [{ langue: "latin", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], personne: "ciceron" }];
+    const etymologie = [{ langue: "latin", sens: "e", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], personne: "ciceron" }];
     expect(erreursDe({ etymologie })).toEqual(["etymologie.0 : personne ou ouvrage : seulement pour une forme (nom propre, titre)"]);
   });
 });
@@ -447,9 +450,21 @@ describe("validerFiches : doublets et renvois", () => {
     expect(validerFiches([fiche("poison", { [champ]: ["potion"] }), fiche("potion", { [champ]: ["poison"] })], REF).erreurs).toEqual([
       { fichier: "p/po/potion.yaml", champ, regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches" },
     ]);
-    expect(validerFiches([fiche("poison", { [champ]: ["potion"] })], REF).erreurs).toEqual([
-      { fichier: "p/po/poison.yaml", champ, regle: "fiche « potion » introuvable" },
+  });
+  it("doublet : vers une fiche existante seulement", () => {
+    expect(validerFiches([fiche("poison", { doublets: ["potion"] })], REF, new Set(["potion"])).erreurs).toEqual([
+      { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
     ]);
+  });
+  it.each(["renvois", "renvoisTradition"])("%s : vers une fiche ou un candidat à faire", (champ) => {
+    expect(validerFiches([fiche("poison", { [champ]: ["potion"] })], REF, new Set(["potion"])).erreurs).toEqual([]);
+    expect(validerFiches([fiche("poison", { [champ]: ["potion"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/poison.yaml", champ, regle: "fiche « potion » introuvable, ni candidat à faire" },
+    ]);
+  });
+  it("renvoisTradition : à sens unique, jamais vers soi-même", () => {
+    expect(validerFiches([fiche("poison", { renvoisTradition: ["potion"] }), fiche("potion", { renvoisTradition: ["poison"] })], REF).erreurs).toEqual([]);
+    expect(erreursDe({ renvoisTradition: ["etonner"] })).toContain("renvoisTradition : une fiche ne peut pas renvoyer à elle-même");
   });
   it("ne signale pas comme introuvable un doublet présent mais invalide", () => {
     const { erreurs } = validerFiches([fiche("poison", { doublets: ["potion"] }), { fichier: "p/po/potion.yaml", texte: "mot: potion\n" }], REF);

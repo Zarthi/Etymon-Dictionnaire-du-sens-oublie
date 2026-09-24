@@ -18,7 +18,7 @@ export function de(forme: string): string {
   return /^[aeiouyàâéèêh]/i.test(forme.replace(/^\*/, "")) ? "d'" : "de ";
 }
 
-/** « par le latin », « par l'allemand » : la voie par laquelle un mot est arrivé. */
-export function par(langue: string): string {
-  return /^[aeiouyàâéèêh]/i.test(langue) ? `par l'${langue}` : `par le ${langue}`;
+/** « sur le grec », « sur l'arabe » : la matière dont un mot a été forgé. */
+export function sur(langue: string): string {
+  return /^[aeiouyàâéèêh]/i.test(langue) ? `sur l'${langue}` : `sur le ${langue}`;
 }

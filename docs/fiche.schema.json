@@ -542,8 +542,19 @@
     },
     "renvois": {
       "default": [],
-      "description": "Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés d'un seul côté.",
+      "description": "Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté.",
       "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Fiche."
+      }
+    },
+    "renvoisTradition": {
+      "default": [],
+      "description": "Du côté de la tradition : mots que la tradition a lus et vers lesquels mène celui-ci (schizophrénie → obsession) ; fiche ou candidat à faire, deux au plus.",
+      "maxItems": 2,
       "type": "array",
       "items": {
         "type": "string",

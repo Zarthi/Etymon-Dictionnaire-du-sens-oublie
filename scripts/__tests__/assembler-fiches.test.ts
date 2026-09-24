@@ -52,6 +52,12 @@ describe("assembler", () => {
     expect(lots.get("sc")?.[0].renvois).toEqual(["obsession"]);
   });
 
+  it("ne transmet que les renvois vers des fiches écrites (un renvoi peut viser un candidat)", () => {
+    const schizophrenie = { ...avec("schizophrenie", "brouillon"), renvois: ["delire", "obsession"], renvoisTradition: ["obsession", "demon"] };
+    const { lots } = assembler([schizophrenie, { ...avec("obsession", "brouillon"), renvois: [] }]);
+    expect(lots.get("sc")?.[0]).toMatchObject({ renvois: ["obsession"], renvoisTradition: ["obsession"] });
+  });
+
   it("regroupe les fiches complètes par préfixe de deux lettres", () => {
     const { lots } = assembler([avec("chiffre", "validee"), avec("chetif", "validee"), avec("zero", "validee")]);
     expect(Object.fromEntries([...lots].map(([p, lot]) => [p, lot.map((f) => f.id)]))).toEqual({

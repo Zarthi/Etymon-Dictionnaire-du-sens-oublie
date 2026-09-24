@@ -29,7 +29,7 @@ export function translitterationDe({ forme, translitteration }: AvecForme): stri
 
 /** Le maillon porte-t-il un sens à afficher (le sien, ou ceux de ses éléments) ? */
 function porteSens(m: Maillon): boolean {
-  return m.sens !== undefined || (m.forme === undefined && m.elements !== undefined);
+  return m.sens !== undefined;
 }
 
 /**
@@ -44,10 +44,10 @@ export function indexPremier(etymologie: Maillon[]): number {
   return Math.max(0, etymologie.findIndex(porteSens));
 }
 
-/** Sens premier en texte (celui du maillon, ou ceux de ses éléments) : pour les contrôles de redite. */
+/** Sens premier en texte : pour les contrôles de redite. */
 export function sensPremier(etymologie: Maillon[]): string {
   const m = etymologie[indexPremier(etymologie)];
-  return m.sens ?? (m.elements ?? []).map((e) => e.sens).join(", ");
+  return m.sens ?? "";
 }
 
 /** Toutes les formes d'un maillon, avec leurs écritures : pour l'italique et les vérifications. */

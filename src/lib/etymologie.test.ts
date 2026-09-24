@@ -11,9 +11,11 @@ describe("indexPremier", () => {
     // Chiffre : le latin médiéval a un sens, l'arabe aussi, plus lointain.
     expect(indexPremier([m({ forme: "cifra", sens: "zéro" }), m({ forme: "صفر", sens: "vide" })])).toBe(1);
   });
-  it("compte une composition sans forme comme porteuse de sens", () => {
-    const schizophrenie = [m({ forme: "Schizophrenie" }), m({ elements: [{ forme: "σχίζω", sens: "fendre" }, { forme: "φρήν", sens: "diaphragme" }] })];
-    expect(indexPremier(schizophrenie)).toBe(1);
+  it("prend une composition par son sens littéral", () => {
+    const elements = [{ forme: "σχίζω", sens: "fendre" }, { forme: "φρήν", sens: "diaphragme" }];
+    expect(indexPremier([m({ forme: "Schizophrenie" }), m({ sens: "esprit fendu", elements })])).toBe(1);
+    // Altruisme : la composition française sans sens ne l'emporte pas sur le latin alter.
+    expect(indexPremier([m({ elements }), m({ forme: "alter", sens: "l'autre" })])).toBe(1);
   });
   it("ignore les alternatives et les formes reconstruites, sauf à défaut", () => {
     const religion = [m({ forme: "religio", sens: "scrupule" }), m({ alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }] } })];
@@ -27,9 +29,9 @@ describe("indexPremier", () => {
 });
 
 describe("sensPremier", () => {
-  it("donne le sens du maillon, ou ceux de ses éléments", () => {
+  it("donne le sens du maillon premier", () => {
     expect(sensPremier([m({ forme: "religio", sens: "scrupule" })])).toBe("scrupule");
-    expect(sensPremier([m({ elements: [{ forme: "σχίζω", sens: "fendre" }, { forme: "φρήν", sens: "diaphragme" }] })])).toBe("fendre, diaphragme");
+    expect(sensPremier([m({ sens: "esprit fendu", elements: [{ forme: "σχίζω", sens: "fendre" }] })])).toBe("esprit fendu");
   });
 });
 

@@ -243,7 +243,16 @@ const objetFiche = z
       .array(identifiant("Fiche."))
       .max(3)
       .default([])
-      .describe("Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés d'un seul côté."),
+      .describe(
+        "Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté.",
+      ),
+    renvoisTradition: z
+      .array(identifiant("Fiche."))
+      .max(2)
+      .default([])
+      .describe(
+        "Du côté de la tradition : mots que la tradition a lus et vers lesquels mène celui-ci (schizophrénie → obsession) ; fiche ou candidat à faire, deux au plus.",
+      ),
     themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
     lecturesTraditionnelles: z
       .array(schemaLectureTraditionnelle)

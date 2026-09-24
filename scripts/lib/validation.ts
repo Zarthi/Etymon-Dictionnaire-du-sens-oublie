@@ -176,6 +176,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
 
   if (fiche.doublets.includes(id)) ajouter("doublets", "une fiche ne peut pas être son propre doublet");
   if (fiche.renvois.includes(id)) ajouter("renvois", "une fiche ne peut pas renvoyer à elle-même");
+  if (fiche.renvoisTradition.includes(id)) ajouter("renvoisTradition", "une fiche ne peut pas renvoyer à elle-même");
   // Un renvoi relie des notions sans racine commune : même étymon ou même famille, c'est un doublet ou la famille.
   const parente = new Set([...fiche.doublets, ...fiche.famille.map(slug)]);
   for (const renvoi of fiche.renvois.filter((r) => parente.has(r))) {
@@ -196,8 +197,8 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   const premiers = fiche.etymologie.filter((m) => m.premier).length;
   if (premiers > 1) ajouter("etymologie", "un seul maillon peut porter premier: true");
   const premier = fiche.etymologie[indexPremier(fiche.etymologie)];
-  if (premier.sens === undefined && !(premier.forme === undefined && premier.elements)) {
-    ajouter("etymologie", "aucun maillon ne porte de sens : le sens premier est introuvable");
+  if (premier.sens === undefined) {
+    ajouter("etymologie", "aucun maillon ne porte de sens (une composition porte le sens littéral de ses éléments : « esprit fendu »)");
   }
   const lire = (champ: string, f: { forme: string; translitteration?: string }) => {
     const latin = enAlphabetLatin(f.forme);
@@ -288,14 +289,16 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
 }
 
 /**
- * Règles entre fiches : un doublet ou un renvoi vise une fiche existante, et la relation,
- * symétrique, n'est déclarée que sur l'une des deux fiches (l'app l'affiche dans les deux sens).
+ * Règles entre fiches : un doublet vise une fiche existante ; un renvoi, une fiche ou un candidat
+ * à faire (l'app ne l'affiche qu'une fois la fiche écrite). Une relation symétrique (doublet,
+ * renvoi) n'est déclarée que sur l'une des deux fiches : l'app l'affiche dans les deux sens.
  */
 function verifierRelations(
-  champ: "doublets" | "renvois",
+  champ: "doublets" | "renvois" | "renvoisTradition",
   fiches: FicheIdentifiee[],
   idsPresents: Set<string>,
   fichierDe: Map<string, string>,
+  attendus: Set<string> = new Set(),
 ): Erreur[] {
   const erreurs: Erreur[] = [];
   const parId = new Map(fiches.map((f) => [f.id, f]));
@@ -303,8 +306,8 @@ function verifierRelations(
     for (const cible of fiche[champ]) {
       const fichier = fichierDe.get(fiche.id)!;
       if (!idsPresents.has(cible)) {
-        erreurs.push({ fichier, champ, regle: `fiche « ${cible} » introuvable` });
-      } else if (fiche.id > cible && parId.get(cible)?.[champ].includes(fiche.id)) {
+        if (!attendus.has(cible)) erreurs.push({ fichier, champ, regle: `fiche « ${cible} » introuvable${champ === "doublets" ? "" : ", ni candidat à faire"}` });
+      } else if (champ !== "renvoisTradition" && fiche.id > cible && parId.get(cible)?.[champ].includes(fiche.id)) {
         erreurs.push({
           fichier,
           champ,
@@ -318,10 +321,15 @@ function verifierRelations(
 
 /**
  * Valide un ensemble de fiches de mots, chemins relatifs au dossier des fiches (ex. `e/et/etonner.yaml`),
- * avec les auteurs et ouvrages qu'elles citent. `fiches` contient les fiches structurellement
+ * avec les auteurs et ouvrages qu'elles citent et les identifiants des candidats à faire (`attendus`,
+ * cibles possibles d'un renvoi). `fiches` contient les fiches structurellement
  * conformes ; le lot n'est utilisable que si `erreurs` est vide.
  */
-export function validerFiches(sources: FichierSource[], ref: Referentiel): { fiches: FicheIdentifiee[]; erreurs: Erreur[] } {
+export function validerFiches(
+  sources: FichierSource[],
+  ref: Referentiel,
+  attendus: Set<string> = new Set(),
+): { fiches: FicheIdentifiee[]; erreurs: Erreur[] } {
   const erreurs: Erreur[] = [];
   const fiches: FicheIdentifiee[] = [];
   const idsPresents = new Set<string>();
@@ -349,7 +357,8 @@ export function validerFiches(sources: FichierSource[], ref: Referentiel): { fic
   }
 
   erreurs.push(...verifierRelations("doublets", fiches, idsPresents, fichierDe));
-  erreurs.push(...verifierRelations("renvois", fiches, idsPresents, fichierDe));
+  erreurs.push(...verifierRelations("renvois", fiches, idsPresents, fichierDe, attendus));
+  erreurs.push(...verifierRelations("renvoisTradition", fiches, idsPresents, fichierDe, attendus));
   return { fiches, erreurs };
 }
 

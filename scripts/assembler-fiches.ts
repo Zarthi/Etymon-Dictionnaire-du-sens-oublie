@@ -15,15 +15,19 @@ const parId = (a: { id: string }, b: { id: string }) => (a.id < b.id ? -1 : a.id
  * Le statut accompagne chaque fiche : l'app signale celles qui ne sont pas encore validées.
  */
 export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
+  // Un renvoi peut viser un candidat : l'app ne reçoit que les fiches écrites.
+  const ecrites = new Set(fiches.map((f) => f.id));
   // Un doublet ou un renvoi n'est déclaré que sur une des deux fiches : l'app le reçoit des deux côtés.
   const symetrique = (champ: "doublets" | "renvois") => {
-    const relations = new Map(fiches.map((f) => [f.id, new Set(f[champ])]));
+    const relations = new Map(fiches.map((f) => [f.id, new Set(champ === "renvois" ? f.renvois.filter((id) => ecrites.has(id)) : f[champ])]));
     for (const f of fiches) for (const cible of f[champ]) relations.get(cible)?.add(f.id);
     return (id: string) => [...(relations.get(id) ?? [])].sort();
   };
   const doublets = symetrique("doublets");
   const renvois = symetrique("renvois");
-  const triees = fiches.map((f) => ({ ...f, doublets: doublets(f.id), renvois: renvois(f.id) })).sort(parId);
+  const triees = fiches
+    .map((f) => ({ ...f, doublets: doublets(f.id), renvois: renvois(f.id), renvoisTradition: f.renvoisTradition.filter((id) => ecrites.has(id)) }))
+    .sort(parId);
   const lots = new Map<string, FicheIdentifiee[]>();
   for (const fiche of triees) {
     const lot = lots.get(prefixe(fiche.id)) ?? [];

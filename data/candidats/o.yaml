@@ -6,7 +6,6 @@
 - { mot: obstiné, statut: a-faire }
 - { mot: occasion, statut: a-faire }
 - { mot: occident, statut: a-faire }
-- { mot: œuvre, statut: a-faire }
 - { mot: offense, statut: a-faire }
 - { mot: office, statut: a-faire }
 - { mot: offrir, statut: a-faire }
@@ -14,6 +13,7 @@
 - { mot: ombre, statut: a-faire }
 - { mot: opinion, statut: a-faire }
 - { mot: opportun, statut: a-faire }
+- { mot: oppression, statut: a-faire }
 - { mot: opprimer, statut: a-faire }
 - { mot: opulent, statut: a-faire }
 - { mot: oracle, statut: a-faire }
@@ -29,3 +29,4 @@
 - { mot: outrage, statut: a-faire }
 - { mot: ouvrage, statut: a-faire }
 - { mot: ouvrier, statut: a-faire }
+- { mot: œuvre, statut: a-faire }

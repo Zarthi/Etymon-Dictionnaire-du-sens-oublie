@@ -6,18 +6,22 @@ etymologie:
     forge:
       par: [ eugen-bleuler ]
       date: "1911"
+      ouvrage: dementia-praecox
   - langue: grec ancien
+    sens: esprit fendu
     elements:
       - forme: σχίζω
         sens: fendre
       - forme: φρήν
-        sens: diaphragme, puis siège des passions et de la pensée
+        sens: diaphragme
 explication: >-
-  Bleuler désignait la discordance entre pensée, affects et volonté, non un
-  dédoublement de la personnalité, contresens devenu courant. Le phrēn grec est
-  d'abord le diaphragme : on logeait la pensée dans la poitrine.
+  Bleuler renommait la démence précoce : non un dédoublement de la
+  personnalité, contresens devenu courant, mais une discordance entre pensée,
+  affects et volonté. Ce que le mot fend, les Grecs le logeaient dans la
+  poitrine, non dans la tête.
 famille: [ schizophrène, frénésie, frénétique ]
-renvois: [ obsession ]
+renvois: [ delire, folie ]
+renvoisTradition: [ obsession ]
 themes: [ esprit, santé ]
 sources:
   - ouvrage: tlfi

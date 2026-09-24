@@ -19,7 +19,8 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `incertain` | `true` \| `false` | non | La chaîne elle-même est douteuse (une origine débattue relève des alternatives). Faux si absent. |
 | `doublets` | liste d'identifiants | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | non | Mots français apparentés, de la même racine. |
-| `renvois` | liste d'identifiants | non | Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés d'un seul côté. |
+| `renvois` | liste d'identifiants | non | Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté. |
+| `renvoisTradition` | liste d'identifiants | non | Du côté de la tradition : mots que la tradition a lus et vers lesquels mène celui-ci (schizophrénie → obsession) ; fiche ou candidat à faire, deux au plus. |
 | `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
 | `lecturesTraditionnelles` | liste d'objets (voir plus bas) | non | Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune). |
 | `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire. |
@@ -254,12 +255,12 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 - Une forme reconstruite commence par `*` ; une valeur commençant par `*`, contenant `: `, ou une virgule dans `{ … }`, s'écrit entre guillemets.
 - Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches ; l'adresse d'une entrée se déduit du modèle d'adresse de l'ouvrage ; la translittération du grec se déduit de la forme ; ce qui se calcule (œuvres d'un auteur, mots qu'il a forgés) ne s'écrit pas.
 - Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, `tradition: false`, listes vides).
-- Toute référence (auteur, ouvrage, doublet, renvoi) vise une fiche existante.
-- `etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Au moins un maillon porte un sens ; au plus un est `premier`.
+- Toute référence (auteur, ouvrage, doublet) vise une fiche existante ; un renvoi (`renvois`, `renvoisTradition`), une fiche ou un candidat à faire (l'app ne l'affiche qu'une fois la fiche écrite).
+- `etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Le maillon du sens premier porte un sens (une composition, le sens littéral de ses éléments) ; au plus un maillon est `premier`.
 - Translittération : seulement pour une écriture ni latine ni grecque (arabe, hébreu), et alors obligatoire.
 - `selon` : seulement dans une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
 - Lecture traditionnelle : un auteur de la tradition (`tradition: true`), ses propres œuvres, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).
-- `renvois` : ni doublet, ni mot de la famille (une notion voisine, pas une racine commune).
+- `renvois` : ni doublet, ni mot de la famille (une notion voisine, pas une racine commune). `renvoisTradition` : à sens unique, affiché du seul côté de la fiche qui le déclare.
 - Les textes sont bruts, sans mise en forme : l'app met en italique les formes de la chaîne et pose les liens (mots qui ont une fiche ; auteurs et ouvrages cités par la fiche, sous leur nom, une forme de `cite`, leur titre ou leur abrégé). Une forme qui désignerait deux pages dans une même fiche est refusée : écrire le nom complet.
 - `explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus ; `description` : 200 caractères au plus.
 - Typographie française dans les sens et les textes : guillemets « », espace insécable avant `:` `;` `?` `!` ; les sens s'écrivent sans guillemets.
