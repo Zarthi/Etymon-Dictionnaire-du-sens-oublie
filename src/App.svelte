@@ -115,7 +115,7 @@
       {#if vue.nom === "fiche"}
         {#await ficheOuverte then fiche}
           {#if fiche}
-            <Fiche {fiche} lectureTraditionnelle={parametres.lectureTraditionnelle} {lienVers} />
+            <Fiche {fiche} deplierLectures={parametres.deplierLectures} {lienVers} />
           {:else}
             <p class="message">Ce mot n'a pas (encore) de fiche.</p>
           {/if}

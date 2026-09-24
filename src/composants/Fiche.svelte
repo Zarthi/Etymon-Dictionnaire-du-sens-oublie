@@ -8,11 +8,14 @@
 
   let {
     fiche,
-    lectureTraditionnelle,
+    deplierLectures,
     lienVers,
-  }: { fiche: FicheIdentifiee; lectureTraditionnelle: boolean; lienVers: (id: string) => string | undefined } = $props();
+  }: { fiche: FicheIdentifiee; deplierLectures: boolean; lienVers: (id: string) => string | undefined } = $props();
 
   const correction = $derived(fiche.historique.at(-1));
+  const lectures = $derived(fiche.lecturesTraditionnelles);
+  /** Auteurs des lectures, sans doublon, pour l'intitulé replié : « Lactance, Augustin, Isidore de Séville ». */
+  const auteurs = $derived([...new Set(lectures.map((l) => l.auteur))].join(", "));
 </script>
 
 <svelte:head>
@@ -54,13 +57,17 @@
     <p class="note">Étymologie incertaine ou débattue.</p>
   {/if}
 
-  {#if lectureTraditionnelle && fiche.lecturesTraditionnelles.length > 0}
-    <aside class="traditions">
-      <h2>{fiche.lecturesTraditionnelles.length > 1 ? "Lectures traditionnelles" : "Lecture traditionnelle"}</h2>
-      {#each fiche.lecturesTraditionnelles as lecture, i (i)}
+  {#if lectures.length > 0}
+    <!-- Toujours signalées, repliées par défaut : l'étymologie d'abord, la tradition à côté. -->
+    <details class="traditions" open={deplierLectures}>
+      <summary>
+        <span class="intitule">{lectures.length > 1 ? "Lectures traditionnelles" : "Lecture traditionnelle"}</span>
+        <span class="auteurs">{auteurs}</span>
+      </summary>
+      {#each lectures as lecture, i (i)}
         <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} />
       {/each}
-    </aside>
+    </details>
   {/if}
 
   <footer>
@@ -144,14 +151,40 @@
     background: var(--surface);
     border-radius: 0 0.5rem 0.5rem 0;
   }
-  .traditions h2 {
-    margin: 0 0 0.4rem;
+  summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.6rem;
+    cursor: pointer;
+    list-style: none;
     font-family: var(--police-interface);
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::after {
+    content: "▸";
+    margin-left: auto;
+    color: var(--tradition);
+    transition: transform 0.15s;
+  }
+  .traditions[open] summary {
+    margin-bottom: 0.6rem;
+  }
+  .traditions[open] summary::after {
+    transform: rotate(90deg);
+  }
+  .intitule {
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--tradition);
+  }
+  .auteurs {
+    font-size: 0.85rem;
+    color: var(--texte-discret);
   }
   .racine,
   .note {

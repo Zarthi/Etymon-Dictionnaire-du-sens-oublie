@@ -1,9 +1,10 @@
 /** Préférences mémorisées sur l'appareil. */
 export interface Parametres {
-  lectureTraditionnelle: boolean;
+  /** Lectures traditionnelles dépliées d'emblée ; sinon, repliées sous leur intitulé. */
+  deplierLectures: boolean;
 }
 
-export const PARAMETRES_PAR_DEFAUT: Parametres = { lectureTraditionnelle: false };
+export const PARAMETRES_PAR_DEFAUT: Parametres = { deplierLectures: false };
 
 const CLE = "etymon.parametres";
 
@@ -21,7 +22,7 @@ function stockageLocal(): Stockage | undefined {
 export function lireParametres(stockage = stockageLocal()): Parametres {
   try {
     const brut = JSON.parse(stockage?.getItem(CLE) ?? "{}");
-    return { lectureTraditionnelle: brut?.lectureTraditionnelle === true };
+    return { deplierLectures: brut?.deplierLectures === true };
   } catch {
     return { ...PARAMETRES_PAR_DEFAUT };
   }

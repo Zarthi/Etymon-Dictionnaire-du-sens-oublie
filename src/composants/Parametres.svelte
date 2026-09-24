@@ -9,12 +9,13 @@
   <h1>Paramètres</h1>
 
   <label class="option">
-    <input type="checkbox" bind:checked={parametres.lectureTraditionnelle} />
+    <input type="checkbox" bind:checked={parametres.deplierLectures} />
     <span>
-      Lecture traditionnelle
+      Déplier les lectures traditionnelles
       <small>
-        Affiche, quand la fiche en contient une, le sens donné au mot par une doctrine traditionnelle (Pères de
-        l'Église, scolastique…). Toujours sourcée et séparée de l'étymologie.
+        Le sens donné au mot par une doctrine traditionnelle (Pères de l'Église, scolastique…) figure sous
+        l'étymologie, replié par défaut. Cochée, cette option l'affiche toujours en entier. Toujours sourcé et
+        séparé de l'étymologie.
       </small>
     </span>
   </label>

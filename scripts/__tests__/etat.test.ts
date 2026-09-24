@@ -1,9 +1,14 @@
 import { describe, expect, it } from "vitest";
-import type { Candidat, FicheIdentifiee } from "../../src/lib/types.ts";
-import { listerBrouillons, prochainsCandidats, resumer } from "../etat.ts";
+import type { Candidat, FicheIdentifiee, LectureTraditionnelle } from "../../src/lib/types.ts";
+import { lecturesIASeule, listerBrouillons, prochainsCandidats, resumer } from "../etat.ts";
 
-const fiche = (id: string, statut: FicheIdentifiee["statut"], incertain = false) =>
-  ({ id, mot: id, statut, incertain }) as FicheIdentifiee;
+const fiche = (id: string, statut: FicheIdentifiee["statut"], incertain = false, lectures: LectureTraditionnelle[] = []) =>
+  ({ id, mot: id, statut, incertain, lecturesTraditionnelles: lectures }) as FicheIdentifiee;
+const lecture = (auteur: string, ...ouvrages: string[]): LectureTraditionnelle => ({
+  texte: "Lecture.",
+  auteur,
+  sources: ouvrages.map((ouvrage) => ({ ouvrage, entree: ouvrage === "IA" ? "Claude Opus 5.5" : "I, 1" })),
+});
 const candidats: Candidat[] = [
   { mot: "ennui", statut: "a-faire" },
   { mot: "chétif", statut: "sans-source", raison: "Aucune entrée." },
@@ -13,8 +18,13 @@ const candidats: Candidat[] = [
 ];
 
 describe("resumer", () => {
-  it("compte fiches et candidats par statut", () => {
-    const fiches = [fiche("a", "validee"), fiche("b", "brouillon", true), fiche("c", "brouillon"), fiche("d", "a-verifier")];
+  it("compte fiches, candidats et lectures traditionnelles", () => {
+    const fiches = [
+      fiche("a", "validee", false, [lecture("Lactance", "Institutions divines", "IA"), lecture("Isidore", "IA")]),
+      fiche("b", "brouillon", true),
+      fiche("c", "brouillon"),
+      fiche("d", "a-verifier"),
+    ];
     expect(resumer(fiches, candidats)).toEqual({
       fiches: 4,
       validees: 1,
@@ -24,7 +34,24 @@ describe("resumer", () => {
       candidatsAFaire: 3,
       candidatsSansSource: 1,
       candidatsEcartes: 1,
+      lectures: 2,
+      lecturesIASeule: 1,
     });
+  });
+});
+
+describe("lecturesIASeule", () => {
+  it("signale les lectures dont l'IA est la seule source, pas celles qui citent une œuvre ou la rédaction", () => {
+    const fiches = [
+      fiche("religion", "brouillon", false, [
+        lecture("Lactance", "Institutions divines", "IA"),
+        lecture("Guénon", "IA"),
+        lecture("Étymon", "Étymon, rédaction"),
+      ]),
+    ];
+    expect(lecturesIASeule(fiches)).toEqual([
+      { mot: "religion", auteur: "Guénon", chemin: "data/fiches/r/re/religion.yaml" },
+    ]);
   });
 });
 

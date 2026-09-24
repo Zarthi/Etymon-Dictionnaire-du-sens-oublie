@@ -19,26 +19,26 @@ const stockageBloque = {
 };
 
 describe("paramètres", () => {
-  it("désactive la lecture traditionnelle par défaut", () => {
-    expect(PARAMETRES_PAR_DEFAUT.lectureTraditionnelle).toBe(false);
-    expect(lireParametres(stockageMemoire())).toEqual({ lectureTraditionnelle: false });
+  it("replie les lectures traditionnelles par défaut", () => {
+    expect(PARAMETRES_PAR_DEFAUT.deplierLectures).toBe(false);
+    expect(lireParametres(stockageMemoire())).toEqual({ deplierLectures: false });
   });
   it("mémorise et relit les paramètres", () => {
     const stockage = stockageMemoire();
-    expect(ecrireParametres({ lectureTraditionnelle: true }, stockage)).toBe(true);
-    expect(lireParametres(stockage)).toEqual({ lectureTraditionnelle: true });
+    expect(ecrireParametres({ deplierLectures: true }, stockage)).toBe(true);
+    expect(lireParametres(stockage)).toEqual({ deplierLectures: true });
   });
   it("revient aux valeurs par défaut sur une donnée corrompue ou d'un autre type", () => {
     expect(lireParametres(stockageMemoire({ "etymon.parametres": "{pas du json" }))).toEqual(PARAMETRES_PAR_DEFAUT);
-    expect(lireParametres(stockageMemoire({ "etymon.parametres": '{"lectureTraditionnelle":"oui"}' }))).toEqual(
+    expect(lireParametres(stockageMemoire({ "etymon.parametres": '{"deplierLectures":"oui"}' }))).toEqual(
       PARAMETRES_PAR_DEFAUT,
     );
     expect(lireParametres(stockageMemoire({ "etymon.parametres": "null" }))).toEqual(PARAMETRES_PAR_DEFAUT);
   });
   it("fonctionne sans stockage ou avec un stockage bloqué", () => {
     expect(lireParametres(stockageBloque)).toEqual(PARAMETRES_PAR_DEFAUT);
-    expect(ecrireParametres({ lectureTraditionnelle: true }, stockageBloque)).toBe(false);
+    expect(ecrireParametres({ deplierLectures: true }, stockageBloque)).toBe(false);
     expect(lireParametres(undefined)).toEqual(PARAMETRES_PAR_DEFAUT);
-    expect(ecrireParametres({ lectureTraditionnelle: true }, undefined)).toBe(false);
+    expect(ecrireParametres({ deplierLectures: true }, undefined)).toBe(false);
   });
 });
