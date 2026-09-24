@@ -1,21 +1,19 @@
 mot: austère
 nature: [ adjectif ]
-etymon: austerus
-langue: latin
-sens: âpre au goût, rude
+etymologie:
+  - forme: austerus
+    langue: latin
+    sens: âpre au goût, rude
+  - forme: αὐστηρός
+    langue: grec ancien
+    sens: qui assèche la langue
 explication: >
   Austērós se dit d'un vin âpre, qui dessèche la bouche. L'austère est d'abord
   une saveur, rude et sans douceur ; la morale a emprunté le mot au palais.
-origine:
-  formes:
-    - forme: austērós
-      graphie: αὐστηρός
-      langue: grec ancien
-      sens: qui assèche la langue
 famille: [ austérité ]
 themes: [ morale, nourriture ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: austère
 redaction:
   - par: IA

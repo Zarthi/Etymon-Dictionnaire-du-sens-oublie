@@ -9,20 +9,17 @@ const index = indexer([
   { terme: "irréligion", nature: "s. f.", etymologie: "" },
 ]);
 
+const debattue = (formes: string[]) => ({
+  langue: "latin" as const,
+  alternatives: { mode: "debattue" as const, formes: formes.map((forme) => ({ forme, sens: "x" })) },
+});
+
 const fiche = (surcharges: Partial<Fiche> = {}) =>
   ({
     mot: "religion",
     nature: ["nom féminin"],
-    etymon: "religio",
-    sens: "attention scrupuleuse",
+    etymologie: [{ forme: "religio", langue: "latin", sens: "attention scrupuleuse" }, debattue(["relegere", "religare"])],
     explication: "Le mot ne désignait pas ce que l'on croit.",
-    origine: {
-      mode: "debattue",
-      formes: [
-        { forme: "relegere", langue: "latin", sens: "reprendre" },
-        { forme: "religare", langue: "latin", sens: "relier" },
-      ],
-    },
     famille: ["religieux", "irréligion"],
     ...surcharges,
   }) as Fiche;
@@ -37,12 +34,15 @@ describe("controler", () => {
   it("signale un mot de la famille absent du Littré", () => {
     expect(controler(fiche({ famille: ["religieux", "religiosophie"] }), index)).toEqual(["famille absente du Littré : religiosophie"]);
   });
-  it("signale une forme d'origine que l'étymologie du Littré ne cite pas", () => {
-    const origine = { mode: "debattue" as const, formes: [{ forme: "religere", langue: "latin", sens: "choisir" }, { forme: "religare", langue: "latin", sens: "relier" }] };
-    expect(controler(fiche({ origine }), index)).toEqual(["formes d'origine non citées par le Littré : religere"]);
+  it("signale une forme plus lointaine que l'étymologie du Littré ne cite pas", () => {
+    const etymologie = [{ forme: "religio", langue: "latin" as const, sens: "attention" }, debattue(["religere", "religare"])];
+    expect(controler(fiche({ etymologie }), index)).toEqual(["formes d'origine non citées par le Littré : religere"]);
   });
   it("ne contrôle ni nature ni formes d'un mot absent du Littré", () => {
     expect(controler(fiche({ mot: "schizophrénie", famille: [] }), index)).toEqual([]);
+  });
+  it("signale une explication qui reprend le sens premier", () => {
+    expect(controler(fiche({ explication: "Une attention devenue croyance." }), index)).toEqual(["explication qui reprend le sens : attention"]);
   });
 });
 

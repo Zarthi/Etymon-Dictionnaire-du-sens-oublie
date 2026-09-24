@@ -1,0 +1,8 @@
+# Auteur fictif, pour les tests uniquement.
+nom: Lactance
+tradition: true
+description: Auteur de test.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

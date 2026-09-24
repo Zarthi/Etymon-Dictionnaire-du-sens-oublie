@@ -1,23 +1,16 @@
-# Langue hors liste, source interdite ; l'adresse du Bailly se déduit de l'entrée.
+# Langue hors liste, ouvrage sans fiche.
 mot: langue
 nature: [ nom masculin ]
-etymon: lingua
-langue: klingon
-sens: test
+etymologie:
+  - forme: lingua
+    langue: klingon
+    sens: test
 explication: Test.
-incertain: false
-doublets: []
-famille: []
 themes: []
 sources:
-  - ouvrage: Wiktionnaire
+  - ouvrage: wiktionnaire
     entree: langue
-    url: https://example.org/langue
-  - ouvrage: Bailly
-    entree: γλῶσσα
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

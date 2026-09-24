@@ -1,9 +1,9 @@
 mot: apathie
 nature: [ nom féminin ]
-etymon: apátheia
-graphie: ἀπάθεια
-langue: grec ancien
-sens: absence de passion, impassibilité
+etymologie:
+  - forme: ἀπάθεια
+    langue: grec ancien
+    sens: absence de passion, impassibilité
 explication: >
   Pour les stoïciens, l'apatheia est une vertu : l'âme que les passions
   n'atteignent plus. Nous en avons fait un défaut, l'absence d'énergie. L'idéal
@@ -11,7 +11,7 @@ explication: >
 famille: [ pathétique, sympathie, passion ]
 themes: [ morale, émotions ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: apathie
 redaction:
   - par: IA

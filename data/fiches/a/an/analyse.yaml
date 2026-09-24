@@ -1,9 +1,9 @@
 mot: analyse
 nature: [ nom féminin ]
-etymon: análysis
-graphie: ἀνάλυσις
-langue: grec ancien
-sens: action de délier, dissolution
+etymologie:
+  - forme: ἀνάλυσις
+    langue: grec ancien
+    sens: action de délier, dissolution
 explication: >
   Analyein, c'est délier, défaire. L'analyse dénoue : elle sépare ce qui était
   lié pour en voir les éléments. Elle s'oppose à la synthèse, qui remet
@@ -11,7 +11,7 @@ explication: >
 famille: [ paralysie, catalyse ]
 themes: [ savoir, esprit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: analyse
 redaction:
   - par: IA

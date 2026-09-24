@@ -1,8 +1,9 @@
 mot: arbitre
 nature: [ nom masculin ]
-etymon: arbiter
-langue: latin
-sens: témoin oculaire, juge choisi
+etymologie:
+  - forme: arbiter
+    langue: latin
+    sens: témoin oculaire, juge choisi
 explication: >
   L'arbiter romain est le témoin, celui qui a vu, puis le juge que les parties
   choisissent. Le libre arbitre est ce pouvoir de juger par soi-même, de
@@ -10,7 +11,7 @@ explication: >
 famille: [ arbitraire ]
 themes: [ droit, morale, esprit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: arbitre
 redaction:
   - par: IA

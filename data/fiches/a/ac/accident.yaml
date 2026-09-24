@@ -1,8 +1,9 @@
 mot: accident
 nature: [ nom masculin ]
-etymon: accidens
-langue: latin
-sens: ce qui survient, ce qui tombe sur
+etymologie:
+  - forme: accidens
+    langue: latin
+    sens: ce qui survient, ce qui tombe sur
 explication: >
   Accidere, c'est tomber sur. L'accident est ce qui arrive sans être attendu,
   heureux ou non ; la philosophie en garde le sens de ce qui s'ajoute à une
@@ -10,7 +11,7 @@ explication: >
 famille: [ incident, coïncider, chute ]
 themes: [ esprit, savoir, temps ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: accident
 redaction:
   - par: IA

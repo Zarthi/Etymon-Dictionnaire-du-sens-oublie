@@ -1,0 +1,26 @@
+mot: Satan
+nature: [ nom propre ]
+etymologie:
+  - forme: Satanas
+    langue: latin ecclésiastique
+  - forme: Σατανᾶς
+    langue: grec ancien
+  - forme: שָׂטָן
+    translitteration: śāṭān
+    langue: hébreu
+    sens: adversaire, accusateur
+explication: >-
+  Avant d'être un nom propre, le mot désignait une fonction : celui qui s'oppose
+  et accuse, au tribunal comme à la guerre.
+famille: [ satanique, satanisme ]
+renvois: [ obsession ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: satan
+  - ouvrage: tlfi
+    entree: satan
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

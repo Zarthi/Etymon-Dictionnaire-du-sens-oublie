@@ -1,34 +1,62 @@
 import { describe, expect, it } from "vitest";
 import { stringify } from "yaml";
+import type { Auteur, Ouvrage } from "../../src/lib/types.ts";
 import {
   cheminFiche,
   compterPhrases,
+  referentiel,
   slug,
+  validerAuteurs,
   validerCandidats,
   validerComptes,
   validerFiches,
+  validerOuvrages,
   verifierTypographie,
   type Erreur,
 } from "../lib/validation.ts";
 
-const NBSP = " ";
+const NBSP = String.fromCharCode(0xa0);
+const FINE = String.fromCharCode(0x202f);
+
+/** Auteurs et ouvrages que les fiches de test peuvent citer. */
+const socle = { sources: [], redaction: [{ par: "IA" as const, detail: "test" }], statut: "a-verifier" as const, historique: [] };
+const auteur = (id: string, nom: string, tradition = false): Auteur => ({ id, nom, description: "Test.", tradition, ...socle });
+const ouvrage = (id: string, titre: string, champs: Partial<Ouvrage> = {}): Ouvrage => ({
+  id,
+  titre,
+  licence: "domaine public",
+  description: "Test.",
+  ...socle,
+  ...champs,
+});
+const REF = referentiel(
+  [auteur("ciceron", "Cicéron", true), auteur("lactance", "Lactance", true), auteur("augustin", "Augustin", true), auteur("eugen-bleuler", "Eugen Bleuler")],
+  [
+    ouvrage("littre", "Dictionnaire de la langue française", { abrege: "Littré", modeleEntree: "https://www.littre.org/definition/{entree}" }),
+    ouvrage("gaffiot", "Dictionnaire latin-français", { abrege: "Gaffiot", modeleEntree: "https://gaffiot.fr/#{entree}" }),
+    ouvrage("bailly", "Dictionnaire grec-français", { abrege: "Bailly", modeleEntree: "https://bailly.app/{grec}" }),
+    ouvrage("papier", "Un livre sans adresse"),
+    ouvrage("institutions-divines", "Institutions divines", { auteur: "lactance" }),
+    ouvrage("la-cite-de-dieu", "La Cité de Dieu", { auteur: "augustin" }),
+  ],
+);
 
 /** Fiche conforme servant de base ; chaque test n'en modifie qu'un aspect. */
 const ficheBase = {
   mot: "étonner",
   nature: ["verbe"],
-  etymon: "*extonare",
-  langue: "latin populaire",
-  sens: "frapper du tonnerre",
+  etymologie: [
+    { forme: "*extonare", langue: "latin populaire", sens: "frapper du tonnerre" },
+    { forme: "*(s)tenh₂-", langue: "indo-européen", sens: "retentir, gronder" },
+  ],
   explication: "Le mot désignait un ébranlement violent, avant de s'affaiblir en simple surprise.\n",
   incertain: false,
-  origine: { formes: [{ forme: "*(s)tenh₂-", langue: "indo-européen", sens: "retentir, gronder" }] },
   doublets: [],
   famille: ["tonner", "tonnerre", "détonation"],
   themes: ["émotions", "météo"],
   sources: [
-    { ouvrage: "Littré", entree: "étonner" },
-    { ouvrage: "Gaffiot", entree: "extono", page: 1 },
+    { ouvrage: "littre", entree: "étonner" },
+    { ouvrage: "gaffiot", entree: "extono" },
   ],
   redaction: [{ par: "IA", detail: "Claude Opus 5.5" }],
   lecturesTraditionnelles: [],
@@ -40,12 +68,27 @@ const ficheBase = {
 const lectureBase = {
   texte: "Lecture.",
   citation: "hoc uinculo pietatis obstricti deo et religati sumus",
-  auteur: "Lactance",
-  sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3", url: "https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV" }],
+  auteur: "lactance",
+  sources: [{ ouvrage: "institutions-divines", entree: "IV, 28, 3", url: "https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV" }],
 };
 
+/** Origine débattue conforme, pour les lectures qui visent une hypothèse. */
+const chaineDebattue = [
+  { forme: "religio", langue: "latin", sens: "attention scrupuleuse" },
+  {
+    langue: "latin",
+    alternatives: {
+      mode: "debattue",
+      formes: [
+        { forme: "relegere", sens: "reprendre avec soin", selon: ["ciceron"] },
+        { forme: "religare", sens: "relier", selon: ["lactance"] },
+      ],
+    },
+  },
+];
+
 function valider(surcharges: Record<string, unknown> = {}, fichier = "e/et/etonner.yaml") {
-  return validerFiches([{ fichier, texte: stringify({ ...ficheBase, ...surcharges }) }]);
+  return validerFiches([{ fichier, texte: stringify({ ...ficheBase, ...surcharges }) }], REF);
 }
 
 /** Erreurs sous la forme « champ : règle », plus lisibles dans les assertions. */
@@ -61,6 +104,7 @@ describe("slug", () => {
     ["ex æquo", "ex-aequo"],
     ["porte-monnaie", "porte-monnaie"],
     ["aujourd'hui", "aujourd-hui"],
+    ["Isidore de Séville", "isidore-de-seville"],
   ])("%s → %s", (mot, attendu) => expect(slug(mot)).toBe(attendu));
 });
 
@@ -76,7 +120,7 @@ describe("compterPhrases", () => {
 
 describe("verifierTypographie", () => {
   it("accepte l'espace insécable et l'espace fine insécable", () => {
-    expect(verifierTypographie(`Ainsi${NBSP}: oui ; vraiment${NBSP}?!`)).toEqual([]);
+    expect(verifierTypographie(`Ainsi${NBSP}: oui${FINE}; vraiment${NBSP}?!`)).toEqual([]);
   });
   it("refuse une espace ordinaire ou absente avant : ; ? !", () => {
     expect(verifierTypographie("Ainsi : oui; non ? si!")).toEqual([
@@ -95,79 +139,96 @@ describe("verifierTypographie", () => {
   });
 });
 
-describe("validerFiches : fiche conforme", () => {
+describe("validerFiches : fiches conformes", () => {
   it("renvoie la fiche avec son id, sans erreur", () => {
     const { fiches, erreurs } = valider();
     expect(erreurs).toEqual([]);
-    expect(fiches).toHaveLength(1);
-    expect(fiches[0]).toMatchObject({ id: "etonner", mot: "étonner", etymon: "*extonare" });
+    expect(fiches[0]).toMatchObject({ id: "etonner", mot: "étonner" });
   });
   it("retire le saut de ligne final du bloc replié de l'explication", () => {
     expect(valider().fiches[0].explication.endsWith(".")).toBe(true);
   });
-  it("accepte une origine absente, des lectures traditionnelles, une légende et un historique daté", () => {
-    const { origine: _, ...sansOrigine } = ficheBase;
-    const texte = stringify({
-      ...sansOrigine,
-      lecturesTraditionnelles: [lectureBase, { ...structuredClone(lectureBase), texte: "Autre lecture." }],
-      graphie: "ἀνάλυσις",
-      legende: { forme: "sine cera", sens: "sans cire", explication: "Une étymologie de fantaisie." },
-      historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
-    });
-    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
-  });
-  it("accepte une fiche a-verifier sans source ou avec l'IA pour seule source", () => {
-    expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
-    expect(erreursDe({ statut: "a-verifier", sources: [], redaction: [{ par: "IA", detail: "Claude Fable 5.1" }] })).toEqual([]);
-  });
   it("accepte une fiche sans ses champs facultatifs, et leur donne leur valeur par défaut", () => {
     const { incertain: _i, doublets: _d, famille: _f, lecturesTraditionnelles: _l, historique: _h, ...minimale } = ficheBase;
-    const { fiches, erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(minimale) }]);
+    const { fiches, erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(minimale) }], REF);
     expect(erreurs).toEqual([]);
-    expect(fiches[0]).toMatchObject({ incertain: false, doublets: [], famille: [], lecturesTraditionnelles: [], historique: [] });
+    expect(fiches[0]).toMatchObject({ incertain: false, doublets: [], famille: [], renvois: [], ecartees: [], lecturesTraditionnelles: [] });
   });
-  it("donne à une origine sans mode le mode filiation", () => {
-    expect(valider().fiches[0].origine?.mode).toBe("filiation");
-  });
-  it("accepte une composition et un mot forgé", () => {
-    const origine = {
-      mode: "composition",
-      formes: [
-        { forme: "schizō", graphie: "σχίζω", langue: "grec ancien", sens: "fendre" },
-        { forme: "phrēn", graphie: "φρήν", langue: "grec ancien", sens: "diaphragme" },
+  it("accepte des lectures, des étymologies écartées et un historique daté", () => {
+    const texte = stringify({
+      ...ficheBase,
+      etymologie: chaineDebattue,
+      lecturesTraditionnelles: [lectureBase, { ...structuredClone(lectureBase), texte: "Autre lecture.", hypothese: "religare" }],
+      ecartees: [
+        { forme: "sine cera", sens: "sans cire", raison: "Une étymologie de fantaisie.", populaire: true },
+        { forme: "per sonare", sens: "résonner à travers", selon: ["ciceron"] },
       ],
-    };
-    expect(erreursDe({ origine, forge: { par: "Eugen Bleuler", annee: 1911 } })).toEqual([]);
+      historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
+    });
+    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }], REF).erreurs).toEqual([]);
   });
-  it("accepte une entrée du Bailly sans adresse : elle se déduit de l'entrée", () => {
-    expect(erreursDe({ sources: [{ ouvrage: "Bailly", entree: "κριτικός" }] })).toEqual([]);
+  it("accepte une fiche a-verifier sans source", () => {
+    expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
   });
-  it("accepte la rédaction d'Étymon, sans page ni url, à côté d'un ouvrage consulté", () => {
-    const redaction = [...ficheBase.redaction, { par: "Étymon", detail: "correction suite à une Critique" }];
-    expect(erreursDe({ redaction })).toEqual([]);
+  it("accepte la rédaction d'Étymon à côté de celle de l'IA", () => {
+    expect(erreursDe({ redaction: [...ficheBase.redaction, { par: "Étymon", detail: "correction suite à une Critique" }] })).toEqual([]);
   });
-  it("accepte une lecture traditionnelle avec citation originale et rédaction propre", () => {
-    const lecture = {
-      texte: "Lecture.",
-      citation: "hunc eligentes uel potius religentes",
-      auteur: "Augustin",
-      sources: [{ ouvrage: "La Cité de Dieu", entree: "X, 3", url: "https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X" }],
-      redaction: [{ par: "Étymon", detail: "rédaction de Thibault" }],
-    };
+  it("accepte une lecture avec rédaction propre", () => {
+    const lecture = { ...lectureBase, redaction: [{ par: "Étymon", detail: "rédaction de Thibault" }] };
     expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
   });
-  it("accepte une origine débattue, avec ses hypothèses et leurs tenants, et une lecture qui en vise une", () => {
-    const origine = {
-      mode: "debattue",
-      formes: [
-        { forme: "relegere", langue: "latin", sens: "reprendre avec soin", selon: ["Cicéron"] },
-        { forme: "religare", langue: "latin", sens: "relier", selon: ["Lactance"] },
-      ],
-    };
-    expect(erreursDe({ origine, lecturesTraditionnelles: [{ ...lectureBase, hypothese: "religare" }] })).toEqual([]);
+  it("accepte une voie, une composition et un mot forgé (schizophrénie)", () => {
+    const etymologie = [
+      { forme: "Schizophrenie", langue: "allemand", forge: { par: ["eugen-bleuler"], date: 1911 } },
+      {
+        langue: "grec ancien",
+        elements: [
+          { forme: "σχίζω", sens: "fendre" },
+          { forme: "φρήν", sens: "diaphragme" },
+        ],
+      },
+    ];
+    expect(erreursDe({ etymologie })).toEqual([]);
+    expect(valider({ etymologie }).fiches[0].etymologie[0].forge?.date).toBe("1911");
   });
-  it("accepte une adresse qui diffère de celle déduite de l'entrée", () => {
-    expect(erreursDe({ sources: [{ ouvrage: "TLFi", entree: "critique", url: "https://www.cnrtl.fr/etymologie/critique/nom" }] })).toEqual([]);
+  it("accepte une date approximative et une attribution incertaine", () => {
+    const etymologie = [{ forme: "autrui", langue: "français", sens: "les autres", forge: { par: ["ciceron", "lactance"], date: "vers 1830" } }];
+    expect(erreursDe({ etymologie })).toEqual([]);
+  });
+  it("accepte une forme et sa composition, un calque, un double sens voulu", () => {
+    const etymologie = [
+      { forme: "persona", langue: "latin", sens: "masque", modele: { forme: "πρόσωπον", langue: "grec ancien", sens: "visage", relation: "calque" } },
+      { forme: "φιλοσοφία", langue: "grec ancien", sens: "amour de la sagesse", elements: [{ forme: "φίλος", sens: "ami" }, { forme: "σοφία", sens: "sagesse" }] },
+      {
+        langue: "grec ancien",
+        alternatives: {
+          mode: "jeu",
+          formes: [
+            { sens: "nulle part", elements: [{ forme: "οὐ", sens: "non" }, { forme: "τόπος", sens: "lieu" }] },
+            { sens: "lieu du bonheur", elements: [{ forme: "εὖ", sens: "bien" }, { forme: "τόπος", sens: "lieu" }] },
+          ],
+        },
+      },
+    ];
+    expect(erreursDe({ etymologie })).toEqual([]);
+  });
+  it("accepte une écriture arabe avec sa translittération, et un nom de personne ou un titre", () => {
+    const etymologie = [
+      { forme: "cifra", langue: "latin médiéval", sens: "zéro", personne: "ciceron" },
+      { forme: "صفر", translitteration: "ṣifr", langue: "arabe", sens: "vide", ouvrage: "papier" },
+    ];
+    expect(erreursDe({ etymologie })).toEqual([]);
+  });
+  it("accepte une entrée du Bailly sans adresse, une adresse qui diffère, une page", () => {
+    expect(
+      erreursDe({
+        sources: [
+          { ouvrage: "bailly", entree: "κριτικός" },
+          { ouvrage: "littre", entree: "critique", url: "https://www.littre.org/definition/critique.2" },
+          { ouvrage: "papier", entree: "critique", page: 12 },
+        ],
+      }),
+    ).toEqual([]);
   });
   it("accepte un suffixe numérique pour les homonymes", () => {
     expect(erreursDe({}, "e/et/etonner-2.yaml")).toEqual([]);
@@ -175,81 +236,64 @@ describe("validerFiches : fiche conforme", () => {
 });
 
 describe("validerFiches : lecture YAML", () => {
-  it("explique le piège de l'étymon reconstruit non mis entre guillemets", () => {
+  it("explique le piège de la forme reconstruite non mise entre guillemets", () => {
     const texte = stringify(ficheBase).replace('"*extonare"', "*extonare");
-    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte }]);
-    expect(erreurs.length).toBeGreaterThan(0);
+    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte }], REF);
     expect(erreurs[0].regle).toMatch(/YAML illisible/);
     expect(erreurs[0].regle).toMatch(/entre guillemets/);
   });
   it("refuse « : » non protégé dans une valeur", () => {
     const texte = stringify(ficheBase).replace("sens: frapper du tonnerre", "sens: frapper: fort");
-    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs[0].regle).toMatch(/YAML illisible/);
+    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }], REF).erreurs[0].regle).toMatch(/YAML illisible/);
   });
   it("refuse une clé en double", () => {
     const texte = stringify(ficheBase) + "mot: autre\n";
-    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs[0].regle).toMatch(/YAML illisible/);
+    expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }], REF).erreurs[0].regle).toMatch(/YAML illisible/);
   });
 });
 
 describe("validerFiches : structure", () => {
   it("signale un champ obligatoire manquant", () => {
-    const { sens: _, ...sansSens } = ficheBase;
-    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(sansSens) }]);
-    expect(erreurs.map((e) => e.champ)).toEqual(["sens"]);
+    const { etymologie: _, ...sansChaine } = ficheBase;
+    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(sansChaine) }], REF);
+    expect(erreurs.map((e) => e.champ)).toEqual(["etymologie"]);
   });
   it("refuse un champ inconnu", () => {
-    expect(erreursDe({ auteur: "moi" })).toEqual([expect.stringMatching(/^\(racine\) : .*auteur/)]);
+    expect(erreursDe({ etymon: "extonare" })).toEqual([expect.stringMatching(/^\(racine\) : .*etymon/)]);
   });
+  const maillon = (m: Record<string, unknown>) => ({ etymologie: [m] });
+  const deux = [
+    { forme: "a", sens: "b" },
+    { forme: "c", sens: "d" },
+  ];
   it.each([
     ["statut", { statut: "publiee" }],
-    ["langue", { langue: "klingon" }],
     ["themes.0", { themes: ["inconnu"] }],
-    ["sources.0.ouvrage", { sources: [{ ouvrage: "Wiktionnaire", entree: "étonner", page: 1 }] }],
-    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "http://example.org/etonner" }] }],
-    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "pas une url" }] }],
-    ["sources.0", { sources: ["Littré"] }],
+    ["etymologie", { etymologie: [] }],
+    ["etymologie.0.langue", maillon({ forme: "x", langue: "klingon", sens: "y" })],
+    ["etymologie.0.forme", maillon({ langue: "latin", sens: "y" })],
+    ["etymologie.0.forme", maillon({ forme: "x", langue: "latin", alternatives: { mode: "debattue", formes: deux } })],
+    ["etymologie.0.elements", maillon({ langue: "latin", elements: [{ forme: "x", sens: "y" }] })],
+    ["etymologie.0.alternatives.mode", maillon({ langue: "latin", alternatives: { mode: "hypothese", formes: deux } })],
+    ["etymologie.0.alternatives.formes", maillon({ langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b" }] } })],
+    ["etymologie.0.forge.date", maillon({ forme: "x", langue: "latin", sens: "y", forge: { par: ["ciceron"], date: "l'an 1911" } })],
+    ["etymologie.0.forge.par", maillon({ forme: "x", langue: "latin", sens: "y", forge: { par: [], date: 1911 } })],
+    ["etymologie.0.modele.relation", maillon({ forme: "x", langue: "latin", sens: "y", modele: { forme: "z", langue: "latin", relation: "emprunt" } })],
+    ["sources.0.ouvrage", { sources: [{ ouvrage: "Wiktionnaire", entree: "étonner" }] }],
+    ["sources.0.url", { sources: [{ ouvrage: "littre", entree: "étonner", url: "http://example.org/etonner" }] }],
     ["sources", { sources: [] }],
     ["sources", { sources: [], statut: "validee" }],
-    ["sources.0.ouvrage", { sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] }],
     ["redaction", { redaction: [] }],
     ["redaction.0.par", { redaction: [{ par: "Robot", detail: "x" }] }],
-    ["redaction.0.detail", { redaction: [{ par: "IA" }] }],
     ["incertain", { incertain: "non" }],
-    ["(racine)", { reconstruit: true }],
-    ["(racine)", { racine: { forme: "x", langue: "latin", sens: "y" } }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
     ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ ...lectureBase, sources: [] }] }],
     ["lecturesTraditionnelles.0.citation", { lecturesTraditionnelles: [{ ...lectureBase, citation: undefined }] }],
-    ["lecturesTraditionnelles.0.auteur", { lecturesTraditionnelles: [{ ...lectureBase, auteur: "Isidore" }] }],
-    [
-      "lecturesTraditionnelles.0.sources.0.ouvrage",
-      { lecturesTraditionnelles: [{ ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "Cité de Dieu" }] }] },
-    ],
-    [
-      "lecturesTraditionnelles.0.sources.0.url",
-      { lecturesTraditionnelles: [{ ...lectureBase, sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }] },
-    ],
+    ["lecturesTraditionnelles.0.sources.0.url", { lecturesTraditionnelles: [{ ...lectureBase, sources: [{ ouvrage: "institutions-divines", entree: "IV" }] }] }],
     ["lecturesTraditionnelles", { lecturesTraditionnelles: null }],
-    ["nature", { nature: [] }],
     ["nature.0", { nature: ["substantif"] }],
-    ["graphie", { graphie: "" }],
-    ["legende", { legende: "une chaîne au lieu d'un objet" }],
-    ["legende.sens", { legende: { forme: "sine cera" } }],
-    ["sources.0.ouvrage", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
-    ["origine.formes.0.sens", { origine: { formes: [{ forme: "*x", langue: "indo-européen" }] } }],
-    ["origine.formes", { origine: { formes: [] } }],
-    ["origine.formes", { origine: { mode: "composition", formes: [{ forme: "x", langue: "latin", sens: "y" }] } }],
-    ["origine.mode", { origine: { mode: "hypothese", formes: [{ forme: "x", langue: "latin", sens: "y" }] } }],
-    ["origine.formes.0.selon.0", { origine: { formes: [{ forme: "x", langue: "latin", sens: "y", selon: ["Varron le Jeune"] }] } }],
-    // Un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
-    [
-      "origine.formes.0.selon.0",
-      { origine: { mode: "debattue", formes: [{ forme: "x", langue: "latin", sens: "y", selon: ["Littré"] }, { forme: "z", langue: "latin", sens: "w" }] } },
-    ],
-    ["forge.annee", { forge: { par: "Eugen Bleuler", annee: "1911" } }],
-    ["forge.par", { forge: { annee: 1911 } }],
     ["renvois", { renvois: ["a", "b", "c", "d"] }],
+    ["ecartees.0.sens", { ecartees: [{ forme: "sine cera" }] }],
   ])("signale le champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs.map((e) => e.champ)).toEqual([champ]);
   });
@@ -263,16 +307,10 @@ describe("cheminFiche", () => {
   ])("%s → %s", (id, attendu) => expect(cheminFiche(id)).toBe(attendu));
 });
 
-describe("validerFiches : emplacement", () => {
-  it.each(["etonner.yaml", "e/etonner.yaml", "e/ep/etonner.yaml", "x/et/etonner.yaml", "e/et/x/etonner.yaml"])(
-    "refuse une fiche rangée dans %s",
-    (fichier) => {
-      expect(erreursDe({}, fichier)).toEqual(["(emplacement) : la fiche doit être rangée dans « e/et/etonner.yaml »"]);
-    },
-  );
-});
-
-describe("validerFiches : cohérence", () => {
+describe("validerFiches : emplacement et identifiant", () => {
+  it.each(["etonner.yaml", "e/etonner.yaml", "e/ep/etonner.yaml", "x/et/etonner.yaml", "e/et/x/etonner.yaml"])("refuse une fiche rangée dans %s", (fichier) => {
+    expect(erreursDe({}, fichier)).toEqual(["(emplacement) : la fiche doit être rangée dans « e/et/etonner.yaml »"]);
+  });
   it.each(["e/et/étonner.yaml", "e/et/Etonner.yaml", "e/et/etonner_2.yaml"])("refuse l'id non ASCII minuscule %s", (fichier) => {
     expect(erreursDe({}, fichier)).toEqual([expect.stringMatching(/^id : .*ASCII/)]);
   });
@@ -284,123 +322,175 @@ describe("validerFiches : cohérence", () => {
   });
   it("refuse un id en double", () => {
     const texte = stringify(ficheBase);
-    const { erreurs } = validerFiches([
-      { fichier: "e/et/etonner.yaml", texte },
-      { fichier: "e/et/etonner.yaml", texte },
-    ]);
+    const { erreurs } = validerFiches(
+      [
+        { fichier: "e/et/etonner.yaml", texte },
+        { fichier: "e/et/etonner.yaml", texte },
+      ],
+      REF,
+    );
     expect(erreurs).toEqual([{ fichier: "e/et/etonner.yaml", champ: "id", regle: "id « etonner » en double" }]);
   });
-  it("refuse une adresse qui se déduit de l'entrée (doublon)", () => {
-    expect(erreursDe({ sources: [{ ouvrage: "Littré", entree: "étonner", url: "https://www.littre.org/definition/%C3%A9tonner" }] })).toEqual([
-      "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
-    ]);
-  });
-  it("refuse des tenants hors d'une origine débattue", () => {
-    const origine = { formes: [{ forme: "x", langue: "latin", sens: "y", selon: ["Cicéron"] }] };
-    expect(erreursDe({ origine })).toEqual(["origine.formes.0.selon : des tenants seulement pour une origine débattue (mode: debattue)"]);
-  });
-  it("refuse une lecture qui vise une forme absente de l'origine", () => {
-    expect(erreursDe({ lecturesTraditionnelles: [{ ...lectureBase, hypothese: "religare" }] })).toEqual([
-      "lecturesTraditionnelles.0.hypothese : « religare » n'est pas une forme d'origine de la fiche (origine.formes)",
-    ]);
-  });
-  it("refuse une adresse du Bailly qui se déduit de l'entrée (doublon)", () => {
-    expect(erreursDe({ sources: [{ ouvrage: "Bailly", entree: "κριτικός", url: "https://bailly.app/kritikos" }] })).toEqual([
-      "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
-    ]);
-  });
-  it("refuse une œuvre qui n'est pas de l'auteur de la lecture", () => {
-    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "La Cité de Dieu" }] };
-    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
-      "lecturesTraditionnelles.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance (data/auteurs.json)",
-    ]);
-  });
-  it("refuse une fiche doublet d'elle-même", () => {
-    expect(erreursDe({ doublets: ["etonner"] })).toContain("doublets : une fiche ne peut pas être son propre doublet");
-  });
+});
 
-  const fiche = (mot: string, doublets: string[]) => ({
+describe("validerFiches : chaîne étymologique", () => {
+  it("refuse une translittération inutile ou manquante", () => {
+    expect(erreursDe({ etymologie: [{ forme: "religio", translitteration: "religio", langue: "latin", sens: "y" }] })).toEqual([
+      "etymologie.0.translitteration : inutile pour une forme en alphabet latin",
+    ]);
+    expect(erreursDe({ etymologie: [{ forme: "φρήν", translitteration: "phrên", langue: "grec ancien", sens: "y" }] })).toEqual([
+      "etymologie.0.translitteration : inutile pour le grec : elle se déduit de la forme",
+    ]);
+    expect(erreursDe({ etymologie: [{ forme: "صفر", langue: "arabe", sens: "vide" }] })).toEqual([
+      "etymologie.0.translitteration : obligatoire pour une écriture ni latine ni grecque",
+    ]);
+  });
+  it("exige un sens quelque part, et un seul maillon premier", () => {
+    expect(erreursDe({ etymologie: [{ forme: "x", langue: "latin" }] })).toEqual(["etymologie : aucun maillon ne porte de sens : le sens premier est introuvable"]);
+    const deuxPremiers = [
+      { forme: "x", langue: "latin", sens: "a", premier: true },
+      { forme: "y", langue: "latin", sens: "b", premier: true },
+    ];
+    expect(erreursDe({ etymologie: deuxPremiers })).toEqual(["etymologie : un seul maillon peut porter premier: true"]);
+  });
+  it("réserve les tenants aux origines débattues", () => {
+    const etymologie = [
+      { forme: "x", langue: "latin", sens: "y" },
+      { langue: "latin", alternatives: { mode: "jeu", formes: [{ forme: "a", sens: "b", selon: ["ciceron"] }, { forme: "c", sens: "d" }] } },
+    ];
+    expect(erreursDe({ etymologie })).toEqual(["etymologie.1.alternatives.formes.0.selon : des tenants seulement pour une origine débattue (mode: debattue)"]);
+  });
+  it("refuse un nom de personne ou un titre sans forme", () => {
+    const etymologie = [{ langue: "latin", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], personne: "ciceron" }];
+    expect(erreursDe({ etymologie })).toEqual(["etymologie.0 : personne ou ouvrage : seulement pour une forme (nom propre, titre)"]);
+  });
+});
+
+describe("validerFiches : références", () => {
+  const debattue = (selon: string[]) => [
+    { forme: "x", langue: "latin", sens: "y" },
+    { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon }, { forme: "c", sens: "d" }] } },
+  ];
+  it.each([
+    ["auteur", { etymologie: [{ forme: "x", langue: "latin", sens: "y", forge: { par: ["inconnu"], date: 1900 } }] }, "etymologie.0.forge.par.0 : auteur « inconnu » sans fiche (data/auteurs)"],
+    ["ouvrage", { sources: [{ ouvrage: "wiktionnaire", entree: "x" }] }, "sources.0.ouvrage : ouvrage « wiktionnaire » sans fiche (data/ouvrages)"],
+    ["tenant", { etymologie: debattue(["varron"]) }, "etymologie.1.alternatives.formes.0.selon.0 : auteur « varron » sans fiche (data/auteurs)"],
+    ["personne", { etymologie: [{ forme: "x", langue: "latin", sens: "y", personne: "inconnu" }] }, "etymologie.0.personne : auteur « inconnu » sans fiche (data/auteurs)"],
+  ])("refuse une référence (%s) sans fiche", (_, surcharges, attendu) => {
+    expect(erreursDe(surcharges)).toEqual([attendu]);
+  });
+  it("refuse une adresse qui se déduit de l'entrée (doublon), Bailly compris", () => {
+    expect(erreursDe({ sources: [{ ouvrage: "littre", entree: "étonner", url: "https://www.littre.org/definition/%C3%A9tonner" }] })).toEqual([
+      "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
+    ]);
+    expect(erreursDe({ sources: [{ ouvrage: "bailly", entree: "κριτικός", url: "https://bailly.app/kritikos" }] })).toEqual([
+      "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
+    ]);
+  });
+  it("exige une page ou une adresse pour un ouvrage sans modèle d'adresse", () => {
+    expect(erreursDe({ sources: [{ ouvrage: "papier", entree: "x" }] })).toEqual([
+      "sources.0.url : indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)",
+    ]);
+  });
+  it("refuse une lecture d'un auteur hors tradition, ou d'une œuvre d'un autre auteur", () => {
+    expect(erreursDe({ lecturesTraditionnelles: [{ ...lectureBase, auteur: "eugen-bleuler" }] })).toContain(
+      "lecturesTraditionnelles.0.auteur : Eugen Bleuler n'est pas un auteur de la tradition (tradition: true)",
+    );
+    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "la-cite-de-dieu" }] };
+    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
+      "lecturesTraditionnelles.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance",
+    ]);
+  });
+  it("refuse une lecture qui vise une hypothèse absente de la chaîne", () => {
+    expect(erreursDe({ lecturesTraditionnelles: [{ ...lectureBase, hypothese: "religare" }] })).toEqual([
+      "lecturesTraditionnelles.0.hypothese : « religare » n'est pas une hypothèse de la chaîne (alternatives)",
+    ]);
+  });
+});
+
+describe("validerFiches : doublets et renvois", () => {
+  const fiche = (mot: string, champs: Record<string, unknown>) => ({
     fichier: cheminFiche(mot),
-    texte: stringify({ ...ficheBase, mot, etymon: "potio", doublets }),
+    texte: stringify({ ...ficheBase, mot, ...champs }),
   });
-  it("accepte un doublet déclaré sur une seule des deux fiches", () => {
-    expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", [])]).erreurs).toEqual([]);
-  });
-  it("refuse un doublet déclaré sur les deux fiches (doublon)", () => {
-    expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", ["poison"])]).erreurs).toEqual([
-      {
-        fichier: "p/po/potion.yaml",
-        champ: "doublets",
-        regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches",
-      },
-    ]);
-  });
-  it("accepte un renvoi déclaré d'un seul côté, et refuse le même déclaré des deux", () => {
-    const avecRenvois = (mot: string, renvois: string[]) => ({
-      fichier: cheminFiche(mot),
-      texte: stringify({ ...ficheBase, mot, renvois }),
-    });
-    expect(validerFiches([avecRenvois("schizophrenie", ["obsession"]), avecRenvois("obsession", [])]).erreurs).toEqual([]);
-    expect(validerFiches([avecRenvois("schizophrenie", ["obsession"]), avecRenvois("obsession", ["schizophrenie"])]).erreurs).toEqual([
-      {
-        fichier: "s/sc/schizophrenie.yaml",
-        champ: "renvois",
-        regle: "relation déjà déclarée dans « obsession » : ne la déclarer que sur une des deux fiches",
-      },
-    ]);
-    expect(validerFiches([avecRenvois("schizophrenie", ["obsession"])]).erreurs).toEqual([
-      { fichier: "s/sc/schizophrenie.yaml", champ: "renvois", regle: "fiche « obsession » introuvable" },
-    ]);
-  });
-  it("refuse un renvoi vers soi-même, vers un doublet ou vers la famille", () => {
+  it("refuse une fiche doublet ou renvoi d'elle-même, et un renvoi vers un doublet ou la famille", () => {
+    expect(erreursDe({ doublets: ["etonner"] })).toContain("doublets : une fiche ne peut pas être son propre doublet");
     expect(erreursDe({ renvois: ["etonner"] })).toContain("renvois : une fiche ne peut pas renvoyer à elle-même");
     expect(erreursDe({ renvois: ["tonnerre"] })).toContain("renvois : « tonnerre » est un doublet ou de la famille : pas un renvoi");
   });
-  it("signale un doublet introuvable", () => {
-    expect(validerFiches([fiche("poison", ["potion"])]).erreurs).toEqual([
-      { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
+  it.each(["doublets", "renvois"])("%s : déclaré d'un seul côté, vers une fiche existante", (champ) => {
+    expect(validerFiches([fiche("poison", { [champ]: ["potion"] }), fiche("potion", {})], REF).erreurs).toEqual([]);
+    expect(validerFiches([fiche("poison", { [champ]: ["potion"] }), fiche("potion", { [champ]: ["poison"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/potion.yaml", champ, regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches" },
+    ]);
+    expect(validerFiches([fiche("poison", { [champ]: ["potion"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/poison.yaml", champ, regle: "fiche « potion » introuvable" },
     ]);
   });
   it("ne signale pas comme introuvable un doublet présent mais invalide", () => {
-    const invalide = { fichier: "p/po/potion.yaml", texte: "mot: potion\n" };
-    const { erreurs } = validerFiches([fiche("poison", ["potion"]), invalide]);
+    const { erreurs } = validerFiches([fiche("poison", { doublets: ["potion"] }), { fichier: "p/po/potion.yaml", texte: "mot: potion\n" }], REF);
     expect(erreurs.every((e) => e.fichier === "p/po/potion.yaml")).toBe(true);
   });
 });
 
 describe("validerFiches : règles éditoriales", () => {
-  it("refuse une explication de plus de 3 phrases", () => {
-    expect(erreursDe({ explication: "Un. Deux. Trois. Quatre." })).toEqual([
-      "explication : 1 à 3 phrases terminées par une ponctuation (4 trouvée(s))",
-    ]);
-  });
-  it("refuse une explication sans ponctuation finale", () => {
+  it("refuse une explication de plus de 3 phrases, sans ponctuation finale, vide ou trop longue", () => {
+    expect(erreursDe({ explication: "Un. Deux. Trois. Quatre." })).toEqual(["explication : 1 à 3 phrases terminées par une ponctuation (4 trouvée(s))"]);
     expect(erreursDe({ explication: "Sans point final" })).toEqual([expect.stringMatching(/0 trouvée/)]);
-  });
-  it("refuse une explication vide", () => {
     expect(valider({ explication: "  \n" }).erreurs.map((e) => e.champ)).toEqual(["explication"]);
-  });
-  it("refuse une explication de plus de 300 caractères", () => {
     expect(erreursDe({ explication: "é".repeat(300) + "." })).toEqual(["explication : 300 caractères maximum (301)"]);
   });
-  it("refuse des guillemets dans le sens", () => {
-    expect(erreursDe({ sens: "« frapper du tonnerre »" })).toEqual([
-      "sens : sans guillemets : l'app les ajoute à l'affichage",
+  it("refuse des guillemets dans un sens, où qu'il soit", () => {
+    expect(erreursDe({ etymologie: [{ forme: "x", langue: "latin", sens: "« frapper »" }] })).toEqual([
+      "etymologie.0.sens : sans guillemets : l'app les ajoute à l'affichage",
     ]);
   });
   it.each([
     ["explication", { explication: "Il faut noter ceci : rien." }],
     ["historique.0.note", { historique: [{ date: "2026-09-23", note: "Corrigée ; voir la source." }] }],
+    ["lecturesTraditionnelles.0.texte", { lecturesTraditionnelles: [{ ...lectureBase, texte: "Relier ?" }] }],
+    ["ecartees.0.raison", { ecartees: [{ forme: "sine cera", sens: "sans cire", raison: "C'est faux : aucune trace.", populaire: true }] }],
     [
-      "lecturesTraditionnelles.0.texte",
-      { lecturesTraditionnelles: [{ ...lectureBase, texte: "Relier ?" }] },
+      "etymologie.1.elements.0.sens",
+      { etymologie: [{ forme: "x", langue: "latin", sens: "a" }, { langue: "latin", elements: [{ forme: "y", sens: "relier ?" }, { forme: "z", sens: "b" }] }] },
     ],
-    ["legende.explication", { legende: { forme: "sine cera", sens: "sans cire", explication: "C'est faux : aucune trace." } }],
-    ["origine.formes.0.sens", { origine: { formes: [{ forme: "x", langue: "latin", sens: "relier ?" }] } }],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
-    expect(valider(surcharges).erreurs).toEqual([
-      expect.objectContaining({ champ, regle: expect.stringMatching(/espace insécable/) }),
-    ]);
+    expect(valider(surcharges).erreurs).toEqual([expect.objectContaining({ champ, regle: expect.stringMatching(/espace insécable/) })]);
+  });
+});
+
+describe("validerAuteurs et validerOuvrages", () => {
+  const fichierAuteur = (fichier: string, champs: Record<string, unknown>) => ({
+    fichier,
+    texte: stringify({ nom: "Augustin", description: "Évêque d'Hippone.", ...socle, ...champs }),
+  });
+  it("accepte un auteur conforme, tradition fausse par défaut, dates exactes ou approximatives", () => {
+    const { auteurs, erreurs } = validerAuteurs([fichierAuteur("augustin.yaml", { naissance: 354, mort: "vers 430" })]);
+    expect(erreurs).toEqual([]);
+    expect(auteurs[0]).toMatchObject({ id: "augustin", tradition: false, naissance: "354", mort: "vers 430" });
+  });
+  it.each([
+    ["id", "augustin-d-hippone.yaml", {}],
+    ["description", "augustin.yaml", { description: "x".repeat(201) }],
+    ["bnf", "augustin.yaml", { bnf: "123" }],
+    ["naissance", "augustin.yaml", { naissance: "autrefois" }],
+  ])("signale le champ %s d'un auteur", (champ, fichier, champs) => {
+    expect(validerAuteurs([fichierAuteur(fichier, champs)]).erreurs.map((e) => e.champ)).toEqual([champ]);
+  });
+  const fichierOuvrage = (fichier: string, champs: Record<string, unknown>) => ({
+    fichier,
+    texte: stringify({ titre: "Dictionnaire de la langue française", abrege: "Littré", licence: "CC BY-SA", description: "Test.", ...socle, ...champs }),
+  });
+  it("accepte un ouvrage conforme, nommé par son abrégé", () => {
+    expect(validerOuvrages([fichierOuvrage("littre.yaml", { modeleEntree: "https://www.littre.org/definition/{entree}" })], new Map()).erreurs).toEqual([]);
+  });
+  it.each([
+    ["id", "dictionnaire.yaml", {}],
+    ["auteur", "littre.yaml", { auteur: "emile-littre" }],
+    ["modeleEntree", "littre.yaml", { modeleEntree: "https://www.littre.org/definition/" }],
+    ["licence", "littre.yaml", { licence: "libre" }],
+  ])("signale le champ %s d'un ouvrage", (champ, fichier, champs) => {
+    expect(validerOuvrages([fichierOuvrage(fichier, champs)], new Map()).erreurs.map((e) => e.champ)).toEqual([champ]);
   });
 });
 
@@ -432,8 +522,7 @@ describe("validerCandidats", () => {
       Object.entries(fichiers).map(([fichier, texte]) => ({ fichier, texte })),
       new Set(idsFiches),
     );
-  const regles = (resultat: ReturnType<typeof valider>) =>
-    resultat.erreurs.map((e) => `${e.fichier} › ${e.champ} : ${e.regle}`);
+  const regles = (resultat: ReturnType<typeof valider>) => resultat.erreurs.map((e) => `${e.fichier} › ${e.champ} : ${e.regle}`);
 
   it("accepte des listes conformes", () => {
     const { candidats, erreurs } = valider({
@@ -444,9 +533,7 @@ describe("validerCandidats", () => {
     expect(candidats.map((c) => c.mot)).toEqual(["étonner", "ennui", "chétif"]);
   });
   it("exige une raison pour un mot sans source ou écarté", () => {
-    expect(regles(valider({ "e.yaml": "- { mot: ennui, statut: ecarte }\n" }))).toEqual([
-      "e.yaml › 0.raison : raison obligatoire pour un mot sans source ou écarté",
-    ]);
+    expect(regles(valider({ "e.yaml": "- { mot: ennui, statut: ecarte }\n" }))).toEqual(["e.yaml › 0.raison : raison obligatoire pour un mot sans source ou écarté"]);
   });
   it("refuse un statut inconnu", () => {
     expect(valider({ "e.yaml": "- { mot: ennui, statut: fait }\n" }).erreurs.map((e) => e.champ)).toEqual(["0.statut"]);
@@ -459,9 +546,7 @@ describe("validerCandidats", () => {
   });
   it("range chaque mot dans la liste de son initiale sans accent", () => {
     expect(valider({ "e.yaml": "- { mot: étonner, statut: a-faire }\n" }).erreurs).toEqual([]);
-    expect(regles(valider({ "e.yaml": "- { mot: chétif, statut: a-faire }\n" }))).toEqual([
-      "e.yaml › 0.mot : « chétif » doit être rangé dans « c.yaml »",
-    ]);
+    expect(regles(valider({ "e.yaml": "- { mot: chétif, statut: a-faire }\n" }))).toEqual(["e.yaml › 0.mot : « chétif » doit être rangé dans « c.yaml »"]);
   });
   it("refuse un candidat qui a déjà une fiche", () => {
     expect(regles(valider({ "e.yaml": "- { mot: étonner, statut: a-faire }\n" }, ["etonner"]))).toEqual([

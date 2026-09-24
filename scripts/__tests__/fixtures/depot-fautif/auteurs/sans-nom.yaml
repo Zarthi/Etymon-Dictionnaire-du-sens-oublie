@@ -1,0 +1,7 @@
+# Auteur dont le nom ne correspond pas au fichier.
+nom: Quelqu'un
+description: Auteur de test.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

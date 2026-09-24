@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { isScalar, parseDocument, type YAMLMap } from "yaml";
+import { formesComparables } from "../src/lib/etymologie.ts";
 import { controler } from "./lib/controles.ts";
 import { chercher, verdict } from "./lib/littre.ts";
 import { cheminFiche } from "./lib/validation.ts";
@@ -23,14 +24,14 @@ if (import.meta.main) {
   let promues = 0;
 
   for (const fiche of fiches.filter((f) => f.statut === "a-verifier")) {
-    const formes = [fiche.etymon, ...(fiche.origine?.formes ?? []).map((f) => f.forme)];
+    const formes = formesComparables(fiche.etymologie);
     const v = verdict(formes, chercher(index, fiche.mot));
     if (v.resultat === "concorde") {
       const chemin = join(DOSSIER_DATA, "fiches", cheminFiche(fiche.id));
       const document = parseDocument(await readFile(chemin, "utf8"));
       // L'adresse du Littré se déduit de l'entrée : inutile de l'écrire.
-      const source = { ouvrage: "Littré", entree: v.entree.terme };
-      const autres = fiche.sources.filter((s) => s.ouvrage !== "Littré");
+      const source = { ouvrage: "littre", entree: v.entree.terme };
+      const autres = fiche.sources.filter((s) => s.ouvrage !== "littre");
       // Les sources précèdent la rédaction, même quand la fiche n'en avait pas encore.
       const noeud = document.createNode([source, ...autres]);
       if (document.has("sources")) document.set("sources", noeud);
@@ -44,7 +45,7 @@ if (import.meta.main) {
       promues++;
     } else {
       const extrait = v.resultat === "absent" ? " (mot absent du Littré : vérifier au TLFi)" : ` — Littré : ${v.entree.etymologie.slice(0, 160)}`;
-      aVoir.push(`${fiche.mot} (${fiche.etymon}) : ${v.resultat}${extrait}`);
+      aVoir.push(`${fiche.mot} (${formes[0] ?? "?"}) : ${v.resultat}${extrait}`);
     }
   }
 

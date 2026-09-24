@@ -1,0 +1,9 @@
+titre: Dictionnaire de la langue française
+abrege: Littré
+licence: CC BY-SA
+modeleEntree: https://www.littre.org/definition/{entree}
+description: Ouvrage de test.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

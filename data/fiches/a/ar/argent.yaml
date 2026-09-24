@@ -1,8 +1,9 @@
 mot: argent
 nature: [ nom masculin ]
-etymon: argentum
-langue: latin
-sens: le métal argent, blanc et brillant
+etymologie:
+  - forme: argentum
+    langue: latin
+    sens: le métal argent, blanc et brillant
 explication: >
   L'argent est d'abord le métal, blanc et brillant, dont on frappait les pièces.
   La monnaie a pris le nom de sa matière : nous disons encore argent pour ce qui
@@ -10,7 +11,7 @@ explication: >
 famille: [ argenté, argentin ]
 themes: [ argent, commerce, nature ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: argent
 redaction:
   - par: IA

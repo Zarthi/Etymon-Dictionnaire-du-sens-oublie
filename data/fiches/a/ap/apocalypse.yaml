@@ -1,21 +1,19 @@
 mot: apocalypse
 nature: [ nom féminin ]
-etymon: apocalypsis
-langue: latin ecclésiastique
-sens: révélation, dévoilement
+etymologie:
+  - forme: apocalypsis
+    langue: latin ecclésiastique
+    sens: révélation, dévoilement
+  - forme: ἀποκάλυψις
+    langue: grec ancien
+    sens: action de découvrir, d'ôter le voile
 explication: >
   L'apocalypse est un dévoilement : apo-kalyptein, ôter ce qui couvre. Le livre
   de Jean révèle ce qui était caché ; ce sont ses visions de fin du monde qui
   ont fait du mot un synonyme de catastrophe.
-origine:
-  formes:
-    - forme: apokálypsis
-      graphie: ἀποκάλυψις
-      langue: grec ancien
-      sens: action de découvrir, d'ôter le voile
 themes: [ religion, savoir ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: apocalypse
 redaction:
   - par: IA

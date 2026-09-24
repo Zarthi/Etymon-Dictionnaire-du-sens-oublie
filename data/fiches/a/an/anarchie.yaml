@@ -1,9 +1,9 @@
 mot: anarchie
 nature: [ nom féminin ]
-etymon: anarkhía
-graphie: ἀναρχία
-langue: grec ancien
-sens: absence de chef, de commandement
+etymologie:
+  - forme: ἀναρχία
+    langue: grec ancien
+    sens: absence de chef, de commandement
 explication: >
   Arkhē est à la fois le commencement et le commandement ; l'anarchie est
   l'absence de l'un et de l'autre. Le mot dit un vide de principe, avant de
@@ -11,7 +11,7 @@ explication: >
 famille: [ monarchie, hiérarchie, archétype ]
 themes: [ société, droit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: anarchie
 redaction:
   - par: IA

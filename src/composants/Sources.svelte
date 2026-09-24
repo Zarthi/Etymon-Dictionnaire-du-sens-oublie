@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { ouvrages } from "../lib/fiches.ts";
   import Source from "./Source.svelte";
 
   type SourceEtymologie = { ouvrage: string; entree: string; page?: number | string; url?: string };
@@ -9,6 +10,10 @@
    */
   let { sources }: { sources: SourceEtymologie[] } = $props();
 
+  const nom = (id: string) => {
+    const o = ouvrages.get(id);
+    return o ? (o.abrege ?? o.titre) : id;
+  };
   const groupes = $derived(
     sources.reduce<{ ouvrage: string; entrees: SourceEtymologie[] }[]>((acc, s) => {
       const groupe = acc.find((g) => g.ouvrage === s.ouvrage);
@@ -22,7 +27,7 @@
 {#if sources.length > 0}
   <p class="sources">
     Sources&nbsp;: {#each groupes as g, i (g.ouvrage)}{#if i > 0},{/if}
-      {#if g.entrees.length === 1}<Source source={g.entrees[0]} />{:else}{g.ouvrage} ({#each g.entrees as s, j (j)}{#if j > 0},{" "}{/if}<Source
+      {#if g.entrees.length === 1}<Source source={g.entrees[0]} />{:else}{nom(g.ouvrage)} ({#each g.entrees as s, j (j)}{#if j > 0},{" "}{/if}<Source
             source={s}
             parEntree
           />{/each}){/if}{/each}

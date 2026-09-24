@@ -1,12 +1,17 @@
 <script lang="ts">
-  import { dateLongue, formesItaliques, origine } from "../lib/affichage.ts";
+  import { dateLongue } from "../lib/affichage.ts";
+  import { formesItaliques } from "../lib/etymologie.ts";
+  import { auteurs as fichesAuteurs } from "../lib/fiches.ts";
+  import { lienAuteur } from "../lib/liens.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
-  import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
+  import Etymologie from "./Etymologie.svelte";
   import Forme from "./Forme.svelte";
-  import Origine from "./Origine.svelte";
+  import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
   import Redaction from "./Redaction.svelte";
+  import SensPremier from "./SensPremier.svelte";
   import Sources from "./Sources.svelte";
+  import Statut from "./Statut.svelte";
   import TexteRiche from "./TexteRiche.svelte";
 
   let {
@@ -24,7 +29,7 @@
   const correction = $derived(fiche.historique.at(-1));
   const lectures = $derived(fiche.lecturesTraditionnelles);
   /** Auteurs des lectures, sans doublon, pour l'intitulé replié : « Lactance, Augustin, Isidore de Séville ». */
-  const auteurs = $derived([...new Set(lectures.map((l) => l.auteur))].join(", "));
+  const auteurs = $derived([...new Set(lectures.map((l) => fichesAuteurs.get(l.auteur)?.nom ?? l.auteur))].join(", "));
   /** Rédaction de la fiche, affichée une fois en pied ; une lecture ne la rappelle que si la sienne diffère. */
   const redactionFiche = $derived(signatureRedaction(fiche.redaction));
   /** Formes étrangères de la fiche, mises en italique dans ses textes (aucune mise en forme dans les données). */
@@ -36,38 +41,31 @@
 </svelte:head>
 
 <article>
-  {#if fiche.statut !== "validee"}
-    <p class="statut {fiche.statut}">
-      {#if fiche.statut === "a-verifier"}
-        <strong>Étymologie non vérifiée</strong> · rédigée par IA, pas encore contrôlée sur les sources.
-      {:else}
-        <strong>En relecture</strong> · sources consultées, relecture en cours.
-      {/if}
-    </p>
-  {/if}
+  <Statut statut={fiche.statut} />
 
   <h1>{fiche.mot}</h1>
   <p class="nature">{fiche.nature.join(" et ")}</p>
   <p class="etymon">
-    {origine(fiche.langue)}
-    <Forme forme={fiche.etymon} graphie={fiche.graphie} />{#if fiche.forge}<span class="forge"
-        >, forgé par {fiche.forge.par} en {fiche.forge.annee}</span
-      >{/if}&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
+    <SensPremier etymologie={fiche.etymologie} />
     {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
   </p>
 
   <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} /></p>
 
-  {#if fiche.origine}
-    <Origine origine={fiche.origine} langueEtymon={fiche.langue} />
-  {/if}
+  <Etymologie etymologie={fiche.etymologie} />
 
-  {#if fiche.legende}
+  {#each fiche.ecartees as e, i (i)}
+    <!-- Idée reçue (populaire) ou hypothèse savante abandonnée : présentée, jamais confondue avec l'étymologie. -->
     <p class="legende">
-      <strong>Idée reçue</strong>&nbsp;: <em>{fiche.legende.forme}</em>, «&nbsp;{fiche.legende.sens}&nbsp;».
-      {#if fiche.legende.explication}<TexteRiche texte={fiche.legende.explication} {lienVers} exclu={fiche.id} {formes} />{/if}
+      <strong>{e.populaire ? "Idée reçue" : "Étymologie écartée"}</strong>&nbsp;: <Forme
+        forme={e.forme}
+        translitteration={e.translitteration}
+      />, «&nbsp;{e.sens}&nbsp;»{#if e.selon?.length}{" "}({#each e.selon as id, j (id)}{#if j > 0},{" "}{/if}<a
+            href={lienAuteur(id)}>{fichesAuteurs.get(id)?.nom ?? id}</a
+          >{/each}){/if}.
+      {#if e.raison}<TexteRiche texte={e.raison} {lienVers} exclu={fiche.id} {formes} />{/if}
     </p>
-  {/if}
+  {/each}
 
   {#if fiche.renvois.length > 0}
     <!-- Notions voisines, sans racine commune : « Voir aussi : obsession ». -->
@@ -108,26 +106,6 @@
   article {
     font-family: var(--police-fiche);
   }
-  .statut {
-    margin: 0 0 1rem;
-    padding: 0.4rem 0.7rem;
-    font-family: var(--police-interface);
-    font-size: 0.85rem;
-    color: var(--texte-discret);
-    border-left: 3px solid var(--brouillon);
-    background: var(--surface);
-    border-radius: 0 0.4rem 0.4rem 0;
-  }
-  .statut strong {
-    color: var(--brouillon);
-    font-weight: 600;
-  }
-  .statut.a-verifier {
-    border-left-color: var(--non-verifie);
-  }
-  .statut.a-verifier strong {
-    color: var(--non-verifie);
-  }
   .nature {
     margin: 0.2rem 0 0;
     font-family: var(--police-interface);
@@ -153,6 +131,9 @@
     border-left: 2px solid var(--bordure);
     color: var(--texte-discret);
   }
+  .legende a {
+    color: inherit;
+  }
   .legende strong {
     font-family: var(--police-interface);
     font-size: 0.85rem;
@@ -168,13 +149,7 @@
     margin: 0.5rem 0 1.25rem;
     font-size: 1.25rem;
   }
-  .sens {
-    color: var(--accent);
-  }
-  .forge {
-    font-size: 1rem;
-    color: var(--texte-discret);
-  }
+
   .explication {
     margin: 0;
     font-size: 1.15rem;

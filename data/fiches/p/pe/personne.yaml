@@ -1,0 +1,31 @@
+mot: personne
+nature: [ nom féminin ]
+etymologie:
+  - forme: persona
+    langue: latin
+    sens: masque de l'acteur
+    premier: true
+  - forme: φersu
+    langue: étrusque
+    sens: personnage masqué
+explication: >-
+  La persona se portait sur la scène, puis désigna le rôle. À l'époque
+  chrétienne, elle devient le visage, puis l'individu : le mot est passé du
+  visage d'emprunt au visage propre.
+ecartees:
+  - forme: personare
+    langue: latin
+    sens: résonner à travers
+    selon: [ gavius-bassus ]
+    raison: "Le Littré l'écarte : l'o est bref dans personare, long dans persona."
+famille: [ personnage, personnel, personnalité ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: littre
+    entree: personne
+  - ouvrage: tlfi
+    entree: personne
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

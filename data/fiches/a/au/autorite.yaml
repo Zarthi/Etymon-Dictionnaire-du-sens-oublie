@@ -1,8 +1,9 @@
 mot: autorité
 nature: [ nom féminin ]
-etymon: auctoritas
-langue: latin
-sens: garantie, crédit de celui qui fonde
+etymologie:
+  - forme: auctoritas
+    langue: latin
+    sens: garantie, crédit de celui qui fonde
 explication: >
   L'auctor est celui qui fait croître, qui fonde et garantit : augere,
   augmenter. L'autorité est le crédit de celui qui répond d'une chose ; la
@@ -10,7 +11,7 @@ explication: >
 famille: [ auteur, augmenter, auguste ]
 themes: [ société, droit, morale ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: autorité
 redaction:
   - par: IA

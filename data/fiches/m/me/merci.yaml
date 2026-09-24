@@ -1,8 +1,9 @@
 mot: merci
 nature: [ nom féminin, nom masculin ]
-etymon: merces
-langue: latin
-sens: salaire, récompense
+etymologie:
+  - forme: merces
+    langue: latin
+    sens: salaire, récompense
 explication: >
   Le mot latin désignait un salaire, une récompense. À basse époque, il devient
   la grâce qu'on accorde en épargnant quelqu'un ; dire merci, c'est reconnaître
@@ -10,11 +11,11 @@ explication: >
 famille: [ marchand ]
 themes: [ argent, parole ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: merci
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: merces
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: merci
 redaction:
   - par: IA

@@ -1,8 +1,9 @@
 mot: appétit
 nature: [ nom masculin ]
-etymon: appetitus
-langue: latin
-sens: désir, tendance vers
+etymologie:
+  - forme: appetitus
+    langue: latin
+    sens: désir, tendance vers
 explication: >
   Appetere, c'est chercher à atteindre. L'appétit est toute tendance vers une
   chose : les scolastiques parlent d'appétit sensible et d'appétit rationnel, la
@@ -10,7 +11,7 @@ explication: >
 famille: [ compétence, pétition, répéter ]
 themes: [ émotions, nourriture, esprit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: appétit
 redaction:
   - par: IA

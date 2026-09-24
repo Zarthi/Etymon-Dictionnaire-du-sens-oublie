@@ -18,20 +18,7 @@ export function de(forme: string): string {
   return /^[aeiouyàâéèêh]/i.test(forme.replace(/^\*/, "")) ? "d'" : "de ";
 }
 
-/**
- * Formes étrangères qu'une fiche connaît, mises en italique par l'app dans ses textes :
- * l'étymon, les formes d'origine (et leurs écritures d'origine), la forme légendaire.
- */
-export function formesItaliques(fiche: {
-  etymon: string;
-  graphie?: string;
-  origine?: { formes: { forme: string; graphie?: string }[] };
-  legende?: { forme: string };
-}): string[] {
-  return [
-    fiche.etymon,
-    fiche.graphie,
-    ...(fiche.origine?.formes ?? []).flatMap((f) => [f.forme, f.graphie]),
-    fiche.legende?.forme,
-  ].filter((f): f is string => Boolean(f));
+/** « par le latin », « par l'allemand » : la voie par laquelle un mot est arrivé. */
+export function par(langue: string): string {
+  return /^[aeiouyàâéèêh]/i.test(langue) ? `par l'${langue}` : `par le ${langue}`;
 }

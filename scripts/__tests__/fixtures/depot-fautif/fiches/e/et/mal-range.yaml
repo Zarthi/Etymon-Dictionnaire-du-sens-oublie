@@ -1,21 +1,16 @@
 # Fiche conforme mais mal rangée : attendue dans m/ma/.
 mot: mal rangé
 nature: [ nom masculin ]
-etymon: malum
-langue: latin
-sens: test
+etymologie:
+  - forme: malum
+    langue: latin
+    sens: test
 explication: Test.
-incertain: false
-doublets: []
-famille: []
 themes: []
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: mal
-    page: 1
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

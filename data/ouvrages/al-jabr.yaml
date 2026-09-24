@@ -1,0 +1,13 @@
+titre: Abrégé du calcul par la restauration et la comparaison
+abrege: Al-jabr
+titreOriginal: al-Kitāb al-muḫtaṣar fī ḥisāb al-ǧabr wa-l-muqābala
+auteur: al-khwarizmi
+date: "825"
+licence: domaine public
+description: >-
+  Premier traité d'algèbre : résoudre une équation en restaurant ce qui manque
+  et en comparant ce qui reste.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

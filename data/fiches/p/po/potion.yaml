@@ -1,18 +1,19 @@
 mot: potion
 nature: [ nom féminin ]
-etymon: potio
-langue: latin
-sens: boisson, breuvage
+etymologie:
+  - forme: potio
+    langue: latin
+    sens: boisson, breuvage
 explication: >
   Potion est l'emprunt savant du mot latin qui, par la voie populaire, a donné
   poison. Il a gardé le sens de breuvage, spécialisé en remède.
 themes: [ santé ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: potion
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: potio
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: potion
 redaction:
   - par: IA

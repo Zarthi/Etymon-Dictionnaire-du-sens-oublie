@@ -1,8 +1,9 @@
 mot: admirer
 nature: [ verbe ]
-etymon: admirari
-langue: latin
-sens: s'étonner de, être frappé de surprise
+etymologie:
+  - forme: admirari
+    langue: latin
+    sens: s'étonner de, être frappé de surprise
 explication: >
   Admirer, c'est d'abord s'étonner : mirari, regarder avec surprise. Descartes
   fait de l'admiration la première des passions, le saisissement devant ce qui
@@ -10,7 +11,7 @@ explication: >
 famille: [ miracle, merveille, mirer ]
 themes: [ émotions, esprit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: admirer
 redaction:
   - par: IA

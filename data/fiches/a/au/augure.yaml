@@ -1,8 +1,9 @@
 mot: augure
 nature: [ nom masculin ]
-etymon: augurium
-langue: latin
-sens: présage tiré du vol des oiseaux
+etymologie:
+  - forme: augurium
+    langue: latin
+    sens: présage tiré du vol des oiseaux
 explication: >
   L'augure romain observe les oiseaux pour y lire la volonté des dieux. Un
   événement de bon augure est un vol favorable ; inaugurer, c'est ouvrir un lieu
@@ -10,7 +11,7 @@ explication: >
 famille: [ inaugurer, augural ]
 themes: [ religion, savoir ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: augure
 redaction:
   - par: IA

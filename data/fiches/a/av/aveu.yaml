@@ -1,8 +1,9 @@
 mot: aveu
 nature: [ nom masculin ]
-etymon: advocare
-langue: latin
-sens: appeler auprès de soi, prendre pour garant
+etymologie:
+  - forme: advocare
+    langue: latin
+    sens: appeler auprès de soi, prendre pour garant
 explication: >
   Avouer, c'est d'abord appeler quelqu'un pour garant : le vassal avoue un
   seigneur, le reconnaît pour maître. Avouer une faute, c'est encore la
@@ -10,7 +11,7 @@ explication: >
 famille: [ avouer, avocat, désaveu ]
 themes: [ droit, morale, parole ]
 sources:
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: avouer
 redaction:
   - par: IA

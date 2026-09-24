@@ -1,5 +1,7 @@
 {
   "yaml.schemas": {
-    "./docs/fiche.schema.json": "data/fiches/**/*.yaml"
+    "./docs/fiche.schema.json": "data/fiches/**/*.yaml",
+    "./docs/auteur.schema.json": "data/auteurs/*.yaml",
+    "./docs/ouvrage.schema.json": "data/ouvrages/*.yaml"
   }
 }

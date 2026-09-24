@@ -1,0 +1,21 @@
+mot: louer
+nature: [ verbe ]
+etymologie:
+  - forme: locare
+    langue: latin
+    sens: placer
+  - forme: locus
+    langue: latin
+    sens: lieu
+explication: >-
+  Louer une maison, c'est d'abord la placer entre les mains d'un autre, contre
+  un prix. Le mot a gardé l'échange et perdu le lieu.
+famille: [ location, lieu ]
+themes: [ commerce ]
+sources:
+  - ouvrage: littre
+    entree: louer
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

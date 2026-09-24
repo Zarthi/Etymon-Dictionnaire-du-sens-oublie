@@ -1,11 +1,11 @@
 import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
 import { prefixe } from "../../src/lib/decoupage.ts";
-import auteurs from "../../data/auteurs.json" with { type: "json" };
+import { enAlphabetLatin, enGrec, indexPremier } from "../../src/lib/etymologie.ts";
 import { urlDeduite } from "../../src/lib/ouvrages.ts";
+import { ID_VALIDE, schemaAuteur, schemaCandidats, schemaComptes, schemaFiche, schemaOuvrage } from "../../src/lib/schema.ts";
 import { idDe } from "../../src/lib/texte.ts";
-import { schemaCandidats, schemaComptes, schemaFiche } from "../../src/lib/schema.ts";
-import type { Candidat, Fiche, FicheIdentifiee, LigneComptes } from "../../src/lib/types.ts";
+import type { Auteur, Candidat, Fiche, FicheIdentifiee, LigneComptes, Ouvrage, Referentiel } from "../../src/lib/types.ts";
 
 z.config(z.locales.fr());
 
@@ -23,15 +23,13 @@ export interface FichierSource {
 }
 
 const RAPPEL_YAML =
-  'Rappel : une valeur commençant par « * » ou contenant « : » doit être entre guillemets (ex. etymon: "*extonare").';
+  'Rappel : une valeur commençant par « * » ou contenant « : » ou une virgule dans { … } doit être entre guillemets (ex. etymon: "*extonare").';
 
 const LONGUEUR_MAX_EXPLICATION = 300;
 const PHRASES_MAX_EXPLICATION = 3;
-const ESPACES_INSECABLES = [" ", " "];
-const ID_VALIDE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
-const OEUVRES_DE = new Map(auteurs.map((a) => [a.nom, a.oeuvres]));
+const ESPACES_INSECABLES = ["\u00a0", "\u202f"];
 
-/** Emplacement d'une fiche, relatif au dossier des fiches : `e/et/etonner.yaml`. */
+/** Emplacement d'une fiche de mot, relatif au dossier des fiches : `e/et/etonner.yaml`. */
 export function cheminFiche(id: string): string {
   return `${id[0]}/${prefixe(id)}/${id}.yaml`;
 }
@@ -75,7 +73,7 @@ function lireYaml(fichier: string, texte: string): { valeur: unknown } | { erreu
     champ: e.linePos ? `ligne ${e.linePos[0].line}` : "(yaml)",
     regle: `YAML illisible : ${e.message.split("\n")[0]} ${RAPPEL_YAML}`,
   }));
-  // Un alias (« *nom ») n'a pas sa place dans une fiche : c'est presque toujours un étymon reconstruit sans guillemets.
+  // Un alias (« *nom ») n'a pas sa place dans une fiche : c'est presque toujours une forme reconstruite sans guillemets.
   visit(document, (_, noeud) => {
     if (!isAlias(noeud)) return;
     const champ = noeud.range ? `ligne ${lignes.linePos(noeud.range[0]).line}` : "(yaml)";
@@ -84,10 +82,92 @@ function lireYaml(fichier: string, texte: string): { valeur: unknown } | { erreu
   return erreurs.length > 0 ? { erreurs } : { valeur: document.toJS() };
 }
 
-/** Règles propres à une fiche isolée (identifiant, cohérence interne, rédaction). */
-function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
+/** Lit un fichier YAML et le valide par un schéma ; l'identifiant est le nom du fichier. */
+function lireEtValider<T>(
+  { fichier, texte }: FichierSource,
+  schema: z.ZodType<T>,
+): { id: string; valeur: T; erreurs: Erreur[] } | { erreurs: Erreur[] } {
+  const id = /([^/]+)\.yaml$/.exec(fichier)?.[1];
+  if (id === undefined) return { erreurs: [{ fichier, champ: "(fichier)", regle: "extension attendue : .yaml" }] };
+  const erreurs: Erreur[] = [];
+  if (!ID_VALIDE.test(id)) {
+    erreurs.push({ fichier, champ: "id", regle: "le nom de fichier doit être en ASCII minuscule sans accent (mots séparés par des tirets)" });
+  }
+  const lecture = lireYaml(fichier, texte);
+  if ("erreurs" in lecture) return { erreurs: [...erreurs, ...lecture.erreurs] };
+  const resultat = schema.safeParse(lecture.valeur);
+  if (!resultat.success) return { erreurs: [...erreurs, ...erreursZod(fichier, resultat.error)] };
+  return { id, valeur: resultat.data, erreurs };
+}
+
+/** Nom de fichier attendu d'une fiche d'auteur ou d'ouvrage, rangée à plat dans son dossier. */
+function verifierNomPlat(fichier: string, id: string, attendu: string, ajouter: (champ: string, regle: string) => void) {
+  if (id !== attendu && !new RegExp(`^${attendu}-\\d+$`).test(id)) ajouter("id", `le nom de fichier doit correspondre au nom : « ${attendu}.yaml »`);
+  if (fichier !== `${id}.yaml`) ajouter("(emplacement)", `la fiche doit être rangée à plat : « ${id}.yaml »`);
+}
+
+/** Typographie des textes affichés d'une fiche, quel que soit son type. */
+function verifierTextes(textes: [string, string | undefined][], ajouter: (champ: string, regle: string) => void) {
+  for (const [champ, texte] of textes) {
+    if (texte === undefined) continue;
+    for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
+  }
+}
+
+/** Valide les fiches d'auteurs (`data/auteurs/<id>.yaml`). */
+export function validerAuteurs(sources: FichierSource[]): { auteurs: Auteur[]; erreurs: Erreur[] } {
+  const erreurs: Erreur[] = [];
+  const auteurs: Auteur[] = [];
+  for (const source of sources) {
+    const lu = lireEtValider(source, schemaAuteur);
+    erreurs.push(...lu.erreurs);
+    if (!("id" in lu)) continue;
+    const ajouter = (champ: string, regle: string) => erreurs.push({ fichier: source.fichier, champ, regle });
+    verifierNomPlat(source.fichier, lu.id, slug(lu.valeur.nom), ajouter);
+    verifierTextes([["description", lu.valeur.description], ...lu.valeur.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note])], ajouter);
+    auteurs.push({ id: lu.id, ...lu.valeur });
+  }
+  return { auteurs, erreurs };
+}
+
+/** Valide les fiches d'ouvrages (`data/ouvrages/<id>.yaml`) ; leur auteur doit avoir sa fiche. */
+export function validerOuvrages(sources: FichierSource[], auteurs: Map<string, Auteur>): { ouvrages: Ouvrage[]; erreurs: Erreur[] } {
+  const erreurs: Erreur[] = [];
+  const ouvrages: Ouvrage[] = [];
+  for (const source of sources) {
+    const lu = lireEtValider(source, schemaOuvrage);
+    erreurs.push(...lu.erreurs);
+    if (!("id" in lu)) continue;
+    const ajouter = (champ: string, regle: string) => erreurs.push({ fichier: source.fichier, champ, regle });
+    verifierNomPlat(source.fichier, lu.id, slug(lu.valeur.abrege ?? lu.valeur.titre), ajouter);
+    if (lu.valeur.auteur !== undefined && !auteurs.has(lu.valeur.auteur)) ajouter("auteur", `auteur « ${lu.valeur.auteur} » sans fiche (data/auteurs)`);
+    verifierTextes([["description", lu.valeur.description], ...lu.valeur.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note])], ajouter);
+    ouvrages.push({ id: lu.id, ...lu.valeur });
+  }
+  return { ouvrages, erreurs };
+}
+
+/** Sources d'une fiche : l'ouvrage a sa fiche, et l'adresse n'est écrite que si elle ne se déduit pas. */
+function verifierSources(fiche: { sources: Fiche["sources"] }, ref: Referentiel, ajouter: (champ: string, regle: string) => void) {
+  fiche.sources.forEach((s, i) => {
+    const ouvrage = ref.ouvrages.get(s.ouvrage);
+    if (!ouvrage) return ajouter(`sources.${i}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
+    const deduite = urlDeduite(ouvrage.modeleEntree, s.entree);
+    if (s.url && s.url === deduite) ajouter(`sources.${i}.url`, "adresse inutile : elle se déduit de l'entrée, la retirer");
+    if (!s.url && !deduite && s.page === undefined) ajouter(`sources.${i}.url`, "indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)");
+  });
+}
+
+/** Règles propres à une fiche de mot (identifiant, chaîne, références, rédaction). */
+function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referentiel): Erreur[] {
   const erreurs: Erreur[] = [];
   const ajouter = (champ: string, regle: string) => erreurs.push({ fichier, champ, regle });
+  const auteur = (champ: string, cible: string) => {
+    if (!ref.auteurs.has(cible)) ajouter(champ, `auteur « ${cible} » sans fiche (data/auteurs)`);
+  };
+  const ouvrage = (champ: string, cible: string) => {
+    if (!ref.ouvrages.has(cible)) ajouter(champ, `ouvrage « ${cible} » sans fiche (data/ouvrages)`);
+  };
 
   if (ID_VALIDE.test(id) && id !== slug(fiche.mot) && !new RegExp(`^${slug(fiche.mot)}-\\d+$`).test(id)) {
     ajouter("id", `le nom de fichier doit correspondre au mot : « ${slug(fiche.mot)}.yaml »`);
@@ -110,52 +190,87 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
     ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
   }
 
-  // Les sens sont affichés entre guillemets par l'app.
-  const sens: [string, string][] = [
-    ["sens", fiche.sens],
-    ...(fiche.origine?.formes ?? []).map((f, i): [string, string] => [`origine.formes.${i}.sens`, f.sens]),
-  ];
-  if (fiche.legende) sens.push(["legende.sens", fiche.legende.sens]);
-  for (const [champ, texte] of sens) {
-    if (/[«»"“”]/.test(texte)) ajouter(champ, "sans guillemets : l'app les ajoute à l'affichage");
+  // La chaîne : un seul sens premier ; translittération seulement là où elle ne se déduit pas ; références.
+  const sens: [string, string | undefined][] = [];
+  const premiers = fiche.etymologie.filter((m) => m.premier).length;
+  if (premiers > 1) ajouter("etymologie", "un seul maillon peut porter premier: true");
+  const premier = fiche.etymologie[indexPremier(fiche.etymologie)];
+  if (premier.sens === undefined && !(premier.forme === undefined && premier.elements)) {
+    ajouter("etymologie", "aucun maillon ne porte de sens : le sens premier est introuvable");
   }
-
-  const textes: [string, string][] = [
-    ...sens,
-    ["explication", fiche.explication],
-    ...fiche.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note]),
-    ...fiche.lecturesTraditionnelles.map((l, i): [string, string] => [`lecturesTraditionnelles.${i}.texte`, l.texte]),
-  ];
-  if (fiche.legende?.explication) textes.push(["legende.explication", fiche.legende.explication]);
-  for (const [champ, texte] of textes) {
-    for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
-  }
-
-  // Pas de doublon : l'adresse d'un ouvrage en ligne se déduit de l'entrée.
-  fiche.sources.forEach((s, i) => {
-    if (s.url && s.url === urlDeduite(s.ouvrage, s.entree)) {
-      ajouter(`sources.${i}.url`, "adresse inutile : elle se déduit de l'entrée, la retirer");
+  const lire = (champ: string, f: { forme: string; translitteration?: string }) => {
+    const latin = enAlphabetLatin(f.forme);
+    if (f.translitteration && (latin || enGrec(f.forme))) {
+      ajouter(`${champ}.translitteration`, latin ? "inutile pour une forme en alphabet latin" : "inutile pour le grec : elle se déduit de la forme");
     }
+    if (!f.translitteration && !latin && !enGrec(f.forme)) ajouter(`${champ}.translitteration`, "obligatoire pour une écriture ni latine ni grecque");
+  };
+  fiche.etymologie.forEach((m, i) => {
+    const c = `etymologie.${i}`;
+    if (m.forme) lire(c, { forme: m.forme, translitteration: m.translitteration });
+    sens.push([`${c}.sens`, m.sens]);
+    m.elements?.forEach((e, j) => {
+      lire(`${c}.elements.${j}`, e);
+      sens.push([`${c}.elements.${j}.sens`, e.sens]);
+    });
+    m.alternatives?.formes.forEach((a, j) => {
+      const ca = `${c}.alternatives.formes.${j}`;
+      if (a.forme) lire(ca, { forme: a.forme, translitteration: a.translitteration });
+      sens.push([`${ca}.sens`, a.sens]);
+      a.elements?.forEach((e, k) => {
+        lire(`${ca}.elements.${k}`, e);
+        sens.push([`${ca}.elements.${k}.sens`, e.sens]);
+      });
+      if (a.selon && m.alternatives!.mode !== "debattue") ajouter(`${ca}.selon`, "des tenants seulement pour une origine débattue (mode: debattue)");
+      a.selon?.forEach((s, k) => auteur(`${ca}.selon.${k}`, s));
+    });
+    if (m.modele) {
+      lire(`${c}.modele`, m.modele);
+      sens.push([`${c}.modele.sens`, m.modele.sens]);
+    }
+    m.forge?.par.forEach((p, k) => auteur(`${c}.forge.par.${k}`, p));
+    if (m.forge?.ouvrage) ouvrage(`${c}.forge.ouvrage`, m.forge.ouvrage);
+    if ((m.personne || m.ouvrage) && !m.forme) ajouter(c, "personne ou ouvrage : seulement pour une forme (nom propre, titre)");
+    if (m.personne) auteur(`${c}.personne`, m.personne);
+    if (m.ouvrage) ouvrage(`${c}.ouvrage`, m.ouvrage);
+  });
+  fiche.ecartees.forEach((e, i) => {
+    lire(`ecartees.${i}`, e);
+    sens.push([`ecartees.${i}.sens`, e.sens]);
+    e.selon?.forEach((s, k) => auteur(`ecartees.${i}.selon.${k}`, s));
   });
 
-  // Des tenants n'ont de sens que pour des hypothèses concurrentes.
-  if (fiche.origine && fiche.origine.mode !== "debattue") {
-    fiche.origine.formes.forEach((f, i) => {
-      if (f.selon) ajouter(`origine.formes.${i}.selon`, "des tenants seulement pour une origine débattue (mode: debattue)");
-    });
+  // Les sens sont affichés entre guillemets par l'app.
+  for (const [champ, texte] of sens) {
+    if (texte !== undefined && /[«»"“”]/.test(texte)) ajouter(champ, "sans guillemets : l'app les ajoute à l'affichage");
   }
+  verifierTextes(
+    [
+      ...sens,
+      ["explication", fiche.explication],
+      ...fiche.ecartees.map((e, i): [string, string | undefined] => [`ecartees.${i}.raison`, e.raison]),
+      ...fiche.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note]),
+      ...fiche.lecturesTraditionnelles.map((l, i): [string, string] => [`lecturesTraditionnelles.${i}.texte`, l.texte]),
+    ],
+    ajouter,
+  );
 
-  // L'œuvre citée d'une lecture traditionnelle appartient à son auteur ; l'hypothèse visée est une forme d'origine de la fiche.
-  const formesOrigine = new Set((fiche.origine?.formes ?? []).map((f) => f.forme));
+  verifierSources(fiche, ref, ajouter);
+
+  // Lectures : un auteur de la tradition, ses propres œuvres, une hypothèse de la chaîne.
+  const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
   fiche.lecturesTraditionnelles.forEach((l, i) => {
-    if (l.hypothese !== undefined && !formesOrigine.has(l.hypothese)) {
-      ajouter(`lecturesTraditionnelles.${i}.hypothese`, `« ${l.hypothese} » n'est pas une forme d'origine de la fiche (origine.formes)`);
+    const c = `lecturesTraditionnelles.${i}`;
+    const signataire = ref.auteurs.get(l.auteur);
+    if (!signataire) ajouter(`${c}.auteur`, `auteur « ${l.auteur} » sans fiche (data/auteurs)`);
+    else if (!signataire.tradition) ajouter(`${c}.auteur`, `${signataire.nom} n'est pas un auteur de la tradition (tradition: true)`);
+    if (l.hypothese !== undefined && !hypotheses.has(l.hypothese)) {
+      ajouter(`${c}.hypothese`, `« ${l.hypothese} » n'est pas une hypothèse de la chaîne (alternatives)`);
     }
-    const oeuvres = OEUVRES_DE.get(l.auteur) ?? [];
     l.sources.forEach((s, j) => {
-      if (!oeuvres.includes(s.ouvrage)) {
-        ajouter(`lecturesTraditionnelles.${i}.sources.${j}.ouvrage`, `« ${s.ouvrage} » n'est pas une œuvre de ${l.auteur} (data/auteurs.json)`);
-      }
+      const oeuvre = ref.ouvrages.get(s.ouvrage);
+      if (!oeuvre) ajouter(`${c}.sources.${j}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
+      else if (oeuvre.auteur !== l.auteur) ajouter(`${c}.sources.${j}.ouvrage`, `« ${oeuvre.titre} » n'est pas une œuvre de ${signataire?.nom ?? l.auteur}`);
     });
   });
 
@@ -189,50 +304,38 @@ function verifierRelations(
     }
   }
   return erreurs;
-
 }
 
 /**
- * Valide un ensemble de fiches YAML, chemins relatifs au dossier des fiches (ex. `e/et/etonner.yaml`).
- * `fiches` contient les fiches structurellement conformes ; le lot n'est utilisable que si `erreurs` est vide.
+ * Valide un ensemble de fiches de mots, chemins relatifs au dossier des fiches (ex. `e/et/etonner.yaml`),
+ * avec les auteurs et ouvrages qu'elles citent. `fiches` contient les fiches structurellement
+ * conformes ; le lot n'est utilisable que si `erreurs` est vide.
  */
-export function validerFiches(sources: FichierSource[]): { fiches: FicheIdentifiee[]; erreurs: Erreur[] } {
+export function validerFiches(sources: FichierSource[], ref: Referentiel): { fiches: FicheIdentifiee[]; erreurs: Erreur[] } {
   const erreurs: Erreur[] = [];
   const fiches: FicheIdentifiee[] = [];
   const idsPresents = new Set<string>();
   const fichierDe = new Map<string, string>();
 
-  for (const { fichier, texte } of sources) {
+  for (const source of sources) {
+    const { fichier } = source;
     const id = /([^/]+)\.yaml$/.exec(fichier)?.[1];
-    if (id === undefined) {
-      erreurs.push({ fichier, champ: "(fichier)", regle: "extension attendue : .yaml" });
-      continue;
+    if (id !== undefined) {
+      if (idsPresents.has(id)) {
+        erreurs.push({ fichier, champ: "id", regle: `id « ${id} » en double` });
+        continue;
+      }
+      idsPresents.add(id);
+      fichierDe.set(id, fichier);
+      if (ID_VALIDE.test(id) && fichier !== cheminFiche(id)) {
+        erreurs.push({ fichier, champ: "(emplacement)", regle: `la fiche doit être rangée dans « ${cheminFiche(id)} »` });
+      }
     }
-    if (idsPresents.has(id)) {
-      erreurs.push({ fichier, champ: "id", regle: `id « ${id} » en double` });
-      continue;
-    }
-    idsPresents.add(id);
-    fichierDe.set(id, fichier);
-
-    if (!ID_VALIDE.test(id)) {
-      erreurs.push({ fichier, champ: "id", regle: "le nom de fichier doit être en ASCII minuscule sans accent (mots séparés par des tirets)" });
-    } else if (fichier !== cheminFiche(id)) {
-      erreurs.push({ fichier, champ: "(emplacement)", regle: `la fiche doit être rangée dans « ${cheminFiche(id)} »` });
-    }
-
-    const lecture = lireYaml(fichier, texte);
-    if ("erreurs" in lecture) {
-      erreurs.push(...lecture.erreurs);
-      continue;
-    }
-    const resultat = schemaFiche.safeParse(lecture.valeur);
-    if (!resultat.success) {
-      erreurs.push(...erreursZod(fichier, resultat.error));
-      continue;
-    }
-    erreurs.push(...verifierFiche(fichier, id, resultat.data));
-    fiches.push({ id, ...resultat.data });
+    const lu = lireEtValider(source, schemaFiche);
+    erreurs.push(...lu.erreurs);
+    if (!("id" in lu)) continue;
+    erreurs.push(...verifierFiche(fichier, lu.id, lu.valeur, ref));
+    fiches.push({ id: lu.id, ...lu.valeur });
   }
 
   erreurs.push(...verifierRelations("doublets", fiches, idsPresents, fichierDe));
@@ -293,4 +396,17 @@ export function validerComptes({ fichier, texte }: FichierSource): { comptes: Li
   const resultat = schemaComptes.safeParse(valeur);
   if (!resultat.success) return { comptes: [], erreurs: erreursZod(fichier, resultat.error) };
   return { comptes: resultat.data, erreurs: [] };
+}
+
+/** Référentiel (auteurs, ouvrages par identifiant) à partir des fiches validées. */
+export function referentiel(auteurs: Auteur[], ouvrages: Ouvrage[]): Referentiel {
+  return { auteurs: new Map(auteurs.map((a) => [a.id, a])), ouvrages: new Map(ouvrages.map((o) => [o.id, o])) };
+}
+
+/** Sources des auteurs et des ouvrages aussi : même règle que pour les mots. */
+export function verifierSourcesDesReferences(ref: Referentiel, fichierAuteur: (id: string) => string, fichierOuvrage: (id: string) => string): Erreur[] {
+  const erreurs: Erreur[] = [];
+  for (const a of ref.auteurs.values()) verifierSources(a, ref, (champ, regle) => erreurs.push({ fichier: fichierAuteur(a.id), champ, regle }));
+  for (const o of ref.ouvrages.values()) verifierSources(o, ref, (champ, regle) => erreurs.push({ fichier: fichierOuvrage(o.id), champ, regle }));
+  return erreurs;
 }

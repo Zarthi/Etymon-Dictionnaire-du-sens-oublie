@@ -5,8 +5,8 @@ import { arreterSiErreurs, validerDepot } from "./valider-fiches.ts";
 
 /**
  * Vérifications qui demandent le réseau, pour les fiches demandées (toutes par défaut) :
- * - chaque entrée du Bailly (adresse déduite ou donnée) existe sur bailly.app, et toute adresse
- *   donnée explicitement répond ;
+ * - chaque entrée d'un ouvrage dont l'adresse se déduit d'une translittération (Bailly) existe,
+ *   et toute adresse donnée explicitement répond, comme le texte en ligne de chaque ouvrage ;
  * - chaque citation d'une lecture traditionnelle figure mot pour mot dans le texte à l'adresse
  *   de sa source (u/v, i/j, accents et ponctuation confondus).
  * Usage : npm run verifier:en-ligne [-- <mot>…]
@@ -25,17 +25,25 @@ function charger(url: string) {
 }
 
 if (import.meta.main) {
-  const { fiches, erreurs } = await validerDepot();
+  const { fiches, ref, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
   const demandes = new Set(process.argv.slice(2).map(slug));
   const retenues = fiches.filter((f) => demandes.size === 0 || demandes.has(f.id));
   const problemes: string[] = [];
   let verifiees = 0;
 
+  if (demandes.size === 0) {
+    for (const ouvrage of ref.ouvrages.values()) {
+      if (!ouvrage.texte) continue;
+      verifiees++;
+      if (!(await charger(ouvrage.texte)).ok) problemes.push(`ouvrage ${ouvrage.id} › texte : adresse introuvable (${ouvrage.texte})`);
+    }
+  }
   for (const fiche of retenues) {
     for (const source of fiche.sources) {
-      if (source.ouvrage !== "Bailly" && source.url === undefined) continue;
-      const url = urlDe(source);
+      const modele = ref.ouvrages.get(source.ouvrage)?.modeleEntree;
+      if (!modele?.includes("{grec}") && source.url === undefined) continue;
+      const url = urlDe(source, modele);
       if (url === undefined) continue;
       const page = await charger(url);
       verifiees++;

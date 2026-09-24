@@ -3,10 +3,13 @@
   "latin populaire",
   "bas latin",
   "latin médiéval",
+  "latin humaniste",
   "latin ecclésiastique",
   "ancien français",
+  "français",
   "grec ancien",
   "gaulois",
+  "étrusque",
   "francique",
   "germanique",
   "ancien nordique",
@@ -16,9 +19,11 @@
   "turc",
   "italien",
   "espagnol",
+  "ancien espagnol",
   "portugais",
   "occitan",
   "néerlandais",
   "allemand",
-  "anglais"
+  "anglais",
+  "indo-européen"
 ]

@@ -1,18 +1,15 @@
-# Étymon reconstruit non mis entre guillemets : alias YAML.
+# Forme reconstruite non mise entre guillemets : alias YAML.
 mot: alias
 nature: [nom masculin]
-etymon: *aliasum
-langue: latin
-sens: test
+etymologie:
+  - forme: *aliasum
+    langue: latin
+    sens: test
 explication: Test.
-incertain: false
-doublets: []
-famille: []
 themes: []
 sources:
-  - { ouvrage: Littré, entree: alias, page: 1 }
+  - { ouvrage: littre, entree: alias }
 redaction:
-  - { par: IA, detail: Claude Opus 5.5 }
-lecturesTraditionnelles: []
+  - par: IA
+    detail: Claude Opus 5.5
 statut: brouillon
-historique: []

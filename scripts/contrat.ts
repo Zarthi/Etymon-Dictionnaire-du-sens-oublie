@@ -1,29 +1,42 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
 import { z } from "zod";
-import auteurs from "../data/auteurs.json" with { type: "json" };
 import langues from "../data/langues.json" with { type: "json" };
 import themes from "../data/themes.json" with { type: "json" };
-import { NOMS_OUVRAGES } from "../src/lib/ouvrages.ts";
-import { NATURES, schemaEntreeRedaction, schemaFiche } from "../src/lib/schema.ts";
+import {
+  LICENCES,
+  NATURES,
+  schemaAuteur,
+  schemaEntreeAuteur,
+  schemaEntreeOuvrage,
+  schemaEntreeRedaction,
+  schemaFiche,
+  schemaOuvrage,
+} from "../src/lib/schema.ts";
 import { REDACTEURS } from "../src/lib/sources.ts";
 import { cheminFiche } from "./lib/validation.ts";
 
 /**
- * Contrat de données de la fiche, généré à partir du schéma (src/lib/schema.ts) :
- * - docs/fiche.schema.json : schéma JSON, pour l'autocomplétion et la vérification dans VS Code ;
- * - docs/contrat-fiche.md : le même contrat, lisible ;
+ * Contrat de données, généré à partir du schéma (src/lib/schema.ts) :
+ * - docs/fiche.schema.json, auteur.schema.json, ouvrage.schema.json : schémas JSON, pour
+ *   l'autocomplétion et la vérification dans VS Code ;
+ * - docs/contrat-fiche.md : les trois types de fiches, lisibles ;
  * - docs/prompt-redaction.md : la consigne donnée à l'IA qui rédige un lot (npm run rediger),
  *   avec des fiches réelles du dépôt pour exemples.
  * Un test échoue si ces fichiers ne sont plus à jour : lancer `npm run contrat`.
  */
-export const FICHIER_SCHEMA = fileURLToPath(new URL("../docs/fiche.schema.json", import.meta.url));
-export const FICHIER_CONTRAT = fileURLToPath(new URL("../docs/contrat-fiche.md", import.meta.url));
-export const FICHIER_PROMPT = fileURLToPath(new URL("../docs/prompt-redaction.md", import.meta.url));
-const DOSSIER_FICHES = fileURLToPath(new URL("../data/fiches", import.meta.url));
+const docs = (nom: string) => fileURLToPath(new URL(`../docs/${nom}`, import.meta.url));
+export const SCHEMAS_JSON = [
+  { fichier: docs("fiche.schema.json"), schema: schemaFiche, titre: "Fiche d'Étymon" },
+  { fichier: docs("auteur.schema.json"), schema: schemaAuteur, titre: "Auteur d'Étymon" },
+  { fichier: docs("ouvrage.schema.json"), schema: schemaOuvrage, titre: "Ouvrage d'Étymon" },
+];
+export const FICHIER_CONTRAT = docs("contrat-fiche.md");
+export const FICHIER_PROMPT = docs("prompt-redaction.md");
+const DATA = fileURLToPath(new URL("../data", import.meta.url));
 
 type Noeud = {
   type?: string;
@@ -38,16 +51,15 @@ type Noeud = {
   pattern?: string;
 };
 
-export function genererSchemaJson(): Record<string, unknown> {
-  const schema = z.toJSONSchema(schemaFiche, { target: "draft-7", unrepresentable: "any", io: "input" });
-  return { ...schema, title: "Fiche d'Étymon" };
+export function genererSchemaJson(schema: z.ZodType, titre: string): Record<string, unknown> {
+  return { ...z.toJSONSchema(schema, { target: "draft-7", unrepresentable: "any", io: "input" }), title: titre };
 }
 
 /** Type d'un champ, en français. */
 function type(n: Noeud): string {
   if (n.anyOf) {
     const utiles = n.anyOf.filter((a) => a.type !== "null");
-    const texte = utiles.map(type).join(" ou ");
+    const texte = [...new Set(utiles.map(type))].join(" ou ");
     return utiles.length < n.anyOf.length ? `${texte} ou null` : texte;
   }
   if (n.enum) return n.enum.length <= 8 ? n.enum.map((v) => `\`${v}\``).join(" \\| ") : "liste fermée (voir plus bas)";
@@ -60,18 +72,22 @@ function type(n: Noeud): string {
           ? "valeurs d'une liste fermée (voir plus bas)"
           : items.enum
             ? type(items)
-            : "textes";
+            : items.pattern
+              ? "identifiants"
+              : "textes";
     return `liste${n.minItems ? " non vide" : ""} ${/^[aeiouy]/.test(element) ? "d'" : "de "}${element}`;
   }
   if (n.type === "object") return "objet (voir plus bas)";
   if (n.type === "boolean") return "`true` \\| `false`";
   if (n.type === "integer" || n.type === "number") return "nombre";
   if (n.format === "uri") return "adresse https";
-  if (n.pattern?.includes("\\d{4}")) return "date AAAA-MM-JJ";
+  if (n.pattern?.includes("\\d{4}-")) return "date AAAA-MM-JJ";
+  if (n.pattern?.includes("siècle")) return "date historique";
+  if (n.pattern?.startsWith("^[a-z0-9]")) return "identifiant";
   return "texte";
 }
 
-/** Objets imbriqués (origine, sources…), à détailler dans leur propre tableau. */
+/** Objets imbriqués (etymologie, sources…), à détailler dans leur propre tableau. */
 function objetDe(n: Noeud): Noeud | undefined {
   if (n.type === "object" && n.properties) return n;
   if (n.anyOf) return n.anyOf.map(objetDe).find(Boolean);
@@ -100,52 +116,66 @@ function tableau(n: Noeud, chemin: string, sections: string[], titre = "###"): s
   return lignes.join("\n");
 }
 
+/** Tableau principal d'un schéma, suivi de ceux de ses objets imbriqués. */
+function contrat(schema: z.ZodType, titre: string): string[] {
+  const sections: string[] = [];
+  const principal = tableau(genererSchemaJson(schema, "") as Noeud, "", sections, titre);
+  return [principal, "", ...sections.flatMap((s) => [s, ""])];
+}
+
+/** Fiches d'un dossier de data/ (auteurs, ouvrages), lues telles quelles. */
+function lireReferences(dossier: string): { id: string; [cle: string]: unknown }[] {
+  return readdirSync(join(DATA, dossier))
+    .filter((f) => f.endsWith(".yaml"))
+    .sort()
+    .map((f) => ({ id: f.replace(/\.yaml$/, ""), ...parse(readFileSync(join(DATA, dossier, f), "utf8")) }));
+}
+
 const REGLES = [
-  "Le fichier s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`.",
-  "Un étymon reconstruit commence par `*` (c'est ce qui le dit reconstruit) ; une valeur commençant par `*` ou contenant `: ` s'écrit entre guillemets.",
-  "Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches (l'app l'affiche des deux côtés) ; l'adresse d'un ouvrage en ligne se déduit de l'entrée et ne s'écrit pas (Bailly : entrée en grec, adresse translittérée).",
-  "Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, listes vides, `mode: filiation`).",
-  "`origine.formes[].selon` : seulement pour une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.",
-  "`lecturesTraditionnelles[].hypothese` : une forme de `origine.formes`.",
-  "`renvois` : fiches existantes, hors doublets et famille (une notion voisine, pas une racine commune).",
-  "Les textes sont bruts, sans mise en forme : l'app met en italique l'étymon, les formes d'origine et la forme légendaire, et pose les liens vers les autres fiches.",
-  "`explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus.",
-  "Typographie française dans les sens, l'explication, la légende, les lectures et l'historique : guillemets « », espace insécable avant `:` `;` `?` `!` ; les sens s'écrivent sans guillemets.",
-  "Une œuvre citée par une lecture traditionnelle appartient à l'auteur de la lecture ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).",
+  "Le fichier d'un mot s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes, dans l'ordre du Littré), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`. Un auteur : `data/auteurs/<nom>.yaml` ; un ouvrage : `data/ouvrages/<abrégé ou titre>.yaml`.",
+  "Une forme reconstruite commence par `*` ; une valeur commençant par `*`, contenant `: `, ou une virgule dans `{ … }`, s'écrit entre guillemets.",
+  "Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches ; l'adresse d'une entrée se déduit du modèle d'adresse de l'ouvrage ; la translittération du grec se déduit de la forme ; ce qui se calcule (œuvres d'un auteur, mots qu'il a forgés) ne s'écrit pas.",
+  "Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, `tradition: false`, listes vides).",
+  "Toute référence (auteur, ouvrage, doublet, renvoi) vise une fiche existante.",
+  "`etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Au moins un maillon porte un sens ; au plus un est `premier`.",
+  "Translittération : seulement pour une écriture ni latine ni grecque (arabe, hébreu), et alors obligatoire.",
+  "`selon` : seulement dans une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.",
+  "Lecture traditionnelle : un auteur de la tradition (`tradition: true`), ses propres œuvres, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).",
+  "`renvois` : ni doublet, ni mot de la famille (une notion voisine, pas une racine commune).",
+  "Les textes sont bruts, sans mise en forme : l'app met en italique les formes de la chaîne et pose les liens.",
+  "`explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus ; `description` : 200 caractères au plus.",
+  "Typographie française dans les sens et les textes : guillemets « », espace insécable avant `:` `;` `?` `!` ; les sens s'écrivent sans guillemets.",
   "Hors statut `a-verifier`, `sources` contient au moins un ouvrage consulté.",
   "Aucun alias YAML, aucune clé en double, aucun champ inconnu.",
 ];
 
 export function genererMarkdown(): string {
-  const schema = genererSchemaJson() as Noeud;
-  const sections: string[] = [];
-  const principal = tableau(schema, "", sections);
-  const listes = [
+  return [
+    "# Contrat de données : les fiches",
+    "",
+    "> Généré par `npm run contrat` à partir de `src/lib/schema.ts` : ne pas modifier à la main.",
+    "> Les mêmes contrats existent en schémas JSON (`docs/*.schema.json`), utilisés par VS Code",
+    "> pour l'autocomplétion et la vérification des fiches pendant la saisie.",
+    "",
+    "Trois types de fiches, en YAML, avec le même socle éditorial (`sources`, `redaction`, `statut`, `historique`).",
+    "Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data/ouvrages/littre.yaml`.",
+    "",
+    "## Fiche d'un mot (`data/fiches`)",
+    "",
+    ...contrat(schemaFiche, "###"),
+    "## Fiche d'un auteur (`data/auteurs`)",
+    "",
+    ...contrat(schemaAuteur, "###"),
+    "## Fiche d'un ouvrage (`data/ouvrages`)",
+    "",
+    ...contrat(schemaOuvrage, "###"),
+    "## Listes fermées",
+    "",
     `- \`nature\` : ${NATURES.join(", ")}.`,
     `- \`langue\` (data/langues.json) : ${langues.join(", ")}.`,
     `- \`themes\` (data/themes.json) : ${themes.join(", ")}.`,
-    `- \`sources[].ouvrage\` (data/sources.json) : ${NOMS_OUVRAGES.join(", ")}.`,
+    `- \`licence\` : ${LICENCES.join(", ")}.`,
     `- \`redaction[].par\` : ${REDACTEURS.join(", ")}.`,
-    `- Auteurs (data/auteurs.json) : tenants d'une hypothèse (\`origine.formes[].selon\`) ; ceux de la tradition signent aussi les lectures, avec leurs œuvres :`,
-    ...auteurs.map((a) => `  - ${a.nom} (${a.role}) : ${a.oeuvres.map((o) => `*${o}*`).join(", ")}.`),
-  ];
-  return [
-    "# Contrat de données : la fiche",
-    "",
-    "> Généré par `npm run contrat` à partir de `src/lib/schema.ts` : ne pas modifier à la main.",
-    "> Le même contrat existe en schéma JSON (`docs/fiche.schema.json`), utilisé par VS Code",
-    "> pour l'autocomplétion et la vérification des fiches pendant la saisie.",
-    "",
-    "Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml`.",
-    "",
-    "## Champs",
-    "",
-    principal,
-    "",
-    ...sections.flatMap((s) => [s, ""]),
-    "## Listes fermées",
-    "",
-    ...listes,
     "",
     "## Règles vérifiées en plus de la structure (`npm run valider`)",
     "",
@@ -154,14 +184,17 @@ export function genererMarkdown(): string {
   ].join("\n");
 }
 
-/** Fiches réelles montrées en exemple à l'IA : simple, filiation, composition et mot forgé, origine débattue. */
-const EXEMPLES = ["etonner", "chiffre", "schizophrenie", "religion"];
+/**
+ * Fiches réelles montrées en exemple à l'IA : simple, voie (arabe translittéré), voie et composition,
+ * mot forgé, origine débattue, nom de personne et étymologie écartée.
+ */
+const EXEMPLES = ["etonner", "chiffre", "philosophie", "schizophrenie", "religion", "algorithme"];
 /** Mots dont la nature n'est pas dans le Littré : l'exemple la garde. */
 const HORS_LITTRE = new Set(["schizophrenie"]);
 
-/** Contenu d'une fiche tel que l'IA l'écrit : ni statut, ni rédaction, ni sources, ni lectures, ni valeurs par défaut. */
+/** Contenu d'une fiche tel que l'IA l'écrit : ni socle éditorial, ni lectures, ni valeurs par défaut. */
 function contenuDe(id: string): Record<string, unknown> {
-  const fiche = parse(readFileSync(join(DOSSIER_FICHES, cheminFiche(id)), "utf8"));
+  const fiche = parse(readFileSync(join(DATA, "fiches", cheminFiche(id)), "utf8"));
   const { sources: _s, redaction: _r, lecturesTraditionnelles: _l, statut: _t, historique: _h, nature, ...contenu } = fiche;
   contenu.explication = contenu.explication.trim();
   return HORS_LITTRE.has(id) ? { mot: contenu.mot, nature, ...contenu } : contenu;
@@ -169,22 +202,23 @@ function contenuDe(id: string): Record<string, unknown> {
 
 const CONSIGNES = [
   "Un mot entre s'il est important (usage courant, porteur de sens dans la vie intellectuelle, morale, spirituelle ou sociale) et si son sens premier éclaire ce qu'on dit en l'employant. Un mot douteux est rédigé quand même : seul Thibault écarte, et tu lui signales ton doute.",
-  "Étymon : la forme de la langue source directe (latin pour un mot hérité du latin, italien pour un emprunt à l'italien). Ce qui est plus ancien va dans `origine`, seulement s'il ajoute un sens ou si l'origine est débattue.",
-  "`sens` : le sens de l'étymon, pas celui du mot français. Pour un mot forgé ou composé, le sens littéral des éléments.",
-  "`explication` : ce qui s'est perdu, affaibli ou retourné entre ce sens et l'usage actuel. Elle ne répète pas le sens, déjà affiché juste au-dessus. Ton sobre, sans emphase ni jugement.",
-  "Tout mot étranger cité dans un texte est une forme de la fiche (étymon, `origine`, légende) : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.",
-  "`renvois` : seulement vers une fiche existante dont la notion éclaire vraiment celle-ci sans racine commune (schizophrénie → obsession, où la tradition a lu la chose sous un autre mot) ; trois au plus, souvent aucun.",
-  "Méfie-toi des étymologies populaires (*sincère*, « sans cire ») : elles vont dans `legende`, jamais dans l'étymon.",
-  "Tu rédiges de mémoire : n'invente ni tenant (`selon`), ni date (`forge`), ni forme reconstruite que tu ne connais pas avec certitude. En cas de doute sur l'étymon, `incertain: true`.",
+  "`etymologie` : la chaîne, du plus proche au plus lointain. Le premier maillon est la langue source directe (latin pour un mot hérité, italien pour un emprunt à l'italien) ; on ne remonte que si cela ajoute un sens ou si l'origine est débattue.",
+  "Formes dans leur écriture d'origine (φρήν, صفر) ; translittération seulement pour l'arabe ou l'hébreu (celle du grec se déduit).",
+  "`sens` seulement là où il apprend quelque chose : le sens premier est celui du maillon le plus lointain attesté qui en porte un. Pour un mot forgé ou composé, le sens littéral des éléments.",
+  "`explication` : ce qui s'est perdu, affaibli ou retourné entre le sens premier et l'usage actuel. Elle ne répète pas le sens, affiché juste au-dessus. Ton sobre, sans emphase ni jugement.",
+  "Tout mot étranger cité dans un texte est une forme de la chaîne : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.",
+  "`ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.",
+  "`renvois` : seulement vers une fiche existante dont la notion éclaire vraiment celle-ci sans racine commune (schizophrénie → obsession) ; trois au plus, souvent aucun.",
+  "Auteurs et ouvrages sont cités par leur identifiant. S'il manque une fiche, ajoute-la au lot (`auteurs`, `ouvrages`), avec une description qui situe sans raconter.",
+  "Tu rédiges de mémoire : n'invente ni tenant (`selon`), ni date (`forge`), ni forme reconstruite que tu ne connais pas avec certitude. En cas de doute sur la chaîne, `incertain: true`.",
   "Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles : les scripts les posent (npm run rediger, npm run verifier), les lectures se rédigent à part, texte source sous les yeux.",
   "Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.",
 ];
 
 /** Consigne de rédaction d'un lot, pour l'IA : règles, format d'entrée tiré du schéma, exemples réels. */
 export function genererPrompt(): string {
-  const schema = z.toJSONSchema(schemaEntreeRedaction, { target: "draft-7", unrepresentable: "any", io: "input" }) as Noeud;
-  const sections: string[] = [];
-  const principal = tableau(schema, "", sections, "####");
+  const auteurs = lireReferences("auteurs");
+  const ouvrages = lireReferences("ouvrages");
   return [
     "# Rédiger un lot de fiches",
     "",
@@ -198,23 +232,28 @@ export function genererPrompt(): string {
     "",
     "## Format",
     "",
-    "Un fichier JSON : une liste de fiches, chacune avec les champs ci-dessous et eux seuls. Un champ facultatif à sa valeur par défaut ne s'écrit pas ; `nature` se déduit du Littré et ne s'écrit que pour un mot qui n'y figure pas (postérieur à 1872).",
+    "Un fichier JSON : une liste de fiches, ou `{ \"fiches\": [...], \"auteurs\": [...], \"ouvrages\": [...] }` quand il faut créer des auteurs ou des ouvrages. Chaque fiche a les champs ci-dessous et eux seuls ; un champ facultatif à sa valeur par défaut ne s'écrit pas ; `nature` se déduit du Littré et ne s'écrit que pour un mot qui n'y figure pas (postérieur à 1872).",
     "",
-    "### Champs",
+    "### Fiche d'un mot",
     "",
-    principal,
+    ...contrat(schemaEntreeRedaction, "####"),
+    "### Auteur",
     "",
-    ...sections.flatMap((s) => [s, ""]),
+    ...contrat(schemaEntreeAuteur, "####"),
+    "### Ouvrage",
+    "",
+    ...contrat(schemaEntreeOuvrage, "####"),
     "### Listes fermées",
     "",
     `- \`nature\` : ${NATURES.join(", ")}.`,
     `- \`langue\` : ${langues.join(", ")}.`,
     `- \`themes\` : ${themes.join(", ")}.`,
-    `- \`origine.formes[].selon\` : ${auteurs.map((a) => a.nom).join(", ")}.`,
+    `- Auteurs existants : ${auteurs.map((a) => `${a.id} (${a.nom})`).join(", ")}.`,
+    `- Ouvrages existants : ${ouvrages.map((o) => `${o.id} (${o.titre})`).join(", ")}.`,
     "",
     "## Exemples",
     "",
-    "Fiches du dépôt (simple, filiation, composition et mot forgé, origine débattue) :",
+    "Fiches du dépôt (simple ; voie ; voie et composition ; mot forgé ; origine débattue ; nom de personne et étymologie écartée) :",
     "",
     "```json",
     // Une fiche par ligne : lisible, et moins de jetons qu'un JSON indenté.
@@ -233,8 +272,8 @@ export function genererPrompt(): string {
 }
 
 if (import.meta.main) {
-  await writeFile(FICHIER_SCHEMA, JSON.stringify(genererSchemaJson(), null, 2) + "\n");
+  for (const { fichier, schema, titre } of SCHEMAS_JSON) await writeFile(fichier, JSON.stringify(genererSchemaJson(schema, titre), null, 2) + "\n");
   await writeFile(FICHIER_CONTRAT, genererMarkdown());
   await writeFile(FICHIER_PROMPT, genererPrompt());
-  console.log("✓ docs/fiche.schema.json, docs/contrat-fiche.md et docs/prompt-redaction.md régénérés");
+  console.log("✓ docs/*.schema.json, docs/contrat-fiche.md et docs/prompt-redaction.md régénérés");
 }

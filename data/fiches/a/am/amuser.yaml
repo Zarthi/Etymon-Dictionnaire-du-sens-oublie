@@ -1,8 +1,9 @@
 mot: amuser
 nature: [ verbe ]
-etymon: muser
-langue: ancien français
-sens: rester le museau en l'air, s'attarder
+etymologie:
+  - forme: muser
+    langue: ancien français
+    sens: rester le museau en l'air, s'attarder
 explication: >
   Amuser, c'est faire muser : tenir quelqu'un le museau levé, à perdre son
   temps. Le sens ancien est tromper, retenir par de faux prétextes. L'amusement
@@ -11,7 +12,7 @@ incertain: true
 famille: [ muser, musarder, museau ]
 themes: [ émotions, parole ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: amuser
 redaction:
   - par: IA

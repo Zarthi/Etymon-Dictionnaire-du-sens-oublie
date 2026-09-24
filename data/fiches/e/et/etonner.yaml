@@ -1,19 +1,20 @@
 mot: étonner
 nature: [ verbe ]
-etymon: "*extonare"
-langue: latin populaire
-sens: ébranler comme d'un coup de tonnerre
+etymologie:
+  - forme: "*extonare"
+    langue: latin populaire
+    sens: ébranler comme d'un coup de tonnerre
 explication: >
   Étonner, c'était d'abord frapper comme la foudre : l'ancien français l'emploie
   pour un étourdissement violent. Le sens s'est affaibli jusqu'à la simple
   surprise.
 themes: [ émotions ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: étonner
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: adtono
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: étonner
 redaction:
   - par: IA

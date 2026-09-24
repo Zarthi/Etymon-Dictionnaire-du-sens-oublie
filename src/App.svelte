@@ -1,19 +1,29 @@
 <script lang="ts">
   import Fiche from "./composants/Fiche.svelte";
   import MotDuJour from "./composants/MotDuJour.svelte";
+  import PageAuteur from "./composants/PageAuteur.svelte";
+  import PageOuvrage from "./composants/PageOuvrage.svelte";
   import Parametres from "./composants/Parametres.svelte";
   import Recherche from "./composants/Recherche.svelte";
-  import { chargerFiche, entrees } from "./lib/fiches.ts";
+  import { auteurs, chargerFiche, entrees, ouvrages } from "./lib/fiches.ts";
+  import { lienMot } from "./lib/liens.ts";
   import { dateDuJour, motAuHasard, motDuJour } from "./lib/motDuJour.ts";
   import { ecrireParametres, lireParametres } from "./lib/stockage.ts";
   import { tick } from "svelte";
 
-  /** Vue affichée, déduite de l'adresse : `#/`, `#/mot/<id>`, `#/parametres`. */
-  type Vue = { nom: "accueil" } | { nom: "fiche"; id: string } | { nom: "parametres" };
+  /** Vue affichée, déduite de l'adresse : `#/`, `#/mot/<id>`, `#/auteur/<id>`, `#/ouvrage/<id>`, `#/parametres`. */
+  type Vue =
+    | { nom: "accueil" }
+    | { nom: "fiche"; id: string }
+    | { nom: "auteur"; id: string }
+    | { nom: "ouvrage"; id: string }
+    | { nom: "parametres" };
 
   function lireVue(hash: string): Vue {
     const [, page, id] = hash.split("/");
     if (page === "mot" && id) return { nom: "fiche", id: decodeURIComponent(id) };
+    if (page === "auteur" && id) return { nom: "auteur", id: decodeURIComponent(id) };
+    if (page === "ouvrage" && id) return { nom: "ouvrage", id: decodeURIComponent(id) };
     if (page === "parametres") return { nom: "parametres" };
     return { nom: "accueil" };
   }
@@ -27,7 +37,7 @@
 
   /** Adresse d'une fiche existante ; rien pour un mot qui n'a pas encore sa fiche. */
   const idsPublies = new Set(entrees.map((e) => e.id));
-  const lienVers = (id: string) => (idsPublies.has(id) ? `#/mot/${encodeURIComponent(id)}` : undefined);
+  const lienVers = (id: string) => (idsPublies.has(id) ? lienMot(id) : undefined);
   const motsParId = new Map(entrees.map((e) => [e.id, e.mot]));
   const motDe = (id: string) => motsParId.get(id) ?? id;
 
@@ -80,7 +90,7 @@
   }
 
   function ouvrir(id: string) {
-    location.hash = `/mot/${encodeURIComponent(id)}`;
+    location.hash = lienMot(id).slice(1);
   }
 
   function auHasard() {
@@ -90,7 +100,7 @@
 </script>
 
 <svelte:head>
-  {#if vue.nom !== "fiche"}<title>Étymon</title>{/if}
+  {#if vue.nom === "accueil" || vue.nom === "parametres"}<title>Étymon</title>{/if}
 </svelte:head>
 
 <header>
@@ -114,7 +124,13 @@
     <Recherche {entrees} onChoisir={ouvrir} />
 
     <div class="contenu">
-      {#if vue.nom === "fiche"}
+      {#if vue.nom === "auteur"}
+        {@const auteur = auteurs.get(vue.id)}
+        {#if auteur}<PageAuteur {auteur} />{:else}<p class="message">Cet auteur n'a pas de fiche.</p>{/if}
+      {:else if vue.nom === "ouvrage"}
+        {@const ouvrage = ouvrages.get(vue.id)}
+        {#if ouvrage}<PageOuvrage {ouvrage} />{:else}<p class="message">Cet ouvrage n'a pas de fiche.</p>{/if}
+      {:else if vue.nom === "fiche"}
         {#await ficheOuverte then fiche}
           {#if fiche}
             <Fiche {fiche} deplierLectures={parametres.deplierLectures} {lienVers} {motDe} />

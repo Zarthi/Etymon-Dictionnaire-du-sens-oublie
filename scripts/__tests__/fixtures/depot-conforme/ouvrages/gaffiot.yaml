@@ -1,0 +1,9 @@
+titre: Dictionnaire latin-français
+abrege: Gaffiot
+licence: CC BY-NC-ND
+modeleEntree: https://gaffiot.fr/#{entree}
+description: Ouvrage de test.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

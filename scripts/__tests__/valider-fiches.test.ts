@@ -6,9 +6,11 @@ const fixture = (nom: string) => fileURLToPath(new URL(`fixtures/${nom}`, import
 
 describe("validerDepot", () => {
   it("valide un dépôt conforme (fiches rangées par préfixe, candidats, comptes)", async () => {
-    const { fiches, candidats, comptes, erreurs } = await validerDepot(fixture("depot-conforme"));
+    const { fiches, auteurs, ouvrages, candidats, comptes, erreurs } = await validerDepot(fixture("depot-conforme"));
     expect(erreurs).toEqual([]);
     expect(fiches.map((f) => f.id)).toEqual(["epreuve", "essai"]);
+    expect(auteurs.map((a) => a.id)).toEqual(["lactance"]);
+    expect(ouvrages.map((o) => o.id)).toEqual(["gaffiot", "institutions-divines", "tlfi"]);
     expect(candidats.map((c) => c.mot)).toEqual(["exemple", "essorer"]);
     expect(comptes).toHaveLength(1);
   });
@@ -16,13 +18,13 @@ describe("validerDepot", () => {
   it("rapporte chaque faute d'un dépôt fautif avec fichier et champ", async () => {
     const { erreurs } = await validerDepot(fixture("depot-fautif"));
     const attendues = [
-      /^depot-fautif\/fiches\/a\/al\/alias\.yaml › ligne 4 : YAML illisible.*entre guillemets/,
-      /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › sens : sans guillemets/,
+      /^depot-fautif\/auteurs\/sans-nom\.yaml › id : .*« quelqu-un\.yaml »/,
+      /^depot-fautif\/fiches\/a\/al\/alias\.yaml › ligne 5 : YAML illisible.*entre guillemets/,
+      /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › etymologie\.0\.sens : sans guillemets/,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › explication : guillemets droits/,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › explication : espace insécable requise avant « : »/,
       /^depot-fautif\/fiches\/e\/et\/mal-range\.yaml › \(emplacement\) : .*« m\/ma\/mal-range\.yaml »/,
-      /^depot-fautif\/fiches\/l\/la\/langue\.yaml › langue : /,
-      /^depot-fautif\/fiches\/l\/la\/langue\.yaml › sources\.0\.ouvrage : /,
+      /^depot-fautif\/fiches\/l\/la\/langue\.yaml › etymologie\.0\.langue : /,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › doublets : fiche « absent » introuvable/,
       /^depot-fautif\/candidats\/Z\.yaml › \(fichier\) : /,
       /^depot-fautif\/candidats\/d\.yaml › 0\.raison : /,

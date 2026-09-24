@@ -1,8 +1,9 @@
 mot: ambiguïté
 nature: [ nom féminin ]
-etymon: ambiguitas
-langue: latin
-sens: incertitude de ce qui va des deux côtés
+etymologie:
+  - forme: ambiguitas
+    langue: latin
+    sens: incertitude de ce qui va des deux côtés
 explication: >
   Ambigere, c'est pousser des deux côtés à la fois : ambi, de part et d'autre,
   et agere, mener. L'ambigu tire dans deux directions ; on ne sait de quel côté
@@ -10,7 +11,7 @@ explication: >
 famille: [ ambiant, ambidextre ]
 themes: [ parole, esprit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: ambiguité
 redaction:
   - par: IA

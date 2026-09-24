@@ -1,8 +1,9 @@
 mot: aveugle
 nature: [ adjectif, nom ]
-etymon: "*aboculus"
-langue: latin populaire
-sens: privé d'yeux
+etymologie:
+  - forme: "*aboculus"
+    langue: latin populaire
+    sens: privé d'yeux
 explication: >
   Ab oculis, sans yeux : l'aveugle est celui à qui les yeux ont été ôtés. Le
   latin classique disait caecus ; le mot populaire dit la privation, non
@@ -10,7 +11,7 @@ explication: >
 famille: [ oculaire, œil ]
 themes: [ corps, santé ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: aveugle
 redaction:
   - par: IA

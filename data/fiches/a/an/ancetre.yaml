@@ -1,8 +1,9 @@
 mot: ancêtre
 nature: [ nom ]
-etymon: antecessor
-langue: latin
-sens: celui qui marche devant
+etymologie:
+  - forme: antecessor
+    langue: latin
+    sens: celui qui marche devant
 explication: >
   Antecedere, c'est marcher devant. L'ancêtre est celui qui nous précède sur le
   chemin, non seulement dans le temps : il ouvre la voie, et nous marchons dans
@@ -10,7 +11,7 @@ explication: >
 famille: [ prédécesseur, céder, procéder ]
 themes: [ famille, temps ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: ancêtres
 redaction:
   - par: IA

@@ -1,8 +1,9 @@
 mot: chétif
 nature: [ adjectif ]
-etymon: captivus
-langue: latin
-sens: prisonnier
+etymologie:
+  - forme: captivus
+    langue: latin
+    sens: prisonnier
 explication: >
   Le chétif était d'abord le captif. Les auteurs chrétiens en ont fait le captif
   du péché, digne de pitié ; de là le misérable, puis le faible.
@@ -10,11 +11,11 @@ incertain: true
 famille: [ captif ]
 themes: [ corps ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: chétif
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: captivus
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: chétif
 redaction:
   - par: IA

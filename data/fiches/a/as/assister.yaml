@@ -1,8 +1,9 @@
 mot: assister
 nature: [ verbe ]
-etymon: assistere
-langue: latin
-sens: se tenir auprès de
+etymologie:
+  - forme: assistere
+    langue: latin
+    sens: se tenir auprès de
 explication: >
   Assister, c'est se tenir debout à côté : assistere. Celui qui assiste à une
   cérémonie s'y tient présent ; celui qui assiste un malade se tient près de
@@ -10,7 +11,7 @@ explication: >
 famille: [ consister, persister, résister ]
 themes: [ société, santé ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: assister
 redaction:
   - par: IA

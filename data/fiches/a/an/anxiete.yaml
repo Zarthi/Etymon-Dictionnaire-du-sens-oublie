@@ -1,8 +1,9 @@
 mot: anxiété
 nature: [ nom féminin ]
-etymon: anxietas
-langue: latin
-sens: resserrement, oppression
+etymologie:
+  - forme: anxietas
+    langue: latin
+    sens: resserrement, oppression
 explication: >
   Angere, c'est serrer, étrangler. L'anxieux est un homme serré, oppressé, comme
   l'angoissé est un homme à l'étroit. Les deux mots viennent du même geste qui
@@ -10,7 +11,7 @@ explication: >
 famille: [ angoisse, angine ]
 themes: [ émotions, corps ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: anxiété
 redaction:
   - par: IA

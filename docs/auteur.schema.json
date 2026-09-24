@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "nom": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Forme usuelle du nom, affichée partout (Augustin, Eugen Bleuler) ; le nom du fichier en est la forme sans accent."
+    },
+    "nomComplet": {
+      "description": "Forme complète ou d'origine (Aurelius Augustinus), si elle diffère.",
+      "type": "string",
+      "minLength": 1
+    },
+    "naissance": {
+      "description": "Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ».",
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        {
+          "type": "string",
+          "pattern": "^(vers )?(\\d{1,4}|[IVXL]+e siècle)( av\\. J\\.-C\\.)?(-(vers )?\\d{1,4}( av\\. J\\.-C\\.)?)?$"
+        }
+      ]
+    },
+    "mort": {
+      "description": "Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ».",
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        {
+          "type": "string",
+          "pattern": "^(vers )?(\\d{1,4}|[IVXL]+e siècle)( av\\. J\\.-C\\.)?(-(vers )?\\d{1,4}( av\\. J\\.-C\\.)?)?$"
+        }
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie."
+    },
+    "tradition": {
+      "default": false,
+      "description": "Auteur de la tradition : signe des lectures traditionnelles. Faux si absent.",
+      "type": "boolean"
+    },
+    "bnf": {
+      "description": "Identifiant de la notice d'autorité BnF (cb…) ; l'adresse data.bnf.fr s'en déduit.",
+      "type": "string",
+      "pattern": "^cb\\d{8}[0-9a-z]$"
+    },
+    "sources": {
+      "default": [],
+      "description": "Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ouvrage": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Ouvrage consulté (identifiant d'une fiche de data/ouvrages)."
+          },
+          "entree": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Entrée consultée (« étonner », « adtono », « φρήν »)."
+          },
+          "page": {
+            "description": "Page de l'édition papier consultée.",
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "string",
+                "minLength": 1
+              }
+            ]
+          },
+          "url": {
+            "description": "Adresse (https), seulement si elle ne se déduit pas de l'entrée.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "ouvrage",
+          "entree"
+        ],
+        "additionalProperties": false,
+        "description": "Ouvrage consulté."
+      }
+    },
+    "redaction": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "par": {
+            "type": "string",
+            "enum": [
+              "IA",
+              "Étymon"
+            ],
+            "description": "IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
+          }
+        },
+        "required": [
+          "par",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "description": "Qui a rédigé. Ce n'est pas une source."
+      },
+      "description": "Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger."
+    },
+    "statut": {
+      "type": "string",
+      "enum": [
+        "a-verifier",
+        "brouillon",
+        "validee"
+      ],
+      "description": "a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
+    },
+    "historique": {
+      "default": [],
+      "description": "Corrections successives (ex. suite à une Critique).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+            "description": "Date au format AAAA-MM-JJ."
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nature de la correction."
+          }
+        },
+        "required": [
+          "date",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "nom",
+    "description",
+    "redaction",
+    "statut"
+  ],
+  "additionalProperties": false,
+  "description": "Fiche d'un auteur.",
+  "title": "Auteur d'Étymon"
+}

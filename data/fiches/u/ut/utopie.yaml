@@ -1,0 +1,40 @@
+mot: utopie
+nature: [ nom féminin ]
+etymologie:
+  - forme: Utopia
+    langue: latin humaniste
+    sens: pays de nulle part
+    forge:
+      par: [ thomas-more ]
+      date: "1516"
+      ouvrage: utopia
+  - langue: grec ancien
+    alternatives:
+      mode: jeu
+      formes:
+        - sens: nulle part
+          elements:
+            - forme: οὐ
+              sens: non
+            - forme: τόπος
+              sens: lieu
+        - sens: lieu du bonheur
+          elements:
+            - forme: εὖ
+              sens: bien
+            - forme: τόπος
+              sens: lieu
+explication: >-
+  More nommait une île parfaite qui n'existe en aucun lieu, et laissait entendre
+  qu'elle était aussi le lieu du bonheur. Le mot a gardé le rêve et perdu
+  l'ironie.
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: utopie
+  - ouvrage: tlfi
+    entree: utopie
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

@@ -1,8 +1,14 @@
 # Modèle v3 : proposition
 
-> Document de travail, à valider par Thibault avant implémentation. Il part des cas
-> d'épreuve (§1) et des décisions déjà prises (24 septembre 2026) : chaîne étymologique,
-> forme déduite de l'écriture d'origine, fiches Auteur et Ouvrage, data.bnf.fr comme source.
+> Validé par Thibault et implémenté le 24 septembre 2026. Il part des cas d'épreuve (§1) et
+> des décisions prises le même jour : chaîne étymologique, forme déduite de l'écriture
+> d'origine, fiches Auteur et Ouvrage, data.bnf.fr comme source. Le contrat à jour est
+> `docs/contrat-fiche.md` ; ce document garde le raisonnement.
+>
+> Écarts à l'implémentation : un mot forgé en français (*altruisme*) ouvre la chaîne par un
+> maillon `français` fait de ses seuls éléments ; *personne* force son sens premier
+> (`premier: true`) pour ne pas afficher en tête l'étrusque, incertain ; l'homonyme *louer*
+> (*laudare*) n'a pas été rédigé, faute de remplir le §3.3.
 
 ## 1. Ce que les cas d'épreuve ont montré
 

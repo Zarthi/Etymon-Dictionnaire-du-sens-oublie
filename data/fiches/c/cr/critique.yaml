@@ -1,27 +1,25 @@
 mot: critique
 nature: [ nom féminin, nom masculin, adjectif ]
-etymon: criticus
-langue: latin
-sens: juge des ouvrages de l'esprit
+etymologie:
+  - forme: criticus
+    langue: latin
+    sens: juge des ouvrages de l'esprit
+  - forme: κριτικός
+    langue: grec ancien
+    sens: capable de juger, de décider
 explication: >
   Le critique est d'abord celui qui sait juger et discerner. Le sens de blâme,
   de jugement défavorable, n'apparaît qu'au XVIIe siècle.
-origine:
-  formes:
-    - forme: kritikós
-      graphie: κριτικός
-      langue: grec ancien
-      sens: capable de juger, de décider
 famille: [ crise ]
 themes: [ esprit, savoir ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: critique
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: criticus
-  - ouvrage: Bailly
+  - ouvrage: bailly
     entree: κριτικός
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: critique
     url: https://www.cnrtl.fr/etymologie/critique/nom
 redaction:

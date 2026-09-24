@@ -1,23 +1,22 @@
 mot: zéro
 nature: [ nom masculin ]
-etymon: zero
-langue: italien
-sens: zéro, rien
+etymologie:
+  - forme: zero
+    langue: italien
+    sens: zéro, rien
+  - forme: صفر
+    translitteration: ṣifr
+    langue: arabe
+    sens: vide
 explication: >
   Zéro et chiffre sont un même mot arabe venu par deux chemins : l'italien pour
   l'un, le latin médiéval pour l'autre. Chiffre désignait d'abord le zéro, avant
   que zéro ne le supplante dans ce sens.
-origine:
-  formes:
-    - forme: ṣifr
-      graphie: صفر
-      langue: arabe
-      sens: vide
 themes: [ savoir ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: zéro
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: zéro
 redaction:
   - par: IA

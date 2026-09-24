@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { auteurs } from "../lib/fiches.ts";
+  import { lienAuteur } from "../lib/liens.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { LectureTraditionnelle } from "../lib/types.ts";
   import Redaction from "./Redaction.svelte";
@@ -36,7 +38,7 @@
   <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} /></p>
   <blockquote lang="la">«&nbsp;{lecture.citation}&nbsp;»</blockquote>
   <p class="auteur">
-    {lecture.auteur}{#each lecture.sources as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}
+    <a href={lienAuteur(lecture.auteur)}>{auteurs.get(lecture.auteur)?.nom ?? lecture.auteur}</a>{#each lecture.sources as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}
   </p>
   {#if redactionPropre}
     <Redaction redaction={redactionPropre} />
@@ -63,6 +65,9 @@
     font-family: var(--police-interface);
     font-size: 0.8rem;
     color: var(--texte-discret);
+  }
+  .auteur a {
+    color: inherit;
   }
   .auteur {
     margin-top: 0.4rem;

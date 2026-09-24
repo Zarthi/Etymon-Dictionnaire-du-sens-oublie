@@ -1,8 +1,9 @@
 mot: aventure
 nature: [ nom féminin ]
-etymon: "*adventura"
-langue: latin populaire
-sens: ce qui doit arriver
+etymologie:
+  - forme: "*adventura"
+    langue: latin populaire
+    sens: ce qui doit arriver
 explication: >
   Adventura, ce sont les choses à venir, ce qui doit advenir. L'aventure est
   d'abord le sort, ce que l'avenir réserve ; d'où la bonne aventure qu'on dit,
@@ -10,7 +11,7 @@ explication: >
 famille: [ avenir, advenir ]
 themes: [ temps, société ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: aventure
 redaction:
   - par: IA

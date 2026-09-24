@@ -1,8 +1,9 @@
 mot: art
 nature: [ nom masculin ]
-etymon: ars
-langue: latin
-sens: habileté acquise, métier
+etymologie:
+  - forme: ars
+    langue: latin
+    sens: habileté acquise, métier
 explication: >
   Ars est le savoir-faire, la manière de faire une chose : le métier du forgeron
   comme celui du poète. Les beaux-arts sont une invention récente ; l'art fut
@@ -10,7 +11,7 @@ explication: >
 famille: [ artisan, artifice, artiste ]
 themes: [ travail, savoir ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: art
 redaction:
   - par: IA

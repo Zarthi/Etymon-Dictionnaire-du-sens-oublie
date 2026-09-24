@@ -1,21 +1,19 @@
 mot: asile
 nature: [ nom masculin ]
-etymon: asylum
-langue: latin
-sens: lieu inviolable, refuge
+etymologie:
+  - forme: asylum
+    langue: latin
+    sens: lieu inviolable, refuge
+  - forme: ἄσυλον
+    langue: grec ancien
+    sens: qu'on ne peut piller
 explication: >
   Sylan, c'est piller, saisir ; l'asylon est le lieu où la saisie est interdite,
   le temple où le fugitif est hors d'atteinte. L'asile est un sanctuaire avant
   d'être un hospice.
-origine:
-  formes:
-    - forme: ásylon
-      graphie: ἄσυλον
-      langue: grec ancien
-      sens: qu'on ne peut piller
 themes: [ droit, religion, maison ]
 sources:
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: asile
 redaction:
   - par: IA

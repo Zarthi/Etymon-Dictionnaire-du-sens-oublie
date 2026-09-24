@@ -1,14 +1,15 @@
 mot: apôtre
 nature: [ nom masculin ]
-etymon: apostolus
-langue: latin ecclésiastique
-sens: envoyé
+etymologie:
+  - forme: apostolus
+    langue: latin ecclésiastique
+    sens: envoyé
 explication: >
   Apostellein, c'est envoyer au loin. L'apôtre est un envoyé, chargé d'une
   mission ; le mot dit le départ et le mandat, non la sainteté.
 themes: [ religion ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: apôtre
 redaction:
   - par: IA

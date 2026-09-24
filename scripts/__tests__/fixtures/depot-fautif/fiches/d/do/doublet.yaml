@@ -1,22 +1,18 @@
 # Doublet vers une fiche absente, et typographie fautive.
 mot: doublet
 nature: [ nom masculin ]
-etymon: duplus
-langue: latin
-sens: "« double »"
+etymologie:
+  - forme: duplus
+    langue: latin
+    sens: "« double »"
 explication: >
   Deux phrases. Avec un "mauvais" deux-points: ici.
-incertain: false
 doublets: [ absent ]
-famille: []
 themes: []
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: doublet
-    url: https://example.org/doublet
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

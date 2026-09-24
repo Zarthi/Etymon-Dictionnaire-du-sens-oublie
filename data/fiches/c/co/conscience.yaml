@@ -1,0 +1,25 @@
+mot: conscience
+nature: [ nom féminin ]
+etymologie:
+  - forme: conscientia
+    langue: latin
+    sens: connaissance en commun
+    elements:
+      - forme: cum
+        sens: avec
+      - forme: scientia
+        sens: savoir
+explication: >-
+  Avant d'être la voix intérieure qui juge, la conscience est un savoir partagé,
+  avec d'autres ou avec soi-même. Le témoin est devenu juge.
+famille: [ conscient, inconscient ]
+themes: [ esprit, morale ]
+sources:
+  - ouvrage: littre
+    entree: conscience
+  - ouvrage: tlfi
+    entree: conscience
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

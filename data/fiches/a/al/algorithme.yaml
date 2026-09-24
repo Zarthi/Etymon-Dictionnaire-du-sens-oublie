@@ -1,0 +1,32 @@
+mot: algorithme
+nature: [ nom masculin ]
+etymologie:
+  - forme: alguarismo
+    langue: ancien espagnol
+    sens: art de compter
+  - forme: الخوارزمي
+    translitteration: al-Ḫuwārizmī
+    langue: arabe
+    sens: celui du Khwarezm
+    personne: al-khwarizmi
+explication: >-
+  L'algorithme porte le nom d'un homme, le mathématicien dont les traités firent
+  connaître à l'Europe le calcul avec les chiffres arabes. Un surnom est devenu
+  une méthode.
+ecartees:
+  - forme: ἀριθμός
+    langue: grec ancien
+    sens: nombre
+    raison: "Littré la rapporte et l'écarte : seul le nom du mathématicien rend
+      compte du g."
+famille: [ algorithmique ]
+themes: [ savoir ]
+sources:
+  - ouvrage: littre
+    entree: algorithme
+  - ouvrage: tlfi
+    entree: algorithme
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

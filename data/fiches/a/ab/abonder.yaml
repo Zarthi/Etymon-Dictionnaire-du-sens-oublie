@@ -1,15 +1,16 @@
 mot: abonder
 nature: [ verbe ]
-etymon: abundare
-langue: latin
-sens: déborder, couler à flots
+etymologie:
+  - forme: abundare
+    langue: latin
+    sens: déborder, couler à flots
 explication: >
   L'abondance est d'abord celle d'une eau qui déborde : unda, la vague. Ce qui
   abonde ne remplit pas seulement, il passe par-dessus bord.
 famille: [ onde, inonder, abondance ]
 themes: [ nature, argent ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: abonder
 redaction:
   - par: IA

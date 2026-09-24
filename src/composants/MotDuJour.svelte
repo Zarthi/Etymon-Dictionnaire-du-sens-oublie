@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { origine } from "../lib/affichage.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
-  import Forme from "./Forme.svelte";
+  import SensPremier from "./SensPremier.svelte";
 
   let { fiche, onOuvrir }: { fiche: FicheIdentifiee; onOuvrir: (id: string) => void } = $props();
 </script>
@@ -10,10 +9,7 @@
   <h2>Mot du jour</h2>
   <button type="button" onclick={() => onOuvrir(fiche.id)}>
     <span class="mot">{fiche.mot}</span>
-    <span class="etymon"
-      >{origine(fiche.langue)}
-      <Forme forme={fiche.etymon} graphie={fiche.graphie} />&nbsp;: «&nbsp;{fiche.sens}&nbsp;»</span
-    >
+    <span class="etymon"><SensPremier etymologie={fiche.etymologie} /></span>
     {#if fiche.statut !== "validee"}
       <span class="statut">{fiche.statut === "a-verifier" ? "Étymologie non vérifiée" : "En relecture"}</span>
     {/if}

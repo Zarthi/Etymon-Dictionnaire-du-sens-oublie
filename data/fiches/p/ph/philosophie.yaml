@@ -1,0 +1,27 @@
+mot: philosophie
+nature: [ nom féminin ]
+etymologie:
+  - forme: philosophia
+    langue: latin
+  - forme: φιλοσοφία
+    langue: grec ancien
+    sens: amour de la sagesse
+    elements:
+      - forme: φίλος
+        sens: ami, qui aime
+      - forme: σοφία
+        sens: sagesse, savoir
+explication: >-
+  Le philosophe ne se disait pas savant : il aimait ce qu'il ne possédait pas.
+  Le mot nomme aujourd'hui une discipline, voire une simple opinion.
+famille: [ philosophe, philosophique ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: littre
+    entree: philosophie
+  - ouvrage: tlfi
+    entree: philosophie
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

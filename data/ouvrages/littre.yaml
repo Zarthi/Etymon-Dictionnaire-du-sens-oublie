@@ -1,0 +1,13 @@
+titre: Dictionnaire de la langue française
+abrege: Littré
+auteur: emile-littre
+date: "1863-1872"
+edition: XMLittré, édition numérique de François Gannaz, consultée en local et sur littre.org
+licence: CC BY-SA
+modeleEntree: https://www.littre.org/definition/{entree}
+description: >-
+  Le dictionnaire historique de référence : sens classés, citations, historique et étymologie de chaque mot.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

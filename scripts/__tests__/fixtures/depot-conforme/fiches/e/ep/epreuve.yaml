@@ -1,9 +1,10 @@
 # Fiche fictive, pour les tests uniquement.
 mot: épreuve
 nature: [ nom masculin ]
-etymon: probatio
-langue: latin
-sens: preuve de test
+etymologie:
+  - forme: probatio
+    langue: latin
+    sens: preuve de test
 explication: >
   Fiche fictive. Elle sert de doublet à la fiche essai !
 incertain: true
@@ -11,10 +12,10 @@ doublets: [ essai ]
 famille: [ prouver ]
 themes: []
 sources:
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: probatio
     page: 1238
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: épreuve
     url: https://example.org/tlfi/epreuve
 redaction:
@@ -23,9 +24,9 @@ redaction:
 lecturesTraditionnelles:
   - texte: Lecture fictive, pour les tests.
     citation: probatio ficta
-    auteur: Lactance
+    auteur: lactance
     sources:
-      - ouvrage: Institutions divines
+      - ouvrage: institutions-divines
         entree: livre I
         url: https://example.org/lactance
 statut: brouillon

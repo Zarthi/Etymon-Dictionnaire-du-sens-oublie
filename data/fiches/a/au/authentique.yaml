@@ -1,21 +1,19 @@
 mot: authentique
 nature: [ adjectif ]
-etymon: authenticus
-langue: latin
-sens: original, qui fait autorité
+etymologie:
+  - forme: authenticus
+    langue: latin
+    sens: original, qui fait autorité
+  - forme: αὐθέντης
+    langue: grec ancien
+    sens: qui agit de lui-même, maître de son acte
 explication: >
   Authentēs est celui qui agit par lui-même, le maître de son acte. Est
   authentique ce qui vient de l'auteur même, sans intermédiaire ni copie.
   L'authenticité est une autorité.
-origine:
-  formes:
-    - forme: authéntēs
-      graphie: αὐθέντης
-      langue: grec ancien
-      sens: qui agit de lui-même, maître de son acte
 themes: [ savoir, droit, morale ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: authentique
 redaction:
   - par: IA

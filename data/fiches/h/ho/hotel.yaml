@@ -1,19 +1,20 @@
 mot: hôtel
 nature: [ nom masculin ]
-etymon: hospitale
-langue: latin
-sens: chambre des hôtes
+etymologie:
+  - forme: hospitale
+    langue: latin
+    sens: chambre des hôtes
 explication: >
   Le mot latin désignait la chambre où l'on recevait les hôtes. Hôtel en est la
   forme populaire ; hôpital, refait sur le latin, en est l'autre héritier.
 famille: [ hôte ]
 themes: [ maison ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: hôtel
-  - ouvrage: Gaffiot
+  - ouvrage: gaffiot
     entree: hospitalis
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: hôtel
 redaction:
   - par: IA

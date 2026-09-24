@@ -1,8 +1,9 @@
 mot: angoisse
 nature: [ nom féminin ]
-etymon: angustia
-langue: latin
-sens: étroitesse, passage resserré
+etymologie:
+  - forme: angustia
+    langue: latin
+    sens: étroitesse, passage resserré
 explication: >
   Angustia est l'étroitesse, le défilé où l'on ne passe qu'à peine. L'angoisse
   est le sentiment d'être à l'étroit : la gorge se serre, la poitrine se
@@ -10,7 +11,7 @@ explication: >
 famille: [ angine, anxiété ]
 themes: [ émotions, corps ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: angoisse
 redaction:
   - par: IA

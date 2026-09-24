@@ -1,3 +1,4 @@
+import { formesDuMaillon, sensPremier, translitterationDe } from "../../src/lib/etymologie.ts";
 import { normaliser } from "../../src/lib/recherche.ts";
 import type { Fiche } from "../../src/lib/types.ts";
 import { chercher, concorde, natureDepuisLittre, type IndexLittre } from "./littre.ts";
@@ -21,14 +22,17 @@ export function controler(fiche: Fiche, index: IndexLittre): string[] {
   const absents = fiche.famille.filter((mot) => !chercher(index, mot)?.length);
   if (absents.length > 0) signalements.push(`famille absente du Littré : ${absents.join(", ")}`);
 
-  // Formes d'origine : citées par l'étymologie du Littré quand elle en parle.
+  // Formes plus lointaines que la langue source : citées par l'étymologie du Littré quand elle en parle.
   const etymologie = entrees.map((e) => e.etymologie).join(" ");
   if (etymologie !== "") {
-    const inconnues = (fiche.origine?.formes ?? []).filter((f) => !concorde(f.forme, etymologie) && !concorde(f.graphie ?? "", etymologie));
+    const inconnues = fiche.etymologie
+      .slice(1)
+      .flatMap(formesDuMaillon)
+      .filter((f) => !concorde(f.forme, etymologie) && !concorde(translitterationDe(f) ?? "", etymologie));
     if (inconnues.length > 0) signalements.push(`formes d'origine non citées par le Littré : ${inconnues.map((f) => f.forme).join(", ")}`);
   }
 
-  const reprises = repriseDuSens(fiche.sens, fiche.explication, fiche.mot);
+  const reprises = repriseDuSens(sensPremier(fiche.etymologie), fiche.explication, fiche.mot);
   if (reprises.length > 0) signalements.push(`explication qui reprend le sens : ${reprises.join(", ")}`);
 
   return signalements;

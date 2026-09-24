@@ -1,22 +1,20 @@
 mot: anathème
 nature: [ nom masculin ]
-etymon: anathema
-langue: latin ecclésiastique
-sens: chose vouée à Dieu, puis chose maudite
+etymologie:
+  - forme: anathema
+    langue: latin ecclésiastique
+    sens: chose vouée à Dieu, puis chose maudite
+  - forme: ἀνάθημα
+    langue: grec ancien
+    sens: offrande déposée dans un temple
 explication: >
   L'anathème est d'abord une offrande suspendue dans un temple, ce qui est mis à
   part pour le dieu. Ce qui est voué à Dieu est retiré aux hommes : le mot a
   glissé de l'offrande à la malédiction.
-origine:
-  formes:
-    - forme: anáthēma
-      graphie: ἀνάθημα
-      langue: grec ancien
-      sens: offrande déposée dans un temple
 famille: [ thème, thèse ]
 themes: [ religion, parole ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: anathème
 redaction:
   - par: IA

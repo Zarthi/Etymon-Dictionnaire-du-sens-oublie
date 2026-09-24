@@ -1,8 +1,9 @@
 mot: adresse
 nature: [ nom féminin ]
-etymon: "*directiare"
-langue: latin populaire
-sens: rendre droit, diriger
+etymologie:
+  - forme: "*directiare"
+    langue: latin populaire
+    sens: rendre droit, diriger
 explication: >
   L'adresse, celle de la lettre comme celle de la main, vient de dresser :
   directiare, mettre droit. Adresser, c'est diriger tout droit vers ; l'adresse
@@ -10,7 +11,7 @@ explication: >
 famille: [ dresser, droit, direct ]
 themes: [ parole, travail ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: adresser
 redaction:
   - par: IA

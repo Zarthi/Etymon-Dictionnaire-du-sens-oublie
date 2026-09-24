@@ -1,8 +1,9 @@
 mot: ange
 nature: [ nom masculin ]
-etymon: angelus
-langue: latin ecclésiastique
-sens: messager
+etymologie:
+  - forme: angelus
+    langue: latin ecclésiastique
+    sens: messager
 explication: >
   L'ange est un messager : angelos, celui qui porte une nouvelle. Le mot ne dit
   rien de sa nature, seulement sa fonction : il est envoyé, il annonce.
@@ -10,7 +11,7 @@ explication: >
 famille: [ évangile, archange ]
 themes: [ religion, parole ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: ange
 redaction:
   - par: IA

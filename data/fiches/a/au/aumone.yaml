@@ -1,21 +1,19 @@
 mot: aumône
 nature: [ nom féminin ]
-etymon: eleemosyna
-langue: latin ecclésiastique
-sens: pitié, compassion
+etymologie:
+  - forme: eleemosyna
+    langue: latin ecclésiastique
+    sens: pitié, compassion
+  - forme: ἐλεημοσύνη
+    langue: grec ancien
+    sens: pitié, miséricorde
 explication: >
   L'aumône est la pitié elle-même : eleos, la compassion. Le don n'en est que la
   conséquence. Le mot désignait le sentiment avant la pièce qu'on tend.
-origine:
-  formes:
-    - forme: eleēmosýnē
-      graphie: ἐλεημοσύνη
-      langue: grec ancien
-      sens: pitié, miséricorde
 famille: [ aumônier ]
 themes: [ morale, religion, argent ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: aumône
 redaction:
   - par: IA

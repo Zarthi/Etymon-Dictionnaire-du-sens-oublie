@@ -1,24 +1,23 @@
 mot: chiffre
 nature: [ nom masculin ]
-etymon: cifra
-langue: latin médiéval
-sens: zéro
+etymologie:
+  - forme: cifra
+    langue: latin médiéval
+    sens: zéro
+  - forme: صفر
+    translitteration: ṣifr
+    langue: arabe
+    sens: vide
 explication: >
   Le chiffre fut d'abord le zéro, signe vide de toute valeur dans la numération
   venue des Arabes. Le nom de ce signe nouveau s'est ensuite étendu à tous les
   signes de numération.
-origine:
-  formes:
-    - forme: ṣifr
-      graphie: صفر
-      langue: arabe
-      sens: vide
 doublets: [ zero ]
 themes: [ savoir ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: chiffre
-  - ouvrage: TLFi
+  - ouvrage: tlfi
     entree: chiffre
 redaction:
   - par: IA

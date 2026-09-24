@@ -3,15 +3,16 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { parseArgs } from "node:util";
 import { chercher, natureDepuisLittre } from "./lib/littre.ts";
-import { preparerFiche, versYaml } from "./lib/redaction.ts";
+import { preparerAuteur, preparerFiche, preparerOuvrage, versYaml } from "./lib/redaction.ts";
 import { cheminFiche, slug } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
 import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts";
 
 /**
- * Écrit un lot de fiches rédigées par l'IA (statut a-verifier) et les retire des candidats.
- * Le lot est un fichier JSON : une liste de contenus de fiche au format de
- * docs/prompt-redaction.md (le contenu seul ; statut, rédaction et sources sont posés ici ou
+ * Écrit un lot de fiches rédigées par l'IA (statut a-verifier) et retire les mots des candidats.
+ * Le lot est un fichier JSON au format de docs/prompt-redaction.md : une liste de fiches de
+ * mots, ou `{ fiches, auteurs, ouvrages }` quand le lot cite des auteurs ou des ouvrages qui
+ * n'ont pas encore leur fiche (le contenu seul ; statut, rédaction et sources sont posés ici ou
  * par npm run verifier). Un mot écarté par Thibault n'est jamais rédigé.
  *
  * Usage : npm run rediger -- <lot.json> --modele "Claude Fable 5.1" [--remplacer]
@@ -26,7 +27,10 @@ if (import.meta.main) {
     console.log('Usage : npm run rediger -- <lot.json> --modele "Claude Fable 5.1" [--remplacer]');
     process.exit(1);
   }
-  const lot: Record<string, unknown>[] = JSON.parse(await readFile(fichierLot, "utf8"));
+  type Brute = Record<string, unknown>;
+  const contenu: Brute[] | { fiches?: Brute[]; auteurs?: Brute[]; ouvrages?: Brute[] } = JSON.parse(await readFile(fichierLot, "utf8"));
+  const lot = Array.isArray(contenu) ? contenu : (contenu.fiches ?? []);
+  const references = Array.isArray(contenu) ? { auteurs: [], ouvrages: [] } : { auteurs: contenu.auteurs ?? [], ouvrages: contenu.ouvrages ?? [] };
   const index = await chargerIndexLittre();
   const dossierCandidats = join(DOSSIER_DATA, "candidats");
   const candidats = new Map<string, { fichier: string; ecarte: boolean }>();
@@ -39,6 +43,30 @@ if (import.meta.main) {
 
   const ecrits: string[] = [];
   const refus: string[] = [];
+
+  // Auteurs et ouvrages d'abord : les fiches du lot peuvent les citer.
+  let referencesEcrites = 0;
+  for (const [dossier, liste, preparer, nom] of [
+    ["auteurs", references.auteurs, preparerAuteur, (b: Brute) => String(b.nom ?? "?")],
+    ["ouvrages", references.ouvrages, preparerOuvrage, (b: Brute) => String(b.abrege ?? b.titre ?? "?")],
+  ] as const) {
+    for (const brute of liste) {
+      const id = slug(nom(brute));
+      const chemin = join(DOSSIER_DATA, dossier, `${id}.yaml`);
+      if (existsSync(chemin) && !values.remplacer) {
+        refus.push(`${dossier}/${id} : la fiche existe déjà (--remplacer pour l'écraser)`);
+        continue;
+      }
+      const resultat = preparer(brute, values.modele);
+      if ("erreurs" in resultat) {
+        refus.push(...resultat.erreurs.map((e) => `${dossier}/${id} › ${e}`));
+        continue;
+      }
+      await mkdir(dirname(chemin), { recursive: true });
+      await writeFile(chemin, versYaml(resultat.fiche));
+      referencesEcrites++;
+    }
+  }
   for (const brute of lot) {
     const mot = String(brute.mot ?? "?");
     const id = slug(mot);
@@ -74,7 +102,7 @@ if (import.meta.main) {
     if (gardees.length !== lignes.length) await writeFile(chemin, gardees.join("\n"));
   }
 
-  console.log(`✓ ${ecrits.length} fiche(s) écrite(s) en a-verifier.`);
+  console.log(`✓ ${ecrits.length} fiche(s) de mot et ${referencesEcrites} fiche(s) d'auteur ou d'ouvrage écrite(s) en a-verifier.`);
   if (refus.length > 0) console.log(`\nNon écrites (${refus.length}) :\n- ${refus.join("\n- ")}`);
   const { erreurs } = await validerDepot();
   const concernees = erreurs.filter((e) => ecrits.some((id) => e.fichier.endsWith(`/${id}.yaml`)));

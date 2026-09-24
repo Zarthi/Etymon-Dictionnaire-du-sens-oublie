@@ -1,0 +1,12 @@
+titre: Trésor de la langue française informatisé
+abrege: TLFi
+date: "1971-1994"
+edition: version informatisée (ATILF, CNRS), consultée sur cnrtl.fr
+licence: non libre
+modeleEntree: https://www.cnrtl.fr/etymologie/{entree}
+description: >-
+  Le grand dictionnaire du français des XIXe et XXe siècles ; sert à vérifier qu'une étymologie est toujours admise.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

@@ -1,8 +1,9 @@
 mot: ambition
 nature: [ nom féminin ]
-etymon: ambitio
-langue: latin
-sens: action d'aller autour, brigue des suffrages
+etymologie:
+  - forme: ambitio
+    langue: latin
+    sens: action d'aller autour, brigue des suffrages
 explication: >
   Ambire, c'est aller autour. L'ambitio romaine est la tournée du candidat qui
   sollicite les votes. L'ambition est d'abord une démarche, le tour que l'on
@@ -10,7 +11,7 @@ explication: >
 famille: [ ambiant, ambiance ]
 themes: [ société, morale ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: ambition
 redaction:
   - par: IA

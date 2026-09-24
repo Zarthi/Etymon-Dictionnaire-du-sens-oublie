@@ -1,22 +1,20 @@
 mot: agonie
 nature: [ nom féminin ]
-etymon: agonia
-langue: latin ecclésiastique
-sens: angoisse, lutte intérieure
+etymologie:
+  - forme: agonia
+    langue: latin ecclésiastique
+    sens: angoisse, lutte intérieure
+  - forme: ἀγών
+    langue: grec ancien
+    sens: lutte, combat
 explication: >
   L'agonie est un combat : agōn, la lutte des athlètes, puis l'angoisse du
   Christ à Gethsémani. Le mot ne désigne pas l'affaiblissement final, mais le
   dernier corps à corps.
-origine:
-  formes:
-    - forme: agōn
-      graphie: ἀγών
-      langue: grec ancien
-      sens: lutte, combat
 famille: [ antagoniste, protagoniste ]
 themes: [ corps, santé, religion ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: agonie
 redaction:
   - par: IA

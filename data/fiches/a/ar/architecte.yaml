@@ -1,22 +1,20 @@
 mot: architecte
 nature: [ nom ]
-etymon: architectus
-langue: latin
-sens: maître d'œuvre, constructeur
+etymologie:
+  - forme: architectus
+    langue: latin
+    sens: maître d'œuvre, constructeur
+  - forme: ἀρχιτέκτων
+    langue: grec ancien
+    sens: chef des charpentiers
 explication: >
   Le tektōn grec est le charpentier, l'artisan qui assemble ; l'architecte est
   celui qui commande aux charpentiers. Le mot dit un métier de chantier, avant
   l'art du dessin.
-origine:
-  formes:
-    - forme: arkhitéktōn
-      graphie: ἀρχιτέκτων
-      langue: grec ancien
-      sens: chef des charpentiers
 famille: [ technique, tectonique ]
 themes: [ travail, maison ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: architecte
 redaction:
   - par: IA

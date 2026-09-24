@@ -1,0 +1,13 @@
+titre: Dictionnaire grec-français
+abrege: Bailly
+auteur: anatole-bailly
+date: "1895"
+edition: révision de Gérard Gréco, 2020, consultée sur bailly.app
+licence: CC BY-NC-ND
+modeleEntree: https://bailly.app/{grec}
+description: >-
+  Le dictionnaire grec-français de référence : sens des étymons grecs, appuyés sur les auteurs.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

@@ -1,15 +1,16 @@
 mot: accord
 nature: [ nom masculin ]
-etymon: "*accordare"
-langue: latin populaire
-sens: mettre cœur à cœur
+etymologie:
+  - forme: "*accordare"
+    langue: latin populaire
+    sens: mettre cœur à cœur
 explication: >
   S'accorder, c'est d'abord mettre les cœurs ensemble : cor, cordis. L'accord
   des personnes, avant celui des instruments, est une entente de cœur.
 famille: [ cœur, concorde, discorde, courage ]
 themes: [ émotions, société, parole ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: accorder
 redaction:
   - par: IA

@@ -1,21 +1,19 @@
 mot: axiome
 nature: [ nom masculin ]
-etymon: axioma
-langue: latin
-sens: proposition qui s'impose d'elle-même
+etymologie:
+  - forme: axioma
+    langue: latin
+    sens: proposition qui s'impose d'elle-même
+  - forme: ἀξίωμα
+    langue: grec ancien
+    sens: ce qui est jugé digne, estimé
 explication: >
   Axios, c'est digne, qui vaut. L'axiome est ce qu'on juge digne d'être admis
   sans preuve, ce dont la valeur s'impose. Il n'est pas une vérité démontrée,
   mais une estime accordée.
-origine:
-  formes:
-    - forme: axíōma
-      graphie: ἀξίωμα
-      langue: grec ancien
-      sens: ce qui est jugé digne, estimé
 themes: [ savoir, esprit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: axiome
 redaction:
   - par: IA

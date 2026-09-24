@@ -1,0 +1,34 @@
+mot: altruisme
+nature: [ nom masculin ]
+etymologie:
+  - langue: français
+    elements:
+      - forme: autrui
+        sens: les autres
+      - forme: -isme
+        sens: doctrine, penchant
+    forge:
+      par: [ auguste-comte, francois-andrieux ]
+      date: vers 1830
+    modele:
+      forme: égoïsme
+      langue: français
+      relation: analogie
+  - forme: alter
+    langue: latin
+    sens: l'autre, de deux
+explication: >-
+  Forgé contre l'égoïsme, le mot ne nommait pas une vertu mais un penchant
+  naturel, que la vie sociale devait faire prévaloir. Il est devenu un idéal
+  moral.
+famille: [ autrui ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: littre
+    entree: altruisme
+  - ouvrage: tlfi
+    entree: altruisme
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

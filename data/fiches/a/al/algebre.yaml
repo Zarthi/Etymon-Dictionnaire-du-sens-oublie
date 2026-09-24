@@ -1,0 +1,28 @@
+mot: algèbre
+nature: [ nom féminin ]
+etymologie:
+  - forme: algebra
+    langue: latin médiéval
+    forge:
+      par: [ gerard-de-cremone ]
+      date: XIIe siècle
+  - forme: الجبر
+    translitteration: al-ǧabr
+    langue: arabe
+    sens: la réduction, la restauration
+    ouvrage: al-jabr
+explication: >-
+  L'al-ǧabr, c'est remettre ensemble ce qui est rompu : l'espagnol algebra
+  désignait aussi l'art de remettre les membres disloqués. Le calcul a gardé le
+  mot et oublié le geste.
+famille: [ algébrique ]
+themes: [ savoir ]
+sources:
+  - ouvrage: littre
+    entree: algèbre
+  - ouvrage: tlfi
+    entree: algèbre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

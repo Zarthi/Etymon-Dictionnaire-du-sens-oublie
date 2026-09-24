@@ -1,21 +1,20 @@
 mot: abandonner
 nature: [ verbe ]
-etymon: à bandon
-langue: ancien français
-sens: au pouvoir de, à la discrétion de
+etymologie:
+  - forme: à bandon
+    langue: ancien français
+    sens: au pouvoir de, à la discrétion de
+  - forme: "*ban"
+    langue: francique
+    sens: proclamation, pouvoir de commander
 explication: >
   Mettre à bandon, c'était laisser une chose au pouvoir d'un autre, à sa
   discrétion. Abandonner, ce n'est pas d'abord délaisser, mais remettre entre
   d'autres mains.
-origine:
-  formes:
-    - forme: "*ban"
-      langue: francique
-      sens: proclamation, pouvoir de commander
 famille: [ ban, bannir ]
 themes: [ société, émotions ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: abandonner
 redaction:
   - par: IA

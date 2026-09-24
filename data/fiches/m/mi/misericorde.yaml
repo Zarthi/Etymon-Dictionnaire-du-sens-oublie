@@ -1,0 +1,28 @@
+mot: miséricorde
+nature: [ nom féminin ]
+etymologie:
+  - forme: misericordia
+    langue: latin
+    sens: compassion, pitié
+  - forme: misericors
+    langue: latin
+    sens: qui a le cœur sensible au malheur
+    elements:
+      - forme: miser
+        sens: malheureux
+      - forme: cor
+        sens: cœur
+explication: >-
+  Dans la miséricorde, la misère d'autrui touche l'intime de celui qui la voit.
+  Devenu surtout religieux, le mot a gardé le pardon et perdu l'émotion.
+famille: [ miséricordieux ]
+themes: [ religion, morale ]
+sources:
+  - ouvrage: littre
+    entree: miséricorde
+  - ouvrage: tlfi
+    entree: miséricorde
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

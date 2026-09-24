@@ -1,0 +1,11 @@
+nom: Lactance
+nomComplet: Lucius Caecilius Firmianus Lactantius
+naissance: vers 250
+mort: vers 325
+tradition: true
+description: >-
+  Rhéteur africain converti au christianisme ; ses Institutions divines exposent la foi chrétienne dans la langue des lettrés latins.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

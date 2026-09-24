@@ -35,7 +35,6 @@
 - { mot: péril, statut: a-faire }
 - { mot: persévérer, statut: a-faire }
 - { mot: personnage, statut: a-faire }
-- { mot: personne, statut: a-faire }
 - { mot: perspective, statut: a-faire }
 - { mot: persuader, statut: a-faire }
 - { mot: perte, statut: a-faire }
@@ -44,7 +43,6 @@
 - { mot: peur, statut: a-faire }
 - { mot: pharmacie, statut: a-faire }
 - { mot: phénomène, statut: a-faire }
-- { mot: philosophie, statut: a-faire }
 - { mot: physique, statut: a-faire }
 - { mot: piété, statut: a-faire }
 - { mot: pieux, statut: a-faire }

@@ -1,8 +1,9 @@
 mot: adulte
 nature: [ nom, adjectif ]
-etymon: adultus
-langue: latin
-sens: qui a fini de grandir
+etymologie:
+  - forme: adultus
+    langue: latin
+    sens: qui a fini de grandir
 explication: >
   Adultus est le participe passé d'adolescere, croître : l'adulte a achevé sa
   croissance. Le mot ne dit rien de la maturité, seulement que la poussée est
@@ -10,7 +11,7 @@ explication: >
 famille: [ adolescent ]
 themes: [ famille, corps, temps ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: adulte
 redaction:
   - par: IA

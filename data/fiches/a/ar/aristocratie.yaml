@@ -1,9 +1,9 @@
 mot: aristocratie
 nature: [ nom féminin ]
-etymon: aristokratía
-graphie: ἀριστοκρατία
-langue: grec ancien
-sens: gouvernement des meilleurs
+etymologie:
+  - forme: ἀριστοκρατία
+    langue: grec ancien
+    sens: gouvernement des meilleurs
 explication: >
   Aristos est le meilleur ; l'aristocratie est le pouvoir des meilleurs, par
   opposition à celui du peuple ou d'un seul. Le mot désigne un idéal avant de
@@ -11,7 +11,7 @@ explication: >
 famille: [ démocratie, monarchie ]
 themes: [ société, droit ]
 sources:
-  - ouvrage: Littré
+  - ouvrage: littre
     entree: aristocratie
 redaction:
   - par: IA
