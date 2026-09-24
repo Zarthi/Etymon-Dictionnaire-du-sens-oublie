@@ -268,8 +268,8 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     ajouter("(textes)", `« ${forme} » désigne plusieurs auteurs ou ouvrages cités par la fiche : écrire le nom complet`);
   }
 
-  // Lectures : un auteur de la tradition, sa tradition (précisée s'il en a plusieurs), ses propres œuvres,
-  // une hypothèse de la chaîne.
+  // Lectures : un auteur de la tradition, sa tradition (précisée s'il en a plusieurs), ses propres œuvres
+  // ou une œuvre collective qui rapporte ses paroles (le Talmud), une hypothèse de la chaîne.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
   fiche.tradition.lectures.forEach((l, i) => {
     const c = `tradition.lectures.${i}`;
@@ -289,7 +289,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     l.sources.forEach((s, j) => {
       const oeuvre = ref.ouvrages.get(s.ouvrage);
       if (!oeuvre) ajouter(`${c}.sources.${j}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
-      else if (oeuvre.auteur !== l.auteur) ajouter(`${c}.sources.${j}.ouvrage`, `« ${oeuvre.titre} » n'est pas une œuvre de ${signataire?.nom ?? l.auteur}`);
+      else if (oeuvre.auteur !== undefined && oeuvre.auteur !== l.auteur) ajouter(`${c}.sources.${j}.ouvrage`, `« ${oeuvre.titre} » n'est pas une œuvre de ${signataire?.nom ?? l.auteur}`);
     });
   });
 

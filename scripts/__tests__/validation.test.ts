@@ -46,6 +46,7 @@ const REF = referentiel(
     ouvrage("institutions-divines", "Institutions divines", { auteur: "lactance" }),
     ouvrage("la-cite-de-dieu", "La Cité de Dieu", { auteur: "augustin" }),
     ouvrage("traite", "Traité", { auteur: "passeur" }),
+    ouvrage("recueil", "Recueil"),
   ],
 );
 
@@ -421,6 +422,10 @@ describe("validerFiches : références", () => {
       "tradition.lectures.0.tradition : Passeur parle dans plusieurs traditions : préciser laquelle (juive, chrétienne)",
     ]);
     expect(erreursDe({ tradition: { lectures: [{ ...lecture, tradition: "juive" }] } })).toEqual([]);
+  });
+  it("accepte une œuvre collective, sans auteur, qui rapporte les paroles de l'auteur (le Talmud)", () => {
+    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "recueil" }] };
+    expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([]);
   });
   it("refuse une lecture qui vise une hypothèse absente de la chaîne", () => {
     expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, hypothese: "religare" }] } })).toEqual([

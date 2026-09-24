@@ -16,6 +16,28 @@ explication: >-
 famille: [ satanique, satanisme ]
 renvois: [ obsession ]
 themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Le satan, le mauvais penchant et l'ange de la mort ne font qu'un : c'est
+        celui qui, dans le livre de Job, « sortit de devant le Seigneur »."
+      citation: הוא שטן הוא יצר הרע הוא מלאך המות
+      auteur: resh-lakish
+      sources:
+        - ouvrage: talmud-de-babylone
+          entree: Baba Batra 16a
+          url: https://he.wikisource.org/wiki/בבא_בתרא_טז_א
+    - texte: Satan signifie l'adversaire, ennemi de la vérité qui s'oppose sans cesse
+        aux vertus des saints, et le transgresseur, qui n'est pas demeuré dans la
+        vérité où il avait été créé.
+      citation: Satanas in Latino sonat adversarius, sive transgressor. Ipse est enim
+        adversarius, qui est veritatis inimicus, et semper sanctorum virtutibus
+        contraire nititur. Ipse et transgressor, quia praevaricator effectus in
+        veritate, qua conditus est, non stetit.
+      auteur: isidore-de-seville
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 11, 19
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
 sources:
   - ouvrage: littre
     entree: satan

@@ -1,0 +1,15 @@
+titre: Talmud de Babylone
+titreOriginal: Talmud Bavli
+edition: consultée sur Wikisource en hébreu
+licence: CC BY-SA
+texte: https://he.wikisource.org/wiki/תלמוד_בבלי
+description: >-
+  La Michna, loi orale mise par écrit, et la Guemara, qui la commente : le
+  recueil des débats des maîtres des écoles de Babylonie.
+sources:
+  - ouvrage: bnf
+    entree: cb12008331g
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

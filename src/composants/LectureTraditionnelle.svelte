@@ -29,6 +29,17 @@
     mentions: Mention[];
   } = $props();
 
+  /** Langue de la citation, quand son écriture la dit (hébreu, grec, arabe) ; sinon aucune plutôt qu'une fausse. */
+  const langue = $derived(
+    /\p{Script=Hebrew}/u.test(lecture.citation)
+      ? "he"
+      : /\p{Script=Greek}/u.test(lecture.citation)
+        ? "grc"
+        : /\p{Script=Arabic}/u.test(lecture.citation)
+          ? "ar"
+          : undefined,
+  );
+
   const redactionPropre = $derived(
     lecture.redaction && signatureRedaction(lecture.redaction) !== redactionFiche ? lecture.redaction : undefined,
   );
@@ -39,7 +50,8 @@
     <p class="hypothese">Sur <em>{lecture.hypothese}</em></p>
   {/if}
   <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} {mentions} /></p>
-  <blockquote lang="la">«&nbsp;{lecture.citation}&nbsp;»</blockquote>
+  <!-- La citation garde sa langue et son sens d'écriture (l'hébreu va de droite à gauche), isolée des guillemets. -->
+  <blockquote>«&nbsp;<bdi lang={langue}>{lecture.citation}</bdi>&nbsp;»</blockquote>
   <p class="auteur">
     <a href={lienAuteur(lecture.auteur)}>{auteurs.get(lecture.auteur)?.nom ?? lecture.auteur}</a>{#each lecture.sources as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}
   </p>
