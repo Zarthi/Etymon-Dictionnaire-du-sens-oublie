@@ -1,5 +1,5 @@
 mot: adolescent
-nature: [nom, adjectif]
+nature: [ nom, adjectif ]
 etymon: adolescens
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: adolescent
     url: https://www.littre.org/definition/adolescent
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

@@ -1,5 +1,5 @@
 mot: potion
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: potio
 reconstruit: false
 langue: latin
@@ -22,8 +22,9 @@ sources:
   - ouvrage: TLFi
     entree: potion
     url: https://www.cnrtl.fr/etymologie/potion
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

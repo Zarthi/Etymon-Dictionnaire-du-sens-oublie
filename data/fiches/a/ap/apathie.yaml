@@ -1,5 +1,5 @@
 mot: apathie
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: apátheia
 graphie: ἀπάθεια
 reconstruit: false
@@ -18,8 +18,9 @@ sources:
   - ouvrage: Littré
     entree: apathie
     url: https://www.littre.org/definition/apathie
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

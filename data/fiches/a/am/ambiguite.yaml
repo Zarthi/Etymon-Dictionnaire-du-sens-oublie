@@ -1,5 +1,5 @@
 mot: ambiguïté
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: ambiguitas
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: ambiguité
     url: https://www.littre.org/definition/ambiguit%C3%A9
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

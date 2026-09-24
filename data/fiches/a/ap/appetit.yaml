@@ -1,5 +1,5 @@
 mot: appétit
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: appetitus
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: appétit
     url: https://www.littre.org/definition/app%C3%A9tit
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

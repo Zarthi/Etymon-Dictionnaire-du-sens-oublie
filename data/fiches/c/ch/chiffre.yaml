@@ -1,5 +1,5 @@
 mot: chiffre
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: cifra
 reconstruit: false
 langue: latin médiéval
@@ -24,8 +24,9 @@ sources:
   - ouvrage: TLFi
     entree: chiffre
     url: https://www.cnrtl.fr/etymologie/chiffre
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

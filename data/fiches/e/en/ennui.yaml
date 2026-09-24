@@ -1,5 +1,5 @@
 mot: ennui
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: in odio
 reconstruit: false
 langue: latin
@@ -22,8 +22,9 @@ sources:
   - ouvrage: TLFi
     entree: ennui
     url: https://www.cnrtl.fr/etymologie/ennui
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

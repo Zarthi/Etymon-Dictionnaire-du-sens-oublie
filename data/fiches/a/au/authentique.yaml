@@ -1,5 +1,5 @@
 mot: authentique
-nature: [adjectif]
+nature: [ adjectif ]
 etymon: authenticus
 reconstruit: false
 langue: latin
@@ -21,8 +21,9 @@ sources:
   - ouvrage: Littré
     entree: authentique
     url: https://www.littre.org/definition/authentique
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

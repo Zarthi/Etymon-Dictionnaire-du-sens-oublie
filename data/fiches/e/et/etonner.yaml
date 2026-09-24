@@ -1,5 +1,5 @@
 mot: étonner
-nature: [verbe]
+nature: [ verbe ]
 etymon: "*extonare"
 reconstruit: true
 langue: latin populaire
@@ -23,8 +23,9 @@ sources:
   - ouvrage: TLFi
     entree: étonner
     url: https://www.cnrtl.fr/etymologie/%C3%A9tonner
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

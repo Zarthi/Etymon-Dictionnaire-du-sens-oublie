@@ -1,5 +1,5 @@
 mot: avare
-nature: [adjectif, nom]
+nature: [ adjectif, nom ]
 etymon: avarus
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: avare
     url: https://www.littre.org/definition/avare
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

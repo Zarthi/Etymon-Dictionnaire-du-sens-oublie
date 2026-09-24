@@ -1,5 +1,5 @@
 mot: abandonner
-nature: [verbe]
+nature: [ verbe ]
 etymon: à bandon
 reconstruit: false
 langue: ancien français
@@ -20,8 +20,9 @@ sources:
   - ouvrage: Littré
     entree: abandonner
     url: https://www.littre.org/definition/abandonner
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

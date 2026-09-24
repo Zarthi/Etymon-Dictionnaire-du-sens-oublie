@@ -6,10 +6,14 @@ langue: latin
 sens: scrupule, attention portée au sacré
 explication: >-
   Avant d'être une croyance ou une institution, la _religio_ est une disposition
-  intérieure, une vigilance. Son origine est discutée, et les Anciens hésitaient
-  déjà ; Cicéron la tirait de _relegere_, reprendre avec soin.
-incertain: true
-racine: null
+  intérieure. Le mot désigne aujourd'hui ce que l'on croit ; il disait d'abord
+  la manière de se tenir devant le sacré.
+incertain: false
+racine:
+  forme: relegere
+  langue: latin
+  sens: recueillir avec soin
+  incertain: true
 doublets: []
 famille: []
 themes: [ religion ]
@@ -23,8 +27,9 @@ sources:
   - ouvrage: TLFi
     entree: religion
     url: https://www.cnrtl.fr/etymologie/religion
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles:
   - texte: "_Religio_ viendrait de _religare_, relier : l'homme est lié à Dieu par
       le lien de la piété. L'explication de Cicéron par _relegere_ est
@@ -34,8 +39,8 @@ lecturesTraditionnelles:
       - ouvrage: Institutions divines
         entree: IV, 28, 3
         url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
-      - ouvrage: IA
-        entree: Claude Opus 5.5
+    citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio
+      nomen accepit, non ut Cicero interpretatus est a relegendo"
   - texte: "_Religio_ viendrait de _religere_, choisir de nouveau : Dieu, que nous
       avions perdu par négligence, nous le choisissons à nouveau."
     auteur: Augustin
@@ -43,8 +48,8 @@ lecturesTraditionnelles:
       - ouvrage: La Cité de Dieu
         entree: X, 3
         url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
-      - ouvrage: IA
-        entree: Claude Opus 5.5
+    citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) — hunc
+      ergo religentes, unde et religio dicta perhibetur
   - texte: "Les deux voies réunies : par la religion, nous relions nos âmes au seul
       Dieu pour le servir ; le mot viendrait aussi de _relegere_, compris comme
       choisir."
@@ -53,7 +58,8 @@ lecturesTraditionnelles:
       - ouvrage: Étymologies
         entree: VIII, 2, 2
         url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
-      - ouvrage: IA
-        entree: Claude Opus 5.5
+    citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad cultum
+      divinum vinculo serviendi. Quod verbum conpositum est a relegendo, id est
+      eligendo
 statut: brouillon
 historique: []

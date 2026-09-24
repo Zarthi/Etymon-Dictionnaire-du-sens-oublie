@@ -1,5 +1,5 @@
 mot: accident
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: accidens
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: accident
     url: https://www.littre.org/definition/accident
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

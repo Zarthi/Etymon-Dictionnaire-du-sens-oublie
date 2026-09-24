@@ -1,5 +1,5 @@
 mot: abnégation
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: abnegatio
 reconstruit: false
 langue: latin ecclésiastique
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: abnégation
     url: https://www.littre.org/definition/abn%C3%A9gation
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

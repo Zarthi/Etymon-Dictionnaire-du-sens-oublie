@@ -1,5 +1,5 @@
 mot: chétif
-nature: [adjectif]
+nature: [ adjectif ]
 etymon: captivus
 reconstruit: false
 langue: latin
@@ -22,8 +22,9 @@ sources:
   - ouvrage: TLFi
     entree: chétif
     url: https://www.cnrtl.fr/etymologie/ch%C3%A9tif
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

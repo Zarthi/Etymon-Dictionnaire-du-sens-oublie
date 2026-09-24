@@ -1,5 +1,5 @@
 mot: atome
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: atomus
 reconstruit: false
 langue: latin
@@ -21,8 +21,9 @@ sources:
   - ouvrage: Littré
     entree: atome
     url: https://www.littre.org/definition/atome
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

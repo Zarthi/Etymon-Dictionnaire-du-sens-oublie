@@ -1,5 +1,5 @@
 mot: critique
-nature: [nom féminin, nom masculin, adjectif]
+nature: [ nom féminin, nom masculin, adjectif ]
 etymon: criticus
 reconstruit: false
 langue: latin
@@ -29,8 +29,9 @@ sources:
   - ouvrage: TLFi
     entree: critique
     url: https://www.cnrtl.fr/etymologie/critique/nom
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

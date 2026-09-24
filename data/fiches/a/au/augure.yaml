@@ -1,5 +1,5 @@
 mot: augure
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: augurium
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: augure
     url: https://www.littre.org/definition/augure
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

@@ -1,5 +1,5 @@
 mot: asile
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: asylum
 reconstruit: false
 langue: latin
@@ -21,8 +21,9 @@ sources:
   - ouvrage: TLFi
     entree: asile
     url: https://www.cnrtl.fr/etymologie/asile
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

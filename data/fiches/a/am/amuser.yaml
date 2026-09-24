@@ -1,5 +1,5 @@
 mot: amuser
-nature: [verbe]
+nature: [ verbe ]
 etymon: muser
 reconstruit: false
 langue: ancien français
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: amuser
     url: https://www.littre.org/definition/amuser
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

@@ -1,5 +1,5 @@
 mot: amateur
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: amator
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: amateur
     url: https://www.littre.org/definition/amateur
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

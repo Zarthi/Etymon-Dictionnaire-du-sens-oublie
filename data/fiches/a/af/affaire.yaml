@@ -1,5 +1,5 @@
 mot: affaire
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: à faire
 reconstruit: false
 langue: ancien français
@@ -16,8 +16,9 @@ sources:
   - ouvrage: Littré
     entree: affaire
     url: https://www.littre.org/definition/affaire
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

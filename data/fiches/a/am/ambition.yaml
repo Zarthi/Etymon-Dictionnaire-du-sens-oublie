@@ -1,5 +1,5 @@
 mot: ambition
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: ambitio
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: ambition
     url: https://www.littre.org/definition/ambition
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

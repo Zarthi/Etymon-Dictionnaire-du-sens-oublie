@@ -1,5 +1,5 @@
 mot: aristocratie
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: aristokratía
 graphie: ἀριστοκρατία
 reconstruit: false
@@ -18,8 +18,9 @@ sources:
   - ouvrage: Littré
     entree: aristocratie
     url: https://www.littre.org/definition/aristocratie
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

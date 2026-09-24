@@ -1,5 +1,5 @@
 mot: axiome
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: axioma
 reconstruit: false
 langue: latin
@@ -21,8 +21,9 @@ sources:
   - ouvrage: Littré
     entree: axiome
     url: https://www.littre.org/definition/axiome
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

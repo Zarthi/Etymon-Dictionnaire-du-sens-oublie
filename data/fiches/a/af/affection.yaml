@@ -1,5 +1,5 @@
 mot: affection
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: affectio
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: affection
     url: https://www.littre.org/definition/affection
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

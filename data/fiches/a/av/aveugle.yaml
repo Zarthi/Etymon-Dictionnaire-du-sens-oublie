@@ -1,5 +1,5 @@
 mot: aveugle
-nature: [adjectif, nom]
+nature: [ adjectif, nom ]
 etymon: "*aboculus"
 reconstruit: true
 langue: latin populaire
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: aveugle
     url: https://www.littre.org/definition/aveugle
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

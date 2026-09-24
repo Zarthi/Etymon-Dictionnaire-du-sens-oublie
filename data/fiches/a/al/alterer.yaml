@@ -1,5 +1,5 @@
 mot: altérer
-nature: [verbe]
+nature: [ verbe ]
 etymon: alterare
 reconstruit: false
 langue: latin médiéval
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: altérer
     url: https://www.littre.org/definition/alt%C3%A9rer
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

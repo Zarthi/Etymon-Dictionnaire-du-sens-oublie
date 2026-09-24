@@ -1,5 +1,5 @@
 mot: assurance
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: "*assecurare"
 reconstruit: true
 langue: latin populaire
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: assurer
     url: https://www.littre.org/definition/assurer
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

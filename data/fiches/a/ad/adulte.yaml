@@ -1,5 +1,5 @@
 mot: adulte
-nature: [nom, adjectif]
+nature: [ nom, adjectif ]
 etymon: adultus
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: adulte
     url: https://www.littre.org/definition/adulte
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

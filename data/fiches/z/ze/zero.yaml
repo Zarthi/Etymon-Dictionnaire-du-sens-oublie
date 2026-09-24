@@ -1,5 +1,5 @@
 mot: zéro
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: zero
 reconstruit: false
 langue: italien
@@ -24,8 +24,9 @@ sources:
   - ouvrage: TLFi
     entree: zéro
     url: https://www.cnrtl.fr/etymologie/z%C3%A9ro
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

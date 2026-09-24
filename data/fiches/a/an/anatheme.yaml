@@ -1,5 +1,5 @@
 mot: anathème
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: anathema
 reconstruit: false
 langue: latin ecclésiastique
@@ -21,8 +21,9 @@ sources:
   - ouvrage: Littré
     entree: anathème
     url: https://www.littre.org/definition/anath%C3%A8me
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

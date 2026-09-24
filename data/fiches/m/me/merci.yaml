@@ -1,5 +1,5 @@
 mot: merci
-nature: [nom féminin, nom masculin]
+nature: [ nom féminin, nom masculin ]
 etymon: merces
 reconstruit: false
 langue: latin
@@ -23,8 +23,9 @@ sources:
   - ouvrage: TLFi
     entree: merci
     url: https://www.cnrtl.fr/etymologie/merci
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

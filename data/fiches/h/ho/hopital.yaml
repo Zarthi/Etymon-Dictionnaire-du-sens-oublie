@@ -1,5 +1,5 @@
 mot: hôpital
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: hospitale
 reconstruit: false
 langue: bas latin
@@ -22,8 +22,9 @@ sources:
   - ouvrage: TLFi
     entree: hôpital
     url: https://www.cnrtl.fr/etymologie/h%C3%B4pital
-  - ouvrage: IA
-    entree: Claude Opus 5.5
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

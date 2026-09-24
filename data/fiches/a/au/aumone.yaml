@@ -1,5 +1,5 @@
 mot: aumône
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: eleemosyna
 reconstruit: false
 langue: latin ecclésiastique
@@ -20,8 +20,9 @@ sources:
   - ouvrage: Littré
     entree: aumône
     url: https://www.littre.org/definition/aum%C3%B4ne
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

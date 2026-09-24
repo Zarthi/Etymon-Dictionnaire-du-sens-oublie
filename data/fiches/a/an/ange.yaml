@@ -1,5 +1,5 @@
 mot: ange
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: angelus
 reconstruit: false
 langue: latin ecclésiastique
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: ange
     url: https://www.littre.org/definition/ange
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

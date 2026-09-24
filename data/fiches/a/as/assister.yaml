@@ -1,5 +1,5 @@
 mot: assister
-nature: [verbe]
+nature: [ verbe ]
 etymon: assistere
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: assister
     url: https://www.littre.org/definition/assister
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

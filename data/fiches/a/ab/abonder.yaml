@@ -1,5 +1,5 @@
 mot: abonder
-nature: [verbe]
+nature: [ verbe ]
 etymon: abundare
 reconstruit: false
 langue: latin
@@ -16,8 +16,9 @@ sources:
   - ouvrage: Littré
     entree: abonder
     url: https://www.littre.org/definition/abonder
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

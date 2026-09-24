@@ -1,5 +1,5 @@
 mot: ancêtre
-nature: [nom]
+nature: [ nom ]
 etymon: antecessor
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: ancêtres
     url: https://www.littre.org/definition/anc%C3%AAtres
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

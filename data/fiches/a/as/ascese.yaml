@@ -1,5 +1,5 @@
 mot: ascèse
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: áskēsis
 graphie: ἄσκησις
 reconstruit: false
@@ -18,8 +18,9 @@ sources:
   - ouvrage: Littré
     entree: ascète
     url: https://www.littre.org/definition/asc%C3%A8te
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

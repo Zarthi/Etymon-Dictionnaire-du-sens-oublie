@@ -1,0 +1,19 @@
+[
+  { "nom": "Platon", "oeuvres": ["Cratyle"] },
+  { "nom": "Varron", "oeuvres": ["De la langue latine"] },
+  { "nom": "Cicéron", "oeuvres": ["De la nature des dieux"] },
+  { "nom": "Lactance", "oeuvres": ["Institutions divines"] },
+  { "nom": "Augustin", "oeuvres": ["La Cité de Dieu", "De la vraie religion", "Rétractations", "Confessions"] },
+  { "nom": "Isidore de Séville", "oeuvres": ["Étymologies"] },
+  { "nom": "Thomas d'Aquin", "oeuvres": ["Somme théologique"] },
+  {
+    "nom": "René Guénon",
+    "oeuvres": [
+      "Introduction générale à l'étude des doctrines hindoues",
+      "La Crise du monde moderne",
+      "Le Règne de la quantité et les signes des temps",
+      "Aperçus sur l'initiation",
+      "Symboles de la Science sacrée"
+    ]
+  }
+]

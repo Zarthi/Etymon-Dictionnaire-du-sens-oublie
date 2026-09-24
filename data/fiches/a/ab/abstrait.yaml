@@ -1,5 +1,5 @@
 mot: abstrait
-nature: [adjectif]
+nature: [ adjectif ]
 etymon: abstractus
 reconstruit: false
 langue: latin
@@ -16,8 +16,9 @@ sources:
   - ouvrage: Littré
     entree: abstrait
     url: https://www.littre.org/definition/abstrait
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

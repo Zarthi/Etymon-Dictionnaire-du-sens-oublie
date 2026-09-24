@@ -1,5 +1,5 @@
 mot: agir
-nature: [verbe]
+nature: [ verbe ]
 etymon: agere
 reconstruit: false
 langue: latin
@@ -17,8 +17,9 @@ sources:
   - ouvrage: Littré
     entree: agir
     url: https://www.littre.org/definition/agir
-  - ouvrage: IA
-    entree: Claude Fable 5.1
+redaction:
+  - par: IA
+    detail: Claude Fable 5.1
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []
