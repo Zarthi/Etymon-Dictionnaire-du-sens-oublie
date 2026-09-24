@@ -54,10 +54,13 @@
     <p class="note">Étymologie incertaine ou débattue.</p>
   {/if}
 
-  {#if lectureTraditionnelle}
-    {#each fiche.lecturesTraditionnelles as lecture, i (i)}
-      <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} />
-    {/each}
+  {#if lectureTraditionnelle && fiche.lecturesTraditionnelles.length > 0}
+    <aside class="traditions">
+      <h2>{fiche.lecturesTraditionnelles.length > 1 ? "Lectures traditionnelles" : "Lecture traditionnelle"}</h2>
+      {#each fiche.lecturesTraditionnelles as lecture, i (i)}
+        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} />
+      {/each}
+    </aside>
   {/if}
 
   <footer>
@@ -133,6 +136,22 @@
     margin: 0;
     font-size: 1.15rem;
     line-height: 1.6;
+  }
+  .traditions {
+    margin-top: 1.75rem;
+    padding: 0.9rem 1rem;
+    border-left: 3px solid var(--tradition);
+    background: var(--surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .traditions h2 {
+    margin: 0 0 0.4rem;
+    font-family: var(--police-interface);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--tradition);
   }
   .racine,
   .note {

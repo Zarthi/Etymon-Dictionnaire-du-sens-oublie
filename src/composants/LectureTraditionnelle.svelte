@@ -15,8 +15,7 @@
   const redaction = $derived(lecture.sources.filter((s) => SOURCES_DE_REDACTION.includes(s.ouvrage)));
 </script>
 
-<aside>
-  <h2>Lecture traditionnelle</h2>
+<div class="lecture">
   <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} /></p>
   <p class="auteur">
     {lecture.auteur}{#each oeuvres as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} avecPassage />{/each}
@@ -26,24 +25,13 @@
       Rédaction&nbsp;: {#each redaction as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}
     </p>
   {/if}
-</aside>
+</div>
 
 <style>
-  aside {
-    margin-top: 1.75rem;
-    padding: 0.9rem 1rem;
-    border-left: 3px solid var(--tradition);
-    background: var(--surface);
-    border-radius: 0 0.5rem 0.5rem 0;
-  }
-  h2 {
-    margin: 0 0 0.4rem;
-    font-family: var(--police-interface);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--tradition);
+  .lecture:not(:first-of-type) {
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--bordure);
   }
   p {
     margin: 0;
