@@ -9,7 +9,11 @@
   <h2>Mot du jour</h2>
   <button type="button" onclick={() => onOuvrir(fiche.id)}>
     <span class="mot">{fiche.mot}</span>
-    <span class="etymon">{origine(fiche.langue)} <em>{fiche.etymon}</em>&nbsp;: «&nbsp;{fiche.sens}&nbsp;»</span>
+    <span class="etymon"
+      >{origine(fiche.langue)}
+      {#if fiche.graphie}<span lang="und">{fiche.graphie}</span>,{/if}
+      <em>{fiche.etymon}</em>&nbsp;: «&nbsp;{fiche.sens}&nbsp;»</span
+    >
     {#if fiche.statut !== "validee"}
       <span class="statut">{fiche.statut === "a-verifier" ? "Étymologie non vérifiée" : "En relecture"}</span>
     {/if}
