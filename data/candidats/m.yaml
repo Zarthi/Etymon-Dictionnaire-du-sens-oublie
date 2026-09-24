@@ -31,6 +31,7 @@
 - { mot: mensonge, statut: a-faire }
 - { mot: mentir, statut: a-faire }
 - { mot: mépris, statut: a-faire }
+- { mot: merci, statut: a-faire }
 - { mot: mérite, statut: a-faire }
 - { mot: merveille, statut: a-faire }
 - { mot: messe, statut: a-faire }
@@ -44,7 +45,6 @@
 - { mot: misère, statut: a-faire }
 - { mot: mode, statut: a-faire }
 - { mot: modeste, statut: a-faire }
-- { mot: mœurs, statut: a-faire }
 - { mot: moine, statut: a-faire }
 - { mot: moment, statut: a-faire }
 - { mot: monarchie, statut: a-faire }
@@ -54,6 +54,7 @@
 - { mot: monument, statut: a-faire }
 - { mot: morale, statut: a-faire }
 - { mot: mort, statut: a-faire }
+- { mot: mœurs, statut: a-faire }
 - { mot: muscle, statut: a-faire }
 - { mot: musée, statut: a-faire }
 - { mot: musique, statut: a-faire }

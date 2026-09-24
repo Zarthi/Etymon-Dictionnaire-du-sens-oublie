@@ -56,6 +56,7 @@
 - { mot: poète, statut: a-faire }
 - { mot: poids, statut: a-faire }
 - { mot: point, statut: a-faire }
+- { mot: poison, statut: a-faire }
 - { mot: police, statut: a-faire }
 - { mot: politique, statut: a-faire }
 - { mot: pompe, statut: a-faire }
@@ -63,6 +64,7 @@
 - { mot: pontife, statut: a-faire }
 - { mot: populaire, statut: a-faire }
 - { mot: possible, statut: a-faire }
+- { mot: potion, statut: a-faire }
 - { mot: pouvoir, statut: a-faire }
 - { mot: précaire, statut: a-faire }
 - { mot: précieux, statut: a-faire }
