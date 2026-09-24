@@ -120,7 +120,7 @@ listes interminables, une notice d'autorité plutôt qu'une encyclopédie.
 |---|---|---|
 | `titre`, `titreOriginal` | *Institutions divines*, *Divinae institutiones* | |
 | `auteur` | lactance | facultatif (œuvre collective : Rituel romain, TLFi) |
-| `date` | vers 305-311 ; 1863-1872 | texte daté contrôlé |
+| `date` | vers 305-311 ; 1864-1873 | texte daté contrôlé |
 | `edition` | révision de Gérard Gréco, 2016 | l'édition réellement consultée (Gaffiot 2016 ≠ Gaffiot 1934) |
 | `licence` | domaine public ; CC BY-NC-ND ; non libre | ce qu'Étymon a le droit d'en faire |
 | `texte` | adresse du texte | textes de la tradition |
