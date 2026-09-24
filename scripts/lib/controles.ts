@@ -1,6 +1,5 @@
-import { formesDuMaillon, sensPremier, translitterationDe } from "../../src/lib/etymologie.ts";
+import { formesDuMaillon, translitterationDe } from "../../src/lib/etymologie.ts";
 import { formesAuteur, nomme, referencesDe, textesDe } from "../../src/lib/mentions.ts";
-import { normaliser } from "../../src/lib/recherche.ts";
 import type { Auteur, Fiche } from "../../src/lib/types.ts";
 import { chercher, concorde, natureDepuisLittre, type IndexLittre } from "./littre.ts";
 
@@ -39,19 +38,5 @@ export function controler(fiche: Fiche, index: IndexLittre, auteurs: Auteur[] = 
   const nommes = auteurs.filter((a) => !cites.has(a.id) && formesAuteur(a).some((f) => nomme(textes, f)));
   if (nommes.length > 0) signalements.push(`auteur nommé sans référence : ${nommes.map((a) => a.nom).join(", ")}`);
 
-  const reprises = repriseDuSens(sensPremier(fiche.etymologie), fiche.explication, fiche.mot);
-  if (reprises.length > 0) signalements.push(`explication qui reprend le sens : ${reprises.join(", ")}`);
-
   return signalements;
-}
-
-/** Mots trop courants pour signaler une redite. */
-const MOTS_VIDES = new Set(["celui", "celle", "ceux", "comme", "cette", "chose", "choses", "faire", "rendre", "mettre", "tenir", "prendre", "aller", "autre", "autres", "avant", "apres", "devant", "entre", "etre", "avoir", "quelque", "quelqu"]);
-
-/** Mots pleins (5 lettres et plus) du sens que l'explication reprend, hors le mot lui-même : elle ne doit pas le répéter. */
-export function repriseDuSens(sens: string, explication: string, mot = ""): string[] {
-  const exclus = new Set([...MOTS_VIDES, normaliser(mot)]);
-  const mots = (texte: string) => normaliser(texte).split(/[^a-z]+/).filter((m) => m.length >= 5 && !exclus.has(m));
-  const dansExplication = new Set(mots(explication));
-  return [...new Set(mots(sens))].filter((m) => dansExplication.has(m));
 }

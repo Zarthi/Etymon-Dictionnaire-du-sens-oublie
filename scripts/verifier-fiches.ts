@@ -14,7 +14,7 @@ import { arreterSiErreurs, DOSSIER_DATA, validerDepot } from "./valider-fiches.t
  * Sinon, la fiche reste `a-verifier` et figure dans le rapport, pour une vérification à la main
  * (TLFi pour un mot absent du Littré, postérieur à 1872).
  * Toutes les fiches passent ensuite les contrôles automatiques (nature, famille, formes d'origine,
- * reprise du sens), qui signalent sans bloquer.
+ * auteur nommé sans référence), qui signalent sans bloquer.
  */
 if (import.meta.main) {
   const { fiches, auteurs, erreurs } = await validerDepot();

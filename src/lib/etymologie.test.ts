@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { enAlphabetLatin, formesItaliques, indexPremier, sensPremier, translitterationDe } from "./etymologie.ts";
+import { enAlphabetLatin, formesItaliques, indexPremier, translitterationDe } from "./etymologie.ts";
 import type { Maillon } from "./types.ts";
 
 const m = (champs: Partial<Maillon>): Maillon => ({ langue: "latin", ...champs }) as Maillon;
@@ -25,13 +25,6 @@ describe("indexPremier", () => {
   });
   it("obéit à premier: true", () => {
     expect(indexPremier([m({ forme: "a", sens: "x", premier: true }), m({ forme: "b", sens: "y" })])).toBe(0);
-  });
-});
-
-describe("sensPremier", () => {
-  it("donne le sens du maillon premier", () => {
-    expect(sensPremier([m({ forme: "religio", sens: "scrupule" })])).toBe("scrupule");
-    expect(sensPremier([m({ sens: "esprit fendu", elements: [{ forme: "σχίζω", sens: "fendre" }] })])).toBe("esprit fendu");
   });
 });
 

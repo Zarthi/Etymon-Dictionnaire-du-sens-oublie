@@ -44,12 +44,6 @@ export function indexPremier(etymologie: Maillon[]): number {
   return Math.max(0, etymologie.findIndex(porteSens));
 }
 
-/** Sens premier en texte : pour les contrôles de redite. */
-export function sensPremier(etymologie: Maillon[]): string {
-  const m = etymologie[indexPremier(etymologie)];
-  return m.sens ?? "";
-}
-
 /** Toutes les formes d'un maillon, avec leurs écritures : pour l'italique et les vérifications. */
 export function formesDuMaillon(m: Maillon): AvecForme[] {
   const formes: AvecForme[] = [];

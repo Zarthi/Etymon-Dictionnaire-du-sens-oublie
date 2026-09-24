@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Auteur, Fiche } from "../../src/lib/types.ts";
-import { controler, repriseDuSens } from "../lib/controles.ts";
+import { controler } from "../lib/controles.ts";
 import { indexer } from "../lib/littre.ts";
 
 const index = indexer([
@@ -47,17 +47,5 @@ describe("controler", () => {
     const auteurs = [{ id: "emile-littre", nom: "Émile Littré", cite: ["Littré"] }, { id: "ciceron", nom: "Cicéron" }] as Auteur[];
     expect(controler(fiche({ explication: "Littré le rapporte." }), index, auteurs)).toEqual(["auteur nommé sans référence : Émile Littré"]);
     expect(controler(fiche({ explication: "Cicéron le rapporte." }), index, auteurs)).toEqual(["auteur nommé sans référence : Cicéron"]);
-  });
-  it("signale une explication qui reprend le sens premier", () => {
-    expect(controler(fiche({ explication: "Une attention devenue croyance." }), index)).toEqual(["explication qui reprend le sens : attention"]);
-  });
-});
-
-describe("repriseDuSens", () => {
-  it("relève les mots pleins du sens repris par l'explication, hors mots vides et mot lui-même", () => {
-    expect(repriseDuSens("frapper du tonnerre", "Étonner, c'était frapper comme la foudre.")).toEqual(["frapper"]);
-    expect(repriseDuSens("celui qui marche devant", "Celui qui marche devant les autres.")).toEqual(["marche"]);
-    expect(repriseDuSens("argent, métal blanc", "L'argent était d'abord un métal.", "argent")).toEqual(["metal"]);
-    expect(repriseDuSens("relier", "Le mot ne disait pas ce lien.")).toEqual([]);
   });
 });
