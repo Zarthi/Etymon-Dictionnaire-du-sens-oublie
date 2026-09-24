@@ -114,7 +114,8 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
     ["explication", fiche.explication],
     ...fiche.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note]),
   ];
-  if (fiche.lectureTraditionnelle) textes.push(["lectureTraditionnelle.texte", fiche.lectureTraditionnelle.texte]);
+  if (fiche.legende) textes.push(["legende", fiche.legende]);
+  fiche.lecturesTraditionnelles.forEach((l, i) => textes.push([`lecturesTraditionnelles.${i}.texte`, l.texte]));
   for (const [champ, texte] of textes) {
     for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
   }

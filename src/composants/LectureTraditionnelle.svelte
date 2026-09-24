@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Fiche } from "../lib/types.ts";
+  import type { LectureTraditionnelle } from "../lib/types.ts";
   import Source from "./Source.svelte";
 
-  let { lecture }: { lecture: NonNullable<Fiche["lectureTraditionnelle"]> } = $props();
+  let { lecture }: { lecture: LectureTraditionnelle } = $props();
 </script>
 
 <aside>

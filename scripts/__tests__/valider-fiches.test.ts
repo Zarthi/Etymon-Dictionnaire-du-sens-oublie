@@ -16,7 +16,7 @@ describe("validerDepot", () => {
   it("rapporte chaque faute d'un dépôt fautif avec fichier et champ", async () => {
     const { erreurs } = await validerDepot(fixture("depot-fautif"));
     const attendues = [
-      /^depot-fautif\/fiches\/a\/al\/alias\.yaml › ligne 3 : YAML illisible.*entre guillemets/,
+      /^depot-fautif\/fiches\/a\/al\/alias\.yaml › ligne 4 : YAML illisible.*entre guillemets/,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › sens : sans guillemets/,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › explication : guillemets droits/,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › explication : espace insécable requise avant « : »/,

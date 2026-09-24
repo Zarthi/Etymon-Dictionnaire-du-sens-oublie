@@ -1,5 +1,6 @@
 # Fiche fictive, pour les tests uniquement.
 mot: épreuve
+nature: [nom masculin]
 etymon: probatio
 reconstruit: false
 langue: latin
@@ -17,10 +18,10 @@ sources:
   - ouvrage: TLFi
     entree: épreuve
     url: https://example.org/tlfi/epreuve
-lectureTraditionnelle:
-  texte: Lecture fictive, pour les tests.
-  auteur: Auteur fictif
-  sources:
-    - { ouvrage: Ouvrage fictif, entree: livre I }
+lecturesTraditionnelles:
+  - texte: Lecture fictive, pour les tests.
+    auteur: Auteur fictif
+    sources:
+      - { ouvrage: Ouvrage fictif, entree: livre I }
 statut: brouillon
 historique: []

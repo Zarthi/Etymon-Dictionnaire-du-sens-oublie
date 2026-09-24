@@ -1,5 +1,6 @@
 # Doublet vers une fiche absente, et typographie fautive.
 mot: doublet
+nature: [nom masculin]
 etymon: duplus
 reconstruit: false
 langue: latin
@@ -12,6 +13,6 @@ famille: []
 themes: []
 sources:
   - { ouvrage: Littré, entree: doublet, url: https://example.org/doublet }
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

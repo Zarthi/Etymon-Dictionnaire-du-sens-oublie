@@ -25,24 +25,35 @@
   {/if}
 
   <h1>{fiche.mot}</h1>
+  <p class="nature">{fiche.nature.join(" et ")}</p>
   <p class="etymon">
-    {origine(fiche.langue)} <em>{fiche.etymon}</em>&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
+    {origine(fiche.langue)}
+    {#if fiche.graphie}<span lang="und">{fiche.graphie}</span>,{/if}
+    <em>{fiche.etymon}</em>&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
   </p>
 
   <p class="explication">{fiche.explication}</p>
 
   {#if fiche.racine}
     <p class="racine">
-      Plus haut, {origine(fiche.racine.langue)} <em>{fiche.racine.forme}</em>&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;».
+      Plus haut, {origine(fiche.racine.langue)}
+      {#if fiche.racine.graphie}<span lang="und">{fiche.racine.graphie}</span>,{/if}
+      <em>{fiche.racine.forme}</em>&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;».
     </p>
+  {/if}
+
+  {#if fiche.legende}
+    <p class="legende"><strong>Idée reçue</strong>&nbsp;: {fiche.legende}</p>
   {/if}
 
   {#if fiche.incertain}
     <p class="note">Étymologie incertaine ou débattue.</p>
   {/if}
 
-  {#if lectureTraditionnelle && fiche.lectureTraditionnelle}
-    <LectureTraditionnelle lecture={fiche.lectureTraditionnelle} />
+  {#if lectureTraditionnelle}
+    {#each fiche.lecturesTraditionnelles as lecture, i (i)}
+      <LectureTraditionnelle {lecture} />
+    {/each}
   {/if}
 
   <footer>
@@ -82,6 +93,24 @@
   }
   .statut.a-verifier strong {
     color: var(--non-verifie);
+  }
+  .nature {
+    margin: 0.2rem 0 0;
+    font-family: var(--police-interface);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--texte-discret);
+  }
+  .legende {
+    margin: 1rem 0 0;
+    padding-left: 0.7rem;
+    border-left: 2px solid var(--bordure);
+    color: var(--texte-discret);
+  }
+  .legende strong {
+    font-family: var(--police-interface);
+    font-size: 0.85rem;
+    font-weight: 600;
   }
   h1 {
     margin: 0;

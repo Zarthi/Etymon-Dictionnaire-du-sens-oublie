@@ -1,5 +1,6 @@
 # Fiche fictive, pour les tests uniquement.
 mot: essai
+nature: [nom masculin]
 etymon: "*essaium"
 reconstruit: true
 langue: latin populaire
@@ -15,7 +16,7 @@ sources:
   - ouvrage: Littré
     entree: essai
     url: https://example.org/littre/essai
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: validee
 historique:
   - date: 2026-09-23

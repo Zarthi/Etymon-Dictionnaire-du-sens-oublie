@@ -1,5 +1,6 @@
 # Étymon reconstruit non mis entre guillemets : alias YAML.
 mot: alias
+nature: [nom masculin]
 etymon: *aliasum
 reconstruit: true
 langue: latin
@@ -11,6 +12,6 @@ famille: []
 themes: []
 sources:
   - { ouvrage: Littré, entree: alias, page: 1 }
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

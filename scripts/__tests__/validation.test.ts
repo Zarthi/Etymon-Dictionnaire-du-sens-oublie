@@ -16,6 +16,7 @@ const NBSP = " ";
 /** Fiche conforme servant de base ; chaque test n'en modifie qu'un aspect. */
 const ficheBase = {
   mot: "étonner",
+  nature: ["verbe"],
   etymon: "*extonare",
   reconstruit: true,
   langue: "latin populaire",
@@ -30,7 +31,7 @@ const ficheBase = {
     { ouvrage: "Littré", entree: "étonner", url: "https://example.org/littre/etonner" },
     { ouvrage: "Gaffiot", entree: "extono", page: 1 },
   ],
-  lectureTraditionnelle: null,
+  lecturesTraditionnelles: [],
   statut: "brouillon",
   historique: [],
 };
@@ -100,7 +101,9 @@ describe("validerFiches : fiche conforme", () => {
     const { racine: _, ...sansRacine } = ficheBase;
     const texte = stringify({
       ...sansRacine,
-      lectureTraditionnelle: { texte: "Lecture sourcée.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] },
+      lecturesTraditionnelles: [{ texte: "Lecture sourcée.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }, { texte: "Autre lecture.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }],
+      graphie: "ἀνάλυσις",
+      legende: "On croit souvent autre chose, à tort.",
       historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
     });
     expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
@@ -110,8 +113,8 @@ describe("validerFiches : fiche conforme", () => {
     expect(erreursDe({ statut: "a-verifier", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] })).toEqual([]);
   });
   it("accepte une lecture traditionnelle dont l'IA est la seule source", () => {
-    const lectureTraditionnelle = { texte: "Lecture.", auteur: "Isidore de Séville", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] };
-    expect(erreursDe({ lectureTraditionnelle })).toEqual([]);
+    const lecture = { texte: "Lecture.", auteur: "Isidore de Séville", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] };
+    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
   });
   it("accepte la rédaction d'Étymon, sans page ni url, à côté d'un ouvrage consulté", () => {
     const sources = [...ficheBase.sources, { ouvrage: "Étymon, rédaction", entree: "correction suite à une Critique" }];
@@ -169,8 +172,13 @@ describe("validerFiches : structure", () => {
     ["incertain", { incertain: "non" }],
     ["reconstruit", { reconstruit: "oui" }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
-    ["lectureTraditionnelle.sources", { lectureTraditionnelle: { texte: "Lecture.", auteur: "Augustin" } }],
-    ["lectureTraditionnelle.sources", { lectureTraditionnelle: { texte: "Lecture.", auteur: "Augustin", sources: [] } }],
+    ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin" }] }],
+    ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin", sources: [] }] }],
+    ["lecturesTraditionnelles", { lecturesTraditionnelles: null }],
+    ["nature", { nature: [] }],
+    ["nature.0", { nature: ["substantif"] }],
+    ["graphie", { graphie: "" }],
+    ["legende", { legende: "  " }],
     ["sources", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
     ["racine.sens", { racine: { forme: "*x", langue: "indo-européen" } }],
   ])("signale le champ %s", (champ, surcharges) => {
@@ -271,8 +279,12 @@ describe("validerFiches : règles éditoriales", () => {
     ["explication", { explication: "Il faut noter ceci : rien." }],
     ["historique.0.note", { historique: [{ date: "2026-09-23", note: "Corrigée ; voir la source." }] }],
     [
-      "lectureTraditionnelle.texte",
-      { lectureTraditionnelle: { texte: "Relier ?", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] } },
+      "lecturesTraditionnelles.0.texte",
+      { lecturesTraditionnelles: [{ texte: "Relier ?", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }] },
+    ],
+    [
+      "legende",
+      { legende: "On dit « sans cire » : c'est faux." },
     ],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs).toEqual([

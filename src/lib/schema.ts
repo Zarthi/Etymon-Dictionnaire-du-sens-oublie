@@ -30,17 +30,34 @@ export const schemaSourceTraditionnelle = z
   .object({ ouvrage: z.string().min(1), entree: z.string().min(1), page, url })
   .strict();
 
+/** Catégories grammaticales ; « nom » seul pour les noms épicènes (un, une adulte). */
+export const NATURES = ["nom masculin", "nom féminin", "nom", "verbe", "adjectif", "adverbe", "interjection"] as const;
+
+/** Écriture d'origine d'une forme en alphabet non latin (grec, arabe, hébreu…). */
+const graphie = z.string().min(1).optional();
+
+export const schemaLectureTraditionnelle = z
+  .object({
+    texte: z.string().trim().min(1),
+    auteur: z.string().min(1),
+    sources: z.array(schemaSourceTraditionnelle).min(1),
+  })
+  .strict();
+
 export const schemaFiche = z
   .object({
     mot: z.string().min(1),
+    nature: z.array(z.enum(NATURES)).min(1),
     etymon: z.string().min(1),
+    graphie,
     reconstruit: z.boolean(),
     langue: z.enum(langues),
     sens: z.string().min(1),
     explication: z.string().trim().min(1),
+    legende: z.string().trim().min(1).optional(),
     incertain: z.boolean(),
     racine: z
-      .object({ forme: z.string().min(1), langue: z.string().min(1), sens: z.string().min(1) })
+      .object({ forme: z.string().min(1), graphie, langue: z.string().min(1), sens: z.string().min(1) })
       .strict()
       .nullable()
       .optional(),
@@ -48,14 +65,7 @@ export const schemaFiche = z
     famille: z.array(z.string()),
     themes: z.array(z.enum(themes)),
     sources: z.array(schemaSource),
-    lectureTraditionnelle: z
-      .object({
-        texte: z.string().trim().min(1),
-        auteur: z.string().min(1),
-        sources: z.array(schemaSourceTraditionnelle).min(1),
-      })
-      .strict()
-      .nullable(),
+    lecturesTraditionnelles: z.array(schemaLectureTraditionnelle),
     statut: z.enum(["a-verifier", "brouillon", "validee"]),
     historique: z.array(z.object({ date, note: z.string().min(1) }).strict()),
   })

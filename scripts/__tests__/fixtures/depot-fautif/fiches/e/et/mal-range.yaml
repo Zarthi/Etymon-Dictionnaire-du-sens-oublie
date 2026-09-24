@@ -1,5 +1,6 @@
 # Fiche conforme mais mal rangée : attendue dans m/ma/.
 mot: mal rangé
+nature: [nom masculin]
 etymon: malum
 reconstruit: false
 langue: latin
@@ -11,6 +12,6 @@ famille: []
 themes: []
 sources:
   - { ouvrage: Littré, entree: mal, page: 1 }
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []
