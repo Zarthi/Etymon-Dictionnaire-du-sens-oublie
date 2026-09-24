@@ -8,12 +8,23 @@ etymologie:
     langue: latin
     sens: être installé devant, investir
 explication: >-
-  En langue d'Église, l'obsession était l'assaut du diable contre une âme qu'il
-  presse du dehors sans l'habiter, à la différence de la possession. L'idée fixe
-  a gardé l'encerclement, et perdu l'assaillant.
+  Le mot désignait un siège : l'ennemi campe devant la ville sans y entrer.
+  L'obsession moderne est une idée qui revient sans cesse, et l'assiégeant venu
+  du dehors a disparu.
 famille: [ obséder, obsédant ]
 renvois: [ demon, oppression ]
 themes: [ esprit, religion ]
+tradition:
+  lectures:
+    - texte: Le démon obsède en tourmentant du dehors, sans entrer dans le corps ;
+        il possède quand il y est entré et ne le quitte plus.
+      citation: L'obsession, au contraire, est lorsque le démon, sans entrer dans
+        le corps d'une personne, la tourmente et l'obsède au dehors
+      auteur: augustin-calmet
+      sources:
+        - ouvrage: dictionnaire-de-la-bible
+          entree: Obsession du démon
+          url: https://archive.org/download/dictionnairehis03calm/dictionnairehis03calm_djvu.txt
 sources:
   - ouvrage: littre
     entree: obsession

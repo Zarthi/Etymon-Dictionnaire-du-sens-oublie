@@ -1,0 +1,15 @@
+nom: Augustin Calmet
+naissance: "1672"
+mort: "1757"
+description: >-
+  Bénédictin lorrain de la congrégation de Saint-Vanne, exégète et historien ;
+  ses commentaires et son Dictionnaire de la Bible font autorité au XVIIIe siècle.
+tradition: true
+cite: [ Calmet ]
+sources:
+  - ouvrage: bnf
+    entree: cb12043646z
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

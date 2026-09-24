@@ -28,9 +28,13 @@ export function morceaux(citation: string): string[] {
     .filter((m) => m !== "");
 }
 
-/** Morceaux de la citation introuvables dans le texte de la source (aucun : la citation est vérifiée). */
+/**
+ * Morceaux de la citation introuvables dans le texte de la source (aucun : la citation est vérifiée).
+ * Un mot coupé en fin de ligne par la numérisation (« au de- hors » : trait d'union suivi d'un blanc,
+ * jamais dans un mot composé) est d'abord recollé.
+ */
 export function morceauxAbsents(citation: string, texteSource: string): string[] {
-  const source = normaliserCitation(texteSource);
+  const source = normaliserCitation(texteSource.replace(/(\p{L})-\s+(\p{L})/gu, "$1$2"));
   return morceaux(citation).filter((m) => !source.includes(m));
 }
 

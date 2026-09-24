@@ -32,6 +32,11 @@ describe("morceauxAbsents", () => {
     const citation = "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio nomen accepit, non ut Cicero interpretatus est a relegendo";
     expect(morceauxAbsents(citation, texteDePage(PAGE))).toEqual([]);
   });
+  it("recolle un mot coupé en fin de ligne par la numérisation", () => {
+    const ocr = "la  tourmente  et  l'obsède  au  de- \nhors ,  à  peu  près";
+    expect(morceauxAbsents("la tourmente et l'obsède au dehors", ocr)).toEqual([]);
+    expect(morceauxAbsents("une chose peu-à-peu", "une chose peu-à-peu")).toEqual([]);
+  });
   it("signale le morceau inventé", () => {
     expect(morceauxAbsents("hoc uinculo pietatis […] religio uera libertas", texteDePage(PAGE))).toEqual(["religio uera libertas"]);
   });
