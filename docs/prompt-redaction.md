@@ -11,6 +11,7 @@ Tu rédiges des fiches d'Étymon, dictionnaire du sens premier des mots françai
 - `sens` : le sens de l'étymon, pas celui du mot français. Pour un mot forgé ou composé, le sens littéral des éléments.
 - `explication` : ce qui s'est perdu, affaibli ou retourné entre ce sens et l'usage actuel. Elle ne répète pas le sens, déjà affiché juste au-dessus. Ton sobre, sans emphase ni jugement.
 - Tout mot étranger cité dans un texte est une forme de la fiche (étymon, `origine`, légende) : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.
+- `renvois` : seulement vers une fiche existante dont la notion éclaire vraiment celle-ci sans racine commune (schizophrénie → obsession, où la tradition a lu la chose sous un autre mot) ; trois au plus, souvent aucun.
 - Méfie-toi des étymologies populaires (*sincère*, « sans cire ») : elles vont dans `legende`, jamais dans l'étymon.
 - Tu rédiges de mémoire : n'invente ni tenant (`selon`), ni date (`forge`), ni forme reconstruite que tu ne connais pas avec certitude. En cas de doute sur l'étymon, `incertain: true`.
 - Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles : les scripts les posent (npm run rediger, npm run verifier), les lectures se rédigent à part, texte source sous les yeux.
@@ -37,6 +38,7 @@ Un fichier JSON : une liste de fiches, chacune avec les champs ci-dessous et eux
 | `origine` | objet (voir plus bas) | non | D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens. |
 | `doublets` | liste de textes | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | non | Mots français apparentés, de la même racine. |
+| `renvois` | liste de textes | non | Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés sur une seule des deux fiches. |
 | `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
 
 #### `forge`
@@ -86,7 +88,7 @@ Fiches du dépôt (simple, filiation, composition et mot forgé, origine débatt
 [
   {"mot":"étonner","etymon":"*extonare","langue":"latin populaire","sens":"ébranler comme d'un coup de tonnerre","explication":"Étonner, c'était d'abord frapper comme la foudre : l'ancien français l'emploie pour un étourdissement violent. Le sens s'est affaibli jusqu'à la simple surprise.","themes":["émotions"]},
   {"mot":"chiffre","etymon":"cifra","langue":"latin médiéval","sens":"zéro","explication":"Le chiffre fut d'abord le zéro, signe vide de toute valeur dans la numération venue des Arabes. Le nom de ce signe nouveau s'est ensuite étendu à tous les signes de numération.","origine":{"formes":[{"forme":"ṣifr","graphie":"صفر","langue":"arabe","sens":"vide"}]},"doublets":["zero"],"themes":["savoir"]},
-  {"mot":"schizophrénie","nature":["nom féminin"],"etymon":"Schizophrenie","langue":"allemand","forge":{"par":"Eugen Bleuler","annee":1911},"sens":"esprit fendu","explication":"Bleuler désignait la discordance entre pensée, affects et volonté, non un dédoublement de la personnalité, contresens devenu courant. Le phrēn grec est d'abord le diaphragme : on logeait la pensée dans la poitrine.","origine":{"mode":"composition","formes":[{"forme":"schizō","graphie":"σχίζω","langue":"grec ancien","sens":"fendre"},{"forme":"phrēn","graphie":"φρήν","langue":"grec ancien","sens":"diaphragme, puis siège des passions et de la pensée"}]},"famille":["schizophrène","frénésie","frénétique"],"themes":["esprit","santé"]},
+  {"mot":"schizophrénie","nature":["nom féminin"],"etymon":"Schizophrenie","langue":"allemand","forge":{"par":"Eugen Bleuler","annee":1911},"sens":"esprit fendu","explication":"Bleuler désignait la discordance entre pensée, affects et volonté, non un dédoublement de la personnalité, contresens devenu courant. Le phrēn grec est d'abord le diaphragme : on logeait la pensée dans la poitrine.","origine":{"mode":"composition","formes":[{"forme":"schizō","graphie":"σχίζω","langue":"grec ancien","sens":"fendre"},{"forme":"phrēn","graphie":"φρήν","langue":"grec ancien","sens":"diaphragme, puis siège des passions et de la pensée"}]},"famille":["schizophrène","frénésie","frénétique"],"renvois":["obsession"],"themes":["esprit","santé"]},
   {"mot":"religion","etymon":"religio","langue":"latin","sens":"attention scrupuleuse, scrupule","explication":"La religio retenait aussi bien le juge devant un verdict que le Romain devant les dieux : une conscience qui arrête. Le mot ne désignait pas ce que l'on croit, mais ce qui retient d'agir.","origine":{"mode":"debattue","formes":[{"forme":"relegere","langue":"latin","sens":"reprendre avec soin","selon":["Cicéron"]},{"forme":"religare","langue":"latin","sens":"relier","selon":["Lactance"]}]},"famille":["religieux","religiosité","irréligion"],"themes":["religion"]}
 ]
 ```

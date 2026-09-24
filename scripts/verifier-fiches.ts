@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { parseDocument } from "yaml";
+import { isScalar, parseDocument, type YAMLMap } from "yaml";
 import { controler } from "./lib/controles.ts";
 import { chercher, verdict } from "./lib/littre.ts";
 import { cheminFiche } from "./lib/validation.ts";
@@ -31,7 +31,14 @@ if (import.meta.main) {
       // L'adresse du Littré se déduit de l'entrée : inutile de l'écrire.
       const source = { ouvrage: "Littré", entree: v.entree.terme };
       const autres = fiche.sources.filter((s) => s.ouvrage !== "Littré");
-      document.set("sources", document.createNode([source, ...autres]));
+      // Les sources précèdent la rédaction, même quand la fiche n'en avait pas encore.
+      const noeud = document.createNode([source, ...autres]);
+      if (document.has("sources")) document.set("sources", noeud);
+      else {
+        const paires = (document.contents as YAMLMap).items;
+        const place = paires.findIndex((p) => isScalar(p.key) && p.key.value === "redaction");
+        paires.splice(place === -1 ? paires.length : place, 0, document.createPair("sources", noeud));
+      }
       document.set("statut", "brouillon");
       await writeFile(chemin, document.toString({ lineWidth: 80 }));
       promues++;

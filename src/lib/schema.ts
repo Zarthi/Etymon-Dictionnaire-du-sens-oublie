@@ -189,6 +189,13 @@ const objetFiche = z
       .default([])
       .describe("Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches."),
     famille: z.array(z.string()).default([]).describe("Mots français apparentés, de la même racine."),
+    renvois: z
+      .array(z.string())
+      .max(3)
+      .default([])
+      .describe(
+        "Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés sur une seule des deux fiches.",
+      ),
     themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
     sources: z
       .array(schemaSource)

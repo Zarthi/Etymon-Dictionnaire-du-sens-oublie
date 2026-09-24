@@ -28,6 +28,8 @@
   /** Adresse d'une fiche existante ; rien pour un mot qui n'a pas encore sa fiche. */
   const idsPublies = new Set(entrees.map((e) => e.id));
   const lienVers = (id: string) => (idsPublies.has(id) ? `#/mot/${encodeURIComponent(id)}` : undefined);
+  const motsParId = new Map(entrees.map((e) => [e.id, e.mot]));
+  const motDe = (id: string) => motsParId.get(id) ?? id;
 
   $effect(() => {
     ecrireParametres(parametres);
@@ -115,7 +117,7 @@
       {#if vue.nom === "fiche"}
         {#await ficheOuverte then fiche}
           {#if fiche}
-            <Fiche {fiche} deplierLectures={parametres.deplierLectures} {lienVers} />
+            <Fiche {fiche} deplierLectures={parametres.deplierLectures} {lienVers} {motDe} />
           {:else}
             <p class="message">Ce mot n'a pas (encore) de fiche.</p>
           {/if}

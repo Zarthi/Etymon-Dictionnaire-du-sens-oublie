@@ -249,6 +249,7 @@ describe("validerFiches : structure", () => {
     ],
     ["forge.annee", { forge: { par: "Eugen Bleuler", annee: "1911" } }],
     ["forge.par", { forge: { annee: 1911 } }],
+    ["renvois", { renvois: ["a", "b", "c", "d"] }],
   ])("signale le champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs.map((e) => e.champ)).toEqual([champ]);
   });
@@ -333,6 +334,27 @@ describe("validerFiches : cohérence", () => {
         regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches",
       },
     ]);
+  });
+  it("accepte un renvoi déclaré d'un seul côté, et refuse le même déclaré des deux", () => {
+    const avecRenvois = (mot: string, renvois: string[]) => ({
+      fichier: cheminFiche(mot),
+      texte: stringify({ ...ficheBase, mot, renvois }),
+    });
+    expect(validerFiches([avecRenvois("schizophrenie", ["obsession"]), avecRenvois("obsession", [])]).erreurs).toEqual([]);
+    expect(validerFiches([avecRenvois("schizophrenie", ["obsession"]), avecRenvois("obsession", ["schizophrenie"])]).erreurs).toEqual([
+      {
+        fichier: "s/sc/schizophrenie.yaml",
+        champ: "renvois",
+        regle: "relation déjà déclarée dans « obsession » : ne la déclarer que sur une des deux fiches",
+      },
+    ]);
+    expect(validerFiches([avecRenvois("schizophrenie", ["obsession"])]).erreurs).toEqual([
+      { fichier: "s/sc/schizophrenie.yaml", champ: "renvois", regle: "fiche « obsession » introuvable" },
+    ]);
+  });
+  it("refuse un renvoi vers soi-même, vers un doublet ou vers la famille", () => {
+    expect(erreursDe({ renvois: ["etonner"] })).toContain("renvois : une fiche ne peut pas renvoyer à elle-même");
+    expect(erreursDe({ renvois: ["tonnerre"] })).toContain("renvois : « tonnerre » est un doublet ou de la famille : pas un renvoi");
   });
   it("signale un doublet introuvable", () => {
     expect(validerFiches([fiche("poison", ["potion"])]).erreurs).toEqual([

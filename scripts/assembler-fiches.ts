@@ -13,11 +13,16 @@ export const DOSSIER_SORTIE = fileURLToPath(new URL("../src/generes", import.met
  * Le statut accompagne chaque fiche : l'app signale celles qui ne sont pas encore validées.
  */
 export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
-  // Un doublet n'est déclaré que sur une des deux fiches : l'app le reçoit des deux côtés.
-  const doublets = new Map(fiches.map((f) => [f.id, new Set(f.doublets)]));
-  for (const f of fiches) for (const d of f.doublets) doublets.get(d)?.add(f.id);
+  // Un doublet ou un renvoi n'est déclaré que sur une des deux fiches : l'app le reçoit des deux côtés.
+  const symetrique = (champ: "doublets" | "renvois") => {
+    const relations = new Map(fiches.map((f) => [f.id, new Set(f[champ])]));
+    for (const f of fiches) for (const cible of f[champ]) relations.get(cible)?.add(f.id);
+    return (id: string) => [...(relations.get(id) ?? [])].sort();
+  };
+  const doublets = symetrique("doublets");
+  const renvois = symetrique("renvois");
   const triees = fiches
-    .map((f) => ({ ...f, doublets: [...(doublets.get(f.id) ?? [])].sort() }))
+    .map((f) => ({ ...f, doublets: doublets(f.id), renvois: renvois(f.id) }))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const lots = new Map<string, FicheIdentifiee[]>();
   for (const fiche of triees) {

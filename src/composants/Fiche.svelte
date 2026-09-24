@@ -13,7 +13,13 @@
     fiche,
     deplierLectures,
     lienVers,
-  }: { fiche: FicheIdentifiee; deplierLectures: boolean; lienVers: (id: string) => string | undefined } = $props();
+    motDe,
+  }: {
+    fiche: FicheIdentifiee;
+    deplierLectures: boolean;
+    lienVers: (id: string) => string | undefined;
+    motDe: (id: string) => string;
+  } = $props();
 
   const correction = $derived(fiche.historique.at(-1));
   const lectures = $derived(fiche.lecturesTraditionnelles);
@@ -60,6 +66,15 @@
     <p class="legende">
       <strong>Idée reçue</strong>&nbsp;: <em>{fiche.legende.forme}</em>, «&nbsp;{fiche.legende.sens}&nbsp;».
       {#if fiche.legende.explication}<TexteRiche texte={fiche.legende.explication} {lienVers} exclu={fiche.id} {formes} />{/if}
+    </p>
+  {/if}
+
+  {#if fiche.renvois.length > 0}
+    <!-- Notions voisines, sans racine commune : « Voir aussi : obsession ». -->
+    <p class="renvois">
+      <strong>Voir aussi</strong>&nbsp;: {#each fiche.renvois as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}
+          >{motDe(id)}</a
+        >{/each}.
     </p>
   {/if}
 
@@ -119,6 +134,18 @@
     font-size: 0.85rem;
     font-style: italic;
     color: var(--texte-discret);
+  }
+  .renvois {
+    margin: 1rem 0 0;
+    color: var(--texte-discret);
+  }
+  .renvois strong {
+    font-family: var(--police-interface);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .renvois a {
+    color: inherit;
   }
   .legende {
     margin: 1rem 0 0;

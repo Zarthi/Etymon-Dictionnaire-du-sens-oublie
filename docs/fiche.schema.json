@@ -215,6 +215,15 @@
         "type": "string"
       }
     },
+    "renvois": {
+      "default": [],
+      "description": "Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés sur une seule des deux fiches.",
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "themes": {
       "type": "array",
       "items": {

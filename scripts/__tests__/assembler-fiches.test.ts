@@ -44,6 +44,14 @@ describe("assembler", () => {
     ]);
   });
 
+  it("rend les renvois symétriques", () => {
+    const schizophrenie = { ...avec("schizophrenie", "brouillon"), renvois: ["obsession"] };
+    const obsession = { ...avec("obsession", "brouillon"), renvois: [] };
+    const { lots } = assembler([schizophrenie, obsession]);
+    expect(lots.get("ob")?.[0].renvois).toEqual(["schizophrenie"]);
+    expect(lots.get("sc")?.[0].renvois).toEqual(["obsession"]);
+  });
+
   it("regroupe les fiches complètes par préfixe de deux lettres", () => {
     const { lots } = assembler([avec("chiffre", "validee"), avec("chetif", "validee"), avec("zero", "validee")]);
     expect(Object.fromEntries([...lots].map(([p, lot]) => [p, lot.map((f) => f.id)]))).toEqual({

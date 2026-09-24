@@ -94,6 +94,12 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
   }
 
   if (fiche.doublets.includes(id)) ajouter("doublets", "une fiche ne peut pas être son propre doublet");
+  if (fiche.renvois.includes(id)) ajouter("renvois", "une fiche ne peut pas renvoyer à elle-même");
+  // Un renvoi relie des notions sans racine commune : même étymon ou même famille, c'est un doublet ou la famille.
+  const parente = new Set([...fiche.doublets, ...fiche.famille.map(slug)]);
+  for (const renvoi of fiche.renvois.filter((r) => parente.has(r))) {
+    ajouter("renvois", `« ${renvoi} » est un doublet ou de la famille : pas un renvoi`);
+  }
 
   const phrases = compterPhrases(fiche.explication);
   if (phrases < 1 || phrases > PHRASES_MAX_EXPLICATION) {
@@ -157,22 +163,27 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
 }
 
 /**
- * Règles entre fiches : un doublet vise une fiche existante, et la relation, symétrique,
- * n'est déclarée que sur l'une des deux fiches (l'app l'affiche dans les deux sens).
+ * Règles entre fiches : un doublet ou un renvoi vise une fiche existante, et la relation,
+ * symétrique, n'est déclarée que sur l'une des deux fiches (l'app l'affiche dans les deux sens).
  */
-function verifierDoublets(fiches: FicheIdentifiee[], idsPresents: Set<string>, fichierDe: Map<string, string>): Erreur[] {
+function verifierRelations(
+  champ: "doublets" | "renvois",
+  fiches: FicheIdentifiee[],
+  idsPresents: Set<string>,
+  fichierDe: Map<string, string>,
+): Erreur[] {
   const erreurs: Erreur[] = [];
   const parId = new Map(fiches.map((f) => [f.id, f]));
   for (const fiche of fiches) {
-    for (const doublet of fiche.doublets) {
+    for (const cible of fiche[champ]) {
       const fichier = fichierDe.get(fiche.id)!;
-      if (!idsPresents.has(doublet)) {
-        erreurs.push({ fichier, champ: "doublets", regle: `fiche « ${doublet} » introuvable` });
-      } else if (fiche.id > doublet && parId.get(doublet)?.doublets.includes(fiche.id)) {
+      if (!idsPresents.has(cible)) {
+        erreurs.push({ fichier, champ, regle: `fiche « ${cible} » introuvable` });
+      } else if (fiche.id > cible && parId.get(cible)?.[champ].includes(fiche.id)) {
         erreurs.push({
           fichier,
-          champ: "doublets",
-          regle: `relation déjà déclarée dans « ${doublet} » : ne la déclarer que sur une des deux fiches`,
+          champ,
+          regle: `relation déjà déclarée dans « ${cible} » : ne la déclarer que sur une des deux fiches`,
         });
       }
     }
@@ -224,7 +235,8 @@ export function validerFiches(sources: FichierSource[]): { fiches: FicheIdentifi
     fiches.push({ id, ...resultat.data });
   }
 
-  erreurs.push(...verifierDoublets(fiches, idsPresents, fichierDe));
+  erreurs.push(...verifierRelations("doublets", fiches, idsPresents, fichierDe));
+  erreurs.push(...verifierRelations("renvois", fiches, idsPresents, fichierDe));
   return { fiches, erreurs };
 }
 

@@ -1,0 +1,27 @@
+mot: obsession
+nature: [ nom féminin ]
+etymon: obsessio
+langue: latin
+sens: action d'assiéger, blocus
+explication: >-
+  En langue d'Église, l'obsession était l'assaut du diable contre une âme qu'il
+  presse du dehors sans l'habiter, à la différence de la possession. L'idée fixe
+  a gardé l'encerclement, et perdu l'assaillant.
+origine:
+  formes:
+    - forme: obsidere
+      langue: latin
+      sens: être installé devant, investir
+famille: [ obséder, obsédant ]
+themes: [ esprit, religion ]
+sources:
+  - ouvrage: Littré
+    entree: obsession
+  - ouvrage: Gaffiot
+    entree: obsessio
+  - ouvrage: Gaffiot
+    entree: obsideo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

@@ -23,6 +23,7 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 | `origine` | objet (voir plus bas) | non | D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens. |
 | `doublets` | liste de textes | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | non | Mots français apparentés, de la même racine. |
+| `renvois` | liste de textes | non | Fiches d'une notion voisine, sans racine commune, qui éclairent celle-ci (schizophrénie → obsession) ; trois au plus, déclarés sur une seule des deux fiches. |
 | `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
 | `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire. |
 | `redaction` | liste non vide d'objets (voir plus bas) | oui | Qui a rédigé la fiche ; affiché une fois, en pied de fiche. Écrit par npm run rediger. |
@@ -133,10 +134,11 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 
 - Le fichier s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`.
 - Un étymon reconstruit commence par `*` (c'est ce qui le dit reconstruit) ; une valeur commençant par `*` ou contenant `: ` s'écrit entre guillemets.
-- Pas de doublon : un doublet se déclare sur une seule des deux fiches (l'app l'affiche des deux côtés) ; l'adresse d'un ouvrage en ligne se déduit de l'entrée et ne s'écrit pas (Bailly : entrée en grec, adresse translittérée).
+- Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches (l'app l'affiche des deux côtés) ; l'adresse d'un ouvrage en ligne se déduit de l'entrée et ne s'écrit pas (Bailly : entrée en grec, adresse translittérée).
 - Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, listes vides, `mode: filiation`).
 - `origine.formes[].selon` : seulement pour une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
 - `lecturesTraditionnelles[].hypothese` : une forme de `origine.formes`.
+- `renvois` : fiches existantes, hors doublets et famille (une notion voisine, pas une racine commune).
 - Les textes sont bruts, sans mise en forme : l'app met en italique l'étymon, les formes d'origine et la forme légendaire, et pose les liens vers les autres fiches.
 - `explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus.
 - Typographie française dans les sens, l'explication, la légende, les lectures et l'historique : guillemets « », espace insécable avant `:` `;` `?` `!` ; les sens s'écrivent sans guillemets.
