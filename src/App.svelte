@@ -100,7 +100,7 @@
 </script>
 
 <svelte:head>
-  {#if vue.nom === "accueil" || vue.nom === "parametres"}<title>Étymon</title>{/if}
+  {#if vue.nom === "accueil" || vue.nom === "parametres"}<title>Étymon : Dictionnaire du sens oublié</title>{/if}
 </svelte:head>
 
 <header>
@@ -109,7 +109,7 @@
       <button type="button" onclick={() => history.back()} disabled={!peutReculer} aria-label="Page précédente" title="Page précédente">←</button>
       <button type="button" onclick={() => history.forward()} disabled={!peutAvancer} aria-label="Page suivante" title="Page suivante">→</button>
     </nav>
-    <a class="titre" href="#/">Étymon</a>
+    <a class="titre" href="#/">Étymon<span class="sous-titre"><span class="deux-points">&nbsp;:</span> Dictionnaire du sens oublié</span></a>
   </div>
   <nav>
     <button type="button" onclick={auHasard} disabled={entrees.length === 0}>Au hasard</button>
@@ -185,6 +185,21 @@
     font-size: 1.6rem;
     color: var(--texte);
     text-decoration: none;
+  }
+  .sous-titre {
+    font-size: 1.05rem;
+    color: var(--texte-discret);
+  }
+  /* Écran étroit : le sous-titre passe sous le nom, sans deux-points. */
+  @media (max-width: 600px) {
+    .sous-titre {
+      display: block;
+      font-size: 0.85rem;
+      line-height: 1.2;
+    }
+    .deux-points {
+      display: none;
+    }
   }
   nav {
     display: flex;

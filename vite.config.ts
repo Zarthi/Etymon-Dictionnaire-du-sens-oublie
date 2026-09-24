@@ -11,7 +11,7 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["icone.svg", "apple-touch-icon.png"],
       manifest: {
-        name: "Étymon : dictionnaire du sens oublié",
+        name: "Étymon : Dictionnaire du sens oublié",
         short_name: "Étymon",
         description: "Le sens premier des mots français.",
         lang: "fr",
