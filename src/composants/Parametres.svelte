@@ -13,9 +13,9 @@
     <span>
       Déplier les lectures traditionnelles
       <small>
-        Le sens donné au mot par une doctrine traditionnelle (Pères de l'Église, scolastique…) figure sous
-        l'étymologie, replié par défaut. Cochée, cette option l'affiche toujours en entier. Toujours sourcé et
-        séparé de l'étymologie.
+        Le sens donné au mot par une doctrine traditionnelle (Pères de l'Église, Talmud…), par ses propres
+        textes, figure sous l'étymologie, replié par réserve. Cochée, cette option l'affiche toujours en entier.
+        Toujours sourcé et séparé de l'étymologie.
       </small>
     </span>
   </label>
@@ -26,8 +26,15 @@
 
   <h2>À propos</h2>
   <p>
-    Étymon donne le sens premier des mots français, d'après le Littré, le Gaffiot et le Bailly, vérifiés sur le
-    Trésor de la langue française. Fiches sous licence CC&nbsp;BY-SA&nbsp;4.0.
+    Étymon donne le sens premier des mots français : le plus ancien que les sources atteignent, d'après le
+    Littré, le Gaffiot et le Bailly, vérifiés sur le Trésor de la langue française.
+  </p>
+  <p>
+    C'est l'histoire du mot, non sa vérité. <i>Étymon</i> vient du grec ἔτυμος, «&nbsp;vrai&nbsp;», et les
+    Anciens cherchaient dans l'étymologie la force du mot plutôt que sa date. Ce qu'une tradition lit dans un
+    mot, elle le dit par ses propres textes, cités sous «&nbsp;Lectures traditionnelles&nbsp;».
+  </p>
+  <p>Fiches sous licence CC&nbsp;BY-SA&nbsp;4.0.
   </p>
 </section>
 

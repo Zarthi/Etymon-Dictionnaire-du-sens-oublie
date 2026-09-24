@@ -2,6 +2,17 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-09-25 — Ce que « sens premier » veut dire
+
+- **Le sens premier est premier dans le temps**, non dans le principe : l'histoire du mot, non sa
+  vérité (AGENTS.md §1, §2.3). Cause : question de Thibault, « traditionnellement, l'application
+  est-elle mauvaise ? ». *Étymon* veut dire « vrai », et pour Isidore l'étymologie recueille la
+  force du mot par l'interprétation ; l'app qui mettait l'histoire en tête et la tradition « à
+  côté » posait sans le dire la perspective moderne en principe.
+- Consignes : l'explication ne fait pas du sens ancien le « vrai » sens du mot, ni de l'usage
+  actuel une erreur ; la relecture critique le vérifie. La tradition est repliée par réserve, non
+  par rang ; l'app ne prête jamais au mot un sens qui lui serait propre.
+
 ## 2026-09-25 — Listes fermées, thème affiché
 
 - **Les listes fermées grandissent avec les mots** (§7 bis), par `npm run liste` seulement :
