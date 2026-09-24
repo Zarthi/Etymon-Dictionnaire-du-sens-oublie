@@ -1,6 +1,7 @@
 import { z } from "zod";
 import langues from "../../data/langues.json" with { type: "json" };
 import themes from "../../data/themes.json" with { type: "json" };
+import traditions from "../../data/traditions.json" with { type: "json" };
 import { REDACTEURS } from "./sources.ts";
 
 /**
@@ -89,6 +90,7 @@ const MESSAGE_SOURCE = { message: "au moins un ouvrage consulté (seules les fic
 export const NATURES = ["nom masculin", "nom féminin", "nom", "nom propre", "verbe", "adjectif", "adverbe", "interjection"] as const;
 
 const langue = z.enum(langues).describe("Langue (liste fermée : data/langues.json).");
+const tradition = z.enum(traditions).describe("Tradition (liste fermée : data/traditions.json).");
 const forme = z
   .string()
   .min(1)
@@ -191,7 +193,10 @@ export const schemaLectureTraditionnelle = z
       .trim()
       .min(1)
       .describe("Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe)."),
-    auteur: identifiant("Auteur de la tradition (data/auteurs, tradition: true)."),
+    auteur: identifiant("Auteur de la tradition (data/auteurs, avec ses traditions)."),
+    tradition: tradition
+      .optional()
+      .describe("Tradition dans laquelle parle le passage ; seulement si l'auteur en a plusieurs (sinon, elle se déduit de l'auteur)."),
     hypothese: z.string().min(1).optional().describe("Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter."),
     sources: z.array(schemaSourceLecture).min(1).describe("Œuvres de l'auteur consultées."),
     redaction: z.array(schemaRedaction).min(1).optional().describe("Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche."),
@@ -305,7 +310,11 @@ const objetAuteur = z
     naissance: dateHistorique.optional(),
     mort: dateHistorique.optional(),
     description,
-    tradition: z.boolean().default(false).describe("Auteur de la tradition : signe des lectures traditionnelles. Faux si absent."),
+    traditions: z
+      .array(tradition)
+      .min(1)
+      .optional()
+      .describe("Traditions dans lesquelles il parle ; un auteur qui en a signe des lectures traditionnelles. Plusieurs : chaque lecture précise la sienne."),
     cite: z
       .array(z.string().min(1))
       .optional()

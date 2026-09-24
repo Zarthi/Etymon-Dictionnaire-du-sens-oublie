@@ -5,7 +5,7 @@ mort: "636"
 description: >-
   Évêque de Séville ; ses Étymologies rassemblent le savoir antique en
   expliquant les choses par l'origine de leur nom.
-tradition: true
+traditions: [ chrétienne ]
 sources:
   - ouvrage: bnf
     entree: cb119082935

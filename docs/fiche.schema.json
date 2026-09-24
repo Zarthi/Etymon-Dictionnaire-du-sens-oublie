@@ -605,7 +605,15 @@
               "auteur": {
                 "type": "string",
                 "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-                "description": "Auteur de la tradition (data/auteurs, tradition: true)."
+                "description": "Auteur de la tradition (data/auteurs, avec ses traditions)."
+              },
+              "tradition": {
+                "description": "Tradition dans laquelle parle le passage ; seulement si l'auteur en a plusieurs (sinon, elle se déduit de l'auteur).",
+                "type": "string",
+                "enum": [
+                  "juive",
+                  "chrétienne"
+                ]
               },
               "hypothese": {
                 "description": "Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter.",

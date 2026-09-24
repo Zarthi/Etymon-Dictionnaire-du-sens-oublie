@@ -268,13 +268,21 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     ajouter("(textes)", `« ${forme} » désigne plusieurs auteurs ou ouvrages cités par la fiche : écrire le nom complet`);
   }
 
-  // Lectures : un auteur de la tradition, ses propres œuvres, une hypothèse de la chaîne.
+  // Lectures : un auteur de la tradition, sa tradition (précisée s'il en a plusieurs), ses propres œuvres,
+  // une hypothèse de la chaîne.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
   fiche.tradition.lectures.forEach((l, i) => {
     const c = `tradition.lectures.${i}`;
     const signataire = ref.auteurs.get(l.auteur);
     if (!signataire) ajouter(`${c}.auteur`, `auteur « ${l.auteur} » sans fiche (data/auteurs)`);
-    else if (!signataire.tradition) ajouter(`${c}.auteur`, `${signataire.nom} n'est pas un auteur de la tradition (tradition: true)`);
+    else if (!signataire.traditions) ajouter(`${c}.auteur`, `${signataire.nom} n'est pas un auteur de la tradition (traditions)`);
+    else if (l.tradition === undefined && signataire.traditions.length > 1) {
+      ajouter(`${c}.tradition`, `${signataire.nom} parle dans plusieurs traditions : préciser laquelle (${signataire.traditions.join(", ")})`);
+    } else if (l.tradition !== undefined && signataire.traditions.length === 1) {
+      ajouter(`${c}.tradition`, `se déduit de l'auteur (${signataire.traditions[0]}) : ne pas l'écrire`);
+    } else if (l.tradition !== undefined && !signataire.traditions.includes(l.tradition)) {
+      ajouter(`${c}.tradition`, `${signataire.nom} ne parle pas dans la tradition ${l.tradition}`);
+    }
     if (l.hypothese !== undefined && !hypotheses.has(l.hypothese)) {
       ajouter(`${c}.hypothese`, `« ${l.hypothese} » n'est pas une hypothèse de la chaîne (alternatives)`);
     }

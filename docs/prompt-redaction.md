@@ -138,7 +138,7 @@ Un fichier JSON : une liste de fiches, ou `{ "fiches": [...], "auteurs": [...], 
 | `naissance` | nombre ou date historique | non | Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ». |
 | `mort` | nombre ou date historique | non | Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ». |
 | `description` | texte | oui | Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie. |
-| `tradition` | `true` \| `false` | non | Auteur de la tradition : signe des lectures traditionnelles. Faux si absent. |
+| `traditions` | liste non vide de `juive` \| `chrétienne` | non | Traditions dans lesquelles il parle ; un auteur qui en a signe des lectures traditionnelles. Plusieurs : chaque lecture précise la sienne. |
 | `cite` | liste de textes | non | Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu. |
 
 ### Ouvrage
@@ -161,6 +161,7 @@ Un fichier JSON : une liste de fiches, ou `{ "fiches": [...], "auteurs": [...], 
 - `nature` : nom masculin, nom féminin, nom, nom propre, verbe, adjectif, adverbe, interjection.
 - `langue` : latin, latin populaire, bas latin, latin médiéval, latin humaniste, latin ecclésiastique, ancien français, français, grec ancien, gaulois, étrusque, francique, germanique, ancien nordique, arabe, hébreu, persan, turc, italien, espagnol, ancien espagnol, portugais, occitan, néerlandais, allemand, anglais, indo-européen.
 - `themes` : émotions, esprit, parole, savoir, morale, religion, corps, santé, famille, société, droit, guerre, travail, argent, commerce, nourriture, maison, nature, météo, temps.
+- `traditions` : juive, chrétienne.
 - Auteurs existants (identifiant : nom, formes de citation) : al-khwarizmi (al-Khwârizmî) ; anatole-bailly (Anatole Bailly, Bailly) ; auguste-comte (Auguste Comte, Comte) ; augustin-calmet (Augustin Calmet, Calmet) ; augustin (Augustin) ; ciceron (Cicéron) ; emile-littre (Émile Littré, Littré) ; eugen-bleuler (Eugen Bleuler, Bleuler) ; felix-gaffiot (Félix Gaffiot, Gaffiot) ; francois-andrieux (François Andrieux, Andrieux) ; gavius-bassus (Gavius Bassus) ; gerard-de-cremone (Gérard de Crémone) ; isidore-de-seville (Isidore de Séville) ; lactance (Lactance) ; thomas-more (Thomas More, More).
 - Ouvrages existants : al-jabr (Abrégé du calcul par la restauration et la comparaison), bailly (Dictionnaire grec-français), bnf (Catalogue général de la Bibliothèque nationale de France), dementia-praecox (Dementia praecox ou Groupe des schizophrénies), dictionnaire-de-la-bible (Dictionnaire historique, critique, chronologique, géographique et littéral de la Bible), etymologies (Étymologies), gaffiot (Dictionnaire latin-français), institutions-divines (Institutions divines), la-cite-de-dieu (La Cité de Dieu), littre (Dictionnaire de la langue française), tlfi (Trésor de la langue française informatisé), utopia (L'Utopie).
 

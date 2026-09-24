@@ -20,7 +20,7 @@ const FINE = String.fromCharCode(0x202f);
 
 /** Auteurs et ouvrages que les fiches de test peuvent citer. */
 const socle = { sources: [], redaction: [{ par: "IA" as const, detail: "test" }], statut: "a-verifier" as const, historique: [] };
-const auteur = (id: string, nom: string, tradition = false): Auteur => ({ id, nom, description: "Test.", tradition, ...socle });
+const auteur = (id: string, nom: string, traditions?: Auteur["traditions"]): Auteur => ({ id, nom, description: "Test.", traditions, ...socle });
 const ouvrage = (id: string, titre: string, champs: Partial<Ouvrage> = {}): Ouvrage => ({
   id,
   titre,
@@ -30,7 +30,14 @@ const ouvrage = (id: string, titre: string, champs: Partial<Ouvrage> = {}): Ouvr
   ...champs,
 });
 const REF = referentiel(
-  [auteur("ciceron", "Cicéron", true), auteur("lactance", "Lactance", true), auteur("augustin", "Augustin", true), auteur("eugen-bleuler", "Eugen Bleuler")],
+  [
+    auteur("ciceron", "Cicéron"),
+    auteur("lactance", "Lactance", ["chrétienne"]),
+    auteur("augustin", "Augustin", ["chrétienne"]),
+    auteur("eugen-bleuler", "Eugen Bleuler"),
+    // Un auteur qui parle dans plusieurs traditions (comme Guénon) : chaque lecture précise la sienne.
+    auteur("passeur", "Passeur", ["juive", "chrétienne"]),
+  ],
   [
     ouvrage("littre", "Dictionnaire de la langue française", { abrege: "Littré", modeleEntree: "https://www.littre.org/definition/{entree}" }),
     ouvrage("gaffiot", "Dictionnaire latin-français", { abrege: "Gaffiot", modeleEntree: "https://gaffiot.fr/#{entree}" }),
@@ -38,6 +45,7 @@ const REF = referentiel(
     ouvrage("papier", "Un livre sans adresse"),
     ouvrage("institutions-divines", "Institutions divines", { auteur: "lactance" }),
     ouvrage("la-cite-de-dieu", "La Cité de Dieu", { auteur: "augustin" }),
+    ouvrage("traite", "Traité", { auteur: "passeur" }),
   ],
 );
 
@@ -397,12 +405,22 @@ describe("validerFiches : références", () => {
   });
   it("refuse une lecture d'un auteur hors tradition, ou d'une œuvre d'un autre auteur", () => {
     expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, auteur: "eugen-bleuler" }] } })).toContain(
-      "tradition.lectures.0.auteur : Eugen Bleuler n'est pas un auteur de la tradition (tradition: true)",
+      "tradition.lectures.0.auteur : Eugen Bleuler n'est pas un auteur de la tradition (traditions)",
     );
     const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "la-cite-de-dieu" }] };
     expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([
       "tradition.lectures.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance",
     ]);
+  });
+  it("déduit la tradition d'un auteur qui n'en a qu'une, et l'exige de celui qui en a plusieurs", () => {
+    expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, tradition: "chrétienne" }] } })).toEqual([
+      "tradition.lectures.0.tradition : se déduit de l'auteur (chrétienne) : ne pas l'écrire",
+    ]);
+    const lecture = { ...lectureBase, auteur: "passeur", sources: [{ ...lectureBase.sources[0], ouvrage: "traite" }] };
+    expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([
+      "tradition.lectures.0.tradition : Passeur parle dans plusieurs traditions : préciser laquelle (juive, chrétienne)",
+    ]);
+    expect(erreursDe({ tradition: { lectures: [{ ...lecture, tradition: "juive" }] } })).toEqual([]);
   });
   it("refuse une lecture qui vise une hypothèse absente de la chaîne", () => {
     expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, hypothese: "religare" }] } })).toEqual([
@@ -415,7 +433,7 @@ describe("validerFiches : mentions", () => {
   const ref = referentiel(
     [
       { ...auteur("thomas-more", "Thomas More"), cite: ["Thomas"] },
-      { ...auteur("thomas-d-aquin", "Thomas d'Aquin", true), cite: ["Thomas"] },
+      { ...auteur("thomas-d-aquin", "Thomas d'Aquin", ["chrétienne"]), cite: ["Thomas"] },
     ],
     [],
   );
@@ -505,16 +523,18 @@ describe("validerAuteurs et validerOuvrages", () => {
     fichier,
     texte: stringify({ nom: "Augustin", description: "Évêque d'Hippone.", ...socle, ...champs }),
   });
-  it("accepte un auteur conforme, tradition fausse par défaut, dates exactes ou approximatives", () => {
+  it("accepte un auteur conforme, sans tradition par défaut, dates exactes ou approximatives", () => {
     const { auteurs, erreurs } = validerAuteurs([fichierAuteur("augustin.yaml", { naissance: 354, mort: "vers 430" })]);
     expect(erreurs).toEqual([]);
-    expect(auteurs[0]).toMatchObject({ id: "augustin", tradition: false, naissance: "354", mort: "vers 430" });
+    expect(auteurs[0]).toMatchObject({ id: "augustin", naissance: "354", mort: "vers 430" });
+    expect(auteurs[0].traditions).toBeUndefined();
   });
   it.each([
     ["id", "augustin-d-hippone.yaml", {}],
     ["description", "augustin.yaml", { description: "x".repeat(201) }],
     ["cite.0", "augustin.yaml", { cite: [""] }],
     ["naissance", "augustin.yaml", { naissance: "autrefois" }],
+    ["traditions.0", "augustin.yaml", { traditions: ["païenne"] }],
   ])("signale le champ %s d'un auteur", (champ, fichier, champs) => {
     expect(validerAuteurs([fichierAuteur(fichier, champs)]).erreurs.map((e) => e.champ)).toEqual([champ]);
   });

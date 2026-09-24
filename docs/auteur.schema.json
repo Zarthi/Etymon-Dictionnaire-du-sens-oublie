@@ -46,10 +46,18 @@
       "maxLength": 200,
       "description": "Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie."
     },
-    "tradition": {
-      "default": false,
-      "description": "Auteur de la tradition : signe des lectures traditionnelles. Faux si absent.",
-      "type": "boolean"
+    "traditions": {
+      "description": "Traditions dans lesquelles il parle ; un auteur qui en a signe des lectures traditionnelles. Plusieurs : chaque lecture précise la sienne.",
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "juive",
+          "chrétienne"
+        ],
+        "description": "Tradition (liste fermée : data/traditions.json)."
+      }
     },
     "cite": {
       "description": "Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu.",

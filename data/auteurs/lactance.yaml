@@ -5,7 +5,7 @@ mort: vers 325
 description: >-
   Rhéteur africain converti au christianisme ; ses Institutions divines exposent
   la foi chrétienne dans la langue des lettrés latins.
-tradition: true
+traditions: [ chrétienne ]
 sources:
   - ouvrage: bnf
     entree: cb119105531

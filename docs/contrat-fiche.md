@@ -122,7 +122,8 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 |---|---|---|---|
 | `texte` | texte | oui | Sens que la doctrine donne au mot, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique. |
 | `citation` | texte | oui | Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe). |
-| `auteur` | identifiant | oui | Auteur de la tradition (data/auteurs, tradition: true). |
+| `auteur` | identifiant | oui | Auteur de la tradition (data/auteurs, avec ses traditions). |
+| `tradition` | `juive` \| `chrétienne` | non | Tradition dans laquelle parle le passage ; seulement si l'auteur en a plusieurs (sinon, elle se déduit de l'auteur). |
 | `hypothese` | texte | non | Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter. |
 | `sources` | liste non vide d'objets (voir plus bas) | oui | Œuvres de l'auteur consultées. |
 | `redaction` | liste non vide d'objets (voir plus bas) | non | Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche. |
@@ -175,7 +176,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `naissance` | nombre ou date historique | non | Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ». |
 | `mort` | nombre ou date historique | non | Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ». |
 | `description` | texte | oui | Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie. |
-| `tradition` | `true` \| `false` | non | Auteur de la tradition : signe des lectures traditionnelles. Faux si absent. |
+| `traditions` | liste non vide de `juive` \| `chrétienne` | non | Traditions dans lesquelles il parle ; un auteur qui en a signe des lectures traditionnelles. Plusieurs : chaque lecture précise la sienne. |
 | `cite` | liste de textes | non | Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu. |
 | `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire. |
 | `redaction` | liste non vide d'objets (voir plus bas) | oui | Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger. |
@@ -252,6 +253,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 - `nature` : nom masculin, nom féminin, nom, nom propre, verbe, adjectif, adverbe, interjection.
 - `langue` (data/langues.json) : latin, latin populaire, bas latin, latin médiéval, latin humaniste, latin ecclésiastique, ancien français, français, grec ancien, gaulois, étrusque, francique, germanique, ancien nordique, arabe, hébreu, persan, turc, italien, espagnol, ancien espagnol, portugais, occitan, néerlandais, allemand, anglais, indo-européen.
 - `themes` (data/themes.json) : émotions, esprit, parole, savoir, morale, religion, corps, santé, famille, société, droit, guerre, travail, argent, commerce, nourriture, maison, nature, météo, temps.
+- `traditions` (data/traditions.json) : juive, chrétienne.
 - `licence` : domaine public, Licence ouverte, CC BY-SA, CC BY-NC-ND, non libre.
 - `redaction[].par` : IA, Étymon.
 
@@ -260,12 +262,12 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 - Le fichier d'un mot s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes, dans l'ordre du Littré), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`. Un auteur : `data/auteurs/<nom>.yaml` ; un ouvrage : `data/ouvrages/<abrégé ou titre>.yaml`.
 - Une forme reconstruite commence par `*` ; une valeur commençant par `*`, contenant `: `, ou une virgule dans `{ … }`, s'écrit entre guillemets.
 - Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches ; l'adresse d'une entrée se déduit du modèle d'adresse de l'ouvrage ; la translittération du grec se déduit de la forme ; ce qui se calcule (œuvres d'un auteur, mots qu'il a forgés) ne s'écrit pas.
-- Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, `tradition: false`, listes vides).
+- Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, listes vides).
 - Toute référence (auteur, ouvrage, doublet) vise une fiche existante ; un renvoi (`renvois`, `tradition.renvois`), une fiche ou un candidat à faire (l'app ne l'affiche qu'une fois la fiche écrite ; vers la tradition, une fois qu'elle a des lectures).
 - `etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Le maillon du sens premier porte un sens (une composition, le sens littéral de ses éléments) ; au plus un maillon est `premier`.
 - Translittération : seulement pour une écriture ni latine ni grecque (arabe, hébreu), et alors obligatoire.
 - `selon` : seulement dans une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
-- Lecture traditionnelle : un auteur de la tradition (`tradition: true`), ses propres œuvres, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).
+- Lecture traditionnelle : un auteur de la tradition (`traditions`), sa `tradition` précisée seulement s'il en a plusieurs, ses propres œuvres, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).
 - `renvois` : ni doublet, ni mot de la famille (une notion voisine, pas une racine commune). `tradition.renvois` : à sens unique, affiché du seul côté de la fiche qui le déclare.
 - Les textes sont bruts, sans mise en forme : l'app met en italique les formes de la chaîne et pose les liens (mots qui ont une fiche ; auteurs et ouvrages cités par la fiche, sous leur nom, une forme de `cite`, leur titre ou leur abrégé). Une forme qui désignerait deux pages dans une même fiche est refusée : écrire le nom complet.
 - `explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus ; `description` : 200 caractères au plus.

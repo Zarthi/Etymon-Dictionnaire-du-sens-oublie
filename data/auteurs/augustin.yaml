@@ -5,7 +5,7 @@ mort: "430"
 description: >-
   Évêque d'Hippone, Père de l'Église latine, auteur des Confessions et de La
   Cité de Dieu.
-tradition: true
+traditions: [ chrétienne ]
 sources:
   - ouvrage: bnf
     entree: cb11889551s

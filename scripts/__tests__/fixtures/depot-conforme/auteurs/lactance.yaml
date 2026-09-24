@@ -1,6 +1,6 @@
 # Auteur fictif, pour les tests uniquement.
 nom: Lactance
-tradition: true
+traditions: [ chrétienne ]
 description: Auteur de test.
 redaction:
   - par: IA

@@ -3,6 +3,7 @@
   import { formesItaliques } from "../lib/etymologie.ts";
   import { auteurs as fichesAuteurs, ouvrages as fichesOuvrages } from "../lib/fiches.ts";
   import { mentionsDe } from "../lib/mentions.ts";
+  import { parTradition } from "../lib/traditions.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
@@ -31,8 +32,8 @@
   const lectures = $derived(fiche.tradition.lectures);
   /** Mots où la tradition parle de celui-ci (l'assemblage ne garde que ceux qui ont des lectures). */
   const ailleurs = $derived(fiche.tradition.renvois);
-  /** Auteurs des lectures, sans doublon, pour l'intitulé replié : « Lactance, Augustin, Isidore de Séville ». */
-  const auteurs = $derived([...new Set(lectures.map((l) => fichesAuteurs.get(l.auteur)?.nom ?? l.auteur))].join(", "));
+  /** Lectures regroupées par tradition, jamais mêlées ; l'intitulé replié nomme les traditions : « juive, chrétienne ». */
+  const groupes = $derived(parTradition(lectures, fichesAuteurs));
   /** Rédaction de la fiche, affichée une fois en pied ; une lecture ne la rappelle que si la sienne diffère. */
   const redactionFiche = $derived(signatureRedaction(fiche.redaction));
   /** Formes étrangères de la fiche, mises en italique dans ses textes (aucune mise en forme dans les données). */
@@ -90,10 +91,13 @@
     <details class="traditions" open={deplierLectures}>
       <summary>
         <span class="intitule">{lectures.length > 1 ? "Lectures traditionnelles" : "Lecture traditionnelle"}</span>
-        <span class="auteurs">{auteurs}</span>
+        <span class="precision">{groupes.map((g) => g.tradition).join(", ")}</span>
       </summary>
-      {#each lectures as lecture, i (i)}
-        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
+      {#each groupes as groupe (groupe.tradition)}
+        {#if groupes.length > 1}<h2 class="tradition">Tradition {groupe.tradition}</h2>{/if}
+        {#each groupe.lectures as lecture, i (i)}
+          <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
+        {/each}
       {/each}
       {#if ailleurs.length > 0}<p class="ailleurs">{@render voir()}</p>{/if}
     </details>
@@ -101,7 +105,7 @@
     <!-- Mot que la tradition n'a pas lu : la même rubrique, qui mène là où elle parle, sans rien lui prêter. -->
     <p class="traditions ligne">
       <span class="intitule">Lectures traditionnelles</span>
-      <span class="auteurs">{@render voir()}</span>
+      <span class="precision">{@render voir()}</span>
     </p>
   {/if}
 
@@ -207,9 +211,16 @@
     text-transform: uppercase;
     color: var(--tradition);
   }
-  .auteurs {
+  .precision {
     font-size: 0.85rem;
     color: var(--texte-discret);
+  }
+  .tradition {
+    margin: 1.2rem 0 0;
+    font-family: var(--police-interface);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--tradition);
   }
   .ligne {
     display: flex;

@@ -6,6 +6,7 @@ import { parse } from "yaml";
 import { z } from "zod";
 import langues from "../data/langues.json" with { type: "json" };
 import themes from "../data/themes.json" with { type: "json" };
+import traditions from "../data/traditions.json" with { type: "json" };
 import {
   LICENCES,
   NATURES,
@@ -135,12 +136,12 @@ const REGLES = [
   "Le fichier d'un mot s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes, dans l'ordre du Littré), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`. Un auteur : `data/auteurs/<nom>.yaml` ; un ouvrage : `data/ouvrages/<abrégé ou titre>.yaml`.",
   "Une forme reconstruite commence par `*` ; une valeur commençant par `*`, contenant `: `, ou une virgule dans `{ … }`, s'écrit entre guillemets.",
   "Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches ; l'adresse d'une entrée se déduit du modèle d'adresse de l'ouvrage ; la translittération du grec se déduit de la forme ; ce qui se calcule (œuvres d'un auteur, mots qu'il a forgés) ne s'écrit pas.",
-  "Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, `tradition: false`, listes vides).",
+  "Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, listes vides).",
   "Toute référence (auteur, ouvrage, doublet) vise une fiche existante ; un renvoi (`renvois`, `tradition.renvois`), une fiche ou un candidat à faire (l'app ne l'affiche qu'une fois la fiche écrite ; vers la tradition, une fois qu'elle a des lectures).",
   "`etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Le maillon du sens premier porte un sens (une composition, le sens littéral de ses éléments) ; au plus un maillon est `premier`.",
   "Translittération : seulement pour une écriture ni latine ni grecque (arabe, hébreu), et alors obligatoire.",
   "`selon` : seulement dans une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.",
-  "Lecture traditionnelle : un auteur de la tradition (`tradition: true`), ses propres œuvres, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).",
+  "Lecture traditionnelle : un auteur de la tradition (`traditions`), sa `tradition` précisée seulement s'il en a plusieurs, ses propres œuvres, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).",
   "`renvois` : ni doublet, ni mot de la famille (une notion voisine, pas une racine commune). `tradition.renvois` : à sens unique, affiché du seul côté de la fiche qui le déclare.",
   "Les textes sont bruts, sans mise en forme : l'app met en italique les formes de la chaîne et pose les liens (mots qui ont une fiche ; auteurs et ouvrages cités par la fiche, sous leur nom, une forme de `cite`, leur titre ou leur abrégé). Une forme qui désignerait deux pages dans une même fiche est refusée : écrire le nom complet.",
   "`explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus ; `description` : 200 caractères au plus.",
@@ -174,6 +175,7 @@ export function genererMarkdown(): string {
     `- \`nature\` : ${NATURES.join(", ")}.`,
     `- \`langue\` (data/langues.json) : ${langues.join(", ")}.`,
     `- \`themes\` (data/themes.json) : ${themes.join(", ")}.`,
+    `- \`traditions\` (data/traditions.json) : ${traditions.join(", ")}.`,
     `- \`licence\` : ${LICENCES.join(", ")}.`,
     `- \`redaction[].par\` : ${REDACTEURS.join(", ")}.`,
     "",
@@ -256,6 +258,7 @@ export function genererPrompt(): string {
     `- \`nature\` : ${NATURES.join(", ")}.`,
     `- \`langue\` : ${langues.join(", ")}.`,
     `- \`themes\` : ${themes.join(", ")}.`,
+    `- \`traditions\` : ${traditions.join(", ")}.`,
     `- Auteurs existants (identifiant : nom, formes de citation) : ${auteurs.map((a) => `${a.id} (${[a.nom, ...((a.cite as string[] | undefined) ?? [])].join(", ")})`).join(" ; ")}.`,
     `- Ouvrages existants : ${ouvrages.map((o) => `${o.id} (${o.titre})`).join(", ")}.`,
     "",
