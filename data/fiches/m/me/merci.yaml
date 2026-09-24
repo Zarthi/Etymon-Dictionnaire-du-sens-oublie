@@ -10,18 +10,20 @@ explication: >
 incertain: false
 racine: null
 doublets: []
-famille: [marchand]
-themes: [argent, parole]
+famille: [ marchand ]
+themes: [ argent, parole ]
 sources:
   - ouvrage: Littré
     entree: merci
-    url: "https://www.littre.org/definition/merci"
+    url: https://www.littre.org/definition/merci
   - ouvrage: Gaffiot
     entree: merces
-    url: "https://gaffiot.fr/#merces"
+    url: https://gaffiot.fr/#merces
   - ouvrage: TLFi
     entree: merci
-    url: "https://www.cnrtl.fr/etymologie/merci"
+    url: https://www.cnrtl.fr/etymologie/merci
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

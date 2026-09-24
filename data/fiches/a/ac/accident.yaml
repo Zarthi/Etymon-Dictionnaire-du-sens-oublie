@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: accident
     url: https://www.littre.org/definition/accident
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

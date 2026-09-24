@@ -9,18 +9,20 @@ explication: >
 incertain: true
 racine: null
 doublets: []
-famille: [captif]
-themes: [corps]
+famille: [ captif ]
+themes: [ corps ]
 sources:
   - ouvrage: Littré
     entree: chétif
-    url: "https://www.littre.org/definition/ch%C3%A9tif"
+    url: https://www.littre.org/definition/ch%C3%A9tif
   - ouvrage: Gaffiot
     entree: captivus
-    url: "https://gaffiot.fr/#captivus"
+    url: https://gaffiot.fr/#captivus
   - ouvrage: TLFi
     entree: chétif
-    url: "https://www.cnrtl.fr/etymologie/ch%C3%A9tif"
+    url: https://www.cnrtl.fr/etymologie/ch%C3%A9tif
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

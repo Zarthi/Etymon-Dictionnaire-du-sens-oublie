@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: analyse
     url: https://www.littre.org/definition/analyse
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

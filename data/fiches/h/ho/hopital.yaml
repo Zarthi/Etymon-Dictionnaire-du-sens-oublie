@@ -8,19 +8,21 @@ explication: >
   partage son origine avec hôtel, forme populaire du même mot latin.
 incertain: false
 racine: null
-doublets: [hotel]
-famille: [hôte]
-themes: [maison, santé]
+doublets: [ hotel ]
+famille: [ hôte ]
+themes: [ maison, santé ]
 sources:
   - ouvrage: Littré
     entree: hôpital
-    url: "https://www.littre.org/definition/h%C3%B4pital"
+    url: https://www.littre.org/definition/h%C3%B4pital
   - ouvrage: Gaffiot
     entree: hospitalis
-    url: "https://gaffiot.fr/#hospitalis"
+    url: https://gaffiot.fr/#hospitalis
   - ouvrage: TLFi
     entree: hôpital
-    url: "https://www.cnrtl.fr/etymologie/h%C3%B4pital"
+    url: https://www.cnrtl.fr/etymologie/h%C3%B4pital
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

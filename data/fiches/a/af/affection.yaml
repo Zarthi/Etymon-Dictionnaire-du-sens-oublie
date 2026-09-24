@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: affection
     url: https://www.littre.org/definition/affection
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

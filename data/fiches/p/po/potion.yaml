@@ -8,19 +8,21 @@ explication: >
   poison. Il a gardé le sens de breuvage, spécialisé en remède.
 incertain: false
 racine: null
-doublets: [poison]
+doublets: [ poison ]
 famille: []
-themes: [santé]
+themes: [ santé ]
 sources:
   - ouvrage: Littré
     entree: potion
-    url: "https://www.littre.org/definition/potion"
+    url: https://www.littre.org/definition/potion
   - ouvrage: Gaffiot
     entree: potio
-    url: "https://gaffiot.fr/#potio"
+    url: https://gaffiot.fr/#potio
   - ouvrage: TLFi
     entree: potion
-    url: "https://www.cnrtl.fr/etymologie/potion"
+    url: https://www.cnrtl.fr/etymologie/potion
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

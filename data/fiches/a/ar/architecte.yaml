@@ -19,6 +19,8 @@ sources:
   - ouvrage: Littré
     entree: architecte
     url: https://www.littre.org/definition/architecte
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

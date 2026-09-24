@@ -8,19 +8,21 @@ explication: >
   forme populaire ; hôpital, refait sur le latin, en est l'autre héritier.
 incertain: false
 racine: null
-doublets: [hopital]
-famille: [hôte]
-themes: [maison]
+doublets: [ hopital ]
+famille: [ hôte ]
+themes: [ maison ]
 sources:
   - ouvrage: Littré
     entree: hôtel
-    url: "https://www.littre.org/definition/h%C3%B4tel"
+    url: https://www.littre.org/definition/h%C3%B4tel
   - ouvrage: Gaffiot
     entree: hospitalis
-    url: "https://gaffiot.fr/#hospitalis"
+    url: https://gaffiot.fr/#hospitalis
   - ouvrage: TLFi
     entree: hôtel
-    url: "https://www.cnrtl.fr/etymologie/h%C3%B4tel"
+    url: https://www.cnrtl.fr/etymologie/h%C3%B4tel
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

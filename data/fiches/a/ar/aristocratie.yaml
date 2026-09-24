@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: aristocratie
     url: https://www.littre.org/definition/aristocratie
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

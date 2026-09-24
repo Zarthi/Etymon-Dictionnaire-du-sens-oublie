@@ -12,16 +12,18 @@ racine:
   forme: ṣifr
   langue: arabe
   sens: vide
-doublets: [chiffre]
+doublets: [ chiffre ]
 famille: []
-themes: [savoir]
+themes: [ savoir ]
 sources:
   - ouvrage: Littré
     entree: zéro
-    url: "https://www.littre.org/definition/z%C3%A9ro"
+    url: https://www.littre.org/definition/z%C3%A9ro
   - ouvrage: TLFi
     entree: zéro
-    url: "https://www.cnrtl.fr/etymologie/z%C3%A9ro"
+    url: https://www.cnrtl.fr/etymologie/z%C3%A9ro
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

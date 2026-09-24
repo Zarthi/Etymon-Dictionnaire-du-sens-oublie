@@ -12,21 +12,23 @@ racine:
   langue: grec ancien
   sens: capable de juger, de décider
 doublets: []
-famille: [crise]
-themes: [esprit, savoir]
+famille: [ crise ]
+themes: [ esprit, savoir ]
 sources:
   - ouvrage: Littré
     entree: critique
-    url: "https://www.littre.org/definition/critique"
+    url: https://www.littre.org/definition/critique
   - ouvrage: Gaffiot
     entree: criticus
-    url: "https://gaffiot.fr/#criticus"
+    url: https://gaffiot.fr/#criticus
   - ouvrage: Bailly
     entree: κριτικός
-    url: "https://bailly.app/kritikos"
+    url: https://bailly.app/kritikos
   - ouvrage: TLFi
     entree: critique
-    url: "https://www.cnrtl.fr/etymologie/critique/nom"
+    url: https://www.cnrtl.fr/etymologie/critique/nom
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: altérer
     url: https://www.littre.org/definition/alt%C3%A9rer
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

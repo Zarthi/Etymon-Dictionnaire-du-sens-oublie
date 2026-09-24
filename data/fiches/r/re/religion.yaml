@@ -11,19 +11,23 @@ incertain: true
 racine: null
 doublets: []
 famille: []
-themes: [religion]
+themes: [ religion ]
 sources:
   - ouvrage: Littré
     entree: religion
-    url: "https://www.littre.org/definition/religion"
+    url: https://www.littre.org/definition/religion
   - ouvrage: Gaffiot
     entree: religio
-    url: "https://gaffiot.fr/#religio"
+    url: https://gaffiot.fr/#religio
   - ouvrage: TLFi
     entree: religion
-    url: "https://www.cnrtl.fr/etymologie/religion"
+    url: https://www.cnrtl.fr/etymologie/religion
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle:
-  texte: "Lactance fait venir religio de religare, relier : l'homme est lié à Dieu par le lien de la piété. Il écarte expressément l'explication de Cicéron par relegere."
+  texte: "Lactance fait venir religio de religare, relier : l'homme est lié à Dieu
+    par le lien de la piété. Il écarte expressément l'explication de Cicéron par
+    relegere."
   auteur: Lactance
   source: Institutions divines, IV, 28, 3
 statut: brouillon

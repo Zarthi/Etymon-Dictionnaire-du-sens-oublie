@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: amuser
     url: https://www.littre.org/definition/amuser
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

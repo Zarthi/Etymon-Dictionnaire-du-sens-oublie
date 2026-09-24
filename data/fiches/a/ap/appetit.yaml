@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: appétit
     url: https://www.littre.org/definition/app%C3%A9tit
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

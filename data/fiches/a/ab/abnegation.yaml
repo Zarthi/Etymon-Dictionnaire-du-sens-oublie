@@ -16,6 +16,8 @@ sources:
   - ouvrage: Littré
     entree: abnégation
     url: https://www.littre.org/definition/abn%C3%A9gation
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

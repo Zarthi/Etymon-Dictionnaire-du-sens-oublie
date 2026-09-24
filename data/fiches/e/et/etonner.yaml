@@ -11,17 +11,19 @@ incertain: false
 racine: null
 doublets: []
 famille: []
-themes: [émotions]
+themes: [ émotions ]
 sources:
   - ouvrage: Littré
     entree: étonner
-    url: "https://www.littre.org/definition/%C3%A9tonner"
+    url: https://www.littre.org/definition/%C3%A9tonner
   - ouvrage: Gaffiot
     entree: adtono
-    url: "https://gaffiot.fr/#adtono"
+    url: https://gaffiot.fr/#adtono
   - ouvrage: TLFi
     entree: étonner
-    url: "https://www.cnrtl.fr/etymologie/%C3%A9tonner"
+    url: https://www.cnrtl.fr/etymologie/%C3%A9tonner
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

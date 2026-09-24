@@ -9,18 +9,20 @@ explication: >
 incertain: true
 racine: null
 doublets: []
-famille: [ennuyer]
-themes: [émotions]
+famille: [ ennuyer ]
+themes: [ émotions ]
 sources:
   - ouvrage: Littré
     entree: ennui
-    url: "https://www.littre.org/definition/ennui"
+    url: https://www.littre.org/definition/ennui
   - ouvrage: Gaffiot
     entree: odium
-    url: "https://gaffiot.fr/#odium"
+    url: https://gaffiot.fr/#odium
   - ouvrage: TLFi
     entree: ennui
-    url: "https://www.cnrtl.fr/etymologie/ennui"
+    url: https://www.cnrtl.fr/etymologie/ennui
+  - ouvrage: IA
+    entree: Claude Opus 5.5
 lectureTraditionnelle: null
 statut: brouillon
 historique: []

@@ -18,6 +18,8 @@ sources:
   - ouvrage: Littré
     entree: austère
     url: https://www.littre.org/definition/aust%C3%A8re
+  - ouvrage: IA
+    entree: Claude Fable 5.1
 lectureTraditionnelle: null
 statut: brouillon
 historique: []
