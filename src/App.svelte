@@ -6,6 +6,7 @@
   import { chargerFiche, entrees } from "./lib/fiches.ts";
   import { dateDuJour, motAuHasard, motDuJour } from "./lib/motDuJour.ts";
   import { ecrireParametres, lireParametres } from "./lib/stockage.ts";
+  import { tick } from "svelte";
 
   /** Vue affichée, déduite de l'adresse : `#/`, `#/mot/<id>`, `#/parametres`. */
   type Vue = { nom: "accueil" } | { nom: "fiche"; id: string } | { nom: "parametres" };
@@ -24,18 +25,57 @@
   const ficheDuJour = duJour ? chargerFiche(duJour.id) : Promise.resolve(undefined);
   const ficheOuverte = $derived(vue.nom === "fiche" ? chargerFiche(vue.id) : undefined);
 
+  /** Adresse d'une fiche existante ; rien pour un mot qui n'a pas encore sa fiche. */
+  const idsPublies = new Set(entrees.map((e) => e.id));
+  const lienVers = (id: string) => (idsPublies.has(id) ? `#/mot/${encodeURIComponent(id)}` : undefined);
+
   $effect(() => {
     ecrireParametres(parametres);
   });
 
+  // Historique de navigation. L'API Navigation (Chrome, Edge) dit s'il y a une page avant ou
+  // après ; ailleurs, les boutons restent actifs et le navigateur fait ce qu'il peut.
+  const nav = typeof navigation === "undefined" ? undefined : navigation;
+  let peutReculer = $state(nav ? nav.canGoBack : true);
+  let peutAvancer = $state(nav ? nav.canGoForward : true);
+
+  /** Position de défilement de chaque page visitée, pour la retrouver en revenant. */
+  const positions = new Map<string, number>();
+  let retourOuAvance = false;
+  if (nav) history.scrollRestoration = "manual";
+
   $effect(() => {
-    const suivre = () => {
-      vue = lireVue(location.hash);
-      window.scrollTo(0, 0);
+    const avantNavigation = (evenement: NavigateEvent) => {
+      if (nav?.currentEntry) positions.set(nav.currentEntry.key, window.scrollY);
+      retourOuAvance = evenement.navigationType === "traverse";
     };
+    const suivre = async () => {
+      vue = lireVue(location.hash);
+      if (nav) {
+        peutReculer = nav.canGoBack;
+        peutAvancer = nav.canGoForward;
+      }
+      const cle = nav?.currentEntry?.key;
+      const position = retourOuAvance && cle ? (positions.get(cle) ?? 0) : 0;
+      retourOuAvance = false;
+      // La fiche se charge à la demande : attendre qu'elle soit affichée avant de défiler.
+      if (vue.nom === "fiche") await ficheOuverte;
+      await tick();
+      window.scrollTo(0, position);
+    };
+    nav?.addEventListener("navigate", avantNavigation);
     window.addEventListener("hashchange", suivre);
-    return () => window.removeEventListener("hashchange", suivre);
+    return () => {
+      nav?.removeEventListener("navigate", avantNavigation);
+      window.removeEventListener("hashchange", suivre);
+    };
   });
+
+  /** Revenir là où l'on était ; à défaut, à l'accueil. */
+  function revenir() {
+    if (peutReculer && history.length > 1) history.back();
+    else location.hash = "/";
+  }
 
   function ouvrir(id: string) {
     location.hash = `/mot/${encodeURIComponent(id)}`;
@@ -52,7 +92,13 @@
 </svelte:head>
 
 <header>
-  <a class="titre" href="#/">Étymon</a>
+  <div class="gauche">
+    <nav class="historique" aria-label="Historique">
+      <button type="button" onclick={() => history.back()} disabled={!peutReculer} aria-label="Page précédente" title="Page précédente">←</button>
+      <button type="button" onclick={() => history.forward()} disabled={!peutAvancer} aria-label="Page suivante" title="Page suivante">→</button>
+    </nav>
+    <a class="titre" href="#/">Étymon</a>
+  </div>
   <nav>
     <button type="button" onclick={auHasard} disabled={entrees.length === 0}>Au hasard</button>
     <a href="#/parametres" aria-current={vue.nom === "parametres" ? "page" : undefined}>Paramètres</a>
@@ -61,7 +107,7 @@
 
 <main>
   {#if vue.nom === "parametres"}
-    <Parametres bind:parametres />
+    <Parametres bind:parametres onRetour={revenir} />
   {:else}
     <Recherche {entrees} onChoisir={ouvrir} />
 
@@ -69,7 +115,7 @@
       {#if vue.nom === "fiche"}
         {#await ficheOuverte then fiche}
           {#if fiche}
-            <Fiche {fiche} lectureTraditionnelle={parametres.lectureTraditionnelle} />
+            <Fiche {fiche} lectureTraditionnelle={parametres.lectureTraditionnelle} {lienVers} />
           {:else}
             <p class="message">Ce mot n'a pas (encore) de fiche.</p>
           {/if}
@@ -102,6 +148,18 @@
     gap: 1rem;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+  .gauche {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+  .historique {
+    gap: 0.35rem;
+  }
+  .historique button {
+    font-size: 1.1rem;
+    line-height: 1;
   }
   .titre {
     font-family: var(--police-fiche);

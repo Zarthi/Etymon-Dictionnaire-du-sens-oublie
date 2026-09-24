@@ -1,10 +1,11 @@
 <script lang="ts">
   import type { Parametres } from "../lib/stockage.ts";
 
-  let { parametres = $bindable() }: { parametres: Parametres } = $props();
+  let { parametres = $bindable(), onRetour }: { parametres: Parametres; onRetour: () => void } = $props();
 </script>
 
 <section>
+  <button type="button" class="retour" onclick={onRetour}>← Retour</button>
   <h1>Paramètres</h1>
 
   <label class="option">
@@ -30,6 +31,19 @@
 </section>
 
 <style>
+  .retour {
+    display: inline-block;
+    width: auto;
+    margin: 0 0 1rem;
+    padding: 0;
+    border: 0;
+    font-size: 0.95rem;
+    color: var(--texte-discret);
+    cursor: pointer;
+  }
+  .retour:hover {
+    color: var(--accent);
+  }
   h1 {
     margin: 0 0 1.25rem;
     font-family: var(--police-fiche);
