@@ -39,7 +39,6 @@ tradition:
         soin des rites que Cicéron y voyait.
       citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa
         religio nomen accepit, non ut Cicero interpretatus est a relegendo"
-      auteur: lactance
       hypothese: religare
       sources:
         - ouvrage: institutions-divines
@@ -49,7 +48,6 @@ tradition:
         nouveau : la religion est ce choix renouvelé."
       citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) —
         hunc ergo religentes, unde et religio dicta perhibetur
-      auteur: augustin
       sources:
         - ouvrage: la-cite-de-dieu
           entree: X, 3
@@ -59,7 +57,6 @@ tradition:
       citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
         cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,
         id est eligendo
-      auteur: isidore-de-seville
       hypothese: religare
       sources:
         - ouvrage: etymologies

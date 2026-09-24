@@ -193,12 +193,21 @@ export const schemaLectureTraditionnelle = z
       .trim()
       .min(1)
       .describe("Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe)."),
-    auteur: identifiant("Auteur de la tradition (data/auteurs, avec ses traditions)."),
+    auteur: identifiant(
+      "Celui dont la parole est rapportée, seulement s'il n'est pas l'auteur de l'œuvre citée (Resh Lakish dans le Talmud, Varron chez Augustin) : sinon la voix se déduit de l'œuvre, ou est l'œuvre elle-même (l'Écriture).",
+    ).optional(),
     tradition: tradition
       .optional()
-      .describe("Tradition dans laquelle parle le passage ; seulement si l'auteur en a plusieurs (sinon, elle se déduit de l'auteur)."),
+      .describe(
+        "Tradition dans laquelle parle le passage ; seulement si sa voix en a plusieurs (Guénon). L'Écriture reçue en commun (Bible hébraïque) garde toutes les siennes.",
+      ),
+    premier: z
+      .literal(true)
+      .optional()
+      .describe("Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne)."),
+    sens: sens.optional().describe("Sens que le texte d'origine donne au mot ; seulement pour la lecture premier."),
     hypothese: z.string().min(1).optional().describe("Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter."),
-    sources: z.array(schemaSourceLecture).min(1).describe("Œuvres de l'auteur consultées."),
+    sources: z.array(schemaSourceLecture).min(1).describe("Passages cités, d'une même voix : œuvres de l'auteur, œuvre collective qui rapporte sa parole, ou Écriture."),
     redaction: z.array(schemaRedaction).min(1).optional().describe("Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche."),
   })
   .strict()
@@ -239,8 +248,16 @@ const objetFiche = z
       .string()
       .trim()
       .min(1)
+      .optional()
       .describe(
-        "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens premier. Texte brut : les formes de la fiche y sont mises en italique par l'app.",
+        "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens premier. Texte brut : les formes de la fiche y sont mises en italique par l'app. Obligatoire, sauf pour un mot sacré, qui n'en a pas.",
+      ),
+    sacre: z
+      .array(tradition)
+      .min(1)
+      .optional()
+      .describe(
+        "Mot sacré par origine (né dans l'ordre sacré : manne, sabbat), et les traditions où il l'est ; pas un mot consacré (église, ange, profanes à l'origine). Pas de partie profane : la chaîne ne garde que les formes, le sens en tête vient du texte d'origine (lecture premier) ou, s'il ne l'explique pas, du sens du mot dans sa langue.",
       ),
     ecartees: z
       .array(
@@ -287,7 +304,8 @@ export const schemaFiche = objetFiche.refine(sourcee, MESSAGE_SOURCE).describe("
  * du Littré quand elle manque.
  */
 export const schemaEntreeRedaction = objetFiche
-  .omit(CHAMPS_SOCLE)
+  // Un mot sacré ne se rédige pas de mémoire en lot : il se rédige à part, texte d'origine sous les yeux.
+  .omit({ ...CHAMPS_SOCLE, sacre: true })
   .extend({
     nature: objetFiche.shape.nature.optional().describe("Catégorie(s) grammaticale(s) ; tirée du Littré si absente."),
     tradition: objetTradition.omit({ lectures: true }).strict().optional().describe("Les mots où la tradition parle de celui-ci ; les lectures s'écrivent à part."),
@@ -338,7 +356,12 @@ const objetOuvrage = z
       .optional()
       .describe("Nom court sous lequel on le cite (Littré, Gaffiot) ; le nom du fichier en est la forme sans accent, ou celle du titre."),
     titreOriginal: z.string().min(1).optional().describe("Titre d'origine, s'il diffère (Divinae institutiones)."),
-    auteur: identifiant("Auteur (data/auteurs) ; absent pour une œuvre collective (TLFi, Rituel romain).").optional(),
+    auteur: identifiant("Auteur (data/auteurs) ; absent pour une œuvre collective (TLFi, Talmud) ou l'Écriture, traductions comprises (Vulgate).").optional(),
+    traditions: z
+      .array(tradition)
+      .min(1)
+      .optional()
+      .describe("Traditions qui reçoivent une œuvre sans auteur (Talmud : juive ; Bible hébraïque : juive et chrétienne) ; une œuvre d'auteur tient les siennes de lui."),
     date: dateHistorique.optional(),
     edition: z.string().min(1).optional().describe("Édition réellement consultée (révision de Gérard Gréco, 2016)."),
     licence: z.enum(LICENCES).describe("Ce qu'Étymon a le droit d'en faire."),

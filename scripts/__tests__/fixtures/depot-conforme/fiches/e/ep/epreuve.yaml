@@ -25,7 +25,6 @@ tradition:
   lectures:
     - texte: Lecture fictive, pour les tests.
       citation: probatio ficta
-      auteur: lactance
       sources:
         - ouvrage: institutions-divines
           entree: livre I

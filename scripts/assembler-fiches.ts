@@ -2,6 +2,7 @@ import { mkdir, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { prefixe } from "../src/lib/decoupage.ts";
+import { voixDe } from "../src/lib/traditions.ts";
 import type { Auteur, AuteurAssemble, EntreeIndex, FicheIdentifiee, MotCite, Ouvrage, OuvrageAssemble } from "../src/lib/types.ts";
 import { arreterSiErreurs, validerDepot } from "./valider-fiches.ts";
 
@@ -49,6 +50,7 @@ export function assemblerReferences(
   auteurs: Auteur[],
   ouvrages: Ouvrage[],
 ): { auteurs: AuteurAssemble[]; ouvrages: OuvrageAssemble[] } {
+  const parOuvrage = new Map(ouvrages.map((o) => [o.id, o]));
   const mots = (critere: (f: FicheIdentifiee) => boolean): MotCite[] =>
     fiches
       .filter(critere)
@@ -65,7 +67,7 @@ export function assemblerReferences(
       oeuvres: ouvrages.filter((o) => o.auteur === a.id).map((o) => o.id).sort(),
       forges: mots((f) => maillons(f).some((m) => m.forge?.par.includes(a.id))),
       hypotheses: mots((f) => tenants(f).includes(a.id)),
-      lectures: mots((f) => f.tradition.lectures.some((l) => l.auteur === a.id)),
+      lectures: mots((f) => f.tradition.lectures.some((l) => voixDe(l, parOuvrage).auteur === a.id)),
       issus: mots((f) => maillons(f).some((m) => m.personne === a.id)),
     })),
     ouvrages: ouvrages.sort(parId).map((o) => ({

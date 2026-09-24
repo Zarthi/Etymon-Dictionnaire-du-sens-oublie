@@ -1,0 +1,16 @@
+titre: Vulgate
+titreOriginal: Biblia Sacra Vulgata
+edition: Vulgate clémentine (1592), consultée sur Wikisource en latin
+licence: CC BY-SA
+traditions: [ chrétienne ]
+texte: https://la.wikisource.org/wiki/Vulgata_Clementina
+description: >-
+  La Bible en latin, traduite pour l'essentiel par Jérôme à la fin du IVe siècle ;
+  le texte de l'Église latine, révisé en 1592.
+sources:
+  - ouvrage: bnf
+    entree: cb12047020k
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

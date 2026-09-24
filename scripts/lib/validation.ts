@@ -112,6 +112,8 @@ function verifierTextes(textes: [string, string | undefined][], ajouter: (champ:
   for (const [champ, texte] of textes) {
     if (texte === undefined) continue;
     for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
+    // Le Nom divin s'écrit comme le texte l'écrit (Yah) : ni traduit, ni revocalisé à la manière tardive de « Jéhovah ».
+    if (/[JI][ée]hovah/i.test(texte)) ajouter(champ, "Nom divin revocalisé (Jéhovah) : l'écrire comme le texte (Yah, YHWH)");
   }
 }
 
@@ -142,6 +144,10 @@ export function validerOuvrages(sources: FichierSource[], auteurs: Map<string, A
     const ajouter = (champ: string, regle: string) => erreurs.push({ fichier: source.fichier, champ, regle });
     verifierNomPlat(source.fichier, lu.id, slug(lu.valeur.abrege ?? lu.valeur.titre), ajouter);
     if (lu.valeur.auteur !== undefined && !auteurs.has(lu.valeur.auteur)) ajouter("auteur", `auteur « ${lu.valeur.auteur} » sans fiche (data/auteurs)`);
+    // Une œuvre d'auteur tient ses traditions de lui : les écrire deux fois, c'est risquer qu'elles divergent.
+    if (lu.valeur.auteur !== undefined && lu.valeur.traditions !== undefined) {
+      ajouter("traditions", "se déduisent de l'auteur : seulement pour une œuvre sans auteur (Talmud, Écriture)");
+    }
     verifierTextes([["description", lu.valeur.description], ...lu.valeur.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note])], ajouter);
     ouvrages.push({ id: lu.id, ...lu.valeur });
   }
@@ -183,21 +189,42 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     ajouter("renvois", `« ${renvoi} » est un doublet ou de la famille : pas un renvoi`);
   }
 
-  const phrases = compterPhrases(fiche.explication);
-  if (phrases < 1 || phrases > PHRASES_MAX_EXPLICATION) {
-    ajouter("explication", `1 à ${PHRASES_MAX_EXPLICATION} phrases terminées par une ponctuation (${phrases} trouvée(s))`);
+  // Un mot sacré n'a pas de partie profane : ni explication, ni sens de chaîne, sauf celui de la
+  // langue sacrée quand le texte d'origine n'explique pas le mot (alléluia).
+  const lecturePremiere = fiche.tradition.lectures.filter((l) => l.premier);
+  if (fiche.sacre !== undefined) {
+    if (fiche.explication !== undefined) ajouter("explication", "un mot sacré n'a pas d'explication profane : la retirer");
+    const avecSens = fiche.etymologie.filter((m) => m.sens !== undefined).length;
+    if (lecturePremiere.length > 0 && avecSens > 0) {
+      ajouter("etymologie", "mot sacré dont le texte d'origine donne le sens (lecture premier) : les maillons n'ont pas de sens");
+    } else if (lecturePremiere.length === 0 && avecSens !== 1) {
+      ajouter("etymologie", "mot sacré : le sens vient du texte d'origine (lecture premier), sinon d'un seul maillon, celui de la langue sacrée");
+    }
+  } else if (fiche.explication === undefined) {
+    ajouter("explication", "obligatoire (seul un mot sacré n'en a pas)");
+  } else {
+    const phrases = compterPhrases(fiche.explication);
+    if (phrases < 1 || phrases > PHRASES_MAX_EXPLICATION) {
+      ajouter("explication", `1 à ${PHRASES_MAX_EXPLICATION} phrases terminées par une ponctuation (${phrases} trouvée(s))`);
+    }
+    const longueur = [...fiche.explication].length;
+    if (longueur > LONGUEUR_MAX_EXPLICATION) {
+      ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
+    }
   }
-  const longueur = [...fiche.explication].length;
-  if (longueur > LONGUEUR_MAX_EXPLICATION) {
-    ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
-  }
+  if (lecturePremiere.length > 1) ajouter("tradition.lectures", "une seule lecture premier : celle du texte d'origine");
+  fiche.tradition.lectures.forEach((l, i) => {
+    if (l.premier && fiche.sacre === undefined) ajouter(`tradition.lectures.${i}.premier`, "seulement pour un mot sacré (sacre)");
+    if (l.premier && l.sens === undefined) ajouter(`tradition.lectures.${i}.sens`, "la lecture premier donne le sens affiché en tête");
+    if (!l.premier && l.sens !== undefined) ajouter(`tradition.lectures.${i}.sens`, "seulement pour la lecture premier");
+  });
 
   // La chaîne : un seul sens premier ; translittération seulement là où elle ne se déduit pas ; références.
-  const sens: [string, string | undefined][] = [];
+  const sens: [string, string | undefined][] = fiche.tradition.lectures.map((l, i): [string, string | undefined] => [`tradition.lectures.${i}.sens`, l.sens]);
   const premiers = fiche.etymologie.filter((m) => m.premier).length;
   if (premiers > 1) ajouter("etymologie", "un seul maillon peut porter premier: true");
   const premier = fiche.etymologie[indexPremier(fiche.etymologie)];
-  if (premier.sens === undefined) {
+  if (premier.sens === undefined && fiche.sacre === undefined) {
     ajouter("etymologie", "aucun maillon ne porte de sens (une composition porte le sens littéral de ses éléments : « esprit fendu »)");
   }
   const lire = (champ: string, f: { forme: string; translitteration?: string }) => {
@@ -268,29 +295,55 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     ajouter("(textes)", `« ${forme} » désigne plusieurs auteurs ou ouvrages cités par la fiche : écrire le nom complet`);
   }
 
-  // Lectures : un auteur de la tradition, sa tradition (précisée s'il en a plusieurs), ses propres œuvres
-  // ou une œuvre collective qui rapporte ses paroles (le Talmud), une hypothèse de la chaîne.
+  // Lectures : une voix de la tradition, déduite de l'œuvre (auteur écrit seulement si la parole
+  // rapportée n'est pas celle de l'auteur de l'œuvre), une seule voix par lecture, une tradition
+  // précisée seulement si la voix en a plusieurs (sauf l'Écriture reçue en commun), une hypothèse
+  // de la chaîne ; pour un mot sacré, des traditions où il l'est.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
   fiche.tradition.lectures.forEach((l, i) => {
     const c = `tradition.lectures.${i}`;
-    const signataire = ref.auteurs.get(l.auteur);
-    if (!signataire) ajouter(`${c}.auteur`, `auteur « ${l.auteur} » sans fiche (data/auteurs)`);
-    else if (!signataire.traditions) ajouter(`${c}.auteur`, `${signataire.nom} n'est pas un auteur de la tradition (traditions)`);
-    else if (l.tradition === undefined && signataire.traditions.length > 1) {
-      ajouter(`${c}.tradition`, `${signataire.nom} parle dans plusieurs traditions : préciser laquelle (${signataire.traditions.join(", ")})`);
-    } else if (l.tradition !== undefined && signataire.traditions.length === 1) {
-      ajouter(`${c}.tradition`, `se déduit de l'auteur (${signataire.traditions[0]}) : ne pas l'écrire`);
-    } else if (l.tradition !== undefined && !signataire.traditions.includes(l.tradition)) {
-      ajouter(`${c}.tradition`, `${signataire.nom} ne parle pas dans la tradition ${l.tradition}`);
+    const oeuvres = l.sources.map((s) => ref.ouvrages.get(s.ouvrage));
+    l.sources.forEach((s, j) => {
+      if (!oeuvres[j]) ajouter(`${c}.sources.${j}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
+    });
+    if (oeuvres.some((o) => !o)) return;
+    const auteursDesOeuvres = new Set(oeuvres.map((o) => o!.auteur));
+    if (l.auteur === undefined && auteursDesOeuvres.size > 1) {
+      return ajouter(`${c}.sources`, "une lecture a une seule voix : des œuvres d'auteurs différents font deux lectures");
+    }
+    if (l.auteur !== undefined && auteursDesOeuvres.has(l.auteur)) {
+      ajouter(`${c}.auteur`, "se déduit de l'œuvre : ne l'écrire que pour une parole rapportée par une autre voix");
+    }
+    const voixAuteur = l.auteur ?? oeuvres[0]!.auteur;
+    const auteur = voixAuteur !== undefined ? ref.auteurs.get(voixAuteur) : undefined;
+    if (voixAuteur !== undefined && !auteur) return ajouter(`${c}.auteur`, `auteur « ${voixAuteur} » sans fiche (data/auteurs)`);
+    const nomVoix = auteur?.nom ?? oeuvres[0]!.titre;
+    const siennes = (auteur ? auteur.traditions : oeuvres[0]!.traditions) ?? [];
+    if (siennes.length === 0) return ajouter(`${c}.auteur`, `${nomVoix} n'est pas une voix de la tradition (traditions)`);
+    // Une parole rapportée dans une œuvre sans auteur (Resh Lakish dans le Talmud) est de la tradition de l'œuvre.
+    const recueil = l.auteur !== undefined && oeuvres[0]!.auteur === undefined ? oeuvres[0]!.traditions : undefined;
+    if (recueil && !siennes.some((t) => recueil.includes(t))) {
+      ajouter(`${c}.auteur`, `${nomVoix} ne parle pas dans la tradition de « ${oeuvres[0]!.titre} » (${recueil.join(", ")})`);
+    }
+    if (l.tradition === undefined && siennes.length > 1 && auteur) {
+      ajouter(`${c}.tradition`, `${nomVoix} parle dans plusieurs traditions : préciser laquelle (${siennes.join(", ")})`);
+    } else if (l.tradition !== undefined && siennes.length === 1) {
+      ajouter(`${c}.tradition`, `se déduit de la voix (${siennes[0]}) : ne pas l'écrire`);
+    } else if (l.tradition !== undefined && !siennes.includes(l.tradition)) {
+      ajouter(`${c}.tradition`, `${nomVoix} ne parle pas dans la tradition ${l.tradition}`);
+    }
+    const traditions = l.tradition !== undefined ? [l.tradition] : siennes;
+    if (fiche.sacre !== undefined) {
+      // Le texte d'origine est reçu par toutes les traditions où le mot est sacré ; une autre lecture parle dans l'une d'elles.
+      if (l.premier && !fiche.sacre.every((t) => traditions.includes(t))) {
+        ajouter(`${c}.premier`, `le texte d'origine doit être reçu par toutes les traditions du mot (${fiche.sacre.join(", ")})`);
+      } else if (!l.premier && !traditions.some((t) => fiche.sacre!.includes(t))) {
+        ajouter(`${c}`, `lecture hors des traditions où le mot est sacré (${fiche.sacre.join(", ")})`);
+      }
     }
     if (l.hypothese !== undefined && !hypotheses.has(l.hypothese)) {
       ajouter(`${c}.hypothese`, `« ${l.hypothese} » n'est pas une hypothèse de la chaîne (alternatives)`);
     }
-    l.sources.forEach((s, j) => {
-      const oeuvre = ref.ouvrages.get(s.ouvrage);
-      if (!oeuvre) ajouter(`${c}.sources.${j}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
-      else if (oeuvre.auteur !== undefined && oeuvre.auteur !== l.auteur) ajouter(`${c}.sources.${j}.ouvrage`, `« ${oeuvre.titre} » n'est pas une œuvre de ${signataire?.nom ?? l.auteur}`);
-    });
   });
 
   return erreurs;

@@ -1,0 +1,32 @@
+mot: sabbat
+nature: [ nom masculin ]
+sacre: [ juive ]
+etymologie:
+  - forme: sabbatum
+    langue: latin ecclésiastique
+  - forme: σάββατον
+    langue: grec ancien
+  - forme: שַׁבָּת
+    translitteration: šabbāt
+    langue: hébreu
+themes: [ religion, temps ]
+tradition:
+  lectures:
+    - texte: Dieu bénit le septième jour et le sanctifia, parce qu'en ce jour il cessa
+        toute l'œuvre qu'il avait faite.
+      citation: ויברך אלהים את־יום השביעי ויקדש אתו כי בו שבת מכל־מלאכתו
+      premier: true
+      sens: cesser
+      sources:
+        - ouvrage: bible-hebraique
+          entree: Genèse 2, 3
+          url: https://he.wikisource.org/wiki/בראשית_ב
+sources:
+  - ouvrage: littre
+    entree: sabbat
+  - ouvrage: tlfi
+    entree: sabbat
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

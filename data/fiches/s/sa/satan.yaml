@@ -26,6 +26,14 @@ tradition:
         - ouvrage: talmud-de-babylone
           entree: Baba Batra 16a
           url: https://he.wikisource.org/wiki/בבא_בתרא_טז_א
+    - texte: Satan est le grand dragon, le serpent ancien, appelé aussi le diable, qui
+        séduit toute la terre.
+      citation: Et projectus est draco ille magnus, serpens antiquus, qui vocatur diabolus,
+        et Satanas
+      sources:
+        - ouvrage: vulgate
+          entree: Apocalypse 12, 9
+          url: https://la.wikisource.org/wiki/Vulgata_Clementina/Apocalypsis
     - texte: Satan signifie l'adversaire, ennemi de la vérité qui s'oppose sans cesse
         aux vertus des saints, et le transgresseur, qui n'est pas demeuré dans la
         vérité où il avait été créé.
@@ -33,7 +41,6 @@ tradition:
         adversarius, qui est veritatis inimicus, et semper sanctorum virtutibus
         contraire nititur. Ipse et transgressor, quia praevaricator effectus in
         veritate, qua conditus est, non stetit.
-      auteur: isidore-de-seville
       sources:
         - ouvrage: etymologies
           entree: VIII, 11, 19

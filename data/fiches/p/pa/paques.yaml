@@ -1,0 +1,46 @@
+mot: Pâques
+nature: [ nom masculin, nom féminin ]
+sacre: [ chrétienne ]
+etymologie:
+  - forme: pascha
+    langue: latin ecclésiastique
+  - forme: πάσχα
+    langue: grec ancien
+  - forme: פַּסְחָא
+    translitteration: pasḥā
+    langue: araméen
+  - forme: פֶּסַח
+    translitteration: pesaḥ
+    langue: hébreu
+famille: [ pâque, pascal ]
+themes: [ religion, temps ]
+tradition:
+  lectures:
+    - texte: "La Pâque porte le nom de ce que fit le Seigneur la nuit où il frappa l'Égypte :
+        il passa par-dessus les maisons des fils d'Israël."
+      citation: זבח־פסח הוא ליהוה אשר פסח על־בתי בני־ישראל במצרים
+      premier: true
+      sens: il passa par-dessus
+      sources:
+        - ouvrage: bible-hebraique
+          entree: Exode 12, 27
+          url: https://he.wikisource.org/wiki/שמות_יב
+    - texte: "Le nom est hébreu, non grec : il ne vient pas de la passion, mais du passage,
+        celui du peuple de Dieu sortant d'Égypte, et celui du Christ allant de ce monde au
+        Père."
+      citation: Paschae autem vocabulum non Graecum, sed Hebraeum est; nec a passione,
+        quoniam PASCHEIN Graece dicitur pati, sed a transitu Hebraeo verbo pascha
+        appellata est, eo quod tunc populus Dei ex Aegypto transierit
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 17, 11
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: littre
+    entree: pâque
+  - ouvrage: tlfi
+    entree: pâque
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

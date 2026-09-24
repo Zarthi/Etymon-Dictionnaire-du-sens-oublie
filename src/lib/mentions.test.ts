@@ -23,10 +23,10 @@ describe("referencesDe", () => {
         { forme: "Utopia", langue: "latin humaniste", sens: "x", forge: { par: ["thomas-more"], date: "1516", ouvrage: "utopia" } },
         { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["ciceron"] }, { forme: "c", sens: "d" }] } },
       ],
-      tradition: { lectures: [{ texte: "T.", citation: "C.", auteur: "lactance", sources: [{ ouvrage: "institutions-divines", entree: "I", url: "https://example.org" }] }], renvois: [] },
+      tradition: { lectures: [{ texte: "T.", citation: "C.", sources: [{ ouvrage: "institutions-divines", entree: "I", url: "https://example.org" }] }], renvois: [] },
       sources: [{ ouvrage: "littre", entree: "utopie" }],
     } as Partial<Fiche>);
-    expect(referencesDe(f)).toEqual({ auteurs: ["thomas-more", "ciceron", "lactance"], ouvrages: ["utopia", "institutions-divines"] });
+    expect(referencesDe(f, new Map([["institutions-divines", { auteur: "lactance" }]]))).toEqual({ auteurs: ["thomas-more", "ciceron", "lactance"], ouvrages: ["utopia", "institutions-divines"] });
   });
 });
 

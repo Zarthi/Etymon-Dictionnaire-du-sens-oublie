@@ -1,25 +1,62 @@
 import type { LectureTraditionnelle } from "./types.ts";
 
 type AuteurTraditions = { traditions?: string[] };
+type OuvrageVoix = { auteur?: string; traditions?: string[] };
 
 /**
- * Tradition dans laquelle parle une lecture : celle qu'elle précise, sinon l'unique tradition de
- * son auteur (elle ne s'écrit que si l'auteur en a plusieurs, comme Guénon).
+ * Voix d'une lecture : celui dont la parole est rapportée (`auteur`, s'il n'est pas l'auteur de
+ * l'œuvre), sinon l'auteur de l'œuvre citée ; sans auteur, c'est l'œuvre elle-même qui parle
+ * (l'Écriture). Rien de ce qui se déduit n'est écrit.
  */
-export function traditionDe(lecture: LectureTraditionnelle, auteurs: Map<string, AuteurTraditions>): string | undefined {
-  const siennes = auteurs.get(lecture.auteur)?.traditions ?? [];
-  return lecture.tradition ?? (siennes.length === 1 ? siennes[0] : undefined);
+export function voixDe(lecture: LectureTraditionnelle, ouvrages: Map<string, OuvrageVoix>): { auteur?: string; ouvrage: string } {
+  const ouvrage = lecture.sources[0].ouvrage;
+  return { auteur: lecture.auteur ?? ouvrages.get(ouvrage)?.auteur, ouvrage };
 }
 
-/** Lectures regroupées par tradition, dans l'ordre où chaque tradition apparaît : on ne les mêle jamais. */
+/** Traditions de la voix d'une lecture : celles de son auteur, ou, sans auteur, celles de l'œuvre. */
+export function traditionsDeLaVoix(
+  lecture: LectureTraditionnelle,
+  auteurs: Map<string, AuteurTraditions>,
+  ouvrages: Map<string, OuvrageVoix>,
+): string[] {
+  const voix = voixDe(lecture, ouvrages);
+  return (voix.auteur !== undefined ? auteurs.get(voix.auteur)?.traditions : ouvrages.get(voix.ouvrage)?.traditions) ?? [];
+}
+
+/**
+ * Traditions dans lesquelles parle une lecture : celle qu'elle précise, sinon toutes celles de sa
+ * voix (une seule pour un auteur, qui doit préciser s'il en a plusieurs ; plusieurs pour l'Écriture
+ * reçue en commun).
+ */
+export function traditionsDe(
+  lecture: LectureTraditionnelle,
+  auteurs: Map<string, AuteurTraditions>,
+  ouvrages: Map<string, OuvrageVoix>,
+): string[] {
+  return lecture.tradition !== undefined ? [lecture.tradition] : traditionsDeLaVoix(lecture, auteurs, ouvrages);
+}
+
+/**
+ * Lectures regroupées par tradition, dans l'ordre où chaque groupe apparaît : on ne les mêle
+ * jamais. Une Écriture reçue en commun forme son propre groupe (« juive et chrétienne »).
+ */
 export function parTradition(
   lectures: LectureTraditionnelle[],
   auteurs: Map<string, AuteurTraditions>,
-): { tradition: string; lectures: LectureTraditionnelle[] }[] {
-  const groupes = new Map<string, LectureTraditionnelle[]>();
+  ouvrages: Map<string, OuvrageVoix>,
+): { traditions: string[]; lectures: LectureTraditionnelle[] }[] {
+  const groupes = new Map<string, { traditions: string[]; lectures: LectureTraditionnelle[] }>();
   for (const lecture of lectures) {
-    const tradition = traditionDe(lecture, auteurs) ?? "";
-    groupes.set(tradition, [...(groupes.get(tradition) ?? []), lecture]);
+    const traditions = traditionsDe(lecture, auteurs, ouvrages);
+    const cle = traditions.join("|");
+    const groupe = groupes.get(cle) ?? { traditions, lectures: [] };
+    groupe.lectures.push(lecture);
+    groupes.set(cle, groupe);
   }
-  return [...groupes].map(([tradition, lectures]) => ({ tradition, lectures }));
+  return [...groupes.values()];
+}
+
+/** « juive », « juive et chrétienne ». */
+export function nommerTraditions(traditions: string[]): string {
+  return traditions.length <= 1 ? (traditions[0] ?? "") : `${traditions.slice(0, -1).join(", ")} et ${traditions.at(-1)}`;
 }

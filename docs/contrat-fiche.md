@@ -14,7 +14,8 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `mot` | texte | oui | Le mot français, tel qu'on l'écrit (le nom du fichier en est la forme sans accent). |
 | `nature` | liste non vide de `nom masculin` \| `nom féminin` \| `nom` \| `nom propre` \| `verbe` \| `adjectif` \| `adverbe` \| `interjection` | oui | Catégorie(s) grammaticale(s) ; « nom » pour les épicènes. |
 | `etymologie` | liste non vide d'objets (voir plus bas) | oui | Chaîne étymologique, du plus proche au plus lointain. La langue source directe ouvre la chaîne ; on ne remonte que si cela ajoute un sens. |
-| `explication` | texte | oui | 1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens premier. Texte brut : les formes de la fiche y sont mises en italique par l'app. |
+| `explication` | texte | non | 1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens premier. Texte brut : les formes de la fiche y sont mises en italique par l'app. Obligatoire, sauf pour un mot sacré, qui n'en a pas. |
+| `sacre` | liste non vide de `juive` \| `chrétienne` | non | Mot sacré par origine (né dans l'ordre sacré : manne, sabbat), et les traditions où il l'est ; pas un mot consacré (église, ange, profanes à l'origine). Pas de partie profane : la chaîne ne garde que les formes, le sens en tête vient du texte d'origine (lecture premier) ou, s'il ne l'explique pas, du sens du mot dans sa langue. |
 | `ecartees` | liste d'objets (voir plus bas) | non | Étymologies proposées puis écartées : idées reçues ou hypothèses savantes abandonnées. |
 | `incertain` | `true` \| `false` | non | La chaîne elle-même est douteuse (une origine débattue relève des alternatives). Faux si absent. |
 | `doublets` | liste d'identifiants | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
@@ -122,10 +123,12 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 |---|---|---|---|
 | `texte` | texte | oui | Sens que la doctrine donne au mot, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique. |
 | `citation` | texte | oui | Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe). |
-| `auteur` | identifiant | oui | Auteur de la tradition (data/auteurs, avec ses traditions). |
-| `tradition` | `juive` \| `chrétienne` | non | Tradition dans laquelle parle le passage ; seulement si l'auteur en a plusieurs (sinon, elle se déduit de l'auteur). |
+| `auteur` | identifiant | non | Celui dont la parole est rapportée, seulement s'il n'est pas l'auteur de l'œuvre citée (Resh Lakish dans le Talmud, Varron chez Augustin) : sinon la voix se déduit de l'œuvre, ou est l'œuvre elle-même (l'Écriture). |
+| `tradition` | `juive` \| `chrétienne` | non | Tradition dans laquelle parle le passage ; seulement si sa voix en a plusieurs (Guénon). L'Écriture reçue en commun (Bible hébraïque) garde toutes les siennes. |
+| `premier` | `true` \| `false` | non | Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne). |
+| `sens` | texte | non | Sens que le texte d'origine donne au mot ; seulement pour la lecture premier. |
 | `hypothese` | texte | non | Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter. |
-| `sources` | liste non vide d'objets (voir plus bas) | oui | Œuvres de l'auteur consultées. |
+| `sources` | liste non vide d'objets (voir plus bas) | oui | Passages cités, d'une même voix : œuvres de l'auteur, œuvre collective qui rapporte sa parole, ou Écriture. |
 | `redaction` | liste non vide d'objets (voir plus bas) | non | Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche. |
 
 ### `tradition.lectures[].sources[]`
@@ -213,7 +216,8 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `titre` | texte | oui | Titre en français (Institutions divines, Dictionnaire de la langue française). |
 | `abrege` | texte | non | Nom court sous lequel on le cite (Littré, Gaffiot) ; le nom du fichier en est la forme sans accent, ou celle du titre. |
 | `titreOriginal` | texte | non | Titre d'origine, s'il diffère (Divinae institutiones). |
-| `auteur` | identifiant | non | Auteur (data/auteurs) ; absent pour une œuvre collective (TLFi, Rituel romain). |
+| `auteur` | identifiant | non | Auteur (data/auteurs) ; absent pour une œuvre collective (TLFi, Talmud) ou l'Écriture, traductions comprises (Vulgate). |
+| `traditions` | liste non vide de `juive` \| `chrétienne` | non | Traditions qui reçoivent une œuvre sans auteur (Talmud : juive ; Bible hébraïque : juive et chrétienne) ; une œuvre d'auteur tient les siennes de lui. |
 | `date` | nombre ou date historique | non | Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ». |
 | `edition` | texte | non | Édition réellement consultée (révision de Gérard Gréco, 2016). |
 | `licence` | `domaine public` \| `Licence ouverte` \| `CC BY-SA` \| `CC BY-NC-ND` \| `non libre` | oui | Ce qu'Étymon a le droit d'en faire. |
@@ -267,7 +271,10 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 - `etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Le maillon du sens premier porte un sens (une composition, le sens littéral de ses éléments) ; au plus un maillon est `premier`.
 - Translittération : seulement pour une écriture ni latine ni grecque (arabe, hébreu), et alors obligatoire.
 - `selon` : seulement dans une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
-- Lecture traditionnelle : un auteur de la tradition (`traditions`), sa `tradition` précisée seulement s'il en a plusieurs, ses propres œuvres ou une œuvre collective qui rapporte ses paroles, une `hypothese` parmi les alternatives de la chaîne ; sa citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).
+- Lecture traditionnelle : sa voix se déduit de l'œuvre citée (son auteur, ou l'œuvre elle-même pour l'Écriture) ; `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Resh Lakish dans le Talmud), de la tradition de l'œuvre si elle n'a pas d'auteur ; une seule voix par lecture ; `tradition` seulement si un auteur en a plusieurs (l'Écriture reçue en commun les garde toutes) ; une `hypothese` parmi les alternatives de la chaîne ; la citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).
+- Une œuvre ne porte `traditions` que si elle n'a pas d'auteur (Talmud, Écriture) ; une traduction de l'Écriture (Vulgate, Septante) est une œuvre sans auteur, le traducteur allant dans `edition` ou `description`.
+- Mot sacré (`sacre`) : pas d'explication ; les maillons n'ont pas de sens, sauf, si aucune lecture n'est `premier`, celui de la langue sacrée ; la lecture `premier` (le texte d'origine, avec son `sens`) est reçue par toutes les traditions du mot, les autres lectures parlent dans l'une d'elles.
+- Le Nom divin s'écrit comme le texte l'écrit (Yah, YHWH), jamais revocalisé (« Jéhovah »).
 - `renvois` : ni doublet, ni mot de la famille (une notion voisine, pas une racine commune). `tradition.renvois` : à sens unique, affiché du seul côté de la fiche qui le déclare.
 - Les textes sont bruts, sans mise en forme : l'app met en italique les formes de la chaîne et pose les liens (mots qui ont une fiche ; auteurs et ouvrages cités par la fiche, sous leur nom, une forme de `cite`, leur titre ou leur abrégé). Une forme qui désignerait deux pages dans une même fiche est refusée : écrire le nom complet.
 - `explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus ; `description` : 200 caractères au plus.

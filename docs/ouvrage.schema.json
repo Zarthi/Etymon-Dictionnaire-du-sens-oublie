@@ -20,7 +20,20 @@
     "auteur": {
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-      "description": "Auteur (data/auteurs) ; absent pour une œuvre collective (TLFi, Rituel romain)."
+      "description": "Auteur (data/auteurs) ; absent pour une œuvre collective (TLFi, Talmud) ou l'Écriture, traductions comprises (Vulgate)."
+    },
+    "traditions": {
+      "description": "Traditions qui reçoivent une œuvre sans auteur (Talmud : juive ; Bible hébraïque : juive et chrétienne) ; une œuvre d'auteur tient les siennes de lui.",
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "juive",
+          "chrétienne"
+        ],
+        "description": "Tradition (liste fermée : data/traditions.json)."
+      }
     },
     "date": {
       "description": "Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ».",

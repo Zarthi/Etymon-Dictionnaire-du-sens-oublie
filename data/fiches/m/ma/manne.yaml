@@ -1,0 +1,35 @@
+mot: manne
+nature: [ nom féminin ]
+sacre: [ juive, chrétienne ]
+etymologie:
+  - forme: manna
+    langue: latin ecclésiastique
+  - forme: μάννα
+    langue: grec ancien
+  - forme: מַנָּא
+    translitteration: mannā
+    langue: araméen
+  - forme: מָן
+    translitteration: mān
+    langue: hébreu
+themes: [ religion, nourriture ]
+tradition:
+  lectures:
+    - texte: "Les Hébreux nommèrent la nourriture du désert par la question qu'ils se
+        posèrent en la voyant : ils ne savaient pas ce que c'était."
+      citation: ויאמרו איש אל־אחיו מן הוא כי לא ידעו מה־הוא
+      premier: true
+      sens: "qu'est-ce que c'est ?"
+      sources:
+        - ouvrage: bible-hebraique
+          entree: Exode 16, 15
+          url: https://he.wikisource.org/wiki/שמות_טז
+sources:
+  - ouvrage: littre
+    entree: manne
+  - ouvrage: tlfi
+    entree: manne
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

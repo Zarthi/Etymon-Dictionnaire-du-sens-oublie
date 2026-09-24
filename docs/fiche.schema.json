@@ -436,9 +436,22 @@
       "description": "Chaîne étymologique, du plus proche au plus lointain. La langue source directe ouvre la chaîne ; on ne remonte que si cela ajoute un sens."
     },
     "explication": {
+      "description": "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens premier. Texte brut : les formes de la fiche y sont mises en italique par l'app. Obligatoire, sauf pour un mot sacré, qui n'en a pas.",
       "type": "string",
-      "minLength": 1,
-      "description": "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens premier. Texte brut : les formes de la fiche y sont mises en italique par l'app."
+      "minLength": 1
+    },
+    "sacre": {
+      "description": "Mot sacré par origine (né dans l'ordre sacré : manne, sabbat), et les traditions où il l'est ; pas un mot consacré (église, ange, profanes à l'origine). Pas de partie profane : la chaîne ne garde que les formes, le sens en tête vient du texte d'origine (lecture premier) ou, s'il ne l'explique pas, du sens du mot dans sa langue.",
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "juive",
+          "chrétienne"
+        ],
+        "description": "Tradition (liste fermée : data/traditions.json)."
+      }
     },
     "ecartees": {
       "default": [],
@@ -611,15 +624,25 @@
               "auteur": {
                 "type": "string",
                 "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-                "description": "Auteur de la tradition (data/auteurs, avec ses traditions)."
+                "description": "Celui dont la parole est rapportée, seulement s'il n'est pas l'auteur de l'œuvre citée (Resh Lakish dans le Talmud, Varron chez Augustin) : sinon la voix se déduit de l'œuvre, ou est l'œuvre elle-même (l'Écriture)."
               },
               "tradition": {
-                "description": "Tradition dans laquelle parle le passage ; seulement si l'auteur en a plusieurs (sinon, elle se déduit de l'auteur).",
+                "description": "Tradition dans laquelle parle le passage ; seulement si sa voix en a plusieurs (Guénon). L'Écriture reçue en commun (Bible hébraïque) garde toutes les siennes.",
                 "type": "string",
                 "enum": [
                   "juive",
                   "chrétienne"
                 ]
+              },
+              "premier": {
+                "description": "Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne).",
+                "type": "boolean",
+                "const": true
+              },
+              "sens": {
+                "description": "Sens que le texte d'origine donne au mot ; seulement pour la lecture premier.",
+                "type": "string",
+                "minLength": 1
               },
               "hypothese": {
                 "description": "Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter.",
@@ -670,7 +693,7 @@
                   "additionalProperties": false,
                   "description": "Œuvre consultée pour une lecture traditionnelle."
                 },
-                "description": "Œuvres de l'auteur consultées."
+                "description": "Passages cités, d'une même voix : œuvres de l'auteur, œuvre collective qui rapporte sa parole, ou Écriture."
               },
               "redaction": {
                 "description": "Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche.",
@@ -705,7 +728,6 @@
             "required": [
               "texte",
               "citation",
-              "auteur",
               "sources"
             ],
             "additionalProperties": false,
@@ -840,7 +862,6 @@
     "mot",
     "nature",
     "etymologie",
-    "explication",
     "themes",
     "redaction",
     "statut"

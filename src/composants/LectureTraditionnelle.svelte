@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { auteurs } from "../lib/fiches.ts";
+  import { auteurs, ouvrages } from "../lib/fiches.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import type { Mention } from "../lib/mentions.ts";
   import { signatureRedaction } from "../lib/sources.ts";
+  import { voixDe } from "../lib/traditions.ts";
   import type { LectureTraditionnelle } from "../lib/types.ts";
   import Redaction from "./Redaction.svelte";
   import Source from "./Source.svelte";
@@ -40,6 +41,9 @@
           : undefined,
   );
 
+  /** Qui parle : l'auteur (déduit de l'œuvre, ou rapporté par elle) ; sans auteur, l'œuvre signe seule (l'Écriture). */
+  const voix = $derived(voixDe(lecture, ouvrages).auteur);
+
   const redactionPropre = $derived(
     lecture.redaction && signatureRedaction(lecture.redaction) !== redactionFiche ? lecture.redaction : undefined,
   );
@@ -53,7 +57,10 @@
   <!-- La citation garde sa langue et son sens d'écriture (l'hébreu va de droite à gauche), isolée des guillemets. -->
   <blockquote>«&nbsp;<bdi lang={langue}>{lecture.citation}</bdi>&nbsp;»</blockquote>
   <p class="auteur">
-    <a href={lienAuteur(lecture.auteur)}>{auteurs.get(lecture.auteur)?.nom ?? lecture.auteur}</a>{#each lecture.sources as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}
+    {#if voix}<a href={lienAuteur(voix)}>{auteurs.get(voix)?.nom ?? voix}</a>,{" "}{/if}{#each lecture.sources as source, i (i)}{#if i > 0}&nbsp;;{" "}{/if}<Source
+        {source}
+        oeuvre
+      />{/each}
   </p>
   {#if redactionPropre}
     <Redaction redaction={redactionPropre} />

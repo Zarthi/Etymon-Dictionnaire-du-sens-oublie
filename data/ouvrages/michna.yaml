@@ -1,0 +1,16 @@
+titre: Michna
+titreOriginal: Mishna
+edition: consultée sur Wikisource en hébreu
+licence: CC BY-SA
+traditions: [ juive ]
+texte: https://he.wikisource.org/wiki/משנה
+description: >-
+  La loi orale mise par écrit, compilée par Juda ha-Nassi vers l'an 200 ; le texte
+  que commente le Talmud.
+sources:
+  - ouvrage: bnf
+    entree: cb12075402w
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: alléluia
+nature: [ interjection, nom masculin ]
+sacre: [ juive, chrétienne ]
+etymologie:
+  - forme: alleluia
+    langue: latin ecclésiastique
+  - forme: הַלְלוּ־יָהּ
+    translitteration: halelû-yāh
+    langue: hébreu
+    sens: louez Yah
+themes: [ religion, parole ]
+sources:
+  - ouvrage: littre
+    entree: alleluia
+  - ouvrage: tlfi
+    entree: alléluia
+  - ouvrage: bible-hebraique
+    entree: Psaume 104, 35
+    url: https://he.wikisource.org/wiki/תהלים_קד
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

@@ -1,4 +1,5 @@
 import { lienAuteur, lienOuvrage } from "./liens.ts";
+import { voixDe } from "./traditions.ts";
 import type { Fiche } from "./types.ts";
 
 /**
@@ -15,10 +16,16 @@ export interface Mention {
 }
 
 type AuteurCite = { nom: string; cite?: string[] };
-type OuvrageCite = { titre: string; abrege?: string; titreOriginal?: string };
+type OuvrageCite = { titre: string; abrege?: string; titreOriginal?: string; auteur?: string };
 
-/** Auteurs et ouvrages que la fiche cite, par identifiant. */
-export function referencesDe(fiche: Pick<Fiche, "etymologie" | "ecartees" | "tradition">): { auteurs: string[]; ouvrages: string[] } {
+/**
+ * Auteurs et ouvrages que la fiche cite, par identifiant. La voix d'une lecture se déduit de son
+ * œuvre (voixDe) : il faut donc les fiches des ouvrages.
+ */
+export function referencesDe(
+  fiche: Pick<Fiche, "etymologie" | "ecartees" | "tradition">,
+  ouvragesCites: Map<string, { auteur?: string }>,
+): { auteurs: string[]; ouvrages: string[] } {
   const auteurs = new Set<string>();
   const ouvrages = new Set<string>();
   for (const m of fiche.etymologie) {
@@ -30,7 +37,8 @@ export function referencesDe(fiche: Pick<Fiche, "etymologie" | "ecartees" | "tra
   }
   for (const e of fiche.ecartees) e.selon?.forEach((id) => auteurs.add(id));
   for (const l of fiche.tradition.lectures) {
-    auteurs.add(l.auteur);
+    const voix = voixDe(l, ouvragesCites);
+    if (voix.auteur !== undefined) auteurs.add(voix.auteur);
     l.sources.forEach((s) => ouvrages.add(s.ouvrage));
   }
   return { auteurs: [...auteurs], ouvrages: [...ouvrages] };
@@ -46,7 +54,7 @@ export function mentionsDe(
   auteurs: Map<string, AuteurCite>,
   ouvrages: Map<string, OuvrageCite>,
 ): Mention[] {
-  const refs = referencesDe(fiche);
+  const refs = referencesDe(fiche, ouvrages);
   return [
     ...refs.auteurs.flatMap((id) => {
       const a = auteurs.get(id);
@@ -67,7 +75,7 @@ export function nomme(texte: string, forme: string): boolean {
 
 /** Textes d'une fiche où l'app reconnaît les mentions : explication, étymologies écartées, lectures. */
 export function textesDe(fiche: Pick<Fiche, "explication" | "ecartees" | "tradition">): string {
-  return [fiche.explication, ...fiche.ecartees.map((e) => e.raison ?? ""), ...fiche.tradition.lectures.map((l) => l.texte)].join("\n");
+  return [fiche.explication ?? "", ...fiche.ecartees.map((e) => e.raison ?? ""), ...fiche.tradition.lectures.map((l) => l.texte)].join("\n");
 }
 
 /** Formes qui, dans une même fiche, désignent deux pages différentes : il faut alors écrire le nom complet. */

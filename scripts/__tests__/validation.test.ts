@@ -47,6 +47,8 @@ const REF = referentiel(
     ouvrage("la-cite-de-dieu", "La Cité de Dieu", { auteur: "augustin" }),
     ouvrage("traite", "Traité", { auteur: "passeur" }),
     ouvrage("recueil", "Recueil"),
+    ouvrage("talmud", "Talmud", { traditions: ["juive"] }),
+    ouvrage("ecriture", "Écriture", { traditions: ["juive", "chrétienne"] }),
   ],
 );
 
@@ -77,7 +79,7 @@ const ficheBase = {
 const lectureBase = {
   texte: "Lecture.",
   citation: "hoc uinculo pietatis obstricti deo et religati sumus",
-  auteur: "lactance",
+  // Pas d'auteur : Lactance se déduit des Institutions divines.
   sources: [{ ouvrage: "institutions-divines", entree: "IV, 28, 3", url: "https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV" }],
 };
 
@@ -155,7 +157,7 @@ describe("validerFiches : fiches conformes", () => {
     expect(fiches[0]).toMatchObject({ id: "etonner", mot: "étonner" });
   });
   it("retire le saut de ligne final du bloc replié de l'explication", () => {
-    expect(valider().fiches[0].explication.endsWith(".")).toBe(true);
+    expect(valider().fiches[0].explication?.endsWith(".")).toBe(true);
   });
   it("accepte une fiche sans ses champs facultatifs, et leur donne leur valeur par défaut", () => {
     const { incertain: _i, doublets: _d, famille: _f, tradition: _t, historique: _h, ...minimale } = ficheBase;
@@ -404,27 +406,42 @@ describe("validerFiches : références", () => {
       "sources.0.url : indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)",
     ]);
   });
-  it("refuse une lecture d'un auteur hors tradition, ou d'une œuvre d'un autre auteur", () => {
-    expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, auteur: "eugen-bleuler" }] } })).toContain(
-      "tradition.lectures.0.auteur : Eugen Bleuler n'est pas un auteur de la tradition (traditions)",
-    );
-    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "la-cite-de-dieu" }] };
-    expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([
-      "tradition.lectures.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance",
+  it("déduit la voix de l'œuvre, et n'écrit l'auteur que pour une parole rapportée par une autre voix", () => {
+    expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, auteur: "lactance" }] } })).toEqual([
+      "tradition.lectures.0.auteur : se déduit de l'œuvre : ne l'écrire que pour une parole rapportée par une autre voix",
+    ]);
+    // Une parole rapportée par une œuvre d'un autre (Varron chez Augustin) : ici Cicéron, hors tradition.
+    const rapportee = { ...lectureBase, auteur: "ciceron", sources: [{ ...lectureBase.sources[0], ouvrage: "la-cite-de-dieu" }] };
+    expect(erreursDe({ tradition: { lectures: [rapportee] } })).toEqual([
+      "tradition.lectures.0.auteur : Cicéron n'est pas une voix de la tradition (traditions)",
+    ]);
+    expect(erreursDe({ tradition: { lectures: [{ ...rapportee, auteur: "augustin", sources: lectureBase.sources }] } })).toEqual([]);
+  });
+  it("refuse deux voix dans une même lecture", () => {
+    const sources = [...lectureBase.sources, { ...lectureBase.sources[0], ouvrage: "la-cite-de-dieu" }];
+    expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, sources }] } })).toEqual([
+      "tradition.lectures.0.sources : une lecture a une seule voix : des œuvres d'auteurs différents font deux lectures",
     ]);
   });
-  it("déduit la tradition d'un auteur qui n'en a qu'une, et l'exige de celui qui en a plusieurs", () => {
+  it("déduit la tradition d'une voix qui n'en a qu'une, et l'exige d'un auteur qui en a plusieurs", () => {
     expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, tradition: "chrétienne" }] } })).toEqual([
-      "tradition.lectures.0.tradition : se déduit de l'auteur (chrétienne) : ne pas l'écrire",
+      "tradition.lectures.0.tradition : se déduit de la voix (chrétienne) : ne pas l'écrire",
     ]);
-    const lecture = { ...lectureBase, auteur: "passeur", sources: [{ ...lectureBase.sources[0], ouvrage: "traite" }] };
+    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "traite" }] };
     expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([
       "tradition.lectures.0.tradition : Passeur parle dans plusieurs traditions : préciser laquelle (juive, chrétienne)",
     ]);
     expect(erreursDe({ tradition: { lectures: [{ ...lecture, tradition: "juive" }] } })).toEqual([]);
   });
-  it("accepte une œuvre collective, sans auteur, qui rapporte les paroles de l'auteur (le Talmud)", () => {
-    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "recueil" }] };
+  it("accepte une œuvre collective qui rapporte une parole de sa tradition (Resh Lakish dans le Talmud)", () => {
+    const lecture = { ...lectureBase, auteur: "lactance", sources: [{ ...lectureBase.sources[0], ouvrage: "recueil" }] };
+    expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([]);
+    expect(erreursDe({ tradition: { lectures: [{ ...lecture, sources: [{ ...lecture.sources[0], ouvrage: "talmud" }] }] } })).toEqual([
+      "tradition.lectures.0.auteur : Lactance ne parle pas dans la tradition de « Talmud » (juive)",
+    ]);
+  });
+  it("laisse l'Écriture reçue en commun parler dans toutes ses traditions, sans en préciser une", () => {
+    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "ecriture" }] };
     expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([]);
   });
   it("refuse une lecture qui vise une hypothèse absente de la chaîne", () => {
@@ -497,7 +514,49 @@ describe("validerFiches : doublets et renvois", () => {
   });
 });
 
+describe("validerFiches : mots sacrés", () => {
+  const formes = [
+    { forme: "manna", langue: "latin ecclésiastique" },
+    { forme: "מָן", translitteration: "mān", langue: "hébreu" },
+  ];
+  const origine = { ...lectureBase, premier: true, sens: "qu'est-ce que c'est", sources: [{ ...lectureBase.sources[0], ouvrage: "ecriture" }] };
+  const sacree = { sacre: ["juive", "chrétienne"], explication: undefined, etymologie: formes, tradition: { lectures: [origine] } };
+  it("accepte un mot sacré : les formes seules, le sens du texte d'origine, pas d'explication", () => {
+    expect(erreursDe(sacree)).toEqual([]);
+  });
+  it("accepte, sans texte d'origine qui l'explique, le sens du seul maillon de la langue sacrée", () => {
+    const etymologie = [formes[0], { ...formes[1], sens: "louez Yah" }];
+    expect(erreursDe({ ...sacree, etymologie, tradition: { lectures: [] } })).toEqual([]);
+  });
+  it("refuse toute partie profane d'un mot sacré", () => {
+    expect(erreursDe({ ...sacree, explication: "Une explication." })).toEqual(["explication : un mot sacré n'a pas d'explication profane : la retirer"]);
+    expect(erreursDe({ ...sacree, etymologie: [{ ...formes[0], sens: "manne" }, formes[1]] })).toEqual([
+      "etymologie : mot sacré dont le texte d'origine donne le sens (lecture premier) : les maillons n'ont pas de sens",
+    ]);
+  });
+  it("demande un sens à la lecture premier, et la réserve à un mot sacré reçu par toutes ses traditions", () => {
+    expect(erreursDe({ ...sacree, tradition: { lectures: [{ ...origine, sens: undefined }] } })).toContain(
+      "tradition.lectures.0.sens : la lecture premier donne le sens affiché en tête",
+    );
+    expect(erreursDe({ tradition: { lectures: [origine] } })).toContain("tradition.lectures.0.premier : seulement pour un mot sacré (sacre)");
+    const talmud = { ...origine, sources: [{ ...origine.sources[0], ouvrage: "talmud" }] };
+    expect(erreursDe({ ...sacree, tradition: { lectures: [talmud] } })).toEqual([
+      "tradition.lectures.0.premier : le texte d'origine doit être reçu par toutes les traditions du mot (juive, chrétienne)",
+    ]);
+  });
+  it("refuse une lecture hors des traditions où le mot est sacré", () => {
+    expect(erreursDe({ ...sacree, sacre: ["juive"], tradition: { lectures: [origine, lectureBase] } })).toEqual([
+      "tradition.lectures.1 : lecture hors des traditions où le mot est sacré (juive)",
+    ]);
+  });
+});
+
 describe("validerFiches : règles éditoriales", () => {
+  it("écrit le Nom divin comme le texte l'écrit, jamais revocalisé", () => {
+    expect(erreursDe({ explication: "Louez Jéhovah." })).toEqual([
+      "explication : Nom divin revocalisé (Jéhovah) : l'écrire comme le texte (Yah, YHWH)",
+    ]);
+  });
   it("refuse une explication de plus de 3 phrases, sans ponctuation finale, vide ou trop longue", () => {
     expect(erreursDe({ explication: "Un. Deux. Trois. Quatre." })).toEqual(["explication : 1 à 3 phrases terminées par une ponctuation (4 trouvée(s))"]);
     expect(erreursDe({ explication: "Sans point final" })).toEqual([expect.stringMatching(/0 trouvée/)]);
@@ -557,6 +616,13 @@ describe("validerAuteurs et validerOuvrages", () => {
     ["licence", "littre.yaml", { licence: "libre" }],
   ])("signale le champ %s d'un ouvrage", (champ, fichier, champs) => {
     expect(validerOuvrages([fichierOuvrage(fichier, champs)], new Map()).erreurs.map((e) => e.champ)).toEqual([champ]);
+  });
+  it("ne donne des traditions qu'à une œuvre sans auteur (une œuvre d'auteur les tient de lui)", () => {
+    const auteurs = new Map([["emile-littre", auteur("emile-littre", "Émile Littré")]]);
+    expect(validerOuvrages([fichierOuvrage("littre.yaml", { traditions: ["juive"] })], auteurs).erreurs).toEqual([]);
+    expect(validerOuvrages([fichierOuvrage("littre.yaml", { auteur: "emile-littre", traditions: ["juive"] })], auteurs).erreurs.map((e) => e.regle)).toEqual([
+      "se déduisent de l'auteur : seulement pour une œuvre sans auteur (Talmud, Écriture)",
+    ]);
   });
 });
 
