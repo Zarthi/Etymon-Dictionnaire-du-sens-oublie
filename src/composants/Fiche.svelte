@@ -3,7 +3,7 @@
   import type { FicheIdentifiee } from "../lib/types.ts";
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
   import Forme from "./Forme.svelte";
-  import Source from "./Source.svelte";
+  import Sources from "./Sources.svelte";
   import TexteRiche from "./TexteRiche.svelte";
 
   let {
@@ -57,6 +57,8 @@
     <p class="note">Étymologie incertaine ou débattue.</p>
   {/if}
 
+  <Sources sources={fiche.sources} />
+
   {#if lectures.length > 0}
     <!-- Toujours signalées, repliées par défaut : l'étymologie d'abord, la tradition à côté. -->
     <details class="traditions" open={deplierLectures}>
@@ -71,10 +73,6 @@
   {/if}
 
   <footer>
-    <p hidden={fiche.sources.length === 0}>
-      Sources de l'étymologie&nbsp;:
-      {#each fiche.sources as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}
-    </p>
     {#if correction}
       <p>Corrigée le {dateLongue(correction.date)}.</p>
     {/if}
