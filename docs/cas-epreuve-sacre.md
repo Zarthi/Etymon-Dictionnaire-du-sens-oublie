@@ -36,8 +36,8 @@ dans l'ordre sacré, la question ne se pose plus, le texte d'origine fait autori
 **Verdict : tient, mais révèle un cas imprévu.** Le TLFi donne un sens 3, « assemblée de
 sorciers » (XVe siècle), qui a aussi touché *synagogue* : une **profanation polémique** du mot.
 Une fiche sacrée sans partie profane ne peut pas la dire ; la taire laisserait le lecteur sans
-réponse devant « le sabbat des sorcières ». Proposition : ce sens profané est un **homonyme**,
-avec sa fiche profane (`sabbat-2`), qui dit le retournement ; la fiche sacrée reste intacte.
+réponse devant « le sabbat des sorcières ». Proposition d'alors : un homonyme profane
+(`sabbat-2`). Écartée ensuite (voir le bilan, point 4).
 
 ## 3. *alléluia* (degré 2, et le Nom)
 
@@ -96,4 +96,7 @@ sacrée) ; le troisième n'a pas de cas. Ce que l'épreuve ajoute :
    s'il remplit par lui-même le §3.3. Décision de Thibault : pas pour le sabbat, qui ne dévoile
    rien du sens premier et n'apporterait que la polémique.
 5. **Deux graphies, deux traditions** (*Pâque*, *Pâques*) : deux fiches, une par tradition, avec
-   la même chaîne et le même texte d'origine, ou une seule fiche. À trancher.
+   la même chaîne et le même texte d'origine (décision de Thibault).
+
+Implémenté (commit f8949e9) : champ `sacre`, lecture `premier` avec son `sens`, fiches *manne*,
+*sabbat*, *alléluia*, *Pâque* et *Pâques*.
