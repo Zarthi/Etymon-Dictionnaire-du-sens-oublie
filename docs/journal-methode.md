@@ -2,6 +2,19 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-09-25 — Listes fermées, thème affiché
+
+- **Les listes fermées grandissent avec les mots** (§7 bis), par `npm run liste` seulement :
+  langues et traditions ajoutées pendant le lot par l'agent qui en a besoin, thèmes proposés et
+  ajoutés entre deux lots s'ils sont demandés par plusieurs mots, puis fiches reclassées. Cause :
+  aucune liste n'est exhaustive d'avance (il manque « art » pour *musique*, « politique » pour
+  *république*). Décision de Thibault : une tradition de trop se retire à la relecture plus
+  aisément qu'une tradition manquante ne s'ajoute.
+- **Le thème est affiché sur la fiche** (« nom féminin · esprit, santé »), et dit le domaine où le
+  mot s'emploie aujourd'hui. Cause : sans lui, le lecteur ne sait pas où se range le mot.
+- Écartée : les quatre ordres du critère d'entrée (intellectuel, moral, spirituel, social) comme
+  niveau fixe au-dessus des thèmes.
+
 ## 2026-09-25 — Construction des outils
 
 - **Le tri se fait avec le dossier**, par le même agent. Cause : il demande la même lecture du

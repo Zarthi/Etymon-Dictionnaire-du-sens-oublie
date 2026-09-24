@@ -25,6 +25,7 @@ chaque étape reçoit le moteur que sa tâche demande, rien de plus.
 |---|---|---|
 | Fiches | tout, jusqu'au `brouillon` | relecture, validation (`validee`) |
 | Méthode (consignes, exemples) | ajustements tirés de ses corrections et de la relecture critique, notés dans `docs/journal-methode.md` | relire le journal, s'il le veut |
+| Listes fermées (langues, traditions, thèmes) | ajouts (§7 bis), notés au journal | retirer ou fusionner, à la relecture |
 | Modèle de données | détection, épreuve, implémentation, migration, entre deux lots, avec un compte rendu | ce qui touche aux principes et aux critères (§2, §3.3, sacré ou consacré) : l'agent propose, Thibault tranche |
 
 ## 3. La chaîne
@@ -111,9 +112,30 @@ reprend un lot interrompu là où il s'était arrêté.
 1. Rassembler les signalements du lot et les corrections de Thibault.
 2. Classer chacun : erreur de fiche (corriger), de méthode (consigne ou exemple), de modèle.
 3. Méthode : ajuster les consignes, noter la cause au journal.
-4. Modèle : éprouver le changement sur des cas réels, l'implémenter, migrer, tester ; compte
+4. Listes fermées : ajouter les thèmes proposés par plusieurs mots, reclasser (§7 bis).
+5. Modèle : éprouver le changement sur des cas réels, l'implémenter, migrer, tester ; compte
    rendu court. S'il touche un principe ou un critère, le proposer à Thibault et attendre.
-5. Lot suivant.
+6. Lot suivant.
+
+## 7 bis. Les listes fermées
+
+Langues, traditions et thèmes sont des listes fermées (`data/*.json`) : une fiche ne peut citer
+que leurs valeurs. Aucune n'est exhaustive d'avance ; elles grandissent avec les mots, par un
+seul point (`npm run liste`), jamais au gré d'un agent qui écrirait une valeur ailleurs.
+
+- **Une langue** qui manque est un fait : l'agent qui en a besoin l'ajoute pendant le lot.
+- **Une tradition** qui manque : l'agent qui en a besoin l'ajoute aussi. Une tradition de trop se
+  retire à la relecture plus aisément qu'une tradition manquante ne s'ajoute après coup.
+- **Un thème** qui manque ne s'ajoute pas pendant le lot : la fiche porte le plus proche, et
+  l'agent propose le thème manquant. Entre deux lots, un thème proposé par plusieurs mots (trois,
+  par exemple) est ajouté ; les fiches déjà écrites qui en relèvent sont reclassées
+  (`npm run etat -- themes` les montre par thème). Ainsi la liste se forme à partir des mots,
+  sans en compter cent.
+- Chaque ajout est noté au journal de méthode, avec le mot qui l'a demandé. Retirer ou fusionner
+  une valeur revient à Thibault, à la relecture.
+
+Le thème dit le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier
+(*étonner* : émotions, non météo). Il est affiché sur la fiche, à côté de la nature.
 
 ## 8. L'économie
 
@@ -145,6 +167,7 @@ Dix mots, au moins un par chemin du tri, dont un avec tradition. On mesure le co
 | `npm run dossier -- <mot>` | crée le dossier (Littré recopié) et affiche le Littré et l'étymologie du TLFi, lue par l'API du portail du CNRTL ; `--consulter` pour un mot voisin, `--verifier` pour contrôler un dossier |
 | `npm run texte -- <adresse>` | texte brut d'une page, tel quel (`bailly:φρήν` pour une entrée du Bailly) ; `--autour "<mot>"` pour n'en lire que les passages utiles |
 | `npm run bnf -- auteur\|ouvrage "<nom>"` | cherche les notices BnF ; avec `--cb`, écrit la fiche en brouillon d'après la notice |
+| `npm run liste -- <liste> "<valeur>"` | ajoute une langue, une tradition ou un thème, et régénère les consignes (§7 bis) ; `npm run etat -- themes` montre les mots de chaque thème |
 | `npm run rediger -- <fiche.json>… --dossier` | écrit les fiches d'après leur dossier ; `--essai` valide sans écrire |
 | `docs/consignes/*.md` | la consigne de chaque étape, générée par `npm run contrat` |
 | `scripts/lib/atelier.ts` | les formats du dossier, du verdict et de ce que rend chaque agent |

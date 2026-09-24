@@ -26,9 +26,11 @@ npm run dev          # app en local
 | `npm run valider` | valide fiches, candidats et comptes (aussi en pre-commit et en CI) |
 | `npm run etat` | avancement : fiches par statut, candidats restants |
 | `npm run brouillons` | fiches en brouillon à relire |
+| `npm run etat -- themes` | les mots de chaque thème |
 | `npm run dossier -- <mot>` | dossier de faits d'un mot (Littré, TLFi), dans `atelier/` |
 | `npm run bnf -- auteur\|ouvrage "…"` | notices BnF ; avec `--cb`, écrit la fiche d'auteur ou d'ouvrage |
 | `npm run texte -- <adresse>` | texte brut d'une page en ligne (citations, Bailly) |
+| `npm run liste -- <liste> "<valeur>"` | ajoute une langue, une tradition ou un thème (`docs/methode.md`, §7 bis) |
 | `npm run rediger -- <fiche.json>… --modele "…"` | écrit des fiches rédigées par l'IA (`--dossier` : d'après leur dossier, en brouillon ; `--essai` : sans écrire) |
 | `npm run verifier` | confronte les fiches au Littré local (`npm run littre` une fois) et signale les contrôles |
 | `npm run verifier:en-ligne` | vérifie les entrées du Bailly et les citations des lectures traditionnelles |

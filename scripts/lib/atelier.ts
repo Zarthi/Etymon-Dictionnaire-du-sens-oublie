@@ -109,6 +109,24 @@ export const schemaVerdict = z
   .refine((v) => v.decision === "accepte" || v.remarques.length > 0, { message: "une fiche à reprendre a au moins une remarque", path: ["remarques"] })
   .describe("Verdict de la relecture critique.");
 
+/**
+ * Listes fermées touchées par un agent : une langue ou une tradition qui manquait, ajoutée
+ * (npm run liste) ; un thème qui manque, seulement proposé (la fiche porte le plus proche), ajouté
+ * entre deux lots s'il est demandé par plusieurs mots.
+ */
+const ajouts = z
+  .array(
+    z
+      .object({
+        liste: z.enum(["langues", "traditions", "themes"]),
+        valeur: z.string(),
+        raison: z.string().describe("Le mot qui la demande, et pourquoi aucune valeur de la liste ne convient."),
+      })
+      .strict(),
+  )
+  .default([])
+  .describe("Langues et traditions ajoutées par npm run liste ; thèmes proposés, non ajoutés.");
+
 /** Ce que l'agent du dossier rend au workflow : de quoi router le mot, sans le dossier lui-même. */
 export const schemaRetourDossier = z
   .object({
@@ -138,6 +156,7 @@ export const schemaRetourRedaction = z
       )
       .default([])
       .describe("Auteurs et ouvrages cités par la fiche qui n'ont pas encore la leur (npm run rediger -- --essai les signale)."),
+    ajouts,
     notes: z.array(z.string()).default([]).describe("Doutes, limites du modèle, pistes de lecture."),
   })
   .strict();
@@ -160,6 +179,7 @@ export const schemaRetourLectures = z
   .object({
     mot: z.string(),
     lectures: z.number().int().describe("Lectures ajoutées à la fiche, citations vérifiées (npm run verifier:en-ligne)."),
+    ajouts,
     notes: z.array(z.string()).default([]).describe("Pistes sans texte en ligne, passages introuvables."),
   })
   .strict();

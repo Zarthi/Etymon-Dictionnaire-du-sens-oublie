@@ -18,6 +18,7 @@ Tu ajoutes à la fiche d'un mot (`data/fiches/<initiale>/<préfixe>/<id>.yaml`) 
 - `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.
 - Le Nom divin s'écrit comme le texte l'écrit, jamais revocalisé.
 - Rien trouvé dans un texte en ligne : pas de lecture ; dis-le dans tes notes, avec la piste.
+- Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et dis-le dans tes ajouts ; une tradition de trop se retire à la relecture plus aisément qu'une tradition manquante ne s'ajoute après coup.
 
 ## Format
 

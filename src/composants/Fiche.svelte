@@ -53,7 +53,9 @@
 
   <h1>{fiche.mot}</h1>
   <p class="nature">
-    {fiche.nature.join(" et ")}{#if fiche.sacre}{" "}<span class="sacre">· mot sacré, tradition {nommerTraditions(fiche.sacre)}</span>{/if}
+    {fiche.nature.join(" et ")}{#if fiche.themes.length > 0}{" "}<span class="themes">· {fiche.themes.join(", ")}</span>{/if}{#if fiche.sacre}{" "}<span
+        class="sacre">· mot sacré, tradition {nommerTraditions(fiche.sacre)}</span
+      >{/if}
   </p>
   <p class="etymon">
     {#if origine}
@@ -257,6 +259,9 @@
   }
   .traditions a {
     color: inherit;
+  }
+  .themes {
+    font-style: normal;
   }
   .sacre {
     color: var(--tradition);

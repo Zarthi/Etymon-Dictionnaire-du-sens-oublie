@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { schemaDossier, schemaVerdict, sourcesDuDossier, squeletteDossier } from "../lib/atelier.ts";
 import { annee, lireNotices } from "../lib/bnf.ts";
 import { lireTlfi } from "../lib/tlfi.ts";
+import { ajouter } from "../liste.ts";
 import { passages } from "../texte.ts";
 import { validerDepot } from "../valider-fiches.ts";
 
@@ -99,5 +100,12 @@ describe("essai de fiches avec le dépôt", () => {
     const { fiches, erreurs } = await validerDepot(depot, [essai]);
     expect(fiches.map((f) => f.id)).toContain("exemple");
     expect(erreurs.filter((e) => e.fichier.endsWith("exemple.yaml")).map((e) => e.champ)).toEqual(["renvois"]);
+  });
+});
+
+describe("npm run liste", () => {
+  it("ajoute une valeur à la fin, une seule fois", () => {
+    expect(ajouter(["juive", "chrétienne"], "musulmane")).toEqual(["juive", "chrétienne", "musulmane"]);
+    expect(ajouter(["juive", "chrétienne"], "juive")).toEqual(["juive", "chrétienne"]);
   });
 });

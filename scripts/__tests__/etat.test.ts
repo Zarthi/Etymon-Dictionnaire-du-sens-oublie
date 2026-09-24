@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Redaction } from "../../src/lib/sources.ts";
 import type { Candidat, FicheIdentifiee, LectureTraditionnelle } from "../../src/lib/types.ts";
-import { listerBrouillons, prochainsCandidats, resumer } from "../etat.ts";
+import { listerBrouillons, parTheme, prochainsCandidats, resumer } from "../etat.ts";
 
 const IA: Redaction[] = [{ par: "IA", detail: "Claude Opus 5.5" }];
 
@@ -54,6 +54,18 @@ describe("listerBrouillons", () => {
     expect(listerBrouillons(fiches)).toEqual([
       { mot: "chiffre", chemin: "data/fiches/c/ch/chiffre.yaml", incertain: true },
       { mot: "zero", chemin: "data/fiches/z/ze/zero.yaml", incertain: false },
+    ]);
+  });
+});
+
+describe("parTheme", () => {
+  it("range les mots sous chaque thème de la liste, un thème vide compris", () => {
+    const avec = (id: string, themes: string[]) => ({ ...fiche(id, "brouillon"), themes }) as FicheIdentifiee;
+    const fiches = [avec("zéro", ["savoir"]), avec("conscience", ["esprit", "morale"]), avec("algèbre", ["savoir"])];
+    expect(parTheme(fiches, ["savoir", "esprit", "art"])).toEqual([
+      { theme: "savoir", mots: ["algèbre", "zéro"] },
+      { theme: "esprit", mots: ["conscience"] },
+      { theme: "art", mots: [] },
     ]);
   });
 });

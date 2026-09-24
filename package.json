@@ -23,7 +23,8 @@
     "rediger": "node scripts/rediger-lot.ts",
     "dossier": "node scripts/dossier.ts",
     "bnf": "node scripts/bnf.ts",
-    "texte": "node scripts/texte.ts"
+    "texte": "node scripts/texte.ts",
+    "liste": "node scripts/liste.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",

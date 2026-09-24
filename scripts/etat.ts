@@ -1,3 +1,4 @@
+import themes from "../data/themes.json" with { type: "json" };
 import type { Candidat, FicheIdentifiee } from "../src/lib/types.ts";
 import { cheminFiche } from "./lib/validation.ts";
 import { formaterErreur, validerDepot } from "./valider-fiches.ts";
@@ -31,10 +32,16 @@ export function prochainsCandidats(candidats: Candidat[], nombre: number): strin
   return candidats.filter((c) => c.statut === "a-faire").slice(0, nombre).map((c) => c.mot);
 }
 
+/** Mots de chaque thème, dans l'ordre de la liste ; un thème sans mot reste affiché, pour être revu. */
+export function parTheme(fiches: FicheIdentifiee[], liste: string[] = themes): { theme: string; mots: string[] }[] {
+  return liste.map((theme) => ({ theme, mots: fiches.filter((f) => f.themes.includes(theme)).map((f) => f.mot).sort((a, b) => a.localeCompare(b, "fr")) }));
+}
+
 const AIDE = `Usage : npm run etat [-- commande]
   (aucune)          résumé de l'avancement
   brouillons        fiches à relire (aussi : npm run brouillons)
-  candidats [n]     les n prochains mots à traiter (20 par défaut)`;
+  candidats [n]     les n prochains mots à traiter (20 par défaut)
+  themes            les mots de chaque thème (reclassement, relecture)`;
 
 if (import.meta.main) {
   const { fiches, candidats, erreurs } = await validerDepot();
@@ -51,6 +58,8 @@ if (import.meta.main) {
     for (const b of liste) console.log(`${b.mot.padEnd(largeur)}  ${b.incertain ? "incertain " : "          "}${b.chemin}`);
     console.log(`
 ${liste.length} brouillon(s) à relire.`);
+  } else if (commande === "themes") {
+    for (const { theme, mots } of parTheme(fiches)) console.log(`${theme} (${mots.length}) : ${mots.join(", ")}`);
   } else if (commande === "candidats") {
     for (const mot of prochainsCandidats(candidats, Number(argument ?? 20))) console.log(mot);
   } else {

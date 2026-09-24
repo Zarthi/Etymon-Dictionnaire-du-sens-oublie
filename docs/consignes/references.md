@@ -6,7 +6,7 @@ Tu reçois des références demandées par les fiches d'un lot (type, identifian
 
 1. Si `data/auteurs/<id>.yaml` (ou `data/ouvrages/<id>.yaml`) existe, rien à faire.
 2. Cherche sa notice : `npm run bnf -- auteur "<nom> <année de naissance sur quatre chiffres>"` (`Augustin 0354`, `Bleuler 1857`) ; `npm run bnf -- ouvrage "<auteur> <titre>"`. Choisis la notice qui répond à l'indication (dates, note).
-3. Écris la fiche : `npm run bnf -- auteur --cb <cb> --id <id> --description "…" --modele "<ton modèle>"`, avec `--nom` si le nom usuel n'est pas « prénom nom » (Augustin, Cicéron), `--nom-complet` s'il diffère (Aurelius Augustinus), `--traditions` seulement pour un auteur qui parle dans une tradition. Un ouvrage : `npm run bnf -- ouvrage --cb <cb> --id <id> --titre "<titre français>" --licence "<licence>" --description "…" --modele "…"`, avec `--auteur <id>` (l'auteur d'abord), `--abrege`, `--titre-original`.
+3. Écris la fiche : `npm run bnf -- auteur --cb <cb> --id <id> --description "…" --modele "<ton modèle>"`, avec `--nom` si le nom usuel n'est pas « prénom nom » (Augustin, Cicéron), `--nom-complet` s'il diffère (Aurelius Augustinus), `--traditions` seulement pour un auteur qui parle dans une tradition (une tradition absente de la liste : `npm run liste -- traditions "<tradition>"` d'abord). Un ouvrage : `npm run bnf -- ouvrage --cb <cb> --id <id> --titre "<titre français>" --licence "<licence>" --description "…" --modele "…"`, avec `--auteur <id>` (l'auteur d'abord), `--abrege`, `--titre-original`.
 
 ## Règles
 
