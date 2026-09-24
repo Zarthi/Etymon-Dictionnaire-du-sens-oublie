@@ -2,29 +2,33 @@ import { z } from "zod";
 import langues from "../../data/langues.json" with { type: "json" };
 import ouvrages from "../../data/sources.json" with { type: "json" };
 import themes from "../../data/themes.json" with { type: "json" };
+import { SOURCES_DE_REDACTION } from "./sources.ts";
 
 /** Date ISO AAAA-MM-JJ. */
 const date = z.iso.date();
 
-/** Ouvrage désignant le moteur d'IA qui a rédigé la fiche ; `entree` en donne le modèle. */
-export const IA = "IA";
+const page = z.union([z.number().int().positive(), z.string().min(1)]).optional();
+const url = z.url({ protocol: /^https$/ }).optional();
 
 /**
- * Source d'une fiche : l'entrée consultée, avec sa page ou son adresse en ligne.
- * L'IA fait exception : elle n'a ni page ni adresse, seulement le nom du modèle.
+ * Source de la lecture profane (étymologie historique) : ouvrage de la liste fermée,
+ * entrée consultée, avec sa page ou son adresse en ligne (sauf sources de rédaction).
  */
 export const schemaSource = z
-  .object({
-    ouvrage: z.enum(ouvrages),
-    entree: z.string().min(1),
-    page: z.union([z.number().int().positive(), z.string().min(1)]).optional(),
-    url: z.url({ protocol: /^https$/ }).optional(),
-  })
+  .object({ ouvrage: z.enum(ouvrages), entree: z.string().min(1), page, url })
   .strict()
-  .refine((s) => s.ouvrage === IA || s.page !== undefined || s.url !== undefined, {
+  .refine((s) => SOURCES_DE_REDACTION.includes(s.ouvrage) || s.page !== undefined || s.url !== undefined, {
     message: "indiquer au moins une page ou une url",
     path: ["url"],
   });
+
+/**
+ * Source de la lecture traditionnelle : l'œuvre de l'auteur cité (liste ouverte), le passage
+ * précis, ou une source de rédaction. L'IA peut y suffire, sous la validation de Thibault.
+ */
+export const schemaSourceTraditionnelle = z
+  .object({ ouvrage: z.string().min(1), entree: z.string().min(1), page, url })
+  .strict();
 
 export const schemaFiche = z
   .object({
@@ -45,16 +49,20 @@ export const schemaFiche = z
     themes: z.array(z.enum(themes)),
     sources: z.array(schemaSource),
     lectureTraditionnelle: z
-      .object({ texte: z.string().trim().min(1), auteur: z.string().min(1), source: z.string().min(1) })
+      .object({
+        texte: z.string().trim().min(1),
+        auteur: z.string().min(1),
+        sources: z.array(schemaSourceTraditionnelle).min(1),
+      })
       .strict()
       .nullable(),
     statut: z.enum(["a-verifier", "brouillon", "validee"]),
     historique: z.array(z.object({ date, note: z.string().min(1) }).strict()),
   })
   .strict()
-  // Hors a-verifier, une fiche doit citer au moins un ouvrage réellement consulté, en plus de l'IA.
-  .refine((f) => f.statut === "a-verifier" || f.sources.some((s) => s.ouvrage !== IA), {
-    message: "au moins un ouvrage consulté en plus de l'IA (seules les fiches a-verifier en sont dispensées)",
+  // Lecture profane : hors a-verifier, au moins un ouvrage réellement consulté, en plus des sources de rédaction.
+  .refine((f) => f.statut === "a-verifier" || f.sources.some((s) => !SOURCES_DE_REDACTION.includes(s.ouvrage)), {
+    message: "au moins un ouvrage consulté en plus de l'IA ou de la rédaction (seules les fiches a-verifier en sont dispensées)",
     path: ["sources"],
   });
 

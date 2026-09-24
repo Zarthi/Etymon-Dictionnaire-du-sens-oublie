@@ -20,6 +20,7 @@ sources:
 lectureTraditionnelle:
   texte: Lecture fictive, pour les tests.
   auteur: Auteur fictif
-  source: Ouvrage fictif, livre I
+  sources:
+    - { ouvrage: Ouvrage fictif, entree: livre I }
 statut: brouillon
 historique: []

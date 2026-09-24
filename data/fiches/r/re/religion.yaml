@@ -29,6 +29,11 @@ lectureTraditionnelle:
     par le lien de la piété. Il écarte expressément l'explication de Cicéron par
     relegere."
   auteur: Lactance
-  source: Institutions divines, IV, 28, 3
+  sources:
+    - ouvrage: Institutions divines
+      entree: IV, 28, 3
+      url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
+    - ouvrage: IA
+      entree: Claude Opus 5.5
 statut: brouillon
 historique: []

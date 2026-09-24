@@ -2,6 +2,7 @@
   import { dateLongue, origine } from "../lib/affichage.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
+  import Source from "./Source.svelte";
 
   let { fiche, lectureTraditionnelle }: { fiche: FicheIdentifiee; lectureTraditionnelle: boolean } = $props();
 
@@ -47,14 +48,7 @@
   <footer>
     <p hidden={fiche.sources.length === 0}>
       Sources&nbsp;:
-      {#each fiche.sources as source, i (i)}{#if i > 0},{/if}
-        {#if source.url}
-          <a href={source.url} target="_blank" rel="noopener noreferrer" title="Entrée consultée : {source.entree}"
-            >{source.ouvrage}</a
-          >{:else if source.page !== undefined}<span title="Entrée consultée : {source.entree}"
-            >{source.ouvrage}, p.&nbsp;{source.page}</span
-          >{:else}<span title="Rédaction assistée par IA">{source.ouvrage} ({source.entree})</span>{/if}
-      {/each}
+      {#each fiche.sources as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}
     </p>
     {#if correction}
       <p>Corrigée le {dateLongue(correction.date)}.</p>
@@ -125,9 +119,6 @@
   }
   footer p {
     margin: 0 0 0.5rem;
-  }
-  footer a {
-    color: inherit;
   }
   button {
     margin-top: 0.25rem;

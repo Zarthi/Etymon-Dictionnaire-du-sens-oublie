@@ -100,7 +100,7 @@ describe("validerFiches : fiche conforme", () => {
     const { racine: _, ...sansRacine } = ficheBase;
     const texte = stringify({
       ...sansRacine,
-      lectureTraditionnelle: { texte: "Lecture sourcée.", auteur: "Lactance", source: "Institutions divines, IV, 28" },
+      lectureTraditionnelle: { texte: "Lecture sourcée.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] },
       historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
     });
     expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
@@ -108,6 +108,14 @@ describe("validerFiches : fiche conforme", () => {
   it("accepte une fiche a-verifier sans source ou avec l'IA pour seule source", () => {
     expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
     expect(erreursDe({ statut: "a-verifier", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] })).toEqual([]);
+  });
+  it("accepte une lecture traditionnelle dont l'IA est la seule source", () => {
+    const lectureTraditionnelle = { texte: "Lecture.", auteur: "Isidore de Séville", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] };
+    expect(erreursDe({ lectureTraditionnelle })).toEqual([]);
+  });
+  it("accepte la rédaction d'Étymon, sans page ni url, à côté d'un ouvrage consulté", () => {
+    const sources = [...ficheBase.sources, { ouvrage: "Étymon, rédaction", entree: "correction suite à une Critique" }];
+    expect(erreursDe({ sources })).toEqual([]);
   });
   it("accepte l'IA, sans page ni url, à côté d'un ouvrage consulté", () => {
     const sources = [...ficheBase.sources, { ouvrage: "IA", entree: "Claude Opus 5.5" }];
@@ -161,7 +169,9 @@ describe("validerFiches : structure", () => {
     ["incertain", { incertain: "non" }],
     ["reconstruit", { reconstruit: "oui" }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
-    ["lectureTraditionnelle.source", { lectureTraditionnelle: { texte: "Lecture.", auteur: "Augustin" } }],
+    ["lectureTraditionnelle.sources", { lectureTraditionnelle: { texte: "Lecture.", auteur: "Augustin" } }],
+    ["lectureTraditionnelle.sources", { lectureTraditionnelle: { texte: "Lecture.", auteur: "Augustin", sources: [] } }],
+    ["sources", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
     ["racine.sens", { racine: { forme: "*x", langue: "indo-européen" } }],
   ])("signale le champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs.map((e) => e.champ)).toEqual([champ]);
@@ -262,7 +272,7 @@ describe("validerFiches : règles éditoriales", () => {
     ["historique.0.note", { historique: [{ date: "2026-09-23", note: "Corrigée ; voir la source." }] }],
     [
       "lectureTraditionnelle.texte",
-      { lectureTraditionnelle: { texte: "Relier ?", auteur: "Lactance", source: "Institutions divines, IV, 28" } },
+      { lectureTraditionnelle: { texte: "Relier ?", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] } },
     ],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs).toEqual([
