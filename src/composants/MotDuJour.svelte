@@ -1,6 +1,7 @@
 <script lang="ts">
   import { origine } from "../lib/affichage.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
+  import Forme from "./Forme.svelte";
 
   let { fiche, onOuvrir }: { fiche: FicheIdentifiee; onOuvrir: (id: string) => void } = $props();
 </script>
@@ -11,8 +12,7 @@
     <span class="mot">{fiche.mot}</span>
     <span class="etymon"
       >{origine(fiche.langue)}
-      {#if fiche.graphie}<span lang="und">{fiche.graphie}</span>,{/if}
-      <em>{fiche.etymon}</em>&nbsp;: «&nbsp;{fiche.sens}&nbsp;»</span
+      <Forme forme={fiche.etymon} graphie={fiche.graphie} />&nbsp;: «&nbsp;{fiche.sens}&nbsp;»</span
     >
     {#if fiche.statut !== "validee"}
       <span class="statut">{fiche.statut === "a-verifier" ? "Étymologie non vérifiée" : "En relecture"}</span>

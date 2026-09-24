@@ -2,6 +2,7 @@
   import { dateLongue, origine } from "../lib/affichage.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
+  import Forme from "./Forme.svelte";
   import Source from "./Source.svelte";
 
   let { fiche, lectureTraditionnelle }: { fiche: FicheIdentifiee; lectureTraditionnelle: boolean } = $props();
@@ -28,8 +29,7 @@
   <p class="nature">{fiche.nature.join(" et ")}</p>
   <p class="etymon">
     {origine(fiche.langue)}
-    {#if fiche.graphie}<span lang="und">{fiche.graphie}</span>,{/if}
-    <em>{fiche.etymon}</em>&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
+    <Forme forme={fiche.etymon} graphie={fiche.graphie} />&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
   </p>
 
   <p class="explication">{fiche.explication}</p>
@@ -37,8 +37,7 @@
   {#if fiche.racine}
     <p class="racine">
       Plus haut, {origine(fiche.racine.langue)}
-      {#if fiche.racine.graphie}<span lang="und">{fiche.racine.graphie}</span>,{/if}
-      <em>{fiche.racine.forme}</em>&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;».
+      <Forme forme={fiche.racine.forme} graphie={fiche.racine.graphie} />&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;».
     </p>
   {/if}
 
