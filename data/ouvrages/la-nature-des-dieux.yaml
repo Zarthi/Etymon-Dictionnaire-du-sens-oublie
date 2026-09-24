@@ -1,0 +1,16 @@
+titre: La Nature des dieux
+titreOriginal: De natura deorum
+auteur: ciceron
+date: 45-43 av. J.-C.
+licence: domaine public
+texte: https://www.thelatinlibrary.com/cicero/nd.shtml
+description: >-
+  Dialogue en trois livres entre un épicurien, un stoïcien et un académicien sur
+  l'existence et la nature des dieux ; le livre II est l'exposé du stoïcien Balbus.
+sources:
+  - ouvrage: bnf
+    entree: cb14406499v
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

@@ -25,6 +25,9 @@ sources:
     entree: religion
   - ouvrage: gaffiot
     entree: religio
+  - ouvrage: la-nature-des-dieux
+    entree: II, 72 (discours de Balbus)
+    url: https://www.thelatinlibrary.com/cicero/nd2.shtml
   - ouvrage: tlfi
     entree: religion
 redaction:

@@ -21,6 +21,12 @@ sources:
     entree: satan
   - ouvrage: tlfi
     entree: satan
+  - ouvrage: bible-hebraique
+    entree: Nombres 22, 22
+    url: https://he.wikisource.org/wiki/במדבר_כב
+  - ouvrage: bible-hebraique
+    entree: 1 Samuel 29, 4
+    url: https://he.wikisource.org/wiki/שמואל_א_כט
 redaction:
   - par: IA
     detail: Claude Opus 5.5
