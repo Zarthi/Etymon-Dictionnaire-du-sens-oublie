@@ -1,5 +1,6 @@
 <script lang="ts">
   import { dateLongue, origine } from "../lib/affichage.ts";
+  import { signatureRedaction } from "../lib/sources.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
   import Forme from "./Forme.svelte";
@@ -16,6 +17,8 @@
   const lectures = $derived(fiche.lecturesTraditionnelles);
   /** Auteurs des lectures, sans doublon, pour l'intitulé replié : « Lactance, Augustin, Isidore de Séville ». */
   const auteurs = $derived([...new Set(lectures.map((l) => l.auteur))].join(", "));
+  /** Rédaction de la fiche, affichée une fois en pied ; une lecture ne la rappelle que si la sienne diffère. */
+  const redactionFiche = $derived(signatureRedaction(fiche.sources));
 </script>
 
 <svelte:head>
@@ -38,6 +41,7 @@
   <p class="etymon">
     {origine(fiche.langue)}
     <Forme forme={fiche.etymon} graphie={fiche.graphie} />&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
+    {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
   </p>
 
   <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} /></p>
@@ -53,11 +57,7 @@
     <p class="legende"><strong>Idée reçue</strong>&nbsp;: <TexteRiche texte={fiche.legende} {lienVers} exclu={fiche.id} /></p>
   {/if}
 
-  {#if fiche.incertain}
-    <p class="note">Étymologie incertaine ou débattue.</p>
-  {/if}
-
-  <Sources sources={fiche.sources} />
+  <Sources sources={fiche.sources} redaction={false} />
 
   {#if lectures.length > 0}
     <!-- Toujours signalées, repliées par défaut : l'étymologie d'abord, la tradition à côté. -->
@@ -67,12 +67,13 @@
         <span class="auteurs">{auteurs}</span>
       </summary>
       {#each lectures as lecture, i (i)}
-        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} />
+        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} />
       {/each}
     </details>
   {/if}
 
   <footer>
+    <Sources sources={fiche.sources} ouvrages={false} />
     {#if correction}
       <p>Corrigée le {dateLongue(correction.date)}.</p>
     {/if}
@@ -184,13 +185,16 @@
     font-size: 0.85rem;
     color: var(--texte-discret);
   }
-  .racine,
-  .note {
+  .racine {
     margin: 1rem 0 0;
     color: var(--texte-discret);
   }
-  .note {
+  .incertain {
+    font-family: var(--police-interface);
+    font-size: 0.8rem;
     font-style: italic;
+    color: var(--texte-discret);
+    white-space: nowrap;
   }
   footer {
     margin-top: 2rem;

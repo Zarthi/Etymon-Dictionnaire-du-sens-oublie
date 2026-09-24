@@ -1,22 +1,37 @@
 <script lang="ts">
-  import { SOURCES_DE_REDACTION } from "../lib/sources.ts";
+  import { estRedaction } from "../lib/sources.ts";
   import Source from "./Source.svelte";
 
-  /** Sources d'une partie de fiche : les ouvrages consultés, puis, à part, qui a rédigé. */
-  let { sources }: { sources: { ouvrage: string; entree: string; page?: number | string; url?: string }[] } = $props();
+  /**
+   * Sources d'une partie de fiche : les ouvrages consultés et/ou, à part, qui a rédigé.
+   * `ouvrages` et `redaction` choisissent les lignes à afficher.
+   */
+  let {
+    sources,
+    ouvrages = true,
+    redaction = true,
+  }: {
+    sources: { ouvrage: string; entree: string; page?: number | string; url?: string }[];
+    ouvrages?: boolean;
+    redaction?: boolean;
+  } = $props();
 
-  const oeuvres = $derived(sources.filter((s) => !SOURCES_DE_REDACTION.includes(s.ouvrage)));
-  const redaction = $derived(sources.filter((s) => SOURCES_DE_REDACTION.includes(s.ouvrage)));
+  const listeOuvrages = $derived(ouvrages ? sources.filter((s) => !estRedaction(s)) : []);
+  const listeRedaction = $derived(redaction ? sources.filter(estRedaction) : []);
 </script>
 
-<div class="sources">
-  {#if oeuvres.length > 0}
-    <p>Sources&nbsp;: {#each oeuvres as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}</p>
-  {/if}
-  {#if redaction.length > 0}
-    <p class="redaction">Rédaction&nbsp;: {#each redaction as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}</p>
-  {/if}
-</div>
+{#if listeOuvrages.length > 0 || listeRedaction.length > 0}
+  <div class="sources">
+    {#if listeOuvrages.length > 0}
+      <p>Sources&nbsp;: {#each listeOuvrages as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}</p>
+    {/if}
+    {#if listeRedaction.length > 0}
+      <p class="redaction">
+        Rédaction&nbsp;: {#each listeRedaction as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}
+      </p>
+    {/if}
+  </div>
+{/if}
 
 <style>
   .sources {

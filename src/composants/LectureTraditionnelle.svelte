@@ -1,29 +1,38 @@
 <script lang="ts">
-  import { SOURCES_DE_REDACTION } from "../lib/sources.ts";
+  import { estRedaction, signatureRedaction } from "../lib/sources.ts";
   import type { LectureTraditionnelle } from "../lib/types.ts";
   import Source from "./Source.svelte";
+  import Sources from "./Sources.svelte";
   import TexteRiche from "./TexteRiche.svelte";
 
+  /**
+   * Une lecture traditionnelle : le texte, puis la citation d'un seul tenant
+   * (auteur, *œuvre*, passage). Sa rédaction n'est rappelée que si elle diffère de celle
+   * de la fiche (`redactionFiche`), affichée une seule fois en pied de fiche.
+   */
   let {
     lecture,
     lienVers,
     exclu,
-  }: { lecture: LectureTraditionnelle; lienVers: (id: string) => string | undefined; exclu?: string } = $props();
+    redactionFiche,
+  }: {
+    lecture: LectureTraditionnelle;
+    lienVers: (id: string) => string | undefined;
+    exclu?: string;
+    redactionFiche: string;
+  } = $props();
 
-  // La citation (auteur, œuvre, passage) d'un seul tenant ; la rédaction (IA…) à part, en discret.
-  const oeuvres = $derived(lecture.sources.filter((s) => !SOURCES_DE_REDACTION.includes(s.ouvrage)));
-  const redaction = $derived(lecture.sources.filter((s) => SOURCES_DE_REDACTION.includes(s.ouvrage)));
+  const oeuvres = $derived(lecture.sources.filter((s) => !estRedaction(s)));
+  const redactionPropre = $derived(signatureRedaction(lecture.sources) !== redactionFiche);
 </script>
 
 <div class="lecture">
   <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} /></p>
   <p class="auteur">
-    {lecture.auteur}{#each oeuvres as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} avecPassage />{/each}
+    {lecture.auteur}{#each oeuvres as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}
   </p>
-  {#if redaction.length > 0}
-    <p class="redaction">
-      Rédaction&nbsp;: {#each redaction as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}
-    </p>
+  {#if redactionPropre}
+    <Sources sources={lecture.sources} ouvrages={false} />
   {/if}
 </div>
 
@@ -39,12 +48,6 @@
   .auteur {
     margin-top: 0.4rem;
     font-size: 0.9rem;
-    color: var(--texte-discret);
-  }
-  .redaction {
-    margin-top: 0.3rem;
-    font-family: var(--police-interface);
-    font-size: 0.75rem;
     color: var(--texte-discret);
   }
 </style>
