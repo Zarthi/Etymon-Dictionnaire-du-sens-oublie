@@ -6,7 +6,13 @@ import themes from "../../data/themes.json" with { type: "json" };
 /** Date ISO AAAA-MM-JJ. */
 const date = z.iso.date();
 
-/** Référence vérifiable : l'entrée consultée, avec sa page ou son adresse en ligne. */
+/** Ouvrage désignant le moteur d'IA qui a rédigé la fiche ; `entree` en donne le modèle. */
+export const IA = "IA";
+
+/**
+ * Source d'une fiche : l'entrée consultée, avec sa page ou son adresse en ligne.
+ * L'IA fait exception : elle n'a ni page ni adresse, seulement le nom du modèle.
+ */
 export const schemaSource = z
   .object({
     ouvrage: z.enum(ouvrages),
@@ -15,7 +21,7 @@ export const schemaSource = z
     url: z.url({ protocol: /^https$/ }).optional(),
   })
   .strict()
-  .refine((s) => s.page !== undefined || s.url !== undefined, {
+  .refine((s) => s.ouvrage === IA || s.page !== undefined || s.url !== undefined, {
     message: "indiquer au moins une page ou une url",
     path: ["url"],
   });
@@ -46,9 +52,9 @@ export const schemaFiche = z
     historique: z.array(z.object({ date, note: z.string().min(1) }).strict()),
   })
   .strict()
-  // Seule une fiche rédigée de mémoire, pas encore vérifiée, peut n'avoir aucune source.
-  .refine((f) => f.statut === "a-verifier" || f.sources.length > 0, {
-    message: "au moins une source consultée (seules les fiches a-verifier peuvent n'en avoir aucune)",
+  // Hors a-verifier, une fiche doit citer au moins un ouvrage réellement consulté, en plus de l'IA.
+  .refine((f) => f.statut === "a-verifier" || f.sources.some((s) => s.ouvrage !== IA), {
+    message: "au moins un ouvrage consulté en plus de l'IA (seules les fiches a-verifier en sont dispensées)",
     path: ["sources"],
   });
 

@@ -105,8 +105,13 @@ describe("validerFiches : fiche conforme", () => {
     });
     expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
   });
-  it("accepte une fiche a-verifier sans source (rédigée de mémoire)", () => {
+  it("accepte une fiche a-verifier sans source ou avec l'IA pour seule source", () => {
     expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
+    expect(erreursDe({ statut: "a-verifier", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] })).toEqual([]);
+  });
+  it("accepte l'IA, sans page ni url, à côté d'un ouvrage consulté", () => {
+    const sources = [...ficheBase.sources, { ouvrage: "IA", entree: "Claude Opus 5.5" }];
+    expect(erreursDe({ sources })).toEqual([]);
   });
   it("accepte un suffixe numérique pour les homonymes", () => {
     expect(erreursDe({}, "e/et/etonner-2.yaml")).toEqual([]);
@@ -151,6 +156,8 @@ describe("validerFiches : structure", () => {
     ["sources.0", { sources: ["Littré"] }],
     ["sources", { sources: [] }],
     ["sources", { sources: [], statut: "validee" }],
+    ["sources", { sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] }],
+    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner" }, { ouvrage: "IA", entree: "Claude" }] }],
     ["incertain", { incertain: "non" }],
     ["reconstruit", { reconstruit: "oui" }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],

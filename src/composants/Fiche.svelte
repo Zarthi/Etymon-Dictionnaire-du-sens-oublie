@@ -16,7 +16,7 @@
   {#if fiche.statut !== "validee"}
     <p class="statut {fiche.statut}">
       {#if fiche.statut === "a-verifier"}
-        <strong>Étymologie non vérifiée</strong> · rédigée, pas encore contrôlée sur les sources.
+        <strong>Étymologie non vérifiée</strong> · rédigée par IA, pas encore contrôlée sur les sources.
       {:else}
         <strong>En relecture</strong> · sources consultées, relecture en cours.
       {/if}
@@ -51,7 +51,9 @@
         {#if source.url}
           <a href={source.url} target="_blank" rel="noopener noreferrer" title="Entrée consultée : {source.entree}"
             >{source.ouvrage}</a
-          >{:else}<span title="Entrée consultée : {source.entree}">{source.ouvrage}, p.&nbsp;{source.page}</span>{/if}
+          >{:else if source.page !== undefined}<span title="Entrée consultée : {source.entree}"
+            >{source.ouvrage}, p.&nbsp;{source.page}</span
+          >{:else}<span title="Rédaction assistée par IA">{source.ouvrage} ({source.entree})</span>{/if}
       {/each}
     </p>
     {#if correction}
