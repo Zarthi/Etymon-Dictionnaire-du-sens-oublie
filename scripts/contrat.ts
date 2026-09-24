@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from "node:fs";
-import { writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
@@ -7,17 +7,18 @@ import { z } from "zod";
 import langues from "../data/langues.json" with { type: "json" };
 import themes from "../data/themes.json" with { type: "json" };
 import traditions from "../data/traditions.json" with { type: "json" };
-import {
-  LICENCES,
-  NATURES,
-  schemaAuteur,
-  schemaEntreeAuteur,
-  schemaEntreeOuvrage,
-  schemaEntreeRedaction,
-  schemaFiche,
-  schemaOuvrage,
-} from "../src/lib/schema.ts";
+import { LICENCES, NATURES, schemaAuteur, schemaEntreeRedaction, schemaFiche, schemaLectureTraditionnelle, schemaOuvrage } from "../src/lib/schema.ts";
 import { REDACTEURS } from "../src/lib/sources.ts";
+import {
+  CHEMINS,
+  DRAPEAUX,
+  schemaDossier,
+  schemaRetourDossier,
+  schemaRetourLectures,
+  schemaRetourRedaction,
+  schemaRetourEcriture,
+  schemaVerdict,
+} from "./lib/atelier.ts";
 import { cheminFiche } from "./lib/validation.ts";
 
 /**
@@ -25,8 +26,9 @@ import { cheminFiche } from "./lib/validation.ts";
  * - docs/fiche.schema.json, auteur.schema.json, ouvrage.schema.json : schémas JSON, pour
  *   l'autocomplétion et la vérification dans VS Code ;
  * - docs/contrat-fiche.md : les trois types de fiches, lisibles ;
- * - docs/prompt-redaction.md : la consigne donnée à l'IA qui rédige un lot (npm run rediger),
- *   avec des fiches réelles du dépôt pour exemples.
+ * - docs/consignes/*.md : la consigne de chaque étape de la rédaction autonome (docs/methode.md),
+ *   avec des fiches réelles du dépôt pour exemples ;
+ * - le bloc des schémas de sortie de scripts/workflow-lot.js, tirés de scripts/lib/atelier.ts.
  * Un test échoue si ces fichiers ne sont plus à jour : lancer `npm run contrat`.
  */
 const docs = (nom: string) => fileURLToPath(new URL(`../docs/${nom}`, import.meta.url));
@@ -36,7 +38,7 @@ export const SCHEMAS_JSON = [
   { fichier: docs("ouvrage.schema.json"), schema: schemaOuvrage, titre: "Ouvrage d'Étymon" },
 ];
 export const FICHIER_CONTRAT = docs("contrat-fiche.md");
-export const FICHIER_PROMPT = docs("prompt-redaction.md");
+export const FICHIER_WORKFLOW = fileURLToPath(new URL("./workflow-lot.js", import.meta.url));
 const DATA = fileURLToPath(new URL("../data", import.meta.url));
 
 type Noeud = {
@@ -223,23 +225,25 @@ const CONSIGNES = [
   "Le Nom divin s'écrit comme le texte l'écrit (Yah), jamais traduit (« Dieu ») ni revocalisé (« Jéhovah »).",
   "`ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.",
   "Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce). `renvois` (Voir aussi) : notions voisines du même ordre, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `tradition.renvois` (sous « Lectures traditionnelles » : voir obsession) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.",
-  "Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, ajoute-la au lot (`auteurs`, `ouvrages`), avec une description qui situe sans raconter et, dans `cite`, l'élément d'entrée de sa notice BnF (Bleuler, Comte).",
+  "Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) et rends-le dans tes références : l'étape du référentiel la crée d'après la notice BnF.",
   "Dans un texte, nomme un auteur sous son nom usuel ou une de ses formes de citation (liste ci-dessous) : l'app en fait un lien, s'il est aussi cité dans un champ de la fiche.",
-  "Tu rédiges de mémoire : n'invente ni tenant (`selon`), ni date (`forge`), ni forme reconstruite que tu ne connais pas avec certitude. En cas de doute sur la chaîne, `incertain: true`.",
-  "Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles (`tradition.lectures`) : les scripts les posent (npm run rediger, npm run verifier), les lectures se rédigent à part, texte source sous les yeux.",
+  "Tu rédiges d'après le dossier (atelier/<id>/dossier.json) : la fiche n'affirme rien qui n'y soit (forme, langue, sens, date, auteur, tenant, histoire du mot). Si ta mémoire te dit qu'un fait manque ou qu'un fait du dossier est faux, ne l'écris pas : dis-le dans tes notes. Si le dossier signale un doute sur la chaîne, `incertain: true`.",
+  "Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles (`tradition.lectures`) : les scripts posent les premiers (npm run rediger), les lectures se rédigent à part, texte source sous les yeux.",
   "Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.",
 ];
 
-/** Consigne de rédaction d'un lot, pour l'IA : règles, format d'entrée tiré du schéma, exemples réels. */
+const ENTETE = "> Généré par `npm run contrat` : ne pas modifier à la main. Étape de la rédaction autonome (docs/methode.md) ; AGENTS.md fait foi.";
+
+/** Consigne de l'étape 2 : rédiger une fiche d'après son dossier. */
 export function genererPrompt(): string {
   const auteurs = lireReferences("auteurs");
   const ouvrages = lireReferences("ouvrages");
   return [
-    "# Rédiger un lot de fiches",
+    "# Rédiger une fiche d'après son dossier",
     "",
-    "> Généré par `npm run contrat` à partir de `src/lib/schema.ts` et des fiches citées en exemple : ne pas modifier à la main.",
+    ENTETE,
     "",
-    "Tu rédiges des fiches d'Étymon, dictionnaire du sens premier des mots français. Une fiche se lit en dix secondes.",
+    "Tu rédiges une fiche d'Étymon, dictionnaire du sens premier des mots français, d'après le dossier de faits du mot (`atelier/<id>/dossier.json`). Une fiche se lit en dix secondes.",
     "",
     "## Règles",
     "",
@@ -247,23 +251,14 @@ export function genererPrompt(): string {
     "",
     "## Format",
     "",
-    "Un fichier JSON : une liste de fiches, ou `{ \"fiches\": [...], \"auteurs\": [...], \"ouvrages\": [...] }` quand il faut créer des auteurs ou des ouvrages. Chaque fiche a les champs ci-dessous et eux seuls ; un champ facultatif à sa valeur par défaut ne s'écrit pas ; `nature` se déduit du Littré et ne s'écrit que pour un mot qui n'y figure pas (postérieur à 1872).",
+    "Un fichier JSON, `atelier/<id>/fiche.json` : la fiche seule, avec les champs ci-dessous et eux seuls ; un champ facultatif à sa valeur par défaut ne s'écrit pas ; `nature` se déduit du Littré et ne s'écrit que pour un mot qui n'y figure pas (postérieur à 1872 : le TLFi la donne).",
     "",
-    "### Fiche d'un mot",
-    "",
-    ...contrat(schemaEntreeRedaction, "####"),
-    "### Auteur",
-    "",
-    ...contrat(schemaEntreeAuteur, "####"),
-    "### Ouvrage",
-    "",
-    ...contrat(schemaEntreeOuvrage, "####"),
+    ...contrat(schemaEntreeRedaction, "###"),
     "### Listes fermées",
     "",
     `- \`nature\` : ${NATURES.join(", ")}.`,
     `- \`langue\` : ${langues.join(", ")}.`,
     `- \`themes\` : ${themes.join(", ")}.`,
-    `- \`traditions\` : ${traditions.join(", ")}.`,
     `- Auteurs existants (identifiant : nom, formes de citation) : ${auteurs.map((a) => `${a.id} (${[a.nom, ...((a.cite as string[] | undefined) ?? [])].join(", ")})`).join(" ; ")}.`,
     `- Ouvrages existants : ${ouvrages.map((o) => `${o.id} (${o.titre})`).join(", ")}.`,
     "",
@@ -278,18 +273,181 @@ export function genererPrompt(): string {
     "]",
     "```",
     "",
-    "## Ensuite",
+    "## Contrôle",
     "",
-    '1. `npm run rediger -- lot.json --modele "<ton modèle>"` : écrit les fiches en `a-verifier` et les retire des candidats.',
-    "2. `npm run verifier` : confronte au Littré ; les fiches concordantes passent en `brouillon`, les autres et les contrôles sont à relire.",
-    "3. `npm run valider`, puis un commit par lot.",
+    "`npm run rediger -- atelier/<id>/fiche.json --essai` : valide la fiche avec le dépôt sans l'écrire. Corrige ce qui est « à corriger » ; ce qui est « à créer » (auteurs, ouvrages) va dans tes références.",
     "",
   ].join("\n");
+}
+
+/** Contrat d'un schéma d'atelier, sans le titre de premier niveau. */
+const contratAtelier = (schema: z.ZodType) => contrat(schema, "###");
+
+/** Consigne de l'étape 1 : le dossier de faits, et le tri. */
+export function genererConsigneDossier(): string {
+  return [
+    "# Constituer le dossier d'un mot",
+    "",
+    ENTETE,
+    "",
+    "Tu rassembles les faits dont une autre IA tirera la fiche du mot ; tu ne rédiges pas la fiche. Le dossier se relit en quelques secondes.",
+    "",
+    "## Étapes",
+    "",
+    "1. `npm run dossier -- <mot>` : crée `atelier/<id>/dossier.json`, avec les entrées du Littré local, et affiche le Littré et l'étymologie du TLFi.",
+    "2. Choisis le chemin et les drapeaux du mot (ci-dessous).",
+    "3. Remonte la chaîne jusqu'au sens premier, sans aller plus loin qu'il ne faut (AGENTS.md §3.2) : pour chaque maillon, la forme, la langue et le sens, chacun avec l'ouvrage et l'entrée qui le donnent. Sens d'un étymon latin : Gaffiot (gaffiot.fr, dans le navigateur intégré), seulement si ni le Littré ni le TLFi ne le donnent ; grec : Bailly (`npm run texte -- bailly:φρήν`). Un mot voisin (« déverbal de ennuyer ») : `npm run dossier -- --consulter ennuyer`.",
+    "4. Mot forgé : l'auteur, la date et l'ouvrage, tels que les sources les donnent. Origine débattue : chaque hypothèse, qui la défend, et qui la rapporte seulement. Étymologie populaire connue : ce qu'en disent les sources.",
+    "5. Écris `chemin`, `drapeaux`, `faits`, `manques` et `notes` dans le fichier, puis `npm run dossier -- --verifier <mot>`.",
+    "",
+    "## Règles",
+    "",
+    "- Un fait est ce qu'une source dit, en une phrase à toi, avec l'ouvrage (identifiant de data/ouvrages : littre, tlfi, gaffiot, bailly…) et l'entrée consultée. Jamais de mémoire : ce que tu sais sans l'avoir lu va dans `notes`, comme une piste.",
+    "- Du Littré (domaine public), tu peux recopier. Du TLFi (non libre), du Gaffiot et du Bailly (CC BY-NC-ND), les faits seuls, reformulés.",
+    "- Jamais le Wiktionnaire (l'API du TLFi en contient une rubrique : l'ignorer), ni le Robert, ni Bloch et Wartburg, ni le FEW.",
+    "- Une étymologie du Littré dépassée par le TLFi : les deux faits, avec leur source ; la rédaction suivra le plus récent.",
+    "- Mot sacré (chemin `sacre`) : le texte d'origine, dans sa langue (Wikisource en hébreu : `npm run texte -- <adresse> --autour \"<mot>\"`), avec le livre, le chapitre et le verset où le mot paraît ou s'explique.",
+    "- Drapeau `tradition` : un auteur traditionnel a lu le mot lui-même, ou son étymon (Isidore, Augustin, Lactance, le Talmud…), et non la chose qu'il désigne aujourd'hui ; donne dans `notes` l'œuvre et le passage si tu les connais : la passe des lectures les cherchera.",
+    "- Pas plus de faits qu'il n'en faut pour la fiche : dix au plus.",
+    "",
+    "## Format de `atelier/<id>/dossier.json`",
+    "",
+    ...contratAtelier(schemaDossier),
+    `Chemins : ${CHEMINS.join(", ")}. Drapeaux : ${DRAPEAUX.join(", ")}.`,
+    "",
+  ].join("\n");
+}
+
+/** Consigne de l'étape 3 : la relecture critique. */
+export function genererConsigneRelecture(): string {
+  return [
+    "# Relire une fiche d'après son dossier",
+    "",
+    ENTETE,
+    "",
+    "Tu relis une fiche qu'une autre IA a rédigée ; tu ne la réécris pas. Lis `atelier/<id>/dossier.json` et `atelier/<id>/fiche.json`, et rien d'autre : le dossier tient lieu des sources.",
+    "",
+    "## Trois critères, et rien d'autre",
+    "",
+    "1. **dossier** : chaque affirmation de la fiche (forme, langue, sens, date, auteur, tenant, ce que l'explication dit de l'histoire du mot) est dans le dossier.",
+    "2. **justesse** : chaque phrase répond à « que veux-tu dire exactement ? » (AGENTS.md §3) ; chaque mot dans son sens propre, sans figure, sans effet, sans jargon ; l'explication dit ce qui s'est perdu, affaibli ou retourné, sans redire le sens affiché au-dessus.",
+    "3. **regle** : les règles que les scripts ne voient pas : le sens premier au bon maillon ; la règle d'arrêt ; étymologie et tradition distinctes ; aucune étymologie populaire dans la chaîne ; `renvois` vers des notions du même ordre, sans racine commune ; `tradition.renvois` seulement vers un mot que la tradition a lu ; `incertain` quand le dossier doute de la chaîne.",
+    "",
+    "Ne relève ni ce que les scripts vérifient (typographie, longueurs, identifiants, listes fermées), ni une préférence de style : seulement ce qui rend la fiche fausse, obscure ou contraire aux règles. `accepte` : aucune remarque. `a-reprendre` : les remarques qui obligent à changer la fiche, chacune avec ce qu'il faudrait écrire si tu le sais.",
+    "",
+    "## Verdict",
+    "",
+    ...contratAtelier(schemaVerdict),
+  ].join("\n");
+}
+
+/** Consigne de l'étape 4 : les fiches d'auteurs et d'ouvrages, d'après la BnF. */
+export function genererConsigneReferences(): string {
+  return [
+    "# Créer les fiches d'auteurs et d'ouvrages",
+    "",
+    ENTETE,
+    "",
+    "Tu reçois des références demandées par les fiches d'un lot (type, identifiant, indication). Pour chacune :",
+    "",
+    "1. Si `data/auteurs/<id>.yaml` (ou `data/ouvrages/<id>.yaml`) existe, rien à faire.",
+    '2. Cherche sa notice : `npm run bnf -- auteur "<nom> <année de naissance sur quatre chiffres>"` (`Augustin 0354`, `Bleuler 1857`) ; `npm run bnf -- ouvrage "<auteur> <titre>"`. Choisis la notice qui répond à l\'indication (dates, note).',
+    '3. Écris la fiche : `npm run bnf -- auteur --cb <cb> --id <id> --description "…" --modele "<ton modèle>"`, avec `--nom` si le nom usuel n\'est pas « prénom nom » (Augustin, Cicéron), `--nom-complet` s\'il diffère (Aurelius Augustinus), `--traditions` seulement pour un auteur qui parle dans une tradition. Un ouvrage : `npm run bnf -- ouvrage --cb <cb> --id <id> --titre "<titre français>" --licence "<licence>" --description "…" --modele "…"`, avec `--auteur <id>` (l\'auteur d\'abord), `--abrege`, `--titre-original`.',
+    "",
+    "## Règles",
+    "",
+    "- Dates et forme d'entrée viennent de la notice : le script les pose, tu ne les écris pas.",
+    "- Description : 200 caractères au plus ; ce qui situe (époque, domaine, œuvre), pas une biographie, pas de jugement.",
+    `- Licence d'un ouvrage : ${LICENCES.join(", ")} ; domaine public si l'auteur est mort depuis plus de soixante-dix ans.`,
+    "- Sans notice qui réponde à l'indication : un échec, avec sa raison ; jamais de fiche écrite à la main.",
+    "",
+  ].join("\n");
+}
+
+/** Lectures d'une fiche du dépôt, telles qu'elles sont écrites, pour exemple. */
+function lecturesDe(id: string, rang: number): Record<string, unknown> {
+  return parse(readFileSync(join(DATA, "fiches", cheminFiche(id)), "utf8")).tradition.lectures[rang];
+}
+
+/** Consigne de l'étape 5 : les lectures traditionnelles, texte source sous les yeux. */
+export function genererConsigneLectures(): string {
+  return [
+    "# Chercher les lectures traditionnelles d'un mot",
+    "",
+    ENTETE,
+    "",
+    "Tu ajoutes à la fiche d'un mot (`data/fiches/<initiale>/<préfixe>/<id>.yaml`) les lectures qu'une tradition a faites du mot lui-même, texte source sous les yeux (AGENTS.md §4.7). Aucune lecture vaut mieux qu'une lecture approximative.",
+    "",
+    "## Étapes",
+    "",
+    "1. Pistes : les `notes` du dossier (`atelier/<id>/dossier.json`), et ce que tu sais (Isidore, *Étymologies* ; Augustin ; Lactance ; Varron ; le Talmud ; les Pères…). L'auteur doit avoir lu le mot, ou son étymon, pas la chose qu'il désigne aujourd'hui.",
+    '2. Trouve le passage dans un texte original en ligne, du domaine public (Wikisource en latin, en grec, en hébreu ; thelatinlibrary.com ; archive.org), et lis-le tel quel : `npm run texte -- <adresse> --autour "<mot>"`. Jamais un outil qui résume la page pour une citation.',
+    "3. Écris la lecture dans `tradition.lectures` : la citation copiée de la page, mot pour mot, `[…]` pour une coupe ; le texte, ce que la doctrine tire du mot, en une ou deux phrases, sans commencer par le nom de l'auteur ni répéter l'hypothèse.",
+    "4. L'œuvre et son auteur doivent avoir leur fiche (`npm run bnf`, docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.",
+    "5. `npm run verifier:en-ligne -- <mot>`, puis `npm run valider`. Une citation introuvable est une erreur : corrige-la, ou retire la lecture.",
+    "",
+    "## Règles",
+    "",
+    "- Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Resh Lakish dans le Talmud).",
+    "- `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.",
+    "- Le Nom divin s'écrit comme le texte l'écrit, jamais revocalisé.",
+    "- Rien trouvé dans un texte en ligne : pas de lecture ; dis-le dans tes notes, avec la piste.",
+    "",
+    "## Format",
+    "",
+    ...contrat(schemaLectureTraditionnelle, "###"),
+    "## Exemples",
+    "",
+    "Lectures du dépôt (Lactance sur *religion* ; Resh Lakish, parole rapportée par le Talmud, sur *Satan*) :",
+    "",
+    "```json",
+    JSON.stringify(lecturesDe("religion", 0)),
+    JSON.stringify(lecturesDe("satan", 0)),
+    "```",
+    "",
+  ].join("\n");
+}
+
+/** Consignes par étape, dans docs/consignes/. */
+export const CONSIGNES_ETAPES = [
+  { fichier: docs("consignes/dossier.md"), generer: genererConsigneDossier },
+  { fichier: docs("consignes/redaction.md"), generer: genererPrompt },
+  { fichier: docs("consignes/relecture.md"), generer: genererConsigneRelecture },
+  { fichier: docs("consignes/references.md"), generer: genererConsigneReferences },
+  { fichier: docs("consignes/lectures.md"), generer: genererConsigneLectures },
+];
+
+/** Schémas de sortie des agents du workflow : le script de workflow n'a pas accès aux fichiers. */
+const SCHEMAS_WORKFLOW = {
+  dossier: schemaRetourDossier,
+  redaction: schemaRetourRedaction,
+  verdict: schemaVerdict,
+  ecriture: schemaRetourEcriture,
+  lectures: schemaRetourLectures,
+};
+const DEBUT_BLOC = "// <schemas> généré par npm run contrat (scripts/lib/atelier.ts) : ne pas modifier à la main";
+const FIN_BLOC = "// </schemas>";
+
+/** Le script de workflow, avec son bloc de schémas régénéré. */
+export function genererWorkflow(actuel: string): string {
+  const debut = actuel.indexOf(DEBUT_BLOC);
+  const fin = actuel.indexOf(FIN_BLOC);
+  if (debut === -1 || fin === -1) throw new Error(`scripts/workflow-lot.js : bloc « ${DEBUT_BLOC} » introuvable`);
+  const schemas = Object.fromEntries(
+    Object.entries(SCHEMAS_WORKFLOW).map(([nom, schema]) => {
+      // io « output » : une liste qui a une valeur par défaut est exigée de l'agent, jamais absente.
+      const { $schema: _s, ...json } = z.toJSONSchema(schema, { target: "draft-7", unrepresentable: "any", io: "output" }) as Record<string, unknown>;
+      return [nom, json];
+    }),
+  );
+  return `${actuel.slice(0, debut)}${DEBUT_BLOC}\nconst SCHEMAS = ${JSON.stringify(schemas)}\n${actuel.slice(fin)}`;
 }
 
 if (import.meta.main) {
   for (const { fichier, schema, titre } of SCHEMAS_JSON) await writeFile(fichier, JSON.stringify(genererSchemaJson(schema, titre), null, 2) + "\n");
   await writeFile(FICHIER_CONTRAT, genererMarkdown());
-  await writeFile(FICHIER_PROMPT, genererPrompt());
-  console.log("✓ docs/*.schema.json, docs/contrat-fiche.md et docs/prompt-redaction.md régénérés");
+  await mkdir(docs("consignes"), { recursive: true });
+  for (const { fichier, generer } of CONSIGNES_ETAPES) await writeFile(fichier, generer());
+  await writeFile(FICHIER_WORKFLOW, genererWorkflow(readFileSync(FICHIER_WORKFLOW, "utf8")));
+  console.log("✓ docs/*.schema.json, docs/contrat-fiche.md, docs/consignes/*.md et les schémas de scripts/workflow-lot.js régénérés");
 }

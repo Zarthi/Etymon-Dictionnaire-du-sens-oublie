@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { parseArgs } from "node:util";
+import { cheminDossier, schemaDossier, sourcesDuDossier } from "./lib/atelier.ts";
 import { chercher, natureDepuisLittre } from "./lib/littre.ts";
 import { preparerAuteur, preparerFiche, preparerOuvrage, versYaml } from "./lib/redaction.ts";
 import { cheminFiche, slug } from "./lib/validation.ts";
@@ -9,28 +10,50 @@ import { chargerIndexLittre } from "./littre.ts";
 import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts";
 
 /**
- * Écrit un lot de fiches rédigées par l'IA (statut a-verifier) et retire les mots des candidats.
- * Le lot est un fichier JSON au format de docs/prompt-redaction.md : une liste de fiches de
- * mots, ou `{ fiches, auteurs, ouvrages }` quand le lot cite des auteurs ou des ouvrages qui
- * n'ont pas encore leur fiche (le contenu seul ; statut, rédaction et sources sont posés ici ou
- * par npm run verifier). Un mot écarté par Thibault n'est jamais rédigé.
+ * Écrit des fiches rédigées par l'IA et retire les mots des candidats.
+ * Chaque fichier est au format de docs/consignes/redaction.md : une fiche, une liste de fiches, ou
+ * `{ fiches, auteurs, ouvrages }` quand il faut créer des auteurs ou des ouvrages (le contenu seul ;
+ * statut, rédaction et sources sont posés ici ou par npm run verifier). Un mot écarté par Thibault
+ * n'est jamais rédigé.
+ * - sans option : fiches en `a-verifier` (rédigées de mémoire) ;
+ * - --dossier : fiches rédigées d'après leur dossier (atelier/<id>/dossier.json, docs/methode.md) :
+ *   les entrées consultées du dossier deviennent leurs sources, et elles passent en `brouillon` ;
+ * - --essai : rien n'est écrit ; chaque fiche est validée avec le dépôt, et les auteurs ou ouvrages
+ *   qui n'ont pas encore leur fiche sont signalés à part (à créer : npm run bnf).
  *
- * Usage : npm run rediger -- <lot.json> --modele "Claude Fable 5.1" [--remplacer]
+ * Usage : npm run rediger -- <fichier.json>… --modele "Claude Fable 5.1" [--dossier] [--essai] [--remplacer]
  */
-if (import.meta.main) {
-  const { values, positionals } = parseArgs({
+type Brute = Record<string, unknown>;
+
+/** Contenu d'un fichier rédigé : une fiche seule, une liste, ou fiches, auteurs et ouvrages. */
+function lireLot(contenu: Brute | Brute[]): { fiches: Brute[]; auteurs: Brute[]; ouvrages: Brute[] } {
+  if (Array.isArray(contenu)) return { fiches: contenu, auteurs: [], ouvrages: [] };
+  if ("mot" in contenu) return { fiches: [contenu], auteurs: [], ouvrages: [] };
+  const { fiches = [], auteurs = [], ouvrages = [] } = contenu as { fiches?: Brute[]; auteurs?: Brute[]; ouvrages?: Brute[] };
+  return { fiches, auteurs, ouvrages };
+}
+
+/** Une référence sans fiche n'est pas une faute de rédaction : elle est à créer (étape 4). */
+const A_CREER = /« ([^»]+) » sans fiche \(data\/(auteurs|ouvrages)\)/;
+
+async function principal(): Promise<number> {
+  const { values, positionals: fichiers } = parseArgs({
     allowPositionals: true,
-    options: { modele: { type: "string" }, remplacer: { type: "boolean", default: false } },
+    options: {
+      modele: { type: "string" },
+      remplacer: { type: "boolean", default: false },
+      dossier: { type: "boolean", default: false },
+      essai: { type: "boolean", default: false },
+    },
   });
-  const [fichierLot] = positionals;
-  if (!fichierLot || !values.modele) {
-    console.log('Usage : npm run rediger -- <lot.json> --modele "Claude Fable 5.1" [--remplacer]');
-    process.exit(1);
+  if (fichiers.length === 0 || (!values.modele && !values.essai)) {
+    console.log('Usage : npm run rediger -- <fichier.json>… --modele "Claude Fable 5.1" [--dossier] [--essai] [--remplacer]');
+    return 1;
   }
-  type Brute = Record<string, unknown>;
-  const contenu: Brute[] | { fiches?: Brute[]; auteurs?: Brute[]; ouvrages?: Brute[] } = JSON.parse(await readFile(fichierLot, "utf8"));
-  const lot = Array.isArray(contenu) ? contenu : (contenu.fiches ?? []);
-  const references = Array.isArray(contenu) ? { auteurs: [], ouvrages: [] } : { auteurs: contenu.auteurs ?? [], ouvrages: contenu.ouvrages ?? [] };
+  const modele = values.modele ?? "essai";
+  const lots = await Promise.all(fichiers.map(async (f) => lireLot(JSON.parse(await readFile(f, "utf8")))));
+  const lot = lots.flatMap((l) => l.fiches);
+  const references = { auteurs: lots.flatMap((l) => l.auteurs), ouvrages: lots.flatMap((l) => l.ouvrages) };
   const index = await chargerIndexLittre();
   const dossierCandidats = join(DOSSIER_DATA, "candidats");
   const candidats = new Map<string, { fichier: string; ecarte: boolean }>();
@@ -42,6 +65,7 @@ if (import.meta.main) {
   }
 
   const ecrits: string[] = [];
+  const essais: { fichier: string; texte: string }[] = [];
   const refus: string[] = [];
 
   // Auteurs et ouvrages d'abord : les fiches du lot peuvent les citer.
@@ -57,11 +81,12 @@ if (import.meta.main) {
         refus.push(`${dossier}/${id} : la fiche existe déjà (--remplacer pour l'écraser)`);
         continue;
       }
-      const resultat = preparer(brute, values.modele);
+      const resultat = preparer(brute, modele);
       if ("erreurs" in resultat) {
         refus.push(...resultat.erreurs.map((e) => `${dossier}/${id} › ${e}`));
         continue;
       }
+      if (values.essai) continue;
       await mkdir(dirname(chemin), { recursive: true });
       await writeFile(chemin, versYaml(resultat.fiche));
       referencesEcrites++;
@@ -80,14 +105,53 @@ if (import.meta.main) {
       continue;
     }
     const natureLittre = (chercher(index, mot) ?? []).map((e) => natureDepuisLittre(e.nature)).find(Boolean);
-    const resultat = preparerFiche(brute, { modele: values.modele, natureLittre });
+    const resultat = preparerFiche(brute, { modele, natureLittre });
     if ("erreurs" in resultat) {
       refus.push(...resultat.erreurs.map((e) => `${mot} › ${e}`));
       continue;
     }
+    let fiche = resultat.fiche;
+    if (values.dossier) {
+      if (!existsSync(cheminDossier(id))) {
+        refus.push(`${mot} : pas de dossier (atelier/${id}/dossier.json)`);
+        continue;
+      }
+      const dossier = schemaDossier.safeParse(JSON.parse(await readFile(cheminDossier(id), "utf8")));
+      if (!dossier.success) {
+        refus.push(`${mot} : dossier incomplet (npm run dossier -- --verifier ${mot})`);
+        continue;
+      }
+      // Les sources précèdent la rédaction, comme dans les fiches écrites à la main.
+      const { redaction, statut: _statut, ...contenu } = fiche;
+      fiche = { ...contenu, sources: sourcesDuDossier(dossier.data), redaction, statut: "brouillon" };
+    }
+    if (values.essai) {
+      essais.push({ fichier: cheminFiche(id), texte: versYaml(fiche) });
+      continue;
+    }
     await mkdir(dirname(chemin), { recursive: true });
-    await writeFile(chemin, versYaml(resultat.fiche));
+    await writeFile(chemin, versYaml(fiche));
     ecrits.push(id);
+  }
+
+  if (values.essai) {
+    const { erreurs } = await validerDepot(DOSSIER_DATA, essais);
+    const siennes = erreurs.filter((e) => essais.some((s) => e.fichier.endsWith(`/${s.fichier}`)));
+    const aCreer = [
+      ...new Set(
+        siennes
+          .map((e) => A_CREER.exec(e.regle))
+          .filter((m) => m !== null)
+          .map((m) => `${m[2] === "auteurs" ? "auteur" : "ouvrage"} ${m[1]}`),
+      ),
+    ];
+    const aCorriger = siennes.filter((e) => !A_CREER.test(e.regle));
+    console.log(`Essai : ${essais.length} fiche(s) préparée(s), rien n'est écrit.`);
+    if (refus.length > 0) console.log(`\nRefusées (${refus.length}) :\n- ${refus.join("\n- ")}`);
+    if (aCorriger.length > 0) console.log(`\nÀ corriger :\n${aCorriger.map(formaterErreur).join("\n")}`);
+    if (aCreer.length > 0) console.log(`\nÀ créer (npm run bnf) : ${aCreer.join(", ")}`);
+    if (refus.length === 0 && aCorriger.length === 0) console.log("\n✓ Conforme.");
+    return refus.length > 0 || aCorriger.length > 0 ? 1 : 0;
   }
 
   // Candidats : les mots rédigés en sortent.
@@ -102,10 +166,14 @@ if (import.meta.main) {
     if (gardees.length !== lignes.length) await writeFile(chemin, gardees.join("\n"));
   }
 
-  console.log(`✓ ${ecrits.length} fiche(s) de mot et ${referencesEcrites} fiche(s) d'auteur ou d'ouvrage écrite(s) en a-verifier.`);
+  const statut = values.dossier ? "brouillon" : "a-verifier";
+  console.log(`✓ ${ecrits.length} fiche(s) de mot (${statut}) et ${referencesEcrites} fiche(s) d'auteur ou d'ouvrage écrite(s).`);
   if (refus.length > 0) console.log(`\nNon écrites (${refus.length}) :\n- ${refus.join("\n- ")}`);
   const { erreurs } = await validerDepot();
   const concernees = erreurs.filter((e) => ecrits.some((id) => e.fichier.endsWith(`/${id}.yaml`)));
   if (concernees.length > 0) console.log(`\nÀ corriger (npm run valider) :\n${concernees.map(formaterErreur).join("\n")}`);
-  console.log("\nSuite : npm run verifier, puis npm run valider.");
+  console.log(`\nSuite : ${values.dossier ? "" : "npm run verifier, puis "}npm run valider.`);
+  return concernees.length > 0 ? 1 : 0;
 }
+
+if (import.meta.main) process.exitCode = await principal();

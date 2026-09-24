@@ -1,6 +1,17 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { FICHIER_CONTRAT, FICHIER_PROMPT, genererMarkdown, genererPrompt, genererSchemaJson, SCHEMAS_JSON } from "../contrat.ts";
+import {
+  CONSIGNES_ETAPES,
+  FICHIER_CONTRAT,
+  FICHIER_WORKFLOW,
+  genererMarkdown,
+  genererPrompt,
+  genererSchemaJson,
+  genererWorkflow,
+  SCHEMAS_JSON,
+} from "../contrat.ts";
+
+const nom = (fichier: string) => fichier.split(/[\\/]/).slice(-2).join("/");
 
 describe("contrat de données", () => {
   it.each(SCHEMAS_JSON.map((s) => [s.fichier.split(/[\\/]/).pop(), s]))("docs/%s est à jour (sinon : npm run contrat)", (_, { fichier, schema, titre }) => {
@@ -9,8 +20,12 @@ describe("contrat de données", () => {
   it("docs/contrat-fiche.md est à jour (sinon : npm run contrat)", () => {
     expect(readFileSync(FICHIER_CONTRAT, "utf8")).toBe(genererMarkdown());
   });
-  it("docs/prompt-redaction.md est à jour (sinon : npm run contrat)", () => {
-    expect(readFileSync(FICHIER_PROMPT, "utf8")).toBe(genererPrompt());
+  it.each(CONSIGNES_ETAPES.map((c) => [nom(c.fichier), c]))("docs/%s est à jour (sinon : npm run contrat)", (_, { fichier, generer }) => {
+    expect(readFileSync(fichier, "utf8")).toBe(generer());
+  });
+  it("les schémas de scripts/workflow-lot.js sont à jour (sinon : npm run contrat)", () => {
+    const actuel = readFileSync(FICHIER_WORKFLOW, "utf8");
+    expect(actuel).toBe(genererWorkflow(actuel));
   });
   it("décrit les trois types de fiches", () => {
     const contrat = genererMarkdown();
@@ -20,9 +35,13 @@ describe("contrat de données", () => {
     expect(contrat).toContain("### `etymologie[].alternatives`");
     expect(contrat).toContain("### `tradition.lectures[].sources[]`");
   });
-  it("ne demande à l'IA que le contenu : ni sources, ni statut, ni rédaction, ni lectures", () => {
+  it("ne demande au rédacteur que le contenu de la fiche : ni sources, ni statut, ni rédaction, ni lectures", () => {
     const prompt = genererPrompt();
-    for (const champ of ["mot", "etymologie", "explication", "ecartees", "nom", "titre"]) expect(prompt).toContain(`| \`${champ}\` |`);
+    for (const champ of ["mot", "etymologie", "explication", "ecartees"]) expect(prompt).toContain(`| \`${champ}\` |`);
     for (const champ of ["sources", "statut", "redaction", "lectures", "historique"]) expect(prompt).not.toContain(`| \`${champ}\` |`);
+  });
+  it("fait rédiger d'après le dossier, jamais de mémoire", () => {
+    expect(genererPrompt()).toContain("d'après le dossier");
+    expect(genererPrompt()).not.toContain("Tu rédiges de mémoire");
   });
 });

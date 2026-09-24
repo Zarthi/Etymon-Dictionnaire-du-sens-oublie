@@ -30,8 +30,12 @@ async function lireDossier(dossier: string): Promise<FichierSource[]> {
 
 const prefixer = (prefixe: string) => (e: Erreur): Erreur => ({ ...e, fichier: `${prefixe}/${e.fichier}` });
 
-/** Valide les auteurs, les ouvrages, les fiches, les candidats et les comptes d'un dossier de données. */
-export async function validerDepot(dossierData = DOSSIER_DATA) {
+/**
+ * Valide les auteurs, les ouvrages, les fiches, les candidats et les comptes d'un dossier de données.
+ * `essais` : fiches à valider avec le dépôt sans les écrire (npm run rediger -- --essai), qui
+ * remplacent celles de même chemin.
+ */
+export async function validerDepot(dossierData = DOSSIER_DATA, essais: FichierSource[] = []) {
   const nomDepot = basename(dossierData);
   const { auteurs, erreurs: erreursAuteurs } = validerAuteurs(await lireDossier(join(dossierData, "auteurs")));
   const { ouvrages, erreurs: erreursOuvrages } = validerOuvrages(
@@ -40,7 +44,8 @@ export async function validerDepot(dossierData = DOSSIER_DATA) {
   );
   const ref = referentiel(auteurs, ouvrages);
   // Les candidats d'abord (les fiches présentes se lisent aux noms de fichiers) : un renvoi peut viser un candidat à faire.
-  const sourcesFiches = await lireDossier(join(dossierData, "fiches"));
+  const chemins = new Set(essais.map((e) => e.fichier));
+  const sourcesFiches = [...(await lireDossier(join(dossierData, "fiches"))).filter((s) => !chemins.has(s.fichier)), ...essais];
   const { candidats, erreurs: erreursCandidats } = validerCandidats(
     await lireDossier(join(dossierData, "candidats")),
     new Set(sourcesFiches.map((s) => basename(s.fichier, ".yaml"))),

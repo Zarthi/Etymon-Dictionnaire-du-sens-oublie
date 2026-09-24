@@ -34,21 +34,26 @@ racine), jamais dans l'ordre alphabétique : les fiches liées s'écrivent ensem
 
 | Étape | Entrée → sortie | Moteur | Contrôle |
 |---|---|---|---|
-| 0. Tri | mot → chemin, drapeaux (§4) | Haiku, effort bas, avec le Littré local | le chemin est dans la liste fermée |
-| 1. Dossier | mot et chemin → dossier de faits (§5) | scripts ; Sonnet, effort bas, pour lire une page (TLFi, Bailly, Gaffiot) | chaque fait a sa source et son entrée |
-| 2. Rédaction | dossier → contenu de la fiche (format de `npm run rediger`) | Fable 5.1, effort élevé | le schéma d'entrée |
-| 3. Référentiel | auteurs et ouvrages demandés par le lot → fiches, sans doublon | script SRU (BnF) ; Haiku pour la description | `npm run valider` |
-| 4. Contrôle | fiches → verdict | scripts (`valider`, `verifier`, `verifier:en-ligne`), puis relecture critique : Opus 5.5, effort élevé | un seul retour à l'étape 2 ; au second échec, la fiche reste `a-verifier`, signalée |
-| 5. Lectures | mots signalés au tri → lectures traditionnelles | Fable 5.1 pour trouver l'auteur et le passage ; scripts pour vérifier la citation | `verifier:en-ligne` mot pour mot |
+| 1. Dossier et tri | mot → chemin, drapeaux (§4) et dossier de faits (§5) | `npm run dossier` (Littré local, TLFi par son API) ; Sonnet, effort bas, pour trier et tirer les faits | `npm run dossier -- --verifier` : chaque fait a sa source et son entrée |
+| 2. Rédaction | dossier → contenu de la fiche (`atelier/<id>/fiche.json`) | Fable 5.1, effort élevé | `npm run rediger -- --essai` : la fiche validée avec le dépôt |
+| 3. Relecture critique | fiche et dossier → verdict | Opus 5.5, effort élevé | un seul retour à l'étape 2 ; au second refus, la fiche reste dans l'atelier, signalée |
+| 4. Référentiel et écriture | auteurs et ouvrages demandés par le lot → fiches, sans doublon ; puis fiches écrites | `npm run bnf` (notices BnF) ; Sonnet, effort bas, pour choisir la notice et décrire ; `npm run rediger -- --dossier` | `npm run valider` |
+| 5. Lectures | mots au drapeau `tradition` → lectures traditionnelles | Fable 5.1 pour trouver l'auteur et le passage (`npm run texte`) ; scripts pour vérifier la citation | `verifier:en-ligne` mot pour mot |
 | 6. Relecture | brouillons → corrections de Thibault | Thibault | chaque correction devient une règle ou un exemple (§7) |
 
-La relecture critique (étape 4) juge trois choses, et rien d'autre : chaque affirmation est
+Le tri se fait avec le dossier : il demande la même lecture du Littré et du TLFi, et un agent de
+moins par mot. Une fiche rédigée d'après son dossier et acceptée par la relecture critique entre
+en `brouillon`, avec pour sources les entrées consultées du dossier. Une fiche refusée deux fois
+n'est pas écrite : `npm run verifier` la ferait passer en brouillon sur la seule concordance avec
+le Littré, et le refus serait perdu.
+
+La relecture critique (étape 3) juge trois choses, et rien d'autre : chaque affirmation est
 dans le dossier ; chaque phrase répond à « que veux-tu dire exactement ? » ; les règles
 éditoriales que les scripts ne voient pas sont respectées (étymologie et tradition distinctes,
 fonds commun, sens premier à sa place).
 
-Un mot sacré (étape 0) passe directement de l'étape 1 à une rédaction texte d'origine sous les
-yeux, avec sa lecture `premier` ; il ne passe jamais par un lot de mémoire.
+Un mot sacré (chemin `sacre`) sort du lot après son dossier : il se rédige à part, texte
+d'origine sous les yeux, avec sa lecture `premier`.
 
 ## 4. Le tri
 
@@ -61,33 +66,40 @@ Chemins (un seul par mot) :
 - **sacré** : né dans l'ordre sacré (§3.3 bis) ; texte d'origine ;
 - **consacré** : profane à l'origine, pris dans l'ordre sacré ; chemin ordinaire.
 
-Drapeaux (plusieurs possibles) : tradition probable (étape 5), doute au §3.3 (l'agent rédige
-quand même et signale), nom propre ou titre dans la chaîne (`personne`, `ouvrage`).
+Drapeaux (plusieurs possibles) : `tradition` (étape 5), `doute` au §3.3 (l'agent rédige quand
+même et signale), `nom-propre` : nom de personne ou titre dans la chaîne (`personne`, `ouvrage`).
 
 ## 5. Les artefacts
 
-- **Dossier** (`atelier/<id>/dossier.json`, hors du dépôt, comme `sources/`) : des faits, chacun
-  avec sa source et son entrée (formes, langues, sens, dates, tenants). Du texte recopié
-  seulement pour le domaine public (Littré, Wikisource) ; du TLFi, du Gaffiot et du Bailly, les
-  faits seuls, jamais leur rédaction (§5 d'AGENTS.md). Il se relit en quelques secondes.
+- **Dossier** (`atelier/<id>/dossier.json`, hors du dépôt, comme `sources/`) : le chemin, les
+  drapeaux, et des faits, chacun avec sa source et son entrée (formes, langues, sens, dates,
+  tenants). Du texte recopié seulement pour le domaine public (Littré, Wikisource) ; du TLFi, du
+  Gaffiot et du Bailly, les faits seuls, jamais leur rédaction (§5 d'AGENTS.md). Il se relit en
+  quelques secondes. Format : `scripts/lib/atelier.ts`.
 - **Contenu rédigé** (`atelier/<id>/fiche.json`) : le format de `npm run rediger`.
-- **Signalements** (`atelier/signalements.md`) : doutes au §3.3, limites du modèle, sources
-  inaccessibles, avec le mot et le cas.
+- **Verdict** de la relecture critique, et **ce que rend chaque agent** au workflow : des sorties
+  structurées (`scripts/lib/atelier.ts`), gardées dans le journal du workflow.
+- **Signalements** : doutes au §3.3, limites du modèle, sources inaccessibles, fiches refusées,
+  rendus par le workflow à la fin du lot, avec le mot et le cas.
 - **Journal de méthode** (`docs/journal-methode.md`, versionné) : chaque ajustement de la
   méthode et sa cause.
 
-Tout est écrit sur disque à chaque étape : un lot interrompu reprend où il s'était arrêté.
+Dossiers et fiches sont écrits sur disque ; le reste est dans le journal du workflow, qui
+reprend un lot interrompu là où il s'était arrêté.
 
 ## 6. L'orchestration
 
-- **Le chef d'orchestre est un script de workflow**, pas un modèle : il enchaîne les étapes,
-  répartit les mots, regroupe les demandes d'auteurs et d'ouvrages avant l'étape 3. Il ne
-  coûte rien et ne dévie pas. Chaque étape est un `pipeline()` : un mot peut être à l'étape 4
-  pendant qu'un autre est à l'étape 1. Seule l'étape 3 est une barrière (dédoublonnage).
+- **Le chef d'orchestre est un script de workflow** (`scripts/workflow-lot.js`), pas un modèle :
+  il enchaîne les étapes, répartit les mots, regroupe les demandes d'auteurs et d'ouvrages avant
+  l'étape 4. Il ne coûte rien et ne dévie pas. Chaque mot suit sa chaîne dans un `pipeline()` :
+  un mot peut être en relecture pendant qu'un autre est au dossier. Seule l'étape 4 est une
+  barrière (dédoublonnage). Lancement : Workflow avec `scriptPath: scripts/workflow-lot.js` et
+  `args: { mots: [...] }`.
 - **Chaque agent reçoit son modèle, son effort et un schéma de sortie** (`model`, `effort`,
   `schema`) : la forme de sa réponse est garantie, les validateurs garantissent le fond.
-- **Consignes courtes, par étape**, générées par `npm run contrat` comme `prompt-redaction.md` :
-  un agent ne reçoit que ce que son étape exige. AGENTS.md lui est déjà donné au démarrage.
+- **Consignes courtes, par étape** (`docs/consignes/`), générées par `npm run contrat` avec les
+  schémas de sortie du workflow : un agent ne reçoit que ce que son étape exige. AGENTS.md lui
+  est déjà donné au démarrage.
 - **Le script n'a pas accès aux fichiers** : ce sont les agents qui lisent, écrivent et lancent
   les scripts du projet.
 - **Échelle** : une dizaine d'agents en même temps ; un lot par workflow ; on reprend un lot
@@ -119,15 +131,21 @@ Dix mots, au moins un par chemin du tri, dont un avec tradition. On mesure le co
 
 À vérifier au pilote :
 
-- l'accès au TLFi : il ne s'ouvre que dans le navigateur, et il n'y en a qu'un (étape 1
-  en série, ou autre chemin) ;
+- le Gaffiot, qui ne se lit que dans le navigateur intégré : plusieurs agents du dossier en
+  même temps, chacun dans son onglet, ou seulement quand le Littré et le TLFi ne donnent pas
+  le sens de l'étymon ;
 - le coût d'AGENTS.md, donné à chaque agent ;
-- la répartition des moteurs (Haiku suffit-il au tri ? Sonnet au dossier ?) ;
+- la répartition des moteurs (Sonnet suffit-il au dossier ? à l'écriture ?) ;
 - le taux de retour de la relecture critique vers la rédaction.
 
-## 10. À construire avant le pilote
+## 10. Les outils
 
-- les schémas du tri, du dossier et du verdict de relecture (`src/lib/schema.ts`) ;
-- les consignes de chaque étape, générées par `npm run contrat` ;
-- un script de dossier (`npm run dossier -- <mot>`) : Littré local, BnF, Wikisource ;
-- le script du workflow d'un lot.
+| Outil | Rôle |
+|---|---|
+| `npm run dossier -- <mot>` | crée le dossier (Littré recopié) et affiche le Littré et l'étymologie du TLFi, lue par l'API du portail du CNRTL ; `--consulter` pour un mot voisin, `--verifier` pour contrôler un dossier |
+| `npm run texte -- <adresse>` | texte brut d'une page, tel quel (`bailly:φρήν` pour une entrée du Bailly) ; `--autour "<mot>"` pour n'en lire que les passages utiles |
+| `npm run bnf -- auteur\|ouvrage "<nom>"` | cherche les notices BnF ; avec `--cb`, écrit la fiche en brouillon d'après la notice |
+| `npm run rediger -- <fiche.json>… --dossier` | écrit les fiches d'après leur dossier ; `--essai` valide sans écrire |
+| `docs/consignes/*.md` | la consigne de chaque étape, générée par `npm run contrat` |
+| `scripts/lib/atelier.ts` | les formats du dossier, du verdict et de ce que rend chaque agent |
+| `scripts/workflow-lot.js` | le workflow d'un lot |

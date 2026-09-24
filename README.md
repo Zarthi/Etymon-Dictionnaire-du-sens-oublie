@@ -26,10 +26,13 @@ npm run dev          # app en local
 | `npm run valider` | valide fiches, candidats et comptes (aussi en pre-commit et en CI) |
 | `npm run etat` | avancement : fiches par statut, candidats restants |
 | `npm run brouillons` | fiches en brouillon à relire |
-| `npm run rediger -- lot.json --modele "…"` | écrit un lot de fiches rédigées par l'IA (`a-verifier`) |
+| `npm run dossier -- <mot>` | dossier de faits d'un mot (Littré, TLFi), dans `atelier/` |
+| `npm run bnf -- auteur\|ouvrage "…"` | notices BnF ; avec `--cb`, écrit la fiche d'auteur ou d'ouvrage |
+| `npm run texte -- <adresse>` | texte brut d'une page en ligne (citations, Bailly) |
+| `npm run rediger -- <fiche.json>… --modele "…"` | écrit des fiches rédigées par l'IA (`--dossier` : d'après leur dossier, en brouillon ; `--essai` : sans écrire) |
 | `npm run verifier` | confronte les fiches au Littré local (`npm run littre` une fois) et signale les contrôles |
 | `npm run verifier:en-ligne` | vérifie les entrées du Bailly et les citations des lectures traditionnelles |
-| `npm run contrat` | régénère le contrat de données et la consigne de rédaction (`docs/`) |
+| `npm run contrat` | régénère le contrat de données et les consignes de chaque étape (`docs/`) |
 | `npm test` | tests (Vitest) |
 | `npm run build` | site de production dans `dist/` (fiches non validées signalées comme telles) |
 
@@ -42,14 +45,11 @@ Le format d'une fiche est décrit dans [docs/contrat-fiche.md](docs/contrat-fich
 à partir du schéma ; VS Code le vérifie pendant la saisie. Exemples complets :
 [religion](data/fiches/r/re/religion.yaml), [schizophrénie](data/fiches/s/sc/schizophrenie.yaml).
 
-**Par l'IA, en lot** : l'IA reçoit [docs/prompt-redaction.md](docs/prompt-redaction.md) et
-écrit un fichier JSON (le contenu seul), puis :
-
-```bash
-npm run rediger -- lot.json --modele "Claude Fable 5.1"
-npm run verifier
-npm run valider
-```
+**Par l'IA, en lot** : selon [docs/methode.md](docs/methode.md), le workflow
+`scripts/workflow-lot.js` constitue le dossier de sources de chaque mot, fait rédiger la fiche
+d'après lui ([docs/consignes/](docs/consignes/)), la fait relire par un autre modèle, crée les
+auteurs et ouvrages d'après la BnF, écrit les fiches en brouillon et cherche les lectures
+traditionnelles.
 
 **À la main** : créer `data/fiches/<initiale>/<deux lettres>/<id>.yaml` (par exemple
 `data/fiches/e/et/etonner.yaml`) après avoir consulté les sources (Littré, Gaffiot ou Bailly ;
