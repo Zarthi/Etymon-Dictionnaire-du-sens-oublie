@@ -552,10 +552,13 @@ describe("validerFiches : mots sacrés", () => {
 });
 
 describe("validerFiches : règles éditoriales", () => {
-  it("écrit le Nom divin comme le texte l'écrit, jamais revocalisé", () => {
-    expect(erreursDe({ explication: "Louez Jéhovah." })).toEqual([
-      "explication : Nom divin revocalisé (Jéhovah) : l'écrire comme le texte (Yah, YHWH)",
-    ]);
+  it("écrit le Nom divin comme le texte l'écrit, jamais vocalisé", () => {
+    for (const nom of ["Jéhovah", "Iehovah", "Yahvé", "Yahweh", "Jahvé"]) {
+      expect(erreursDe({ explication: `Louez ${nom}.` })).toEqual([
+        "explication : Nom divin vocalisé (Jéhovah, Yahvé) : l'écrire comme le texte (Yah, YHWH)",
+      ]);
+    }
+    expect(erreursDe({ explication: "Louez Yah." })).toEqual([]);
   });
   it("refuse une explication de plus de 3 phrases, sans ponctuation finale, vide ou trop longue", () => {
     expect(erreursDe({ explication: "Un. Deux. Trois. Quatre." })).toEqual(["explication : 1 à 3 phrases terminées par une ponctuation (4 trouvée(s))"]);

@@ -38,7 +38,7 @@ export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lo
     lot.push(fiche);
     lots.set(prefixe(fiche.id), lot);
   }
-  return { index: triees.map(({ id, mot, statut }) => ({ id, mot, statut })), lots };
+  return { index: triees.map(({ id, mot, statut, sacre }) => ({ id, mot, statut, ...(sacre ? { sacre: true as const } : {}) })), lots };
 }
 
 /**

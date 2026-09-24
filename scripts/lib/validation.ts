@@ -112,8 +112,9 @@ function verifierTextes(textes: [string, string | undefined][], ajouter: (champ:
   for (const [champ, texte] of textes) {
     if (texte === undefined) continue;
     for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
-    // Le Nom divin s'écrit comme le texte l'écrit (Yah) : ni traduit, ni revocalisé à la manière tardive de « Jéhovah ».
-    if (/[JI][ée]hovah/i.test(texte)) ajouter(champ, "Nom divin revocalisé (Jéhovah) : l'écrire comme le texte (Yah, YHWH)");
+    // Le Nom divin s'écrit comme le texte l'écrit (Yah, YHWH) : ni traduit, ni vocalisé, à la manière tardive de
+    // « Jéhovah » ou savante de « Yahvé », qui invitent à le prononcer (Exode 20, 7).
+    if (/[JI][ée]hovah|[YJI]ahv[ée]|[YJI]ahw[ée]/i.test(texte)) ajouter(champ, "Nom divin vocalisé (Jéhovah, Yahvé) : l'écrire comme le texte (Yah, YHWH)");
   }
 }
 

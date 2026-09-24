@@ -16,7 +16,7 @@ Tu ajoutes à la fiche d'un mot (`data/fiches/<initiale>/<préfixe>/<id>.yaml`) 
 
 - Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Resh Lakish dans le Talmud).
 - `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.
-- Le Nom divin s'écrit comme le texte l'écrit, jamais revocalisé.
+- Le Nom divin s'écrit comme le texte l'écrit, jamais vocalisé (« Jéhovah », « Yahvé »).
 - Rien trouvé dans un texte en ligne : pas de lecture ; dis-le dans tes notes, avec la piste.
 - Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et dis-le dans tes ajouts ; une tradition de trop se retire à la relecture plus aisément qu'une tradition manquante ne s'ajoute après coup.
 

@@ -61,3 +61,20 @@ describe("motAuHasard", () => {
     expect(motAuHasard([], undefined, () => 0.5)).toBeUndefined();
   });
 });
+
+describe("mots sacrés", () => {
+  const sacres = [
+    { id: "manne", mot: "manne", statut: "brouillon" as const, sacre: true as const },
+    { id: "sabbat", mot: "sabbat", statut: "validee" as const, sacre: true as const },
+  ];
+  const profane = { id: "ennui", mot: "ennui", statut: "brouillon" as const };
+  it("ne sont jamais tirés, ni au jour ni au hasard", () => {
+    const melange = [...sacres, profane];
+    for (const d of jours("2026-09-23", 10)) expect(motDuJour(melange, d)?.id).toBe("ennui");
+    for (const r of [0, 0.5, 0.999]) expect(motAuHasard(melange, undefined, () => r)?.id).toBe("ennui");
+  });
+  it("ne laissent rien à tirer s'ils sont seuls", () => {
+    expect(motDuJour(sacres, "2026-09-23")).toBeUndefined();
+    expect(motAuHasard(sacres, undefined, () => 0.5)).toBeUndefined();
+  });
+});

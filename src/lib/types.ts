@@ -57,7 +57,8 @@ export type OuvrageAssemble = Ouvrage & {
 };
 
 /** Entrée de `index.json` : de quoi chercher et tirer un mot sans charger les fiches. */
-export type EntreeIndex = Pick<FicheIdentifiee, "id" | "mot" | "statut">;
+/** Entrée de l'index : de quoi chercher et tirer un mot ; `sacre` l'exclut du tirage. */
+export type EntreeIndex = Pick<FicheIdentifiee, "id" | "mot" | "statut"> & { sacre?: true };
 
 export type Candidat = z.infer<typeof schemaCandidat>;
 
