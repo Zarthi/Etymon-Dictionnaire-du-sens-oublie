@@ -8,3 +8,4 @@ src/generes/
 !.vscode/settings.json
 .vitest/
 sources/
+atelier/
