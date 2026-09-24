@@ -1,12 +1,15 @@
 titre: Institutions divines
 titreOriginal: Divinae institutiones
 auteur: lactance
-date: vers 303-311
+date: "303-311"
 licence: domaine public
 texte: https://la.wikisource.org/wiki/Divinae_institutiones
 description: >-
   Première exposition d'ensemble de la doctrine chrétienne en latin, adressée aux lettrés païens.
+sources:
+  - ouvrage: bnf
+    entree: cb125131533
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

@@ -6,7 +6,10 @@ licence: non libre
 modeleEntree: https://www.cnrtl.fr/etymologie/{entree}
 description: >-
   Le grand dictionnaire du français des XIXe et XXe siècles ; sert à vérifier qu'une étymologie est toujours admise.
+sources:
+  - ouvrage: bnf
+    entree: cb12202657w
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon
