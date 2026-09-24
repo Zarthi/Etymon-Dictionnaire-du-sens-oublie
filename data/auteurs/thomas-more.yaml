@@ -4,7 +4,11 @@ mort: "1535"
 description: >-
   Humaniste et homme d'État anglais, chancelier d'Henri VIII, exécuté pour avoir
   refusé de reconnaître sa suprématie sur l'Église.
+cite: [ More ]
+sources:
+  - ouvrage: bnf
+    entree: cb11926532q
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

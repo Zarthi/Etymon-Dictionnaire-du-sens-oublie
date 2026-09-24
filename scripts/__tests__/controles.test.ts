@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { Fiche } from "../../src/lib/types.ts";
+import type { Auteur, Fiche } from "../../src/lib/types.ts";
 import { controler, repriseDuSens } from "../lib/controles.ts";
 import { indexer } from "../lib/littre.ts";
 
@@ -21,6 +21,8 @@ const fiche = (surcharges: Partial<Fiche> = {}) =>
     etymologie: [{ forme: "religio", langue: "latin", sens: "attention scrupuleuse" }, debattue(["relegere", "religare"])],
     explication: "Le mot ne désignait pas ce que l'on croit.",
     famille: ["religieux", "irréligion"],
+    ecartees: [],
+    lecturesTraditionnelles: [],
     ...surcharges,
   }) as Fiche;
 
@@ -40,6 +42,11 @@ describe("controler", () => {
   });
   it("ne contrôle ni nature ni formes d'un mot absent du Littré", () => {
     expect(controler(fiche({ mot: "schizophrénie", famille: [] }), index)).toEqual([]);
+  });
+  it("signale un auteur nommé dans un texte sans que la fiche le cite", () => {
+    const auteurs = [{ id: "emile-littre", nom: "Émile Littré", cite: ["Littré"] }, { id: "ciceron", nom: "Cicéron" }] as Auteur[];
+    expect(controler(fiche({ explication: "Littré le rapporte." }), index, auteurs)).toEqual(["auteur nommé sans référence : Émile Littré"]);
+    expect(controler(fiche({ explication: "Cicéron le rapporte." }), index, auteurs)).toEqual(["auteur nommé sans référence : Cicéron"]);
   });
   it("signale une explication qui reprend le sens premier", () => {
     expect(controler(fiche({ explication: "Une attention devenue croyance." }), index)).toEqual(["explication qui reprend le sens : attention"]);

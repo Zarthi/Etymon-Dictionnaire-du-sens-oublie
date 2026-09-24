@@ -1,11 +1,15 @@
 nom: Cicéron
 nomComplet: Marcus Tullius Cicero
-naissance: "106 av. J.-C."
-mort: "43 av. J.-C."
-tradition: true
+naissance: 106 av. J.-C.
+mort: 43 av. J.-C.
 description: >-
-  Orateur, homme d'État et philosophe romain ; ses traités ont donné au latin une large part de son vocabulaire philosophique.
+  Orateur, homme d'État et philosophe romain ; ses traités ont donné au latin
+  une large part de son vocabulaire philosophique.
+tradition: true
+sources:
+  - ouvrage: bnf
+    entree: cb11885977m
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

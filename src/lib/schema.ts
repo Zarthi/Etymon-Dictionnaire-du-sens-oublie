@@ -284,11 +284,12 @@ const objetAuteur = z
     mort: dateHistorique.optional(),
     description,
     tradition: z.boolean().default(false).describe("Auteur de la tradition : signe des lectures traditionnelles. Faux si absent."),
-    bnf: z
-      .string()
-      .regex(/^cb\d{8}[0-9a-z]$/, "identifiant BnF attendu (cb12345678x)")
+    cite: z
+      .array(z.string().min(1))
       .optional()
-      .describe("Identifiant de la notice d'autorité BnF (cb…) ; l'adresse data.bnf.fr s'en déduit."),
+      .describe(
+        "Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu.",
+      ),
     ...socle,
   })
   .strict();

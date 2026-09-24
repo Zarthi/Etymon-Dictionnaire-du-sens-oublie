@@ -2,10 +2,14 @@ nom: Isidore de Séville
 nomComplet: Isidorus Hispalensis
 naissance: vers 560
 mort: "636"
-tradition: true
 description: >-
-  Évêque de Séville ; ses Étymologies rassemblent le savoir antique en expliquant les choses par l'origine de leur nom.
+  Évêque de Séville ; ses Étymologies rassemblent le savoir antique en
+  expliquant les choses par l'origine de leur nom.
+tradition: true
+sources:
+  - ouvrage: bnf
+    entree: cb119082935
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

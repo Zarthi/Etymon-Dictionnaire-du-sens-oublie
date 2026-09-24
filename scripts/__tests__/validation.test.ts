@@ -408,6 +408,30 @@ describe("validerFiches : références", () => {
   });
 });
 
+describe("validerFiches : mentions", () => {
+  const ref = referentiel(
+    [
+      { ...auteur("thomas-more", "Thomas More"), cite: ["Thomas"] },
+      { ...auteur("thomas-d-aquin", "Thomas d'Aquin", true), cite: ["Thomas"] },
+    ],
+    [],
+  );
+  const etymologie = [
+    { forme: "x", langue: "latin", sens: "y" },
+    { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["thomas-more"] }, { forme: "c", sens: "d", selon: ["thomas-d-aquin"] }] } },
+  ];
+  const erreurs = (explication: string) =>
+    validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify({ ...ficheBase, sources: [], statut: "a-verifier", etymologie, explication }) }], ref).erreurs.map(
+      (e) => `${e.champ} : ${e.regle}`,
+    );
+  it("refuse une forme qui, dans la fiche, désignerait deux auteurs", () => {
+    expect(erreurs("Thomas le disait.")).toEqual(["(textes) : « Thomas » désigne plusieurs auteurs ou ouvrages cités par la fiche : écrire le nom complet"]);
+  });
+  it("accepte la forme ambiguë tant qu'elle n'est pas écrite, et le nom complet", () => {
+    expect(erreurs("Thomas More le disait.")).toEqual([]);
+  });
+});
+
 describe("validerFiches : doublets et renvois", () => {
   const fiche = (mot: string, champs: Record<string, unknown>) => ({
     fichier: cheminFiche(mot),
@@ -472,7 +496,7 @@ describe("validerAuteurs et validerOuvrages", () => {
   it.each([
     ["id", "augustin-d-hippone.yaml", {}],
     ["description", "augustin.yaml", { description: "x".repeat(201) }],
-    ["bnf", "augustin.yaml", { bnf: "123" }],
+    ["cite.0", "augustin.yaml", { cite: [""] }],
     ["naissance", "augustin.yaml", { naissance: "autrefois" }],
   ])("signale le champ %s d'un auteur", (champ, fichier, champs) => {
     expect(validerAuteurs([fichierAuteur(fichier, champs)]).erreurs.map((e) => e.champ)).toEqual([champ]);

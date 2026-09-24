@@ -13,7 +13,3 @@ export function urlDe(source: { entree: string; url?: string }, modele: string |
   return source.url ?? urlDeduite(modele, source.entree);
 }
 
-/** Notice d'autorité d'un auteur sur data.bnf.fr, à partir de son identifiant (cb…). */
-export function urlBnf(identifiant: string): string {
-  return `https://data.bnf.fr/ark:/12148/${identifiant}`;
-}

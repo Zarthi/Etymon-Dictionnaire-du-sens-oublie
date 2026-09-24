@@ -3,7 +3,11 @@ naissance: "1833"
 mort: "1911"
 description: >-
   Helléniste, auteur du dictionnaire grec-français de référence (1895).
+cite: [ Bailly ]
+sources:
+  - ouvrage: bnf
+    entree: cb12490042x
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

@@ -1,11 +1,15 @@
 nom: al-Khwârizmî
-nomComplet: Muhammad ibn Mūsā al-Ḫuwārizmī
+nomComplet: Abū ʿAbd Allāh Muḥammad ibn Mūsā al-H̱uwārizmī
 naissance: vers 780
 mort: vers 850
 description: >-
-  Mathématicien et astronome de Bagdad ; ses traités d'arithmétique et d'algèbre
-  ont transmis à l'Europe le calcul indien.
+  Mathématicien et astronome perse de la Maison de la sagesse, à Bagdad ; ses
+  traités, écrits en arabe, ont transmis à l'Europe le calcul indien et
+  l'algèbre.
+sources:
+  - ouvrage: bnf
+    entree: cb165923408
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

@@ -1,7 +1,8 @@
 <script lang="ts">
   import { dateLongue } from "../lib/affichage.ts";
   import { formesItaliques } from "../lib/etymologie.ts";
-  import { auteurs as fichesAuteurs } from "../lib/fiches.ts";
+  import { auteurs as fichesAuteurs, ouvrages as fichesOuvrages } from "../lib/fiches.ts";
+  import { mentionsDe } from "../lib/mentions.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
@@ -34,6 +35,8 @@
   const redactionFiche = $derived(signatureRedaction(fiche.redaction));
   /** Formes étrangères de la fiche, mises en italique dans ses textes (aucune mise en forme dans les données). */
   const formes = $derived(formesItaliques(fiche));
+  /** Auteurs et ouvrages que la fiche cite, reconnus dans ses textes pour en faire des liens. */
+  const mentions = $derived(mentionsDe(fiche, fichesAuteurs, fichesOuvrages));
 </script>
 
 <svelte:head>
@@ -50,7 +53,7 @@
     {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
   </p>
 
-  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} /></p>
+  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} {mentions} /></p>
 
   <Etymologie etymologie={fiche.etymologie} />
 
@@ -63,7 +66,7 @@
       />, «&nbsp;{e.sens}&nbsp;»{#if e.selon?.length}{" "}({#each e.selon as id, j (id)}{#if j > 0},{" "}{/if}<a
             href={lienAuteur(id)}>{fichesAuteurs.get(id)?.nom ?? id}</a
           >{/each}){/if}.
-      {#if e.raison}<TexteRiche texte={e.raison} {lienVers} exclu={fiche.id} {formes} />{/if}
+      {#if e.raison}<TexteRiche texte={e.raison} {lienVers} exclu={fiche.id} {formes} {mentions} />{/if}
     </p>
   {/each}
 
@@ -86,7 +89,7 @@
         <span class="auteurs">{auteurs}</span>
       </summary>
       {#each lectures as lecture, i (i)}
-        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} />
+        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
       {/each}
     </details>
   {/if}

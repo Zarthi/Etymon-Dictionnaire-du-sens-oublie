@@ -1,11 +1,14 @@
 nom: Auguste Comte
-nomComplet: Isidore Auguste Marie François Xavier Comte
 naissance: "1798"
 mort: "1857"
 description: >-
   Philosophe, fondateur du positivisme ; il veut une science de la société et
   une religion de l'Humanité.
+cite: [ Comte ]
+sources:
+  - ouvrage: bnf
+    entree: cb11897482h
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-statut: a-verifier
+statut: brouillon

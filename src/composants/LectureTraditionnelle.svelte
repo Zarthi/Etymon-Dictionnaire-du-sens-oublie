@@ -1,6 +1,7 @@
 <script lang="ts">
   import { auteurs } from "../lib/fiches.ts";
   import { lienAuteur } from "../lib/liens.ts";
+  import type { Mention } from "../lib/mentions.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { LectureTraditionnelle } from "../lib/types.ts";
   import Redaction from "./Redaction.svelte";
@@ -18,12 +19,14 @@
     exclu,
     redactionFiche,
     formes,
+    mentions,
   }: {
     lecture: LectureTraditionnelle;
     lienVers: (id: string) => string | undefined;
     exclu?: string;
     redactionFiche: string;
     formes: string[];
+    mentions: Mention[];
   } = $props();
 
   const redactionPropre = $derived(
@@ -35,7 +38,7 @@
   {#if lecture.hypothese}
     <p class="hypothese">Sur <em>{lecture.hypothese}</em></p>
   {/if}
-  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} /></p>
+  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} {mentions} /></p>
   <blockquote lang="la">«&nbsp;{lecture.citation}&nbsp;»</blockquote>
   <p class="auteur">
     <a href={lienAuteur(lecture.auteur)}>{auteurs.get(lecture.auteur)?.nom ?? lecture.auteur}</a>{#each lecture.sources as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}

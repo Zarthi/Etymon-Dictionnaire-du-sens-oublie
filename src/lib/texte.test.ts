@@ -55,6 +55,28 @@ describe("analyser : liens automatiques", () => {
   });
 });
 
+describe("analyser : mentions d'auteurs et d'ouvrages", () => {
+  const mentions = [
+    { forme: "Eugen Bleuler", lien: "#/auteur/eugen-bleuler" },
+    { forme: "Bleuler", lien: "#/auteur/eugen-bleuler" },
+    { forme: "Utopia", lien: "#/ouvrage/utopia" },
+  ];
+  const avecMentions = (texte: string, formes: string[] = []) =>
+    analyser(texte, existe, undefined, formes, mentions)
+      .map((s) => (s.type === "mention" ? `<${s.texte}→${s.lien}>` : s.type === "lien" ? `[${s.texte}→${s.cible}]` : s.type === "italique" ? `/${s.texte}/` : s.texte))
+      .join("");
+  it("relie le nom, la forme la plus longue d'abord, à la première occurrence seulement", () => {
+    expect(avecMentions("Eugen Bleuler, puis Bleuler encore.")).toBe("<Eugen Bleuler→#/auteur/eugen-bleuler>, puis Bleuler encore.");
+    expect(avecMentions("Bleuler désignait l'âme.")).toBe("<Bleuler→#/auteur/eugen-bleuler> désignait l'[âme→ame].");
+  });
+  it("respecte la casse et les mots entiers", () => {
+    expect(avecMentions("les bleulériens et bleuler")).toBe("les bleulériens et bleuler");
+  });
+  it("laisse l'italique l'emporter sur une mention", () => {
+    expect(avecMentions("le latin Utopia", ["Utopia"])).toBe("le latin /Utopia/");
+  });
+});
+
 describe("idDe", () => {
   it.each([
     ["Hôtel", "hotel"],

@@ -14,7 +14,8 @@ Tu rédiges des fiches d'Étymon, dictionnaire du sens premier des mots françai
 - Tout mot étranger cité dans un texte est une forme de la chaîne : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.
 - `ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.
 - `renvois` : seulement vers une fiche existante dont la notion éclaire vraiment celle-ci sans racine commune (schizophrénie → obsession) ; trois au plus, souvent aucun.
-- Auteurs et ouvrages sont cités par leur identifiant. S'il manque une fiche, ajoute-la au lot (`auteurs`, `ouvrages`), avec une description qui situe sans raconter.
+- Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, ajoute-la au lot (`auteurs`, `ouvrages`), avec une description qui situe sans raconter et, dans `cite`, l'élément d'entrée de sa notice BnF (Bleuler, Comte).
+- Dans un texte, nomme un auteur sous son nom usuel ou une de ses formes de citation (liste ci-dessous) : l'app en fait un lien, s'il est aussi cité dans un champ de la fiche.
 - Tu rédiges de mémoire : n'invente ni tenant (`selon`), ni date (`forge`), ni forme reconstruite que tu ne connais pas avec certitude. En cas de doute sur la chaîne, `incertain: true`.
 - Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles : les scripts les posent (npm run rediger, npm run verifier), les lectures se rédigent à part, texte source sous les yeux.
 - Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.
@@ -130,7 +131,7 @@ Un fichier JSON : une liste de fiches, ou `{ "fiches": [...], "auteurs": [...], 
 | `mort` | nombre ou date historique | non | Date exacte ou approximative : 1911, « vers 1830 », « XIIe siècle », « 106 av. J.-C. ». |
 | `description` | texte | oui | Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie. |
 | `tradition` | `true` \| `false` | non | Auteur de la tradition : signe des lectures traditionnelles. Faux si absent. |
-| `bnf` | texte | non | Identifiant de la notice d'autorité BnF (cb…) ; l'adresse data.bnf.fr s'en déduit. |
+| `cite` | liste de textes | non | Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu. |
 
 ### Ouvrage
 
@@ -152,8 +153,8 @@ Un fichier JSON : une liste de fiches, ou `{ "fiches": [...], "auteurs": [...], 
 - `nature` : nom masculin, nom féminin, nom, nom propre, verbe, adjectif, adverbe, interjection.
 - `langue` : latin, latin populaire, bas latin, latin médiéval, latin humaniste, latin ecclésiastique, ancien français, français, grec ancien, gaulois, étrusque, francique, germanique, ancien nordique, arabe, hébreu, persan, turc, italien, espagnol, ancien espagnol, portugais, occitan, néerlandais, allemand, anglais, indo-européen.
 - `themes` : émotions, esprit, parole, savoir, morale, religion, corps, santé, famille, société, droit, guerre, travail, argent, commerce, nourriture, maison, nature, météo, temps.
-- Auteurs existants : al-khwarizmi (al-Khwârizmî), anatole-bailly (Anatole Bailly), auguste-comte (Auguste Comte), augustin (Augustin), ciceron (Cicéron), emile-littre (Émile Littré), eugen-bleuler (Eugen Bleuler), felix-gaffiot (Félix Gaffiot), francois-andrieux (François Andrieux), gavius-bassus (Gavius Bassus), gerard-de-cremone (Gérard de Crémone), isidore-de-seville (Isidore de Séville), lactance (Lactance), thomas-more (Thomas More).
-- Ouvrages existants : al-jabr (Abrégé du calcul par la restauration et la comparaison), bailly (Dictionnaire grec-français), etymologies (Étymologies), gaffiot (Dictionnaire latin-français), institutions-divines (Institutions divines), la-cite-de-dieu (La Cité de Dieu), littre (Dictionnaire de la langue française), tlfi (Trésor de la langue française informatisé), utopia (L'Utopie).
+- Auteurs existants (identifiant : nom, formes de citation) : al-khwarizmi (al-Khwârizmî) ; anatole-bailly (Anatole Bailly, Bailly) ; auguste-comte (Auguste Comte, Comte) ; augustin (Augustin) ; ciceron (Cicéron) ; emile-littre (Émile Littré, Littré) ; eugen-bleuler (Eugen Bleuler, Bleuler) ; felix-gaffiot (Félix Gaffiot, Gaffiot) ; francois-andrieux (François Andrieux, Andrieux) ; gavius-bassus (Gavius Bassus) ; gerard-de-cremone (Gérard de Crémone) ; isidore-de-seville (Isidore de Séville) ; lactance (Lactance) ; thomas-more (Thomas More, More).
+- Ouvrages existants : al-jabr (Abrégé du calcul par la restauration et la comparaison), bailly (Dictionnaire grec-français), bnf (Catalogue général de la Bibliothèque nationale de France), etymologies (Étymologies), gaffiot (Dictionnaire latin-français), institutions-divines (Institutions divines), la-cite-de-dieu (La Cité de Dieu), littre (Dictionnaire de la langue française), tlfi (Trésor de la langue française informatisé), utopia (L'Utopie).
 
 ## Exemples
 

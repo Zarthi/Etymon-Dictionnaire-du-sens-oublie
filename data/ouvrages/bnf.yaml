@@ -1,0 +1,11 @@
+titre: Catalogue général de la Bibliothèque nationale de France
+abrege: BnF
+licence: Licence ouverte
+modeleEntree: https://data.bnf.fr/ark:/12148/{entree}
+description: >-
+  Les notices d'autorité de la BnF : forme retenue du nom, variantes, dates et
+  identité de chaque auteur. Source des faits de nos fiches d'auteurs.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier

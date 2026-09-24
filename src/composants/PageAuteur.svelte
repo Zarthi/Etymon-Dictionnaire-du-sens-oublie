@@ -1,7 +1,6 @@
 <script lang="ts">
   import { ouvrages } from "../lib/fiches.ts";
   import { lienOuvrage } from "../lib/liens.ts";
-  import { urlBnf } from "../lib/ouvrages.ts";
   import type { AuteurAssemble } from "../lib/types.ts";
   import ListeMots from "./ListeMots.svelte";
   import Redaction from "./Redaction.svelte";
@@ -26,7 +25,6 @@
   <h1>{auteur.nom}</h1>
   <p class="identite">{[auteur.nomComplet, dates].filter(Boolean).join(" · ")}</p>
   <p class="description">{auteur.description}</p>
-  {#if auteur.bnf}<p class="bnf"><a href={urlBnf(auteur.bnf)} target="_blank" rel="noopener noreferrer">Notice de la BnF</a></p>{/if}
 
   {#if auteur.oeuvres.length > 0}
     <section>
@@ -68,11 +66,6 @@
     margin: 0;
     font-size: 1.15rem;
     line-height: 1.6;
-  }
-  .bnf {
-    margin: 0.5rem 0 0;
-    font-family: var(--police-interface);
-    font-size: 0.85rem;
   }
   section {
     margin-top: 1.25rem;

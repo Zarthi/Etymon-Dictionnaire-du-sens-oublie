@@ -2,9 +2,10 @@ import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
 import { prefixe } from "../../src/lib/decoupage.ts";
 import { enAlphabetLatin, enGrec, indexPremier } from "../../src/lib/etymologie.ts";
+import { formesAmbigues, mentionsDe, textesDe } from "../../src/lib/mentions.ts";
 import { urlDeduite } from "../../src/lib/ouvrages.ts";
 import { ID_VALIDE, schemaAuteur, schemaCandidats, schemaComptes, schemaFiche, schemaOuvrage } from "../../src/lib/schema.ts";
-import { idDe } from "../../src/lib/texte.ts";
+import { analyser, idDe } from "../../src/lib/texte.ts";
 import type { Auteur, Candidat, Fiche, FicheIdentifiee, LigneComptes, Ouvrage, Referentiel } from "../../src/lib/types.ts";
 
 z.config(z.locales.fr());
@@ -256,6 +257,15 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   );
 
   verifierSources(fiche, ref, ajouter);
+
+  // Mentions : une forme de nom ou de titre qui, dans cette fiche, désignerait deux pages. On lit
+  // les textes comme l'app : « Thomas More » est reconnu en entier avant « Thomas ».
+  const mentions = mentionsDe(fiche, ref.auteurs, ref.ouvrages);
+  const ambigues = new Set(formesAmbigues(mentions));
+  const lues = analyser(textesDe(fiche), undefined, undefined, [], mentions).filter((s) => s.type === "mention" && ambigues.has(s.texte));
+  for (const forme of new Set(lues.map((s) => s.texte))) {
+    ajouter("(textes)", `« ${forme} » désigne plusieurs auteurs ou ouvrages cités par la fiche : écrire le nom complet`);
+  }
 
   // Lectures : un auteur de la tradition, ses propres œuvres, une hypothèse de la chaîne.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));

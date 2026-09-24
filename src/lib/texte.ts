@@ -1,14 +1,16 @@
 import { normaliser } from "./recherche.ts";
 
 /**
- * Textes de fiche (explication, légende, lectures traditionnelles) : du texte brut, sans aucune
- * mise en forme. L'app y met en italique les formes étrangères que la fiche connaît (étymon,
- * formes d'origine, forme légendaire) et fait des liens vers les mots qui ont une fiche.
+ * Textes de fiche (explication, étymologies écartées, lectures traditionnelles) : du texte brut,
+ * sans aucune mise en forme. L'app y met en italique les formes étrangères que la fiche connaît,
+ * fait des liens vers les auteurs et ouvrages qu'elle cite (mentions) et vers les mots qui ont
+ * une fiche.
  */
 export type Segment =
   | { type: "texte"; texte: string }
   | { type: "italique"; texte: string }
-  | { type: "lien"; texte: string; cible: string };
+  | { type: "lien"; texte: string; cible: string }
+  | { type: "mention"; texte: string; lien: string };
 
 /** Un mot : lettres, éventuellement reliées par des traits d'union (l'apostrophe sépare : « l'âme »). */
 const MOT = /\p{L}+(?:-\p{L}+)*/gu;
@@ -41,22 +43,35 @@ function motifFormes(formes: string[]): RegExp | undefined {
   return new RegExp(`(?<![\\p{L}\\p{M}])(?:${propres.map(echapper).join("|")})(?![\\p{L}\\p{M}])`, "giu");
 }
 
+/** Motif des mentions : noms et titres exacts (casse comprise), mots entiers, les plus longs d'abord. */
+function motifMentions(mentions: { forme: string }[]): RegExp | undefined {
+  const propres = [...new Set(mentions.map((m) => m.forme))].sort((a, b) => b.length - a.length);
+  if (propres.length === 0) return undefined;
+  return new RegExp(`(?<![\\p{L}\\p{M}])(?:${propres.map(echapper).join("|")})(?![\\p{L}\\p{M}])`, "gu");
+}
+
 /**
  * Découpe un texte en segments.
  * - Italique : chaque occurrence d'une des `formes` de la fiche.
- * - Liens, pour rester lisible : première occurrence seulement, jamais vers la fiche en cours
- *   (`exclu`), jamais dans l'italique.
+ * - Mentions : un nom d'auteur ou un titre d'ouvrage que la fiche cite (`mentions`), écrit tel
+ *   quel, majuscule comprise.
+ * - Liens vers les mots qui ont une fiche.
+ * Pour rester lisible, chaque lien ne vient qu'à la première occurrence, jamais vers la fiche en
+ * cours (`exclu`), jamais dans l'italique.
  */
 export function analyser(
   texte: string,
   existe: (id: string) => boolean = () => false,
   exclu?: string,
   formes: string[] = [],
+  mentions: { forme: string; lien: string }[] = [],
 ): Segment[] {
   const segments: Segment[] = [];
   const lies = new Set<string>(exclu ? [exclu] : []);
+  const lienDe = new Map(mentions.map((m) => [m.forme, m.lien]));
+  const motifNoms = motifMentions(mentions);
 
-  const ajouterTexte = (morceau: string) => {
+  const ajouterMots = (morceau: string) => {
     let position = 0;
     for (const m of morceau.matchAll(MOT)) {
       const cible = ficheDe(m[0], existe);
@@ -67,6 +82,19 @@ export function analyser(
       position = m.index + m[0].length;
     }
     if (position < morceau.length) segments.push({ type: "texte", texte: morceau.slice(position) });
+  };
+
+  const ajouterTexte = (morceau: string) => {
+    let position = 0;
+    for (const m of motifNoms ? morceau.matchAll(motifNoms) : []) {
+      const lien = lienDe.get(m[0])!;
+      if (lies.has(lien)) continue;
+      lies.add(lien);
+      if (m.index > position) ajouterMots(morceau.slice(position, m.index));
+      segments.push({ type: "mention", texte: m[0], lien });
+      position = m.index + m[0].length;
+    }
+    if (position < morceau.length) ajouterMots(morceau.slice(position));
   };
 
   const motif = motifFormes(formes);

@@ -8,7 +8,9 @@
 > Écarts à l'implémentation : un mot forgé en français (*altruisme*) ouvre la chaîne par un
 > maillon `français` fait de ses seuls éléments ; *personne* force son sens premier
 > (`premier: true`) pour ne pas afficher en tête l'étrusque, incertain ; l'homonyme *louer*
-> (*laudare*) n'a pas été rédigé, faute de remplir le §3.3.
+> (*laudare*) n'a pas été rédigé, faute de remplir le §3.3. Le champ `bnf` d'un auteur a
+> été remplacé par une source (`{ ouvrage: bnf, entree: cb… }`), pour ne pas écrire deux fois
+> la notice, et complété par `cite` (formes de citation reconnues dans les textes).
 
 ## 1. Ce que les cas d'épreuve ont montré
 

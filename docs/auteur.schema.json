@@ -51,10 +51,13 @@
       "description": "Auteur de la tradition : signe des lectures traditionnelles. Faux si absent.",
       "type": "boolean"
     },
-    "bnf": {
-      "description": "Identifiant de la notice d'autorité BnF (cb…) ; l'adresse data.bnf.fr s'en déduit.",
-      "type": "string",
-      "pattern": "^cb\\d{8}[0-9a-z]$"
+    "cite": {
+      "description": "Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "sources": {
       "default": [],

@@ -17,7 +17,7 @@ import { arreterSiErreurs, DOSSIER_DATA, validerDepot } from "./valider-fiches.t
  * reprise du sens), qui signalent sans bloquer.
  */
 if (import.meta.main) {
-  const { fiches, erreurs } = await validerDepot();
+  const { fiches, auteurs, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
   const index = await chargerIndexLittre();
   const aVoir: string[] = [];
@@ -52,6 +52,6 @@ if (import.meta.main) {
   console.log(`✓ ${promues} fiche(s) concordante(s) avec le Littré, passée(s) en brouillon.`);
   if (aVoir.length > 0) console.log(`\nÀ vérifier à la main (${aVoir.length}) :\n- ${aVoir.join("\n- ")}`);
 
-  const controles = fiches.flatMap((f) => controler(f, index).map((s) => `${f.mot} › ${s}`));
+  const controles = fiches.flatMap((f) => controler(f, index, auteurs).map((s) => `${f.mot} › ${s}`));
   if (controles.length > 0) console.log(`\nContrôles à relire (${controles.length}) :\n- ${controles.join("\n- ")}`);
 }
