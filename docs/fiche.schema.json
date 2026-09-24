@@ -1,0 +1,437 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "mot": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Le mot français, tel qu'on l'écrit (le nom du fichier en est la forme sans accent)."
+    },
+    "nature": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "nom masculin",
+          "nom féminin",
+          "nom",
+          "verbe",
+          "adjectif",
+          "adverbe",
+          "interjection"
+        ]
+      },
+      "description": "Catégorie(s) grammaticale(s) ; « nom » pour les épicènes."
+    },
+    "etymon": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Forme source, dans la langue source directe ; reconstruite, elle commence par * et s'écrit entre guillemets."
+    },
+    "graphie": {
+      "description": "Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.",
+      "type": "string",
+      "minLength": 1
+    },
+    "reconstruit": {
+      "type": "boolean",
+      "description": "true si et seulement si l'étymon commence par *."
+    },
+    "langue": {
+      "type": "string",
+      "enum": [
+        "latin",
+        "latin populaire",
+        "bas latin",
+        "latin médiéval",
+        "latin ecclésiastique",
+        "ancien français",
+        "grec ancien",
+        "gaulois",
+        "francique",
+        "germanique",
+        "ancien nordique",
+        "arabe",
+        "hébreu",
+        "persan",
+        "turc",
+        "italien",
+        "espagnol",
+        "portugais",
+        "occitan",
+        "néerlandais",
+        "allemand",
+        "anglais"
+      ],
+      "description": "Langue source directe de l'étymon (liste fermée : data/langues.json)."
+    },
+    "sens": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Sens de l'étymon, sans guillemets (l'app les ajoute)."
+    },
+    "explication": {
+      "type": "string",
+      "minLength": 1,
+      "description": "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens ; italique avec _…_."
+    },
+    "legende": {
+      "description": "Étymologie populaire démentie (« On dit souvent… »).",
+      "type": "string",
+      "minLength": 1
+    },
+    "incertain": {
+      "type": "boolean",
+      "description": "L'étymon lui-même est douteux (pour une origine plus ancienne débattue : racine.incertain)."
+    },
+    "racine": {
+      "description": "Origine plus ancienne, seulement si elle apporte un sens que l'étymon n'a pas.",
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "forme": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Forme plus ancienne que l'étymon."
+            },
+            "graphie": {
+              "description": "Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.",
+              "type": "string",
+              "minLength": 1
+            },
+            "langue": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Langue de cette forme (indo-européen, grec ancien, arabe…)."
+            },
+            "sens": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Sens de cette forme, sans guillemets."
+            },
+            "incertain": {
+              "description": "Origine de l'étymon débattue : la racine n'est qu'une hypothèse.",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "forme",
+            "langue",
+            "sens"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "doublets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Identifiants des fiches issues du même étymon par une autre voie (relation réciproque)."
+    },
+    "famille": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Mots français apparentés."
+    },
+    "themes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "émotions",
+          "esprit",
+          "parole",
+          "savoir",
+          "morale",
+          "religion",
+          "corps",
+          "santé",
+          "famille",
+          "société",
+          "droit",
+          "guerre",
+          "travail",
+          "argent",
+          "commerce",
+          "nourriture",
+          "maison",
+          "nature",
+          "météo",
+          "temps"
+        ]
+      },
+      "description": "Thèmes (liste fermée : data/themes.json)."
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ouvrage": {
+            "type": "string",
+            "enum": [
+              "Littré",
+              "Gaffiot",
+              "Bailly",
+              "TLFi"
+            ],
+            "description": "Ouvrage consulté (liste fermée : data/sources.json)."
+          },
+          "entree": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Entrée consultée dans l'ouvrage (ex. « étonner », « adtono »)."
+          },
+          "page": {
+            "description": "Page de l'édition papier consultée.",
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "string",
+                "minLength": 1
+              }
+            ]
+          },
+          "url": {
+            "description": "Adresse (https) de l'entrée consultée en ligne.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "ouvrage",
+          "entree"
+        ],
+        "additionalProperties": false,
+        "description": "Ouvrage consulté pour l'étymologie ; page ou url obligatoire."
+      },
+      "description": "Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier."
+    },
+    "redaction": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "par": {
+            "type": "string",
+            "enum": [
+              "IA",
+              "Étymon"
+            ],
+            "description": "IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
+          }
+        },
+        "required": [
+          "par",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "description": "Qui a rédigé. Ce n'est pas une source."
+      },
+      "description": "Qui a rédigé la fiche ; affiché une fois, en pied de fiche."
+    },
+    "lecturesTraditionnelles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "texte": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Paraphrase de la lecture, sans commencer par le nom de l'auteur ; italique avec _…_."
+          },
+          "citation": {
+            "description": "Texte original de l'auteur, dans sa langue.",
+            "type": "string",
+            "minLength": 1
+          },
+          "auteur": {
+            "type": "string",
+            "enum": [
+              "Platon",
+              "Varron",
+              "Cicéron",
+              "Lactance",
+              "Augustin",
+              "Isidore de Séville",
+              "Thomas d'Aquin",
+              "René Guénon"
+            ],
+            "description": "Auteur de la tradition (liste fermée : data/auteurs.json)."
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ouvrage": {
+                  "type": "string",
+                  "enum": [
+                    "Cratyle",
+                    "De la langue latine",
+                    "De la nature des dieux",
+                    "Institutions divines",
+                    "La Cité de Dieu",
+                    "De la vraie religion",
+                    "Rétractations",
+                    "Confessions",
+                    "Étymologies",
+                    "Somme théologique",
+                    "Introduction générale à l'étude des doctrines hindoues",
+                    "La Crise du monde moderne",
+                    "Le Règne de la quantité et les signes des temps",
+                    "Aperçus sur l'initiation",
+                    "Symboles de la Science sacrée"
+                  ],
+                  "description": "Œuvre de l'auteur (liste fermée : data/auteurs.json)."
+                },
+                "entree": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Passage précis (ex. « IV, 28, 3 »)."
+                },
+                "page": {
+                  "description": "Page de l'édition papier consultée.",
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "exclusiveMinimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  ]
+                },
+                "url": {
+                  "description": "Adresse (https) de l'entrée consultée en ligne.",
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "ouvrage",
+                "entree"
+              ],
+              "additionalProperties": false,
+              "description": "Œuvre consultée pour une lecture traditionnelle, et passage précis."
+            },
+            "description": "Œuvres consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."
+          },
+          "redaction": {
+            "description": "Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche.",
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "par": {
+                  "type": "string",
+                  "enum": [
+                    "IA",
+                    "Étymon"
+                  ],
+                  "description": "IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."
+                },
+                "detail": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
+                }
+              },
+              "required": [
+                "par",
+                "detail"
+              ],
+              "additionalProperties": false,
+              "description": "Qui a rédigé. Ce n'est pas une source."
+            }
+          }
+        },
+        "required": [
+          "texte",
+          "auteur",
+          "sources"
+        ],
+        "additionalProperties": false,
+        "description": "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie."
+      },
+      "description": "Lectures traditionnelles, une par tradition (souvent aucune)."
+    },
+    "statut": {
+      "type": "string",
+      "enum": [
+        "a-verifier",
+        "brouillon",
+        "validee"
+      ],
+      "description": "a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
+    },
+    "historique": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+            "description": "Date au format AAAA-MM-JJ."
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nature de la correction."
+          }
+        },
+        "required": [
+          "date",
+          "note"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Corrections successives (ex. suite à une Critique)."
+    }
+  },
+  "required": [
+    "mot",
+    "nature",
+    "etymon",
+    "reconstruit",
+    "langue",
+    "sens",
+    "explication",
+    "incertain",
+    "doublets",
+    "famille",
+    "themes",
+    "sources",
+    "redaction",
+    "lecturesTraditionnelles",
+    "statut",
+    "historique"
+  ],
+  "additionalProperties": false,
+  "description": "Fiche d'Étymon : un mot, son étymon, ce que le sens premier révèle.",
+  "title": "Fiche d'Étymon"
+}

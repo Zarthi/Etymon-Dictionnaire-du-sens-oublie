@@ -5,5 +5,6 @@ src/generes/
 *.log
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .vitest/
 sources/
