@@ -22,7 +22,7 @@ const fiche = (surcharges: Partial<Fiche> = {}) =>
     explication: "Le mot ne désignait pas ce que l'on croit.",
     famille: ["religieux", "irréligion"],
     ecartees: [],
-    lecturesTraditionnelles: [],
+    tradition: { lectures: [], renvois: [] },
     ...surcharges,
   }) as Fiche;
 

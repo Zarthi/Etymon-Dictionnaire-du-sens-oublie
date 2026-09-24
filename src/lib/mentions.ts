@@ -18,7 +18,7 @@ type AuteurCite = { nom: string; cite?: string[] };
 type OuvrageCite = { titre: string; abrege?: string; titreOriginal?: string };
 
 /** Auteurs et ouvrages que la fiche cite, par identifiant. */
-export function referencesDe(fiche: Pick<Fiche, "etymologie" | "ecartees" | "lecturesTraditionnelles">): { auteurs: string[]; ouvrages: string[] } {
+export function referencesDe(fiche: Pick<Fiche, "etymologie" | "ecartees" | "tradition">): { auteurs: string[]; ouvrages: string[] } {
   const auteurs = new Set<string>();
   const ouvrages = new Set<string>();
   for (const m of fiche.etymologie) {
@@ -29,7 +29,7 @@ export function referencesDe(fiche: Pick<Fiche, "etymologie" | "ecartees" | "lec
     if (m.ouvrage) ouvrages.add(m.ouvrage);
   }
   for (const e of fiche.ecartees) e.selon?.forEach((id) => auteurs.add(id));
-  for (const l of fiche.lecturesTraditionnelles) {
+  for (const l of fiche.tradition.lectures) {
     auteurs.add(l.auteur);
     l.sources.forEach((s) => ouvrages.add(s.ouvrage));
   }
@@ -42,7 +42,7 @@ export const formesOuvrage = (o: OuvrageCite) => [o.titre, o.abrege, o.titreOrig
 
 /** Mentions reconnaissables dans les textes de la fiche. */
 export function mentionsDe(
-  fiche: Pick<Fiche, "etymologie" | "ecartees" | "lecturesTraditionnelles">,
+  fiche: Pick<Fiche, "etymologie" | "ecartees" | "tradition">,
   auteurs: Map<string, AuteurCite>,
   ouvrages: Map<string, OuvrageCite>,
 ): Mention[] {
@@ -66,8 +66,8 @@ export function nomme(texte: string, forme: string): boolean {
 }
 
 /** Textes d'une fiche où l'app reconnaît les mentions : explication, étymologies écartées, lectures. */
-export function textesDe(fiche: Pick<Fiche, "explication" | "ecartees" | "lecturesTraditionnelles">): string {
-  return [fiche.explication, ...fiche.ecartees.map((e) => e.raison ?? ""), ...fiche.lecturesTraditionnelles.map((l) => l.texte)].join("\n");
+export function textesDe(fiche: Pick<Fiche, "explication" | "ecartees" | "tradition">): string {
+  return [fiche.explication, ...fiche.ecartees.map((e) => e.raison ?? ""), ...fiche.tradition.lectures.map((l) => l.texte)].join("\n");
 }
 
 /** Formes qui, dans une même fiche, désignent deux pages différentes : il faut alors écrire le nom complet. */

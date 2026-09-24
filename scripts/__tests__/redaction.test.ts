@@ -43,7 +43,7 @@ describe("preparerFiche", () => {
     const fiche = ficheDe(preparerFiche(brute, options));
     expect(Object.keys(fiche).slice(0, 3)).toEqual(["mot", "nature", "etymologie"]);
     expect(fiche).toMatchObject({ nature: ["nom féminin"], redaction: [{ par: "IA", detail: "Claude Fable 5.1" }], statut: "a-verifier" });
-    for (const champ of ["incertain", "doublets", "famille", "renvois", "ecartees", "sources", "historique", "lecturesTraditionnelles"]) {
+    for (const champ of ["incertain", "doublets", "famille", "renvois", "ecartees", "sources", "historique", "tradition"]) {
       expect(fiche).not.toHaveProperty(champ);
     }
     expect(fiche.explication).toBe(`Le mot ne désignait pas ce que l'on croit${NBSP}: il disait ce qui retient.`);

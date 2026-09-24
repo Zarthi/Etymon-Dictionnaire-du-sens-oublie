@@ -30,7 +30,10 @@ function nettoyer(valeur: unknown, cle = ""): unknown {
     const sortie: Record<string, unknown> = {};
     for (const [k, v] of Object.entries(valeur)) {
       if (v === undefined || v === false || (Array.isArray(v) && v.length === 0)) continue;
-      sortie[k] = nettoyer(v, k);
+      const propre = nettoyer(v, k);
+      // Un objet vidé de ses valeurs par défaut (tradition sans renvoi) ne s'écrit pas non plus.
+      if (propre && typeof propre === "object" && !Array.isArray(propre) && Object.keys(propre).length === 0) continue;
+      sortie[k] = propre;
     }
     return sortie;
   }
@@ -38,7 +41,7 @@ function nettoyer(valeur: unknown, cle = ""): unknown {
 }
 
 /** Champs que les scripts écrivent : l'IA ne les fournit jamais. */
-const CHAMPS_INTERDITS = ["sources", "redaction", "lecturesTraditionnelles", "statut", "historique"];
+const CHAMPS_INTERDITS = ["sources", "redaction", "statut", "historique"];
 
 type Resultat = { fiche: Record<string, unknown> } | { erreurs: string[] };
 
@@ -49,7 +52,8 @@ function preparer<T extends object>(
   modele: string,
   completer: (contenu: T) => Record<string, unknown> | string = (c) => ({ ...c }) as Record<string, unknown>,
 ): Resultat {
-  const interdits = CHAMPS_INTERDITS.filter((c) => c in brute);
+  const tradition = brute.tradition as Record<string, unknown> | undefined;
+  const interdits = [...CHAMPS_INTERDITS.filter((c) => c in brute), ...(tradition && "lectures" in tradition ? ["tradition.lectures"] : [])];
   if (interdits.length > 0) {
     return { erreurs: [`${interdits.join(", ")} : écrits par les scripts (sources : npm run verifier ; lectures : passe à part)`] };
   }

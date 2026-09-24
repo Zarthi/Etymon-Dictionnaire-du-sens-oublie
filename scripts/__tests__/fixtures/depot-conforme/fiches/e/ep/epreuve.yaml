@@ -21,13 +21,14 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles:
-  - texte: Lecture fictive, pour les tests.
-    citation: probatio ficta
-    auteur: lactance
-    sources:
-      - ouvrage: institutions-divines
-        entree: livre I
-        url: https://example.org/lactance
+tradition:
+  lectures:
+    - texte: Lecture fictive, pour les tests.
+      citation: probatio ficta
+      auteur: lactance
+      sources:
+        - ouvrage: institutions-divines
+          entree: livre I
+          url: https://example.org/lactance
 statut: brouillon
 historique: []

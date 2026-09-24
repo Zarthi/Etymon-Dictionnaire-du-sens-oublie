@@ -14,15 +14,15 @@ describe("contrat de données", () => {
   });
   it("décrit les trois types de fiches", () => {
     const contrat = genererMarkdown();
-    for (const champ of ["mot", "etymologie", "explication", "sources", "redaction", "lecturesTraditionnelles", "statut", "nom", "tradition", "titre", "licence"]) {
+    for (const champ of ["mot", "etymologie", "explication", "sources", "redaction", "statut", "nom", "tradition", "titre", "licence"]) {
       expect(contrat).toContain(`| \`${champ}\` |`);
     }
     expect(contrat).toContain("### `etymologie[].alternatives`");
-    expect(contrat).toContain("### `lecturesTraditionnelles[].sources[]`");
+    expect(contrat).toContain("### `tradition.lectures[].sources[]`");
   });
   it("ne demande à l'IA que le contenu : ni sources, ni statut, ni rédaction, ni lectures", () => {
     const prompt = genererPrompt();
     for (const champ of ["mot", "etymologie", "explication", "ecartees", "nom", "titre"]) expect(prompt).toContain(`| \`${champ}\` |`);
-    for (const champ of ["sources", "statut", "redaction", "lecturesTraditionnelles", "historique"]) expect(prompt).not.toContain(`| \`${champ}\` |`);
+    for (const champ of ["sources", "statut", "redaction", "lectures", "historique"]) expect(prompt).not.toContain(`| \`${champ}\` |`);
   });
 });

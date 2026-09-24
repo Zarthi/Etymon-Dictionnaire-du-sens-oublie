@@ -30,35 +30,36 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles:
-  - texte: La religion est le lien de piété qui attache l'homme à Dieu, et non le
-      soin des rites que Cicéron y voyait.
-    citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa
-      religio nomen accepit, non ut Cicero interpretatus est a relegendo"
-    auteur: lactance
-    hypothese: religare
-    sources:
-      - ouvrage: institutions-divines
-        entree: IV, 28, 3
-        url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
-  - texte: "Dieu, que nous avions perdu par négligence, nous le choisissons à
-      nouveau : la religion est ce choix renouvelé."
-    citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) —
-      hunc ergo religentes, unde et religio dicta perhibetur
-    auteur: augustin
-    sources:
-      - ouvrage: la-cite-de-dieu
-        entree: X, 3
-        url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
-  - texte: La religion relie nos âmes au seul Dieu pour le servir ; le mot serait
-      pourtant formé sur relegere, compris comme « choisir ».
-    citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
-      cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,
-      id est eligendo
-    auteur: isidore-de-seville
-    hypothese: religare
-    sources:
-      - ouvrage: etymologies
-        entree: VIII, 2, 2
-        url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+tradition:
+  lectures:
+    - texte: La religion est le lien de piété qui attache l'homme à Dieu, et non le
+        soin des rites que Cicéron y voyait.
+      citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa
+        religio nomen accepit, non ut Cicero interpretatus est a relegendo"
+      auteur: lactance
+      hypothese: religare
+      sources:
+        - ouvrage: institutions-divines
+          entree: IV, 28, 3
+          url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
+    - texte: "Dieu, que nous avions perdu par négligence, nous le choisissons à
+        nouveau : la religion est ce choix renouvelé."
+      citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) —
+        hunc ergo religentes, unde et religio dicta perhibetur
+      auteur: augustin
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: X, 3
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+    - texte: La religion relie nos âmes au seul Dieu pour le servir ; le mot serait
+        pourtant formé sur relegere, compris comme « choisir ».
+      citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
+        cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,
+        id est eligendo
+      auteur: isidore-de-seville
+      hypothese: religare
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 2, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
 statut: brouillon

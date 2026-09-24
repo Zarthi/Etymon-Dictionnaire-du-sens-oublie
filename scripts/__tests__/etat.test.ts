@@ -6,7 +6,7 @@ import { listerBrouillons, prochainsCandidats, resumer } from "../etat.ts";
 const IA: Redaction[] = [{ par: "IA", detail: "Claude Opus 5.5" }];
 
 const fiche = (id: string, statut: FicheIdentifiee["statut"], incertain = false, lectures: LectureTraditionnelle[] = []) =>
-  ({ id, mot: id, statut, incertain, redaction: IA, lecturesTraditionnelles: lectures }) as FicheIdentifiee;
+  ({ id, mot: id, statut, incertain, redaction: IA, tradition: { lectures, renvois: [] as string[] } }) as FicheIdentifiee;
 /** Lecture citant les œuvres données. */
 const lecture = (auteur: string, oeuvres: string[]) =>
   ({ texte: "Lecture.", citation: "Texte.", auteur, sources: oeuvres.map((ouvrage) => ({ ouvrage, entree: "I, 1", url: "https://example.org" })) }) as LectureTraditionnelle;

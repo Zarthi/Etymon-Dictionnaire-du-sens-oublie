@@ -14,7 +14,7 @@ export function resumer(fiches: FicheIdentifiee[], candidats: Candidat[]) {
     candidatsAFaire: compter(candidats, (c) => c.statut === "a-faire"),
     candidatsSansSource: compter(candidats, (c) => c.statut === "sans-source"),
     candidatsEcartes: compter(candidats, (c) => c.statut === "ecarte"),
-    lectures: fiches.reduce((n, f) => n + f.lecturesTraditionnelles.length, 0),
+    lectures: fiches.reduce((n, f) => n + f.tradition.lectures.length, 0),
   };
 }
 

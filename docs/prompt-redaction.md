@@ -13,11 +13,11 @@ Tu rédiges des fiches d'Étymon, dictionnaire du sens premier des mots françai
 - `explication` : ce qui s'est perdu, affaibli ou retourné entre le sens premier et l'usage actuel. Elle ne répète pas le sens, affiché juste au-dessus. Ton sobre, sans emphase ni jugement.
 - Tout mot étranger cité dans un texte est une forme de la chaîne : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.
 - `ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.
-- Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce). `renvois` (Voir aussi) : notions voisines du même ordre, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `renvoisTradition` (Du côté de la tradition) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.
+- Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce). `renvois` (Voir aussi) : notions voisines du même ordre, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `tradition.renvois` (sous « Lectures traditionnelles » : voir obsession) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.
 - Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, ajoute-la au lot (`auteurs`, `ouvrages`), avec une description qui situe sans raconter et, dans `cite`, l'élément d'entrée de sa notice BnF (Bleuler, Comte).
 - Dans un texte, nomme un auteur sous son nom usuel ou une de ses formes de citation (liste ci-dessous) : l'app en fait un lien, s'il est aussi cité dans un champ de la fiche.
 - Tu rédiges de mémoire : n'invente ni tenant (`selon`), ni date (`forge`), ni forme reconstruite que tu ne connais pas avec certitude. En cas de doute sur la chaîne, `incertain: true`.
-- Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles : les scripts les posent (npm run rediger, npm run verifier), les lectures se rédigent à part, texte source sous les yeux.
+- Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles (`tradition.lectures`) : les scripts les posent (npm run rediger, npm run verifier), les lectures se rédigent à part, texte source sous les yeux.
 - Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.
 
 ## Format
@@ -37,8 +37,8 @@ Un fichier JSON : une liste de fiches, ou `{ "fiches": [...], "auteurs": [...], 
 | `doublets` | liste d'identifiants | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | non | Mots français apparentés, de la même racine. |
 | `renvois` | liste d'identifiants | non | Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté. |
-| `renvoisTradition` | liste d'identifiants | non | Du côté de la tradition : mots que la tradition a lus et vers lesquels mène celui-ci (schizophrénie → obsession) ; fiche ou candidat à faire, deux au plus. |
 | `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
+| `tradition` | objet (voir plus bas) | non | Les mots où la tradition parle de celui-ci ; les lectures s'écrivent à part. |
 
 #### `etymologie[]`
 
@@ -122,6 +122,12 @@ Un fichier JSON : une liste de fiches, ou `{ "fiches": [...], "auteurs": [...], 
 | `raison` | texte | non | Pourquoi elle est écartée, en une phrase. |
 | `populaire` | `true` \| `false` | non | Étymologie populaire (idée reçue : sine cera), et non savante (per-sonare). |
 
+#### `tradition`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `renvois` | liste d'identifiants | non | Mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) : fiche ou candidat à faire, deux au plus ; affichés une fois leur fiche pourvue de lectures. |
+
 ### Auteur
 
 | Champ | Type | Obligatoire | Description |
@@ -166,7 +172,7 @@ Fiches du dépôt (simple ; filiation ; filiation et composition ; mot forgé ; 
   {"mot":"étonner","etymologie":[{"forme":"*extonare","langue":"latin populaire","sens":"ébranler comme d'un coup de tonnerre"}],"explication":"Le sens propre a longtemps survécu : on étonnait la roche ou un diamant en les fêlant, et pour les classiques, être étonné, c'était rester frappé de stupeur. Le mot ne dit plus qu'une surprise.","themes":["émotions"]},
   {"mot":"chiffre","etymologie":[{"forme":"cifra","langue":"latin médiéval","sens":"zéro"},{"forme":"صفر","translitteration":"ṣifr","langue":"arabe","sens":"vide"}],"explication":"Le nom d'un seul signe, celui qui ne compte rien, s'est étendu à tous les signes de numération, puis au montant qu'ils écrivent. Zéro, son doublet, a repris le sens premier.","doublets":["zero"],"themes":["savoir"]},
   {"mot":"philosophie","etymologie":[{"forme":"philosophia","langue":"latin"},{"forme":"φιλοσοφία","langue":"grec ancien","sens":"amour de la sagesse","elements":[{"forme":"φίλος","sens":"ami, qui aime"},{"forme":"σοφία","sens":"sagesse, savoir"}]}],"explication":"Le philosophe ne se disait pas savant : il aimait ce qu'il ne possédait pas. Le mot nomme aujourd'hui une discipline, voire une simple opinion.","famille":["philosophe","philosophique"],"themes":["savoir","esprit"]},
-  {"mot":"schizophrénie","nature":["nom féminin"],"etymologie":[{"forme":"Schizophrenie","langue":"allemand","forge":{"par":["eugen-bleuler"],"date":"1911","ouvrage":"dementia-praecox"}},{"langue":"grec ancien","sens":"esprit fendu","elements":[{"forme":"σχίζω","sens":"fendre"},{"forme":"φρήν","sens":"diaphragme"}]}],"explication":"Bleuler renommait la démence précoce : non un dédoublement de la personnalité, contresens devenu courant, mais une discordance entre pensée, affects et volonté. Ce que le mot fend, les Grecs le logeaient dans la poitrine, non dans la tête.","famille":["schizophrène","frénésie","frénétique"],"renvois":["delire","folie"],"renvoisTradition":["obsession"],"themes":["esprit","santé"]},
+  {"mot":"schizophrénie","nature":["nom féminin"],"etymologie":[{"forme":"Schizophrenie","langue":"allemand","forge":{"par":["eugen-bleuler"],"date":"1911","ouvrage":"dementia-praecox"}},{"langue":"grec ancien","sens":"esprit fendu","elements":[{"forme":"σχίζω","sens":"fendre"},{"forme":"φρήν","sens":"diaphragme"}]}],"explication":"Bleuler renommait la démence précoce : non un dédoublement de la personnalité, contresens devenu courant, mais une discordance entre pensée, affects et volonté. Ce que le mot fend, les Grecs le logeaient dans la poitrine, non dans la tête.","famille":["schizophrène","frénésie","frénétique"],"renvois":["delire","folie"],"themes":["esprit","santé"],"tradition":{"renvois":["obsession"]}},
   {"mot":"religion","etymologie":[{"forme":"religio","langue":"latin","sens":"attention scrupuleuse, scrupule"},{"langue":"latin","alternatives":{"mode":"debattue","formes":[{"forme":"relegere","sens":"reprendre avec soin","selon":["ciceron"]},{"forme":"religare","sens":"relier","selon":["lactance"]}]}}],"explication":"La religio retenait aussi bien le juge devant un verdict que le Romain devant les dieux : une conscience qui arrête. Le mot ne désignait pas ce que l'on croit, mais ce qui retient d'agir.","famille":["religieux","religiosité","irréligion"],"themes":["religion"]},
   {"mot":"algorithme","etymologie":[{"forme":"alguarismo","langue":"ancien espagnol","sens":"art de compter"},{"forme":"الخوارزمي","translitteration":"al-Ḫuwārizmī","langue":"arabe","sens":"celui du Khwarezm","personne":"al-khwarizmi"}],"explication":"L'algorithme porte le nom d'un homme, le mathématicien dont les traités firent connaître à l'Europe le calcul avec les chiffres arabes. Un surnom est devenu une méthode.","ecartees":[{"forme":"ἀριθμός","langue":"grec ancien","sens":"nombre","raison":"Littré la rapporte et l'écarte : seul le nom du mathématicien rend compte du g."}],"famille":["algorithmique"],"themes":["savoir"]}
 ]

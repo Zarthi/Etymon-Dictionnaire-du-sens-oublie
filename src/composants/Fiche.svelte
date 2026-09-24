@@ -28,7 +28,9 @@
   } = $props();
 
   const correction = $derived(fiche.historique.at(-1));
-  const lectures = $derived(fiche.lecturesTraditionnelles);
+  const lectures = $derived(fiche.tradition.lectures);
+  /** Mots où la tradition parle de celui-ci (l'assemblage ne garde que ceux qui ont des lectures). */
+  const ailleurs = $derived(fiche.tradition.renvois);
   /** Auteurs des lectures, sans doublon, pour l'intitulé replié : « Lactance, Augustin, Isidore de Séville ». */
   const auteurs = $derived([...new Set(lectures.map((l) => fichesAuteurs.get(l.auteur)?.nom ?? l.auteur))].join(", "));
   /** Rédaction de la fiche, affichée une fois en pied ; une lecture ne la rappelle que si la sienne diffère. */
@@ -81,13 +83,7 @@
 
   <Sources sources={fiche.sources} />
 
-  {#snippet versTradition()}
-    <!-- Où la tradition parle, pour un mot qu'elle n'a pas lu ou pour aller plus loin : un lien, sans rien lui prêter. -->
-    <p class="vers-tradition">
-      <span class="intitule">Du côté de la tradition</span>
-      {#each fiche.renvoisTradition as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}>{motDe(id)}</a>{/each}
-    </p>
-  {/snippet}
+  {#snippet voir()}voir {#each ailleurs as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}>{motDe(id)}</a>{/each}{/snippet}
 
   {#if lectures.length > 0}
     <!-- Toujours signalées, repliées par défaut : l'étymologie d'abord, la tradition à côté. -->
@@ -99,10 +95,14 @@
       {#each lectures as lecture, i (i)}
         <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
       {/each}
-      {#if fiche.renvoisTradition.length > 0}{@render versTradition()}{/if}
+      {#if ailleurs.length > 0}<p class="ailleurs">{@render voir()}</p>{/if}
     </details>
-  {:else if fiche.renvoisTradition.length > 0}
-    <div class="traditions">{@render versTradition()}</div>
+  {:else if ailleurs.length > 0}
+    <!-- Mot que la tradition n'a pas lu : la même rubrique, qui mène là où elle parle, sans rien lui prêter. -->
+    <p class="traditions ligne">
+      <span class="intitule">Lectures traditionnelles</span>
+      <span class="auteurs">{@render voir()}</span>
+    </p>
   {/if}
 
   <footer>
@@ -211,20 +211,22 @@
     font-size: 0.85rem;
     color: var(--texte-discret);
   }
-  .vers-tradition {
-    font-family: var(--police-interface);
+  .ligne {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.2rem 0.6rem;
-    margin: 0;
+    margin-bottom: 0;
+    font-family: var(--police-interface);
   }
-  details .vers-tradition {
-    margin-top: 1rem;
+  .ailleurs {
+    margin: 1rem 0 0;
+    font-family: var(--police-interface);
+    font-size: 0.85rem;
+    color: var(--texte-discret);
   }
-  .vers-tradition a {
+  .traditions a {
     color: inherit;
-    font-style: italic;
   }
   .incertain {
     font-family: var(--police-interface);

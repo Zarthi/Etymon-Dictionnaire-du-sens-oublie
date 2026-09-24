@@ -551,17 +551,6 @@
         "description": "Fiche."
       }
     },
-    "renvoisTradition": {
-      "default": [],
-      "description": "Du côté de la tradition : mots que la tradition a lus et vers lesquels mène celui-ci (schizophrénie → obsession) ; fiche ou candidat à faire, deux au plus.",
-      "maxItems": 2,
-      "type": "array",
-      "items": {
-        "type": "string",
-        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-        "description": "Fiche."
-      }
-    },
     "themes": {
       "type": "array",
       "items": {
@@ -591,118 +580,137 @@
       },
       "description": "Thèmes (liste fermée : data/themes.json)."
     },
-    "lecturesTraditionnelles": {
-      "default": [],
-      "description": "Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune).",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "texte": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Sens que la doctrine donne au mot, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."
-          },
-          "citation": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe)."
-          },
-          "auteur": {
-            "type": "string",
-            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-            "description": "Auteur de la tradition (data/auteurs, tradition: true)."
-          },
-          "hypothese": {
-            "description": "Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter.",
-            "type": "string",
-            "minLength": 1
-          },
-          "sources": {
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "ouvrage": {
-                  "type": "string",
-                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-                  "description": "Œuvre de l'auteur de la lecture (identifiant d'une fiche de data/ouvrages)."
-                },
-                "entree": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "Passage précis (« IV, 28, 3 »)."
-                },
-                "page": {
-                  "description": "Page de l'édition papier consultée.",
-                  "anyOf": [
-                    {
-                      "type": "integer",
-                      "exclusiveMinimum": 0,
-                      "maximum": 9007199254740991
-                    },
-                    {
+    "tradition": {
+      "description": "Ce que dit la tradition du mot : ses lectures, ou les mots où elle en parle. Une seule rubrique, « Lectures traditionnelles ».",
+      "default": {},
+      "type": "object",
+      "properties": {
+        "lectures": {
+          "default": [],
+          "description": "Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune).",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "texte": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Sens que la doctrine donne au mot, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."
+              },
+              "citation": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe)."
+              },
+              "auteur": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+                "description": "Auteur de la tradition (data/auteurs, tradition: true)."
+              },
+              "hypothese": {
+                "description": "Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter.",
+                "type": "string",
+                "minLength": 1
+              },
+              "sources": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ouvrage": {
                       "type": "string",
-                      "minLength": 1
+                      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+                      "description": "Œuvre de l'auteur de la lecture (identifiant d'une fiche de data/ouvrages)."
+                    },
+                    "entree": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Passage précis (« IV, 28, 3 »)."
+                    },
+                    "page": {
+                      "description": "Page de l'édition papier consultée.",
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        },
+                        {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      ]
+                    },
+                    "url": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "Adresse (https) du texte original, du domaine public : npm run verifier:en-ligne y cherche la citation."
                     }
-                  ]
-                },
-                "url": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "Adresse (https) du texte original, du domaine public : npm run verifier:en-ligne y cherche la citation."
-                }
-              },
-              "required": [
-                "ouvrage",
-                "entree",
-                "url"
-              ],
-              "additionalProperties": false,
-              "description": "Œuvre consultée pour une lecture traditionnelle."
-            },
-            "description": "Œuvres de l'auteur consultées."
-          },
-          "redaction": {
-            "description": "Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche.",
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "par": {
-                  "type": "string",
-                  "enum": [
-                    "IA",
-                    "Étymon"
+                  },
+                  "required": [
+                    "ouvrage",
+                    "entree",
+                    "url"
                   ],
-                  "description": "IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."
+                  "additionalProperties": false,
+                  "description": "Œuvre consultée pour une lecture traditionnelle."
                 },
-                "detail": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
-                }
+                "description": "Œuvres de l'auteur consultées."
               },
-              "required": [
-                "par",
-                "detail"
-              ],
-              "additionalProperties": false,
-              "description": "Qui a rédigé. Ce n'est pas une source."
-            }
+              "redaction": {
+                "description": "Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche.",
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "par": {
+                      "type": "string",
+                      "enum": [
+                        "IA",
+                        "Étymon"
+                      ],
+                      "description": "IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."
+                    },
+                    "detail": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
+                    }
+                  },
+                  "required": [
+                    "par",
+                    "detail"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Qui a rédigé. Ce n'est pas une source."
+                }
+              }
+            },
+            "required": [
+              "texte",
+              "citation",
+              "auteur",
+              "sources"
+            ],
+            "additionalProperties": false,
+            "description": "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie. La tradition doit avoir lu le mot lui-même, pas la chose qu'il désigne aujourd'hui."
           }
         },
-        "required": [
-          "texte",
-          "citation",
-          "auteur",
-          "sources"
-        ],
-        "additionalProperties": false,
-        "description": "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie. La tradition doit avoir lu le mot lui-même, pas la chose qu'il désigne aujourd'hui."
-      }
+        "renvois": {
+          "default": [],
+          "description": "Mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) : fiche ou candidat à faire, deux au plus ; affichés une fois leur fiche pourvue de lectures.",
+          "maxItems": 2,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Fiche."
+          }
+        }
+      },
+      "additionalProperties": false
     },
     "sources": {
       "default": [],

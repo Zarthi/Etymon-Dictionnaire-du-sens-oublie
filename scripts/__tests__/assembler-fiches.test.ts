@@ -52,10 +52,14 @@ describe("assembler", () => {
     expect(lots.get("sc")?.[0].renvois).toEqual(["obsession"]);
   });
 
-  it("ne transmet que les renvois vers des fiches écrites (un renvoi peut viser un candidat)", () => {
-    const schizophrenie = { ...avec("schizophrenie", "brouillon"), renvois: ["delire", "obsession"], renvoisTradition: ["obsession", "demon"] };
-    const { lots } = assembler([schizophrenie, { ...avec("obsession", "brouillon"), renvois: [] }]);
-    expect(lots.get("sc")?.[0]).toMatchObject({ renvois: ["obsession"], renvoisTradition: ["obsession"] });
+  it("ne transmet que les renvois vers des fiches écrites, et vers la tradition, que vers une fiche qui a des lectures", () => {
+    const lecture = { texte: "T.", citation: "C.", auteur: "augustin", sources: [{ ouvrage: "la-cite-de-dieu", entree: "X", url: "https://example.org" }] };
+    const schizophrenie = { ...avec("schizophrenie", "brouillon"), renvois: ["delire", "obsession"], tradition: { lectures: [], renvois: ["obsession", "demon"] } };
+    const obsession = { ...avec("obsession", "brouillon"), renvois: [], tradition: { lectures: [], renvois: [] } };
+    const sans = assembler([schizophrenie, obsession]).lots.get("sc")?.[0];
+    expect(sans).toMatchObject({ renvois: ["obsession"], tradition: { renvois: [] } });
+    const avecLecture = assembler([schizophrenie, { ...obsession, tradition: { lectures: [lecture], renvois: [] } }]).lots.get("sc")?.[0];
+    expect(avecLecture?.tradition.renvois).toEqual(["obsession"]);
   });
 
   it("regroupe les fiches complètes par préfixe de deux lettres", () => {

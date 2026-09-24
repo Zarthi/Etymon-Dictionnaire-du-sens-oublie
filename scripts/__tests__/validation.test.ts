@@ -59,7 +59,7 @@ const ficheBase = {
     { ouvrage: "gaffiot", entree: "extono" },
   ],
   redaction: [{ par: "IA", detail: "Claude Opus 5.5" }],
-  lecturesTraditionnelles: [],
+  tradition: { lectures: [] },
   statut: "brouillon",
   historique: [],
 };
@@ -149,16 +149,16 @@ describe("validerFiches : fiches conformes", () => {
     expect(valider().fiches[0].explication.endsWith(".")).toBe(true);
   });
   it("accepte une fiche sans ses champs facultatifs, et leur donne leur valeur par défaut", () => {
-    const { incertain: _i, doublets: _d, famille: _f, lecturesTraditionnelles: _l, historique: _h, ...minimale } = ficheBase;
+    const { incertain: _i, doublets: _d, famille: _f, tradition: _t, historique: _h, ...minimale } = ficheBase;
     const { fiches, erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(minimale) }], REF);
     expect(erreurs).toEqual([]);
-    expect(fiches[0]).toMatchObject({ incertain: false, doublets: [], famille: [], renvois: [], ecartees: [], lecturesTraditionnelles: [] });
+    expect(fiches[0]).toMatchObject({ incertain: false, doublets: [], famille: [], renvois: [], ecartees: [], tradition: { lectures: [], renvois: [] } });
   });
   it("accepte des lectures, des étymologies écartées et un historique daté", () => {
     const texte = stringify({
       ...ficheBase,
       etymologie: chaineDebattue,
-      lecturesTraditionnelles: [lectureBase, { ...structuredClone(lectureBase), texte: "Autre lecture.", hypothese: "religare" }],
+      tradition: { lectures: [lectureBase, { ...structuredClone(lectureBase), texte: "Autre lecture.", hypothese: "religare" }] },
       ecartees: [
         { forme: "sine cera", sens: "sans cire", raison: "Une étymologie de fantaisie.", populaire: true },
         { forme: "per sonare", sens: "résonner à travers", selon: ["ciceron"] },
@@ -175,7 +175,7 @@ describe("validerFiches : fiches conformes", () => {
   });
   it("accepte une lecture avec rédaction propre", () => {
     const lecture = { ...lectureBase, redaction: [{ par: "Étymon", detail: "rédaction de Thibault" }] };
-    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
+    expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([]);
   });
   it("accepte une voie, une composition et un mot forgé (schizophrénie)", () => {
     const etymologie = [
@@ -288,10 +288,10 @@ describe("validerFiches : structure", () => {
     ["redaction.0.par", { redaction: [{ par: "Robot", detail: "x" }] }],
     ["incertain", { incertain: "non" }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
-    ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ ...lectureBase, sources: [] }] }],
-    ["lecturesTraditionnelles.0.citation", { lecturesTraditionnelles: [{ ...lectureBase, citation: undefined }] }],
-    ["lecturesTraditionnelles.0.sources.0.url", { lecturesTraditionnelles: [{ ...lectureBase, sources: [{ ouvrage: "institutions-divines", entree: "IV" }] }] }],
-    ["lecturesTraditionnelles", { lecturesTraditionnelles: null }],
+    ["tradition.lectures.0.sources", { tradition: { lectures: [{ ...lectureBase, sources: [] }] } }],
+    ["tradition.lectures.0.citation", { tradition: { lectures: [{ ...lectureBase, citation: undefined }] } }],
+    ["tradition.lectures.0.sources.0.url", { tradition: { lectures: [{ ...lectureBase, sources: [{ ouvrage: "institutions-divines", entree: "IV" }] }] } }],
+    ["tradition", { tradition: null }],
     ["nature.0", { nature: ["substantif"] }],
     ["renvois", { renvois: ["a", "b", "c", "d"] }],
     ["ecartees.0.sens", { ecartees: [{ forme: "sine cera" }] }],
@@ -396,17 +396,17 @@ describe("validerFiches : références", () => {
     ]);
   });
   it("refuse une lecture d'un auteur hors tradition, ou d'une œuvre d'un autre auteur", () => {
-    expect(erreursDe({ lecturesTraditionnelles: [{ ...lectureBase, auteur: "eugen-bleuler" }] })).toContain(
-      "lecturesTraditionnelles.0.auteur : Eugen Bleuler n'est pas un auteur de la tradition (tradition: true)",
+    expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, auteur: "eugen-bleuler" }] } })).toContain(
+      "tradition.lectures.0.auteur : Eugen Bleuler n'est pas un auteur de la tradition (tradition: true)",
     );
     const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "la-cite-de-dieu" }] };
-    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
-      "lecturesTraditionnelles.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance",
+    expect(erreursDe({ tradition: { lectures: [lecture] } })).toEqual([
+      "tradition.lectures.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance",
     ]);
   });
   it("refuse une lecture qui vise une hypothèse absente de la chaîne", () => {
-    expect(erreursDe({ lecturesTraditionnelles: [{ ...lectureBase, hypothese: "religare" }] })).toEqual([
-      "lecturesTraditionnelles.0.hypothese : « religare » n'est pas une hypothèse de la chaîne (alternatives)",
+    expect(erreursDe({ tradition: { lectures: [{ ...lectureBase, hypothese: "religare" }] } })).toEqual([
+      "tradition.lectures.0.hypothese : « religare » n'est pas une hypothèse de la chaîne (alternatives)",
     ]);
   });
 });
@@ -456,15 +456,17 @@ describe("validerFiches : doublets et renvois", () => {
       { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
     ]);
   });
-  it.each(["renvois", "renvoisTradition"])("%s : vers une fiche ou un candidat à faire", (champ) => {
-    expect(validerFiches([fiche("poison", { [champ]: ["potion"] })], REF, new Set(["potion"])).erreurs).toEqual([]);
-    expect(validerFiches([fiche("poison", { [champ]: ["potion"] })], REF).erreurs).toEqual([
+  it.each(["renvois", "tradition.renvois"])("%s : vers une fiche ou un candidat à faire", (champ) => {
+    const champs = champ === "renvois" ? { renvois: ["potion"] } : { tradition: { renvois: ["potion"] } };
+    expect(validerFiches([fiche("poison", champs)], REF, new Set(["potion"])).erreurs).toEqual([]);
+    expect(validerFiches([fiche("poison", champs)], REF).erreurs).toEqual([
       { fichier: "p/po/poison.yaml", champ, regle: "fiche « potion » introuvable, ni candidat à faire" },
     ]);
   });
-  it("renvoisTradition : à sens unique, jamais vers soi-même", () => {
-    expect(validerFiches([fiche("poison", { renvoisTradition: ["potion"] }), fiche("potion", { renvoisTradition: ["poison"] })], REF).erreurs).toEqual([]);
-    expect(erreursDe({ renvoisTradition: ["etonner"] })).toContain("renvoisTradition : une fiche ne peut pas renvoyer à elle-même");
+  it("tradition.renvois : à sens unique, jamais vers soi-même", () => {
+    const vers = (cible: string) => ({ tradition: { renvois: [cible] } });
+    expect(validerFiches([fiche("poison", vers("potion")), fiche("potion", vers("poison"))], REF).erreurs).toEqual([]);
+    expect(erreursDe(vers("etonner"))).toContain("tradition.renvois : une fiche ne peut pas renvoyer à elle-même");
   });
   it("ne signale pas comme introuvable un doublet présent mais invalide", () => {
     const { erreurs } = validerFiches([fiche("poison", { doublets: ["potion"] }), { fichier: "p/po/potion.yaml", texte: "mot: potion\n" }], REF);
@@ -487,7 +489,7 @@ describe("validerFiches : règles éditoriales", () => {
   it.each([
     ["explication", { explication: "Il faut noter ceci : rien." }],
     ["historique.0.note", { historique: [{ date: "2026-09-23", note: "Corrigée ; voir la source." }] }],
-    ["lecturesTraditionnelles.0.texte", { lecturesTraditionnelles: [{ ...lectureBase, texte: "Relier ?" }] }],
+    ["tradition.lectures.0.texte", { tradition: { lectures: [{ ...lectureBase, texte: "Relier ?" }] } }],
     ["ecartees.0.raison", { ecartees: [{ forme: "sine cera", sens: "sans cire", raison: "C'est faux : aucune trace.", populaire: true }] }],
     [
       "etymologie.1.elements.0.sens",

@@ -15,8 +15,11 @@ const parId = (a: { id: string }, b: { id: string }) => (a.id < b.id ? -1 : a.id
  * Le statut accompagne chaque fiche : l'app signale celles qui ne sont pas encore validées.
  */
 export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
-  // Un renvoi peut viser un candidat : l'app ne reçoit que les fiches écrites.
+  // Un renvoi peut viser un candidat : l'app ne reçoit que les fiches écrites ; vers la tradition,
+  // que celles qui ont des lectures (le lien promet que la tradition y parle).
   const ecrites = new Set(fiches.map((f) => f.id));
+  const avecLectures = new Set(fiches.filter((f) => f.tradition.lectures.length > 0).map((f) => f.id));
+  const parle = (id: string) => avecLectures.has(id);
   // Un doublet ou un renvoi n'est déclaré que sur une des deux fiches : l'app le reçoit des deux côtés.
   const symetrique = (champ: "doublets" | "renvois") => {
     const relations = new Map(fiches.map((f) => [f.id, new Set(champ === "renvois" ? f.renvois.filter((id) => ecrites.has(id)) : f[champ])]));
@@ -26,7 +29,7 @@ export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lo
   const doublets = symetrique("doublets");
   const renvois = symetrique("renvois");
   const triees = fiches
-    .map((f) => ({ ...f, doublets: doublets(f.id), renvois: renvois(f.id), renvoisTradition: f.renvoisTradition.filter((id) => ecrites.has(id)) }))
+    .map((f) => ({ ...f, doublets: doublets(f.id), renvois: renvois(f.id), tradition: { ...f.tradition, renvois: f.tradition.renvois.filter(parle) } }))
     .sort(parId);
   const lots = new Map<string, FicheIdentifiee[]>();
   for (const fiche of triees) {
@@ -62,12 +65,12 @@ export function assemblerReferences(
       oeuvres: ouvrages.filter((o) => o.auteur === a.id).map((o) => o.id).sort(),
       forges: mots((f) => maillons(f).some((m) => m.forge?.par.includes(a.id))),
       hypotheses: mots((f) => tenants(f).includes(a.id)),
-      lectures: mots((f) => f.lecturesTraditionnelles.some((l) => l.auteur === a.id)),
+      lectures: mots((f) => f.tradition.lectures.some((l) => l.auteur === a.id)),
       issus: mots((f) => maillons(f).some((m) => m.personne === a.id)),
     })),
     ouvrages: ouvrages.sort(parId).map((o) => ({
       ...o,
-      lectures: mots((f) => f.lecturesTraditionnelles.some((l) => l.sources.some((s) => s.ouvrage === o.id))),
+      lectures: mots((f) => f.tradition.lectures.some((l) => l.sources.some((s) => s.ouvrage === o.id))),
       forges: mots((f) => maillons(f).some((m) => m.forge?.ouvrage === o.id)),
       issus: mots((f) => maillons(f).some((m) => m.ouvrage === o.id)),
     })),

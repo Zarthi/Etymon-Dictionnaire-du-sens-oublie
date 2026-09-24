@@ -14,7 +14,7 @@ const ouvrages = new Map([
   ["littre", { titre: "Dictionnaire de la langue française", abrege: "Littré" }],
 ]);
 
-const fiche = (champs: Partial<Fiche>) => ({ etymologie: [], ecartees: [], lecturesTraditionnelles: [], ...champs }) as unknown as Fiche;
+const fiche = (champs: Partial<Fiche>) => ({ etymologie: [], ecartees: [], tradition: { lectures: [], renvois: [] }, ...champs }) as unknown as Fiche;
 
 describe("referencesDe", () => {
   it("rassemble les auteurs et ouvrages que la fiche cite, jamais les dictionnaires des sources", () => {
@@ -23,7 +23,7 @@ describe("referencesDe", () => {
         { forme: "Utopia", langue: "latin humaniste", sens: "x", forge: { par: ["thomas-more"], date: "1516", ouvrage: "utopia" } },
         { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["ciceron"] }, { forme: "c", sens: "d" }] } },
       ],
-      lecturesTraditionnelles: [{ texte: "T.", citation: "C.", auteur: "lactance", sources: [{ ouvrage: "institutions-divines", entree: "I", url: "https://example.org" }] }],
+      tradition: { lectures: [{ texte: "T.", citation: "C.", auteur: "lactance", sources: [{ ouvrage: "institutions-divines", entree: "I", url: "https://example.org" }] }], renvois: [] },
       sources: [{ ouvrage: "littre", entree: "utopie" }],
     } as Partial<Fiche>);
     expect(referencesDe(f)).toEqual({ auteurs: ["thomas-more", "ciceron", "lactance"], ouvrages: ["utopia", "institutions-divines"] });

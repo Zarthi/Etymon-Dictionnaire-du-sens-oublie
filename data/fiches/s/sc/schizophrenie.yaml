@@ -21,8 +21,9 @@ explication: >-
   poitrine, non dans la tête.
 famille: [ schizophrène, frénésie, frénétique ]
 renvois: [ delire, folie ]
-renvoisTradition: [ obsession ]
 themes: [ esprit, santé ]
+tradition:
+  renvois: [ obsession ]
 sources:
   - ouvrage: tlfi
     entree: schizophrénie

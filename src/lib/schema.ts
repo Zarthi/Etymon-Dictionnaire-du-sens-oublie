@@ -201,6 +201,26 @@ export const schemaLectureTraditionnelle = z
     "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie. La tradition doit avoir lu le mot lui-même, pas la chose qu'il désigne aujourd'hui.",
   );
 
+/**
+ * La tradition sur un mot, en une seule rubrique : les lectures qu'elle en a faites, ou, pour un
+ * mot qu'elle n'a pas lu (schizophrénie), les mots où elle parle de ce dont il traite (obsession).
+ */
+const objetTradition = z
+  .object({
+    lectures: z
+      .array(schemaLectureTraditionnelle)
+      .default([])
+      .describe("Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune)."),
+    renvois: z
+      .array(identifiant("Fiche."))
+      .max(2)
+      .default([])
+      .describe(
+        "Mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) : fiche ou candidat à faire, deux au plus ; affichés une fois leur fiche pourvue de lectures.",
+      ),
+  })
+  .strict();
+
 /** Champs de la fiche d'un mot ; les règles entre champs s'ajoutent dans schemaFiche. */
 const objetFiche = z
   .object({
@@ -246,18 +266,10 @@ const objetFiche = z
       .describe(
         "Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté.",
       ),
-    renvoisTradition: z
-      .array(identifiant("Fiche."))
-      .max(2)
-      .default([])
-      .describe(
-        "Du côté de la tradition : mots que la tradition a lus et vers lesquels mène celui-ci (schizophrénie → obsession) ; fiche ou candidat à faire, deux au plus.",
-      ),
     themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
-    lecturesTraditionnelles: z
-      .array(schemaLectureTraditionnelle)
-      .default([])
-      .describe("Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune)."),
+    tradition: objetTradition
+      .prefault({})
+      .describe("Ce que dit la tradition du mot : ses lectures, ou les mots où elle en parle. Une seule rubrique, « Lectures traditionnelles »."),
     ...socle,
   })
   .strict();
@@ -270,9 +282,10 @@ export const schemaFiche = objetFiche.refine(sourcee, MESSAGE_SOURCE).describe("
  * du Littré quand elle manque.
  */
 export const schemaEntreeRedaction = objetFiche
-  .omit({ ...CHAMPS_SOCLE, lecturesTraditionnelles: true })
+  .omit(CHAMPS_SOCLE)
   .extend({
     nature: objetFiche.shape.nature.optional().describe("Catégorie(s) grammaticale(s) ; tirée du Littré si absente."),
+    tradition: objetTradition.omit({ lectures: true }).strict().optional().describe("Les mots où la tradition parle de celui-ci ; les lectures s'écrivent à part."),
   })
   .strict()
   .describe("Contenu d'une fiche rédigée par l'IA.");

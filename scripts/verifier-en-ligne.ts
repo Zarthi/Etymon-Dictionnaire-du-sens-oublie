@@ -49,7 +49,7 @@ if (import.meta.main) {
       verifiees++;
       if (!page.ok || pageIntrouvable(page.html)) problemes.push(`${fiche.mot} › ${source.ouvrage} « ${source.entree} » : adresse introuvable (${url})`);
     }
-    for (const lecture of fiche.lecturesTraditionnelles) {
+    for (const lecture of fiche.tradition.lectures) {
       const textes = await Promise.all(lecture.sources.map((s) => charger(s.url)));
       verifiees++;
       const absents = morceauxAbsents(lecture.citation, textes.map((t) => texteDePage(t.html)).join(" "));

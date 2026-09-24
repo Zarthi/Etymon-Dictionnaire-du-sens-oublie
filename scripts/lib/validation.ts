@@ -176,7 +176,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
 
   if (fiche.doublets.includes(id)) ajouter("doublets", "une fiche ne peut pas être son propre doublet");
   if (fiche.renvois.includes(id)) ajouter("renvois", "une fiche ne peut pas renvoyer à elle-même");
-  if (fiche.renvoisTradition.includes(id)) ajouter("renvoisTradition", "une fiche ne peut pas renvoyer à elle-même");
+  if (fiche.tradition.renvois.includes(id)) ajouter("tradition.renvois", "une fiche ne peut pas renvoyer à elle-même");
   // Un renvoi relie des notions sans racine commune : même étymon ou même famille, c'est un doublet ou la famille.
   const parente = new Set([...fiche.doublets, ...fiche.famille.map(slug)]);
   for (const renvoi of fiche.renvois.filter((r) => parente.has(r))) {
@@ -252,7 +252,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
       ["explication", fiche.explication],
       ...fiche.ecartees.map((e, i): [string, string | undefined] => [`ecartees.${i}.raison`, e.raison]),
       ...fiche.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note]),
-      ...fiche.lecturesTraditionnelles.map((l, i): [string, string] => [`lecturesTraditionnelles.${i}.texte`, l.texte]),
+      ...fiche.tradition.lectures.map((l, i): [string, string] => [`tradition.lectures.${i}.texte`, l.texte]),
     ],
     ajouter,
   );
@@ -270,8 +270,8 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
 
   // Lectures : un auteur de la tradition, ses propres œuvres, une hypothèse de la chaîne.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
-  fiche.lecturesTraditionnelles.forEach((l, i) => {
-    const c = `lecturesTraditionnelles.${i}`;
+  fiche.tradition.lectures.forEach((l, i) => {
+    const c = `tradition.lectures.${i}`;
     const signataire = ref.auteurs.get(l.auteur);
     if (!signataire) ajouter(`${c}.auteur`, `auteur « ${l.auteur} » sans fiche (data/auteurs)`);
     else if (!signataire.tradition) ajouter(`${c}.auteur`, `${signataire.nom} n'est pas un auteur de la tradition (tradition: true)`);
@@ -294,20 +294,21 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
  * renvoi) n'est déclarée que sur l'une des deux fiches : l'app l'affiche dans les deux sens.
  */
 function verifierRelations(
-  champ: "doublets" | "renvois" | "renvoisTradition",
+  champ: "doublets" | "renvois" | "tradition.renvois",
   fiches: FicheIdentifiee[],
   idsPresents: Set<string>,
   fichierDe: Map<string, string>,
   attendus: Set<string> = new Set(),
 ): Erreur[] {
   const erreurs: Erreur[] = [];
+  const cibles = (f: FicheIdentifiee) => (champ === "tradition.renvois" ? f.tradition.renvois : f[champ]);
   const parId = new Map(fiches.map((f) => [f.id, f]));
   for (const fiche of fiches) {
-    for (const cible of fiche[champ]) {
+    for (const cible of cibles(fiche)) {
       const fichier = fichierDe.get(fiche.id)!;
       if (!idsPresents.has(cible)) {
         if (!attendus.has(cible)) erreurs.push({ fichier, champ, regle: `fiche « ${cible} » introuvable${champ === "doublets" ? "" : ", ni candidat à faire"}` });
-      } else if (champ !== "renvoisTradition" && fiche.id > cible && parId.get(cible)?.[champ].includes(fiche.id)) {
+      } else if (champ !== "tradition.renvois" && fiche.id > cible && cibles(parId.get(cible)!).includes(fiche.id)) {
         erreurs.push({
           fichier,
           champ,
@@ -358,7 +359,7 @@ export function validerFiches(
 
   erreurs.push(...verifierRelations("doublets", fiches, idsPresents, fichierDe));
   erreurs.push(...verifierRelations("renvois", fiches, idsPresents, fichierDe, attendus));
-  erreurs.push(...verifierRelations("renvoisTradition", fiches, idsPresents, fichierDe, attendus));
+  erreurs.push(...verifierRelations("tradition.renvois", fiches, idsPresents, fichierDe, attendus));
   return { fiches, erreurs };
 }
 
