@@ -13,7 +13,12 @@ export const DOSSIER_SORTIE = fileURLToPath(new URL("../src/generes", import.met
  * Le statut accompagne chaque fiche : l'app signale celles qui ne sont pas encore validées.
  */
 export function assembler(fiches: FicheIdentifiee[]): { index: EntreeIndex[]; lots: Map<string, FicheIdentifiee[]> } {
-  const triees = fiches.toSorted((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  // Un doublet n'est déclaré que sur une des deux fiches : l'app le reçoit des deux côtés.
+  const doublets = new Map(fiches.map((f) => [f.id, new Set(f.doublets)]));
+  for (const f of fiches) for (const d of f.doublets) doublets.get(d)?.add(f.id);
+  const triees = fiches
+    .map((f) => ({ ...f, doublets: [...(doublets.get(f.id) ?? [])].sort() }))
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const lots = new Map<string, FicheIdentifiee[]>();
   for (const fiche of triees) {
     const lot = lots.get(prefixe(fiche.id)) ?? [];

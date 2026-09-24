@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseDocument } from "yaml";
-import { chercher, urlLittre, verdict } from "./lib/littre.ts";
+import { chercher, verdict } from "./lib/littre.ts";
 import { cheminFiche } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
 import { arreterSiErreurs, DOSSIER_DATA, validerDepot } from "./valider-fiches.ts";
@@ -19,12 +19,13 @@ if (import.meta.main) {
   let promues = 0;
 
   for (const fiche of fiches.filter((f) => f.statut === "a-verifier")) {
-    const formes = fiche.racine ? [fiche.etymon, fiche.racine.forme] : [fiche.etymon];
+    const formes = [fiche.etymon, ...(fiche.origine?.hypotheses ?? []).map((h) => h.forme)];
     const v = verdict(formes, chercher(index, fiche.mot));
     if (v.resultat === "concorde") {
       const chemin = join(DOSSIER_DATA, "fiches", cheminFiche(fiche.id));
       const document = parseDocument(await readFile(chemin, "utf8"));
-      const source = { ouvrage: "Littré", entree: v.entree.terme, url: urlLittre(v.entree.terme) };
+      // L'adresse du Littré se déduit de l'entrée : inutile de l'écrire.
+      const source = { ouvrage: "Littré", entree: v.entree.terme };
       const autres = fiche.sources.filter((s) => s.ouvrage !== "Littré");
       document.set("sources", document.createNode([source, ...autres]));
       document.set("statut", "brouillon");

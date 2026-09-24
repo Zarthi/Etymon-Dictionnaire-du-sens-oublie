@@ -2,14 +2,12 @@
 mot: essai
 nature: [ nom masculin ]
 etymon: "*essaium"
-reconstruit: true
 langue: latin populaire
 sens: épreuve de test
 explication: >
   Fiche fictive servant aux tests : elle n'a aucune valeur étymologique.
 incertain: false
-racine: null
-doublets: [ epreuve ]
+doublets: []
 famille: []
 themes: [ savoir ]
 sources:

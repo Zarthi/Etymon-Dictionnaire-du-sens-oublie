@@ -3,8 +3,8 @@ import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import auteurs from "../data/auteurs.json" with { type: "json" };
 import langues from "../data/langues.json" with { type: "json" };
-import ouvrages from "../data/sources.json" with { type: "json" };
 import themes from "../data/themes.json" with { type: "json" };
+import { NOMS_OUVRAGES } from "../src/lib/ouvrages.ts";
 import { NATURES, schemaFiche } from "../src/lib/schema.ts";
 import { REDACTEURS } from "../src/lib/sources.ts";
 
@@ -63,7 +63,7 @@ function type(n: Noeud): string {
   return "texte";
 }
 
-/** Objets imbriqués (racine, sources…), à détailler dans leur propre tableau. */
+/** Objets imbriqués (origine, sources…), à détailler dans leur propre tableau. */
 function objetDe(n: Noeud): Noeud | undefined {
   if (n.type === "object" && n.properties) return n;
   if (n.anyOf) return n.anyOf.map(objetDe).find(Boolean);
@@ -94,11 +94,12 @@ function tableau(n: Noeud, chemin: string, sections: string[]): string {
 
 const REGLES = [
   "Le fichier s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`.",
-  "`reconstruit` vaut `true` si et seulement si `etymon` commence par `*` ; une valeur commençant par `*` ou contenant `: ` s'écrit entre guillemets.",
-  "`doublets` : chaque fiche citée existe et cite la fiche en retour.",
-  "`explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus (balisage exclu).",
-  "Typographie française dans `sens`, `explication`, `legende`, les lectures et l'historique : guillemets « », espace insécable avant `:` `;` `?` `!`.",
-  "Italique avec `_…_` dans `explication`, `legende` et les lectures traditionnelles ; un `_` isolé est refusé. Les liens entre fiches sont posés automatiquement par l'app.",
+  "Un étymon reconstruit commence par `*` (c'est ce qui le dit reconstruit) ; une valeur commençant par `*` ou contenant `: ` s'écrit entre guillemets.",
+  "Pas de doublon : un doublet se déclare sur une seule des deux fiches (l'app l'affiche des deux côtés) ; l'adresse d'un ouvrage en ligne se déduit de l'entrée et ne s'écrit pas.",
+  "Les textes sont bruts, sans mise en forme : l'app met en italique l'étymon, les formes d'origine et la forme légendaire, et pose les liens vers les autres fiches.",
+  "`explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus.",
+  "Typographie française dans les sens, l'explication, la légende, les lectures et l'historique : guillemets « », espace insécable avant `:` `;` `?` `!` ; les sens s'écrivent sans guillemets.",
+  "Une œuvre citée par une lecture traditionnelle appartient à l'auteur de la lecture.",
   "Hors statut `a-verifier`, `sources` contient au moins un ouvrage consulté.",
   "Aucun alias YAML, aucune clé en double, aucun champ inconnu.",
 ];
@@ -111,7 +112,7 @@ export function genererMarkdown(): string {
     `- \`nature\` : ${NATURES.join(", ")}.`,
     `- \`langue\` (data/langues.json) : ${langues.join(", ")}.`,
     `- \`themes\` (data/themes.json) : ${themes.join(", ")}.`,
-    `- \`sources[].ouvrage\` (data/sources.json) : ${ouvrages.join(", ")}.`,
+    `- \`sources[].ouvrage\` (data/sources.json) : ${NOMS_OUVRAGES.join(", ")} ; \`origine.hypotheses[].selon\` : ces ouvrages ou les auteurs ci-dessous.`,
     `- \`redaction[].par\` : ${REDACTEURS.join(", ")}.`,
     `- Lectures traditionnelles, \`auteur\` et œuvres (data/auteurs.json) :`,
     ...auteurs.map((a) => `  - ${a.nom} : ${a.oeuvres.map((o) => `*${o}*`).join(", ")}.`),

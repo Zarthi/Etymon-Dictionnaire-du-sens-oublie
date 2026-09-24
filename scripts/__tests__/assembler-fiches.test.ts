@@ -34,6 +34,16 @@ describe("assembler", () => {
     expect(assembler(entree.toReversed()).index).toEqual(attendu);
   });
 
+  it("rend les doublets symétriques : déclarés sur une fiche, présents sur les deux", () => {
+    const hopital = { ...avec("hopital", "validee"), doublets: ["hotel"] };
+    const hotel = { ...avec("hotel", "validee"), doublets: [] };
+    const { lots } = assembler([hopital, hotel]);
+    expect(lots.get("ho")?.map((f) => [f.id, f.doublets])).toEqual([
+      ["hopital", ["hotel"]],
+      ["hotel", ["hopital"]],
+    ]);
+  });
+
   it("regroupe les fiches complètes par préfixe de deux lettres", () => {
     const { lots } = assembler([avec("chiffre", "validee"), avec("chetif", "validee"), avec("zero", "validee")]);
     expect(Object.fromEntries([...lots].map(([p, lot]) => [p, lot.map((f) => f.id)]))).toEqual({

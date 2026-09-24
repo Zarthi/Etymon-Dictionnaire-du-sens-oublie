@@ -2,7 +2,8 @@
   import { analyser } from "../lib/texte.ts";
 
   /**
-   * Texte de fiche : italique, et liens automatiques vers les mots qui ont une fiche.
+   * Texte de fiche : les `formes` étrangères de la fiche en italique, et des liens automatiques
+   * vers les mots qui ont une fiche.
    * `lienVers` donne l'adresse d'une fiche, ou rien si elle n'existe pas ;
    * `exclu` est la fiche en cours, jamais liée à elle-même.
    */
@@ -10,9 +11,10 @@
     texte,
     lienVers,
     exclu,
-  }: { texte: string; lienVers: (id: string) => string | undefined; exclu?: string } = $props();
+    formes = [],
+  }: { texte: string; lienVers: (id: string) => string | undefined; exclu?: string; formes?: string[] } = $props();
 
-  const segments = $derived(analyser(texte, (id) => lienVers(id) !== undefined, exclu));
+  const segments = $derived(analyser(texte, (id) => lienVers(id) !== undefined, exclu, formes));
 </script>
 
 {#each segments as segment, i (i)}{#if segment.type === "italique"}<em>{segment.texte}</em

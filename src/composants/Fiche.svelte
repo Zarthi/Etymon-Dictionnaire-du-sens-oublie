@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { dateLongue, origine } from "../lib/affichage.ts";
+  import { dateLongue, formesItaliques, origine } from "../lib/affichage.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
   import Forme from "./Forme.svelte";
+  import Origine from "./Origine.svelte";
   import Redaction from "./Redaction.svelte";
   import Sources from "./Sources.svelte";
   import TexteRiche from "./TexteRiche.svelte";
@@ -20,6 +21,8 @@
   const auteurs = $derived([...new Set(lectures.map((l) => l.auteur))].join(", "));
   /** Rédaction de la fiche, affichée une fois en pied ; une lecture ne la rappelle que si la sienne diffère. */
   const redactionFiche = $derived(signatureRedaction(fiche.redaction));
+  /** Formes étrangères de la fiche, mises en italique dans ses textes (aucune mise en forme dans les données). */
+  const formes = $derived(formesItaliques(fiche));
 </script>
 
 <svelte:head>
@@ -45,19 +48,17 @@
     {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
   </p>
 
-  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} /></p>
+  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} /></p>
 
-  {#if fiche.racine}
-    <p class="racine">
-      Plus haut, {fiche.racine.incertain ? "peut-être " : ""}{origine(fiche.racine.langue)}
-      <Forme forme={fiche.racine.forme} graphie={fiche.racine.graphie} />&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;»{#if fiche.racine.incertain}<span
-          class="incertain">&nbsp;· origine débattue</span
-        >{/if}.
-    </p>
+  {#if fiche.origine}
+    <Origine origine={fiche.origine} langueEtymon={fiche.langue} />
   {/if}
 
   {#if fiche.legende}
-    <p class="legende"><strong>Idée reçue</strong>&nbsp;: <TexteRiche texte={fiche.legende} {lienVers} exclu={fiche.id} /></p>
+    <p class="legende">
+      <strong>Idée reçue</strong>&nbsp;: <em>{fiche.legende.forme}</em>, «&nbsp;{fiche.legende.sens}&nbsp;».
+      {#if fiche.legende.explication}<TexteRiche texte={fiche.legende.explication} {lienVers} exclu={fiche.id} {formes} />{/if}
+    </p>
   {/if}
 
   <Sources sources={fiche.sources} />
@@ -70,7 +71,7 @@
         <span class="auteurs">{auteurs}</span>
       </summary>
       {#each lectures as lecture, i (i)}
-        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} />
+        <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} />
       {/each}
     </details>
   {/if}
@@ -186,10 +187,6 @@
   }
   .auteurs {
     font-size: 0.85rem;
-    color: var(--texte-discret);
-  }
-  .racine {
-    margin: 1rem 0 0;
     color: var(--texte-discret);
   }
   .incertain {

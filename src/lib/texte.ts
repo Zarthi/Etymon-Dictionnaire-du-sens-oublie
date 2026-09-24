@@ -1,15 +1,15 @@
 import { normaliser } from "./recherche.ts";
 
 /**
- * Textes de fiche (explication, légende, lectures traditionnelles) : `_relegere_` s'affiche
- * en italique ; les mots qui ont une fiche deviennent des liens, automatiquement.
+ * Textes de fiche (explication, légende, lectures traditionnelles) : du texte brut, sans aucune
+ * mise en forme. L'app y met en italique les formes étrangères que la fiche connaît (étymon,
+ * formes d'origine, forme légendaire) et fait des liens vers les mots qui ont une fiche.
  */
 export type Segment =
   | { type: "texte"; texte: string }
   | { type: "italique"; texte: string }
   | { type: "lien"; texte: string; cible: string };
 
-const ITALIQUE = /_([^_]+)_/g;
 /** Un mot : lettres, éventuellement reliées par des traits d'union (l'apostrophe sépare : « l'âme »). */
 const MOT = /\p{L}+(?:-\p{L}+)*/gu;
 
@@ -29,11 +29,30 @@ function ficheDe(mot: string, existe: (id: string) => boolean): string | undefin
   return undefined;
 }
 
+const echapper = (texte: string) => texte.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 /**
- * Découpe un texte en segments. Liens automatiques, pour rester lisible :
- * première occurrence seulement, jamais vers la fiche en cours (`exclu`), jamais dans l'italique.
+ * Motif des formes à mettre en italique, mots entiers, sans tenir compte de la casse ;
+ * les plus longues d'abord, pour que « in odio » passe avant « odio ».
  */
-export function analyser(texte: string, existe: (id: string) => boolean = () => false, exclu?: string): Segment[] {
+function motifFormes(formes: string[]): RegExp | undefined {
+  const propres = [...new Set(formes.map((f) => f.replace(/^\*/, "").trim()).filter(Boolean))].sort((a, b) => b.length - a.length);
+  if (propres.length === 0) return undefined;
+  return new RegExp(`(?<![\\p{L}\\p{M}])(?:${propres.map(echapper).join("|")})(?![\\p{L}\\p{M}])`, "giu");
+}
+
+/**
+ * Découpe un texte en segments.
+ * - Italique : chaque occurrence d'une des `formes` de la fiche.
+ * - Liens, pour rester lisible : première occurrence seulement, jamais vers la fiche en cours
+ *   (`exclu`), jamais dans l'italique.
+ */
+export function analyser(
+  texte: string,
+  existe: (id: string) => boolean = () => false,
+  exclu?: string,
+  formes: string[] = [],
+): Segment[] {
   const segments: Segment[] = [];
   const lies = new Set<string>(exclu ? [exclu] : []);
 
@@ -50,22 +69,13 @@ export function analyser(texte: string, existe: (id: string) => boolean = () => 
     if (position < morceau.length) segments.push({ type: "texte", texte: morceau.slice(position) });
   };
 
+  const motif = motifFormes(formes);
   let position = 0;
-  for (const m of texte.matchAll(ITALIQUE)) {
+  for (const m of motif ? texte.matchAll(motif) : []) {
     if (m.index > position) ajouterTexte(texte.slice(position, m.index));
-    segments.push({ type: "italique", texte: m[1] });
+    segments.push({ type: "italique", texte: m[0] });
     position = m.index + m[0].length;
   }
   if (position < texte.length) ajouterTexte(texte.slice(position));
   return segments;
-}
-
-/** Texte tel que le lecteur le voit, sans balisage (pour compter les caractères). */
-export function texteVisible(texte: string): string {
-  return texte.replace(ITALIQUE, "$1");
-}
-
-/** Anomalies de balisage : italique resté ouvert. */
-export function erreursBalisage(texte: string): string[] {
-  return texte.replace(ITALIQUE, "").includes("_") ? ["italique mal fermé : « _ » isolé"] : [];
 }

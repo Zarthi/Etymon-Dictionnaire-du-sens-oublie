@@ -1,1 +1,6 @@
-["Littré","Gaffiot","Bailly","TLFi"]
+[
+  { "nom": "Littré", "url": "https://www.littre.org/definition/{entree}" },
+  { "nom": "Gaffiot", "url": "https://gaffiot.fr/#{entree}" },
+  { "nom": "Bailly" },
+  { "nom": "TLFi", "url": "https://www.cnrtl.fr/etymologie/{entree}" }
+]

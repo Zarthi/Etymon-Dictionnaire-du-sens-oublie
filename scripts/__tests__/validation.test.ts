@@ -18,17 +18,16 @@ const ficheBase = {
   mot: "étonner",
   nature: ["verbe"],
   etymon: "*extonare",
-  reconstruit: true,
   langue: "latin populaire",
   sens: "frapper du tonnerre",
   explication: "Le mot désignait un ébranlement violent, avant de s'affaiblir en simple surprise.\n",
   incertain: false,
-  racine: { forme: "*(s)tenh₂-", langue: "indo-européen", sens: "retentir, gronder" },
+  origine: { hypotheses: [{ forme: "*(s)tenh₂-", langue: "indo-européen", sens: "retentir, gronder" }] },
   doublets: [],
   famille: ["tonner", "tonnerre", "détonation"],
   themes: ["émotions", "météo"],
   sources: [
-    { ouvrage: "Littré", entree: "étonner", url: "https://example.org/littre/etonner" },
+    { ouvrage: "Littré", entree: "étonner" },
     { ouvrage: "Gaffiot", entree: "extono", page: 1 },
   ],
   redaction: [{ par: "IA", detail: "Claude Opus 5.5" }],
@@ -98,13 +97,13 @@ describe("validerFiches : fiche conforme", () => {
   it("retire le saut de ligne final du bloc replié de l'explication", () => {
     expect(valider().fiches[0].explication.endsWith(".")).toBe(true);
   });
-  it("accepte une racine absente, une lecture traditionnelle complète et un historique daté", () => {
-    const { racine: _, ...sansRacine } = ficheBase;
+  it("accepte une origine absente, des lectures traditionnelles, une légende et un historique daté", () => {
+    const { origine: _, ...sansOrigine } = ficheBase;
     const texte = stringify({
-      ...sansRacine,
+      ...sansOrigine,
       lecturesTraditionnelles: [{ texte: "Lecture sourcée.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }, { texte: "Autre lecture.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }],
       graphie: "ἀνάλυσις",
-      legende: "On croit souvent autre chose, à tort.",
+      legende: { forme: "sine cera", sens: "sans cire", explication: "Une étymologie de fantaisie." },
       historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
     });
     expect(validerFiches([{ fichier: "e/et/etonner.yaml", texte }]).erreurs).toEqual([]);
@@ -131,8 +130,18 @@ describe("validerFiches : fiche conforme", () => {
     };
     expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
   });
-  it("accepte une racine incertaine", () => {
-    expect(erreursDe({ racine: { forme: "relegere", langue: "latin", sens: "recueillir avec soin", incertain: true } })).toEqual([]);
+  it("accepte une origine débattue, avec plusieurs hypothèses et leurs tenants", () => {
+    const origine = {
+      debattue: true,
+      hypotheses: [
+        { forme: "relegere", langue: "latin", sens: "recueillir avec soin", selon: ["Cicéron", "Littré"] },
+        { forme: "religare", langue: "latin", sens: "relier", selon: ["Lactance"] },
+      ],
+    };
+    expect(erreursDe({ origine })).toEqual([]);
+  });
+  it("accepte une adresse qui diffère de celle déduite de l'entrée", () => {
+    expect(erreursDe({ sources: [{ ouvrage: "TLFi", entree: "critique", url: "https://www.cnrtl.fr/etymologie/critique/nom" }] })).toEqual([]);
   });
   it("accepte un suffixe numérique pour les homonymes", () => {
     expect(erreursDe({}, "e/et/etonner-2.yaml")).toEqual([]);
@@ -171,7 +180,7 @@ describe("validerFiches : structure", () => {
     ["langue", { langue: "klingon" }],
     ["themes.0", { themes: ["inconnu"] }],
     ["sources.0.ouvrage", { sources: [{ ouvrage: "Wiktionnaire", entree: "étonner", page: 1 }] }],
-    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner" }] }],
+    ["sources.0.url", { sources: [{ ouvrage: "Bailly", entree: "κριτικός" }] }],
     ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "http://example.org/etonner" }] }],
     ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "pas une url" }] }],
     ["sources.0", { sources: ["Littré"] }],
@@ -182,7 +191,8 @@ describe("validerFiches : structure", () => {
     ["redaction.0.par", { redaction: [{ par: "Robot", detail: "x" }] }],
     ["redaction.0.detail", { redaction: [{ par: "IA" }] }],
     ["incertain", { incertain: "non" }],
-    ["reconstruit", { reconstruit: "oui" }],
+    ["(racine)", { reconstruit: true }],
+    ["(racine)", { racine: { forme: "x", langue: "latin", sens: "y" } }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
     ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin" }] }],
     ["lecturesTraditionnelles.0.auteur", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Isidore", sources: [] }] }],
@@ -194,9 +204,12 @@ describe("validerFiches : structure", () => {
     ["nature", { nature: [] }],
     ["nature.0", { nature: ["substantif"] }],
     ["graphie", { graphie: "" }],
-    ["legende", { legende: "  " }],
+    ["legende", { legende: "une chaîne au lieu d'un objet" }],
+    ["legende.sens", { legende: { forme: "sine cera" } }],
     ["sources.0.ouvrage", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
-    ["racine.sens", { racine: { forme: "*x", langue: "indo-européen" } }],
+    ["origine.hypotheses.0.sens", { origine: { hypotheses: [{ forme: "*x", langue: "indo-européen" }] } }],
+    ["origine.hypotheses", { origine: { hypotheses: [] } }],
+    ["origine.hypotheses.0.selon.0", { origine: { hypotheses: [{ forme: "x", langue: "latin", sens: "y", selon: ["Varron le Jeune"] }] } }],
   ])("signale le champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs.map((e) => e.champ)).toEqual([champ]);
   });
@@ -237,11 +250,16 @@ describe("validerFiches : cohérence", () => {
     ]);
     expect(erreurs).toEqual([{ fichier: "e/et/etonner.yaml", champ: "id", regle: "id « etonner » en double" }]);
   });
-  it.each([
-    [{ reconstruit: false }],
-    [{ etymon: "extonare" }],
-  ])("exige reconstruit ⇔ étymon avec astérisque (%o)", (surcharges) => {
-    expect(erreursDe(surcharges)).toEqual([expect.stringMatching(/^reconstruit : /)]);
+  it("refuse une adresse qui se déduit de l'entrée (doublon)", () => {
+    expect(erreursDe({ sources: [{ ouvrage: "Littré", entree: "étonner", url: "https://www.littre.org/definition/%C3%A9tonner" }] })).toEqual([
+      "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
+    ]);
+  });
+  it("refuse une œuvre qui n'est pas de l'auteur de la lecture", () => {
+    const lecture = { texte: "Lecture.", auteur: "Lactance", sources: [{ ouvrage: "La Cité de Dieu", entree: "X, 3" }] };
+    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
+      "lecturesTraditionnelles.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance (data/auteurs.json)",
+    ]);
   });
   it("refuse une fiche doublet d'elle-même", () => {
     expect(erreursDe({ doublets: ["etonner"] })).toContain("doublets : une fiche ne peut pas être son propre doublet");
@@ -249,40 +267,29 @@ describe("validerFiches : cohérence", () => {
 
   const fiche = (mot: string, doublets: string[]) => ({
     fichier: cheminFiche(mot),
-    texte: stringify({ ...ficheBase, mot, etymon: "potio", reconstruit: false, doublets }),
+    texte: stringify({ ...ficheBase, mot, etymon: "potio", doublets }),
   });
-  it("accepte des doublets réciproques", () => {
-    expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", ["poison"])]).erreurs).toEqual([]);
+  it("accepte un doublet déclaré sur une seule des deux fiches", () => {
+    expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", [])]).erreurs).toEqual([]);
+  });
+  it("refuse un doublet déclaré sur les deux fiches (doublon)", () => {
+    expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", ["poison"])]).erreurs).toEqual([
+      {
+        fichier: "p/po/potion.yaml",
+        champ: "doublets",
+        regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches",
+      },
+    ]);
   });
   it("signale un doublet introuvable", () => {
     expect(validerFiches([fiche("poison", ["potion"])]).erreurs).toEqual([
       { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
     ]);
   });
-  it("signale un doublet non réciproque", () => {
-    expect(validerFiches([fiche("poison", ["potion"]), fiche("potion", [])]).erreurs).toEqual([
-      { fichier: "p/po/poison.yaml", champ: "doublets", regle: "relation non réciproque : « potion » ne cite pas « poison »" },
-    ]);
-  });
   it("ne signale pas comme introuvable un doublet présent mais invalide", () => {
     const invalide = { fichier: "p/po/potion.yaml", texte: "mot: potion\n" };
     const { erreurs } = validerFiches([fiche("poison", ["potion"]), invalide]);
     expect(erreurs.every((e) => e.fichier === "p/po/potion.yaml")).toBe(true);
-  });
-});
-
-describe("validerFiches : balisage", () => {
-  it("accepte l'italique et compte la longueur sur le texte visible", () => {
-    const explication = `Du latin _religio_, puis _relegere_. ${"é".repeat(260)}.`;
-    expect(erreursDe({ explication })).toEqual([]);
-  });
-  it("signale un italique mal fermé dans l'explication, la légende ou une lecture traditionnelle", () => {
-    expect(erreursDe({ explication: "Du latin _religio." })).toEqual(["explication : italique mal fermé : « _ » isolé"]);
-    expect(erreursDe({ legende: "On dit _sine cera." })).toEqual(["legende : italique mal fermé : « _ » isolé"]);
-    const lecture = { texte: "Lactance dit _religare.", auteur: "Lactance", sources: [] };
-    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
-      "lecturesTraditionnelles.0.texte : italique mal fermé : « _ » isolé",
-    ]);
   });
 });
 
@@ -313,10 +320,8 @@ describe("validerFiches : règles éditoriales", () => {
       "lecturesTraditionnelles.0.texte",
       { lecturesTraditionnelles: [{ texte: "Relier ?", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }] },
     ],
-    [
-      "legende",
-      { legende: "On dit « sans cire » : c'est faux." },
-    ],
+    ["legende.explication", { legende: { forme: "sine cera", sens: "sans cire", explication: "C'est faux : aucune trace." } }],
+    ["origine.hypotheses.0.sens", { origine: { hypotheses: [{ forme: "x", langue: "latin", sens: "relier ?" }] } }],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs).toEqual([
       expect.objectContaining({ champ, regle: expect.stringMatching(/espace insécable/) }),

@@ -1,7 +1,9 @@
 import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
 import { prefixe } from "../../src/lib/decoupage.ts";
-import { erreursBalisage, idDe, texteVisible } from "../../src/lib/texte.ts";
+import auteurs from "../../data/auteurs.json" with { type: "json" };
+import { urlDeduite } from "../../src/lib/ouvrages.ts";
+import { idDe } from "../../src/lib/texte.ts";
 import { schemaCandidats, schemaComptes, schemaFiche } from "../../src/lib/schema.ts";
 import type { Candidat, Fiche, FicheIdentifiee, LigneComptes } from "../../src/lib/types.ts";
 
@@ -27,6 +29,7 @@ const LONGUEUR_MAX_EXPLICATION = 300;
 const PHRASES_MAX_EXPLICATION = 3;
 const ESPACES_INSECABLES = [" ", " "];
 const ID_VALIDE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const OEUVRES_DE = new Map(auteurs.map((a) => [a.nom, a.oeuvres]));
 
 /** Emplacement d'une fiche, relatif au dossier des fiches : `e/et/etonner.yaml`. */
 export function cheminFiche(id: string): string {
@@ -90,50 +93,62 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
     ajouter("id", `le nom de fichier doit correspondre au mot : « ${slug(fiche.mot)}.yaml »`);
   }
 
-  if (fiche.reconstruit !== fiche.etymon.startsWith("*")) {
-    ajouter("reconstruit", "doit valoir true si et seulement si l'étymon commence par « * »");
-  }
-
   if (fiche.doublets.includes(id)) ajouter("doublets", "une fiche ne peut pas être son propre doublet");
 
-  const visible = texteVisible(fiche.explication);
-  const phrases = compterPhrases(visible);
+  const phrases = compterPhrases(fiche.explication);
   if (phrases < 1 || phrases > PHRASES_MAX_EXPLICATION) {
     ajouter("explication", `1 à ${PHRASES_MAX_EXPLICATION} phrases terminées par une ponctuation (${phrases} trouvée(s))`);
   }
-  const longueur = [...visible].length;
+  const longueur = [...fiche.explication].length;
   if (longueur > LONGUEUR_MAX_EXPLICATION) {
     ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
   }
 
-  if (/[«»"“”]/.test(fiche.sens)) ajouter("sens", "sans guillemets : l'app les ajoute à l'affichage");
+  // Les sens sont affichés entre guillemets par l'app.
+  const sens: [string, string][] = [
+    ["sens", fiche.sens],
+    ...(fiche.origine?.hypotheses ?? []).map((h, i): [string, string] => [`origine.hypotheses.${i}.sens`, h.sens]),
+  ];
+  if (fiche.legende) sens.push(["legende.sens", fiche.legende.sens]);
+  for (const [champ, texte] of sens) {
+    if (/[«»"“”]/.test(texte)) ajouter(champ, "sans guillemets : l'app les ajoute à l'affichage");
+  }
 
   const textes: [string, string][] = [
-    ["sens", fiche.sens],
+    ...sens,
     ["explication", fiche.explication],
     ...fiche.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note]),
+    ...fiche.lecturesTraditionnelles.map((l, i): [string, string] => [`lecturesTraditionnelles.${i}.texte`, l.texte]),
   ];
-  if (fiche.legende) textes.push(["legende", fiche.legende]);
-  fiche.lecturesTraditionnelles.forEach((l, i) => textes.push([`lecturesTraditionnelles.${i}.texte`, l.texte]));
+  if (fiche.legende?.explication) textes.push(["legende.explication", fiche.legende.explication]);
   for (const [champ, texte] of textes) {
     for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
   }
-  for (const [champ, texte] of textesBalises(fiche)) {
-    for (const regle of erreursBalisage(texte)) ajouter(champ, regle);
-  }
+
+  // Pas de doublon : l'adresse d'un ouvrage en ligne se déduit de l'entrée.
+  fiche.sources.forEach((s, i) => {
+    if (s.url && s.url === urlDeduite(s.ouvrage, s.entree)) {
+      ajouter(`sources.${i}.url`, "adresse inutile : elle se déduit de l'entrée, la retirer");
+    }
+  });
+
+  // L'œuvre citée d'une lecture traditionnelle appartient à son auteur.
+  fiche.lecturesTraditionnelles.forEach((l, i) => {
+    const oeuvres = OEUVRES_DE.get(l.auteur) ?? [];
+    l.sources.forEach((s, j) => {
+      if (!oeuvres.includes(s.ouvrage)) {
+        ajouter(`lecturesTraditionnelles.${i}.sources.${j}.ouvrage`, `« ${s.ouvrage} » n'est pas une œuvre de ${l.auteur} (data/auteurs.json)`);
+      }
+    });
+  });
 
   return erreurs;
 }
 
-/** Textes où l'italique (_relegere_) est permis ; les liens y sont posés automatiquement par l'app. */
-function textesBalises(fiche: Fiche): [string, string][] {
-  const textes: [string, string][] = [["explication", fiche.explication]];
-  if (fiche.legende) textes.push(["legende", fiche.legende]);
-  fiche.lecturesTraditionnelles.forEach((l, i) => textes.push([`lecturesTraditionnelles.${i}.texte`, l.texte]));
-  return textes;
-}
-
-/** Règles entre fiches : doublets existants et réciproques. */
+/**
+ * Règles entre fiches : un doublet vise une fiche existante, et la relation, symétrique,
+ * n'est déclarée que sur l'une des deux fiches (l'app l'affiche dans les deux sens).
+ */
 function verifierDoublets(fiches: FicheIdentifiee[], idsPresents: Set<string>, fichierDe: Map<string, string>): Erreur[] {
   const erreurs: Erreur[] = [];
   const parId = new Map(fiches.map((f) => [f.id, f]));
@@ -142,12 +157,17 @@ function verifierDoublets(fiches: FicheIdentifiee[], idsPresents: Set<string>, f
       const fichier = fichierDe.get(fiche.id)!;
       if (!idsPresents.has(doublet)) {
         erreurs.push({ fichier, champ: "doublets", regle: `fiche « ${doublet} » introuvable` });
-      } else if (parId.get(doublet)?.doublets.includes(fiche.id) === false) {
-        erreurs.push({ fichier, champ: "doublets", regle: `relation non réciproque : « ${doublet} » ne cite pas « ${fiche.id} »` });
+      } else if (fiche.id > doublet && parId.get(doublet)?.doublets.includes(fiche.id)) {
+        erreurs.push({
+          fichier,
+          champ: "doublets",
+          regle: `relation déjà déclarée dans « ${doublet} » : ne la déclarer que sur une des deux fiches`,
+        });
       }
     }
   }
   return erreurs;
+
 }
 
 /**

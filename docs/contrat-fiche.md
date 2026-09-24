@@ -14,14 +14,13 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 | `nature` | liste non vide de `nom masculin` \| `nom féminin` \| `nom` \| `verbe` \| `adjectif` \| `adverbe` \| `interjection` | oui | Catégorie(s) grammaticale(s) ; « nom » pour les épicènes. |
 | `etymon` | texte | oui | Forme source, dans la langue source directe ; reconstruite, elle commence par `*` et s'écrit entre guillemets. |
 | `graphie` | texte | non | Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération. |
-| `reconstruit` | `true` \| `false` | oui | true si et seulement si l'étymon commence par `*`. |
 | `langue` | liste fermée (voir plus bas) | oui | Langue source directe de l'étymon (liste fermée : data/langues.json). |
 | `sens` | texte | oui | Sens de l'étymon, sans guillemets (l'app les ajoute). |
-| `explication` | texte | oui | 1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens ; italique avec `_…_`. |
-| `legende` | texte | non | Étymologie populaire démentie (« On dit souvent… »). |
-| `incertain` | `true` \| `false` | oui | L'étymon lui-même est douteux (pour une origine plus ancienne débattue : racine.incertain). |
-| `racine` | objet (voir plus bas) ou null | non | Origine plus ancienne, seulement si elle apporte un sens que l'étymon n'a pas. |
-| `doublets` | liste de textes | oui | Identifiants des fiches issues du même étymon par une autre voie (relation réciproque). |
+| `explication` | texte | oui | 1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens. Texte brut : l'étymon et les formes d'origine y sont mis en italique par l'app. |
+| `legende` | objet (voir plus bas) | non | Étymologie populaire démentie. |
+| `incertain` | `true` \| `false` | oui | L'étymon lui-même est douteux (une origine débattue relève de origine.debattue). |
+| `origine` | objet (voir plus bas) | non | D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens. |
+| `doublets` | liste de textes | oui | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | oui | Mots français apparentés. |
 | `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
 | `sources` | liste d'objets (voir plus bas) | oui | Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier. |
@@ -30,15 +29,30 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 | `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
 | `historique` | liste d'objets (voir plus bas) | oui | Corrections successives (ex. suite à une Critique). |
 
-### `racine`
+### `legende`
 
 | Champ | Type | Obligatoire | Description |
 |---|---|---|---|
-| `forme` | texte | oui | Forme plus ancienne que l'étymon. |
+| `forme` | texte | oui | Forme alléguée à tort (ex. « sine cera »). |
+| `sens` | texte | oui | Sens de cette forme, sans guillemets (ex. « sans cire »). |
+| `explication` | texte | non | Pourquoi c'est une légende, en une phrase. |
+
+### `origine`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `debattue` | `true` \| `false` | non | Plusieurs hypothèses, aucune établie. |
+| `hypotheses` | liste non vide d'objets (voir plus bas) | oui | Une ou plusieurs formes d'origine. |
+
+### `origine.hypotheses[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `forme` | texte | oui | Forme d'origine proposée. |
 | `graphie` | texte | non | Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération. |
-| `langue` | texte | oui | Langue de cette forme (indo-européen, grec ancien, arabe…). |
+| `langue` | texte | oui | Langue de cette forme (latin, grec ancien, arabe, indo-européen…). |
 | `sens` | texte | oui | Sens de cette forme, sans guillemets. |
-| `incertain` | `true` \| `false` | non | Origine de l'étymon débattue : la racine n'est qu'une hypothèse. |
+| `selon` | liste de valeurs d'une liste fermée (voir plus bas) | non | Qui soutient cette hypothèse : auteurs (data/auteurs.json) ou ouvrages (data/sources.json). |
 
 ### `sources[]`
 
@@ -47,7 +61,7 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 | `ouvrage` | `Littré` \| `Gaffiot` \| `Bailly` \| `TLFi` | oui | Ouvrage consulté (liste fermée : data/sources.json). |
 | `entree` | texte | oui | Entrée consultée dans l'ouvrage (ex. « étonner », « adtono »). |
 | `page` | nombre ou texte | non | Page de l'édition papier consultée. |
-| `url` | adresse https | non | Adresse (https) de l'entrée consultée en ligne. |
+| `url` | adresse https | non | Adresse (https) de l'entrée, seulement si elle ne se déduit pas de l'entrée. |
 
 ### `redaction[]`
 
@@ -60,10 +74,10 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 
 | Champ | Type | Obligatoire | Description |
 |---|---|---|---|
-| `texte` | texte | oui | Paraphrase de la lecture, sans commencer par le nom de l'auteur ; italique avec `_…_`. |
+| `texte` | texte | oui | Le sens doctrinal, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique. |
 | `citation` | texte | non | Texte original de l'auteur, dans sa langue. |
 | `auteur` | `Platon` \| `Varron` \| `Cicéron` \| `Lactance` \| `Augustin` \| `Isidore de Séville` \| `Thomas d'Aquin` \| `René Guénon` | oui | Auteur de la tradition (liste fermée : data/auteurs.json). |
-| `sources` | liste d'objets (voir plus bas) | oui | Œuvres consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA). |
+| `sources` | liste d'objets (voir plus bas) | oui | Œuvres de l'auteur consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA). |
 | `redaction` | liste non vide d'objets (voir plus bas) | non | Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche. |
 
 ### `lecturesTraditionnelles[].sources[]`
@@ -73,7 +87,7 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 | `ouvrage` | liste fermée (voir plus bas) | oui | Œuvre de l'auteur (liste fermée : data/auteurs.json). |
 | `entree` | texte | oui | Passage précis (ex. « IV, 28, 3 »). |
 | `page` | nombre ou texte | non | Page de l'édition papier consultée. |
-| `url` | adresse https | non | Adresse (https) de l'entrée consultée en ligne. |
+| `url` | adresse https | non | Adresse (https) de l'entrée, seulement si elle ne se déduit pas de l'entrée. |
 
 ### `lecturesTraditionnelles[].redaction[]`
 
@@ -94,7 +108,7 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 - `nature` : nom masculin, nom féminin, nom, verbe, adjectif, adverbe, interjection.
 - `langue` (data/langues.json) : latin, latin populaire, bas latin, latin médiéval, latin ecclésiastique, ancien français, grec ancien, gaulois, francique, germanique, ancien nordique, arabe, hébreu, persan, turc, italien, espagnol, portugais, occitan, néerlandais, allemand, anglais.
 - `themes` (data/themes.json) : émotions, esprit, parole, savoir, morale, religion, corps, santé, famille, société, droit, guerre, travail, argent, commerce, nourriture, maison, nature, météo, temps.
-- `sources[].ouvrage` (data/sources.json) : Littré, Gaffiot, Bailly, TLFi.
+- `sources[].ouvrage` (data/sources.json) : Littré, Gaffiot, Bailly, TLFi ; `origine.hypotheses[].selon` : ces ouvrages ou les auteurs ci-dessous.
 - `redaction[].par` : IA, Étymon.
 - Lectures traditionnelles, `auteur` et œuvres (data/auteurs.json) :
   - Platon : *Cratyle*.
@@ -109,10 +123,11 @@ Une fiche est un fichier YAML. Exemple complet : `data/fiches/r/re/religion.yaml
 ## Règles vérifiées en plus de la structure (`npm run valider`)
 
 - Le fichier s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`.
-- `reconstruit` vaut `true` si et seulement si `etymon` commence par `*` ; une valeur commençant par `*` ou contenant `: ` s'écrit entre guillemets.
-- `doublets` : chaque fiche citée existe et cite la fiche en retour.
-- `explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus (balisage exclu).
-- Typographie française dans `sens`, `explication`, `legende`, les lectures et l'historique : guillemets « », espace insécable avant `:` `;` `?` `!`.
-- Italique avec `_…_` dans `explication`, `legende` et les lectures traditionnelles ; un `_` isolé est refusé. Les liens entre fiches sont posés automatiquement par l'app.
+- Un étymon reconstruit commence par `*` (c'est ce qui le dit reconstruit) ; une valeur commençant par `*` ou contenant `: ` s'écrit entre guillemets.
+- Pas de doublon : un doublet se déclare sur une seule des deux fiches (l'app l'affiche des deux côtés) ; l'adresse d'un ouvrage en ligne se déduit de l'entrée et ne s'écrit pas.
+- Les textes sont bruts, sans mise en forme : l'app met en italique l'étymon, les formes d'origine et la forme légendaire, et pose les liens vers les autres fiches.
+- `explication` : 1 à 3 phrases terminées par une ponctuation, 300 caractères au plus.
+- Typographie française dans les sens, l'explication, la légende, les lectures et l'historique : guillemets « », espace insécable avant `:` `;` `?` `!` ; les sens s'écrivent sans guillemets.
+- Une œuvre citée par une lecture traditionnelle appartient à l'auteur de la lecture.
 - Hors statut `a-verifier`, `sources` contient au moins un ouvrage consulté.
 - Aucun alias YAML, aucune clé en double, aucun champ inconnu.

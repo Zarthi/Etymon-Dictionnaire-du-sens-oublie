@@ -1,10 +1,12 @@
 import type { z } from "zod";
-import type { schemaCandidat, schemaFiche, schemaLectureTraditionnelle, schemaLigneComptes } from "./schema.ts";
+import type { schemaCandidat, schemaFiche, schemaHypothese, schemaLectureTraditionnelle, schemaLigneComptes } from "./schema.ts";
 
 /** Fiche telle qu'écrite dans `data/fiches/<initiale>/<préfixe>/<id>.yaml`. */
 export type Fiche = z.infer<typeof schemaFiche>;
 
 export type LectureTraditionnelle = z.infer<typeof schemaLectureTraditionnelle>;
+
+export type Hypothese = z.infer<typeof schemaHypothese>;
 
 /** Fiche identifiée par son `id` (nom du fichier sans extension). */
 export type FicheIdentifiee = Fiche & { id: string };

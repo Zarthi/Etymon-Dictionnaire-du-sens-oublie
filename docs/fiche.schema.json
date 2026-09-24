@@ -34,10 +34,6 @@
       "type": "string",
       "minLength": 1
     },
-    "reconstruit": {
-      "type": "boolean",
-      "description": "true si et seulement si l'étymon commence par *."
-    },
     "langue": {
       "type": "string",
       "enum": [
@@ -74,66 +70,116 @@
     "explication": {
       "type": "string",
       "minLength": 1,
-      "description": "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens ; italique avec _…_."
+      "description": "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens. Texte brut : l'étymon et les formes d'origine y sont mis en italique par l'app."
     },
     "legende": {
-      "description": "Étymologie populaire démentie (« On dit souvent… »).",
-      "type": "string",
-      "minLength": 1
+      "description": "Étymologie populaire démentie.",
+      "type": "object",
+      "properties": {
+        "forme": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Forme alléguée à tort (ex. « sine cera »)."
+        },
+        "sens": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Sens de cette forme, sans guillemets (ex. « sans cire »)."
+        },
+        "explication": {
+          "description": "Pourquoi c'est une légende, en une phrase.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "forme",
+        "sens"
+      ],
+      "additionalProperties": false
     },
     "incertain": {
       "type": "boolean",
-      "description": "L'étymon lui-même est douteux (pour une origine plus ancienne débattue : racine.incertain)."
+      "description": "L'étymon lui-même est douteux (une origine débattue relève de origine.debattue)."
     },
-    "racine": {
-      "description": "Origine plus ancienne, seulement si elle apporte un sens que l'étymon n'a pas.",
-      "anyOf": [
-        {
-          "type": "object",
-          "properties": {
-            "forme": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Forme plus ancienne que l'étymon."
-            },
-            "graphie": {
-              "description": "Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.",
-              "type": "string",
-              "minLength": 1
-            },
-            "langue": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Langue de cette forme (indo-européen, grec ancien, arabe…)."
-            },
-            "sens": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Sens de cette forme, sans guillemets."
-            },
-            "incertain": {
-              "description": "Origine de l'étymon débattue : la racine n'est qu'une hypothèse.",
-              "type": "boolean"
-            }
-          },
-          "required": [
-            "forme",
-            "langue",
-            "sens"
-          ],
-          "additionalProperties": false
+    "origine": {
+      "description": "D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens.",
+      "type": "object",
+      "properties": {
+        "debattue": {
+          "description": "Plusieurs hypothèses, aucune établie.",
+          "type": "boolean"
         },
-        {
-          "type": "null"
+        "hypotheses": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "forme": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Forme d'origine proposée."
+              },
+              "graphie": {
+                "description": "Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.",
+                "type": "string",
+                "minLength": 1
+              },
+              "langue": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Langue de cette forme (latin, grec ancien, arabe, indo-européen…)."
+              },
+              "sens": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Sens de cette forme, sans guillemets."
+              },
+              "selon": {
+                "description": "Qui soutient cette hypothèse : auteurs (data/auteurs.json) ou ouvrages (data/sources.json).",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Platon",
+                    "Varron",
+                    "Cicéron",
+                    "Lactance",
+                    "Augustin",
+                    "Isidore de Séville",
+                    "Thomas d'Aquin",
+                    "René Guénon",
+                    "Littré",
+                    "Gaffiot",
+                    "Bailly",
+                    "TLFi"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "forme",
+              "langue",
+              "sens"
+            ],
+            "additionalProperties": false,
+            "description": "Une forme d'origine proposée pour l'étymon."
+          },
+          "description": "Une ou plusieurs formes d'origine."
         }
-      ]
+      },
+      "required": [
+        "hypotheses"
+      ],
+      "additionalProperties": false
     },
     "doublets": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "description": "Identifiants des fiches issues du même étymon par une autre voie (relation réciproque)."
+      "description": "Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches."
     },
     "famille": {
       "type": "array",
@@ -206,7 +252,7 @@
             ]
           },
           "url": {
-            "description": "Adresse (https) de l'entrée consultée en ligne.",
+            "description": "Adresse (https) de l'entrée, seulement si elle ne se déduit pas de l'entrée.",
             "type": "string",
             "format": "uri"
           }
@@ -216,7 +262,7 @@
           "entree"
         ],
         "additionalProperties": false,
-        "description": "Ouvrage consulté pour l'étymologie ; page ou url obligatoire."
+        "description": "Ouvrage consulté pour l'étymologie."
       },
       "description": "Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier."
     },
@@ -257,7 +303,7 @@
           "texte": {
             "type": "string",
             "minLength": 1,
-            "description": "Paraphrase de la lecture, sans commencer par le nom de l'auteur ; italique avec _…_."
+            "description": "Le sens doctrinal, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."
           },
           "citation": {
             "description": "Texte original de l'auteur, dans sa langue.",
@@ -324,7 +370,7 @@
                   ]
                 },
                 "url": {
-                  "description": "Adresse (https) de l'entrée consultée en ligne.",
+                  "description": "Adresse (https) de l'entrée, seulement si elle ne se déduit pas de l'entrée.",
                   "type": "string",
                   "format": "uri"
                 }
@@ -336,7 +382,7 @@
               "additionalProperties": false,
               "description": "Œuvre consultée pour une lecture traditionnelle, et passage précis."
             },
-            "description": "Œuvres consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."
+            "description": "Œuvres de l'auteur consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."
           },
           "redaction": {
             "description": "Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche.",
@@ -417,7 +463,6 @@
     "mot",
     "nature",
     "etymon",
-    "reconstruit",
     "langue",
     "sens",
     "explication",

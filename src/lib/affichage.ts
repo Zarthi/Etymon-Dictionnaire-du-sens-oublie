@@ -12,3 +12,26 @@ export function dateLongue(dateIso: string): string {
     timeZone: "UTC",
   });
 }
+
+/** Préposition devant une forme : « de relegere », « d'adolescere » (élision devant voyelle ou h). */
+export function de(forme: string): string {
+  return /^[aeiouyàâéèêh]/i.test(forme.replace(/^\*/, "")) ? "d'" : "de ";
+}
+
+/**
+ * Formes étrangères qu'une fiche connaît, mises en italique par l'app dans ses textes :
+ * l'étymon, les formes d'origine (et leurs écritures d'origine), la forme légendaire.
+ */
+export function formesItaliques(fiche: {
+  etymon: string;
+  graphie?: string;
+  origine?: { hypotheses: { forme: string; graphie?: string }[] };
+  legende?: { forme: string };
+}): string[] {
+  return [
+    fiche.etymon,
+    fiche.graphie,
+    ...(fiche.origine?.hypotheses ?? []).flatMap((h) => [h.forme, h.graphie]),
+    fiche.legende?.forme,
+  ].filter((f): f is string => Boolean(f));
+}

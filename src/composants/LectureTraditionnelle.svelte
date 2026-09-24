@@ -15,11 +15,13 @@
     lienVers,
     exclu,
     redactionFiche,
+    formes,
   }: {
     lecture: LectureTraditionnelle;
     lienVers: (id: string) => string | undefined;
     exclu?: string;
     redactionFiche: string;
+    formes: string[];
   } = $props();
 
   const redactionPropre = $derived(
@@ -28,7 +30,7 @@
 </script>
 
 <div class="lecture">
-  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} /></p>
+  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} /></p>
   {#if lecture.citation}
     <blockquote lang="la">«&nbsp;{lecture.citation}&nbsp;»</blockquote>
   {/if}

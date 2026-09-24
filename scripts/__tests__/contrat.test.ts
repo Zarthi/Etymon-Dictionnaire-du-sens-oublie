@@ -11,7 +11,7 @@ describe("contrat de données", () => {
   });
   it("décrit chaque champ de la fiche", () => {
     const contrat = genererMarkdown();
-    for (const champ of ["mot", "nature", "etymon", "racine", "sources", "redaction", "lecturesTraditionnelles", "statut"]) {
+    for (const champ of ["mot", "nature", "etymon", "origine", "sources", "redaction", "lecturesTraditionnelles", "statut"]) {
       expect(contrat).toContain(`| \`${champ}\` |`);
     }
     expect(contrat).toContain("### `lecturesTraditionnelles[].sources[]`");

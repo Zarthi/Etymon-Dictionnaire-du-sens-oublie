@@ -1,8 +1,8 @@
 import { z } from "zod";
 import auteurs from "../../data/auteurs.json" with { type: "json" };
 import langues from "../../data/langues.json" with { type: "json" };
-import ouvrages from "../../data/sources.json" with { type: "json" };
 import themes from "../../data/themes.json" with { type: "json" };
+import { NOMS_OUVRAGES, urlDeduite } from "./ouvrages.ts";
 import { REDACTEURS } from "./sources.ts";
 
 /** Date ISO AAAA-MM-JJ. */
@@ -12,25 +12,28 @@ const page = z
   .union([z.number().int().positive(), z.string().min(1)])
   .optional()
   .describe("Page de l'édition papier consultée.");
-const url = z.url({ protocol: /^https$/ }).optional().describe("Adresse (https) de l'entrée consultée en ligne.");
+const url = z
+  .url({ protocol: /^https$/ })
+  .optional()
+  .describe("Adresse (https) de l'entrée, seulement si elle ne se déduit pas de l'entrée.");
 
 /**
- * Source de la lecture profane (étymologie historique) : ouvrage de la liste fermée,
- * entrée consultée, avec sa page ou son adresse en ligne.
+ * Source de la lecture profane (étymologie historique) : ouvrage de la liste fermée et
+ * entrée consultée. L'adresse se déduit de l'entrée pour les ouvrages en ligne.
  */
 export const schemaSource = z
   .object({
-    ouvrage: z.enum(ouvrages).describe("Ouvrage consulté (liste fermée : data/sources.json)."),
+    ouvrage: z.enum(NOMS_OUVRAGES).describe("Ouvrage consulté (liste fermée : data/sources.json)."),
     entree: z.string().min(1).describe("Entrée consultée dans l'ouvrage (ex. « étonner », « adtono »)."),
     page,
     url,
   })
   .strict()
-  .refine((s) => s.page !== undefined || s.url !== undefined, {
-    message: "indiquer au moins une page ou une url",
+  .refine((s) => s.page !== undefined || s.url !== undefined || urlDeduite(s.ouvrage, s.entree) !== undefined, {
+    message: "indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)",
     path: ["url"],
   })
-  .describe("Ouvrage consulté pour l'étymologie ; page ou url obligatoire.");
+  .describe("Ouvrage consulté pour l'étymologie.");
 
 /** Auteurs de la tradition et leurs œuvres, en liste fermée : pas de variantes d'un même nom. */
 const nomsAuteurs = auteurs.map((a) => a.nom);
@@ -66,18 +69,35 @@ const graphie = z
   .optional()
   .describe("Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.");
 
+/** Qui soutient une hypothèse : un auteur de la tradition ou un ouvrage consulté. */
+const tenants = [...nomsAuteurs, ...NOMS_OUVRAGES];
+
+export const schemaHypothese = z
+  .object({
+    forme: z.string().min(1).describe("Forme d'origine proposée."),
+    graphie,
+    langue: z.string().min(1).describe("Langue de cette forme (latin, grec ancien, arabe, indo-européen…)."),
+    sens: z.string().min(1).describe("Sens de cette forme, sans guillemets."),
+    selon: z
+      .array(z.enum(tenants))
+      .optional()
+      .describe("Qui soutient cette hypothèse : auteurs (data/auteurs.json) ou ouvrages (data/sources.json)."),
+  })
+  .strict()
+  .describe("Une forme d'origine proposée pour l'étymon.");
+
 export const schemaLectureTraditionnelle = z
   .object({
     texte: z
       .string()
       .trim()
       .min(1)
-      .describe("Paraphrase de la lecture, sans commencer par le nom de l'auteur ; italique avec _…_."),
+      .describe("Le sens doctrinal, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."),
     citation: z.string().trim().min(1).optional().describe("Texte original de l'auteur, dans sa langue."),
     auteur: z.enum(nomsAuteurs).describe("Auteur de la tradition (liste fermée : data/auteurs.json)."),
     sources: z
       .array(schemaSourceTraditionnelle)
-      .describe("Œuvres consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."),
+      .describe("Œuvres de l'auteur consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."),
     redaction: z
       .array(schemaRedaction)
       .min(1)
@@ -96,7 +116,6 @@ export const schemaFiche = z
       .min(1)
       .describe("Forme source, dans la langue source directe ; reconstruite, elle commence par * et s'écrit entre guillemets."),
     graphie,
-    reconstruit: z.boolean().describe("true si et seulement si l'étymon commence par *."),
     langue: z.enum(langues).describe("Langue source directe de l'étymon (liste fermée : data/langues.json)."),
     sens: z.string().min(1).describe("Sens de l'étymon, sans guillemets (l'app les ajoute)."),
     explication: z
@@ -104,23 +123,29 @@ export const schemaFiche = z
       .trim()
       .min(1)
       .describe(
-        "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens ; italique avec _…_.",
+        "1 à 3 phrases, 300 caractères au plus : ce qui s'est perdu, affaibli ou retourné ; ne répète pas le sens. Texte brut : l'étymon et les formes d'origine y sont mis en italique par l'app.",
       ),
-    legende: z.string().trim().min(1).optional().describe("Étymologie populaire démentie (« On dit souvent… »)."),
-    incertain: z.boolean().describe("L'étymon lui-même est douteux (pour une origine plus ancienne débattue : racine.incertain)."),
-    racine: z
+    legende: z
       .object({
-        forme: z.string().min(1).describe("Forme plus ancienne que l'étymon."),
-        graphie,
-        langue: z.string().min(1).describe("Langue de cette forme (indo-européen, grec ancien, arabe…)."),
-        sens: z.string().min(1).describe("Sens de cette forme, sans guillemets."),
-        incertain: z.boolean().optional().describe("Origine de l'étymon débattue : la racine n'est qu'une hypothèse."),
+        forme: z.string().min(1).describe("Forme alléguée à tort (ex. « sine cera »)."),
+        sens: z.string().min(1).describe("Sens de cette forme, sans guillemets (ex. « sans cire »)."),
+        explication: z.string().trim().min(1).optional().describe("Pourquoi c'est une légende, en une phrase."),
       })
       .strict()
-      .nullable()
       .optional()
-      .describe("Origine plus ancienne, seulement si elle apporte un sens que l'étymon n'a pas."),
-    doublets: z.array(z.string()).describe("Identifiants des fiches issues du même étymon par une autre voie (relation réciproque)."),
+      .describe("Étymologie populaire démentie."),
+    incertain: z.boolean().describe("L'étymon lui-même est douteux (une origine débattue relève de origine.debattue)."),
+    origine: z
+      .object({
+        debattue: z.boolean().optional().describe("Plusieurs hypothèses, aucune établie."),
+        hypotheses: z.array(schemaHypothese).min(1).describe("Une ou plusieurs formes d'origine."),
+      })
+      .strict()
+      .optional()
+      .describe("D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens."),
+    doublets: z
+      .array(z.string())
+      .describe("Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches."),
     famille: z.array(z.string()).describe("Mots français apparentés."),
     themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
     sources: z.array(schemaSource).describe("Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier."),
