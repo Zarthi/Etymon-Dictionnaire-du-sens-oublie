@@ -1,7 +1,7 @@
 import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
 import { prefixe } from "../../src/lib/decoupage.ts";
-import { normaliser } from "../../src/lib/recherche.ts";
+import { erreursBalisage, idDe, texteVisible } from "../../src/lib/texte.ts";
 import { schemaCandidats, schemaComptes, schemaFiche } from "../../src/lib/schema.ts";
 import type { Candidat, Fiche, FicheIdentifiee, LigneComptes } from "../../src/lib/types.ts";
 
@@ -35,9 +35,7 @@ export function cheminFiche(id: string): string {
 
 /** Forme ASCII minuscule sans accent d'un mot, mots séparés par des tirets. */
 export function slug(mot: string): string {
-  return normaliser(mot)
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+  return idDe(mot);
 }
 
 /** Nombre de phrases : ponctuations finales suivies d'un blanc ou de la fin du texte. */
@@ -98,11 +96,12 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
 
   if (fiche.doublets.includes(id)) ajouter("doublets", "une fiche ne peut pas être son propre doublet");
 
-  const phrases = compterPhrases(fiche.explication);
+  const visible = texteVisible(fiche.explication);
+  const phrases = compterPhrases(visible);
   if (phrases < 1 || phrases > PHRASES_MAX_EXPLICATION) {
     ajouter("explication", `1 à ${PHRASES_MAX_EXPLICATION} phrases terminées par une ponctuation (${phrases} trouvée(s))`);
   }
-  const longueur = [...fiche.explication].length;
+  const longueur = [...visible].length;
   if (longueur > LONGUEUR_MAX_EXPLICATION) {
     ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
   }
@@ -119,8 +118,19 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
   for (const [champ, texte] of textes) {
     for (const regle of verifierTypographie(texte)) ajouter(champ, regle);
   }
+  for (const [champ, texte] of textesBalises(fiche)) {
+    for (const regle of erreursBalisage(texte)) ajouter(champ, regle);
+  }
 
   return erreurs;
+}
+
+/** Textes où l'italique (_relegere_) est permis ; les liens y sont posés automatiquement par l'app. */
+function textesBalises(fiche: Fiche): [string, string][] {
+  const textes: [string, string][] = [["explication", fiche.explication]];
+  if (fiche.legende) textes.push(["legende", fiche.legende]);
+  fiche.lecturesTraditionnelles.forEach((l, i) => textes.push([`lecturesTraditionnelles.${i}.texte`, l.texte]));
+  return textes;
 }
 
 /** Règles entre fiches : doublets existants et réciproques. */

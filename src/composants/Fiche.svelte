@@ -4,8 +4,13 @@
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
   import Forme from "./Forme.svelte";
   import Source from "./Source.svelte";
+  import TexteRiche from "./TexteRiche.svelte";
 
-  let { fiche, lectureTraditionnelle }: { fiche: FicheIdentifiee; lectureTraditionnelle: boolean } = $props();
+  let {
+    fiche,
+    lectureTraditionnelle,
+    lienVers,
+  }: { fiche: FicheIdentifiee; lectureTraditionnelle: boolean; lienVers: (id: string) => string | undefined } = $props();
 
   const correction = $derived(fiche.historique.at(-1));
 </script>
@@ -32,7 +37,7 @@
     <Forme forme={fiche.etymon} graphie={fiche.graphie} />&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
   </p>
 
-  <p class="explication">{fiche.explication}</p>
+  <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} /></p>
 
   {#if fiche.racine}
     <p class="racine">
@@ -42,7 +47,7 @@
   {/if}
 
   {#if fiche.legende}
-    <p class="legende"><strong>Idée reçue</strong>&nbsp;: {fiche.legende}</p>
+    <p class="legende"><strong>Idée reçue</strong>&nbsp;: <TexteRiche texte={fiche.legende} {lienVers} exclu={fiche.id} /></p>
   {/if}
 
   {#if fiche.incertain}
@@ -51,13 +56,13 @@
 
   {#if lectureTraditionnelle}
     {#each fiche.lecturesTraditionnelles as lecture, i (i)}
-      <LectureTraditionnelle {lecture} />
+      <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} />
     {/each}
   {/if}
 
   <footer>
     <p hidden={fiche.sources.length === 0}>
-      Sources&nbsp;:
+      Sources de l'étymologie&nbsp;:
       {#each fiche.sources as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}
     </p>
     {#if correction}

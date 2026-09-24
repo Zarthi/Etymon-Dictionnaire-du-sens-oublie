@@ -255,6 +255,21 @@ describe("validerFiches : cohérence", () => {
   });
 });
 
+describe("validerFiches : balisage", () => {
+  it("accepte l'italique et compte la longueur sur le texte visible", () => {
+    const explication = `Du latin _religio_, puis _relegere_. ${"é".repeat(260)}.`;
+    expect(erreursDe({ explication })).toEqual([]);
+  });
+  it("signale un italique mal fermé dans l'explication, la légende ou une lecture traditionnelle", () => {
+    expect(erreursDe({ explication: "Du latin _religio." })).toEqual(["explication : italique mal fermé : « _ » isolé"]);
+    expect(erreursDe({ legende: "On dit _sine cera." })).toEqual(["legende : italique mal fermé : « _ » isolé"]);
+    const lecture = { texte: "Lactance dit _religare.", auteur: "Lactance", sources: [{ ouvrage: "IA", entree: "Claude" }] };
+    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
+      "lecturesTraditionnelles.0.texte : italique mal fermé : « _ » isolé",
+    ]);
+  });
+});
+
 describe("validerFiches : règles éditoriales", () => {
   it("refuse une explication de plus de 3 phrases", () => {
     expect(erreursDe({ explication: "Un. Deux. Trois. Quatre." })).toEqual([
