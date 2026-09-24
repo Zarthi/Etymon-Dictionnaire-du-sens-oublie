@@ -7,8 +7,6 @@ explication: >
   Ab oculis, sans yeux : l'aveugle est celui à qui les yeux ont été ôtés. Le
   latin classique disait caecus ; le mot populaire dit la privation, non
   l'obscurité.
-incertain: false
-doublets: []
 famille: [ oculaire, œil ]
 themes: [ corps, santé ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

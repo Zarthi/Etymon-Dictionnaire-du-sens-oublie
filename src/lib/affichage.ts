@@ -25,13 +25,13 @@ export function de(forme: string): string {
 export function formesItaliques(fiche: {
   etymon: string;
   graphie?: string;
-  origine?: { hypotheses: { forme: string; graphie?: string }[] };
+  origine?: { formes: { forme: string; graphie?: string }[] };
   legende?: { forme: string };
 }): string[] {
   return [
     fiche.etymon,
     fiche.graphie,
-    ...(fiche.origine?.hypotheses ?? []).flatMap((h) => [h.forme, h.graphie]),
+    ...(fiche.origine?.formes ?? []).flatMap((f) => [f.forme, f.graphie]),
     fiche.legende?.forme,
   ].filter((f): f is string => Boolean(f));
 }

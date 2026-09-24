@@ -8,8 +8,6 @@ explication: >
   Askēsis est l'entraînement de l'athlète, l'exercice répété qui forme le corps.
   Les philosophes puis les moines ont repris le mot pour l'exercice de l'âme.
   L'ascète est un athlète, non un affamé.
-incertain: false
-doublets: []
 famille: [ ascétique ]
 themes: [ morale, religion, corps ]
 sources:
@@ -18,6 +16,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

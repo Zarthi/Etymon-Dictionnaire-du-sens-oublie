@@ -7,7 +7,6 @@ explication: >
   Être « en haine » à quelqu'un, c'était lui être odieux. L'ennui fut d'abord un
   tourment, un chagrin profond, avant de s'affaiblir en simple lassitude.
 incertain: true
-doublets: []
 famille: [ ennuyer ]
 themes: [ émotions ]
 sources:
@@ -20,6 +19,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,15 +7,12 @@ explication: >
   L'apocalypse est un dévoilement : apo-kalyptein, ôter ce qui couvre. Le livre
   de Jean révèle ce qui était caché ; ce sont ses visions de fin du monde qui
   ont fait du mot un synonyme de catastrophe.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: apokálypsis
       graphie: ἀποκάλυψις
       langue: grec ancien
       sens: action de découvrir, d'ôter le voile
-doublets: []
-famille: []
 themes: [ religion, savoir ]
 sources:
   - ouvrage: Littré
@@ -23,6 +20,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

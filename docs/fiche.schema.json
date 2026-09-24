@@ -62,10 +62,32 @@
       ],
       "description": "Langue source directe de l'étymon (liste fermée : data/langues.json)."
     },
+    "forge": {
+      "description": "Mot savant forgé par un auteur connu : qui, et quand.",
+      "type": "object",
+      "properties": {
+        "par": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Qui a forgé le mot (« Eugen Bleuler »)."
+        },
+        "annee": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 2100,
+          "description": "Année de la création, selon la source consultée."
+        }
+      },
+      "required": [
+        "par",
+        "annee"
+      ],
+      "additionalProperties": false
+    },
     "sens": {
       "type": "string",
       "minLength": 1,
-      "description": "Sens de l'étymon, sans guillemets (l'app les ajoute)."
+      "description": "Sens de l'étymon, sans guillemets (l'app les ajoute). Pour un mot forgé ou composé, le sens littéral de ses éléments ; l'intention de l'auteur va dans l'explication."
     },
     "explication": {
       "type": "string",
@@ -99,18 +121,25 @@
       "additionalProperties": false
     },
     "incertain": {
-      "type": "boolean",
-      "description": "L'étymon lui-même est douteux (une origine débattue relève de origine.debattue)."
+      "default": false,
+      "description": "L'étymon lui-même est douteux (une origine débattue relève de origine.mode). Faux si absent.",
+      "type": "boolean"
     },
     "origine": {
       "description": "D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens.",
       "type": "object",
       "properties": {
-        "debattue": {
-          "description": "Plusieurs hypothèses, aucune établie.",
-          "type": "boolean"
+        "mode": {
+          "default": "filiation",
+          "description": "filiation (défaut) : l'étymon vient de ces formes, l'une de l'autre ; composition : il est formé de ces éléments ; debattue : plusieurs hypothèses, la plus suivie en premier.",
+          "type": "string",
+          "enum": [
+            "filiation",
+            "composition",
+            "debattue"
+          ]
         },
-        "hypotheses": {
+        "formes": {
           "minItems": 1,
           "type": "array",
           "items": {
@@ -119,7 +148,7 @@
               "forme": {
                 "type": "string",
                 "minLength": 1,
-                "description": "Forme d'origine proposée."
+                "description": "Forme d'origine ; reconstruite, elle commence par * et s'écrit entre guillemets."
               },
               "graphie": {
                 "description": "Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.",
@@ -137,7 +166,7 @@
                 "description": "Sens de cette forme, sans guillemets."
               },
               "selon": {
-                "description": "Qui soutient cette hypothèse : auteurs (data/auteurs.json) ou ouvrages (data/sources.json).",
+                "description": "Origine débattue seulement : qui a proposé ou défend cette hypothèse (data/auteurs.json). Un ouvrage qui la rapporte n'en est pas tenant : il figure dans sources.",
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -149,11 +178,7 @@
                     "Augustin",
                     "Isidore de Séville",
                     "Thomas d'Aquin",
-                    "René Guénon",
-                    "Littré",
-                    "Gaffiot",
-                    "Bailly",
-                    "TLFi"
+                    "René Guénon"
                   ]
                 }
               }
@@ -164,29 +189,31 @@
               "sens"
             ],
             "additionalProperties": false,
-            "description": "Une forme d'origine proposée pour l'étymon."
+            "description": "Une forme d'origine de l'étymon."
           },
-          "description": "Une ou plusieurs formes d'origine."
+          "description": "Formes d'origine, dans l'ordre de lecture."
         }
       },
       "required": [
-        "hypotheses"
+        "formes"
       ],
       "additionalProperties": false
     },
     "doublets": {
+      "default": [],
+      "description": "Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches.",
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "description": "Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches."
+      }
     },
     "famille": {
+      "default": [],
+      "description": "Mots français apparentés, de la même racine.",
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "description": "Mots français apparentés."
+      }
     },
     "themes": {
       "type": "array",
@@ -218,6 +245,8 @@
       "description": "Thèmes (liste fermée : data/themes.json)."
     },
     "sources": {
+      "default": [],
+      "description": "Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire.",
       "type": "array",
       "items": {
         "type": "object",
@@ -235,7 +264,7 @@
           "entree": {
             "type": "string",
             "minLength": 1,
-            "description": "Entrée consultée dans l'ouvrage (ex. « étonner », « adtono »)."
+            "description": "Entrée consultée dans l'ouvrage (« étonner », « adtono », « φρήν »)."
           },
           "page": {
             "description": "Page de l'édition papier consultée.",
@@ -263,8 +292,7 @@
         ],
         "additionalProperties": false,
         "description": "Ouvrage consulté pour l'étymologie."
-      },
-      "description": "Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier."
+      }
     },
     "redaction": {
       "minItems": 1,
@@ -293,9 +321,11 @@
         "additionalProperties": false,
         "description": "Qui a rédigé. Ce n'est pas une source."
       },
-      "description": "Qui a rédigé la fiche ; affiché une fois, en pied de fiche."
+      "description": "Qui a rédigé la fiche ; affiché une fois, en pied de fiche. Écrit par npm run rediger."
     },
     "lecturesTraditionnelles": {
+      "default": [],
+      "description": "Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune).",
       "type": "array",
       "items": {
         "type": "object",
@@ -303,12 +333,12 @@
           "texte": {
             "type": "string",
             "minLength": 1,
-            "description": "Le sens doctrinal, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."
+            "description": "Sens que la doctrine donne au mot, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."
           },
           "citation": {
-            "description": "Texte original de l'auteur, dans sa langue.",
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe)."
           },
           "auteur": {
             "type": "string",
@@ -322,9 +352,15 @@
               "Thomas d'Aquin",
               "René Guénon"
             ],
-            "description": "Auteur de la tradition (liste fermée : data/auteurs.json)."
+            "description": "Auteur de la tradition (data/auteurs.json, rôle tradition)."
+          },
+          "hypothese": {
+            "description": "Forme d'origine (origine.formes) sur laquelle repose la lecture : le texte n'a pas à la répéter.",
+            "type": "string",
+            "minLength": 1
           },
           "sources": {
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "object",
@@ -370,19 +406,20 @@
                   ]
                 },
                 "url": {
-                  "description": "Adresse (https) de l'entrée, seulement si elle ne se déduit pas de l'entrée.",
                   "type": "string",
-                  "format": "uri"
+                  "format": "uri",
+                  "description": "Adresse (https) du texte original, du domaine public : npm run verifier:en-ligne y cherche la citation."
                 }
               },
               "required": [
                 "ouvrage",
-                "entree"
+                "entree",
+                "url"
               ],
               "additionalProperties": false,
-              "description": "Œuvre consultée pour une lecture traditionnelle, et passage précis."
+              "description": "Œuvre consultée pour une lecture traditionnelle, passage précis et texte en ligne."
             },
-            "description": "Œuvres de l'auteur consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."
+            "description": "Œuvres de l'auteur consultées."
           },
           "redaction": {
             "description": "Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche.",
@@ -416,13 +453,13 @@
         },
         "required": [
           "texte",
+          "citation",
           "auteur",
           "sources"
         ],
         "additionalProperties": false,
-        "description": "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie."
-      },
-      "description": "Lectures traditionnelles, une par tradition (souvent aucune)."
+        "description": "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie. La tradition doit avoir lu le mot lui-même, pas la chose qu'il désigne aujourd'hui."
+      }
     },
     "statut": {
       "type": "string",
@@ -434,6 +471,8 @@
       "description": "a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
     },
     "historique": {
+      "default": [],
+      "description": "Corrections successives (ex. suite à une Critique).",
       "type": "array",
       "items": {
         "type": "object",
@@ -455,8 +494,7 @@
           "note"
         ],
         "additionalProperties": false
-      },
-      "description": "Corrections successives (ex. suite à une Critique)."
+      }
     }
   },
   "required": [
@@ -466,15 +504,9 @@
     "langue",
     "sens",
     "explication",
-    "incertain",
-    "doublets",
-    "famille",
     "themes",
-    "sources",
     "redaction",
-    "lecturesTraditionnelles",
-    "statut",
-    "historique"
+    "statut"
   ],
   "additionalProperties": false,
   "description": "Fiche d'Étymon : un mot, son étymon, ce que le sens premier révèle.",

@@ -7,13 +7,11 @@ explication: >
   Mettre à bandon, c'était laisser une chose au pouvoir d'un autre, à sa
   discrétion. Abandonner, ce n'est pas d'abord délaisser, mais remettre entre
   d'autres mains.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: "*ban"
       langue: francique
       sens: proclamation, pouvoir de commander
-doublets: []
 famille: [ ban, bannir ]
 themes: [ société, émotions ]
 sources:
@@ -22,6 +20,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

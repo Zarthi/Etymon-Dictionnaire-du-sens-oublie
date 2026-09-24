@@ -8,7 +8,6 @@ explication: >
   temps. Le sens ancien est tromper, retenir par de faux prétextes. L'amusement
   fut d'abord une diversion qui détourne.
 incertain: true
-doublets: []
 famille: [ muser, musarder, museau ]
 themes: [ émotions, parole ]
 sources:
@@ -17,6 +16,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

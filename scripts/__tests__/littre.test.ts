@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { chercher, concorde, douteux, extraireEntrees, indexer, texteBrut, urlLittre, verdict } from "../lib/littre.ts";
+import { chercher, concorde, douteux, extraireEntrees, indexer, natureDepuisLittre, texteBrut, urlLittre, verdict } from "../lib/littre.ts";
 
 /** Extrait au format XMLittré : entrée normale, homonyme, entrée sans étymologie, supplément. */
 const XML = `<?xml version="1.0" encoding="utf-8"?>
@@ -45,8 +45,13 @@ describe("texteBrut", () => {
 
 describe("extraireEntrees", () => {
   const entrees = extraireEntrees(XML);
-  it("garde les entrées pourvues d'une étymologie, vedette en minuscules", () => {
-    expect(entrees.map((e) => e.terme)).toEqual(["absolu", "ancêtres", "étonner", "ennui", "ennui", "merci"]);
+  it("garde toutes les entrées, vedette en minuscules, étymologie vide si absente", () => {
+    expect(entrees.map((e) => e.terme)).toEqual(["absolu", "ancêtres", "étonner", "ennui", "ennui", "en", "merci"]);
+    expect(entrees[5].etymologie).toBe("");
+  });
+  it("extrait la nature grammaticale de l'en-tête", () => {
+    expect(entrees[2].nature).toBe("v. a.");
+    expect(entrees[0].nature).toBeUndefined();
   });
   it("extrait seulement la rubrique ÉTYMOLOGIE, en texte brut", () => {
     expect(entrees[2].etymologie).toBe(
@@ -58,9 +63,24 @@ describe("extraireEntrees", () => {
 describe("indexer", () => {
   it("regroupe les homonymes sous la forme normalisée", () => {
     const index = indexer(extraireEntrees(XML));
-    expect(Object.keys(index)).toEqual(["absolu", "ancetres", "etonner", "ennui", "merci"]);
+    expect(Object.keys(index)).toEqual(["absolu", "ancetres", "etonner", "ennui", "en", "merci"]);
     expect(index.ennui).toHaveLength(2);
   });
+});
+
+describe("natureDepuisLittre", () => {
+  it.each([
+    ["s. f.", "nom féminin"],
+    ["S. m.", "nom masculin"],
+    ["s. m. et f.", "nom"],
+    ["s. f. pl.", "nom féminin"],
+    ["v. a.", "verbe"],
+    ["v. réfl.", "verbe"],
+    ["adj.", "adjectif"],
+    ["adv.", "adverbe"],
+    ["part. passé", undefined],
+    [undefined, undefined],
+  ])("%s → %s", (nature, attendu) => expect(natureDepuisLittre(nature)).toBe(attendu));
 });
 
 describe("urlLittre", () => {
@@ -126,5 +146,6 @@ describe("verdict", () => {
     expect(verdict(["noxa"], index.etonner).resultat).toBe("discordance");
     expect(verdict(["potio"], undefined).resultat).toBe("absent");
     expect(verdict(["potio"], []).resultat).toBe("absent");
+    expect(verdict(["potio"], index.en).resultat).toBe("absent");
   });
 });

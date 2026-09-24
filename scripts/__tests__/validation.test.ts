@@ -22,7 +22,7 @@ const ficheBase = {
   sens: "frapper du tonnerre",
   explication: "Le mot désignait un ébranlement violent, avant de s'affaiblir en simple surprise.\n",
   incertain: false,
-  origine: { hypotheses: [{ forme: "*(s)tenh₂-", langue: "indo-européen", sens: "retentir, gronder" }] },
+  origine: { formes: [{ forme: "*(s)tenh₂-", langue: "indo-européen", sens: "retentir, gronder" }] },
   doublets: [],
   famille: ["tonner", "tonnerre", "détonation"],
   themes: ["émotions", "météo"],
@@ -34,6 +34,14 @@ const ficheBase = {
   lecturesTraditionnelles: [],
   statut: "brouillon",
   historique: [],
+};
+
+/** Lecture traditionnelle conforme : citation et texte en ligne. */
+const lectureBase = {
+  texte: "Lecture.",
+  citation: "hoc uinculo pietatis obstricti deo et religati sumus",
+  auteur: "Lactance",
+  sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3", url: "https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV" }],
 };
 
 function valider(surcharges: Record<string, unknown> = {}, fichier = "e/et/etonner.yaml") {
@@ -101,7 +109,7 @@ describe("validerFiches : fiche conforme", () => {
     const { origine: _, ...sansOrigine } = ficheBase;
     const texte = stringify({
       ...sansOrigine,
-      lecturesTraditionnelles: [{ texte: "Lecture sourcée.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }, { texte: "Autre lecture.", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }],
+      lecturesTraditionnelles: [lectureBase, { ...structuredClone(lectureBase), texte: "Autre lecture." }],
       graphie: "ἀνάλυσις",
       legende: { forme: "sine cera", sens: "sans cire", explication: "Une étymologie de fantaisie." },
       historique: [{ date: "2026-09-23", note: "Corrigée suite à une Critique." }],
@@ -112,9 +120,27 @@ describe("validerFiches : fiche conforme", () => {
     expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
     expect(erreursDe({ statut: "a-verifier", sources: [], redaction: [{ par: "IA", detail: "Claude Fable 5.1" }] })).toEqual([]);
   });
-  it("accepte une lecture traditionnelle dont l'IA est la seule source", () => {
-    const lecture = { texte: "Lecture.", auteur: "Isidore de Séville", sources: [] };
-    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
+  it("accepte une fiche sans ses champs facultatifs, et leur donne leur valeur par défaut", () => {
+    const { incertain: _i, doublets: _d, famille: _f, lecturesTraditionnelles: _l, historique: _h, ...minimale } = ficheBase;
+    const { fiches, erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify(minimale) }]);
+    expect(erreurs).toEqual([]);
+    expect(fiches[0]).toMatchObject({ incertain: false, doublets: [], famille: [], lecturesTraditionnelles: [], historique: [] });
+  });
+  it("donne à une origine sans mode le mode filiation", () => {
+    expect(valider().fiches[0].origine?.mode).toBe("filiation");
+  });
+  it("accepte une composition et un mot forgé", () => {
+    const origine = {
+      mode: "composition",
+      formes: [
+        { forme: "schizō", graphie: "σχίζω", langue: "grec ancien", sens: "fendre" },
+        { forme: "phrēn", graphie: "φρήν", langue: "grec ancien", sens: "diaphragme" },
+      ],
+    };
+    expect(erreursDe({ origine, forge: { par: "Eugen Bleuler", annee: 1911 } })).toEqual([]);
+  });
+  it("accepte une entrée du Bailly sans adresse : elle se déduit de l'entrée", () => {
+    expect(erreursDe({ sources: [{ ouvrage: "Bailly", entree: "κριτικός" }] })).toEqual([]);
   });
   it("accepte la rédaction d'Étymon, sans page ni url, à côté d'un ouvrage consulté", () => {
     const redaction = [...ficheBase.redaction, { par: "Étymon", detail: "correction suite à une Critique" }];
@@ -125,20 +151,20 @@ describe("validerFiches : fiche conforme", () => {
       texte: "Lecture.",
       citation: "hunc eligentes uel potius religentes",
       auteur: "Augustin",
-      sources: [{ ouvrage: "La Cité de Dieu", entree: "X, 3" }],
+      sources: [{ ouvrage: "La Cité de Dieu", entree: "X, 3", url: "https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X" }],
       redaction: [{ par: "Étymon", detail: "rédaction de Thibault" }],
     };
     expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
   });
-  it("accepte une origine débattue, avec plusieurs hypothèses et leurs tenants", () => {
+  it("accepte une origine débattue, avec ses hypothèses et leurs tenants, et une lecture qui en vise une", () => {
     const origine = {
-      debattue: true,
-      hypotheses: [
-        { forme: "relegere", langue: "latin", sens: "recueillir avec soin", selon: ["Cicéron", "Littré"] },
+      mode: "debattue",
+      formes: [
+        { forme: "relegere", langue: "latin", sens: "reprendre avec soin", selon: ["Cicéron"] },
         { forme: "religare", langue: "latin", sens: "relier", selon: ["Lactance"] },
       ],
     };
-    expect(erreursDe({ origine })).toEqual([]);
+    expect(erreursDe({ origine, lecturesTraditionnelles: [{ ...lectureBase, hypothese: "religare" }] })).toEqual([]);
   });
   it("accepte une adresse qui diffère de celle déduite de l'entrée", () => {
     expect(erreursDe({ sources: [{ ouvrage: "TLFi", entree: "critique", url: "https://www.cnrtl.fr/etymologie/critique/nom" }] })).toEqual([]);
@@ -180,7 +206,6 @@ describe("validerFiches : structure", () => {
     ["langue", { langue: "klingon" }],
     ["themes.0", { themes: ["inconnu"] }],
     ["sources.0.ouvrage", { sources: [{ ouvrage: "Wiktionnaire", entree: "étonner", page: 1 }] }],
-    ["sources.0.url", { sources: [{ ouvrage: "Bailly", entree: "κριτικός" }] }],
     ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "http://example.org/etonner" }] }],
     ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner", url: "pas une url" }] }],
     ["sources.0", { sources: ["Littré"] }],
@@ -194,11 +219,16 @@ describe("validerFiches : structure", () => {
     ["(racine)", { reconstruit: true }],
     ["(racine)", { racine: { forme: "x", langue: "latin", sens: "y" } }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
-    ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin" }] }],
-    ["lecturesTraditionnelles.0.auteur", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Isidore", sources: [] }] }],
+    ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ ...lectureBase, sources: [] }] }],
+    ["lecturesTraditionnelles.0.citation", { lecturesTraditionnelles: [{ ...lectureBase, citation: undefined }] }],
+    ["lecturesTraditionnelles.0.auteur", { lecturesTraditionnelles: [{ ...lectureBase, auteur: "Isidore" }] }],
     [
       "lecturesTraditionnelles.0.sources.0.ouvrage",
-      { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin", sources: [{ ouvrage: "Cité de Dieu", entree: "X, 3" }] }] },
+      { lecturesTraditionnelles: [{ ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "Cité de Dieu" }] }] },
+    ],
+    [
+      "lecturesTraditionnelles.0.sources.0.url",
+      { lecturesTraditionnelles: [{ ...lectureBase, sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }] },
     ],
     ["lecturesTraditionnelles", { lecturesTraditionnelles: null }],
     ["nature", { nature: [] }],
@@ -207,9 +237,18 @@ describe("validerFiches : structure", () => {
     ["legende", { legende: "une chaîne au lieu d'un objet" }],
     ["legende.sens", { legende: { forme: "sine cera" } }],
     ["sources.0.ouvrage", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
-    ["origine.hypotheses.0.sens", { origine: { hypotheses: [{ forme: "*x", langue: "indo-européen" }] } }],
-    ["origine.hypotheses", { origine: { hypotheses: [] } }],
-    ["origine.hypotheses.0.selon.0", { origine: { hypotheses: [{ forme: "x", langue: "latin", sens: "y", selon: ["Varron le Jeune"] }] } }],
+    ["origine.formes.0.sens", { origine: { formes: [{ forme: "*x", langue: "indo-européen" }] } }],
+    ["origine.formes", { origine: { formes: [] } }],
+    ["origine.formes", { origine: { mode: "composition", formes: [{ forme: "x", langue: "latin", sens: "y" }] } }],
+    ["origine.mode", { origine: { mode: "hypothese", formes: [{ forme: "x", langue: "latin", sens: "y" }] } }],
+    ["origine.formes.0.selon.0", { origine: { formes: [{ forme: "x", langue: "latin", sens: "y", selon: ["Varron le Jeune"] }] } }],
+    // Un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
+    [
+      "origine.formes.0.selon.0",
+      { origine: { mode: "debattue", formes: [{ forme: "x", langue: "latin", sens: "y", selon: ["Littré"] }, { forme: "z", langue: "latin", sens: "w" }] } },
+    ],
+    ["forge.annee", { forge: { par: "Eugen Bleuler", annee: "1911" } }],
+    ["forge.par", { forge: { annee: 1911 } }],
   ])("signale le champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs.map((e) => e.champ)).toEqual([champ]);
   });
@@ -255,8 +294,22 @@ describe("validerFiches : cohérence", () => {
       "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
     ]);
   });
+  it("refuse des tenants hors d'une origine débattue", () => {
+    const origine = { formes: [{ forme: "x", langue: "latin", sens: "y", selon: ["Cicéron"] }] };
+    expect(erreursDe({ origine })).toEqual(["origine.formes.0.selon : des tenants seulement pour une origine débattue (mode: debattue)"]);
+  });
+  it("refuse une lecture qui vise une forme absente de l'origine", () => {
+    expect(erreursDe({ lecturesTraditionnelles: [{ ...lectureBase, hypothese: "religare" }] })).toEqual([
+      "lecturesTraditionnelles.0.hypothese : « religare » n'est pas une forme d'origine de la fiche (origine.formes)",
+    ]);
+  });
+  it("refuse une adresse du Bailly qui se déduit de l'entrée (doublon)", () => {
+    expect(erreursDe({ sources: [{ ouvrage: "Bailly", entree: "κριτικός", url: "https://bailly.app/kritikos" }] })).toEqual([
+      "sources.0.url : adresse inutile : elle se déduit de l'entrée, la retirer",
+    ]);
+  });
   it("refuse une œuvre qui n'est pas de l'auteur de la lecture", () => {
-    const lecture = { texte: "Lecture.", auteur: "Lactance", sources: [{ ouvrage: "La Cité de Dieu", entree: "X, 3" }] };
+    const lecture = { ...lectureBase, sources: [{ ...lectureBase.sources[0], ouvrage: "La Cité de Dieu" }] };
     expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
       "lecturesTraditionnelles.0.sources.0.ouvrage : « La Cité de Dieu » n'est pas une œuvre de Lactance (data/auteurs.json)",
     ]);
@@ -318,10 +371,10 @@ describe("validerFiches : règles éditoriales", () => {
     ["historique.0.note", { historique: [{ date: "2026-09-23", note: "Corrigée ; voir la source." }] }],
     [
       "lecturesTraditionnelles.0.texte",
-      { lecturesTraditionnelles: [{ texte: "Relier ?", auteur: "Lactance", sources: [{ ouvrage: "Institutions divines", entree: "IV, 28, 3" }] }] },
+      { lecturesTraditionnelles: [{ ...lectureBase, texte: "Relier ?" }] },
     ],
     ["legende.explication", { legende: { forme: "sine cera", sens: "sans cire", explication: "C'est faux : aucune trace." } }],
-    ["origine.hypotheses.0.sens", { origine: { hypotheses: [{ forme: "x", langue: "latin", sens: "relier ?" }] } }],
+    ["origine.formes.0.sens", { origine: { formes: [{ forme: "x", langue: "latin", sens: "relier ?" }] } }],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs).toEqual([
       expect.objectContaining({ champ, regle: expect.stringMatching(/espace insécable/) }),

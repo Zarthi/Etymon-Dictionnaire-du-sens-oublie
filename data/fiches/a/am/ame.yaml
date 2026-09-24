@@ -7,8 +7,6 @@ explication: >
   Anima est le souffle, le vent, l'air que l'on respire. L'âme est ce qui anime,
   ce qui fait respirer : un être animé est un être qui a un souffle. Rendre
   l'âme, c'est rendre le dernier souffle.
-incertain: false
-doublets: []
 famille: [ animal, animer, animation ]
 themes: [ religion, esprit, corps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,9 +7,6 @@ explication: >
   Étonner, c'était d'abord frapper comme la foudre : l'ancien français l'emploie
   pour un étourdissement violent. Le sens s'est affaibli jusqu'à la simple
   surprise.
-incertain: false
-doublets: []
-famille: []
 themes: [ émotions ]
 sources:
   - ouvrage: Littré
@@ -21,6 +18,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,15 +7,12 @@ explication: >
   Axios, c'est digne, qui vaut. L'axiome est ce qu'on juge digne d'être admis
   sans preuve, ce dont la valeur s'impose. Il n'est pas une vérité démontrée,
   mais une estime accordée.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: axíōma
       graphie: ἀξίωμα
       langue: grec ancien
       sens: ce qui est jugé digne, estimé
-doublets: []
-famille: []
 themes: [ savoir, esprit ]
 sources:
   - ouvrage: Littré
@@ -23,6 +20,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

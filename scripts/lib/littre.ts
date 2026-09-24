@@ -1,8 +1,10 @@
 import { normaliser } from "../../src/lib/recherche.ts";
+import type { NATURES } from "../../src/lib/schema.ts";
 
-/** Entrée du Littré réduite à ce qui nous sert : la vedette et son étymologie. */
+/** Entrée du Littré réduite à ce qui nous sert : la vedette, sa nature grammaticale et son étymologie (vide si absente). */
 export interface EntreeLittre {
   terme: string;
+  nature?: string;
   etymologie: string;
 }
 
@@ -23,7 +25,7 @@ export function texteBrut(fragment: string): string {
     .trim();
 }
 
-/** Entrées d'un fichier XMLittré qui ont une étymologie (supplément compris). */
+/** Entrées d'un fichier XMLittré, avec ou sans étymologie (supplément compris). */
 export function extraireEntrees(xml: string): EntreeLittre[] {
   const entrees: EntreeLittre[] = [];
   for (const [, attributs, contenu] of xml.matchAll(/<entree ([^>]*)>([\s\S]*?)<\/entree>/g)) {
@@ -33,8 +35,13 @@ export function extraireEntrees(xml: string): EntreeLittre[] {
       .map(([, texte]) => texteBrut(texte))
       .filter((texte) => texte !== "")
       .join(" ");
+    const nature = /<entete>[^]*?<nature>([^<]+)<\/nature>[^]*?<\/entete>/.exec(contenu)?.[1];
     // La vedette porte parfois le féminin : « ABSOLU, UE ». On ne garde que la première forme.
-    if (etymologie !== "") entrees.push({ terme: texteBrut(terme).toLowerCase().split(",")[0].trim(), etymologie });
+    entrees.push({
+      terme: texteBrut(terme).toLowerCase().split(",")[0].trim(),
+      ...(nature ? { nature: texteBrut(nature) } : {}),
+      etymologie,
+    });
   }
   return entrees;
 }
@@ -43,6 +50,26 @@ export function indexer(entrees: EntreeLittre[]): IndexLittre {
   const index: IndexLittre = {};
   for (const entree of entrees) (index[normaliser(entree.terme)] ??= []).push(entree);
   return index;
+}
+
+/** Nature grammaticale du Littré (« s. f. », « v. a. », « adj. ») traduite dans la liste fermée des fiches. */
+export function natureDepuisLittre(nature: string | undefined): (typeof NATURES)[number] | undefined {
+  // « s. m. et f. » → « smetf », « s. f. pl. » → « sf » : points, blancs et pluriel ignorés.
+  const n = nature?.toLowerCase().replace(/[.\s]/g, "").replace(/pl$/, "");
+  const natures: Record<string, (typeof NATURES)[number]> = {
+    sm: "nom masculin",
+    sf: "nom féminin",
+    smetf: "nom",
+    va: "verbe",
+    vn: "verbe",
+    vréfl: "verbe",
+    adj: "adjectif",
+    adjm: "adjectif",
+    adjf: "adjectif",
+    adv: "adverbe",
+    interj: "interjection",
+  };
+  return n === undefined ? undefined : natures[n];
 }
 
 export function urlLittre(terme: string): string {
@@ -93,8 +120,9 @@ export type Verdict =
  * Verdict du Littré sur une fiche rédigée de mémoire : l'étymon ou la racine doit figurer
  * dans son étymologie. Seule une concordance sans doute exprimé permet de passer la fiche en brouillon.
  */
-export function verdict(formes: string[], entrees: EntreeLittre[] | undefined): Verdict {
-  if (!entrees || entrees.length === 0) return { resultat: "absent" };
+export function verdict(formes: string[], toutes: EntreeLittre[] | undefined): Verdict {
+  const entrees = (toutes ?? []).filter((e) => e.etymologie !== "");
+  if (entrees.length === 0) return { resultat: "absent" };
   const concordante = entrees.find((e) => formes.some((f) => concorde(f, e.etymologie)));
   if (!concordante) return { resultat: "discordance", entree: entrees[0] };
   return { resultat: douteux(concordante.etymologie) ? "doute" : "concorde", entree: concordante };

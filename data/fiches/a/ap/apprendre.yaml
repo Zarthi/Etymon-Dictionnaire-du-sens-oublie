@@ -7,8 +7,6 @@ explication: >
   Apprendre, c'est prendre : apprehendere, saisir avec la main. Ce qu'on
   apprend, on s'en empare, on le tient. Appréhender, forme savante du même mot,
   a gardé la prise, et y a ajouté la crainte.
-incertain: false
-doublets: []
 famille: [ prendre, appréhender, prise ]
 themes: [ savoir, esprit ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,15 +7,12 @@ explication: >
   Zéro et chiffre sont un même mot arabe venu par deux chemins : l'italien pour
   l'un, le latin médiéval pour l'autre. Chiffre désignait d'abord le zéro, avant
   que zéro ne le supplante dans ce sens.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: ṣifr
       graphie: صفر
       langue: arabe
       sens: vide
-doublets: []
-famille: []
 themes: [ savoir ]
 sources:
   - ouvrage: Littré
@@ -25,6 +22,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

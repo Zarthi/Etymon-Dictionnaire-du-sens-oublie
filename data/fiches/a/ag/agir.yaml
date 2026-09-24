@@ -7,8 +7,6 @@ explication: >
   Agere, c'est pousser devant soi : mener un troupeau, conduire un char. Agir,
   c'est faire avancer quelque chose, et l'agent est celui qui mène. L'action est
   une poussée avant d'être un fait.
-incertain: false
-doublets: []
 famille: [ acte, action, agent, agile ]
 themes: [ travail, morale ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

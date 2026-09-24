@@ -7,8 +7,6 @@ explication: >
   Ars est le savoir-faire, la manière de faire une chose : le métier du forgeron
   comme celui du poète. Les beaux-arts sont une invention récente ; l'art fut
   longtemps tout ce que l'homme sait faire, face à la nature.
-incertain: false
-doublets: []
 famille: [ artisan, artifice, artiste ]
 themes: [ travail, savoir ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

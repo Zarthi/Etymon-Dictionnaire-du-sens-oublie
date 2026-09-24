@@ -7,8 +7,6 @@ explication: >
   Antecedere, c'est marcher devant. L'ancêtre est celui qui nous précède sur le
   chemin, non seulement dans le temps : il ouvre la voie, et nous marchons dans
   ses pas.
-incertain: false
-doublets: []
 famille: [ prédécesseur, céder, procéder ]
 themes: [ famille, temps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,8 +7,6 @@ explication: >
   Securus est celui qui est sans souci : sine cura. Assurer, c'est rendre sûr,
   délivrer de l'inquiétude. L'assurance de la personne et celle du contrat
   promettent la même chose : ne plus avoir à se soucier.
-incertain: false
-doublets: []
 famille: [ sûr, sécurité, cure ]
 themes: [ émotions, commerce, argent ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

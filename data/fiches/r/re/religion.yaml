@@ -2,36 +2,23 @@ mot: religion
 nature: [ nom féminin ]
 etymon: religio
 langue: latin
-sens: scrupule, attention portée au sacré
+sens: attention scrupuleuse, scrupule
 explication: >-
-  Avant d'être une croyance ou une institution, la religio est une disposition
-  intérieure. Le mot désigne aujourd'hui ce que l'on croit ; il disait d'abord
-  la manière de se tenir devant le sacré.
-incertain: false
+  La religio retenait aussi bien le juge devant un verdict que le Romain devant
+  les dieux : une conscience qui arrête. Le mot ne désignait pas ce que l'on
+  croit, mais ce qui retient d'agir.
 origine:
-  debattue: true
-  hypotheses:
+  mode: debattue
+  formes:
     - forme: relegere
       langue: latin
-      sens: recueillir avec soin
-      selon:
-        - Cicéron
-        - Isidore de Séville
-        - Littré
+      sens: reprendre avec soin
+      selon: [ Cicéron ]
     - forme: religare
       langue: latin
       sens: relier
-      selon:
-        - Lactance
-        - Isidore de Séville
-        - Littré
-    - forme: religere
-      langue: latin
-      sens: choisir de nouveau
-      selon:
-        - Augustin
-doublets: []
-famille: [ religieux, religiosité ]
+      selon: [ Lactance ]
+famille: [ religieux, religiosité, irréligion ]
 themes: [ religion ]
 sources:
   - ouvrage: Littré
@@ -44,32 +31,34 @@ redaction:
   - par: IA
     detail: Claude Opus 5.5
 lecturesTraditionnelles:
-  - texte: "L'homme est lié à Dieu par le lien de la piété : c'est de là que la
-      religio tire son nom."
+  - texte: "La religion est le lien de piété qui attache l'homme à Dieu, et non le
+      soin des rites que Cicéron y voyait."
+    citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa
+      religio nomen accepit, non ut Cicero interpretatus est a relegendo"
     auteur: Lactance
+    hypothese: religare
     sources:
       - ouvrage: Institutions divines
         entree: IV, 28, 3
         url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
-    citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa
-      religio nomen accepit, non ut Cicero interpretatus est a relegendo"
   - texte: "Dieu, que nous avions perdu par négligence, nous le choisissons à
       nouveau : la religion est ce choix renouvelé."
+    citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) —
+      hunc ergo religentes, unde et religio dicta perhibetur
     auteur: Augustin
     sources:
       - ouvrage: La Cité de Dieu
         entree: X, 3
         url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
-    citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) —
-      hunc ergo religentes, unde et religio dicta perhibetur
-  - texte: "Par la religion, nous relions nos âmes au seul Dieu pour le servir."
+  - texte: "La religion relie nos âmes au seul Dieu pour le servir ; le mot
+      serait pourtant formé sur relegere, compris comme « choisir »."
+    citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
+      cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,
+      id est eligendo
     auteur: Isidore de Séville
+    hypothese: religare
     sources:
       - ouvrage: Étymologies
         entree: VIII, 2, 2
         url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
-    citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
-      cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,
-      id est eligendo
 statut: brouillon
-historique: []

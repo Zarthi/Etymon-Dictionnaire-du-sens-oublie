@@ -26,6 +26,10 @@ npm run dev          # app en local
 | `npm run valider` | valide fiches, candidats et comptes (aussi en pre-commit et en CI) |
 | `npm run etat` | avancement : fiches par statut, candidats restants |
 | `npm run brouillons` | fiches en brouillon à relire |
+| `npm run rediger -- lot.json --modele "…"` | écrit un lot de fiches rédigées par l'IA (`a-verifier`) |
+| `npm run verifier` | confronte les fiches au Littré local (`npm run littre` une fois) et signale les contrôles |
+| `npm run verifier:en-ligne` | vérifie les entrées du Bailly et les citations des lectures traditionnelles |
+| `npm run contrat` | régénère le contrat de données et la consigne de rédaction (`docs/`) |
 | `npm test` | tests (Vitest) |
 | `npm run build` | site de production dans `dist/` (fiches non validées signalées comme telles) |
 
@@ -34,36 +38,25 @@ Chaque push est validé par la CI. La publication sur GitHub Pages se déclenche
 
 ## Ajouter une fiche
 
-1. Choisir un mot dans les candidats : `npm run etat -- candidats 10`.
-2. Consulter réellement les sources (Littré, Gaffiot ou Bailly ; TLFi pour vérifier).
-3. Créer `data/fiches/<initiale>/<deux lettres>/<id>.yaml`, par exemple
-   `data/fiches/e/et/etonner.yaml` :
+Le format d'une fiche est décrit dans [docs/contrat-fiche.md](docs/contrat-fiche.md), généré
+à partir du schéma ; VS Code le vérifie pendant la saisie. Exemples complets :
+[religion](data/fiches/r/re/religion.yaml), [schizophrénie](data/fiches/s/sc/schizophrenie.yaml).
 
-   ```yaml
-   mot: étonner
-   etymon: "*extonare"          # entre guillemets s'il commence par *
-   reconstruit: true
-   langue: latin populaire      # liste fermée : data/langues.json
-   sens: ébranler comme d'un coup de tonnerre
-   explication: >
-     Une à trois phrases, 300 caractères au plus, espace insécable avant : ; ? !
-   incertain: false
-   racine: null
-   doublets: []
-   famille: []
-   themes: [émotions]           # liste fermée : data/themes.json
-   sources:
-     - ouvrage: Littré
-       entree: étonner
-       url: "https://www.littre.org/definition/%C3%A9tonner"
-   lectureTraditionnelle: null
-   statut: brouillon
-   historique: []
-   ```
+**Par l'IA, en lot** : l'IA reçoit [docs/prompt-redaction.md](docs/prompt-redaction.md) et
+écrit un fichier JSON (le contenu seul), puis :
 
-4. Retirer le mot de `data/candidats/<initiale>.yaml`.
-5. `npm run valider` : chaque erreur indique le fichier, le champ et la règle enfreinte.
-6. Relire la fiche dans l'app (`npm run dev`), puis passer `statut: validee` pour la publier.
+```bash
+npm run rediger -- lot.json --modele "Claude Fable 5.1"
+npm run verifier
+npm run valider
+```
+
+**À la main** : créer `data/fiches/<initiale>/<deux lettres>/<id>.yaml` (par exemple
+`data/fiches/e/et/etonner.yaml`) après avoir consulté les sources (Littré, Gaffiot ou Bailly ;
+TLFi pour vérifier), retirer le mot de `data/candidats/<initiale>.yaml`, puis
+`npm run valider` : chaque erreur indique le fichier, le champ et la règle enfreinte.
+
+Seul Thibault passe une fiche en `validee`, après relecture dans l'app (`npm run dev`).
 
 ## Licences
 

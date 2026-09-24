@@ -1,12 +1,32 @@
 <script lang="ts">
   import Source from "./Source.svelte";
 
-  /** Ouvrages consultés pour l'étymologie : « Sources : Littré, Gaffiot, TLFi ». */
-  let { sources }: { sources: { ouvrage: string; entree: string; page?: number | string; url?: string }[] } = $props();
+  type SourceEtymologie = { ouvrage: string; entree: string; page?: number | string; url?: string };
+
+  /**
+   * Ouvrages consultés pour l'étymologie, chacun nommé une fois :
+   * « Sources : TLFi, Bailly (σχίζω, φρήν) » ; plusieurs entrées d'un même ouvrage sont nommées par leur entrée.
+   */
+  let { sources }: { sources: SourceEtymologie[] } = $props();
+
+  const groupes = $derived(
+    sources.reduce<{ ouvrage: string; entrees: SourceEtymologie[] }[]>((acc, s) => {
+      const groupe = acc.find((g) => g.ouvrage === s.ouvrage);
+      if (groupe) groupe.entrees.push(s);
+      else acc.push({ ouvrage: s.ouvrage, entrees: [s] });
+      return acc;
+    }, []),
+  );
 </script>
 
 {#if sources.length > 0}
-  <p class="sources">Sources&nbsp;: {#each sources as source, i (i)}{#if i > 0},{/if} <Source {source} />{/each}</p>
+  <p class="sources">
+    Sources&nbsp;: {#each groupes as g, i (g.ouvrage)}{#if i > 0},{/if}
+      {#if g.entrees.length === 1}<Source source={g.entrees[0]} />{:else}{g.ouvrage} ({#each g.entrees as s, j (j)}{#if j > 0},{" "}{/if}<Source
+            source={s}
+            parEntree
+          />{/each}){/if}{/each}
+  </p>
 {/if}
 
 <style>

@@ -7,8 +7,6 @@ explication: >
   L'amateur est celui qui aime : amator. L'amateur d'art aime les œuvres ; c'est
   ensuite qu'on l'a opposé au professionnel, et qu'il a pris un air de
   dilettante. Le sens premier était un éloge.
-incertain: false
-doublets: []
 famille: [ aimer, amour, amant ]
 themes: [ émotions, travail ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

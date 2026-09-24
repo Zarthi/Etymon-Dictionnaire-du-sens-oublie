@@ -107,7 +107,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
   // Les sens sont affichés entre guillemets par l'app.
   const sens: [string, string][] = [
     ["sens", fiche.sens],
-    ...(fiche.origine?.hypotheses ?? []).map((h, i): [string, string] => [`origine.hypotheses.${i}.sens`, h.sens]),
+    ...(fiche.origine?.formes ?? []).map((f, i): [string, string] => [`origine.formes.${i}.sens`, f.sens]),
   ];
   if (fiche.legende) sens.push(["legende.sens", fiche.legende.sens]);
   for (const [champ, texte] of sens) {
@@ -132,8 +132,19 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche): Erreur[] {
     }
   });
 
-  // L'œuvre citée d'une lecture traditionnelle appartient à son auteur.
+  // Des tenants n'ont de sens que pour des hypothèses concurrentes.
+  if (fiche.origine && fiche.origine.mode !== "debattue") {
+    fiche.origine.formes.forEach((f, i) => {
+      if (f.selon) ajouter(`origine.formes.${i}.selon`, "des tenants seulement pour une origine débattue (mode: debattue)");
+    });
+  }
+
+  // L'œuvre citée d'une lecture traditionnelle appartient à son auteur ; l'hypothèse visée est une forme d'origine de la fiche.
+  const formesOrigine = new Set((fiche.origine?.formes ?? []).map((f) => f.forme));
   fiche.lecturesTraditionnelles.forEach((l, i) => {
+    if (l.hypothese !== undefined && !formesOrigine.has(l.hypothese)) {
+      ajouter(`lecturesTraditionnelles.${i}.hypothese`, `« ${l.hypothese} » n'est pas une forme d'origine de la fiche (origine.formes)`);
+    }
     const oeuvres = OEUVRES_DE.get(l.auteur) ?? [];
     l.sources.forEach((s, j) => {
       if (!oeuvres.includes(s.ouvrage)) {

@@ -23,7 +23,6 @@ describe("validerDepot", () => {
       /^depot-fautif\/fiches\/e\/et\/mal-range\.yaml › \(emplacement\) : .*« m\/ma\/mal-range\.yaml »/,
       /^depot-fautif\/fiches\/l\/la\/langue\.yaml › langue : /,
       /^depot-fautif\/fiches\/l\/la\/langue\.yaml › sources\.0\.ouvrage : /,
-      /^depot-fautif\/fiches\/l\/la\/langue\.yaml › sources\.1\.url : indiquer une page ou une url/,
       /^depot-fautif\/fiches\/d\/do\/doublet\.yaml › doublets : fiche « absent » introuvable/,
       /^depot-fautif\/candidats\/Z\.yaml › \(fichier\) : /,
       /^depot-fautif\/candidats\/d\.yaml › 0\.raison : /,

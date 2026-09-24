@@ -7,8 +7,6 @@ explication: >
   Ambigere, c'est pousser des deux côtés à la fois : ambi, de part et d'autre,
   et agere, mener. L'ambigu tire dans deux directions ; on ne sait de quel côté
   il ira.
-incertain: false
-doublets: []
 famille: [ ambiant, ambidextre ]
 themes: [ parole, esprit ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

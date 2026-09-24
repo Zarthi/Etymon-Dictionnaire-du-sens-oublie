@@ -7,8 +7,6 @@ explication: >
   Angere, c'est serrer, étrangler. L'anxieux est un homme serré, oppressé, comme
   l'angoissé est un homme à l'étroit. Les deux mots viennent du même geste qui
   prend à la gorge.
-incertain: false
-doublets: []
 famille: [ angoisse, angine ]
 themes: [ émotions, corps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

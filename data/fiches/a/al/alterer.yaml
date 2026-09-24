@@ -7,8 +7,6 @@ explication: >
   Altérer, c'est rendre autre : alter. Le vin altéré a changé, pour le pire ;
   l'homme altéré a soif, son corps a changé d'état. Dans tous les sens, quelque
   chose n'est plus ce qu'il était.
-incertain: false
-doublets: []
 famille: [ autre, alternative, altérité ]
 themes: [ corps, nature ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,8 +7,6 @@ explication: >
   Affligere, c'est frapper contre, jeter au sol. L'affligé est un homme abattu
   au sens propre, renversé par le coup. Le chagrin a gardé la posture du corps
   qui tombe.
-incertain: false
-doublets: []
 famille: [ affliction, infliger, conflit ]
 themes: [ émotions ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

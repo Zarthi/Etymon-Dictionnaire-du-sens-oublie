@@ -7,8 +7,6 @@ explication: >
   Avouer, c'est d'abord appeler quelqu'un pour garant : le vassal avoue un
   seigneur, le reconnaît pour maître. Avouer une faute, c'est encore la
   reconnaître pour sienne, s'en porter garant.
-incertain: false
-doublets: []
 famille: [ avouer, avocat, désaveu ]
 themes: [ droit, morale, parole ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -8,8 +8,6 @@ explication: >
   Pour les stoïciens, l'apatheia est une vertu : l'âme que les passions
   n'atteignent plus. Nous en avons fait un défaut, l'absence d'énergie. L'idéal
   du sage est devenu un symptôme.
-incertain: false
-doublets: []
 famille: [ pathétique, sympathie, passion ]
 themes: [ morale, émotions ]
 sources:
@@ -18,6 +16,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

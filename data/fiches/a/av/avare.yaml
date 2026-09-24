@@ -7,8 +7,6 @@ explication: >
   Avere, c'est désirer ardemment ; l'avarus est un homme avide. L'avare n'est
   pas d'abord celui qui retient, mais celui qui veut toujours plus. La rétention
   n'est que l'envers de l'appétit.
-incertain: false
-doublets: []
 famille: [ avide, avidité ]
 themes: [ morale, argent ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

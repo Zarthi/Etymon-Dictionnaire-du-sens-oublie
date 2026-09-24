@@ -39,5 +39,5 @@ if (import.meta.main) {
     entrees.push(...extraireEntrees(await readFile(fichier, "utf8")));
   }
   await writeFile(FICHIER_INDEX, JSON.stringify(indexer(entrees)));
-  console.log(`✓ ${entrees.length} étymologies du Littré indexées dans sources/littre/index.json`);
+  console.log(`✓ ${entrees.length} entrées du Littré indexées dans sources/littre/index.json`);
 }

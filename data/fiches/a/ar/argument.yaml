@@ -7,8 +7,6 @@ explication: >
   Arguere, c'est faire voir, montrer clairement. L'argument est ce qui éclaire
   une question, la preuve qu'on apporte. Il ne désigne pas la dispute, mais ce
   qui devrait y mettre fin.
-incertain: false
-doublets: []
 famille: [ arguer ]
 themes: [ parole, esprit, savoir ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,15 +7,12 @@ explication: >
   Authentēs est celui qui agit par lui-même, le maître de son acte. Est
   authentique ce qui vient de l'auteur même, sans intermédiaire ni copie.
   L'authenticité est une autorité.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: authéntēs
       graphie: αὐθέντης
       langue: grec ancien
       sens: qui agit de lui-même, maître de son acte
-doublets: []
-famille: []
 themes: [ savoir, droit, morale ]
 sources:
   - ouvrage: Littré
@@ -23,6 +20,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

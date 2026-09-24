@@ -7,8 +7,6 @@ explication: >
   Adolescere, c'est croître. L'adolescent est celui qui grandit encore ;
   l'adulte, adultus, celui qui a fini de grandir. Les deux mots sont les deux
   temps d'un même verbe.
-incertain: false
-doublets: []
 famille: [ adulte ]
 themes: [ famille, corps, temps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

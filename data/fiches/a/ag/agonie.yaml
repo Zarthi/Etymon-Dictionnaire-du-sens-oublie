@@ -7,14 +7,12 @@ explication: >
   L'agonie est un combat : agōn, la lutte des athlètes, puis l'angoisse du
   Christ à Gethsémani. Le mot ne désigne pas l'affaiblissement final, mais le
   dernier corps à corps.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: agōn
       graphie: ἀγών
       langue: grec ancien
       sens: lutte, combat
-doublets: []
 famille: [ antagoniste, protagoniste ]
 themes: [ corps, santé, religion ]
 sources:
@@ -23,6 +21,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -8,8 +8,6 @@ explication: >
   Aristos est le meilleur ; l'aristocratie est le pouvoir des meilleurs, par
   opposition à celui du peuple ou d'un seul. Le mot désigne un idéal avant de
   nommer une classe héréditaire.
-incertain: false
-doublets: []
 famille: [ démocratie, monarchie ]
 themes: [ société, droit ]
 sources:
@@ -18,6 +16,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

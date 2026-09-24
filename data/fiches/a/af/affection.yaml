@@ -7,8 +7,6 @@ explication: >
   Afficere, c'est agir sur. L'affection est l'état de ce qui a été touché,
   modifié : d'où l'affection du médecin, la maladie, et l'affection du cœur, la
   tendresse. Dans les deux cas, on a été atteint.
-incertain: false
-doublets: []
 famille: [ affecter, affectif ]
 themes: [ émotions, santé ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

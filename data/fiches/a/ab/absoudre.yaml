@@ -7,8 +7,6 @@ explication: >
   Absoudre, c'est délier. Le juge qui absout détache l'accusé de sa cause ; le
   prêtre qui absout dénoue le lien de la faute. Le pardon garde ici la forme
   d'un nœud défait.
-incertain: false
-doublets: []
 famille: [ absolu, dissoudre, résoudre ]
 themes: [ droit, religion, morale ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

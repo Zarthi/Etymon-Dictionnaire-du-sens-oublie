@@ -6,8 +6,6 @@ sens: mettre en cause, appeler en justice
 explication: >
   Accuser, c'est mettre en cause : causa, l'affaire, le procès. L'accusé est
   celui qu'on appelle devant la cause ; excuser, c'est l'en faire sortir.
-incertain: false
-doublets: []
 famille: [ cause, excuser, récuser ]
 themes: [ droit, parole ]
 sources:
@@ -16,6 +14,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

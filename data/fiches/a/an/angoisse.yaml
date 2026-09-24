@@ -7,8 +7,6 @@ explication: >
   Angustia est l'étroitesse, le défilé où l'on ne passe qu'à peine. L'angoisse
   est le sentiment d'être à l'étroit : la gorge se serre, la poitrine se
   resserre. Le corps y dit ce que le mot dit.
-incertain: false
-doublets: []
 famille: [ angine, anxiété ]
 themes: [ émotions, corps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

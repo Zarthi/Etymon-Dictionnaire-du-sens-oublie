@@ -7,8 +7,6 @@ explication: >
   L'argent est d'abord le métal, blanc et brillant, dont on frappait les pièces.
   La monnaie a pris le nom de sa matière : nous disons encore argent pour ce qui
   n'en contient plus une once.
-incertain: false
-doublets: []
 famille: [ argenté, argentin ]
 themes: [ argent, commerce, nature ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

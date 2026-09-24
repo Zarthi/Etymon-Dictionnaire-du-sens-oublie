@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseDocument } from "yaml";
+import { controler } from "./lib/controles.ts";
 import { chercher, verdict } from "./lib/littre.ts";
 import { cheminFiche } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
@@ -9,7 +10,10 @@ import { arreterSiErreurs, DOSSIER_DATA, validerDepot } from "./valider-fiches.t
 /**
  * Confronte au Littré local les fiches `a-verifier` (rédigées de mémoire).
  * Concordance sans doute exprimé : la source Littré est ajoutée et la fiche passe en `brouillon`.
- * Sinon, la fiche reste `a-verifier` et figure dans le rapport, pour une vérification à la main.
+ * Sinon, la fiche reste `a-verifier` et figure dans le rapport, pour une vérification à la main
+ * (TLFi pour un mot absent du Littré, postérieur à 1872).
+ * Toutes les fiches passent ensuite les contrôles automatiques (nature, famille, formes d'origine,
+ * reprise du sens), qui signalent sans bloquer.
  */
 if (import.meta.main) {
   const { fiches, erreurs } = await validerDepot();
@@ -19,7 +23,7 @@ if (import.meta.main) {
   let promues = 0;
 
   for (const fiche of fiches.filter((f) => f.statut === "a-verifier")) {
-    const formes = [fiche.etymon, ...(fiche.origine?.hypotheses ?? []).map((h) => h.forme)];
+    const formes = [fiche.etymon, ...(fiche.origine?.formes ?? []).map((f) => f.forme)];
     const v = verdict(formes, chercher(index, fiche.mot));
     if (v.resultat === "concorde") {
       const chemin = join(DOSSIER_DATA, "fiches", cheminFiche(fiche.id));
@@ -32,11 +36,14 @@ if (import.meta.main) {
       await writeFile(chemin, document.toString({ lineWidth: 80 }));
       promues++;
     } else {
-      const extrait = v.resultat === "absent" ? "" : ` — Littré : ${v.entree.etymologie.slice(0, 160)}`;
+      const extrait = v.resultat === "absent" ? " (mot absent du Littré : vérifier au TLFi)" : ` — Littré : ${v.entree.etymologie.slice(0, 160)}`;
       aVoir.push(`${fiche.mot} (${fiche.etymon}) : ${v.resultat}${extrait}`);
     }
   }
 
   console.log(`✓ ${promues} fiche(s) concordante(s) avec le Littré, passée(s) en brouillon.`);
   if (aVoir.length > 0) console.log(`\nÀ vérifier à la main (${aVoir.length}) :\n- ${aVoir.join("\n- ")}`);
+
+  const controles = fiches.flatMap((f) => controler(f, index).map((s) => `${f.mot} › ${s}`));
+  if (controles.length > 0) console.log(`\nContrôles à relire (${controles.length}) :\n- ${controles.join("\n- ")}`);
 }

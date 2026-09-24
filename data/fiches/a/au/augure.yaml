@@ -7,8 +7,6 @@ explication: >
   L'augure romain observe les oiseaux pour y lire la volonté des dieux. Un
   événement de bon augure est un vol favorable ; inaugurer, c'est ouvrir un lieu
   après avoir pris les augures.
-incertain: false
-doublets: []
 famille: [ inaugurer, augural ]
 themes: [ religion, savoir ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

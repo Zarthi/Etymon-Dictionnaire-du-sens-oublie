@@ -7,8 +7,6 @@ explication: >
   L'ange est un messager : angelos, celui qui porte une nouvelle. Le mot ne dit
   rien de sa nature, seulement sa fonction : il est envoyé, il annonce.
   L'Évangile, la bonne nouvelle, porte la même racine.
-incertain: false
-doublets: []
 famille: [ évangile, archange ]
 themes: [ religion, parole ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

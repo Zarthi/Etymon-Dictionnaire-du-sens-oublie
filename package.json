@@ -15,10 +15,12 @@
     "littre": "node scripts/littre.ts",
     "preparer": "node scripts/preparer-fiche.ts",
     "verifier": "node scripts/verifier-fiches.ts",
+    "verifier:en-ligne": "node scripts/verifier-en-ligne.ts",
     "contrat": "node scripts/contrat.ts",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "rediger": "node scripts/rediger-lot.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",

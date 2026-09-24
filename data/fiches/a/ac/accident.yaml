@@ -7,8 +7,6 @@ explication: >
   Accidere, c'est tomber sur. L'accident est ce qui arrive sans être attendu,
   heureux ou non ; la philosophie en garde le sens de ce qui s'ajoute à une
   chose sans tenir à son essence.
-incertain: false
-doublets: []
 famille: [ incident, coïncider, chute ]
 themes: [ esprit, savoir, temps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

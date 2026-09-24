@@ -15,20 +15,7 @@ export function resumer(fiches: FicheIdentifiee[], candidats: Candidat[]) {
     candidatsSansSource: compter(candidats, (c) => c.statut === "sans-source"),
     candidatsEcartes: compter(candidats, (c) => c.statut === "ecarte"),
     lectures: fiches.reduce((n, f) => n + f.lecturesTraditionnelles.length, 0),
-    lecturesIASeule: lecturesIASeule(fiches).length,
   };
-}
-
-/**
- * Lectures traditionnelles sans œuvre consultée et rédigées par l'IA seule. Permises, mais à
- * compléter à terme par une œuvre (une lecture rédigée par Étymon n'est pas signalée).
- */
-export function lecturesIASeule(fiches: FicheIdentifiee[]) {
-  return fiches.flatMap((f) =>
-    f.lecturesTraditionnelles
-      .filter((l) => l.sources.length === 0 && (l.redaction ?? f.redaction).every((r) => r.par === "IA"))
-      .map((l) => ({ mot: f.mot, auteur: l.auteur, chemin: `data/fiches/${cheminFiche(f.id)}` })),
-  );
 }
 
 /** Fiches en brouillon, triées par id : mot, emplacement et incertitude, pour la relecture. */
@@ -47,8 +34,7 @@ export function prochainsCandidats(candidats: Candidat[], nombre: number): strin
 const AIDE = `Usage : npm run etat [-- commande]
   (aucune)          résumé de l'avancement
   brouillons        fiches à relire (aussi : npm run brouillons)
-  candidats [n]     les n prochains mots à traiter (20 par défaut)
-  lectures-ia       lectures traditionnelles sourcées par l'IA seule, à compléter`;
+  candidats [n]     les n prochains mots à traiter (20 par défaut)`;
 
 if (import.meta.main) {
   const { fiches, candidats, erreurs } = await validerDepot();
@@ -57,7 +43,7 @@ if (import.meta.main) {
     const r = resumer(fiches, candidats);
     console.log(`Fiches      : ${r.fiches} (${r.validees} validée(s), ${r.brouillons} brouillon(s), ${r.aVerifier} à vérifier, ${r.incertaines} incertaine(s))`);
     console.log(`Candidats   : ${r.candidatsAFaire} à faire, ${r.candidatsSansSource} sans source, ${r.candidatsEcartes} écarté(s)`);
-    console.log(`Lectures    : ${r.lectures} lecture(s) traditionnelle(s), dont ${r.lecturesIASeule} sourcée(s) par l'IA seule`);
+    console.log(`Lectures    : ${r.lectures} lecture(s) traditionnelle(s)`);
     console.log(`Validation  : ${erreurs.length === 0 ? "conforme" : `${erreurs.length} erreur(s), voir npm run valider`}`);
   } else if (commande === "brouillons") {
     const liste = listerBrouillons(fiches);
@@ -67,10 +53,6 @@ if (import.meta.main) {
 ${liste.length} brouillon(s) à relire.`);
   } else if (commande === "candidats") {
     for (const mot of prochainsCandidats(candidats, Number(argument ?? 20))) console.log(mot);
-  } else if (commande === "lectures-ia") {
-    const liste = lecturesIASeule(fiches);
-    for (const l of liste) console.log(`${l.mot} (${l.auteur})  ${l.chemin}`);
-    console.log(`\n${liste.length} lecture(s) à compléter par une œuvre consultée.`);
   } else {
     console.log(AIDE);
     process.exit(1);

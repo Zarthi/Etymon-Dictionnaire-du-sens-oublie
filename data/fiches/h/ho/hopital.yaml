@@ -6,7 +6,6 @@ sens: lieu hospitalier
 explication: >
   L'hôpital était d'abord un lieu d'hospitalité, où l'on recevait l'hôte. Il
   partage son origine avec hôtel, forme populaire du même mot latin.
-incertain: false
 doublets: [ hotel ]
 famille: [ hôte ]
 themes: [ maison, santé ]
@@ -20,6 +19,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

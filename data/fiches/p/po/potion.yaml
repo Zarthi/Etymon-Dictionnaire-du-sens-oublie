@@ -6,9 +6,6 @@ sens: boisson, breuvage
 explication: >
   Potion est l'emprunt savant du mot latin qui, par la voie populaire, a donné
   poison. Il a gardé le sens de breuvage, spécialisé en remède.
-incertain: false
-doublets: []
-famille: []
 themes: [ santé ]
 sources:
   - ouvrage: Littré
@@ -20,6 +17,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

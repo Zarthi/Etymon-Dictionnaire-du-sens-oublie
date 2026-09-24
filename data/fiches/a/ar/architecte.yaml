@@ -7,14 +7,12 @@ explication: >
   Le tektōn grec est le charpentier, l'artisan qui assemble ; l'architecte est
   celui qui commande aux charpentiers. Le mot dit un métier de chantier, avant
   l'art du dessin.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: arkhitéktōn
       graphie: ἀρχιτέκτων
       langue: grec ancien
       sens: chef des charpentiers
-doublets: []
 famille: [ technique, tectonique ]
 themes: [ travail, maison ]
 sources:
@@ -23,6 +21,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

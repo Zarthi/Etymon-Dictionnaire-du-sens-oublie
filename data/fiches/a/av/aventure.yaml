@@ -7,8 +7,6 @@ explication: >
   Adventura, ce sont les choses à venir, ce qui doit advenir. L'aventure est
   d'abord le sort, ce que l'avenir réserve ; d'où la bonne aventure qu'on dit,
   et le hasard que l'on court.
-incertain: false
-doublets: []
 famille: [ avenir, advenir ]
 themes: [ temps, société ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -7,8 +7,6 @@ explication: >
   Accueillir, c'est cueillir vers soi : accolligere, recueillir, rassembler.
   Celui qu'on accueille est ramassé, mis à l'abri, comme une récolte qu'on
   rentre.
-incertain: false
-doublets: []
 famille: [ cueillir, recueillir, collecte ]
 themes: [ maison, société ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

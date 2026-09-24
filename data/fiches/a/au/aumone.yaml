@@ -6,14 +6,12 @@ sens: pitié, compassion
 explication: >
   L'aumône est la pitié elle-même : eleos, la compassion. Le don n'en est que la
   conséquence. Le mot désignait le sentiment avant la pièce qu'on tend.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: eleēmosýnē
       graphie: ἐλεημοσύνη
       langue: grec ancien
       sens: pitié, miséricorde
-doublets: []
 famille: [ aumônier ]
 themes: [ morale, religion, argent ]
 sources:
@@ -22,6 +20,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

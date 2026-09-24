@@ -7,8 +7,6 @@ explication: >
   L'artifice est l'œuvre de l'art, ce que l'habileté humaine produit. Le mot n'a
   d'abord rien de trompeur : le feu d'artifice en garde le sens d'ouvrage
   savant. La ruse est venue ensuite.
-incertain: false
-doublets: []
 famille: [ art, artisan, artificiel ]
 themes: [ travail, savoir ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

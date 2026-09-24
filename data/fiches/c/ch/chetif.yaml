@@ -7,7 +7,6 @@ explication: >
   Le chétif était d'abord le captif. Les auteurs chrétiens en ont fait le captif
   du péché, digne de pitié ; de là le misérable, puis le faible.
 incertain: true
-doublets: []
 famille: [ captif ]
 themes: [ corps ]
 sources:
@@ -20,6 +19,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

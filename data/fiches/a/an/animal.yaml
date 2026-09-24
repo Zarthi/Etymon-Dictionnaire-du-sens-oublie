@@ -7,8 +7,6 @@ explication: >
   Animal est ce qui a une anima, un souffle : tout être vivant qui respire,
   l'homme compris. Le mot n'oppose pas la bête à l'homme, il les réunit dans le
   souffle.
-incertain: false
-doublets: []
 famille: [ âme, animer ]
 themes: [ nature, corps ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

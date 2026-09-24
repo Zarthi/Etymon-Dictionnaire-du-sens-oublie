@@ -6,7 +6,7 @@
   import TexteRiche from "./TexteRiche.svelte";
 
   /**
-   * Une lecture traditionnelle : le texte, le texte original de l'auteur s'il est donné,
+   * Une lecture traditionnelle : la forme d'origine sur laquelle elle repose, le texte, le texte original de l'auteur,
    * puis la citation d'un seul tenant (auteur, *œuvre*, passage). Sa rédaction propre n'est
    * affichée que si elle diffère de celle de la fiche (`redactionFiche`, en pied de fiche).
    */
@@ -30,10 +30,11 @@
 </script>
 
 <div class="lecture">
-  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} /></p>
-  {#if lecture.citation}
-    <blockquote lang="la">«&nbsp;{lecture.citation}&nbsp;»</blockquote>
+  {#if lecture.hypothese}
+    <p class="hypothese">Sur <em>{lecture.hypothese}</em></p>
   {/if}
+  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} /></p>
+  <blockquote lang="la">«&nbsp;{lecture.citation}&nbsp;»</blockquote>
   <p class="auteur">
     {lecture.auteur}{#each lecture.sources as source, i (i)}{i > 0 ? " ;" : ","} <Source {source} oeuvre />{/each}
   </p>
@@ -55,6 +56,12 @@
     margin: 0.5rem 0 0;
     font-style: italic;
     font-size: 0.95rem;
+    color: var(--texte-discret);
+  }
+  .hypothese {
+    margin-bottom: 0.3rem;
+    font-family: var(--police-interface);
+    font-size: 0.8rem;
     color: var(--texte-discret);
   }
   .auteur {

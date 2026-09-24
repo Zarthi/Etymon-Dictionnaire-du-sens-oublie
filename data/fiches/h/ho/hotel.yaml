@@ -6,8 +6,6 @@ sens: chambre des hôtes
 explication: >
   Le mot latin désignait la chambre où l'on recevait les hôtes. Hôtel en est la
   forme populaire ; hôpital, refait sur le latin, en est l'autre héritier.
-incertain: false
-doublets: []
 famille: [ hôte ]
 themes: [ maison ]
 sources:
@@ -20,6 +18,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

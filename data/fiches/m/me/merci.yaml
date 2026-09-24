@@ -7,8 +7,6 @@ explication: >
   Le mot latin désignait un salaire, une récompense. À basse époque, il devient
   la grâce qu'on accorde en épargnant quelqu'un ; dire merci, c'est reconnaître
   cette faveur.
-incertain: false
-doublets: []
 famille: [ marchand ]
 themes: [ argent, parole ]
 sources:
@@ -21,6 +19,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

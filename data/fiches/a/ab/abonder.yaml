@@ -6,8 +6,6 @@ sens: déborder, couler à flots
 explication: >
   L'abondance est d'abord celle d'une eau qui déborde : unda, la vague. Ce qui
   abonde ne remplit pas seulement, il passe par-dessus bord.
-incertain: false
-doublets: []
 famille: [ onde, inonder, abondance ]
 themes: [ nature, argent ]
 sources:
@@ -16,6 +14,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

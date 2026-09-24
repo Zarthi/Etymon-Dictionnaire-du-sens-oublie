@@ -1,19 +1,10 @@
 [
-  { "nom": "Platon", "oeuvres": ["Cratyle"] },
-  { "nom": "Varron", "oeuvres": ["De la langue latine"] },
-  { "nom": "Cicéron", "oeuvres": ["De la nature des dieux"] },
-  { "nom": "Lactance", "oeuvres": ["Institutions divines"] },
-  { "nom": "Augustin", "oeuvres": ["La Cité de Dieu", "De la vraie religion", "Rétractations", "Confessions"] },
-  { "nom": "Isidore de Séville", "oeuvres": ["Étymologies"] },
-  { "nom": "Thomas d'Aquin", "oeuvres": ["Somme théologique"] },
-  {
-    "nom": "René Guénon",
-    "oeuvres": [
-      "Introduction générale à l'étude des doctrines hindoues",
-      "La Crise du monde moderne",
-      "Le Règne de la quantité et les signes des temps",
-      "Aperçus sur l'initiation",
-      "Symboles de la Science sacrée"
-    ]
-  }
+  { "nom": "Platon", "role": "tradition", "oeuvres": ["Cratyle"] },
+  { "nom": "Varron", "role": "tradition", "oeuvres": ["De la langue latine"] },
+  { "nom": "Cicéron", "role": "tradition", "oeuvres": ["De la nature des dieux"] },
+  { "nom": "Lactance", "role": "tradition", "oeuvres": ["Institutions divines"] },
+  { "nom": "Augustin", "role": "tradition", "oeuvres": ["La Cité de Dieu", "De la vraie religion", "Rétractations", "Confessions"] },
+  { "nom": "Isidore de Séville", "role": "tradition", "oeuvres": ["Étymologies"] },
+  { "nom": "Thomas d'Aquin", "role": "tradition", "oeuvres": ["Somme théologique"] },
+  { "nom": "René Guénon", "role": "tradition", "oeuvres": ["Introduction générale à l'étude des doctrines hindoues", "La Crise du monde moderne", "Le Règne de la quantité et les signes des temps", "Aperçus sur l'initiation", "Symboles de la Science sacrée"] }
 ]

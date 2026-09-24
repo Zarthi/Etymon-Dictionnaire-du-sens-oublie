@@ -1,6 +1,6 @@
 [
   { "nom": "Littré", "url": "https://www.littre.org/definition/{entree}" },
   { "nom": "Gaffiot", "url": "https://gaffiot.fr/#{entree}" },
-  { "nom": "Bailly" },
+  { "nom": "Bailly", "url": "https://bailly.app/{grec}" },
   { "nom": "TLFi", "url": "https://www.cnrtl.fr/etymologie/{entree}" }
 ]

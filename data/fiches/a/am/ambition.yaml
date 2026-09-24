@@ -7,8 +7,6 @@ explication: >
   Ambire, c'est aller autour. L'ambitio romaine est la tournée du candidat qui
   sollicite les votes. L'ambition est d'abord une démarche, le tour que l'on
   fait pour obtenir une charge.
-incertain: false
-doublets: []
 famille: [ ambiant, ambiance ]
 themes: [ société, morale ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

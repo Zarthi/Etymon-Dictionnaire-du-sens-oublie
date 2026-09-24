@@ -24,7 +24,7 @@ const url = z
 export const schemaSource = z
   .object({
     ouvrage: z.enum(NOMS_OUVRAGES).describe("Ouvrage consulté (liste fermée : data/sources.json)."),
-    entree: z.string().min(1).describe("Entrée consultée dans l'ouvrage (ex. « étonner », « adtono »)."),
+    entree: z.string().min(1).describe("Entrée consultée dans l'ouvrage (« étonner », « adtono », « φρήν »)."),
     page,
     url,
   })
@@ -35,20 +35,24 @@ export const schemaSource = z
   })
   .describe("Ouvrage consulté pour l'étymologie.");
 
-/** Auteurs de la tradition et leurs œuvres, en liste fermée : pas de variantes d'un même nom. */
+/** Auteurs et leurs œuvres, en liste fermée : pas de variantes d'un même nom. */
 const nomsAuteurs = auteurs.map((a) => a.nom);
+/** Seuls les auteurs de la tradition signent une lecture traditionnelle ; les philologues soutiennent des hypothèses. */
+const nomsTradition = auteurs.filter((a) => a.role === "tradition").map((a) => a.nom);
 const oeuvres = auteurs.flatMap((a) => a.oeuvres);
 
-/** Source d'une lecture traditionnelle : une œuvre de la liste, et le passage précis. */
+/** Source d'une lecture traditionnelle : une œuvre de la liste, le passage précis et le texte en ligne. */
 export const schemaSourceTraditionnelle = z
   .object({
     ouvrage: z.enum(oeuvres).describe("Œuvre de l'auteur (liste fermée : data/auteurs.json)."),
     entree: z.string().min(1).describe("Passage précis (ex. « IV, 28, 3 »)."),
     page,
-    url,
+    url: z
+      .url({ protocol: /^https$/ })
+      .describe("Adresse (https) du texte original, du domaine public : npm run verifier:en-ligne y cherche la citation."),
   })
   .strict()
-  .describe("Œuvre consultée pour une lecture traditionnelle, et passage précis.");
+  .describe("Œuvre consultée pour une lecture traditionnelle, passage précis et texte en ligne.");
 
 /** Qui a rédigé : le moteur d'IA (et son modèle) ou l'équipe d'Étymon (et la nature de sa contribution). */
 export const schemaRedaction = z
@@ -69,22 +73,24 @@ const graphie = z
   .optional()
   .describe("Écriture d'origine si l'alphabet n'est pas latin (ἀνάλυσις, صفر) ; la forme en garde la translittération.");
 
-/** Qui soutient une hypothèse : un auteur de la tradition ou un ouvrage consulté. */
-const tenants = [...nomsAuteurs, ...NOMS_OUVRAGES];
-
-export const schemaHypothese = z
+export const schemaFormeOrigine = z
   .object({
-    forme: z.string().min(1).describe("Forme d'origine proposée."),
+    forme: z.string().min(1).describe("Forme d'origine ; reconstruite, elle commence par * et s'écrit entre guillemets."),
     graphie,
     langue: z.string().min(1).describe("Langue de cette forme (latin, grec ancien, arabe, indo-européen…)."),
     sens: z.string().min(1).describe("Sens de cette forme, sans guillemets."),
     selon: z
-      .array(z.enum(tenants))
+      .array(z.enum(nomsAuteurs))
       .optional()
-      .describe("Qui soutient cette hypothèse : auteurs (data/auteurs.json) ou ouvrages (data/sources.json)."),
+      .describe(
+        "Origine débattue seulement : qui a proposé ou défend cette hypothèse (data/auteurs.json). Un ouvrage qui la rapporte n'en est pas tenant : il figure dans sources.",
+      ),
   })
   .strict()
-  .describe("Une forme d'origine proposée pour l'étymon.");
+  .describe("Une forme d'origine de l'étymon.");
+
+/** Comment les formes d'origine se lisent : l'une après l'autre, ensemble, ou l'une ou l'autre. */
+export const MODES_ORIGINE = ["filiation", "composition", "debattue"] as const;
 
 export const schemaLectureTraditionnelle = z
   .object({
@@ -92,12 +98,19 @@ export const schemaLectureTraditionnelle = z
       .string()
       .trim()
       .min(1)
-      .describe("Le sens doctrinal, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."),
-    citation: z.string().trim().min(1).optional().describe("Texte original de l'auteur, dans sa langue."),
-    auteur: z.enum(nomsAuteurs).describe("Auteur de la tradition (liste fermée : data/auteurs.json)."),
-    sources: z
-      .array(schemaSourceTraditionnelle)
-      .describe("Œuvres de l'auteur consultées. Vide : la lecture repose sur sa seule rédaction (signalé par npm run etat si c'est l'IA)."),
+      .describe("Sens que la doctrine donne au mot, sans commencer par le nom de l'auteur ni répéter l'hypothèse étymologique."),
+    citation: z
+      .string()
+      .trim()
+      .min(1)
+      .describe("Texte original de l'auteur, dans sa langue, tel qu'il figure à l'adresse de la source ([…] pour une coupe)."),
+    auteur: z.enum(nomsTradition).describe("Auteur de la tradition (data/auteurs.json, rôle tradition)."),
+    hypothese: z
+      .string()
+      .min(1)
+      .optional()
+      .describe("Forme d'origine (origine.formes) sur laquelle repose la lecture : le texte n'a pas à la répéter."),
+    sources: z.array(schemaSourceTraditionnelle).min(1).describe("Œuvres de l'auteur consultées."),
     redaction: z
       .array(schemaRedaction)
       .min(1)
@@ -105,9 +118,12 @@ export const schemaLectureTraditionnelle = z
       .describe("Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche."),
   })
   .strict()
-  .describe("Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie.");
+  .describe(
+    "Sens donné au mot par une doctrine traditionnelle, distinct de l'étymologie. La tradition doit avoir lu le mot lui-même, pas la chose qu'il désigne aujourd'hui.",
+  );
 
-export const schemaFiche = z
+/** Champs de la fiche ; la règle entre champs s'ajoute dans schemaFiche. */
+const objetFiche = z
   .object({
     mot: z.string().min(1).describe("Le mot français, tel qu'on l'écrit (le nom du fichier en est la forme sans accent)."),
     nature: z.array(z.enum(NATURES)).min(1).describe("Catégorie(s) grammaticale(s) ; « nom » pour les épicènes."),
@@ -117,7 +133,20 @@ export const schemaFiche = z
       .describe("Forme source, dans la langue source directe ; reconstruite, elle commence par * et s'écrit entre guillemets."),
     graphie,
     langue: z.enum(langues).describe("Langue source directe de l'étymon (liste fermée : data/langues.json)."),
-    sens: z.string().min(1).describe("Sens de l'étymon, sans guillemets (l'app les ajoute)."),
+    forge: z
+      .object({
+        par: z.string().min(1).describe("Qui a forgé le mot (« Eugen Bleuler »)."),
+        annee: z.number().int().min(1000).max(2100).describe("Année de la création, selon la source consultée."),
+      })
+      .strict()
+      .optional()
+      .describe("Mot savant forgé par un auteur connu : qui, et quand."),
+    sens: z
+      .string()
+      .min(1)
+      .describe(
+        "Sens de l'étymon, sans guillemets (l'app les ajoute). Pour un mot forgé ou composé, le sens littéral de ses éléments ; l'intention de l'auteur va dans l'explication.",
+      ),
     explication: z
       .string()
       .trim()
@@ -134,37 +163,72 @@ export const schemaFiche = z
       .strict()
       .optional()
       .describe("Étymologie populaire démentie."),
-    incertain: z.boolean().describe("L'étymon lui-même est douteux (une origine débattue relève de origine.debattue)."),
+    incertain: z
+      .boolean()
+      .default(false)
+      .describe("L'étymon lui-même est douteux (une origine débattue relève de origine.mode). Faux si absent."),
     origine: z
       .object({
-        debattue: z.boolean().optional().describe("Plusieurs hypothèses, aucune établie."),
-        hypotheses: z.array(schemaHypothese).min(1).describe("Une ou plusieurs formes d'origine."),
+        mode: z
+          .enum(MODES_ORIGINE)
+          .default("filiation")
+          .describe(
+            "filiation (défaut) : l'étymon vient de ces formes, l'une de l'autre ; composition : il est formé de ces éléments ; debattue : plusieurs hypothèses, la plus suivie en premier.",
+          ),
+        formes: z.array(schemaFormeOrigine).min(1).describe("Formes d'origine, dans l'ordre de lecture."),
       })
       .strict()
+      .refine((o) => o.mode === "filiation" || o.formes.length >= 2, {
+        message: "une composition ou une origine débattue a au moins deux formes",
+        path: ["formes"],
+      })
       .optional()
       .describe("D'où vient l'étymon, ou ancêtre plus ancien qui ajoute du sens."),
     doublets: z
       .array(z.string())
+      .default([])
       .describe("Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches."),
-    famille: z.array(z.string()).describe("Mots français apparentés."),
+    famille: z.array(z.string()).default([]).describe("Mots français apparentés, de la même racine."),
     themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
-    sources: z.array(schemaSource).describe("Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier."),
-    redaction: z.array(schemaRedaction).min(1).describe("Qui a rédigé la fiche ; affiché une fois, en pied de fiche."),
-    lecturesTraditionnelles: z.array(schemaLectureTraditionnelle).describe("Lectures traditionnelles, une par tradition (souvent aucune)."),
+    sources: z
+      .array(schemaSource)
+      .default([])
+      .describe("Ouvrages consultés pour l'étymologie ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire."),
+    redaction: z.array(schemaRedaction).min(1).describe("Qui a rédigé la fiche ; affiché une fois, en pied de fiche. Écrit par npm run rediger."),
+    lecturesTraditionnelles: z
+      .array(schemaLectureTraditionnelle)
+      .default([])
+      .describe("Lectures traditionnelles, rédigées dans une passe à part, texte source sous les yeux (souvent aucune)."),
     statut: z
       .enum(["a-verifier", "brouillon", "validee"])
       .describe("a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."),
     historique: z
       .array(z.object({ date, note: z.string().min(1).describe("Nature de la correction.") }).strict())
+      .default([])
       .describe("Corrections successives (ex. suite à une Critique)."),
   })
-  .strict()
+  .strict();
+
+export const schemaFiche = objetFiche
   // Lecture profane : hors a-verifier, au moins un ouvrage réellement consulté.
   .refine((f) => f.statut === "a-verifier" || f.sources.length > 0, {
     message: "au moins un ouvrage consulté (seules les fiches a-verifier en sont dispensées)",
     path: ["sources"],
   })
   .describe("Fiche d'Étymon : un mot, son étymon, ce que le sens premier révèle.");
+
+/**
+ * Ce que l'IA écrit pour une fiche (npm run rediger) : le contenu seul. Le statut, la rédaction,
+ * les sources (npm run verifier, ou à la main) et les lectures traditionnelles (passe à part)
+ * sont écrits par les scripts ; la nature est tirée du Littré quand elle manque.
+ */
+export const schemaEntreeRedaction = objetFiche
+  .omit({ sources: true, redaction: true, lecturesTraditionnelles: true, statut: true, historique: true })
+  .extend({
+    nature: objetFiche.shape.nature.optional().describe("Catégorie(s) grammaticale(s) ; tirée du Littré si absente."),
+  })
+  .strict()
+  .describe("Contenu d'une fiche rédigée par l'IA.");
 
 /** Mot envisagé pour le dictionnaire, tant qu'il n'a pas de fiche. */
 export const schemaCandidat = z

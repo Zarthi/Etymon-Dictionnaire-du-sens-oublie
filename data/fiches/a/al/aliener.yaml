@@ -7,8 +7,6 @@ explication: >
   Alienus, c'est ce qui appartient à un autre. Aliéner un bien, c'est le faire
   passer à autrui ; être aliéné, c'est devenir autre à soi-même, étranger à sa
   propre raison.
-incertain: false
-doublets: []
 famille: [ autre, autrui, alias ]
 themes: [ droit, esprit, société ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

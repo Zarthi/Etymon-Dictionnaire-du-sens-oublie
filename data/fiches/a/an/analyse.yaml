@@ -8,8 +8,6 @@ explication: >
   Analyein, c'est délier, défaire. L'analyse dénoue : elle sépare ce qui était
   lié pour en voir les éléments. Elle s'oppose à la synthèse, qui remet
   ensemble.
-incertain: false
-doublets: []
 famille: [ paralysie, catalyse ]
 themes: [ savoir, esprit ]
 sources:
@@ -18,6 +16,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

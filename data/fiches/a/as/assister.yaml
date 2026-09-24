@@ -7,8 +7,6 @@ explication: >
   Assister, c'est se tenir debout à côté : assistere. Celui qui assiste à une
   cérémonie s'y tient présent ; celui qui assiste un malade se tient près de
   lui. Les deux sens sont un seul, celui de la présence.
-incertain: false
-doublets: []
 famille: [ consister, persister, résister ]
 themes: [ société, santé ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

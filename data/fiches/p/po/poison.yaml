@@ -6,9 +6,7 @@ sens: boisson, breuvage
 explication: >
   Le poison n'était d'abord qu'une boisson. Le mot s'est restreint au breuvage
   malfaisant, et de féminin il est devenu masculin au XVIe siècle.
-incertain: false
 doublets: [ potion ]
-famille: []
 themes: [ santé ]
 sources:
   - ouvrage: Littré
@@ -20,6 +18,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

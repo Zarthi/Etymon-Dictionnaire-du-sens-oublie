@@ -6,8 +6,6 @@ sens: appelé auprès, appelé en aide
 explication: >
   L'avocat est celui qu'on appelle à ses côtés : ad-vocare. Il est d'abord l'ami
   qu'on fait venir pour vous soutenir devant le juge, avant d'être un métier.
-incertain: false
-doublets: []
 famille: [ aveu, avouer, vocation, voix ]
 themes: [ droit, parole ]
 sources:
@@ -16,6 +14,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -1,16 +1,15 @@
 import { describe, expect, it } from "vitest";
 import type { Redaction } from "../../src/lib/sources.ts";
 import type { Candidat, FicheIdentifiee, LectureTraditionnelle } from "../../src/lib/types.ts";
-import { lecturesIASeule, listerBrouillons, prochainsCandidats, resumer } from "../etat.ts";
+import { listerBrouillons, prochainsCandidats, resumer } from "../etat.ts";
 
 const IA: Redaction[] = [{ par: "IA", detail: "Claude Opus 5.5" }];
-const ETYMON: Redaction[] = [{ par: "Étymon", detail: "rédaction de Thibault" }];
 
 const fiche = (id: string, statut: FicheIdentifiee["statut"], incertain = false, lectures: LectureTraditionnelle[] = []) =>
   ({ id, mot: id, statut, incertain, redaction: IA, lecturesTraditionnelles: lectures }) as FicheIdentifiee;
-/** Lecture citant les œuvres données (aucune : fondée sur la seule rédaction). */
-const lecture = (auteur: string, oeuvres: string[], redaction?: Redaction[]) =>
-  ({ texte: "Lecture.", auteur, sources: oeuvres.map((ouvrage) => ({ ouvrage, entree: "I, 1" })), redaction }) as LectureTraditionnelle;
+/** Lecture citant les œuvres données. */
+const lecture = (auteur: string, oeuvres: string[]) =>
+  ({ texte: "Lecture.", citation: "Texte.", auteur, sources: oeuvres.map((ouvrage) => ({ ouvrage, entree: "I, 1", url: "https://example.org" })) }) as LectureTraditionnelle;
 
 const candidats: Candidat[] = [
   { mot: "ennui", statut: "a-faire" },
@@ -23,7 +22,7 @@ const candidats: Candidat[] = [
 describe("resumer", () => {
   it("compte fiches, candidats et lectures traditionnelles", () => {
     const fiches = [
-      fiche("a", "validee", false, [lecture("Lactance", ["Institutions divines"]), lecture("Isidore de Séville", [])]),
+      fiche("a", "validee", false, [lecture("Lactance", ["Institutions divines"]), lecture("Isidore de Séville", ["Étymologies"])]),
       fiche("b", "brouillon", true),
       fiche("c", "brouillon"),
       fiche("d", "a-verifier"),
@@ -38,21 +37,7 @@ describe("resumer", () => {
       candidatsSansSource: 1,
       candidatsEcartes: 1,
       lectures: 2,
-      lecturesIASeule: 1,
     });
-  });
-});
-
-describe("lecturesIASeule", () => {
-  it("signale les lectures sans œuvre rédigées par l'IA, pas celles qui citent une œuvre ou rédigées par Étymon", () => {
-    const fiches = [
-      fiche("religion", "brouillon", false, [
-        lecture("Lactance", ["Institutions divines"]),
-        lecture("René Guénon", []),
-        lecture("Augustin", [], ETYMON),
-      ]),
-    ];
-    expect(lecturesIASeule(fiches)).toEqual([{ mot: "religion", auteur: "René Guénon", chemin: "data/fiches/r/re/religion.yaml" }]);
   });
 });
 

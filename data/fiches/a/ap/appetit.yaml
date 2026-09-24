@@ -7,8 +7,6 @@ explication: >
   Appetere, c'est chercher à atteindre. L'appétit est toute tendance vers une
   chose : les scolastiques parlent d'appétit sensible et d'appétit rationnel, la
   volonté. Nous l'avons réduit à la faim.
-incertain: false
-doublets: []
 famille: [ compétence, pétition, répéter ]
 themes: [ émotions, nourriture, esprit ]
 sources:
@@ -17,6 +15,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

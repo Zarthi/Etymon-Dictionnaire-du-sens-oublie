@@ -6,8 +6,6 @@ sens: délié, détaché, achevé
 explication: >
   L'absolu est ce qui a été délié : absolvere, détacher. Est absolu ce qui ne
   dépend de rien, ce que ne retient aucun lien, aucune condition.
-incertain: false
-doublets: []
 famille: [ absoudre, dissoudre, soluble ]
 themes: [ esprit, savoir ]
 sources:
@@ -16,6 +14,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

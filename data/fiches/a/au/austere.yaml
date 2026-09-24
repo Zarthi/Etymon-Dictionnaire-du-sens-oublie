@@ -6,14 +6,12 @@ sens: âpre au goût, rude
 explication: >
   Austērós se dit d'un vin âpre, qui dessèche la bouche. L'austère est d'abord
   une saveur, rude et sans douceur ; la morale a emprunté le mot au palais.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: austērós
       graphie: αὐστηρός
       langue: grec ancien
       sens: qui assèche la langue
-doublets: []
 famille: [ austérité ]
 themes: [ morale, nourriture ]
 sources:
@@ -22,6 +20,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

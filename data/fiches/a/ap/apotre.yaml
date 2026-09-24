@@ -6,9 +6,6 @@ sens: envoyé
 explication: >
   Apostellein, c'est envoyer au loin. L'apôtre est un envoyé, chargé d'une
   mission ; le mot dit le départ et le mandat, non la sainteté.
-incertain: false
-doublets: []
-famille: []
 themes: [ religion ]
 sources:
   - ouvrage: Littré
@@ -16,6 +13,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Fable 5.1
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

@@ -44,7 +44,9 @@
   <p class="nature">{fiche.nature.join(" et ")}</p>
   <p class="etymon">
     {origine(fiche.langue)}
-    <Forme forme={fiche.etymon} graphie={fiche.graphie} />&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
+    <Forme forme={fiche.etymon} graphie={fiche.graphie} />{#if fiche.forge}<span class="forge"
+        >, forgé par {fiche.forge.par} en {fiche.forge.annee}</span
+      >{/if}&nbsp;: <span class="sens">«&nbsp;{fiche.sens}&nbsp;»</span>
     {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
   </p>
 
@@ -141,6 +143,10 @@
   }
   .sens {
     color: var(--accent);
+  }
+  .forge {
+    font-size: 1rem;
+    color: var(--texte-discret);
   }
   .explication {
     margin: 0;

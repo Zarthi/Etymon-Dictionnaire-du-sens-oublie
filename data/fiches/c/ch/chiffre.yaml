@@ -7,15 +7,13 @@ explication: >
   Le chiffre fut d'abord le zéro, signe vide de toute valeur dans la numération
   venue des Arabes. Le nom de ce signe nouveau s'est ensuite étendu à tous les
   signes de numération.
-incertain: false
 origine:
-  hypotheses:
+  formes:
     - forme: ṣifr
       graphie: صفر
       langue: arabe
       sens: vide
 doublets: [ zero ]
-famille: []
 themes: [ savoir ]
 sources:
   - ouvrage: Littré
@@ -25,6 +23,4 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
-lecturesTraditionnelles: []
 statut: brouillon
-historique: []

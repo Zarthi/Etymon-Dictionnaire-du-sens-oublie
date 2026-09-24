@@ -1,0 +1,36 @@
+mot: schizophrénie
+nature: [ nom féminin ]
+etymon: Schizophrenie
+langue: allemand
+forge:
+  par: Eugen Bleuler
+  annee: 1911
+sens: esprit fendu
+explication: >-
+  Bleuler désignait la discordance entre pensée, affects et volonté, non un
+  dédoublement de la personnalité, contresens devenu courant. Le phrēn grec est
+  d'abord le diaphragme : on logeait la pensée dans la poitrine.
+origine:
+  mode: composition
+  formes:
+    - forme: schizō
+      graphie: σχίζω
+      langue: grec ancien
+      sens: fendre
+    - forme: phrēn
+      graphie: φρήν
+      langue: grec ancien
+      sens: diaphragme, puis siège des passions et de la pensée
+famille: [ schizophrène, frénésie, frénétique ]
+themes: [ esprit, santé ]
+sources:
+  - ouvrage: TLFi
+    entree: schizophrénie
+  - ouvrage: Bailly
+    entree: σχίζω
+  - ouvrage: Bailly
+    entree: φρήν
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon
