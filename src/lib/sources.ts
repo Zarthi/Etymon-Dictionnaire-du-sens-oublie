@@ -1,26 +1,20 @@
-/** Moteur d'IA qui a rédigé : `entree` en donne le modèle. */
-export const IA = "IA";
+/** Qui peut rédiger une fiche ou une lecture : le moteur d'IA, ou l'équipe d'Étymon (Thibault, un lecteur via Critique). */
+export const REDACTEURS = ["IA", "Étymon"] as const;
+export type Redacteur = (typeof REDACTEURS)[number];
 
-/** Contribution humaine (Thibault, ou un lecteur via Critique) : `entree` la décrit. */
-export const REDACTION = "Étymon, rédaction";
-
-/** Sources sans page ni adresse : elles disent qui a rédigé, pas quel ouvrage a été consulté. */
-export const SOURCES_DE_REDACTION: string[] = [IA, REDACTION];
-
-type SourceMinimale = { ouvrage: string; entree: string };
-
-export function estRedaction(source: SourceMinimale): boolean {
-  return SOURCES_DE_REDACTION.includes(source.ouvrage);
+export interface Redaction {
+  par: Redacteur;
+  /** Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution (« correction suite à une Critique »). */
+  detail: string;
 }
 
 /**
- * Signature de la rédaction d'une liste de sources, indépendante de l'ordre :
- * deux parties rédigées de la même façon ont la même signature.
+ * Signature d'une rédaction, indépendante de l'ordre : deux parties rédigées de la même
+ * façon ont la même signature.
  */
-export function signatureRedaction(sources: SourceMinimale[]): string {
-  return sources
-    .filter(estRedaction)
-    .map((s) => `${s.ouvrage} : ${s.entree}`)
+export function signatureRedaction(redaction: Redaction[]): string {
+  return redaction
+    .map((r) => `${r.par} : ${r.detail}`)
     .sort()
     .join(" | ");
 }

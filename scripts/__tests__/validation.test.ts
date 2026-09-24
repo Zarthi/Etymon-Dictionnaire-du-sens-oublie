@@ -31,6 +31,7 @@ const ficheBase = {
     { ouvrage: "Littré", entree: "étonner", url: "https://example.org/littre/etonner" },
     { ouvrage: "Gaffiot", entree: "extono", page: 1 },
   ],
+  redaction: [{ par: "IA", detail: "Claude Opus 5.5" }],
   lecturesTraditionnelles: [],
   statut: "brouillon",
   historique: [],
@@ -110,19 +111,28 @@ describe("validerFiches : fiche conforme", () => {
   });
   it("accepte une fiche a-verifier sans source ou avec l'IA pour seule source", () => {
     expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
-    expect(erreursDe({ statut: "a-verifier", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] })).toEqual([]);
+    expect(erreursDe({ statut: "a-verifier", sources: [], redaction: [{ par: "IA", detail: "Claude Fable 5.1" }] })).toEqual([]);
   });
   it("accepte une lecture traditionnelle dont l'IA est la seule source", () => {
-    const lecture = { texte: "Lecture.", auteur: "Isidore de Séville", sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] };
+    const lecture = { texte: "Lecture.", auteur: "Isidore de Séville", sources: [] };
     expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
   });
   it("accepte la rédaction d'Étymon, sans page ni url, à côté d'un ouvrage consulté", () => {
-    const sources = [...ficheBase.sources, { ouvrage: "Étymon, rédaction", entree: "correction suite à une Critique" }];
-    expect(erreursDe({ sources })).toEqual([]);
+    const redaction = [...ficheBase.redaction, { par: "Étymon", detail: "correction suite à une Critique" }];
+    expect(erreursDe({ redaction })).toEqual([]);
   });
-  it("accepte l'IA, sans page ni url, à côté d'un ouvrage consulté", () => {
-    const sources = [...ficheBase.sources, { ouvrage: "IA", entree: "Claude Opus 5.5" }];
-    expect(erreursDe({ sources })).toEqual([]);
+  it("accepte une lecture traditionnelle avec citation originale et rédaction propre", () => {
+    const lecture = {
+      texte: "Lecture.",
+      citation: "hunc eligentes uel potius religentes",
+      auteur: "Augustin",
+      sources: [{ ouvrage: "La Cité de Dieu", entree: "X, 3" }],
+      redaction: [{ par: "Étymon", detail: "rédaction de Thibault" }],
+    };
+    expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([]);
+  });
+  it("accepte une racine incertaine", () => {
+    expect(erreursDe({ racine: { forme: "relegere", langue: "latin", sens: "recueillir avec soin", incertain: true } })).toEqual([]);
   });
   it("accepte un suffixe numérique pour les homonymes", () => {
     expect(erreursDe({}, "e/et/etonner-2.yaml")).toEqual([]);
@@ -167,19 +177,25 @@ describe("validerFiches : structure", () => {
     ["sources.0", { sources: ["Littré"] }],
     ["sources", { sources: [] }],
     ["sources", { sources: [], statut: "validee" }],
-    ["sources", { sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] }],
-    ["sources.0.url", { sources: [{ ouvrage: "Littré", entree: "étonner" }, { ouvrage: "IA", entree: "Claude" }] }],
+    ["sources.0.ouvrage", { sources: [{ ouvrage: "IA", entree: "Claude Fable 5.1" }] }],
+    ["redaction", { redaction: [] }],
+    ["redaction.0.par", { redaction: [{ par: "Robot", detail: "x" }] }],
+    ["redaction.0.detail", { redaction: [{ par: "IA" }] }],
     ["incertain", { incertain: "non" }],
     ["reconstruit", { reconstruit: "oui" }],
     ["historique.0.date", { historique: [{ date: "23/09/2026", note: "Correction." }] }],
     ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin" }] }],
-    ["lecturesTraditionnelles.0.sources", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin", sources: [] }] }],
+    ["lecturesTraditionnelles.0.auteur", { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Isidore", sources: [] }] }],
+    [
+      "lecturesTraditionnelles.0.sources.0.ouvrage",
+      { lecturesTraditionnelles: [{ texte: "Lecture.", auteur: "Augustin", sources: [{ ouvrage: "Cité de Dieu", entree: "X, 3" }] }] },
+    ],
     ["lecturesTraditionnelles", { lecturesTraditionnelles: null }],
     ["nature", { nature: [] }],
     ["nature.0", { nature: ["substantif"] }],
     ["graphie", { graphie: "" }],
     ["legende", { legende: "  " }],
-    ["sources", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
+    ["sources.0.ouvrage", { sources: [{ ouvrage: "Étymon, rédaction", entree: "Thibault" }] }],
     ["racine.sens", { racine: { forme: "*x", langue: "indo-européen" } }],
   ])("signale le champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs.map((e) => e.champ)).toEqual([champ]);
@@ -263,7 +279,7 @@ describe("validerFiches : balisage", () => {
   it("signale un italique mal fermé dans l'explication, la légende ou une lecture traditionnelle", () => {
     expect(erreursDe({ explication: "Du latin _religio." })).toEqual(["explication : italique mal fermé : « _ » isolé"]);
     expect(erreursDe({ legende: "On dit _sine cera." })).toEqual(["legende : italique mal fermé : « _ » isolé"]);
-    const lecture = { texte: "Lactance dit _religare.", auteur: "Lactance", sources: [{ ouvrage: "IA", entree: "Claude" }] };
+    const lecture = { texte: "Lactance dit _religare.", auteur: "Lactance", sources: [] };
     expect(erreursDe({ lecturesTraditionnelles: [lecture] })).toEqual([
       "lecturesTraditionnelles.0.texte : italique mal fermé : « _ » isolé",
     ]);

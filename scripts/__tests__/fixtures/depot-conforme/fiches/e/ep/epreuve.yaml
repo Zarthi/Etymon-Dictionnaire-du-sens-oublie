@@ -1,6 +1,6 @@
 # Fiche fictive, pour les tests uniquement.
 mot: épreuve
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: probatio
 reconstruit: false
 langue: latin
@@ -8,8 +8,8 @@ sens: preuve de test
 explication: >
   Fiche fictive. Elle sert de doublet à la fiche essai !
 incertain: true
-doublets: [essai]
-famille: [prouver]
+doublets: [ essai ]
+famille: [ prouver ]
 themes: []
 sources:
   - ouvrage: Gaffiot
@@ -18,10 +18,14 @@ sources:
   - ouvrage: TLFi
     entree: épreuve
     url: https://example.org/tlfi/epreuve
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles:
   - texte: Lecture fictive, pour les tests.
-    auteur: Auteur fictif
+    auteur: Lactance
     sources:
-      - { ouvrage: Ouvrage fictif, entree: livre I }
+      - ouvrage: Institutions divines
+        entree: livre I
 statut: brouillon
 historique: []

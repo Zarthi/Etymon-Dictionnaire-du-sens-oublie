@@ -1,6 +1,6 @@
 # Fiche fictive, pour les tests uniquement.
 mot: essai
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: "*essaium"
 reconstruit: true
 langue: latin populaire
@@ -9,13 +9,16 @@ explication: >
   Fiche fictive servant aux tests : elle n'a aucune valeur étymologique.
 incertain: false
 racine: null
-doublets: [epreuve]
+doublets: [ epreuve ]
 famille: []
-themes: [savoir]
+themes: [ savoir ]
 sources:
   - ouvrage: Littré
     entree: essai
     url: https://example.org/littre/essai
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: validee
 historique:

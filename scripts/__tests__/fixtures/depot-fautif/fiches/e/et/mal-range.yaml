@@ -1,6 +1,6 @@
 # Fiche conforme mais mal rangée : attendue dans m/ma/.
 mot: mal rangé
-nature: [nom masculin]
+nature: [ nom masculin ]
 etymon: malum
 reconstruit: false
 langue: latin
@@ -11,7 +11,12 @@ doublets: []
 famille: []
 themes: []
 sources:
-  - { ouvrage: Littré, entree: mal, page: 1 }
+  - ouvrage: Littré
+    entree: mal
+    page: 1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
 lecturesTraditionnelles: []
 statut: brouillon
 historique: []

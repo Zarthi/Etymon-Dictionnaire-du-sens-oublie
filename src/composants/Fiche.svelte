@@ -4,6 +4,7 @@
   import type { FicheIdentifiee } from "../lib/types.ts";
   import LectureTraditionnelle from "./LectureTraditionnelle.svelte";
   import Forme from "./Forme.svelte";
+  import Redaction from "./Redaction.svelte";
   import Sources from "./Sources.svelte";
   import TexteRiche from "./TexteRiche.svelte";
 
@@ -18,7 +19,7 @@
   /** Auteurs des lectures, sans doublon, pour l'intitulé replié : « Lactance, Augustin, Isidore de Séville ». */
   const auteurs = $derived([...new Set(lectures.map((l) => l.auteur))].join(", "));
   /** Rédaction de la fiche, affichée une fois en pied ; une lecture ne la rappelle que si la sienne diffère. */
-  const redactionFiche = $derived(signatureRedaction(fiche.sources));
+  const redactionFiche = $derived(signatureRedaction(fiche.redaction));
 </script>
 
 <svelte:head>
@@ -48,8 +49,10 @@
 
   {#if fiche.racine}
     <p class="racine">
-      Plus haut, {origine(fiche.racine.langue)}
-      <Forme forme={fiche.racine.forme} graphie={fiche.racine.graphie} />&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;».
+      Plus haut, {fiche.racine.incertain ? "peut-être " : ""}{origine(fiche.racine.langue)}
+      <Forme forme={fiche.racine.forme} graphie={fiche.racine.graphie} />&nbsp;: «&nbsp;{fiche.racine.sens}&nbsp;»{#if fiche.racine.incertain}<span
+          class="incertain">&nbsp;· origine débattue</span
+        >{/if}.
     </p>
   {/if}
 
@@ -57,7 +60,7 @@
     <p class="legende"><strong>Idée reçue</strong>&nbsp;: <TexteRiche texte={fiche.legende} {lienVers} exclu={fiche.id} /></p>
   {/if}
 
-  <Sources sources={fiche.sources} redaction={false} />
+  <Sources sources={fiche.sources} />
 
   {#if lectures.length > 0}
     <!-- Toujours signalées, repliées par défaut : l'étymologie d'abord, la tradition à côté. -->
@@ -73,7 +76,7 @@
   {/if}
 
   <footer>
-    <Sources sources={fiche.sources} ouvrages={false} />
+    <Redaction redaction={fiche.redaction} />
     {#if correction}
       <p>Corrigée le {dateLongue(correction.date)}.</p>
     {/if}

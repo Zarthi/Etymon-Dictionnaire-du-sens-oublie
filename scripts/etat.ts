@@ -1,4 +1,3 @@
-import { IA } from "../src/lib/sources.ts";
 import type { Candidat, FicheIdentifiee } from "../src/lib/types.ts";
 import { cheminFiche } from "./lib/validation.ts";
 import { formaterErreur, validerDepot } from "./valider-fiches.ts";
@@ -21,13 +20,13 @@ export function resumer(fiches: FicheIdentifiee[], candidats: Candidat[]) {
 }
 
 /**
- * Lectures traditionnelles dont l'IA est la seule source. Permises, mais à compléter à terme
- * par une œuvre consultée (ou par « Étymon, rédaction »).
+ * Lectures traditionnelles sans œuvre consultée et rédigées par l'IA seule. Permises, mais à
+ * compléter à terme par une œuvre (une lecture rédigée par Étymon n'est pas signalée).
  */
 export function lecturesIASeule(fiches: FicheIdentifiee[]) {
   return fiches.flatMap((f) =>
     f.lecturesTraditionnelles
-      .filter((l) => l.sources.every((s) => s.ouvrage === IA))
+      .filter((l) => l.sources.length === 0 && (l.redaction ?? f.redaction).every((r) => r.par === "IA"))
       .map((l) => ({ mot: f.mot, auteur: l.auteur, chemin: `data/fiches/${cheminFiche(f.id)}` })),
   );
 }
