@@ -1,5 +1,7 @@
 mot: aristocratie
+nature: [nom féminin]
 etymon: aristokratía
+graphie: ἀριστοκρατία
 reconstruit: false
 langue: grec ancien
 sens: gouvernement des meilleurs
@@ -18,6 +20,6 @@ sources:
     url: https://www.littre.org/definition/aristocratie
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

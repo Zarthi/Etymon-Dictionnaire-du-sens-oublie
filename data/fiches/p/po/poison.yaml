@@ -1,4 +1,5 @@
 mot: poison
+nature: [nom masculin]
 etymon: potio
 reconstruit: false
 langue: latin
@@ -23,6 +24,6 @@ sources:
     url: https://www.cnrtl.fr/etymologie/poison
   - ouvrage: IA
     entree: Claude Opus 5.5
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

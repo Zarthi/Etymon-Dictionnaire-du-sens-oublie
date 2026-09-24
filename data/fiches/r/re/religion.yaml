@@ -1,4 +1,5 @@
 mot: religion
+nature: [nom féminin]
 etymon: religio
 reconstruit: false
 langue: latin
@@ -24,16 +25,16 @@ sources:
     url: https://www.cnrtl.fr/etymologie/religion
   - ouvrage: IA
     entree: Claude Opus 5.5
-lectureTraditionnelle:
-  texte: "Lactance fait venir religio de religare, relier : l'homme est lié à Dieu
-    par le lien de la piété. Il écarte expressément l'explication de Cicéron par
-    relegere."
-  auteur: Lactance
-  sources:
-    - ouvrage: Institutions divines
-      entree: IV, 28, 3
-      url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
-    - ouvrage: IA
-      entree: Claude Opus 5.5
+lecturesTraditionnelles:
+  - texte: "Lactance fait venir religio de religare, relier : l'homme est lié à Dieu
+      par le lien de la piété. Il écarte expressément l'explication de Cicéron par
+      relegere."
+    auteur: Lactance
+    sources:
+      - ouvrage: Institutions divines
+        entree: IV, 28, 3
+        url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
+      - ouvrage: IA
+        entree: Claude Opus 5.5
 statut: brouillon
 historique: []

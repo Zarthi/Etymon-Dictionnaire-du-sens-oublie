@@ -1,4 +1,5 @@
 mot: aumône
+nature: [nom féminin]
 etymon: eleemosyna
 reconstruit: false
 langue: latin ecclésiastique
@@ -9,6 +10,7 @@ explication: >
 incertain: false
 racine:
   forme: eleēmosýnē
+  graphie: ἐλεημοσύνη
   langue: grec ancien
   sens: pitié, miséricorde
 doublets: []
@@ -20,6 +22,6 @@ sources:
     url: https://www.littre.org/definition/aum%C3%B4ne
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

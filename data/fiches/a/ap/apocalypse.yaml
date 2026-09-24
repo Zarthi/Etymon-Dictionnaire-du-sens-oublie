@@ -1,4 +1,5 @@
 mot: apocalypse
+nature: [nom féminin]
 etymon: apocalypsis
 reconstruit: false
 langue: latin ecclésiastique
@@ -10,6 +11,7 @@ explication: >
 incertain: false
 racine:
   forme: apokálypsis
+  graphie: ἀποκάλυψις
   langue: grec ancien
   sens: action de découvrir, d'ôter le voile
 doublets: []
@@ -21,6 +23,6 @@ sources:
     url: https://www.littre.org/definition/apocalypse
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

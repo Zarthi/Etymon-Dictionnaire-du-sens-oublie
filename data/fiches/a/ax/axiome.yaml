@@ -1,4 +1,5 @@
 mot: axiome
+nature: [nom masculin]
 etymon: axioma
 reconstruit: false
 langue: latin
@@ -10,6 +11,7 @@ explication: >
 incertain: false
 racine:
   forme: axíōma
+  graphie: ἀξίωμα
   langue: grec ancien
   sens: ce qui est jugé digne, estimé
 doublets: []
@@ -21,6 +23,6 @@ sources:
     url: https://www.littre.org/definition/axiome
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

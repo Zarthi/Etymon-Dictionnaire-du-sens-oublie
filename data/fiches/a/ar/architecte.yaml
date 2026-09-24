@@ -1,4 +1,5 @@
 mot: architecte
+nature: [nom]
 etymon: architectus
 reconstruit: false
 langue: latin
@@ -10,6 +11,7 @@ explication: >
 incertain: false
 racine:
   forme: arkhitéktōn
+  graphie: ἀρχιτέκτων
   langue: grec ancien
   sens: chef des charpentiers
 doublets: []
@@ -21,6 +23,6 @@ sources:
     url: https://www.littre.org/definition/architecte
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

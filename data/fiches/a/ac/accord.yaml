@@ -1,4 +1,5 @@
 mot: accord
+nature: [nom masculin]
 etymon: "*accordare"
 reconstruit: true
 langue: latin populaire
@@ -17,6 +18,6 @@ sources:
     url: https://www.littre.org/definition/accorder
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

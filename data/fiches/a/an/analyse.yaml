@@ -1,5 +1,7 @@
 mot: analyse
+nature: [nom féminin]
 etymon: análysis
+graphie: ἀνάλυσις
 reconstruit: false
 langue: grec ancien
 sens: action de délier, dissolution
@@ -18,6 +20,6 @@ sources:
     url: https://www.littre.org/definition/analyse
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

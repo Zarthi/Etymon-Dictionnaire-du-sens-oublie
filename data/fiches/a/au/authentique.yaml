@@ -1,4 +1,5 @@
 mot: authentique
+nature: [adjectif]
 etymon: authenticus
 reconstruit: false
 langue: latin
@@ -10,6 +11,7 @@ explication: >
 incertain: false
 racine:
   forme: authéntēs
+  graphie: αὐθέντης
   langue: grec ancien
   sens: qui agit de lui-même, maître de son acte
 doublets: []
@@ -21,6 +23,6 @@ sources:
     url: https://www.littre.org/definition/authentique
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []

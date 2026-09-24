@@ -1,4 +1,5 @@
 mot: aventure
+nature: [nom féminin]
 etymon: "*adventura"
 reconstruit: true
 langue: latin populaire
@@ -18,6 +19,6 @@ sources:
     url: https://www.littre.org/definition/aventure
   - ouvrage: IA
     entree: Claude Fable 5.1
-lectureTraditionnelle: null
+lecturesTraditionnelles: []
 statut: brouillon
 historique: []
