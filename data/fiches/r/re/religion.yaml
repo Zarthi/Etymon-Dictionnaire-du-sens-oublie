@@ -1,13 +1,14 @@
 mot: religion
-nature: [nom féminin]
+nature: [ nom féminin ]
 etymon: religio
 reconstruit: false
 langue: latin
-sens: attention scrupuleuse, scrupule
-explication: >
-  Le mot latin désignait d'abord le scrupule, l'attention inquiète portée à ce
-  qui est sacré. Son origine est discutée : Cicéron le rattachait à relegere,
-  reprendre et parcourir avec soin.
+sens: scrupule, attention portée au sacré
+explication: >-
+  Avant d'être une croyance ou une institution, la _religio_ est une
+  disposition : le scrupule, l'attention inquiète portée au sacré. Son origine
+  est discutée, et les Anciens hésitaient déjà ; Cicéron la tirait de
+  _relegere_, reprendre avec soin.
 incertain: true
 racine: null
 doublets: []
@@ -26,14 +27,34 @@ sources:
   - ouvrage: IA
     entree: Claude Opus 5.5
 lecturesTraditionnelles:
-  - texte: "Lactance fait venir religio de religare, relier : l'homme est lié à Dieu
-      par le lien de la piété. Il écarte expressément l'explication de Cicéron par
-      relegere."
+  - texte: "Lactance fait venir _religio_ de _religare_, relier : l'homme est lié à
+      Dieu par le lien de la piété. Il écarte expressément l'explication de
+      Cicéron par _relegere_."
     auteur: Lactance
     sources:
       - ouvrage: Institutions divines
         entree: IV, 28, 3
         url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
+      - ouvrage: IA
+        entree: Claude Opus 5.5
+  - texte: "Augustin propose _religere_, choisir de nouveau : Dieu, que nous avions
+      perdu par négligence, nous le choisissons à nouveau, et c'est de là que
+      viendrait le mot."
+    auteur: Augustin
+    sources:
+      - ouvrage: La Cité de Dieu
+        entree: X, 3
+        url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+      - ouvrage: IA
+        entree: Claude Opus 5.5
+  - texte: "Isidore réunit les deux voies : par la religion, nous relions nos âmes
+      au seul Dieu pour le servir ; le mot viendrait aussi de _relegere_,
+      compris comme choisir."
+    auteur: Isidore de Séville
+    sources:
+      - ouvrage: Étymologies
+        entree: VIII, 2, 2
+        url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
       - ouvrage: IA
         entree: Claude Opus 5.5
 statut: brouillon
