@@ -92,7 +92,8 @@ sacrée) ; le troisième n'a pas de cas. Ce que l'épreuve ajoute :
    chaîne : la lecture du texte d'origine porte `premier: true`, et la tête de fiche l'affiche.
    Au degré 2, c'est le sens du maillon de la langue sacrée, tiré de son lexique.
 3. **Le Nom divin** s'écrit comme le texte l'écrit, jamais traduit ni revocalisé.
-4. **Profanation** : le sens profané d'un mot sacré (*sabbat* des sorcières) est un homonyme,
-   avec sa fiche profane.
+4. **Profanation** : le sens profané d'un mot sacré (*sabbat* des sorcières) n'a sa fiche que
+   s'il remplit par lui-même le §3.3. Décision de Thibault : pas pour le sabbat, qui ne dévoile
+   rien du sens premier et n'apporterait que la polémique.
 5. **Deux graphies, deux traditions** (*Pâque*, *Pâques*) : deux fiches, une par tradition, avec
    la même chaîne et le même texte d'origine, ou une seule fiche. À trancher.
