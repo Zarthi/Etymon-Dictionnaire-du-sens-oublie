@@ -1,7 +1,6 @@
 mot: agir
 nature: [ verbe ]
 etymon: agere
-reconstruit: false
 langue: latin
 sens: pousser devant soi, mener
 explication: >
@@ -9,14 +8,12 @@ explication: >
   c'est faire avancer quelque chose, et l'agent est celui qui mène. L'action est
   une poussée avant d'être un fait.
 incertain: false
-racine: null
 doublets: []
 famille: [ acte, action, agent, agile ]
 themes: [ travail, morale ]
 sources:
   - ouvrage: Littré
     entree: agir
-    url: https://www.littre.org/definition/agir
 redaction:
   - par: IA
     detail: Claude Fable 5.1

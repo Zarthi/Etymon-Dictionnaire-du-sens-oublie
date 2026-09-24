@@ -1,7 +1,6 @@
 mot: adresse
 nature: [ nom féminin ]
 etymon: "*directiare"
-reconstruit: true
 langue: latin populaire
 sens: rendre droit, diriger
 explication: >
@@ -9,14 +8,12 @@ explication: >
   directiare, mettre droit. Adresser, c'est diriger tout droit vers ; l'adresse
   du geste est un mouvement qui va droit au but.
 incertain: false
-racine: null
 doublets: []
 famille: [ dresser, droit, direct ]
 themes: [ parole, travail ]
 sources:
   - ouvrage: Littré
     entree: adresser
-    url: https://www.littre.org/definition/adresser
 redaction:
   - par: IA
     detail: Claude Fable 5.1

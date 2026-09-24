@@ -1,21 +1,18 @@
 mot: accuser
 nature: [ verbe ]
 etymon: accusare
-reconstruit: false
 langue: latin
 sens: mettre en cause, appeler en justice
 explication: >
   Accuser, c'est mettre en cause : causa, l'affaire, le procès. L'accusé est
   celui qu'on appelle devant la cause ; excuser, c'est l'en faire sortir.
 incertain: false
-racine: null
 doublets: []
 famille: [ cause, excuser, récuser ]
 themes: [ droit, parole ]
 sources:
   - ouvrage: Littré
     entree: accuser
-    url: https://www.littre.org/definition/accuser
 redaction:
   - par: IA
     detail: Claude Fable 5.1

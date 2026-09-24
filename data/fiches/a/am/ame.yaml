@@ -1,7 +1,6 @@
 mot: âme
 nature: [ nom féminin ]
 etymon: anima
-reconstruit: false
 langue: latin
 sens: souffle, air, principe de vie
 explication: >
@@ -9,14 +8,12 @@ explication: >
   ce qui fait respirer : un être animé est un être qui a un souffle. Rendre
   l'âme, c'est rendre le dernier souffle.
 incertain: false
-racine: null
 doublets: []
 famille: [ animal, animer, animation ]
 themes: [ religion, esprit, corps ]
 sources:
   - ouvrage: Littré
     entree: âme
-    url: https://www.littre.org/definition/%C3%A2me
 redaction:
   - par: IA
     detail: Claude Fable 5.1

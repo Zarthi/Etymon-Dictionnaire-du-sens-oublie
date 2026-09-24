@@ -1,7 +1,6 @@
 mot: arbitre
 nature: [ nom masculin ]
 etymon: arbiter
-reconstruit: false
 langue: latin
 sens: témoin oculaire, juge choisi
 explication: >
@@ -9,14 +8,12 @@ explication: >
   choisissent. Le libre arbitre est ce pouvoir de juger par soi-même, de
   trancher en témoin de sa propre cause.
 incertain: false
-racine: null
 doublets: []
 famille: [ arbitraire ]
 themes: [ droit, morale, esprit ]
 sources:
   - ouvrage: Littré
     entree: arbitre
-    url: https://www.littre.org/definition/arbitre
 redaction:
   - par: IA
     detail: Claude Fable 5.1

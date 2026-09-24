@@ -1,7 +1,6 @@
 mot: appétit
 nature: [ nom masculin ]
 etymon: appetitus
-reconstruit: false
 langue: latin
 sens: désir, tendance vers
 explication: >
@@ -9,14 +8,12 @@ explication: >
   chose : les scolastiques parlent d'appétit sensible et d'appétit rationnel, la
   volonté. Nous l'avons réduit à la faim.
 incertain: false
-racine: null
 doublets: []
 famille: [ compétence, pétition, répéter ]
 themes: [ émotions, nourriture, esprit ]
 sources:
   - ouvrage: Littré
     entree: appétit
-    url: https://www.littre.org/definition/app%C3%A9tit
 redaction:
   - par: IA
     detail: Claude Fable 5.1

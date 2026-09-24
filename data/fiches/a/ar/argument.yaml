@@ -1,7 +1,6 @@
 mot: argument
 nature: [ nom masculin ]
 etymon: argumentum
-reconstruit: false
 langue: latin
 sens: ce qui fait voir clair, preuve
 explication: >
@@ -9,14 +8,12 @@ explication: >
   une question, la preuve qu'on apporte. Il ne désigne pas la dispute, mais ce
   qui devrait y mettre fin.
 incertain: false
-racine: null
 doublets: []
 famille: [ arguer ]
 themes: [ parole, esprit, savoir ]
 sources:
   - ouvrage: Littré
     entree: argument
-    url: https://www.littre.org/definition/argument
 redaction:
   - par: IA
     detail: Claude Fable 5.1

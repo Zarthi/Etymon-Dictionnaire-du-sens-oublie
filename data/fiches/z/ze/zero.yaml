@@ -1,7 +1,6 @@
 mot: zéro
 nature: [ nom masculin ]
 etymon: zero
-reconstruit: false
 langue: italien
 sens: zéro, rien
 explication: >
@@ -9,21 +8,20 @@ explication: >
   l'un, le latin médiéval pour l'autre. Chiffre désignait d'abord le zéro, avant
   que zéro ne le supplante dans ce sens.
 incertain: false
-racine:
-  forme: ṣifr
-  graphie: صفر
-  langue: arabe
-  sens: vide
-doublets: [ chiffre ]
+origine:
+  hypotheses:
+    - forme: ṣifr
+      graphie: صفر
+      langue: arabe
+      sens: vide
+doublets: []
 famille: []
 themes: [ savoir ]
 sources:
   - ouvrage: Littré
     entree: zéro
-    url: https://www.littre.org/definition/z%C3%A9ro
   - ouvrage: TLFi
     entree: zéro
-    url: https://www.cnrtl.fr/etymologie/z%C3%A9ro
 redaction:
   - par: IA
     detail: Claude Opus 5.5

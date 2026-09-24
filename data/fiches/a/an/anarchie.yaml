@@ -2,7 +2,6 @@ mot: anarchie
 nature: [ nom féminin ]
 etymon: anarkhía
 graphie: ἀναρχία
-reconstruit: false
 langue: grec ancien
 sens: absence de chef, de commandement
 explication: >
@@ -10,14 +9,12 @@ explication: >
   l'absence de l'un et de l'autre. Le mot dit un vide de principe, avant de
   nommer une doctrine.
 incertain: false
-racine: null
 doublets: []
 famille: [ monarchie, hiérarchie, archétype ]
 themes: [ société, droit ]
 sources:
   - ouvrage: Littré
     entree: anarchie
-    url: https://www.littre.org/definition/anarchie
 redaction:
   - par: IA
     detail: Claude Fable 5.1

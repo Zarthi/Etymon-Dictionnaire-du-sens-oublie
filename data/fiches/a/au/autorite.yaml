@@ -1,7 +1,6 @@
 mot: autorité
 nature: [ nom féminin ]
 etymon: auctoritas
-reconstruit: false
 langue: latin
 sens: garantie, crédit de celui qui fonde
 explication: >
@@ -9,14 +8,12 @@ explication: >
   augmenter. L'autorité est le crédit de celui qui répond d'une chose ; la
   contrainte n'y est pas.
 incertain: false
-racine: null
 doublets: []
 famille: [ auteur, augmenter, auguste ]
 themes: [ société, droit, morale ]
 sources:
   - ouvrage: Littré
     entree: autorité
-    url: https://www.littre.org/definition/autorit%C3%A9
 redaction:
   - par: IA
     detail: Claude Fable 5.1

@@ -1,7 +1,6 @@
 mot: affliger
 nature: [ verbe ]
 etymon: affligere
-reconstruit: false
 langue: latin
 sens: abattre, jeter à terre
 explication: >
@@ -9,14 +8,12 @@ explication: >
   au sens propre, renversé par le coup. Le chagrin a gardé la posture du corps
   qui tombe.
 incertain: false
-racine: null
 doublets: []
 famille: [ affliction, infliger, conflit ]
 themes: [ émotions ]
 sources:
   - ouvrage: Littré
     entree: affliger
-    url: https://www.littre.org/definition/affliger
 redaction:
   - par: IA
     detail: Claude Fable 5.1

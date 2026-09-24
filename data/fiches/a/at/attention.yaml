@@ -1,21 +1,18 @@
 mot: attention
 nature: [ nom féminin ]
 etymon: attentio
-reconstruit: false
 langue: latin
 sens: action de tendre l'esprit vers
 explication: >
   Attendere, c'est tendre vers. L'attention est une tension de l'esprit dirigée
   vers une chose, comme on tend un arc. Être attentif, c'est être tendu vers.
 incertain: false
-racine: null
 doublets: []
 famille: [ tendre, attendre, tension, intention ]
 themes: [ esprit, savoir ]
 sources:
   - ouvrage: Littré
     entree: attention
-    url: https://www.littre.org/definition/attention
 redaction:
   - par: IA
     detail: Claude Fable 5.1

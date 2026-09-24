@@ -1,7 +1,6 @@
 mot: augure
 nature: [ nom masculin ]
 etymon: augurium
-reconstruit: false
 langue: latin
 sens: présage tiré du vol des oiseaux
 explication: >
@@ -9,14 +8,12 @@ explication: >
   événement de bon augure est un vol favorable ; inaugurer, c'est ouvrir un lieu
   après avoir pris les augures.
 incertain: false
-racine: null
 doublets: []
 famille: [ inaugurer, augural ]
 themes: [ religion, savoir ]
 sources:
   - ouvrage: Littré
     entree: augure
-    url: https://www.littre.org/definition/augure
 redaction:
   - par: IA
     detail: Claude Fable 5.1

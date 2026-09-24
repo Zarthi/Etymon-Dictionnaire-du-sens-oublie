@@ -1,7 +1,6 @@
 mot: abandonner
 nature: [ verbe ]
 etymon: à bandon
-reconstruit: false
 langue: ancien français
 sens: au pouvoir de, à la discrétion de
 explication: >
@@ -9,17 +8,17 @@ explication: >
   discrétion. Abandonner, ce n'est pas d'abord délaisser, mais remettre entre
   d'autres mains.
 incertain: false
-racine:
-  forme: "*ban"
-  langue: francique
-  sens: proclamation, pouvoir de commander
+origine:
+  hypotheses:
+    - forme: "*ban"
+      langue: francique
+      sens: proclamation, pouvoir de commander
 doublets: []
 famille: [ ban, bannir ]
 themes: [ société, émotions ]
 sources:
   - ouvrage: Littré
     entree: abandonner
-    url: https://www.littre.org/definition/abandonner
 redaction:
   - par: IA
     detail: Claude Fable 5.1

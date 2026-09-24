@@ -1,7 +1,6 @@
 mot: ambiguïté
 nature: [ nom féminin ]
 etymon: ambiguitas
-reconstruit: false
 langue: latin
 sens: incertitude de ce qui va des deux côtés
 explication: >
@@ -9,14 +8,12 @@ explication: >
   et agere, mener. L'ambigu tire dans deux directions ; on ne sait de quel côté
   il ira.
 incertain: false
-racine: null
 doublets: []
 famille: [ ambiant, ambidextre ]
 themes: [ parole, esprit ]
 sources:
   - ouvrage: Littré
     entree: ambiguité
-    url: https://www.littre.org/definition/ambiguit%C3%A9
 redaction:
   - par: IA
     detail: Claude Fable 5.1

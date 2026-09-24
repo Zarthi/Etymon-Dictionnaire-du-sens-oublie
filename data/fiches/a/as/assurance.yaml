@@ -1,7 +1,6 @@
 mot: assurance
 nature: [ nom féminin ]
 etymon: "*assecurare"
-reconstruit: true
 langue: latin populaire
 sens: rendre sûr, mettre hors de souci
 explication: >
@@ -9,14 +8,12 @@ explication: >
   délivrer de l'inquiétude. L'assurance de la personne et celle du contrat
   promettent la même chose : ne plus avoir à se soucier.
 incertain: false
-racine: null
 doublets: []
 famille: [ sûr, sécurité, cure ]
 themes: [ émotions, commerce, argent ]
 sources:
   - ouvrage: Littré
     entree: assurer
-    url: https://www.littre.org/definition/assurer
 redaction:
   - par: IA
     detail: Claude Fable 5.1

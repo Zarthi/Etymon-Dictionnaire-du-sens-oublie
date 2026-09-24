@@ -1,7 +1,6 @@
 mot: abnégation
 nature: [ nom féminin ]
 etymon: abnegatio
-reconstruit: false
 langue: latin ecclésiastique
 sens: refus, reniement
 explication: >
@@ -9,14 +8,12 @@ explication: >
   « qu'il se renie lui-même ». L'abnégation est d'abord un refus opposé à soi,
   avant d'être un simple dévouement.
 incertain: false
-racine: null
 doublets: []
 famille: [ nier, négation ]
 themes: [ morale, religion ]
 sources:
   - ouvrage: Littré
     entree: abnégation
-    url: https://www.littre.org/definition/abn%C3%A9gation
 redaction:
   - par: IA
     detail: Claude Fable 5.1

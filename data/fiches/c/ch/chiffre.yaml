@@ -1,7 +1,6 @@
 mot: chiffre
 nature: [ nom masculin ]
 etymon: cifra
-reconstruit: false
 langue: latin médiéval
 sens: zéro
 explication: >
@@ -9,21 +8,20 @@ explication: >
   venue des Arabes. Le nom de ce signe nouveau s'est ensuite étendu à tous les
   signes de numération.
 incertain: false
-racine:
-  forme: ṣifr
-  graphie: صفر
-  langue: arabe
-  sens: vide
+origine:
+  hypotheses:
+    - forme: ṣifr
+      graphie: صفر
+      langue: arabe
+      sens: vide
 doublets: [ zero ]
 famille: []
 themes: [ savoir ]
 sources:
   - ouvrage: Littré
     entree: chiffre
-    url: https://www.littre.org/definition/chiffre
   - ouvrage: TLFi
     entree: chiffre
-    url: https://www.cnrtl.fr/etymologie/chiffre
 redaction:
   - par: IA
     detail: Claude Opus 5.5

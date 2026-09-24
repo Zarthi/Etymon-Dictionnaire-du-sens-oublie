@@ -1,7 +1,6 @@
 mot: argent
 nature: [ nom masculin ]
 etymon: argentum
-reconstruit: false
 langue: latin
 sens: le métal argent, blanc et brillant
 explication: >
@@ -9,14 +8,12 @@ explication: >
   La monnaie a pris le nom de sa matière : nous disons encore argent pour ce qui
   n'en contient plus une once.
 incertain: false
-racine: null
 doublets: []
 famille: [ argenté, argentin ]
 themes: [ argent, commerce, nature ]
 sources:
   - ouvrage: Littré
     entree: argent
-    url: https://www.littre.org/definition/argent
 redaction:
   - par: IA
     detail: Claude Fable 5.1

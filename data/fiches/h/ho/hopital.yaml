@@ -1,27 +1,22 @@
 mot: hôpital
 nature: [ nom masculin ]
 etymon: hospitale
-reconstruit: false
 langue: bas latin
 sens: lieu hospitalier
 explication: >
   L'hôpital était d'abord un lieu d'hospitalité, où l'on recevait l'hôte. Il
   partage son origine avec hôtel, forme populaire du même mot latin.
 incertain: false
-racine: null
 doublets: [ hotel ]
 famille: [ hôte ]
 themes: [ maison, santé ]
 sources:
   - ouvrage: Littré
     entree: hôpital
-    url: https://www.littre.org/definition/h%C3%B4pital
   - ouvrage: Gaffiot
     entree: hospitalis
-    url: https://gaffiot.fr/#hospitalis
   - ouvrage: TLFi
     entree: hôpital
-    url: https://www.cnrtl.fr/etymologie/h%C3%B4pital
 redaction:
   - par: IA
     detail: Claude Opus 5.5

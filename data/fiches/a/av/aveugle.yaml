@@ -1,7 +1,6 @@
 mot: aveugle
 nature: [ adjectif, nom ]
 etymon: "*aboculus"
-reconstruit: true
 langue: latin populaire
 sens: privé d'yeux
 explication: >
@@ -9,14 +8,12 @@ explication: >
   latin classique disait caecus ; le mot populaire dit la privation, non
   l'obscurité.
 incertain: false
-racine: null
 doublets: []
 famille: [ oculaire, œil ]
 themes: [ corps, santé ]
 sources:
   - ouvrage: Littré
     entree: aveugle
-    url: https://www.littre.org/definition/aveugle
 redaction:
   - par: IA
     detail: Claude Fable 5.1

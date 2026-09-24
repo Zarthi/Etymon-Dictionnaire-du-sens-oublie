@@ -1,7 +1,6 @@
 mot: ambition
 nature: [ nom féminin ]
 etymon: ambitio
-reconstruit: false
 langue: latin
 sens: action d'aller autour, brigue des suffrages
 explication: >
@@ -9,14 +8,12 @@ explication: >
   sollicite les votes. L'ambition est d'abord une démarche, le tour que l'on
   fait pour obtenir une charge.
 incertain: false
-racine: null
 doublets: []
 famille: [ ambiant, ambiance ]
 themes: [ société, morale ]
 sources:
   - ouvrage: Littré
     entree: ambition
-    url: https://www.littre.org/definition/ambition
 redaction:
   - par: IA
     detail: Claude Fable 5.1

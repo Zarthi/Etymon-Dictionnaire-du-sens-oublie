@@ -1,7 +1,6 @@
 mot: animal
 nature: [ nom masculin ]
 etymon: animal
-reconstruit: false
 langue: latin
 sens: être animé, être vivant
 explication: >
@@ -9,14 +8,12 @@ explication: >
   l'homme compris. Le mot n'oppose pas la bête à l'homme, il les réunit dans le
   souffle.
 incertain: false
-racine: null
 doublets: []
 famille: [ âme, animer ]
 themes: [ nature, corps ]
 sources:
   - ouvrage: Littré
     entree: animal
-    url: https://www.littre.org/definition/animal
 redaction:
   - par: IA
     detail: Claude Fable 5.1

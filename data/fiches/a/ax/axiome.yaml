@@ -1,7 +1,6 @@
 mot: axiome
 nature: [ nom masculin ]
 etymon: axioma
-reconstruit: false
 langue: latin
 sens: proposition qui s'impose d'elle-même
 explication: >
@@ -9,18 +8,18 @@ explication: >
   sans preuve, ce dont la valeur s'impose. Il n'est pas une vérité démontrée,
   mais une estime accordée.
 incertain: false
-racine:
-  forme: axíōma
-  graphie: ἀξίωμα
-  langue: grec ancien
-  sens: ce qui est jugé digne, estimé
+origine:
+  hypotheses:
+    - forme: axíōma
+      graphie: ἀξίωμα
+      langue: grec ancien
+      sens: ce qui est jugé digne, estimé
 doublets: []
 famille: []
 themes: [ savoir, esprit ]
 sources:
   - ouvrage: Littré
     entree: axiome
-    url: https://www.littre.org/definition/axiome
 redaction:
   - par: IA
     detail: Claude Fable 5.1

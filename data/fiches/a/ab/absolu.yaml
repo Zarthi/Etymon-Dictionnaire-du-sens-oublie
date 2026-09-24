@@ -1,21 +1,18 @@
 mot: absolu
 nature: [ adjectif ]
 etymon: absolutus
-reconstruit: false
 langue: latin
 sens: délié, détaché, achevé
 explication: >
   L'absolu est ce qui a été délié : absolvere, détacher. Est absolu ce qui ne
   dépend de rien, ce que ne retient aucun lien, aucune condition.
 incertain: false
-racine: null
 doublets: []
 famille: [ absoudre, dissoudre, soluble ]
 themes: [ esprit, savoir ]
 sources:
   - ouvrage: Littré
     entree: absolu
-    url: https://www.littre.org/definition/absolu
 redaction:
   - par: IA
     detail: Claude Fable 5.1

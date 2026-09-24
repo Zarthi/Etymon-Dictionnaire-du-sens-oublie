@@ -1,7 +1,6 @@
 mot: affection
 nature: [ nom féminin ]
 etymon: affectio
-reconstruit: false
 langue: latin
 sens: disposition produite par une influence
 explication: >
@@ -9,14 +8,12 @@ explication: >
   modifié : d'où l'affection du médecin, la maladie, et l'affection du cœur, la
   tendresse. Dans les deux cas, on a été atteint.
 incertain: false
-racine: null
 doublets: []
 famille: [ affecter, affectif ]
 themes: [ émotions, santé ]
 sources:
   - ouvrage: Littré
     entree: affection
-    url: https://www.littre.org/definition/affection
 redaction:
   - par: IA
     detail: Claude Fable 5.1

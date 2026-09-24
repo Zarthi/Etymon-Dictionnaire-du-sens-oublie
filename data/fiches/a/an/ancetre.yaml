@@ -1,7 +1,6 @@
 mot: ancêtre
 nature: [ nom ]
 etymon: antecessor
-reconstruit: false
 langue: latin
 sens: celui qui marche devant
 explication: >
@@ -9,14 +8,12 @@ explication: >
   chemin, non seulement dans le temps : il ouvre la voie, et nous marchons dans
   ses pas.
 incertain: false
-racine: null
 doublets: []
 famille: [ prédécesseur, céder, procéder ]
 themes: [ famille, temps ]
 sources:
   - ouvrage: Littré
     entree: ancêtres
-    url: https://www.littre.org/definition/anc%C3%AAtres
 redaction:
   - par: IA
     detail: Claude Fable 5.1

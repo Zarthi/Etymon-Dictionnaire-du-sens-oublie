@@ -1,7 +1,6 @@
 mot: asile
 nature: [ nom masculin ]
 etymon: asylum
-reconstruit: false
 langue: latin
 sens: lieu inviolable, refuge
 explication: >
@@ -9,18 +8,18 @@ explication: >
   le temple où le fugitif est hors d'atteinte. L'asile est un sanctuaire avant
   d'être un hospice.
 incertain: false
-racine:
-  forme: ásylon
-  graphie: ἄσυλον
-  langue: grec ancien
-  sens: qu'on ne peut piller
+origine:
+  hypotheses:
+    - forme: ásylon
+      graphie: ἄσυλον
+      langue: grec ancien
+      sens: qu'on ne peut piller
 doublets: []
 famille: []
 themes: [ droit, religion, maison ]
 sources:
   - ouvrage: TLFi
     entree: asile
-    url: https://www.cnrtl.fr/etymologie/asile
 redaction:
   - par: IA
     detail: Claude Fable 5.1

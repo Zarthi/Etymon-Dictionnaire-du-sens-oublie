@@ -1,7 +1,6 @@
 mot: accueillir
 nature: [ verbe ]
 etymon: "*accolligere"
-reconstruit: true
 langue: latin populaire
 sens: recueillir, rassembler auprès de soi
 explication: >
@@ -9,14 +8,12 @@ explication: >
   Celui qu'on accueille est ramassé, mis à l'abri, comme une récolte qu'on
   rentre.
 incertain: false
-racine: null
 doublets: []
 famille: [ cueillir, recueillir, collecte ]
 themes: [ maison, société ]
 sources:
   - ouvrage: Littré
     entree: accueillir
-    url: https://www.littre.org/definition/accueillir
 redaction:
   - par: IA
     detail: Claude Fable 5.1

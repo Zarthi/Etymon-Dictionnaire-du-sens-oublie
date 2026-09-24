@@ -1,7 +1,6 @@
 mot: architecte
 nature: [ nom ]
 etymon: architectus
-reconstruit: false
 langue: latin
 sens: maître d'œuvre, constructeur
 explication: >
@@ -9,18 +8,18 @@ explication: >
   celui qui commande aux charpentiers. Le mot dit un métier de chantier, avant
   l'art du dessin.
 incertain: false
-racine:
-  forme: arkhitéktōn
-  graphie: ἀρχιτέκτων
-  langue: grec ancien
-  sens: chef des charpentiers
+origine:
+  hypotheses:
+    - forme: arkhitéktōn
+      graphie: ἀρχιτέκτων
+      langue: grec ancien
+      sens: chef des charpentiers
 doublets: []
 famille: [ technique, tectonique ]
 themes: [ travail, maison ]
 sources:
   - ouvrage: Littré
     entree: architecte
-    url: https://www.littre.org/definition/architecte
 redaction:
   - par: IA
     detail: Claude Fable 5.1

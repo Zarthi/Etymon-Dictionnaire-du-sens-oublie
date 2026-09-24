@@ -1,7 +1,6 @@
 mot: atome
 nature: [ nom masculin ]
 etymon: atomus
-reconstruit: false
 langue: latin
 sens: corpuscule indivisible
 explication: >
@@ -9,18 +8,18 @@ explication: >
   philosophes grecs est la particule ultime, indivisible par définition. Le
   nôtre se fend : le mot a survécu à son sens.
 incertain: false
-racine:
-  forme: átomos
-  graphie: ἄτομος
-  langue: grec ancien
-  sens: qu'on ne peut couper
+origine:
+  hypotheses:
+    - forme: átomos
+      graphie: ἄτομος
+      langue: grec ancien
+      sens: qu'on ne peut couper
 doublets: []
 famille: [ anatomie, tome ]
 themes: [ savoir, nature ]
 sources:
   - ouvrage: Littré
     entree: atome
-    url: https://www.littre.org/definition/atome
 redaction:
   - par: IA
     detail: Claude Fable 5.1

@@ -1,7 +1,6 @@
 mot: absurde
 nature: [ adjectif ]
 etymon: absurdus
-reconstruit: false
 langue: latin
 sens: discordant, qui sonne faux
 explication: >
@@ -9,14 +8,12 @@ explication: >
   dissonant. Une chose absurde ne choque pas seulement la raison, elle écorche
   l'oreille.
 incertain: false
-racine: null
 doublets: []
 famille: [ sourd ]
 themes: [ esprit, parole ]
 sources:
   - ouvrage: Littré
     entree: absurde
-    url: https://www.littre.org/definition/absurde
 redaction:
   - par: IA
     detail: Claude Fable 5.1

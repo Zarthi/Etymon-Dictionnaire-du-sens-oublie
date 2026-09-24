@@ -2,7 +2,6 @@ mot: analyse
 nature: [ nom féminin ]
 etymon: análysis
 graphie: ἀνάλυσις
-reconstruit: false
 langue: grec ancien
 sens: action de délier, dissolution
 explication: >
@@ -10,14 +9,12 @@ explication: >
   lié pour en voir les éléments. Elle s'oppose à la synthèse, qui remet
   ensemble.
 incertain: false
-racine: null
 doublets: []
 famille: [ paralysie, catalyse ]
 themes: [ savoir, esprit ]
 sources:
   - ouvrage: Littré
     entree: analyse
-    url: https://www.littre.org/definition/analyse
 redaction:
   - par: IA
     detail: Claude Fable 5.1

@@ -2,7 +2,6 @@ mot: aristocratie
 nature: [ nom féminin ]
 etymon: aristokratía
 graphie: ἀριστοκρατία
-reconstruit: false
 langue: grec ancien
 sens: gouvernement des meilleurs
 explication: >
@@ -10,14 +9,12 @@ explication: >
   opposition à celui du peuple ou d'un seul. Le mot désigne un idéal avant de
   nommer une classe héréditaire.
 incertain: false
-racine: null
 doublets: []
 famille: [ démocratie, monarchie ]
 themes: [ société, droit ]
 sources:
   - ouvrage: Littré
     entree: aristocratie
-    url: https://www.littre.org/definition/aristocratie
 redaction:
   - par: IA
     detail: Claude Fable 5.1

@@ -1,7 +1,6 @@
 mot: aventure
 nature: [ nom féminin ]
 etymon: "*adventura"
-reconstruit: true
 langue: latin populaire
 sens: ce qui doit arriver
 explication: >
@@ -9,14 +8,12 @@ explication: >
   d'abord le sort, ce que l'avenir réserve ; d'où la bonne aventure qu'on dit,
   et le hasard que l'on court.
 incertain: false
-racine: null
 doublets: []
 famille: [ avenir, advenir ]
 themes: [ temps, société ]
 sources:
   - ouvrage: Littré
     entree: aventure
-    url: https://www.littre.org/definition/aventure
 redaction:
   - par: IA
     detail: Claude Fable 5.1

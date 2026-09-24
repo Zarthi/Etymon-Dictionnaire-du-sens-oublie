@@ -1,7 +1,6 @@
 mot: ange
 nature: [ nom masculin ]
 etymon: angelus
-reconstruit: false
 langue: latin ecclésiastique
 sens: messager
 explication: >
@@ -9,14 +8,12 @@ explication: >
   rien de sa nature, seulement sa fonction : il est envoyé, il annonce.
   L'Évangile, la bonne nouvelle, porte la même racine.
 incertain: false
-racine: null
 doublets: []
 famille: [ évangile, archange ]
 themes: [ religion, parole ]
 sources:
   - ouvrage: Littré
     entree: ange
-    url: https://www.littre.org/definition/ange
 redaction:
   - par: IA
     detail: Claude Fable 5.1

@@ -1,7 +1,6 @@
 mot: altérer
 nature: [ verbe ]
 etymon: alterare
-reconstruit: false
 langue: latin médiéval
 sens: rendre autre
 explication: >
@@ -9,14 +8,12 @@ explication: >
   l'homme altéré a soif, son corps a changé d'état. Dans tous les sens, quelque
   chose n'est plus ce qu'il était.
 incertain: false
-racine: null
 doublets: []
 famille: [ autre, alternative, altérité ]
 themes: [ corps, nature ]
 sources:
   - ouvrage: Littré
     entree: altérer
-    url: https://www.littre.org/definition/alt%C3%A9rer
 redaction:
   - par: IA
     detail: Claude Fable 5.1

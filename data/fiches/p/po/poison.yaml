@@ -1,27 +1,22 @@
 mot: poison
 nature: [ nom masculin ]
 etymon: potio
-reconstruit: false
 langue: latin
 sens: boisson, breuvage
 explication: >
   Le poison n'était d'abord qu'une boisson. Le mot s'est restreint au breuvage
   malfaisant, et de féminin il est devenu masculin au XVIe siècle.
 incertain: false
-racine: null
 doublets: [ potion ]
 famille: []
 themes: [ santé ]
 sources:
   - ouvrage: Littré
     entree: poison
-    url: https://www.littre.org/definition/poison
   - ouvrage: Gaffiot
     entree: potio
-    url: https://gaffiot.fr/#potio
   - ouvrage: TLFi
     entree: poison
-    url: https://www.cnrtl.fr/etymologie/poison
 redaction:
   - par: IA
     detail: Claude Opus 5.5

@@ -1,7 +1,6 @@
 mot: agonie
 nature: [ nom féminin ]
 etymon: agonia
-reconstruit: false
 langue: latin ecclésiastique
 sens: angoisse, lutte intérieure
 explication: >
@@ -9,18 +8,18 @@ explication: >
   Christ à Gethsémani. Le mot ne désigne pas l'affaiblissement final, mais le
   dernier corps à corps.
 incertain: false
-racine:
-  forme: agōn
-  graphie: ἀγών
-  langue: grec ancien
-  sens: lutte, combat
+origine:
+  hypotheses:
+    - forme: agōn
+      graphie: ἀγών
+      langue: grec ancien
+      sens: lutte, combat
 doublets: []
 famille: [ antagoniste, protagoniste ]
 themes: [ corps, santé, religion ]
 sources:
   - ouvrage: Littré
     entree: agonie
-    url: https://www.littre.org/definition/agonie
 redaction:
   - par: IA
     detail: Claude Fable 5.1
