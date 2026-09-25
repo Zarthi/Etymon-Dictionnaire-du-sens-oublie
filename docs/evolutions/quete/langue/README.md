@@ -1,6 +1,6 @@
 # Une langue qui ne se parle pas
 
-> Évolution future, dans la [Quête](../README.md), hors des fiches. Huitième état. Ce document fixe
+> Évolution future, dans la [Quête](../README.md), hors des fiches. Huitième état, en retard sur `triangles.yaml` et `matrice.md`, qui font foi. Ce document fixe
 > les règles ; la tétraktys est dans `tetraktys.yaml`, les mots dans `mots/`. Il sera repris
 > souvent : chaque règle est marquée **tranchée** ou **à trancher** ; chaque texte, **vérifié** ou
 > **de mémoire**. Le journal des états est à la fin.

@@ -1,0 +1,86 @@
+# Les triangles de trois : six points en trois rangs (1, 2, 3), le symbole métaphysique.
+# Le sommet ; deux contraires ; les contraires et, entre eux, le milieu, sur l'axe.
+# Ce sur quoi les traditions relevées s'accordent ; le quatrième rang (la manifestation) est
+# ce qui les sépare, et il n'est pas ici.
+# Vérifié ou de mémoire, à chaque fois. « ? » : la tradition ne donne rien de sûr.
+
+- triangle: le nôtre
+  au-dessus: le Principe, sans signe
+  rangs:
+    - [l'Un]
+    - [un extrême, l'autre extrême]
+    - [un extrême, le milieu, l'autre extrême]
+  signes: à choisir (flèches ⬆️ ↔️ ⬇️ ou cercles ⚪ 🔴 ⚫, et le signe de l'Un)
+  geometrie:
+    - les extrêmes du rang 2 se prolongent aux bouts du rang 3, sur les côtés
+    - le sommet et le milieu sont les deux seuls points sur l'axe ; le rang 2 n'en a pas
+    - aucun point intérieur
+
+- triangle: Genèse 1
+  au-dessus: Dieu
+  rangs:
+    - [le commencement]
+    - [la lumière, les ténèbres]
+    - [les eaux d'en haut, le firmament, les eaux d'en bas]
+  sources:
+    - Genèse 1, 4 (vérifié, Sefaria) : « Dieu sépara la lumière et les ténèbres »
+    - Genèse 1, 6-7 (vérifié) : le firmament « au milieu des eaux », les eaux « au-dessous » et « au-dessus »
+
+- triangle: taoïste
+  au-dessus: le Tao, qui produit l'Un
+  rangs:
+    - [l'Un]
+    - [le Deux]
+    - [le Trois]
+  sources:
+    - Tao Te King, 42 (de mémoire) : « le Tao produit l'Un, l'Un produit le Deux, le Deux produit le Trois, le Trois produit les dix mille êtres »
+    - le quatrième rang y est « les dix mille êtres », sans nombre
+
+- triangle: hindou
+  au-dessus: Brahman
+  rangs:
+    - ["?"]
+    - [sattva, tamas]
+    - [sattva, rajas, tamas]
+  sources:
+    - Bhagavad-Gītā XIV, 18 (vérifié) : sattva en haut, rajas au milieu, tamas en bas
+    - couleurs des guṇa, blanc, rouge, noir : Śvetāśvatara Upaniṣad IV, 5 (de mémoire)
+
+- triangle: Sefer Yetzirah
+  au-dessus: le Nom
+  rangs:
+    - ["?"]
+    - [le feu en haut, l'eau en bas]
+    - [le feu, le souffle qui décide entre les deux, l'eau]
+  sources:
+    - Sefer Yetzirah 3 (vérifié, Sefaria, éd. Varsovie 1884) : les trois lettres mères
+
+- triangle: Platon, Timée
+  au-dessus: le dieu
+  rangs:
+    - ["?"]
+    - [le feu, la terre]
+    - [le feu, une médiété, la terre]
+  sources:
+    - Timée 31c-32b (vérifié, Perseus) : deux extrêmes, une médiété si le monde était plan
+    - le quatrième rang y est les quatre éléments, parce que le monde est solide
+
+- triangle: pythagoricien
+  au-dessus: "?"
+  rangs:
+    - [la monade]
+    - [la dyade]
+    - [la triade]
+  sources:
+    - un terme par rang ; le point, la ligne, la surface (Sextus Empiricus ; Théon de Smyrne ; de mémoire)
+    - le quatrième rang y est la tétrade, le solide ; les dix, la tétraktys
+
+- triangle: chinois
+  au-dessus: le Faîte suprême
+  rangs:
+    - ["?"]
+    - [le yin, le yang]
+    - [le Ciel, l'Homme, la Terre]
+  sources:
+    - Xici et Shuogua (Yi Jing), de mémoire : les deux modes ; les trois puissances
+    - le quatrième rang y est les quatre images, obtenues par dédoublement (1, 2, 4), non par le rang de trois
