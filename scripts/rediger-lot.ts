@@ -4,7 +4,7 @@ import { dirname, join } from "node:path";
 import { parseArgs } from "node:util";
 import { cheminDossier, schemaDossier, sourcesDuDossier } from "./lib/atelier.ts";
 import { chercher, natureDepuisLittre } from "./lib/littre.ts";
-import { preparerAuteur, preparerFiche, preparerOuvrage, versYaml } from "./lib/redaction.ts";
+import { lireReflexion, preparerAuteur, preparerFiche, preparerOuvrage, versYaml } from "./lib/redaction.ts";
 import { cheminFiche, slug } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
 import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts";
@@ -21,7 +21,7 @@ import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts"
  * - --essai : rien n'est écrit ; chaque fiche est validée avec le dépôt, et les auteurs ou ouvrages
  *   qui n'ont pas encore leur fiche sont signalés à part (à créer : npm run bnf).
  *
- * Usage : npm run rediger -- <fichier.json>… --modele "Claude Fable 5.1" [--dossier] [--essai] [--remplacer]
+ * Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] [--dossier] [--essai] [--remplacer]
  */
 type Brute = Record<string, unknown>;
 
@@ -41,16 +41,22 @@ async function principal(): Promise<number> {
     allowPositionals: true,
     options: {
       modele: { type: "string" },
+      reflexion: { type: "string" },
       remplacer: { type: "boolean", default: false },
       dossier: { type: "boolean", default: false },
       essai: { type: "boolean", default: false },
     },
   });
   if (fichiers.length === 0 || (!values.modele && !values.essai)) {
-    console.log('Usage : npm run rediger -- <fichier.json>… --modele "Claude Fable 5.1" [--dossier] [--essai] [--remplacer]');
+    console.log('Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] [--dossier] [--essai] [--remplacer]');
     return 1;
   }
-  const modele = values.modele ?? "essai";
+  const reflexion = lireReflexion(values.reflexion);
+  if ("erreur" in reflexion) {
+    console.log(reflexion.erreur);
+    return 1;
+  }
+  const moteur = { modele: values.modele ?? "essai", ...reflexion };
   const lots = await Promise.all(fichiers.map(async (f) => lireLot(JSON.parse(await readFile(f, "utf8")))));
   const lot = lots.flatMap((l) => l.fiches);
   const references = { auteurs: lots.flatMap((l) => l.auteurs), ouvrages: lots.flatMap((l) => l.ouvrages) };
@@ -81,7 +87,7 @@ async function principal(): Promise<number> {
         refus.push(`${dossier}/${id} : la fiche existe déjà (--remplacer pour l'écraser)`);
         continue;
       }
-      const resultat = preparer(brute, modele);
+      const resultat = preparer(brute, moteur);
       if ("erreurs" in resultat) {
         refus.push(...resultat.erreurs.map((e) => `${dossier}/${id} › ${e}`));
         continue;
@@ -105,7 +111,7 @@ async function principal(): Promise<number> {
       continue;
     }
     const natureLittre = (chercher(index, mot) ?? []).map((e) => natureDepuisLittre(e.nature)).find(Boolean);
-    const resultat = preparerFiche(brute, { modele, natureLittre });
+    const resultat = preparerFiche(brute, { ...moteur, natureLittre });
     if ("erreurs" in resultat) {
       refus.push(...resultat.erreurs.map((e) => `${mot} › ${e}`));
       continue;

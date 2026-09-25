@@ -47,11 +47,10 @@ Le format d'une fiche est décrit dans [docs/contrat-fiche.md](docs/contrat-fich
 à partir du schéma ; VS Code le vérifie pendant la saisie. Exemples complets :
 [religion](data/fiches/r/re/religion.yaml), [schizophrénie](data/fiches/s/sc/schizophrenie.yaml).
 
-**Par l'IA, en lot** : selon [docs/methode.md](docs/methode.md), le workflow
-`scripts/workflow-lot.js` constitue le dossier de sources de chaque mot, fait rédiger la fiche
-d'après lui ([docs/consignes/](docs/consignes/)), la fait relire par un autre modèle, crée les
-auteurs et ouvrages d'après la BnF, écrit les fiches en brouillon et cherche les lectures
-traditionnelles.
+**Par l'IA, en lot** : selon [docs/methode.md](docs/methode.md), un agent rédacteur constitue le
+dossier de sources de chaque mot et rédige la fiche d'après lui ([docs/consignes/](docs/consignes/)) ;
+un agent relecteur, qui n'a pas écrit, relit tout le lot ; le rédacteur reprend, crée les auteurs
+et ouvrages d'après la BnF, écrit les fiches en brouillon et cherche les lectures traditionnelles.
 
 **À la main** : créer `data/fiches/<initiale>/<deux lettres>/<id>.yaml` (par exemple
 `data/fiches/e/et/etonner.yaml`) après avoir consulté les sources (Littré, Gaffiot ou Bailly ;

@@ -2,6 +2,34 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-09-25 — Refonte après le premier pilote
+
+Pilote de dix mots (*ennui, chétif, merci, enthousiasme, travail, psychologie, écologie, ange,
+panique, lunatique*), par un workflow de cinq agents par mot : 51 agents, 3,9 millions de jetons
+(environ 77 000 par agent, surtout le cadrage relu par chacun), deux fiches acceptées sur dix.
+Les huit refus étaient justes : *psychologie* contredisait son dossier, *travail* sautait le
+verbe *travailler*, *chétif* manquait *captif* et *\*cactivus*, *écologie* inventait une
+chronologie. Tout ce que le pilote a produit a été supprimé.
+
+Causes, et ce qui change :
+- **Le dossier ne donnait ni l'usage d'aujourd'hui ni les étapes datées du sens**, que
+  l'explication doit dire : le rédacteur les tirait de sa mémoire, le relecteur les refusait.
+  Le dossier porte désormais `usage` (d'après le plan des sens du TLFi, que `npm run dossier`
+  affiche avec ses marques « Vieilli », « Moderne ») et les étapes datées ; le sens de chaque
+  maillon qui en porte un est sourcé, Gaffiot et Bailly obligatoires quand le Littré et le TLFi
+  ne le donnent pas. Un déverbal passe par son verbe.
+- **Le rédacteur (Fable 5.1) cherchait l'effet** (chiasmes, la chose à la place du mot, absolus
+  sans source) : la consigne de rédaction donne ces fautes en exemples, avec ce qu'il fallait
+  écrire ; la rédaction passe à Opus 5.5, dont les propositions de relecteur étaient justes.
+- **La reprise ne convergeait pas** : le rédacteur reformulait au lieu d'adopter la proposition,
+  et la seconde relecture relisait tout. Il adopte désormais la proposition telle quelle quand
+  elle est juste ; la seconde relecture ne relit que les remarques et les lectures.
+- **Cinq agents par mot coûtaient le cadrage cinq fois par mot** : un rédacteur seul pour le lot,
+  un relecteur neuf, chacun repris une fois avec son contexte. Le workflow est supprimé ; les
+  deux agents sont définis dans `.claude/agents/`.
+- **Le moteur est dit** : `redaction` porte aussi le niveau de réflexion (`reflexion`), demandé
+  par Thibault.
+
 ## 2026-09-25 — Ce que « sens premier » veut dire
 
 - **Le sens premier est premier dans le temps**, non dans le principe : l'histoire du mot, non sa

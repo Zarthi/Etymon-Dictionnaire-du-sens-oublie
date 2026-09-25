@@ -146,6 +146,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 |---|---|---|---|
 | `par` | `IA` \| `Étymon` | oui | IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique). |
 | `detail` | texte | oui | Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution. |
+| `reflexion` | `basse` \| `moyenne` \| `élevée` \| `très élevée` \| `maximale` | non | Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale). |
 
 ### `sources[]`
 
@@ -162,6 +163,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 |---|---|---|---|
 | `par` | `IA` \| `Étymon` | oui | IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique). |
 | `detail` | texte | oui | Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution. |
+| `reflexion` | `basse` \| `moyenne` \| `élevée` \| `très élevée` \| `maximale` | non | Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale). |
 
 ### `historique[]`
 
@@ -201,6 +203,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 |---|---|---|---|
 | `par` | `IA` \| `Étymon` | oui | IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique). |
 | `detail` | texte | oui | Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution. |
+| `reflexion` | `basse` \| `moyenne` \| `élevée` \| `très élevée` \| `maximale` | non | Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale). |
 
 ### `historique[]`
 
@@ -244,6 +247,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 |---|---|---|---|
 | `par` | `IA` \| `Étymon` | oui | IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique). |
 | `detail` | texte | oui | Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution. |
+| `reflexion` | `basse` \| `moyenne` \| `élevée` \| `très élevée` \| `maximale` | non | Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale). |
 
 ### `historique[]`
 

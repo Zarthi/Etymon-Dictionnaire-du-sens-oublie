@@ -1,6 +1,19 @@
 import { Document, isScalar, Scalar, visit } from "yaml";
 import { z } from "zod";
 import { schemaEntreeAuteur, schemaEntreeOuvrage, schemaEntreeRedaction, type NATURES } from "../../src/lib/schema.ts";
+import { REFLEXIONS, type Reflexion } from "../../src/lib/sources.ts";
+
+/** Niveau de réflexion lu sur la ligne de commande : rien, un niveau connu, ou une erreur. */
+export function lireReflexion(valeur: string | undefined): { reflexion?: Reflexion } | { erreur: string } {
+  if (valeur === undefined) return {};
+  return (REFLEXIONS as readonly string[]).includes(valeur) ? { reflexion: valeur as Reflexion } : { erreur: `--reflexion : ${REFLEXIONS.join(", ")}` };
+}
+
+/** Le moteur qui a rédigé : son modèle, et le niveau de réflexion s'il est connu. */
+export interface Moteur {
+  modele: string;
+  reflexion?: Reflexion;
+}
 
 const NBSP = "\u00a0";
 
@@ -49,7 +62,7 @@ type Resultat = { fiche: Record<string, unknown> } | { erreurs: string[] };
 function preparer<T extends object>(
   brute: Record<string, unknown>,
   schema: z.ZodType<T>,
-  modele: string,
+  { modele, reflexion }: Moteur,
   completer: (contenu: T) => Record<string, unknown> | string = (c) => ({ ...c }) as Record<string, unknown>,
 ): Resultat {
   const tradition = brute.tradition as Record<string, unknown> | undefined;
@@ -62,15 +75,15 @@ function preparer<T extends object>(
   const complete = completer(resultat.data);
   if (typeof complete === "string") return { erreurs: [complete] };
   const contenu = nettoyer(complete) as Record<string, unknown>;
-  return { fiche: { ...contenu, redaction: [{ par: "IA", detail: modele }], statut: "a-verifier" } };
+  return { fiche: { ...contenu, redaction: [{ par: "IA", detail: modele, ...(reflexion ? { reflexion } : {}) }], statut: "a-verifier" } };
 }
 
 /** Fiche d'un mot à partir du contenu rédigé par l'IA ; la nature est tirée du Littré si absente. */
 export function preparerFiche(
   brute: Record<string, unknown>,
-  { modele, natureLittre }: { modele: string; natureLittre?: (typeof NATURES)[number] },
+  { natureLittre, ...moteur }: Moteur & { natureLittre?: (typeof NATURES)[number] },
 ): Resultat {
-  return preparer(brute, schemaEntreeRedaction, modele, (e) => {
+  return preparer(brute, schemaEntreeRedaction, moteur, (e) => {
     const nature = e.nature ?? (natureLittre ? [natureLittre] : undefined);
     if (nature === undefined) return "nature : absente du Littré, à fournir";
     const { mot, nature: _donnee, ...reste } = e;
@@ -79,11 +92,11 @@ export function preparerFiche(
 }
 
 /** Fiche d'un auteur ou d'un ouvrage à partir du contenu rédigé par l'IA. */
-export function preparerAuteur(brute: Record<string, unknown>, modele: string): Resultat {
-  return preparer(brute, schemaEntreeAuteur, modele);
+export function preparerAuteur(brute: Record<string, unknown>, moteur: Moteur): Resultat {
+  return preparer(brute, schemaEntreeAuteur, moteur);
 }
-export function preparerOuvrage(brute: Record<string, unknown>, modele: string): Resultat {
-  return preparer(brute, schemaEntreeOuvrage, modele);
+export function preparerOuvrage(brute: Record<string, unknown>, moteur: Moteur): Resultat {
+  return preparer(brute, schemaEntreeOuvrage, moteur);
 }
 
 /** YAML d'une fiche, au style des fiches existantes : listes de mots en ligne, textes longs en bloc replié. */

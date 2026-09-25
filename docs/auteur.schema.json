@@ -130,6 +130,17 @@
             "type": "string",
             "minLength": 1,
             "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
+          },
+          "reflexion": {
+            "description": "Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale).",
+            "type": "string",
+            "enum": [
+              "basse",
+              "moyenne",
+              "élevée",
+              "très élevée",
+              "maximale"
+            ]
           }
         },
         "required": [

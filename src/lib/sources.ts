@@ -2,10 +2,16 @@
 export const REDACTEURS = ["IA", "Étymon"] as const;
 export type Redacteur = (typeof REDACTEURS)[number];
 
+/** Niveau de réflexion du modèle d'IA qui a rédigé (effort : low, medium, high, xhigh, max). */
+export const REFLEXIONS = ["basse", "moyenne", "élevée", "très élevée", "maximale"] as const;
+export type Reflexion = (typeof REFLEXIONS)[number];
+
 export interface Redaction {
   par: Redacteur;
   /** Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution (« correction suite à une Critique »). */
   detail: string;
+  /** Niveau de réflexion du modèle, pour une rédaction par IA. */
+  reflexion?: Reflexion;
 }
 
 /**
@@ -14,7 +20,7 @@ export interface Redaction {
  */
 export function signatureRedaction(redaction: Redaction[]): string {
   return redaction
-    .map((r) => `${r.par} : ${r.detail}`)
+    .map((r) => `${r.par} : ${r.detail}${r.reflexion ? `, réflexion ${r.reflexion}` : ""}`)
     .sort()
     .join(" | ");
 }

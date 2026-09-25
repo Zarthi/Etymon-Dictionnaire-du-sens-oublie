@@ -10,14 +10,15 @@ import { validerDepot } from "../valider-fiches.ts";
 const fait = (ouvrage: string, entree: string) => ({ fait: `${ouvrage} ${entree}`, source: { ouvrage, entree } });
 
 describe("dossier", () => {
-  it("le squelette posé par npm run dossier n'est pas un dossier complet : ni chemin, ni fait", () => {
+  it("le squelette posé par npm run dossier n'est pas un dossier complet : ni chemin, ni usage, ni fait", () => {
     const erreurs = schemaDossier.safeParse(squeletteDossier("ennui", [])).error?.issues.map((i) => i.path[0]);
-    expect(erreurs).toEqual(["chemin", "faits"]);
+    expect(erreurs).toEqual(["chemin", "usage", "faits"]);
   });
   it("les sources d'une fiche sont les entrées consultées du dossier, sans doublon, dans l'ordre", () => {
     const dossier = schemaDossier.parse({
       ...squeletteDossier("ennui", []),
       chemin: "ordinaire",
+      usage: fait("tlfi", "ennui"),
       faits: [fait("tlfi", "ennui"), fait("littre", "ennui"), fait("tlfi", "ennui"), fait("gaffiot", "odium")],
     });
     expect(sourcesDuDossier(dossier)).toEqual([
@@ -36,15 +37,25 @@ describe("verdict de la relecture", () => {
 });
 
 describe("TLFi", () => {
-  it("garde la nature et le texte brut de la rubrique étymologique, rien d'autre", () => {
+  it("garde la nature, le plan des sens et la rubrique étymologique, sans exemples ni wiktionnaire", () => {
     const reponse = {
       header: { full_pos: "verbe" },
       content: [
+        {
+          id: "tlfi",
+          content: [
+            '<div class="s-structure-num">A. —</div><span class="s-usage-indicator">Vieilli</span><div class="s-definition">Frapper de stupeur.</div><div class="s-example">exemple</div><div class="s-structure-num">B. —</div><div class="s-definition">Causer une vive surprise.</div>',
+          ],
+        },
         { id: "wiktionnaire", content: ["<div>interdit</div>"] },
         { id: "etymology", content: ['<div class="s-etymology">Du lat. pop. *<span class="t-i">extonare</span></div>'] },
       ],
     };
-    expect(lireTlfi(reponse)).toEqual({ nature: "verbe", etymologie: "Du lat. pop. *extonare" });
+    expect(lireTlfi(reponse)).toEqual({
+      nature: "verbe",
+      sens: ["A. [Vieilli] Frapper de stupeur.", "B. Causer une vive surprise."],
+      etymologie: "Du lat. pop. *extonare",
+    });
     expect(lireTlfi({ content: [{ id: "tlfi", content: [] }] })).toBeUndefined();
   });
 });

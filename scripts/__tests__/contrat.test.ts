@@ -3,11 +3,9 @@ import { describe, expect, it } from "vitest";
 import {
   CONSIGNES_ETAPES,
   FICHIER_CONTRAT,
-  FICHIER_WORKFLOW,
   genererMarkdown,
   genererPrompt,
   genererSchemaJson,
-  genererWorkflow,
   SCHEMAS_JSON,
 } from "../contrat.ts";
 
@@ -22,10 +20,6 @@ describe("contrat de données", () => {
   });
   it.each(CONSIGNES_ETAPES.map((c) => [nom(c.fichier), c]))("docs/%s est à jour (sinon : npm run contrat)", (_, { fichier, generer }) => {
     expect(readFileSync(fichier, "utf8")).toBe(generer());
-  });
-  it("les schémas de scripts/workflow-lot.js sont à jour (sinon : npm run contrat)", () => {
-    const actuel = readFileSync(FICHIER_WORKFLOW, "utf8");
-    expect(actuel).toBe(genererWorkflow(actuel));
   });
   it("décrit les trois types de fiches", () => {
     const contrat = genererMarkdown();

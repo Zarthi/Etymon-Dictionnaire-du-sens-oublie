@@ -1,28 +1,43 @@
 # Rédiger une fiche d'après son dossier
 
-> Généré par `npm run contrat` : ne pas modifier à la main. Étape de la rédaction autonome (docs/methode.md) ; AGENTS.md fait foi.
+> Généré par `npm run contrat` : ne pas modifier à la main. Rédaction autonome (docs/methode.md) ; AGENTS.md fait foi.
 
 Tu rédiges une fiche d'Étymon, dictionnaire du sens premier des mots français, d'après le dossier de faits du mot (`atelier/<id>/dossier.json`). Une fiche se lit en dix secondes.
 
 ## Règles
 
 - Principe : la justesse des noms, au service de la vérité. Étymon rend à chaque mot son nom juste, et s'écrit de même : chaque mot dans son sens propre, chaque phrase conforme à ce qui est et à ce que disent les sources, rien de plus. Pas de figure, pas de formule, pas d'effet. Relis chaque phrase avec une question : « que veux-tu dire exactement ? » ; si la réponse est plus claire que la phrase, écris la réponse.
-- Un mot entre s'il est important (usage courant, porteur de sens dans la vie intellectuelle, morale, spirituelle ou sociale) et si son sens premier éclaire ce qu'on dit en l'employant. Un mot douteux est rédigé quand même : seul Thibault écarte, et tu lui signales ton doute.
-- `etymologie` : la chaîne, du plus proche au plus lointain. Le premier maillon est la langue source directe (latin pour un mot hérité, italien pour un emprunt à l'italien) ; on ne remonte que si cela ajoute un sens ou si l'origine est débattue.
+- Tu rédiges d'après le dossier (`atelier/<id>/dossier.json`) : la fiche n'affirme rien qui n'y soit (forme, langue, sens, date, auteur, tenant, histoire du mot, usage d'aujourd'hui). Si un fait te manque, va le chercher et ajoute-le au dossier avec sa source ; ce que tu sais sans l'avoir lu ne s'écrit pas. Si le dossier doute de la chaîne, `incertain: true`.
+- Un mot entre s'il est important (usage courant, porteur de sens dans la vie intellectuelle, morale, spirituelle ou sociale) et si son sens premier éclaire ce qu'on dit en l'employant. Un mot douteux est rédigé quand même : seul Thibault écarte ; note ton doute dans les signalements.
+- `etymologie` : la chaîne, du plus proche au plus lointain, maillon par maillon comme le dossier la donne (un déverbal passe par son verbe : travail, de travailler). Le premier maillon est la langue source directe (latin pour un mot hérité, italien pour un emprunt à l'italien) ; on ne remonte que si cela ajoute un sens ou si l'origine est débattue.
 - Formes dans leur écriture d'origine (φρήν, صفر) ; translittération seulement pour l'arabe ou l'hébreu (celle du grec se déduit).
-- `sens` seulement là où il apprend quelque chose : le sens premier, affiché seul en tête de fiche, est celui du maillon le plus lointain attesté qui en porte un. Une composition porte le sens littéral de ses éléments (schizophrénie : esprit fendu), et chaque élément le sien.
-- `explication` : ce qui s'est perdu, affaibli ou retourné entre le sens premier et l'usage actuel. Elle n'explique pas une seconde fois le sens, affiché juste au-dessus ; mais mieux vaut redire le mot juste qu'un détour. Ton sobre, sans emphase ni jugement. Le sens ancien n'est pas le « vrai » sens du mot, ni l'usage actuel une erreur : l'explication dit ce qui a changé, l'histoire n'en juge pas.
-- `themes` : le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier (étonner : émotions, pas météo) ; un ou deux, affichés sur la fiche. Aucune liste fermée n'est exhaustive. Une langue qui manque est un fait : ajoute-la (`npm run liste -- langues "<langue>"`) et dis-le dans tes ajouts. Un thème qui manque ne s'ajoute pas pendant le lot : mets le plus proche, et propose le thème manquant dans tes ajouts, avec la raison ; il sera ajouté entre deux lots si d'autres mots le demandent.
+- `sens` seulement là où il apprend quelque chose : le sens premier, affiché seul en tête de fiche, est celui du maillon le plus lointain attesté qui en porte un. Une composition porte le sens littéral de ses éléments (schizophrénie : esprit fendu), et chaque élément le sien. Chaque sens vient du dossier.
+- `explication` : ce qui s'est perdu, affaibli ou retourné entre le sens premier et l'usage d'aujourd'hui (le fait `usage` du dossier). Elle n'explique pas une seconde fois le sens, affiché juste au-dessus ; mais mieux vaut redire le mot juste qu'un détour. Ton sobre, sans emphase ni jugement. Le sens ancien n'est pas le « vrai » sens du mot, ni l'usage actuel une erreur : l'explication dit ce qui a changé, l'histoire n'en juge pas.
+- `themes` : le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier (étonner : émotions, pas météo) ; un ou deux, affichés sur la fiche. Aucune liste fermée n'est exhaustive. Une langue qui manque est un fait : ajoute-la (`npm run liste -- langues "<langue>"`) et note-le dans les signalements. Un thème qui manque ne s'ajoute pas pendant le lot : mets le plus proche, et propose le thème manquant dans les signalements, avec la raison.
 - Tout mot étranger cité dans un texte est une forme de la chaîne : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.
-- Un mot sacré par origine (né dans l'ordre sacré : manne, sabbat, alléluia) ne se rédige pas en lot : signale-le, il se rédige à part, texte d'origine sous les yeux. Un mot consacré (profane à l'origine : église, ange, baptême) se rédige comme les autres : son sens profane premier est justement ce que le dictionnaire révèle.
+- Un mot sacré par origine (né dans l'ordre sacré : manne, sabbat, alléluia) ne se rédige pas dans le lot : signale-le, il se rédige à part, texte d'origine sous les yeux. Un mot consacré (profane à l'origine : église, ange, baptême) se rédige comme les autres : son sens profane premier est justement ce que le dictionnaire révèle.
 - Le Nom divin s'écrit comme le texte l'écrit (Yah, YHWH), jamais traduit (« Dieu ») ni vocalisé (« Jéhovah », « Yahvé »).
 - `ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.
-- Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce). `renvois` (Voir aussi) : notions voisines du même ordre, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `tradition.renvois` (sous « Lectures traditionnelles » : voir obsession) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.
-- Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) et rends-le dans tes références : l'étape du référentiel la crée d'après la notice BnF.
+- Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce) ; un mot nommé dans l'explication n'est donc pas aussi un renvoi. `renvois` (Voir aussi) : notions voisines du même ordre que l'usage d'aujourd'hui, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `tradition.renvois` (sous « Lectures traditionnelles » : voir obsession) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.
+- Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) : elle se crée d'après sa notice BnF avant l'écriture des fiches (docs/consignes/references.md).
 - Dans un texte, nomme un auteur sous son nom usuel ou une de ses formes de citation (liste ci-dessous) : l'app en fait un lien, s'il est aussi cité dans un champ de la fiche.
-- Tu rédiges d'après le dossier (atelier/<id>/dossier.json) : la fiche n'affirme rien qui n'y soit (forme, langue, sens, date, auteur, tenant, histoire du mot). Si ta mémoire te dit qu'un fait manque ou qu'un fait du dossier est faux, ne l'écris pas : dis-le dans tes notes. Si le dossier signale un doute sur la chaîne, `incertain: true`.
 - Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles (`tradition.lectures`) : les scripts posent les premiers (npm run rediger), les lectures se rédigent à part, texte source sous les yeux.
 - Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.
+
+## Fautes à ne pas refaire
+
+Relevées par la relecture critique au premier pilote :
+
+| Faute | Écrit | À écrire |
+|---|---|---|
+| La chose prend la place du mot | « Le salaire est devenu la faveur. » | « Le mot qui nommait le salaire a pris le sens de faveur. » |
+| Formule d'effet (chiasme) | « L'ardeur est restée, le dieu n'y est plus. » | Dire le fait : ce que le mot désignait, ce qu'il désigne aujourd'hui, selon le dossier. |
+| Absolu que le dossier ne dit pas | « Seul le travail du maréchal garde l'idée de contrainte. » | Aucun « seul », « toujours », « jamais », « ne… plus que » sans un fait du dossier qui le dise. |
+| Usage actuel de mémoire | « Il nomme aujourd'hui moins la science que la cause. » | L'usage d'aujourd'hui vient du fait `usage` du dossier, et de lui seul. |
+| Chronologie inventée | « Botanique d'abord, puis tous les êtres vivants, puis les sociétés. » | N'ordonner dans le temps que des sens que le dossier date. |
+| Mot d'une autre époque | « Chez Homère, l'ange est quiconque porte une nouvelle. » | « Chez Homère, ἄγγελος désigne… » : la forme de l'époque dont on parle. |
+| Mot juste contourné | Sens affiché « en haine », puis « l'aversion que disait la locution ». | Redire « haine » : le mot juste, pas un voisin plus faible. |
+| Premier sens mal placé | « Le mot nomma d'abord la partie de la philosophie qui traite de l'âme » (attesté en 1690, alors que le premier emploi date de 1588). | « D'abord » seulement pour la première attestation du dossier. |
 
 ## Format
 
@@ -155,4 +170,4 @@ Fiches du dépôt (simple ; filiation ; filiation et composition ; mot forgé ; 
 
 ## Contrôle
 
-`npm run rediger -- atelier/<id>/fiche.json --essai` : valide la fiche avec le dépôt sans l'écrire. Corrige ce qui est « à corriger » ; ce qui est « à créer » (auteurs, ouvrages) va dans tes références.
+`npm run rediger -- atelier/<id>/fiche.json --essai` : valide la fiche avec le dépôt sans l'écrire. Corrige ce qui est « à corriger » ; ce qui est « à créer » (auteurs, ouvrages) se crée d'après la BnF avant l'écriture.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { parse } from "yaml";
-import { corrigerTypographie, preparerAuteur, preparerFiche, versYaml } from "../lib/redaction.ts";
+import { corrigerTypographie, lireReflexion, preparerAuteur, preparerFiche, versYaml } from "../lib/redaction.ts";
 import { referentiel, validerFiches } from "../lib/validation.ts";
 
 const NBSP = String.fromCharCode(0xa0);
@@ -70,9 +70,21 @@ describe("preparerFiche", () => {
   });
 });
 
+describe("réflexion du moteur", () => {
+  it("s'écrit dans la rédaction quand elle est connue", () => {
+    expect(ficheDe(preparerFiche(brute, { ...options, reflexion: "élevée" })).redaction).toEqual([{ par: "IA", detail: "Claude Fable 5.1", reflexion: "élevée" }]);
+    expect(ficheDe(preparerFiche(brute, options)).redaction).toEqual([{ par: "IA", detail: "Claude Fable 5.1" }]);
+  });
+  it("se lit dans la liste des niveaux", () => {
+    expect(lireReflexion("élevée")).toEqual({ reflexion: "élevée" });
+    expect(lireReflexion(undefined)).toEqual({});
+    expect(lireReflexion("high")).toEqual({ erreur: expect.stringMatching(/basse, moyenne, élevée/) });
+  });
+});
+
 describe("preparerAuteur", () => {
   it("pose le socle éditorial et retire tradition: false", () => {
-    const resultat = preparerAuteur({ nom: "Eugen Bleuler", naissance: 1857, mort: 1939, description: "Psychiatre suisse." }, "Claude Fable 5.1");
+    const resultat = preparerAuteur({ nom: "Eugen Bleuler", naissance: 1857, mort: 1939, description: "Psychiatre suisse." }, { modele: "Claude Fable 5.1" });
     expect((resultat as { fiche: Record<string, unknown> }).fiche).toEqual({
       nom: "Eugen Bleuler",
       naissance: "1857",

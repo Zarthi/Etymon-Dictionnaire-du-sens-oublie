@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { Redaction } from "../lib/sources.ts";
 
-  /** Qui a rédigé : « Rédaction : IA (Claude Opus 5.5), Étymon (correction suite à une Critique) ». */
+  /** Qui a rédigé : « Rédaction : IA (Claude Opus 5.5, réflexion élevée), Étymon (correction suite à une Critique) ». */
   let { redaction }: { redaction: Redaction[] } = $props();
 </script>
 
 <p class="redaction">
-  Rédaction&nbsp;: {redaction.map((r) => `${r.par} (${r.detail})`).join(", ")}
+  Rédaction&nbsp;: {redaction.map((r) => `${r.par} (${r.detail}${r.reflexion ? `, réflexion ${r.reflexion}` : ""})`).join(", ")}
 </p>
 
 <style>

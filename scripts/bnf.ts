@@ -3,7 +3,7 @@ import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { chercherNotices, noticeDe, type Notice } from "./lib/bnf.ts";
-import { preparerAuteur, preparerOuvrage, versYaml } from "./lib/redaction.ts";
+import { lireReflexion, preparerAuteur, preparerOuvrage, versYaml } from "./lib/redaction.ts";
 import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts";
 
 /**
@@ -30,7 +30,7 @@ async function principal(): Promise<number> {
   const { values: v, positionals } = parseArgs({
     allowPositionals: true,
     options: Object.fromEntries(
-      ["cb", "id", "nom", "nom-complet", "description", "modele", "traditions", "titre", "abrege", "titre-original", "auteur", "licence", "texte"].map((o) => [
+      ["cb", "id", "nom", "nom-complet", "description", "modele", "reflexion", "traditions", "titre", "abrege", "titre-original", "auteur", "licence", "texte"].map((o) => [
         o,
         { type: "string" as const },
       ]),
@@ -90,7 +90,13 @@ async function principal(): Promise<number> {
           description: v.description,
         };
   const brute = Object.fromEntries(Object.entries(contenu).filter(([, valeur]) => valeur !== undefined));
-  const resultat = genre === "auteur" ? preparerAuteur(brute, v.modele) : preparerOuvrage(brute, v.modele);
+  const reflexion = lireReflexion(v.reflexion);
+  if ("erreur" in reflexion) {
+    console.error(reflexion.erreur);
+    return 1;
+  }
+  const moteur = { modele: v.modele, ...reflexion };
+  const resultat = genre === "auteur" ? preparerAuteur(brute, moteur) : preparerOuvrage(brute, moteur);
   if ("erreurs" in resultat) {
     console.error(resultat.erreurs.join("\n"));
     return 1;

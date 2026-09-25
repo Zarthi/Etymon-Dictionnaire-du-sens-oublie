@@ -2,7 +2,7 @@ import { z } from "zod";
 import langues from "../../data/langues.json" with { type: "json" };
 import themes from "../../data/themes.json" with { type: "json" };
 import traditions from "../../data/traditions.json" with { type: "json" };
-import { REDACTEURS } from "./sources.ts";
+import { REDACTEURS, REFLEXIONS } from "./sources.ts";
 
 /**
  * Trois types de fiches : le mot, l'auteur, l'ouvrage. Elles partagent le même socle
@@ -61,8 +61,10 @@ export const schemaRedaction = z
   .object({
     par: z.enum(REDACTEURS).describe("IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."),
     detail: z.string().min(1).describe("Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."),
+    reflexion: z.enum(REFLEXIONS).optional().describe("Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale)."),
   })
   .strict()
+  .refine((r) => r.par === "IA" || r.reflexion === undefined, { message: "réflexion : seulement pour une rédaction par IA", path: ["reflexion"] })
   .describe("Qui a rédigé. Ce n'est pas une source.");
 
 /** Socle éditorial commun aux trois types de fiches. */
