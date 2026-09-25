@@ -325,6 +325,10 @@ export function genererConsigneRedacteur(): string {
     "",
     "Une ligne par point, avec le mot : doute sur le critère d'entrée ; langue ou tradition ajoutée, thème proposé ; ce que le modèle de données ne permet pas de dire ; source inaccessible ; remarque du relecteur que tu n'as pas suivie, et pourquoi. Thibault et l'affinage entre deux lots s'en servent.",
     "",
+    "## Décisions (`docs/decisions.md`)",
+    "",
+    "Un point qui attendrait Thibault ne t'arrête pas : décide, applique, et note la décision et sa raison dans `docs/decisions.md` (une ligne, relecture « à relire »). Restent à Thibault seul : `validee`, écarter un mot, changer un principe d'AGENTS.md.",
+    "",
   ].join("\n");
 }
 

@@ -29,6 +29,11 @@ premier pilote (`docs/journal-methode.md`) : un rédacteur seul pour tout le lot
 | Listes fermées (langues, traditions, thèmes) | ajouts (§7), notés au journal | retirer ou fusionner, à la relecture |
 | Modèle de données | détection, épreuve, implémentation, migration, entre deux lots, avec un compte rendu | ce qui touche aux principes et aux critères (§2, §3.3, sacré ou consacré) : l'agent propose, Thibault tranche |
 
+Un point qui attendrait Thibault n'arrête pas le travail : l'agent décide, applique, et note la
+décision et sa raison dans `docs/decisions.md` ; Thibault relit ce journal, confirme ou infirme, et
+une décision infirmée se défait. Restent à Thibault seul, sans décision provisoire : `validee`,
+écarter un mot, changer un principe d'AGENTS.md (l'agent y décide pour le lot, sans y toucher).
+
 ## 3. Le lot, en quatre passes
 
 Un lot est une dizaine de mots, choisis par familles et voisinage (doublets, renvois, même
@@ -81,6 +86,8 @@ Tout vit dans `atelier/`, hors du dépôt : un lot interrompu reprend où il s'�
 - **Verdict** (`atelier/<id>/verdict.json`) : décision et remarques du relecteur.
 - **Signalements** (`atelier/signalements.md`) : doutes sur le critère d'entrée, listes fermées
   touchées, limites du modèle, sources inaccessibles, remarques non suivies.
+- **Journal des décisions** (`docs/decisions.md`, versionné) : les décisions prises à la place de
+  Thibault, avec leur raison, qu'il relit (§2).
 - **Journal de méthode** (`docs/journal-methode.md`, versionné) : chaque ajustement de la méthode
   et sa cause.
 
