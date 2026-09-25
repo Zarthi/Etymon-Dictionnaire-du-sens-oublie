@@ -78,12 +78,12 @@ Chaque mot est accompagné d'une lecture, toujours signée : par le lecteur qui 
 Quête, sur son appareil seulement ; ou par la tradition qui la porte, par ses textes cités. Aucune
 règle de composition : la suite est le temps, la figure est le sens, le reste est lecture.
 
-## Précédents, à étudier
+## Précédents
 
-Le *Yi Jing* (deux traits, des figures nommées, mille ans de lectures : le plus proche) ; le Lo Shu
-et les huit trigrammes autour du centre ; le braille ; le Sefer Yetzirah et la guématrie ; Lulle,
-Wilkins, Leibniz, les Bliss. De mémoire ; à vérifier, et à confronter lettre par lettre : il est
-probable que les significations des figures existent déjà.
+Dans `precedents.md`. Le *Yi Jing* est le plus proche, et il est vérifié : ses huit trigrammes
+autour du centre se lisent en face (quatre paires de contraires) et autour (le cycle de l'année),
+qui sont nos deux lectures ; et une colonne de trois cases est un trigramme. Le reste (braille,
+Sefer Yetzirah, Lulle, Wilkins, Leibniz, Bliss) est de mémoire, à vérifier.
 
 ## Questions ouvertes
 
