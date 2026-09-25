@@ -10,9 +10,19 @@ etymologie:
       formes:
         - forme: relegere
           sens: reprendre avec soin
+          elements:
+            - forme: re-
+              sens: de nouveau
+            - forme: legere
+              sens: recueillir
           selon: [ ciceron ]
         - forme: religare
-          sens: relier
+          sens: attacher
+          elements:
+            - forme: re-
+              sens: en arrière
+            - forme: ligare
+              sens: lier
           selon: [ lactance ]
 explication: >-
   La religio est le scrupule qui fait hésiter, celui du juge devant un verdict comme celui
@@ -25,6 +35,14 @@ sources:
     entree: religion
   - ouvrage: gaffiot
     entree: religio
+  - ouvrage: gaffiot
+    entree: relego
+  - ouvrage: gaffiot
+    entree: lego
+  - ouvrage: gaffiot
+    entree: religo
+  - ouvrage: gaffiot
+    entree: ligo
   - ouvrage: la-nature-des-dieux
     entree: II, 72 (discours de Balbus)
     url: https://www.thelatinlibrary.com/cicero/nd2.shtml
@@ -52,7 +70,7 @@ tradition:
         - ouvrage: la-cite-de-dieu
           entree: X, 3
           url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
-    - texte: La religion relie nos âmes au seul Dieu pour le servir ; le mot serait
+    - texte: La religion attache nos âmes au seul Dieu pour le servir ; le mot serait
         pourtant formé sur relegere, compris comme « choisir ».
       citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
         cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,

@@ -72,25 +72,43 @@
     {#each chaine as m, i (i)}{introduction(i)}{@render maillon(m, i === 0 && m.langue === "français" && !m.forme)}{/each}.
   </p>
 {/if}
+<!-- Une hypothèse par ligne, pour qu'on les distingue d'un coup d'œil ; une forme composée donne
+     d'abord son sens, puis ses parties après deux-points : le tout d'abord, les parties ensuite. -->
 {#each alternatives as m, i (i)}
   {@const formes = m.alternatives!.formes}
-  <p class="chaine">
-    <strong>{m.alternatives!.mode === "debattue" ? "Origine débattue" : "Double sens voulu"}</strong>&nbsp;:
-    {#each formes as a, j (j)}{#if j > 0}{j === formes.length - 1 ? (m.alternatives!.mode === "debattue" ? ", ou " : ", et ") : ", "}{/if}{#if a.forme}{#if a.langue && a.langue !== m.langue}{origine(
-            a.langue,
-          )}{" "}{:else}{prep({ forme: a.forme, translitteration: a.translitteration })}{/if}<Forme
-          forme={a.forme}
-          translitteration={a.translitteration}
-        />, «&nbsp;{a.sens}&nbsp;»{:else}«&nbsp;{a.sens}&nbsp;», {@render elementsDe(a.elements ?? [], a.langue ?? m.langue)}{/if}{#if a.selon?.length}{" "}<span
-          class="selon">({@render noms(a.selon, ", ")})</span
-        >{/if}{/each}.
-  </p>
+  <div class="alternatives">
+    <strong>{m.alternatives!.mode === "debattue" ? "Origine débattue" : "Double sens voulu"}</strong>
+    <ul>
+      {#each formes as a, j (j)}
+        <li>
+          {#if a.forme}{#if a.langue && a.langue !== m.langue}{majuscule(origine(a.langue))}{" "}{:else}{majuscule(
+                prep({ forme: a.forme, translitteration: a.translitteration }),
+              )}{/if}<Forme forme={a.forme} translitteration={a.translitteration} />, «&nbsp;{a.sens}&nbsp;»{#if a.elements}&nbsp;:
+              {@render elementsDe(a.elements, a.langue ?? m.langue, true)}{/if}{:else}«&nbsp;{majuscule(a.sens)}&nbsp;», {@render elementsDe(
+              a.elements ?? [],
+              a.langue ?? m.langue,
+            )}{/if}{#if a.selon?.length}{" "}<span class="selon">({@render noms(a.selon, ", ")})</span>{/if}
+        </li>
+      {/each}
+    </ul>
+  </div>
 {/each}
 
 <style>
   .chaine {
     margin: 0.6rem 0 0;
     color: var(--texte-discret);
+  }
+  .alternatives {
+    margin: 0.6rem 0 0;
+    color: var(--texte-discret);
+  }
+  ul {
+    margin: 0.2rem 0 0;
+    padding-left: 1.1rem;
+  }
+  li {
+    margin: 0.15rem 0 0;
   }
   strong {
     font-family: var(--police-interface);
