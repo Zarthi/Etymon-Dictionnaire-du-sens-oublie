@@ -121,9 +121,11 @@ Pour l'histoire du mot, le Littré, le TLFi, le Gaffiot et le Bailly se consulte
 la tradition, un corpus de même rang (`scripts/lib/corpus.ts`, `npm run corpus`) : des œuvres qui
 lisent les mots eux-mêmes, où l'on peut chercher un mot, et dont le texte original est en ligne,
 du domaine public. Aujourd'hui : Isidore (*Étymologies*, *Différences*), Jérôme (*Livre des noms
-hébreux*), Rashi (*Commentaire sur la Torah*). Téléchargées une fois dans `sources/`, elles
-s'interrogent par un script, sans jeton : la machine trouve et cite, elle ne parle pas à la place
-de la tradition.
+hébreux*), Rashi (*Commentaire sur la Torah*), Augustin (*La Cité de Dieu*, *Confessions*, *De la
+doctrine chrétienne*), Thomas d'Aquin (*Somme théologique*, pour la part que Wikisource en donne).
+Téléchargées une fois dans `sources/`, elles s'interrogent par un script, sans jeton : la taille
+d'une œuvre n'est donc pas un obstacle ; la machine trouve et cite, elle ne parle pas à la place de
+la tradition.
 
 - **Un plancher, jamais une limite** (décision de Thibault) : tout autre auteur traditionnel qui a
   lu le mot se cherche aussi, et se cite de même, texte sous les yeux.

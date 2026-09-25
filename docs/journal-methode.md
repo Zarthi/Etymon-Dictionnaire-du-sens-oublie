@@ -9,6 +9,9 @@ Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus réce
   Rashi (*Commentaire sur la Torah*), téléchargés une fois et interrogés par `npm run corpus`.
   Cause : question de Thibault ; côté profane, les sources se consultaient déjà par réflexe. Le
   corpus est un plancher, jamais une limite (décision de Thibault).
+- **Augustin et Thomas d'Aquin y entrent aussi** : précieux pour les lectures (Thibault), et leur
+  taille n'est pas un obstacle pour une recherche par script. Wikisource ne donne qu'une part de
+  la *Somme théologique* (214 questions).
 - Premier essai : *misericord* trouve Isidore dans les *Étymologies* (X) et les *Différences*
   (misericordia et miseratio) ; *religio*, dans les *Différences*, une seconde lecture d'Isidore.
 

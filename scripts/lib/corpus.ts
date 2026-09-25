@@ -13,8 +13,18 @@ export interface Oeuvre {
   langue: string;
   /** Ce qu'elle apporte, en une ligne, pour la consigne des lectures. */
   role: string;
-  pages: { repere: string; url: string }[];
+  /** Pages de l'œuvre ; ou, pour une œuvre découpée en beaucoup de pages, le préfixe de ses pages sur Wikisource, listées au téléchargement. */
+  pages?: Page[];
+  wikisource?: { langue: "la" | "he"; prefixe: string };
 }
+
+export interface Page {
+  repere: string;
+  url: string;
+}
+
+/** Adresse d'une page de Wikisource. */
+export const pageWikisource = (langue: string, titre: string) => `https://${langue}.wikisource.org/wiki/${encodeURIComponent(titre.replaceAll(" ", "_"))}`;
 
 const WIKISOURCE_LA = "https://la.wikisource.org/wiki/";
 const WIKISOURCE_HE = "https://he.wikisource.org/wiki/";
@@ -74,6 +84,38 @@ export const CORPUS: Oeuvre[] = [
         url: `${WIKISOURCE_HE}${encodeURIComponent(`רש"י על ${livre} ${numeralHebreu(i + 1)}`)}`,
       })),
     ),
+  },
+  {
+    id: "cite-de-dieu",
+    titre: "Augustin, La Cité de Dieu",
+    tradition: "chrétienne",
+    langue: "latin",
+    role: "les noms de la cité et du culte, lus par Augustin (religio, X, 3)",
+    wikisource: { langue: "la", prefixe: "De civitate Dei/" },
+  },
+  {
+    id: "confessions",
+    titre: "Augustin, Confessions",
+    tradition: "chrétienne",
+    langue: "latin",
+    role: "les mots de l'âme et de la mémoire",
+    wikisource: { langue: "la", prefixe: "Confessiones/" },
+  },
+  {
+    id: "doctrine-chretienne",
+    titre: "Augustin, De la doctrine chrétienne",
+    tradition: "chrétienne",
+    langue: "latin",
+    role: "les signes et les mots de l'Écriture",
+    wikisource: { langue: "la", prefixe: "De Doctrina Christiana/" },
+  },
+  {
+    id: "somme-theologique",
+    titre: "Thomas d'Aquin, Somme théologique",
+    tradition: "chrétienne",
+    langue: "latin",
+    role: "le nom d'une notion, souvent discuté en tête d'article (« nomen … dicitur »)",
+    wikisource: { langue: "la", prefixe: "Summa Theologiae/" },
   },
 ];
 

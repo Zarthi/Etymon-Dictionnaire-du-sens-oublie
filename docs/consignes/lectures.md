@@ -21,6 +21,10 @@ Des œuvres qui lisent les mots eux-mêmes, où l'on peut chercher un mot, et do
 - Isidore de Séville, Différences (tradition chrétienne, latin) : ce qui distingue deux mots voisins (misericordia et miseratio).
 - Jérôme, Livre des noms hébreux (tradition chrétienne, latin) : le sens des noms hébreux de la Bible.
 - Rashi, Commentaire sur la Torah (tradition juive, hébreu) : le sens des mots hébreux de la Torah, verset par verset.
+- Augustin, La Cité de Dieu (tradition chrétienne, latin) : les noms de la cité et du culte, lus par Augustin (religio, X, 3).
+- Augustin, Confessions (tradition chrétienne, latin) : les mots de l'âme et de la mémoire.
+- Augustin, De la doctrine chrétienne (tradition chrétienne, latin) : les signes et les mots de l'Écriture.
+- Thomas d'Aquin, Somme théologique (tradition chrétienne, latin) : le nom d'une notion, souvent discuté en tête d'article (« nomen … dicitur »).
 
 Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est bien. Une lecture n'entre que si l'auteur lit le mot et dit quelque chose qui diffère de l'histoire du mot ou la complète.
 

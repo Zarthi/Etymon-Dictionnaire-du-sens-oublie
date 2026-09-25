@@ -12,7 +12,8 @@ describe("corpus de réflexe", () => {
 
   it("couvre les cinq livres de la Torah pour Rashi, et les vingt livres des Étymologies", () => {
     expect(CORPUS.find((o) => o.id === "rashi-torah")?.pages).toHaveLength(187);
-    expect(CORPUS.find((o) => o.id === "etymologies")?.pages.at(-1)?.url).toMatch(/Liber_XX$/);
+    expect(CORPUS.find((o) => o.id === "somme-theologique")?.wikisource?.prefixe).toBe("Summa Theologiae/");
+    expect(CORPUS.find((o) => o.id === "etymologies")?.pages?.at(-1)?.url).toMatch(/Liber_XX$/);
   });
 
   it("trouve le radical sans égard à la casse ni à u/v, et met d'abord les explications de mots", () => {
