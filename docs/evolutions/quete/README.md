@@ -22,7 +22,7 @@ La Quête s'ouvre par **une seule option** dans les paramètres (« Ouvrir la qu
 comme le reste de l'app, et se referme de même. Jamais contre un don, un score ou une progression :
 rien, dans Étymon, ne se débloque autrement que par le geste du lecteur. Elle ouvre ensemble :
 
-- **une langue qui ne se parle pas** ([langue.md](langue.md)) : chaque mot écrit en trois signes, qui
+- **une langue qui ne se parle pas** ([langue/](langue/README.md)) : chaque mot écrit dans une grille de trois sur trois, en signes qui
   disent une lecture, toujours signée ;
 - **la lecture du lecteur** : il écrit lui-même le sens qu'il donne au mot, et le mot dans la langue.
   Ses lectures restent sur son appareil (aucun serveur), et s'affichent toujours comme les siennes,

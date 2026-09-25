@@ -1,0 +1,20 @@
+# Les tétraktys de la langue qui ne se parle pas. Règles dans README.md.
+# Une tétraktys : dix points en quatre rangs ; les extrêmes du rang 2 se prolongent sur les
+# côtés ; chaque rang ajoute des moyens à l'intérieur (rang 3 : un, sur l'axe ; rang 4 : deux).
+# Les emoji sont les noms des signes ; leur sens est leur place.
+
+- nom: principale
+  sommet: le principe, sans signe ; le centre en est la trace
+  rangs:
+    - [🔘]
+    - [⬆️, ⬇️]
+    - [⬆️, 🔘, ⬇️]
+    - [🔥, 💨, 💧, ⛰️]
+  signes: [🔘, 🔥, 💨, 💧, ⛰️]
+  a-trancher: ⬆️ et ⬇️ comme signes des mots ; où passent ⬅️ et ➡️, s'ils sont nécessaires
+  raison: >
+    Deux extrêmes, le haut et le bas ; une médiété pour le plan, le centre, où le plan coupe
+    l'axe ; deux médiétés pour le solide, d'où quatre degrés entre les extrêmes : le feu, l'air,
+    l'eau, la terre (Platon, Timée, 31c-32b, vérifié). Les extrêmes se retrouvent aux bouts de
+    chaque rang parce qu'ils sont sur les côtés du triangle ; le centre est sur l'axe, comme le
+    sommet : il en est la continuation.
