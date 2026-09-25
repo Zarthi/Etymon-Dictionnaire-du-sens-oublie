@@ -1,6 +1,7 @@
 # La Quête
 
 > Évolution future, à ne pas coder sans accord. La conception se discute ici.
+> [Retour aux évolutions](../README.md).
 
 Un mode d'Étymon pour la découverte des sens sacrés. Nom proposé : **la Quête**, du latin
 *quaesitus*, « cherché » (Littré), le participe de *quaerere*, « chercher » : *quaerite et

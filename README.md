@@ -59,6 +59,11 @@ TLFi pour vérifier), retirer le mot de `data/candidats/<initiale>.yaml`, puis
 
 Seul Thibault passe une fiche en `validee`, après relecture dans l'app (`npm run dev`).
 
+## Évolutions futures
+
+Ce qu'Étymon pourrait devenir (dictionnaires hébreu et arabe, langue de l'application, la Quête) est
+conçu dans [docs/evolutions/](docs/evolutions/README.md), à ne pas coder sans accord.
+
 ## Licences
 
 - Code : MIT ([LICENSE](LICENSE)).
