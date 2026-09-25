@@ -2,6 +2,39 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-09-25 — Second pilote, avec la méthode refondue
+
+Mêmes dix mots, un rédacteur et un relecteur (Opus 5.5, réflexion élevée), quatre passes. Deux
+agents en tout, contre 51 ; environ 370 000 jetons (compteurs de fin : rédacteur 216 000,
+relecteur 156 000), contre 3,9 millions. Dix fiches écrites en `brouillon`, contre deux acceptées.
+
+- **La relecture converge.** Passe 2 : quatre fiches acceptées, six à reprendre, huit remarques ;
+  le rédacteur les adopte toutes telles quelles. Passe 4 : les huit sont réglées, deux restent
+  ouvertes, simples, réglées sans boucle (§3).
+- **Le corpus de réflexe n'est pas encore un réflexe.** Pour *ange*, le rédacteur s'est arrêté à
+  Isidore sans chercher Augustin, qui est au corpus ; le relecteur l'a trouvé (*Cité de Dieu* X,
+  25), et la lecture est entrée. À faire : la consigne des lectures demande de noter au dossier
+  la recherche faite dans chaque œuvre du corpus, même vaine, et le relecteur la contrôle.
+- **Les dates approximatives de la BnF se perdent.** Notice de Platon « 0427?-0348? av. J.-C. » :
+  la fiche portait une naissance exacte et aucune mort ; relevé par le relecteur, corrigé à la
+  main. À faire : `npm run bnf` doit lire les dates incertaines avant notre ère.
+- **Les consignes générées vieillissent pendant le lot** : les auteurs et ouvrages créés n'y sont
+  listés qu'après `npm run contrat`, et le test du contrat échoue jusque-là. À faire : l'écriture
+  (`npm run rediger`, `npm run bnf --cb`) régénère les consignes, ou la fin de lot le prévoit.
+- **Gaffiot inaccessible aux scripts** (gaffiot.fr coupe la connexion, pas de navigateur dans les
+  agents) : les sens latins du lot viennent du Littré et du TLFi, qui les glosent. Tant que ce
+  sera le cas, un sens latin qu'aucun des deux ne donne ne peut pas être sourcé.
+- **Le TLFi manque parfois à l'API du portail** (*ennuyer*) : lu sur l'interface Stella de l'ATILF,
+  même article. À faire, si le cas revient : un repli de `npm run dossier` sur Stella.
+- **Nature** : le script ne lit pas « s. f. sans pluriel » (*merci*), écrite à la main ; pour
+  *panique*, le Littré ne donne que l'adjectif, le nom est l'usage courant (TLFi) : la règle
+  « nature tirée du Littré » est à revoir pour les mots dont l'usage a changé de nature.
+- **Limite du modèle** : un croisement (*chétif*, *captivus* croisé avec le gaulois *\*cactos*)
+  ne se dit pas dans la chaîne. Une seule occurrence : on attend un deuxième cas.
+- **Listes fermées** : tradition « grecque » ajoutée pour la lecture de Platon (*Ion* 534b, sur
+  ἔνθεος), demandée par *enthousiasme* ; à Thibault de la garder, la renommer ou la retirer.
+  Candidat ajouté : *captif* (doublet de *chétif*).
+
 ## 2026-09-25 — Un corpus de réflexe pour les lectures
 
 - **Les lectures partent d'un corpus consulté par réflexe** (méthode §7 bis), non plus de la seule

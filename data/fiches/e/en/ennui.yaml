@@ -1,0 +1,37 @@
+mot: ennui
+nature: [ nom masculin ]
+etymologie:
+  - forme: ennuyer
+    langue: français
+  - forme: inodiare
+    langue: bas latin
+  - forme: in odio esse
+    langue: latin
+    sens: être un objet de haine
+explication: >-
+  En ancien français, l'ennui est une tristesse profonde, un dégoût ou un
+  tourment. Le mot s'est affaibli au XVIIe siècle en lassitude d'esprit ; il
+  désigne aujourd'hui cette lassitude, mêlée d'une impression de vide, et aussi
+  une contrariété.
+ecartees:
+  - forme: noxa
+    langue: latin
+    sens: tort, préjudice
+    raison: "Littré l'écarte : noxa aurait donné noise, non ennui."
+famille: [ ennuyer, ennuyeux, désennuyer ]
+renvois: [ melancolie ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: ennui
+  - ouvrage: tlfi
+    entree: ennuyer
+  - ouvrage: tlfi
+    entree: ennuyeux
+  - ouvrage: littre
+    entree: ennui
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

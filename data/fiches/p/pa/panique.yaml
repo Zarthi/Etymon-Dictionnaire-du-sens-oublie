@@ -1,0 +1,28 @@
+mot: panique
+nature: [ adjectif ]
+etymologie:
+  - forme: πανικός
+    langue: grec ancien
+    sens: de Pan
+explication: >-
+  Pan passait pour produire les bruits entendus dans les montagnes et les
+  vallées, et πανικός qualifiait surtout la terreur qu'ils causaient. Adjectif
+  en 1534 dans terreur panique, le mot est devenu nom au XIXe siècle : une peur
+  soudaine et irraisonnée, souvent collective.
+famille: [ paniquer ]
+renvois: [ epouvante ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: panique
+  - ouvrage: littre
+    entree: panique
+  - ouvrage: bailly
+    entree: Πανικός
+  - ouvrage: bailly
+    entree: Πάν
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,15 @@
+nom: Philipp Melanchthon
+naissance: "1497"
+mort: "1560"
+description: >-
+  Humaniste et théologien allemand de la Réforme, dit le « Précepteur de
+  l'Allemagne ».
+cite: [ Melanchthon ]
+sources:
+  - ouvrage: bnf
+    entree: cb119154816
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

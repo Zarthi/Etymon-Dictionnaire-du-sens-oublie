@@ -1,0 +1,16 @@
+titre: Ion
+titreOriginal: Ἴων
+auteur: platon
+licence: domaine public
+texte: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0179%3Atext%3DIon
+description: >-
+  Dialogue de Platon sur le rhapsode Ion : le poète compose non par art, mais
+  par inspiration divine.
+sources:
+  - ouvrage: bnf
+    entree: cb12320893d
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

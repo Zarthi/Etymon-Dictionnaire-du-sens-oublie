@@ -1,0 +1,44 @@
+mot: enthousiasme
+nature: [ nom masculin ]
+etymologie:
+  - forme: ἐνθουσιασμός
+    langue: grec ancien
+    sens: possession divine
+  - forme: ἐνθουσιάζω
+    langue: grec ancien
+  - forme: ἔνθεος
+    langue: grec ancien
+    sens: inspiré par un dieu
+    elements:
+      - forme: ἐν
+        sens: dans
+      - forme: θεός
+        sens: dieu
+explication: >-
+  Entré en français en 1546, le mot désigne le délire sacré de l'interprète d'un dieu et
+  l'inspiration du poète. Au XVIIe siècle, il prend le sens d'exaltation qui pousse à agir
+  avec joie, puis d'admiration passionnée ; il nomme aujourd'hui aussi une joie vive qui
+  exprime une adhésion.
+famille: [ enthousiaste, enthousiasmer ]
+renvois: [ extase, ferveur ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Le poète ne peut composer avant d'être devenu ἔνθεος et hors de sens, quand
+        l'intellect n'est plus en lui.
+      citation: οὐ πρότερον οἷός τε ποιεῖν πρὶν ἂν ἔνθεός τε γένηται καὶ ἔκφρων καὶ ὁ νοῦς
+        μηκέτι ἐν αὐτῷ ἐνῇ
+      sources:
+        - ouvrage: ion
+          entree: 534b
+          url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0179%3Atext%3DIon%3Asection%3D534b
+sources:
+  - ouvrage: tlfi
+    entree: enthousiasme
+  - ouvrage: littre
+    entree: enthousiasme
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

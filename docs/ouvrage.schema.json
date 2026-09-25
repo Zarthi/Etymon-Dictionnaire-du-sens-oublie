@@ -30,7 +30,8 @@
         "type": "string",
         "enum": [
           "juive",
-          "chrétienne"
+          "chrétienne",
+          "grecque"
         ],
         "description": "Tradition (liste fermée : data/traditions.json)."
       }

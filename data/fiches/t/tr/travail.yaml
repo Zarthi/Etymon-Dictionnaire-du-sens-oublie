@@ -1,0 +1,38 @@
+mot: travail
+nature: [ nom masculin ]
+etymologie:
+  - forme: travailler
+    langue: français
+  - forme: "*tripaliare"
+    langue: latin populaire
+    sens: torturer
+  - forme: trepalium
+    langue: latin médiéval
+    sens: instrument de torture
+explication: >-
+  Travailler a d'abord signifié tourmenter, faire souffrir ; le travail a
+  désigné la peine endurée, et les douleurs de l'accouchement, sens qui demeure.
+  Celui d'activité qui fait vivre, devenu très rare au XVIe siècle, est revenu
+  en force au XVIIe.
+ecartees:
+  - forme: trabs
+    langue: latin
+    sens: poutre
+    selon: [ emile-littre ]
+famille: [ travailler, travailleur ]
+renvois: [ effort, metier ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: travail
+  - ouvrage: tlfi
+    entree: travailler
+  - ouvrage: littre
+    entree: travail
+  - ouvrage: littre
+    entree: travailler
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

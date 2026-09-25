@@ -1,0 +1,34 @@
+mot: écologie
+nature: [ nom féminin ]
+etymologie:
+  - forme: Ökologie
+    langue: allemand
+    forge:
+      par: [ ernst-haeckel ]
+      date: "1866"
+  - langue: grec ancien
+    sens: discours sur la maison
+    elements:
+      - forme: οἶκος
+        sens: maison
+      - forme: λόγος
+        sens: discours
+explication: >-
+  En 1910, des botanistes l'emploient en français pour les rapports des plantes
+  avec leur station, et glosent οἶκος par demeure, station, milieu. Le mot
+  désigne aujourd'hui l'étude des relations des êtres vivants avec leur milieu,
+  et par analogie de l'homme avec son environnement.
+famille: [ écologique, écologiste ]
+themes: [ nature, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: écologie
+  - ouvrage: bailly
+    entree: οἶκος
+  - ouvrage: bailly
+    entree: λόγος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

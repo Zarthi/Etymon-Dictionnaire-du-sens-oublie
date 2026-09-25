@@ -1,0 +1,24 @@
+mot: chétif
+nature: [ adjectif ]
+etymologie:
+  - forme: "*cactivus"
+    langue: latin populaire
+  - forme: captivus
+    langue: latin
+    sens: prisonnier
+explication: >-
+  Les auteurs chrétiens nommaient captivus l'homme captif du péché ; de là le
+  sens de malheureux qu'a pris chétif en ancien français. Le sens de faible
+  constitution, rare avant le XVIIe siècle, est devenu l'usage courant.
+famille: [ captif, captivité ]
+themes: [ corps ]
+sources:
+  - ouvrage: tlfi
+    entree: chétif
+  - ouvrage: littre
+    entree: chétif
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

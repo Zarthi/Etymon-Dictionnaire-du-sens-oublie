@@ -1,0 +1,23 @@
+mot: merci
+nature: [ interjection, nom féminin, nom masculin ]
+etymologie:
+  - forme: merces
+    langue: latin
+    sens: salaire, récompense
+explication: >-
+  Le mot merces, qui nommait le salaire, a pris en bas latin le sens de faveur,
+  de grâce accordée à qui l'on épargne ; merci a d'abord ce sens en français.
+  Grand merci, la grande faveur qu'on vous accorde, en a fait le mot du
+  remerciement.
+famille: [ remercier ]
+themes: [ parole, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: merci
+  - ouvrage: littre
+    entree: merci
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

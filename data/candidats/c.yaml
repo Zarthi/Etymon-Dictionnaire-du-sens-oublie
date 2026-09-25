@@ -8,6 +8,7 @@
 - { mot: candidat, statut: a-faire }
 - { mot: capital, statut: a-faire }
 - { mot: caprice, statut: a-faire }
+- { mot: captif, statut: a-faire }
 - { mot: caractère, statut: a-faire }
 - { mot: carême, statut: a-faire }
 - { mot: carnaval, statut: a-faire }
@@ -31,7 +32,6 @@
 - { mot: château, statut: a-faire }
 - { mot: chef, statut: a-faire }
 - { mot: chemin, statut: a-faire }
-- { mot: chétif, statut: a-faire }
 - { mot: chose, statut: a-faire }
 - { mot: chrétien, statut: a-faire }
 - { mot: ciel, statut: a-faire }

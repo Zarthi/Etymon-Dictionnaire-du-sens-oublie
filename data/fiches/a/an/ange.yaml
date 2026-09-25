@@ -1,0 +1,49 @@
+mot: ange
+nature: [ nom masculin ]
+etymologie:
+  - forme: angelus
+    langue: latin ecclésiastique
+  - forme: ἄγγελος
+    langue: grec ancien
+    sens: messager
+explication: >-
+  Chez Homère, ἄγγελος désigne le messager ; dans la Septante, l'envoyé de Dieu, sens que
+  reçoit le latin chrétien angelus. Le mot français désigne aujourd'hui un être spirituel
+  créé par Dieu, en particulier son messager, et par analogie une personne d'une
+  perfection morale ou physique.
+famille: [ angélique, archange ]
+renvois: [ demon ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Ange est le nom d'une fonction, non d'une nature. Les anges sont toujours des
+        esprits, mais ne sont appelés anges que lorsqu'ils sont envoyés annoncer aux
+        peuples la volonté du Seigneur.
+      citation: Angeli Graece vocantur, Hebraice malachoth, Latine vero nuntii interpretantur,
+        ab eo quod Domini voluntatem populis nuntiant. […] Angelorum autem vocabulum
+        officii nomen est, non naturae. Semper enim spiritus sunt, sed cum mittuntur,
+        vocantur angeli.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 5, 1-2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+    - texte: Les hommes aussi peuvent être, à leur mesure, des anges de Dieu, c'est-à-dire ses
+        messagers, en annonçant sa volonté et en louant sa gloire et sa grâce.
+      citation: simus nos quoque pro modulo nostro angeli Dei, id est nuntii eius, adnuntiantes
+        eius uoluntatem et gloriam gratiamque laudantes.
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: X, 25
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: ange
+  - ouvrage: littre
+    entree: ange
+  - ouvrage: bailly
+    entree: ἄγγελος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

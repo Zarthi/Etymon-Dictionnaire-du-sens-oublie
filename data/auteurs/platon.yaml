@@ -1,0 +1,15 @@
+nom: Platon
+naissance: vers 427 av. J.-C.
+mort: vers 348 av. J.-C.
+description: >-
+  Philosophe grec ; ses dialogues traitent notamment du langage, de l'âme et de
+  l'inspiration.
+traditions: [ grecque ]
+sources:
+  - ouvrage: bnf
+    entree: cb11920019p
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

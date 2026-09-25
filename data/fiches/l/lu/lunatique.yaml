@@ -1,0 +1,36 @@
+mot: lunatique
+nature: [ adjectif ]
+etymologie:
+  - forme: lunaticus
+    langue: bas latin
+    sens: maniaque, épileptique
+  - forme: luna
+    langue: latin
+    sens: lune
+explication: >-
+  On attribuait la folie et l'épilepsie à l'influence de la lune. En 1277, lunatique se
+  dit de qui a perdu la raison ; depuis le XVIIe siècle, aussi de qui est capricieux,
+  d'humeur changeante.
+famille: [ lune, lunaire ]
+renvois: [ caprice ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: Le peuple appelle lunatiques les épileptiques, parce que les embûches des démons
+        les accompagnent selon le cours de la lune.
+      citation: Hos etiam vulgus lunaticos vocant, quod per lunae cursum comitetur eos insidia
+        daemonum.
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 7, 6
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: lunatique
+  - ouvrage: littre
+    entree: lunatique
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

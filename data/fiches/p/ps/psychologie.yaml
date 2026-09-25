@@ -1,0 +1,37 @@
+mot: psychologie
+nature: [ nom féminin ]
+etymologie:
+  - forme: psychologia
+    langue: latin humaniste
+    sens: discours sur l'âme
+    elements:
+      - forme: ψυχή
+        langue: grec ancien
+        sens: âme
+      - forme: λόγος
+        langue: grec ancien
+        sens: discours
+    forge:
+      par: [ philipp-melanchthon ]
+      date: XVIe siècle
+explication: >-
+  Le mot paraît en français en 1588, au titre d'un traité de l'apparition des
+  esprits ; en 1690, il désigne la partie de la philosophie qui traite de l'âme.
+  Il nomme aujourd'hui la science des faits psychiques, et l'aptitude à
+  connaître les sentiments d'autrui.
+famille: [ psychologue, psychologique ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: psychologie
+  - ouvrage: littre
+    entree: psychologie
+  - ouvrage: bailly
+    entree: ψυχή
+  - ouvrage: bailly
+    entree: λόγος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

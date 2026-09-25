@@ -2,7 +2,6 @@
 - { mot: paisible, statut: a-faire }
 - { mot: paix, statut: a-faire }
 - { mot: palais, statut: a-faire }
-- { mot: panique, statut: a-faire }
 - { mot: parabole, statut: a-faire }
 - { mot: paradis, statut: a-faire }
 - { mot: paradoxe, statut: a-faire }
@@ -97,7 +96,6 @@
 - { mot: prouesse, statut: a-faire }
 - { mot: providence, statut: a-faire }
 - { mot: prudence, statut: a-faire }
-- { mot: psychologie, statut: a-faire }
 - { mot: public, statut: a-faire }
 - { mot: pudeur, statut: a-faire }
 - { mot: puéril, statut: a-faire }
