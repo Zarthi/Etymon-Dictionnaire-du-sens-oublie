@@ -1,0 +1,87 @@
+# Les lettres du Centre : les figures symétriques de la grille 3 × 3, ⬛ plein, ⬜ vide.
+# La grille vide n'est pas une lettre : le Principe. Le sens de chaque lettre est dans README.md.
+
+- nombre: 1
+  nom: le centre
+  figure: [⬜⬜⬜, ⬜⬛⬜, ⬜⬜⬜]
+  sens: l'Un
+
+- nombre: 2
+  nom: en face, verticale
+  figure: [⬜⬛⬜, ⬜⬜⬜, ⬜⬛⬜]
+  sens: les deux contraires de l'axe, le haut et le bas
+- nombre: 2
+  nom: en face, horizontale
+  figure: [⬜⬜⬜, ⬛⬜⬛, ⬜⬜⬜]
+  sens: les deux contraires du plan, l'avant et l'après
+- nombre: 2
+  nom: en face, diagonale
+  figure: [⬛⬜⬜, ⬜⬜⬜, ⬜⬜⬛]
+  sens: deux contraires intermédiaires
+- nombre: 2
+  nom: en face, autre diagonale
+  figure: [⬜⬜⬛, ⬜⬜⬜, ⬛⬜⬜]
+  sens: deux contraires intermédiaires
+
+- nombre: 3
+  nom: la colonne
+  figure: [⬜⬛⬜, ⬜⬛⬜, ⬜⬛⬜]
+  sens: les extrêmes et le milieu sur l'axe ; ce qui est
+- nombre: 3
+  nom: la ligne
+  figure: [⬜⬜⬜, ⬛⬛⬛, ⬜⬜⬜]
+  sens: l'avant, le présent, l'après ; ce qui devient
+- nombre: 3
+  nom: la diagonale
+  figure: [⬛⬜⬜, ⬜⬛⬜, ⬜⬜⬛]
+  sens: à préciser
+- nombre: 3
+  nom: l'autre diagonale
+  figure: [⬜⬜⬛, ⬜⬛⬜, ⬛⬜⬜]
+  sens: à préciser
+
+- nombre: 4
+  nom: les bras
+  figure: [⬜⬛⬜, ⬛⬜⬛, ⬜⬛⬜]
+  sens: le cycle autour du centre absent ; en face, deux paires de contraires
+- nombre: 4
+  nom: les coins
+  figure: [⬛⬜⬛, ⬜⬜⬜, ⬛⬜⬛]
+  sens: le cycle des intermédiaires ; à préciser
+
+- nombre: 5
+  nom: la croix
+  figure: [⬜⬛⬜, ⬛⬛⬛, ⬜⬛⬜]
+  sens: le cycle et son centre
+- nombre: 5
+  nom: le × plein
+  figure: [⬛⬜⬛, ⬜⬛⬜, ⬛⬜⬛]
+  sens: à préciser
+
+- nombre: 6
+  nom: deux lignes
+  figure: [⬛⬛⬛, ⬜⬜⬜, ⬛⬛⬛]
+  sens: le plan d'en haut et le plan d'en bas, sans lien
+- nombre: 6
+  nom: deux colonnes
+  figure: [⬛⬜⬛, ⬛⬜⬛, ⬛⬜⬛]
+  sens: deux êtres côte à côte, sans lien
+
+- nombre: 7
+  nom: le I
+  figure: [⬛⬛⬛, ⬜⬛⬜, ⬛⬛⬛]
+  sens: les deux plans reliés par l'axe ; le firmament entre les eaux
+- nombre: 7
+  nom: le H
+  figure: [⬛⬜⬛, ⬛⬛⬛, ⬛⬜⬛]
+  sens: deux êtres joints par leur milieu
+
+- nombre: 8
+  nom: le pourtour
+  figure: [⬛⬛⬛, ⬛⬜⬛, ⬛⬛⬛]
+  sens: le cercle entier autour du point ; le monde autour du principe
+
+- nombre: 9
+  nom: le tout
+  figure: [⬛⬛⬛, ⬛⬛⬛, ⬛⬛⬛]
+  sens: le centre et tout ce qui l'entoure
