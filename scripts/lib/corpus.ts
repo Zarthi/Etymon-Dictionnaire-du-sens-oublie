@@ -24,7 +24,8 @@ export interface Page {
 }
 
 /** Adresse d'une page de Wikisource. */
-export const pageWikisource = (langue: string, titre: string) => `https://${langue}.wikisource.org/wiki/${encodeURIComponent(titre.replaceAll(" ", "_"))}`;
+export const pageWikisource = (langue: string, titre: string) =>
+  `https://${langue}.wikisource.org/wiki/${encodeURIComponent(titre.replaceAll(" ", "_")).replaceAll("%2F", "/")}`;
 
 const WIKISOURCE_LA = "https://la.wikisource.org/wiki/";
 const WIKISOURCE_HE = "https://he.wikisource.org/wiki/";
