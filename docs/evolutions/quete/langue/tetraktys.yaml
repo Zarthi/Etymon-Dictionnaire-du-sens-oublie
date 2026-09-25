@@ -1,36 +1,61 @@
-# Les tétraktys de la langue qui ne se parle pas. Règles dans README.md.
-# Une tétraktys : dix points en quatre rangs ; les extrêmes du rang 2 se prolongent sur les
-# côtés ; chaque rang ajoute des moyens à l'intérieur (rang 3 : un, sur l'axe ; rang 4 : deux).
-# Les emoji sont les noms des signes ; leur sens est leur place.
+# Une tétraktys par tradition : ce que chacune donne à chaque rang, dans ses propres mots.
+# « ? » : la tradition ne donne rien de sûr à ce rang. Vérifié ou de mémoire, à chaque fois.
 
-- nom: principale
-  sommet: le principe, sans signe ; le centre en est la trace
+- tradition: Genèse 1
   rangs:
-    - [🔘]
-    - [⬆️, ⬇️]
-    - [⬆️, 🔘, ⬇️]
-    - [🔥, 💨, 💧, ⛰️]
-  signes: [🔘, 🔥, 💨, 💧, ⛰️]
-  a-trancher: ⬆️ et ⬇️ comme signes des mots ; où passent ⬅️ et ➡️, s'ils sont nécessaires
-  raison: >
-    Deux extrêmes, le haut et le bas ; une médiété pour le plan, le centre, où le plan coupe
-    l'axe ; deux médiétés pour le solide, d'où quatre degrés entre les extrêmes : le feu, l'air,
-    l'eau, la terre (Platon, Timée, 31c-32b, vérifié). Les extrêmes se retrouvent aux bouts de
-    chaque rang parce qu'ils sont sur les côtés du triangle ; le centre est sur l'axe, comme le
-    sommet : il en est la continuation.
-  lectures:
-    - texte: >
-        Les trois premiers rangs sont les principes, sans corps (point, ligne, plan) ; la base est
-        la manifestation, le solide. Le rang 3 est les trois guṇa : sattva ⬆️, rajas 🔘 (la
-        tendance horizontale, le plan), tamas ⬇️. Chaque signe de la base vient des deux points du
-        rang 3 qui le surplombent : 🔥 = ⬆️ ⬆️, 💨 = ⬆️ 🔘, 💧 = 🔘 ⬇️, ⛰️ = ⬇️ ⬇️ ; le feu et la
-        terre par les côtés, deux fois haut, deux fois bas. Le mélange rajas · rajas n'a pas de
-        point : la base n'en a aucun sur l'axe. C'est la place de l'éther, la quintessence, que la
-        tradition met au centre des quatre et non parmi eux : le principe n'entre pas dans le monde
-        comme un cinquième ; sa trace y est un creux. Dans un mot, l'éther s'écrit 🔘.
-      signee: Thibault, avec l'agent
-      confirme: >
-        Platon, Timée, 31c-32b (vérifié) ; Guénon, Le Symbolisme de la croix, ch. V, et Gītā XIV,
-        18 pour les guṇa (vérifiés) ; de mémoire : Aristote, Du ciel, IV (le feu absolument léger,
-        l'air relativement, l'eau relativement lourde, la terre absolument) ; Timée, 55c (le
-        cinquième solide « pour le tout »).
+    - [le principe]
+    - [la lumière, les ténèbres]
+    - [les eaux d'en haut, le firmament, les eaux d'en bas]
+    - ["?"]
+  sources:
+    - Genèse 1, 4 (vérifié, Sefaria) : « Dieu sépara la lumière et les ténèbres »
+    - Genèse 1, 6-7 (vérifié) : le firmament « au milieu des eaux », les eaux « au-dessous » et « au-dessus »
+    - rang 4, candidat non retenu : les quatre têtes du fleuve d'Éden, Genèse 2, 10 (vérifié)
+
+- tradition: Platon, Timée
+  rangs:
+    - [le dieu]
+    - [le feu, la terre]
+    - [le feu, une médiété, la terre]
+    - [le feu, l'air, l'eau, la terre]
+  sources:
+    - Timée 31c-32b (vérifié, Perseus) : deux extrêmes ; une médiété si le monde était plan ; deux parce qu'il est solide
+
+- tradition: hindoue
+  rangs:
+    - [Brahman]
+    - [sattva, tamas]
+    - [sattva, rajas, tamas]
+    - ["?"]
+  sources:
+    - Bhagavad-Gītā XIV, 18 (vérifié) : sattva en haut, rajas au milieu, tamas en bas
+    - rang 4 : cinq éléments, l'éther en premier (Taittirīya Upaniṣad II, 1, de mémoire) ; ne se rangent pas d'eux-mêmes en quatre
+
+- tradition: Sefer Yetzirah
+  rangs:
+    - [le Nom]
+    - [le feu en haut, l'eau en bas]
+    - [le feu, le souffle qui décide entre les deux, l'eau]
+    - ["?"]
+  sources:
+    - Sefer Yetzirah 3 (vérifié, Sefaria, éd. Varsovie 1884) : les trois lettres mères
+    - rang 4 : la terre y est « créée de l'eau », non un quatrième (vérifié)
+
+- tradition: pythagoricienne
+  rangs:
+    - [la monade]
+    - [la dyade]
+    - [la triade]
+    - [la tétrade]
+  sources:
+    - un terme par rang, le point, la ligne, la surface, le solide (Sextus Empiricus ; Théon de Smyrne, onze tétraktys ; de mémoire)
+
+- tradition: chinoise
+  rangs:
+    - [le Faîte suprême]
+    - [le yin, le yang]
+    - [le Ciel, l'Homme, la Terre]
+    - [les quatre images]
+  sources:
+    - Xici (Grand commentaire du Yi Jing), de mémoire : « le Faîte suprême engendre les deux modes, les deux modes les quatre images » ; les trois puissances (san cai) dans le Shuogua, de mémoire
+    - les quatre images viennent des deux modes par dédoublement (1, 2, 4), non par un rang de trois
