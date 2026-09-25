@@ -79,6 +79,12 @@ problème se résout dans la figure.
 
 **Tranché.** Les signes qui entrent dans les mots sont le centre et la base : 🔘 🔥 💨 💧 ⛰️.
 
+**Tranché.** La figure n'a ni gauche ni droite ; l'ordre d'un rang est celui de la lecture, et il
+va **du haut au bas, du principe au manifesté** : ⬆️ 🔘 ⬇️ ; 🔥 💨 💧 ⛰️. C'est l'ordre de la
+proportion du *Timée* (32b) et celui où la Gītā nomme les *guṇa* (XIV, 5, de mémoire). L'alphabet
+dit ce qui vient du principe ; les mots diront les retours. Lue de droite à gauche, la même figure
+dirait la remontée, sans qu'on ait rien changé.
+
 **À trancher.** ⬆️ et ⬇️ comme signes des mots (l'échelle de Jacob les demande) ; où passent ⬅️ et
 ➡️, s'ils sont nécessaires ; et comment distinguer l'échelle de Jacob de l'orgueil d'Isaïe 14, qui
 s'écrivent tous deux « monter, puis descendre » : par le centre, par un signe, ou par la lecture
