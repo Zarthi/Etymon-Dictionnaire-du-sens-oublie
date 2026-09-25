@@ -1,10 +1,9 @@
 # Une langue qui ne se parle pas
 
-> Évolution future, dans la [Quête](../README.md), hors des fiches. Septième état ; les
-> tétraktys sont dans `tetraktys.yaml`, les mots dans `mots/`. Ce document fixe
-> les règles de la langue ; il sera repris souvent. Chaque règle est marquée **tranchée** ou
-> **à trancher** ; chaque texte, **vérifié** (avec son adresse) ou **de mémoire**. Le journal des
-> états est à la fin.
+> Évolution future, dans la [Quête](../README.md), hors des fiches. Huitième état. Ce document fixe
+> les règles ; la tétraktys est dans `tetraktys.yaml`, les mots dans `mots/`. Il sera repris
+> souvent : chaque règle est marquée **tranchée** ou **à trancher** ; chaque texte, **vérifié** ou
+> **de mémoire**. Le journal des états est à la fin.
 
 Une langue de signes qui ne se parle pas : elle se lit. Un signe, dit Augustin, est « une chose qui,
 outre l'apparence qu'elle offre aux sens, fait venir d'elle-même autre chose à la pensée » (*De la
@@ -16,237 +15,210 @@ langue peut aussi former des mots que le français n'a pas : elle crée, et le d
 valent que pour elle : les fiches restent un ordre de textes (l'histoire par les sources, la
 tradition par ses textes cités).
 
+Ce n'est pas une langue parfaite au sens de Leibniz, qui calculerait le sens à partir des signes :
+elle refuse toute règle de composition. C'est une **notation des lectures** : le signe est une forme
+que la lecture doit remplir, comme le sonnet contraint le poème ; la contrainte est le but.
+
 ## 1. Le principe, sans signe
 
-**Tranché.** Aucun signe pour Dieu (Exode 20, 4 : pas d'image). Le principe est le sommet de toute
-figure de la langue ; il n'y est jamais dessiné. Ce qui en tient lieu dans la structure est le
-**centre**, le point où l'axe rencontre le plan : la trace du principe, non sa figure.
+**Tranché.** Aucun signe pour Dieu (Exode 20, 4 : pas d'image). Le principe est le sommet de la
+tétraktys ; il n'y est jamais dessiné. Ce qui en tient lieu est le **centre**, seul autre point sur
+l'axe de la figure (§3) : la trace du principe, non sa figure.
 
-## 2. Le fondement : le point et les directions
+## 2. Le fondement : la géométrie
 
-**Tranché.** Un seul fondement, la géométrie, qui n'appartient à aucune tradition : le point, puis
-les directions. Le plus universel contient le plus particulier, non l'inverse : les trois *guṇa*
-hindous se rangent sous les directions et n'en sont qu'une correspondance ; jamais la
-classification d'une seule tradition comme fondement (les onze passions de Thomas d'Aquin,
-essayées au deuxième état, ne sortent d'aucune figure).
+**Tranché.** Un seul fondement, qui n'appartient à aucune tradition : le point et les directions, le
+haut et le bas, le plan qui les sépare. Le plus universel contient le plus particulier : les trois
+*guṇa* hindous, les lettres mères du Sefer Yetzirah, la croix de Guénon s'y rangent et le
+confirment ; aucun ne le fonde. Jamais la classification d'une seule tradition comme fondement
+(les onze passions de Thomas d'Aquin, essayées au deuxième état, ne sortent d'aucune figure).
 
-La figure du fondement est la **croix** :
+Chaque règle qui ajoute quelque chose dit de quelle différence de la figure elle vient. Les textes
+peuvent confirmer qu'une différence a été vue, jamais la fonder : « la lettre tue, l'esprit
+vivifie » (2 Corinthiens 3, 6). On découpe « selon les articulations, là où c'est naturel » (Platon,
+*Phèdre*, 265e) ; la logique garde la cohérence, elle n'est pas la source.
 
-- **l'axe vertical**, deux sens, ↑ et ↓ : la ligne des degrés, où l'être se tient ;
-- **le plan horizontal**, isotrope autour de l'axe : le domaine d'un degré, où les choses se
-  déploient. Il n'a pas de sens privilégié ; vu de côté, il est une ligne, ↔, deux sens à la fois ;
-  vu de dessus, il est quatre directions autour du centre ;
-- **le centre**, où l'axe perce le plan.
+## 3. L'alphabet : une tétraktys
 
-Tout le reste de la langue est tiré de cette figure. Chaque règle qui ajoute quelque chose doit
-dire de quelle différence de la structure elle vient ; les textes des traditions peuvent confirmer
-qu'une différence a été vue, jamais la fonder : « la lettre tue, l'esprit vivifie » (2 Corinthiens
-3, 6). On découpe « selon les articulations, là où c'est naturel » (Platon, *Phèdre*, 265e) ; la
-logique garde la cohérence de la langue, elle n'en est pas la source.
+**Tranché.** L'alphabet est une seule figure, la tétraktys pythagoricienne : dix points en quatre
+rangs, 1, 2, 3, 4. Il n'y a pas de tétraktys emboîtées, ni de tétraktys par thème : une seule, et
+tout signe y a sa place.
 
-## 3. Les familles de signes : une tétraktys par famille
+La figure se lit par sa géométrie, et par elle seule :
 
-**Tranché.** L'alphabet n'est pas une liste : il est fait de **familles**, et chaque famille est une
-tétraktys complète, la figure pythagoricienne de dix points en quatre rangs (1, 2, 3, 4). Lue en
-géométrie, elle est le point, la ligne, le plan, le solide.
+- **les extrêmes se prolongent.** Les points extrêmes des rangs 2, 3 et 4 sont sur les deux côtés
+  du triangle, les deux rayons qui partent du sommet : ce qui paraît au rang 2 se retrouve aux
+  bouts de tous les rangs suivants ;
+- **chaque rang ajoute des moyens à l'intérieur** : le rang 3, un seul, sur l'axe du triangle ; le
+  rang 4, deux, de part et d'autre de l'axe ;
+- **les rangs impairs ont un point sur l'axe, les rangs pairs non.** Le sommet et le centre sont
+  les deux seuls points de l'axe : le centre est le sommet descendu.
 
-Dans cette figure :
+C'est la proportion du *Timée* (31c-32b, vérifié), dessinée : deux extrêmes ; « si le corps du
+monde avait dû être plan, sans profondeur, une seule médiété aurait suffi ; mais il devait être
+solide, et les solides ne s'accordent jamais par une, toujours par deux médiétés : c'est pourquoi le
+dieu a placé l'eau et l'air au milieu, entre le feu et la terre ». Platon parle d'une ligne de quatre
+termes ; la figure la porte, extrêmes sur les côtés, moyens dedans. (De mémoire, à vérifier : chez
+les pythagoriciens, Théon de Smyrne, Sextus Empiricus, la tétraktys se lit plutôt un terme par
+rang, monade, dyade, triade, tétrade ; la lecture par extrêmes et moyens est la nôtre, fondée sur
+la figure.)
 
-- **le sommet** est le principe : sans signe (§1), le même pour toutes les familles ;
-- **les côtés** (les points des deuxième et troisième rangs qui sont sur le bord) sont la
-  **genèse** : le chemin du principe aux extrêmes de la base. Ils s'écrivent en raisons, non en
-  signes ;
-- **le centre**, seul point intérieur de la figure (les neuf autres sont sur le bord), est
-  l'**unité** de la famille, où ses quatre se tiennent ensemble ;
-- **la base**, quatre points, est le manifesté.
+La tétraktys, telle qu'elle est (`tetraktys.yaml`) :
 
-Une famille a donc **cinq signes** : son centre et sa base. Cinq, c'est la croix et son centre, le
-quinconce : la même forme que le fondement.
-
-**Tranché.** Une famille n'entre dans la langue que si **son quatre est tiré de la structure**, par
-une raison écrite de la force de celle du *Timée* pour les éléments. Aucune famille ne se force à
-quatre par commodité : ce serait tordre le réel pour le faire tenir dans la figure.
-
-### Les directions : la forme de toutes les familles
-
-**Tranché.** La tétraktys des directions n'est pas une famille parmi les autres : elle est la forme
-que toutes prennent. Dessinée, elle est la croix vue de côté (le sommet, l'axe, la base) ; ses cinq
-signes sont la croix vue de dessus : les quatre horizontales autour du centre, et le centre est
-l'axe entier, regardé par le bout. ↑ et ↓ ne sont donc pas exilés hors de la famille : ils sont dans
-son centre. C'est la seule famille dont le centre est plus riche qu'un point, et c'est juste : c'est
-le fondement.
-
-Le quatre des horizontales est tiré de la structure : le plan a deux axes, chacun deux sens.
-
-### Les éléments : la première famille de contenu
-
-**Tranché.** Deux extrêmes, le feu et la terre ; « si le corps du monde avait dû être plan, sans
-profondeur, une seule médiété aurait suffi ; mais il devait être solide, et les solides ne
-s'accordent jamais par une, toujours par deux médiétés : c'est pourquoi le dieu a placé l'eau et
-l'air au milieu, entre le feu et la terre » (Platon, *Timée*, 31c-32b, vérifié). Deux extrêmes, une
-médiété pour le plan, deux pour le solide : c'est 2, 3, 4, la tétraktys elle-même, et les quatre
-éléments arrivent au quatrième rang par nécessité.
-
-Les éléments sont **quatre degrés sur l'axe**, du plus haut au plus bas : le feu et la terre aux
-extrêmes, l'air et l'eau entre eux. Leur centre est la **quintessence**, le cinquième (Aristote, de
-mémoire).
-
-| Famille | Centre | Base |
+| Rang | Points | Ce qu'ils sont |
 |---|---|---|
-| directions | le point (l'axe : ↑ ↓) | les quatre horizontales |
-| éléments | la quintessence | feu, air, eau, terre |
+| 1 | le sommet | le principe, sans signe |
+| 2 | ⬆️ ⬇️ | les deux extrêmes : le haut et le bas |
+| 3 | ⬆️ 🔘 ⬇️ | le centre entre eux : le plan qui coupe l'axe |
+| 4 | 🔥 💨 💧 ⛰️ | les deux médiétés du solide : quatre degrés entre le haut et le bas |
 
-Dessin provisoire des éléments, les signes traditionnels de l'alchimie (de mémoire) : le feu, un
-triangle vers le haut ; l'eau, vers le bas ; l'air et la terre, les mêmes barrés d'un trait, qui est
-le plan ; la quintessence, les deux triangles unis. Ils portent leur genèse (deux extrêmes, deux
-médiétés) : c'est le modèle pour le dessin de toute famille (§7).
+**Tranché.** Le rang 2 est ⬆️ ⬇️ et non les deux axes (↕ ↔) : les moyens entre le vertical et
+l'horizontal seraient les diagonales, qui sont fermées (§4). L'horizontale n'est pas un signe : elle
+est le centre, le plan qui coupe l'axe. Le haut et le bas ne fondent pas une autre tétraktys ; le
+problème se résout dans la figure.
 
-**À trancher.** Les familles suivantes, chacune avec sa raison d'être quatre.
+**Tranché.** Les signes qui entrent dans les mots sont le centre et la base : 🔘 🔥 💨 💧 ⛰️.
 
-## 4. Le mot : la croix dans une matrice 3 × 3
+**À trancher.** ⬆️ et ⬇️ comme signes des mots (l'échelle de Jacob les demande) ; où passent ⬅️ et
+➡️, s'ils sont nécessaires ; et comment distinguer l'échelle de Jacob de l'orgueil d'Isaïe 14, qui
+s'écrivent tous deux « monter, puis descendre » : par le centre, par un signe, ou par la lecture
+seule.
+
+## 4. Les signes : des emoji, dont le sens est la place
+
+**Tranché.** Les signes sont des **emoji** : tous les téléphones les ont. Un signe se définit par
+**sa place dans la tétraktys**, non par son dessin : 🔥 n'est pas une flamme, c'est le degré extrême
+du haut ; l'emoji n'est que son nom. Un emoji figuratif est donc admis quand la tradition a nommé
+ainsi la place (le feu monte et éclaire : le nom et la place disent la même chose), et la lecture
+s'en tient au sens de la place. Les couleurs que les téléphones donnent aux emoji (le rouge de 🔥,
+le bleu des flèches) ne signifient rien.
+
+Limites : ne prendre que des emoji anciens (2010-2015), présents partout ; 🌍 est réservé au mot « le
+monde bâti par les hommes » ; ✡️ est un symbole religieux, qu'on n'emploie pas. Le lecteur ne tape
+pas les signes : il les choisit dans une palette de l'app, qui montre la tétraktys.
+
+## 5. Le mot : la croix dans une grille 3 × 3
 
 **Tranché.** Un mot s'écrit dans une grille de trois sur trois, et il y occupe la croix :
 
 - **la colonne** dit **ce qui est** : trois signes à trois niveaux, en haut, au milieu, en bas, vus
   d'un coup, sans ordre de lecture ;
 - **la ligne** dit **ce qui devient** : trois signes qui se suivent, avant, puis, après, lus de
-  gauche à droite (une convention sans conséquence : la structure n'a ni gauche ni droite) ;
-- **le centre** leur est commun : l'unité du mot.
+  gauche à droite (une convention sans conséquence : la figure n'a ni gauche ni droite) ;
+- **le centre** leur est commun : l'unité du mot. Un mot n'écrit que la colonne, que la ligne, ou
+  les deux : trois ou cinq signes, **jamais sans centre**.
 
-Un mot peut n'écrire que la colonne, que la ligne, ou les deux : trois ou cinq signes, **jamais sans
-centre**. Le mot a ainsi la même forme que la famille et que le fondement : un centre et quatre
-autour.
-
-Que la colonne dise l'être et la ligne le devenir est tiré de la croix : l'axe est la ligne des
+Que la colonne dise l'être et la ligne le devenir vient de la croix : l'axe est la ligne des
 degrés, où l'être se tient ; le plan est le domaine d'un degré, où court la suite. Guénon le dit de
-la croix (*Le Symbolisme de la croix*, ch. II, vérifié) : le double épanouissement de l'être se fait
-« d'une part, horizontalement, c'est-à-dire à un certain niveau ou degré d'existence déterminé, et
-d'autre part, verticalement, c'est-à-dire dans la superposition hiérarchique de tous les degrés » ;
-et présenter « comme successif ce qui est essentiellement simultané en soi » n'est valable « qu'au
-point de vue spécial d'un état de manifestation ». La distinction est celle du *Timée* (27d-28a,
-vérifié) : « ce qui est toujours et n'a pas de devenir, et ce qui devient toujours et n'est
-jamais ». Nuance, pour la justesse des noms : la colonne dit à quels degrés la chose se tient, la
-ligne comment elle se déroule.
+la croix (*Le Symbolisme de la croix*, ch. II, vérifié) : l'être s'épanouit « d'une part,
+horizontalement, c'est-à-dire à un certain niveau ou degré d'existence déterminé, et d'autre part,
+verticalement, c'est-à-dire dans la superposition hiérarchique de tous les degrés » ; présenter
+« comme successif ce qui est essentiellement simultané en soi » n'est valable « qu'au point de vue
+spécial d'un état de manifestation ». La distinction est celle du *Timée* (27d-28a, vérifié) : « ce
+qui est toujours et n'a pas de devenir, et ce qui devient toujours et n'est jamais ». Pour la
+justesse des noms : la colonne dit à quels degrés la chose se tient, la ligne comment elle se déroule.
 
-**Tranché.** À l'intérieur d'une colonne ou d'une ligne, **aucune règle de composition** : aucune
-place n'est réservée à une cause, un état, une orientation. Seule l'écriture (colonne, ligne) dit la
-nature du mot ; le sens est porté par la lecture.
+**Tranché.** Dans une colonne ou une ligne, **aucune règle de composition** : aucune place n'est
+réservée à une cause, un état, une orientation. Seule l'écriture (colonne, ligne) dit la nature du
+mot ; le sens est porté par la lecture. Une colonne peut mêler des degrés et des mouvements : c'est
+un état avec sa tendance.
 
-**Tranché.** Les quatre coins de la grille, les diagonales, **ne servent pas** : ils sont fermés.
+**Tranché.** Les quatre coins de la grille, les diagonales, sont fermés.
 
-## 5. La lecture
+**Tranché.** Le centre d'un mot reçoit n'importe quel signe ; 🔘 peut aller où l'on veut, il dit le
+repos ou l'unité là où il est.
 
-**Tranché.** Chaque mot est accompagné d'une lecture, toujours signée : par le lecteur qui la
-fait, dans la Quête, sur son appareil seulement ; ou par la tradition qui la porte, par ses textes
-cités. Le sens n'est pas dans les règles ; les règles ne disent que la forme.
+Les mots s'enregistrent dans `mots/`, un fichier YAML par mot : la grille telle quelle (`~` pour
+une case vide), la lecture, qui la signe, le statut.
 
-## 6. Les textes : ils confirment, ne fondent pas
+## 6. La lecture
 
-**Vérifiés** (adresses dans la marge de travail : Sefaria pour l'hébreu, Perseus pour le grec,
-archive.org pour Guénon, domaine public depuis 2022) :
+**Tranché.** Chaque mot est accompagné d'une lecture, toujours signée : par le lecteur qui la fait,
+dans la Quête, sur son appareil seulement ; ou par la tradition qui la porte, par ses textes cités.
+Le sens n'est pas dans les règles ; les règles ne disent que la forme. Un même mot peut porter
+plusieurs lectures, chacune signée d'une seule voix.
+
+## 7. Limites reconnues
+
+- La langue ne nomme pas des choses, elle dessine des situations : le démon, la foudre et le météore
+  s'écrivent pareil. Comme le *Yi Jing*, elle vit de ses lectures.
+- Le fondement est géométrique ; mais les témoins qui le confirment ont été choisis par un regard
+  qui est lui-même une tradition, celle de Guénon. Les lectures ne mêlent jamais les traditions ;
+  la fondation les cite comme témoins, et le dit.
+- Ce qui va par trois, sept ou douze (les *guṇa*, les planètes, les tribus) n'entre pas dans
+  l'alphabet ; il se dit en mots.
+
+## 8. Les textes : ils confirment, ne fondent pas
+
+**Vérifiés** (Sefaria pour l'hébreu, Perseus pour le grec, archive.org pour Guénon, domaine public
+depuis 2022) :
 
 - Luc 14, 11 : *omnis qui se exaltat humiliabitur, et qui se humiliat exaltabitur*. Une seule
-  différence appliquée aux deux sens de l'axe : l'actif réfléchi (*se exaltat*, *se humiliat*) et
-  le passif (*humiliabitur*, *exaltabitur*). Non deux coupes, une différence, deux directions.
+  différence sur les deux sens : l'actif réfléchi (*se exaltat*, *se humiliat*) et le passif
+  (*humiliabitur*, *exaltabitur*).
 - Isaïe 14, 12-15 : cinq verbes à la première personne (אֶעֱלֶה, אָרִים, אֵשֵׁב, אֶעֱלֶה, אֶדַּמֶּה), puis
-  un passif (תּוּרָד, « tu es précipité »). אֶדַּמֶּה לְעֶלְיוֹן, « je me rendrai semblable au Très-Haut » :
-  le semblable, c'est le parallèle, un axe à côté de l'axe. Le déchu en trois traits : « astre
-  brillant » (הֵילֵל), « tombé du ciel », « aux profondeurs de la fosse ».
+  un passif (תּוּרָד, « tu es précipité ») ; אֶדַּמֶּה לְעֶלְיוֹן, « je me rendrai semblable au
+  Très-Haut ». Le déchu en trois traits : « astre brillant » (הֵילֵל), « tombé du ciel », « aux
+  profondeurs de la fosse ».
 - Philippiens 2, 8-9 : il s'abaissa lui-même ; c'est pourquoi Dieu l'a exalté.
 - Luc 10, 18 : « Je voyais Satan tomber du ciel comme l'éclair. »
 - Rashi sur Genèse 28, 12 : les anges « montent d'abord, puis descendent ».
-- Genèse 2, 10 : « un fleuve sort d'Éden pour arroser le jardin, et de là il se divise et devient
-  quatre têtes » (וּמִשָּׁם יִפָּרֵד וְהָיָה לְאַרְבָּעָה רָאשִׁים) : un centre, quatre.
+- Genèse 2, 10 : un fleuve sort d'Éden, « et de là il se divise et devient quatre têtes ».
 - Augustin, *De la doctrine chrétienne*, II, 1, 1 : la définition du signe.
-- Platon, *Phèdre*, 265e : *διατέμνειν κατ᾽ ἄρθρα ᾗ πέφυκεν*, découper selon les articulations
-  naturelles, sans rien casser « à la manière d'un mauvais boucher ».
-- Platon, *Timée*, 27d-28a (l'être et le devenir) ; 31c-32b (les deux médiétés, les quatre
-  éléments).
+- Platon, *Phèdre*, 265e ; *Timée*, 27d-28a et 31c-32b.
 - *Bhagavad-Gītā*, XIV, 18 : *ūrdhvaṃ gacchanti sattvasthā, madhye tiṣṭhanti rājasāḥ, adho gacchanti
   tāmasāḥ* : ceux du sattva vont en haut, ceux du rajas se tiennent au milieu, ceux du tamas vont en
   bas.
-- Sefer Yetzirah (éd. Varsovie 1884), ch. 1 : les dix profondeurs, dont le haut, le bas et les quatre
-  horizontales ; ch. 3 : les trois lettres mères, « le feu en haut, l'eau en bas, et le souffle qui
-  décide entre les deux » ; en l'homme, la tête, le ventre, la poitrine entre eux.
-- Guénon, *Le Symbolisme de la croix* : ch. II (ampleur et exaltation, le simultané et le
-  successif) ; ch. IV « Les directions de l'espace » ; ch. V « Théorie hindoue des trois guṇas »
-  (sattva « tendance ascendante », tamas « tendance descendante », rajas « ni ascendante ni
-  descendante, mais horizontale », qui correspond « à l'ensemble des deux lignes qui définissent
-  le plan horizontal ») ; le « chemin droit » de la Fātiḥa comme « l'axe vertical pris dans son sens
-  ascendant ».
+- Sefer Yetzirah (éd. Varsovie 1884), ch. 1 : les dix profondeurs, dont le haut et le bas ; ch. 3 :
+  « le feu en haut, l'eau en bas, et le souffle qui décide entre les deux » ; en l'homme, la tête,
+  le ventre, la poitrine entre eux.
+- Guénon, *Le Symbolisme de la croix*, ch. II (ampleur et exaltation, le simultané et le
+  successif), IV (les directions de l'espace), V (les trois *guṇa* : sattva « tendance
+  ascendante », tamas « tendance descendante », rajas « ni ascendante ni descendante, mais
+  horizontale »).
 
 **De mémoire**, à vérifier avant d'y appuyer quoi que ce soit :
 
-- Aristote, la quintessence, le cinquième élément.
-- Théon de Smyrne, *Exposition des connaissances mathématiques utiles pour la lecture de Platon* :
-  onze tétraktys, dont les nombres, les grandeurs (point, ligne, surface, solide), les éléments, les
-  figures, les saisons, les âges de l'homme. Une tétraktys par famille est une idée pythagoricienne.
-- Les signes alchimiques des quatre éléments et de la quintessence.
-- Thomas d'Aquin, I-II, q. 33 a. 1 (la joie dilate), q. 37 a. 2 (la tristesse pèse), q. 44 a. 1 (la
-  crainte contracte) : les états se ramènent à des mouvements.
-- Genèse 28, 12 : l'échelle « dressée sur la terre, dont le sommet touche le ciel ».
-- Exode 16, 14 : la manne « fine comme le givre sur la terre ».
-
-## 7. Le dessin des signes
-
-**Tranché.** Des signes géométriques, non figuratifs, dont le dessin montre la filiation : les
-extrêmes et les médiétés d'une famille se voient dans le trait, comme dans les triangles des
-éléments. Les emoji ne servent qu'à l'esquisse.
-
-**À trancher.** Le trait de chaque signe ; et si l'**incidence** (un mouvement passe par le centre
-ou à côté : la voie droite ou le semblable, Isaïe 14, 14) s'écrit dans le dessin, par la place du
-point sur le trait ou à côté de lui, ou reste à la lecture.
-
-## 8. Esquisses, à réécrire dans l'alphabet
-
-Propositions de l'agent, d'après les textes cités ; à valider.
-
-| Mot | Écriture | Lecture | Signée par |
-|---|---|---|---|
-| *le démon* | colonne : feu, ↓, terre | un feu tombé jusqu'au fond de la fosse ; l'ange est le même feu qui n'est pas descendu | Isaïe 14, 12-15 |
-| *l'échelle de Jacob* | ligne : ↑ ↓ | les anges montent d'abord, puis descendent | Rashi sur Genèse 28, 12 |
-| *l'orgueil* | ligne : ↑ ↓ | la montée par soi-même, puis la précipitation ; se distingue de l'échelle par l'incidence (§7) | Isaïe 14 |
-| *l'abaissement* | ligne : ↓ ↑ | il s'abaissa lui-même, c'est pourquoi Dieu l'a exalté | Philippiens 2, 8-9 |
-| *religion* | ligne : quatre horizontales vers le centre, ↑, centre | *religentes* (se recueillir vers le centre), *tendimus* (tendre), *quiescamus* (se reposer) | Augustin, *La Cité de Dieu*, X, 3 |
-| *manne* | ligne : ↓, eau, centre | descend du ciel (Exode 16, 4), fine comme le givre (16, 14), recueillie (16, 16) | Exode |
-
-Les lectures de Thibault aux premiers états (*schizophrénie* : le démon, la crainte, la chute ;
-*oppression* : le démon, la tristesse, la chute ; le monde bâti par les hommes, la tristesse, la
-chute, mot à nommer) restent à réécrire par lui : sans doute en colonne, ce qui est.
+- Théon de Smyrne, les onze tétraktys, un terme par rang ; Sextus Empiricus, point, ligne, surface,
+  solide.
+- Aristote, la quintessence.
+- Thomas d'Aquin, I-II, q. 33 a. 1 (la joie dilate), q. 37 a. 2 (la tristesse pèse), q. 44 a. 1
+  (la crainte contracte) : les états se ramènent à des mouvements.
+- Genèse 28, 12 : l'échelle « dressée sur la terre, dont le sommet touche le ciel » ; Exode 16, 14 :
+  la manne « fine comme le givre ».
 
 ## 9. Nom de la langue, à choisir
 
-- **Signa** : « les signes », au sens d'Augustin ci-dessus.
-- **Tacite** : du latin *tacitus*, « qui se tait » ; mais le nom de l'historien prête à confusion.
-- **Trigrammes** : ne convient plus, le mot pouvant avoir cinq signes.
+- **Signa** : « les signes », au sens d'Augustin.
+- **Tacite** : « qui se tait » ; mais le nom de l'historien prête à confusion.
 
 ## 10. Questions ouvertes
 
-- Les familles nécessaires après les directions et les éléments, chacune avec sa raison d'être
-  quatre.
-- Le dessin des signes, et le sort de l'incidence (§7).
+- ⬆️ ⬇️ comme signes ; ⬅️ ➡️ ; l'échelle et l'orgueil, même écriture (§3).
 - Le nom de la langue ; le nom du mot « le monde bâti par les hommes, la tristesse, la chute ».
+- Réécrire les lectures de Thibault des premiers états (*schizophrénie*, *oppression*, le monde bâti
+  par les hommes) dans `mots/` : sans doute en colonne, ce qui est.
 - Comment le lecteur écrit sa lecture dans la Quête.
-- Vérifier ce qui est de mémoire (§6).
+- Vérifier ce qui est de mémoire (§8).
 
 ## Journal des états
 
-1. **Premiers états** : une langue d'emoji figuratifs, trois positions fixes (cause, état,
-   orientation). Écartés : figuratif, et positions décrétées.
-2. **Deuxième état** : les onze passions de Thomas d'Aquin essayées comme fondement. Écartées : la
+1. **Premiers états** : des emoji figuratifs, trois positions fixes (cause, état, orientation).
+   Écartés : les positions décrétées.
+2. **Deuxième état** : les onze passions de Thomas d'Aquin comme fondement. Écartées : la
    classification d'une seule tradition, et onze ne sort d'aucune figure.
-3. **Troisième au cinquième états** : les trois *guṇa*, puis les directions, plus universelles ; la
-   genèse par la tétraktys ; chaque caractère divisé en deux.
-4. **Sixième état** : plus de règle de composition ; seulement les caractères nécessaires ; les
-   premières divisions (vers le principe / par soi-même ; s'abaisser / tomber), confirmées par les
-   textes, sans raison tirée de la structure.
-5. **Septième état** (Fable 5.1, réflexion très élevée). Corrections du sixième : la « tétraktys »
-   s'arrêtait à trois rangs ; ↑, ↓ et → étaient tenus pour trois choses de même nature, alors que
-   l'horizontale est un plan (d'où ↔, puis les quatre) ; « chaque caractère se divise en deux »
-   n'était pas géométrique, et les divisions venaient des textes ; Luc 14, 11 avait été lu comme
-   deux coupes, il dit une différence sur deux sens ; le point était tantôt sommet, tantôt centre.
-   Apports : le centre comme trace du principe ; l'alphabet en familles, une tétraktys par famille,
-   cinq signes (le centre et la base), les directions comme forme de toutes, les éléments fondés par
-   le *Timée* ; le mot comme croix dans une grille 3 × 3, la colonne pour ce qui est, la ligne pour
-   ce qui devient, jamais sans centre, diagonales fermées ; les textes « de mémoire » du sixième
-   état vérifiés (Guénon, Gītā, *Phèdre*), et de nouveaux (Sefer Yetzirah, *Timée*, Genèse 2, 10).
+3. **Troisième au cinquième** : les trois *guṇa*, puis les directions ; la genèse par la tétraktys ;
+   chaque caractère divisé en deux.
+4. **Sixième** : plus de règle de composition ; seulement les caractères nécessaires ; des
+   divisions confirmées par les textes, sans raison tirée de la structure.
+5. **Septième** : l'horizontale reconnue comme un plan (↔) ; l'alphabet en familles, une tétraktys
+   par thème ; le mot en croix dans la grille 3 × 3, colonne pour ce qui est, ligne pour ce qui
+   devient ; les textes « de mémoire » vérifiés.
+6. **Huitième** (Fable 5.1, réflexion très élevée). Corrections du septième : les familles par thème
+   forçaient le réel à quatre et donnaient au fondement sept signes ; l'emboîtement des tétraktys
+   (↕ au sommet d'une autre) mélangeait la croix et la tétraktys, et menait aux diagonales ; les
+   signes alchimiques n'existent pas sur les téléphones. Apports : une seule tétraktys, lue par sa
+   géométrie (les extrêmes sur les côtés, les moyens dedans, le centre sur l'axe comme le sommet),
+   ⬆️ ⬇️ au rang 2, le centre au rang 3, les quatre éléments au rang 4 ; des emoji, dont le sens est
+   la place ; le centre d'un mot libre ; les limites reconnues (§7) ; les fichiers `tetraktys.yaml`
+   et `mots/`.
