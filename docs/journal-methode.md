@@ -2,6 +2,16 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-09-25 — Un corpus de réflexe pour les lectures
+
+- **Les lectures partent d'un corpus consulté par réflexe** (méthode §7 bis), non plus de la seule
+  mémoire de l'agent : Isidore (*Étymologies*, *Différences*), Jérôme (*Livre des noms hébreux*),
+  Rashi (*Commentaire sur la Torah*), téléchargés une fois et interrogés par `npm run corpus`.
+  Cause : question de Thibault ; côté profane, les sources se consultaient déjà par réflexe. Le
+  corpus est un plancher, jamais une limite (décision de Thibault).
+- Premier essai : *misericord* trouve Isidore dans les *Étymologies* (X) et les *Différences*
+  (misericordia et miseratio) ; *religio*, dans les *Différences*, une seconde lecture d'Isidore.
+
 ## 2026-09-25 — Refonte après le premier pilote
 
 Pilote de dix mots (*ennui, chétif, merci, enthousiasme, travail, psychologie, écologie, ange,

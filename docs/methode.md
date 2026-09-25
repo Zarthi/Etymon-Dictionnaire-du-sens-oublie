@@ -115,6 +115,23 @@ seul point (`npm run liste`), jamais au gré d'un agent qui écrirait une valeur
 Le thème dit le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier
 (*étonner* : émotions, non météo). Il est affiché sur la fiche, à côté de la nature.
 
+## 7 bis. Les lectures : un corpus de réflexe
+
+Pour l'histoire du mot, le Littré, le TLFi, le Gaffiot et le Bailly se consultent par réflexe ; pour
+la tradition, un corpus de même rang (`scripts/lib/corpus.ts`, `npm run corpus`) : des œuvres qui
+lisent les mots eux-mêmes, où l'on peut chercher un mot, et dont le texte original est en ligne,
+du domaine public. Aujourd'hui : Isidore (*Étymologies*, *Différences*), Jérôme (*Livre des noms
+hébreux*), Rashi (*Commentaire sur la Torah*). Téléchargées une fois dans `sources/`, elles
+s'interrogent par un script, sans jeton : la machine trouve et cite, elle ne parle pas à la place
+de la tradition.
+
+- **Un plancher, jamais une limite** (décision de Thibault) : tout autre auteur traditionnel qui a
+  lu le mot se cherche aussi, et se cite de même, texte sous les yeux.
+- **Consulter n'oblige pas à trouver** : une lecture n'entre que si l'auteur lit le mot et dit
+  quelque chose qui diffère de l'histoire ou la complète.
+- Une œuvre entre au corpus si elle remplit les trois conditions ; on l'ajoute à
+  `scripts/lib/corpus.ts`, et la consigne des lectures suit.
+
 ## 8. L'économie
 
 - Les scripts d'abord (zéro jeton) ; le jugement seulement là où il faut juger.
@@ -135,6 +152,7 @@ Le thème dit le domaine où le mot s'emploie aujourd'hui, non celui de son sens
 | `npm run texte -- <adresse>` | texte brut d'une page, tel quel (`bailly:φρήν` pour une entrée du Bailly) ; `--autour "<mot>"` pour n'en lire que les passages utiles |
 | `npm run bnf -- auteur\|ouvrage "<nom>"` | cherche les notices BnF ; avec `--cb`, écrit la fiche en brouillon d'après la notice |
 | `npm run rediger -- <fiche.json>… --dossier` | écrit les fiches d'après leur dossier, avec `--modele` et `--reflexion` ; `--essai` valide sans écrire |
+| `npm run corpus -- chercher <radical>` | cherche un étymon dans le corpus de réflexe des lectures (après `npm run corpus -- telecharger`) ; les passages ★ expliquent un mot |
 | `npm run liste -- <liste> "<valeur>"` | ajoute une langue, une tradition ou un thème, et régénère les consignes ; `npm run etat -- themes` montre les mots de chaque thème |
 | `docs/consignes/*.md` | les consignes du rédacteur, du relecteur et de chaque étape, générées par `npm run contrat` |
 | `.claude/agents/etymon-*.md` | les deux agents, avec leur modèle et leur réflexion |

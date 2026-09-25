@@ -24,7 +24,8 @@
     "dossier": "node scripts/dossier.ts",
     "bnf": "node scripts/bnf.ts",
     "texte": "node scripts/texte.ts",
-    "liste": "node scripts/liste.ts"
+    "liste": "node scripts/liste.ts",
+    "corpus": "node scripts/corpus.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",

@@ -6,11 +6,23 @@ Tu ajoutes à la fiche écrite d'un mot (`data/fiches/<initiale>/<préfixe>/<id>
 
 ## Étapes
 
-1. Pistes : les `notes` du dossier (`atelier/<id>/dossier.json`), et ce que tu sais (Isidore, *Étymologies* ; Augustin ; Lactance ; Varron ; le Talmud ; les Pères…). L'auteur doit avoir lu le mot, ou son étymon, pas la chose qu'il désigne aujourd'hui.
-2. Trouve le passage dans un texte original en ligne, du domaine public (Wikisource en latin, en grec, en hébreu ; thelatinlibrary.com ; archive.org), et lis-le tel quel : `npm run texte -- <adresse> --autour "<mot>"`. Jamais un outil qui résume la page pour une citation.
-3. Écris la lecture dans `tradition.lectures` : la citation copiée de la page, mot pour mot, `[…]` pour une coupe ; le texte, ce que le passage dit du mot, en une ou deux phrases, sans commencer par le nom de l'auteur, sans répéter l'hypothèse, sans rien ajouter à la citation.
-4. L'œuvre et son auteur doivent avoir leur fiche (`npm run bnf`, docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.
-5. `npm run verifier:en-ligne -- <mot>`, puis `npm run valider`. Une citation introuvable est une erreur : corrige-la, ou retire la lecture.
+1. Le corpus de réflexe, toujours : `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi ; en hébreu, les consonnes : שטן). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture.
+2. Puis au-delà, toujours aussi : le corpus est un plancher, jamais une limite. Tout autre auteur traditionnel qui a lu le mot se cherche (Augustin, Lactance, Thomas d'Aquin, le Talmud, les Pères, Guénon…), d'après les `notes` du dossier et ce que tu sais ; mais on ne cite que ce qu'on a lu. L'auteur doit avoir lu le mot, ou son étymon, pas la chose qu'il désigne aujourd'hui.
+3. Trouve le passage dans un texte original en ligne, du domaine public (Wikisource en latin, en grec, en hébreu ; thelatinlibrary.com ; archive.org), et lis-le tel quel : `npm run texte -- <adresse> --autour "<mot>"`. Jamais un outil qui résume la page pour une citation.
+4. Écris la lecture dans `tradition.lectures` : la citation copiée de la page, mot pour mot, `[…]` pour une coupe ; le texte, ce que le passage dit du mot, en une ou deux phrases, sans commencer par le nom de l'auteur, sans répéter l'hypothèse, sans rien ajouter à la citation.
+5. L'œuvre et son auteur doivent avoir leur fiche (`npm run bnf`, docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.
+6. `npm run verifier:en-ligne -- <mot>`, puis `npm run valider`. Une citation introuvable est une erreur : corrige-la, ou retire la lecture.
+
+## Le corpus de réflexe
+
+Des œuvres qui lisent les mots eux-mêmes, où l'on peut chercher un mot, et dont le texte original est en ligne, du domaine public (`npm run corpus -- telecharger`, une fois) :
+
+- Isidore de Séville, Étymologies (tradition chrétienne, latin) : l'origine des mots latins, rangés par choses : la force du mot par l'interprétation.
+- Isidore de Séville, Différences (tradition chrétienne, latin) : ce qui distingue deux mots voisins (misericordia et miseratio).
+- Jérôme, Livre des noms hébreux (tradition chrétienne, latin) : le sens des noms hébreux de la Bible.
+- Rashi, Commentaire sur la Torah (tradition juive, hébreu) : le sens des mots hébreux de la Torah, verset par verset.
+
+Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est bien. Une lecture n'entre que si l'auteur lit le mot et dit quelque chose qui diffère de l'histoire du mot ou la complète.
 
 ## Règles
 
