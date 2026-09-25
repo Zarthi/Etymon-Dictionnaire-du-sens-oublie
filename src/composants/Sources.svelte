@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { grammaire as g, messages as m } from "../i18n/index.ts";
   import { ouvrages } from "../lib/fiches.ts";
   import Source from "./Source.svelte";
 
@@ -26,7 +27,7 @@
 
 {#if sources.length > 0}
   <p class="sources">
-    Sources&nbsp;: {#each groupes as g, i (g.ouvrage)}{#if i > 0},{/if}
+    {m.sources.titre}{g.deuxPoints} {#each groupes as g, i (g.ouvrage)}{#if i > 0},{/if}
       {#if g.entrees.length === 1}<Source source={g.entrees[0]} />{:else}{nom(g.ouvrage)} ({#each g.entrees as s, j (j)}{#if j > 0},{" "}{/if}<Source
             source={s}
             parEntree

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { grammaire as g, messages as m } from "../i18n/index.ts";
   import { auteurs, ouvrages } from "../lib/fiches.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import type { Mention } from "../lib/mentions.ts";
@@ -51,13 +52,13 @@
 
 <div class="lecture">
   {#if lecture.hypothese}
-    <p class="hypothese">Sur <em>{lecture.hypothese}</em></p>
+    <p class="hypothese">{m.lecture.sur}<em>{lecture.hypothese}</em></p>
   {/if}
   <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} {mentions} /></p>
   <!-- La citation garde sa langue et son sens d'écriture (l'hébreu va de droite à gauche), isolée des guillemets. -->
-  <blockquote>«&nbsp;<bdi lang={langue}>{lecture.citation}</bdi>&nbsp;»</blockquote>
+  <blockquote>{g.guillemets[0]}<bdi lang={langue}>{lecture.citation}</bdi>{g.guillemets[1]}</blockquote>
   <p class="auteur">
-    {#if voix}<a href={lienAuteur(voix)}>{auteurs.get(voix)?.nom ?? voix}</a>,{" "}{/if}{#each lecture.sources as source, i (i)}{#if i > 0}&nbsp;;{" "}{/if}<Source
+    {#if voix}<a href={lienAuteur(voix)}>{auteurs.get(voix)?.nom ?? voix}</a>,{" "}{/if}{#each lecture.sources as source, i (i)}{#if i > 0}{g.pointVirgule}{" "}{/if}<Source
         {source}
         oeuvre
       />{/each}

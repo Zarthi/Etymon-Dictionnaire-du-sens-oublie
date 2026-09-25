@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { dateLongue } from "../lib/affichage.ts";
+  import * as langue from "../i18n/index.ts";
   import { formesItaliques } from "../lib/etymologie.ts";
   import { auteurs as fichesAuteurs, ouvrages as fichesOuvrages } from "../lib/fiches.ts";
   import { mentionsDe } from "../lib/mentions.ts";
@@ -28,6 +28,7 @@
     motDe: (id: string) => string;
   } = $props();
 
+  const { grammaire: g, libelles: l, messages: m } = langue;
   const correction = $derived(fiche.historique.at(-1));
   /** Mot sacré : la lecture du texte d'origine donne le sens en tête et tient lieu d'explication. */
   const origine = $derived(fiche.tradition.lectures.find((l) => l.premier));
@@ -45,7 +46,7 @@
 </script>
 
 <svelte:head>
-  <title>{fiche.mot} · Étymon</title>
+  <title>{m.titrePage(fiche.mot)}</title>
 </svelte:head>
 
 <article>
@@ -53,19 +54,19 @@
 
   <h1>{fiche.mot}</h1>
   <p class="nature">
-    {fiche.nature.join(" et ")}{#if fiche.themes.length > 0}{" "}<span class="themes">· {fiche.themes.join(", ")}</span>{/if}{#if fiche.sacre}{" "}<span
-        class="sacre">· mot sacré, tradition {nommerTraditions(fiche.sacre)}</span
+    {g.enumerer(fiche.nature.map(l.nature), "et")}{#if fiche.themes.length > 0}{" "}<span class="themes">· {fiche.themes.map(l.theme).join(", ")}</span>{/if}{#if fiche.sacre}{" "}<span
+        class="sacre">{m.fiche.motSacre(nommerTraditions(fiche.sacre, langue))}</span
       >{/if}
   </p>
   <p class="etymon">
     {#if origine}
       <!-- Mot sacré : le sens que lui donne le texte d'origine, signé ; aucune lecture profane. -->
-      <span class="sens">«&nbsp;{origine.sens}&nbsp;»</span>
+      <span class="sens">{g.citer(origine.sens ?? "")}</span>
       <span class="signature">{origine.sources.map((s) => s.entree).join(" ; ")}</span>
     {:else}
       <SensPremier etymologie={fiche.etymologie} />
     {/if}
-    {#if fiche.incertain}<span class="incertain">· étymologie incertaine</span>{/if}
+    {#if fiche.incertain}<span class="incertain">{m.fiche.incertaine}</span>{/if}
   </p>
 
   <Etymologie etymologie={fiche.etymologie} />
@@ -81,10 +82,10 @@
   {#each fiche.ecartees as e, i (i)}
     <!-- Idée reçue (populaire) ou hypothèse savante abandonnée : présentée, jamais confondue avec l'étymologie. -->
     <p class="legende">
-      <strong>{e.populaire ? "Idée reçue" : "Étymologie écartée"}</strong>&nbsp;: <Forme
+      <strong>{e.populaire ? m.fiche.ideeRecue : m.fiche.ecartee}</strong>{g.deuxPoints} <Forme
         forme={e.forme}
         translitteration={e.translitteration}
-      />, «&nbsp;{e.sens}&nbsp;»{#if e.selon?.length}{" "}({#each e.selon as id, j (id)}{#if j > 0},{" "}{/if}<a
+      />, {g.citer(e.sens)}{#if e.selon?.length}{" "}({#each e.selon as id, j (id)}{#if j > 0},{" "}{/if}<a
             href={lienAuteur(id)}>{fichesAuteurs.get(id)?.nom ?? id}</a
           >{/each}){/if}.
       {#if e.raison}<TexteRiche texte={e.raison} {lienVers} exclu={fiche.id} {formes} {mentions} />{/if}
@@ -94,7 +95,7 @@
   {#if fiche.renvois.length > 0}
     <!-- Notions voisines, sans racine commune : « Voir aussi : obsession ». -->
     <p class="renvois">
-      <strong>Voir aussi</strong>&nbsp;: {#each fiche.renvois as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}
+      <strong>{m.fiche.voirAussi}</strong>{g.deuxPoints} {#each fiche.renvois as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}
           >{motDe(id)}</a
         >{/each}.
     </p>
@@ -102,19 +103,19 @@
 
   <Sources sources={fiche.sources} />
 
-  {#snippet voir()}voir {#each ailleurs as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}>{motDe(id)}</a>{/each}{/snippet}
+  {#snippet voir()}{m.fiche.voir}{#each ailleurs as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienVers(id)}>{motDe(id)}</a>{/each}{/snippet}
 
   {#if lectures.length > 0}
     <!-- Toujours signalées, repliées par défaut (l'étymologie d'abord, la tradition à côté) ; dépliées pour un mot sacré, dont elles sont la substance. -->
     <details class="traditions" open={deplierLectures || fiche.sacre !== undefined}>
       <summary>
-        <span class="intitule">{lectures.length > 1 ? "Lectures traditionnelles" : "Lecture traditionnelle"}</span>
-        <span class="precision">{groupes.map((g) => nommerTraditions(g.traditions)).join(", ")}</span>
+        <span class="intitule">{m.fiche.lectures(lectures.length)}</span>
+        <span class="precision">{groupes.map((groupe) => nommerTraditions(groupe.traditions, langue)).join(", ")}</span>
       </summary>
       {#each groupes as groupe (groupe.traditions.join())}
         {#if groupes.length > 1}<h2 class="tradition">
-            {groupe.traditions.length > 1 ? "Traditions" : "Tradition"}
-            {nommerTraditions(groupe.traditions)}
+            {m.fiche.tradition(groupe.traditions.length)}
+            {nommerTraditions(groupe.traditions, langue)}
           </h2>{/if}
         {#each groupe.lectures as lecture, i (i)}
           <LectureTraditionnelle {lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
@@ -125,7 +126,7 @@
   {:else if ailleurs.length > 0}
     <!-- Mot que la tradition n'a pas lu : la même rubrique, qui mène là où elle parle, sans rien lui prêter. -->
     <p class="traditions ligne">
-      <span class="intitule">Lectures traditionnelles</span>
+      <span class="intitule">{m.fiche.lectures(2)}</span>
       <span class="precision">{@render voir()}</span>
     </p>
   {/if}
@@ -133,10 +134,10 @@
   <footer>
     <Redaction redaction={fiche.redaction} />
     {#if correction}
-      <p>Corrigée le {dateLongue(correction.date)}.</p>
+      <p>{m.fiche.corrigee(g.dateLongue(correction.date))}</p>
     {/if}
-    <button type="button" disabled title="En construction">
-      Critique&nbsp;: signaler une erreur <small>(en construction)</small>
+    <button type="button" disabled title={m.fiche.enConstruction}>
+      {m.fiche.critique} <small>{m.fiche.enConstructionCourt}</small>
     </button>
   </footer>
 </article>

@@ -10,6 +10,7 @@
   import { dateDuJour, motAuHasard, motDuJour } from "./lib/motDuJour.ts";
   import { ecrireParametres, lireParametres } from "./lib/stockage.ts";
   import { tick } from "svelte";
+  import { grammaire as g, messages as m } from "./i18n/index.ts";
 
   /** Vue affichée, déduite de l'adresse : `#/`, `#/mot/<id>`, `#/auteur/<id>`, `#/ouvrage/<id>`, `#/parametres`. */
   type Vue =
@@ -100,20 +101,20 @@
 </script>
 
 <svelte:head>
-  {#if vue.nom === "accueil" || vue.nom === "parametres"}<title>Étymon : Dictionnaire du sens oublié</title>{/if}
+  {#if vue.nom === "accueil" || vue.nom === "parametres"}<title>{m.titreDocument}</title>{/if}
 </svelte:head>
 
 <header>
   <div class="gauche">
-    <nav class="historique" aria-label="Historique">
-      <button type="button" onclick={() => history.back()} disabled={!peutReculer} aria-label="Page précédente" title="Page précédente">←</button>
-      <button type="button" onclick={() => history.forward()} disabled={!peutAvancer} aria-label="Page suivante" title="Page suivante">→</button>
+    <nav class="historique" aria-label={m.navigation.historique}>
+      <button type="button" onclick={() => history.back()} disabled={!peutReculer} aria-label={m.navigation.precedente} title={m.navigation.precedente}>←</button>
+      <button type="button" onclick={() => history.forward()} disabled={!peutAvancer} aria-label={m.navigation.suivante} title={m.navigation.suivante}>→</button>
     </nav>
-    <a class="titre" href="#/">Étymon<span class="sous-titre"><span class="deux-points">&nbsp;:</span> Dictionnaire du sens oublié</span></a>
+    <a class="titre" href="#/">{m.titre}<span class="sous-titre"><span class="deux-points">{g.deuxPoints}</span> {m.sousTitre}</span></a>
   </div>
   <nav>
-    <button type="button" onclick={auHasard} disabled={entrees.length === 0}>Au hasard</button>
-    <a href="#/parametres" aria-current={vue.nom === "parametres" ? "page" : undefined}>Paramètres</a>
+    <button type="button" onclick={auHasard} disabled={entrees.length === 0}>{m.navigation.auHasard}</button>
+    <a href="#/parametres" aria-current={vue.nom === "parametres" ? "page" : undefined}>{m.navigation.parametres}</a>
   </nav>
 </header>
 
@@ -126,25 +127,25 @@
     <div class="contenu">
       {#if vue.nom === "auteur"}
         {@const auteur = auteurs.get(vue.id)}
-        {#if auteur}<PageAuteur {auteur} />{:else}<p class="message">Cet auteur n'a pas de fiche.</p>{/if}
+        {#if auteur}<PageAuteur {auteur} />{:else}<p class="message">{m.absent.auteur}</p>{/if}
       {:else if vue.nom === "ouvrage"}
         {@const ouvrage = ouvrages.get(vue.id)}
-        {#if ouvrage}<PageOuvrage {ouvrage} />{:else}<p class="message">Cet ouvrage n'a pas de fiche.</p>{/if}
+        {#if ouvrage}<PageOuvrage {ouvrage} />{:else}<p class="message">{m.absent.ouvrage}</p>{/if}
       {:else if vue.nom === "fiche"}
         {#await ficheOuverte then fiche}
           {#if fiche}
             <Fiche {fiche} deplierLectures={parametres.deplierLectures} {lienVers} {motDe} />
           {:else}
-            <p class="message">Ce mot n'a pas (encore) de fiche.</p>
+            <p class="message">{m.absent.mot}</p>
           {/if}
         {/await}
       {:else}
-        <p class="devise">Le sens premier des mots français.</p>
+        <p class="devise">{m.devise}</p>
         {#await ficheDuJour then fiche}
           {#if fiche}
             <MotDuJour {fiche} onOuvrir={ouvrir} />
           {:else}
-            <p class="message">Aucune fiche publiée pour l'instant.</p>
+            <p class="message">{m.absent.accueil}</p>
           {/if}
         {/await}
       {/if}

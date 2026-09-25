@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { messages as m } from "../i18n/index.ts";
   import { enAlphabetLatin, translitterationDe } from "../lib/etymologie.ts";
 
   /**
@@ -14,7 +15,7 @@
 
 {#snippet contenu()}{#if latin}<em>{forme}</em>{:else}<span class="graphie">{forme}</span>{#if translit}{" "}<span
         class="translitteration"
-        title="Translittération">(<em>{translit}</em>)</span
+        title={m.forme.translitteration}>(<em>{translit}</em>)</span
       >{/if}{/if}{/snippet}
 
 {#if lien}<a href={lien}>{@render contenu()}</a>{:else}{@render contenu()}{/if}

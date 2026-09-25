@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { libelles as l, messages as m } from "../i18n/index.ts";
   import { auteurs } from "../lib/fiches.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import type { OuvrageAssemble } from "../lib/types.ts";
@@ -17,11 +18,11 @@
 </script>
 
 <svelte:head>
-  <title>{ouvrage.titre} · Étymon</title>
+  <title>{m.titrePage(ouvrage.titre)}</title>
 </svelte:head>
 
 <article>
-  <Statut statut={ouvrage.statut} objet="Notice" />
+  <Statut statut={ouvrage.statut} objet="notice" />
   <h1><cite>{ouvrage.titre}</cite></h1>
   <p class="identite">
     {#if ouvrage.titreOriginal}<cite>{ouvrage.titreOriginal}</cite>{/if}{#if auteur}{ouvrage.titreOriginal ? " · " : ""}<a
@@ -30,14 +31,14 @@
   </p>
   <p class="description">{ouvrage.description}</p>
   <p class="usage">
-    {#if ouvrage.edition}Édition consultée&nbsp;: {ouvrage.edition}.{/if}
-    Licence&nbsp;: {ouvrage.licence}.
-    {#if ouvrage.texte}<a href={ouvrage.texte} target="_blank" rel="noopener noreferrer">Lire le texte</a>.{/if}
+    {#if ouvrage.edition}{m.ouvrage.edition(ouvrage.edition)}{/if}
+    {m.ouvrage.licence(l.licence(ouvrage.licence))}
+    {#if ouvrage.texte}<a href={ouvrage.texte} target="_blank" rel="noopener noreferrer">{m.ouvrage.lire}</a>.{/if}
   </p>
 
-  <ListeMots titre="Mots éclairés" mots={ouvrage.lectures} />
-  <ListeMots titre="Mots forgés dans cet ouvrage" mots={ouvrage.forges} />
-  <ListeMots titre="Mots issus de son titre" mots={ouvrage.issus} />
+  <ListeMots titre={m.ouvrage.lectures} mots={ouvrage.lectures} />
+  <ListeMots titre={m.ouvrage.forges} mots={ouvrage.forges} />
+  <ListeMots titre={m.ouvrage.issus} mots={ouvrage.issus} />
 
   <footer>
     <Sources sources={ouvrage.sources} />

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { messages as m } from "../i18n/index.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
   import SensPremier from "./SensPremier.svelte";
 
@@ -6,12 +7,12 @@
 </script>
 
 <section>
-  <h2>Mot du jour</h2>
+  <h2>{m.motDuJour}</h2>
   <button type="button" onclick={() => onOuvrir(fiche.id)}>
     <span class="mot">{fiche.mot}</span>
     <span class="etymon"><SensPremier etymologie={fiche.etymologie} /></span>
     {#if fiche.statut !== "validee"}
-      <span class="statut">{fiche.statut === "a-verifier" ? "Étymologie non vérifiée" : "En relecture"}</span>
+      <span class="statut">{fiche.statut === "a-verifier" ? m.statut.nonVerifiee("etymologie") : m.statut.enRelecture}</span>
     {/if}
   </button>
 </section>

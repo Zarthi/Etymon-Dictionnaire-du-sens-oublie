@@ -1,3 +1,4 @@
+import type { Grammaire, Libelles } from "../i18n/index.ts";
 import type { LectureTraditionnelle } from "./types.ts";
 
 type AuteurTraditions = { traditions?: string[] };
@@ -56,7 +57,7 @@ export function parTradition(
   return [...groupes.values()];
 }
 
-/** « juive », « juive et chrétienne ». */
-export function nommerTraditions(traditions: string[]): string {
-  return traditions.length <= 1 ? (traditions[0] ?? "") : `${traditions.slice(0, -1).join(", ")} et ${traditions.at(-1)}`;
+/** « juive », « juive et chrétienne », dans la langue de l'application. */
+export function nommerTraditions(traditions: string[], { grammaire, libelles }: { grammaire: Grammaire; libelles: Libelles }): string {
+  return grammaire.enumerer(traditions.map(libelles.tradition), "et");
 }

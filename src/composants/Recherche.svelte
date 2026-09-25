@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { messages as m } from "../i18n/index.ts";
   import { chercher, preparer } from "../lib/recherche.ts";
   import { choisie, deplacer, TOUCHES_LISTE } from "../lib/selection.ts";
   import type { EntreeIndex } from "../lib/types.ts";
@@ -51,8 +52,8 @@
     bind:value={saisie}
     oninput={saisir}
     onkeydown={touche}
-    placeholder="Chercher un mot"
-    aria-label="Chercher un mot"
+    placeholder={m.recherche.invite}
+    aria-label={m.recherche.invite}
     aria-autocomplete="list"
     aria-expanded={ouverte}
     aria-controls={ID_LISTE}
@@ -64,7 +65,7 @@
   {#if saisie.trim() !== ""}
     {#if ouverte}
       <!-- Les options ne prennent jamais le focus : le clavier reste dans le champ, la souris choisit au clic. -->
-      <ul id={ID_LISTE} role="listbox" aria-label="Propositions">
+      <ul id={ID_LISTE} role="listbox" aria-label={m.recherche.propositions}>
         {#each resultats as entree, i (entree.id)}
           <!-- svelte-ignore a11y_click_events_have_key_events (le clavier est géré par le champ : motif combobox) -->
           <li
@@ -81,7 +82,7 @@
         {/each}
       </ul>
     {:else}
-      <p class="vide" role="status">Aucun mot trouvé.</p>
+      <p class="vide" role="status">{m.recherche.aucun}</p>
     {/if}
   {/if}
 </form>

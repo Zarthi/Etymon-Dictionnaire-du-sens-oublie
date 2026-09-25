@@ -1,41 +1,32 @@
 <script lang="ts">
+  import { messages } from "../i18n/index.ts";
   import type { Parametres } from "../lib/stockage.ts";
 
   let { parametres = $bindable(), onRetour }: { parametres: Parametres; onRetour: () => void } = $props();
+
+  const m = messages.parametres;
 </script>
 
 <section>
-  <button type="button" class="retour" onclick={onRetour}>← Retour</button>
-  <h1>Paramètres</h1>
+  <button type="button" class="retour" onclick={onRetour}>{messages.navigation.retour}</button>
+  <h1>{m.titre}</h1>
 
   <label class="option">
     <input type="checkbox" bind:checked={parametres.deplierLectures} />
     <span>
-      Déplier les lectures traditionnelles
-      <small>
-        Le sens donné au mot par une doctrine traditionnelle (Pères de l'Église, Talmud…), par ses propres
-        textes, figure sous l'étymologie, replié par réserve. Cochée, cette option l'affiche toujours en entier.
-        Toujours sourcé et séparé de l'étymologie.
-      </small>
+      {m.deplierLectures}
+      <small>{m.deplierLecturesDetail}</small>
     </span>
   </label>
 
-  <h2>Contribuer</h2>
-  <button type="button" disabled>Merci <small>Soutenir le projet (en construction)</small></button>
-  <button type="button" disabled>Critique <small>Proposer un mot absent (en construction)</small></button>
+  <h2>{m.contribuer}</h2>
+  <button type="button" disabled>{m.merci} <small>{m.merciDetail}</small></button>
+  <button type="button" disabled>{m.critique} <small>{m.critiqueDetail}</small></button>
 
-  <h2>À propos</h2>
-  <p>
-    Étymon donne le sens premier des mots français : le plus ancien que les sources atteignent, d'après le
-    Littré, le Gaffiot et le Bailly, vérifiés sur le Trésor de la langue française.
-  </p>
-  <p>
-    C'est l'histoire du mot, non sa vérité. <i>Étymon</i> vient du grec ἔτυμος, «&nbsp;vrai&nbsp;», et les
-    Anciens cherchaient dans l'étymologie la force du mot plutôt que sa date. Ce qu'une tradition lit dans un
-    mot, elle le dit par ses propres textes, cités sous «&nbsp;Lectures traditionnelles&nbsp;».
-  </p>
-  <p>Fiches sous licence CC&nbsp;BY-SA&nbsp;4.0.
-  </p>
+  <h2>{m.aPropos}</h2>
+  <p>{m.aProposSources}</p>
+  <p>{m.aProposHistoire.avant}<i>{m.aProposHistoire.nom}</i>{m.aProposHistoire.apres}</p>
+  <p>{m.licence}</p>
 </section>
 
 <style>

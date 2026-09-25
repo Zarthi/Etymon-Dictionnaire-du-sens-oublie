@@ -16,11 +16,11 @@ export interface Redaction {
 
 /**
  * Signature d'une rédaction, indépendante de l'ordre : deux parties rédigées de la même
- * façon ont la même signature.
+ * façon ont la même signature. Une clé de comparaison, jamais affichée.
  */
 export function signatureRedaction(redaction: Redaction[]): string {
   return redaction
-    .map((r) => `${r.par} : ${r.detail}${r.reflexion ? `, réflexion ${r.reflexion}` : ""}`)
+    .map((r) => [r.par, r.detail, r.reflexion ?? ""].join("\u0000"))
     .sort()
     .join(" | ");
 }

@@ -1,93 +1,45 @@
 <script lang="ts">
-  import { de, origine, sur } from "../lib/affichage.ts";
-  import { indexPremier, translitterationDe } from "../lib/etymologie.ts";
+  import * as langue from "../i18n/index.ts";
   import { auteurs, ouvrages } from "../lib/fiches.ts";
   import { lienAuteur, lienOuvrage } from "../lib/liens.ts";
-  import type { Element, Maillon } from "../lib/types.ts";
+  import { hypotheses, phraseChaine, type Segment } from "../lib/phrase.ts";
+  import type { Maillon } from "../lib/types.ts";
   import Forme from "./Forme.svelte";
 
   /**
-   * La chaîne étymologique en une phrase, du plus proche au plus lointain, sous le sens premier
-   * affiché en tête (SensPremier), dont le sens n'est pas répété :
-   * « De l'allemand Schizophrenie, forgé par Eugen Bleuler (1911), sur le grec σχίζω, « fendre », et φρήν, « diaphragme ». »
-   * Puis les alternatives : « Origine débattue : de relegere, « … » (Cicéron), ou de religare, « … » (Lactance). »
+   * La chaîne étymologique, sous le sens premier affiché en tête (SensPremier) : une phrase, puis les
+   * alternatives, une par ligne. La phrase est composée par src/lib/phrase.ts, dans la langue de
+   * l'application ; ce composant ne fait que l'afficher.
    */
   let { etymologie }: { etymologie: Maillon[] } = $props();
 
-  const premier = $derived(etymologie[indexPremier(etymologie)]);
-  const chaine = $derived(etymologie.filter((m) => !m.alternatives));
-  const alternatives = $derived(etymologie.filter((m) => m.alternatives));
+  const phrase = $derived(phraseChaine(etymologie, langue));
+  const alternatives = $derived(etymologie.filter((m) => m.alternatives).map((m) => hypotheses(m, langue)));
   const nom = (id: string) => auteurs.get(id)?.nom ?? id;
   const titre = (id: string) => ouvrages.get(id)?.titre ?? id;
-  const prep = (f: { forme: string; translitteration?: string }) => de(translitterationDe(f) ?? f.forme);
-  const majuscule = (texte: string) => texte.charAt(0).toUpperCase() + texte.slice(1);
-
-  /** Ce qui introduit un maillon : sa langue, ou « de » dans la même langue ; « sur » la matière d'un mot forgé. */
-  function introduction(i: number): string {
-    const m = chaine[i];
-    if (i === 0) return m.langue === "français" && !m.forme ? "Composé " : `${majuscule(origine(m.langue))} `;
-    const avant = chaine[i - 1];
-    if (avant.forge && !avant.elements) return `, ${sur(m.langue)} `;
-    // Après une composition sans forme (altruisme), le maillon suivant remonte l'un des éléments, pas la phrase qui précède.
-    if (avant.elements && !avant.forme) return `\u00a0; plus haut, ${origine(m.langue)} `;
-    if (m.langue === avant.langue && m.forme) return `, ${prep({ forme: m.forme, translitteration: m.translitteration })}`;
-    return `, ${origine(m.langue)} `;
-  }
 </script>
 
-{#snippet noms(ids: string[], liaison: string)}{#each ids as id, i (id)}{#if i > 0}{i === ids.length - 1 ? liaison : ", "}{/if}<a
-      class="auteur"
-      href={lienAuteur(id)}>{nom(id)}</a
-    >{/each}{/snippet}
+{#snippet segments(liste: Segment[])}{#each liste as s, i (i)}{#if s.type === "texte"}{s.texte}{:else if s.type === "forme"}<Forme
+        forme={s.forme}
+        translitteration={s.translitteration}
+        lien={s.personne ? lienAuteur(s.personne) : s.ouvrage ? lienOuvrage(s.ouvrage) : undefined}
+      />{:else if s.type === "auteur"}<a class="auteur" href={lienAuteur(s.id)}>{nom(s.id)}</a>{:else}<a
+        class="ouvrage"
+        href={lienOuvrage(s.id)}><cite>{titre(s.id)}</cite></a
+      >{/if}{/each}{/snippet}
 
-<!-- Éléments d'une composition ; `apresLangue` : la langue vient d'être dite (« du grec σχίζω et φρήν »), sinon « de » devant chacun. -->
-{#snippet elementsDe(elements: Element[], langue: string, apresLangue = false)}{#each elements as e, i (i)}{#if i > 0}{i ===
-      elements.length - 1
-        ? ", et "
-        : ", "}{/if}{#if e.langue && e.langue !== langue}{origine(e.langue)}{" "}{:else if !apresLangue}{prep(e)}{/if}<Forme
-      forme={e.forme}
-      translitteration={e.translitteration}
-    />, «&nbsp;{e.sens}&nbsp;»{/each}{/snippet}
-
-<!-- Un maillon dans la phrase : forme, sens (sauf le sens premier, déjà en tête), composition, forge, modèle. -->
-{#snippet maillon(m: Maillon, francais: boolean)}{#if m.forme}<Forme
-      forme={m.forme}
-      translitteration={m.translitteration}
-      lien={m.personne ? lienAuteur(m.personne) : m.ouvrage ? lienOuvrage(m.ouvrage) : undefined}
-    />{#if m.sens && m !== premier}, «&nbsp;{m.sens}&nbsp;»{/if}{#if m.elements}, composé {@render elementsDe(
-        m.elements,
-        m.langue,
-      )}{/if}{:else if m.elements}{@render elementsDe(m.elements, m.langue, !francais)}{/if}{#if m.forge}, forgé par {@render noms(
-      m.forge.par,
-      " ou ",
-    )} ({m.forge.date}){#if m.forge.ouvrage}, dans
-      <a class="ouvrage" href={lienOuvrage(m.forge.ouvrage)}><cite>{titre(m.forge.ouvrage)}</cite></a>{/if}{/if}{#if m.modele}{@const calque =
-      m.modele.relation === "calque"}{calque ? ", calque " : ", sur le modèle "}{calque || m.modele.langue !== m.langue
-      ? `${origine(m.modele.langue)} `
-      : prep(m.modele)}<Forme forme={m.modele.forme} translitteration={m.modele.translitteration} />{#if m.modele.sens}, «&nbsp;{m.modele
-          .sens}&nbsp;»{/if}{/if}{/snippet}
-
-{#if chaine.length > 0}
-  <p class="chaine">
-    {#each chaine as m, i (i)}{introduction(i)}{@render maillon(m, i === 0 && m.langue === "français" && !m.forme)}{/each}.
-  </p>
+{#if phrase.length > 0}
+  <p class="chaine">{@render segments(phrase)}</p>
 {/if}
-<!-- Une hypothèse par ligne, pour qu'on les distingue d'un coup d'œil ; une forme composée donne
-     d'abord son sens, puis ses parties après deux-points : le tout d'abord, les parties ensuite. -->
-{#each alternatives as m, i (i)}
-  {@const formes = m.alternatives!.formes}
+{#each alternatives as alternative, i (i)}
   <div class="alternatives">
-    <strong>{m.alternatives!.mode === "debattue" ? "Origine débattue" : "Double sens voulu"}</strong>
+    <strong>{alternative.titre}</strong>
     <ul>
-      {#each formes as a, j (j)}
+      {#each alternative.lignes as ligne, j (j)}
         <li>
-          {#if a.forme}{#if a.langue && a.langue !== m.langue}{majuscule(origine(a.langue))}{" "}{:else}{majuscule(
-                prep({ forme: a.forme, translitteration: a.translitteration }),
-              )}{/if}<Forme forme={a.forme} translitteration={a.translitteration} />, «&nbsp;{a.sens}&nbsp;»{#if a.elements}&nbsp;:
-              {@render elementsDe(a.elements, a.langue ?? m.langue, true)}{/if}{:else}«&nbsp;{majuscule(a.sens)}&nbsp;», {@render elementsDe(
-              a.elements ?? [],
-              a.langue ?? m.langue,
-            )}{/if}{#if a.selon?.length}{" "}<span class="selon">({@render noms(a.selon, ", ")})</span>{/if}
+          {@render segments(ligne.segments)}{#if ligne.selon.length > 0}{" "}<span class="selon"
+              >({#each ligne.selon as id, k (id)}{#if k > 0},{" "}{/if}<a class="auteur" href={lienAuteur(id)}>{nom(id)}</a>{/each})</span
+            >{/if}
         </li>
       {/each}
     </ul>

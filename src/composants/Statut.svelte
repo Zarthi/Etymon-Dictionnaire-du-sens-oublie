@@ -1,14 +1,16 @@
 <script lang="ts">
   /** Mention d'une fiche non validée, quel que soit son type (mot, auteur, ouvrage). */
-  let { statut, objet = "Étymologie" }: { statut: "a-verifier" | "brouillon" | "validee"; objet?: string } = $props();
+  import { messages as m } from "../i18n/index.ts";
+
+  let { statut, objet = "etymologie" }: { statut: "a-verifier" | "brouillon" | "validee"; objet?: "etymologie" | "notice" } = $props();
 </script>
 
 {#if statut !== "validee"}
   <p class="statut {statut}">
     {#if statut === "a-verifier"}
-      <strong>{objet} non vérifiée</strong> · rédigée par IA, pas encore contrôlée sur les sources.
+      <strong>{m.statut.nonVerifiee(objet)}</strong> · {m.statut.nonVerifieeDetail}
     {:else}
-      <strong>En relecture</strong> · sources consultées, relecture en cours.
+      <strong>{m.statut.enRelecture}</strong> · {m.statut.enRelectureDetail}
     {/if}
   </p>
 {/if}

@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import * as langue from "../i18n/index.ts";
 import { nommerTraditions, parTradition, traditionsDe, voixDe } from "./traditions.ts";
 import type { LectureTraditionnelle } from "./types.ts";
 
@@ -35,7 +36,7 @@ describe("traditionsDe", () => {
 describe("parTradition", () => {
   it("regroupe les lectures par tradition, l'Écriture commune formant son propre groupe", () => {
     const groupes = parTradition([lecture("talmud", { auteur: "resh-lakish" }), lecture("cite-de-dieu"), lecture("bible-hebraique"), lecture("cite-de-dieu")], auteurs, ouvrages);
-    expect(groupes.map((g) => [nommerTraditions(g.traditions), g.lectures.length])).toEqual([
+    expect(groupes.map((g) => [nommerTraditions(g.traditions, langue), g.lectures.length])).toEqual([
       ["juive", 1],
       ["chrétienne", 2],
       ["juive et chrétienne", 1],

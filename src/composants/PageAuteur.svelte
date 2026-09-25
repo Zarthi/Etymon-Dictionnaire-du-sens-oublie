@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { messages as m } from "../i18n/index.ts";
   import { ouvrages } from "../lib/fiches.ts";
   import { lienOuvrage } from "../lib/liens.ts";
   import type { AuteurAssemble } from "../lib/types.ts";
@@ -17,28 +18,28 @@
 </script>
 
 <svelte:head>
-  <title>{auteur.nom} · Étymon</title>
+  <title>{m.titrePage(auteur.nom)}</title>
 </svelte:head>
 
 <article>
-  <Statut statut={auteur.statut} objet="Notice" />
+  <Statut statut={auteur.statut} objet="notice" />
   <h1>{auteur.nom}</h1>
   <p class="identite">{[auteur.nomComplet, dates].filter(Boolean).join(" · ")}</p>
   <p class="description">{auteur.description}</p>
 
   {#if auteur.oeuvres.length > 0}
     <section>
-      <h2>Œuvres citées</h2>
+      <h2>{m.auteur.oeuvres}</h2>
       <p>
         {#each auteur.oeuvres as id, i (id)}{#if i > 0},{" "}{/if}<a href={lienOuvrage(id)}><cite>{ouvrages.get(id)?.titre ?? id}</cite></a
           >{/each}
       </p>
     </section>
   {/if}
-  <ListeMots titre="Mots forgés" mots={auteur.forges} />
-  <ListeMots titre="Mots issus de son nom" mots={auteur.issus} />
-  <ListeMots titre="Étymologies proposées" mots={auteur.hypotheses} />
-  <ListeMots titre="Lectures traditionnelles" mots={auteur.lectures} />
+  <ListeMots titre={m.auteur.forges} mots={auteur.forges} />
+  <ListeMots titre={m.auteur.issus} mots={auteur.issus} />
+  <ListeMots titre={m.auteur.hypotheses} mots={auteur.hypotheses} />
+  <ListeMots titre={m.auteur.lectures} mots={auteur.lectures} />
 
   <footer>
     <Sources sources={auteur.sources} />

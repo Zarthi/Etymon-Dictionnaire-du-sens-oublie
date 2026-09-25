@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { messages as m } from "../i18n/index.ts";
   import { ouvrages } from "../lib/fiches.ts";
   import { urlDe } from "../lib/ouvrages.ts";
 
@@ -23,15 +24,15 @@
   /** Adresse donnée, ou déduite de l'entrée par le modèle d'adresse de l'ouvrage. */
   const adresse = $derived(urlDe(source, fiche?.modeleEntree));
   const complement = $derived(
-    [oeuvre ? source.entree : "", source.page !== undefined ? `p. ${source.page}` : ""].filter(Boolean).join(", "),
+    [oeuvre ? source.entree : "", source.page !== undefined ? m.sources.page(source.page) : ""].filter(Boolean).join(", "),
   );
 </script>
 
 {#snippet libelle()}{#if oeuvre}<cite>{nom}</cite>{:else if parEntree}{source.entree}{:else}{nom}{/if}{#if complement}, {complement}{/if}{/snippet}
 
-{#if adresse}<a href={adresse} target="_blank" rel="noopener noreferrer" title="Entrée consultée : {source.entree}"
+{#if adresse}<a href={adresse} target="_blank" rel="noopener noreferrer" title={m.sources.entreeConsultee(source.entree)}
     >{@render libelle()}</a
-  >{:else}<span title="Entrée consultée : {source.entree}">{@render libelle()}</span>{/if}
+  >{:else}<span title={m.sources.entreeConsultee(source.entree)}>{@render libelle()}</span>{/if}
 
 <style>
   a {

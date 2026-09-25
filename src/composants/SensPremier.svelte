@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { grammaire as g } from "../i18n/index.ts";
   import { indexPremier } from "../lib/etymologie.ts";
   import type { Maillon } from "../lib/types.ts";
 
@@ -8,7 +9,7 @@
   const sens = $derived(etymologie[indexPremier(etymologie)].sens);
 </script>
 
-<span class="sens">«&nbsp;{sens}&nbsp;»</span>
+<span class="sens">{g.citer(sens ?? "")}</span>
 
 <style>
   .sens {
