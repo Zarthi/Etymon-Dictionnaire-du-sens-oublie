@@ -62,10 +62,10 @@ l'orientation. Dix-neuf, sans la grille vide (`lettres.yaml`).
 | 1 | le centre | l'Un |
 | 2 | deux cases en face (verticale, horizontale, deux diagonales) | une dualité, deux contraires ; le rang 2 n'a pas de centre |
 | 3 | la colonne, la ligne, deux diagonales | les extrêmes et, entre eux, le point de l'axe ; en colonne, ce qui est ; en ligne, ce qui devient |
-| 4 | les bras, les coins | en face, deux paires de contraires ; autour, dans le sens horaire depuis le haut, un cycle, qui revient autour du centre absent |
-| 5 | la croix, le × plein | le cycle et son centre |
-| 6 | deux lignes, deux colonnes | deux plans, celui d'en haut et celui d'en bas, sans lien ; ou deux êtres côte à côte |
-| 7 | le I, le H | le six et son lien : deux plans reliés par l'axe, le firmament entre les eaux (Genèse 1, 6-7, vérifié) ; ou deux colonnes jointes par leur milieu |
+| 4 | les bras, les coins | le cycle vu en lui-même, sans centre : les bras, un carré posé sur un angle, le cycle dans ce qu'il a de mouvant ; les coins, un carré posé sur sa base, le cycle dans ce qu'il a de stable. En face, deux paires de contraires ; autour, dans le sens horaire depuis le haut, la suite qui revient |
+| 5 | la croix, le × plein | la croix : la verticale qui croise l'horizontale en son centre, ce qui est et ce qui devient en un même point (les bras sont sur les axes, ils se lisent comme des lignes) ; le × : le cycle et son centre (les coins ne sont sur aucun axe, ils se lisent comme des points autour) |
+| 6 | deux lignes, deux colonnes | deux « ce qui devient », le plan d'en haut et celui d'en bas, séparés ; ou deux « ce qui est », deux totalités séparées |
+| 7 | le I, le H | le six et son lien : les deux plans reliés par l'axe, le firmament entre les eaux (Genèse 1, 6-7, vérifié) ; ou les deux totalités reliées par un pont en leur milieu |
 | 8 | le pourtour | le cercle entier autour du point |
 | 9 | le tout | le centre et tout ce qui l'entoure |
 
@@ -90,7 +90,7 @@ Sefer Yetzirah, Lulle, Wilkins, Leibniz, Bliss) est de mémoire, à vérifier.
 - Les lettres asymétriques (une case seule, hors centre) : lettres ou non.
 - La lisibilité du Centre sur un téléphone (trois lignes de ⬛ ⬜ par lettre).
 - Le dictionnaire des participations, par tradition : comment il s'écrit, qui le signe.
-- Ce que disent les diagonales, les coins pris seuls, et le × plein.
+- Ce que disent les diagonales.
 
 ## Journal des états
 

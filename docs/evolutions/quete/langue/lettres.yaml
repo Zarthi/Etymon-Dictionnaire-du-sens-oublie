@@ -43,38 +43,38 @@
 - nombre: 4
   nom: les bras
   figure: [⬜⬛⬜, ⬛⬜⬛, ⬜⬛⬜]
-  sens: le cycle autour du centre absent ; en face, deux paires de contraires
+  sens: le cycle dans ce qu'il a de mouvant, un carré posé sur un angle ; sans centre, le cycle vu en lui-même
 - nombre: 4
   nom: les coins
   figure: [⬛⬜⬛, ⬜⬜⬜, ⬛⬜⬛]
-  sens: le cycle des intermédiaires ; à préciser
+  sens: le cycle dans ce qu'il a de stable, un carré posé sur sa base ; sans centre, le cycle vu en lui-même
 
 - nombre: 5
   nom: la croix
   figure: [⬜⬛⬜, ⬛⬛⬛, ⬜⬛⬜]
-  sens: le cycle et son centre
+  sens: la verticale qui croise l'horizontale en son centre, ce qui est et ce qui devient en un même point ; les bras sont sur les axes, ils se lisent comme des lignes
 - nombre: 5
   nom: le × plein
   figure: [⬛⬜⬛, ⬜⬛⬜, ⬛⬜⬛]
-  sens: à préciser
+  sens: le cycle et son centre ; les coins ne sont sur aucun axe, ils se lisent comme des points autour du centre
 
 - nombre: 6
   nom: deux lignes
   figure: [⬛⬛⬛, ⬜⬜⬜, ⬛⬛⬛]
-  sens: le plan d'en haut et le plan d'en bas, sans lien
+  sens: deux « ce qui devient », le plan d'en haut et le plan d'en bas, séparés
 - nombre: 6
   nom: deux colonnes
   figure: [⬛⬜⬛, ⬛⬜⬛, ⬛⬜⬛]
-  sens: deux êtres côte à côte, sans lien
+  sens: deux « ce qui est », deux totalités, deux principes séparés
 
 - nombre: 7
   nom: le I
   figure: [⬛⬛⬛, ⬜⬛⬜, ⬛⬛⬛]
-  sens: les deux plans reliés par l'axe ; le firmament entre les eaux
+  sens: les deux plans reliés par l'axe, le firmament entre les eaux (Genèse 1, 6-7)
 - nombre: 7
   nom: le H
   figure: [⬛⬜⬛, ⬛⬛⬛, ⬛⬜⬛]
-  sens: deux êtres joints par leur milieu
+  sens: deux « ce qui est » reliés par un pont en leur milieu
 
 - nombre: 8
   nom: le pourtour
