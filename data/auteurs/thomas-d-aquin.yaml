@@ -1,0 +1,16 @@
+nom: Thomas d'Aquin
+nomComplet: Thomas de Aquino
+naissance: vers 1225
+mort: "1274"
+description: >-
+  Théologien dominicain du XIIIe siècle, docteur de l'Église ; sa Somme
+  théologique ordonne la doctrine chrétienne par questions et articles.
+traditions: [ chrétienne ]
+sources:
+  - ouvrage: bnf
+    entree: cb11926496p
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,26 @@
+mot: hôtel
+nature: [ nom masculin ]
+etymologie:
+  - forme: hospitale
+    langue: latin
+    sens: chambre destinée à recevoir les hôtes
+explication: >-
+  Le mot a d'abord désigné l'hébergement (vers 1050), puis la maison où l'on vit
+  (vers 1135), jusqu'au palais du roi et à la maison seigneuriale. Il désigne
+  aujourd'hui l'établissement qui loge les voyageurs contre paiement, et le
+  siège d'une administration.
+doublets: [ hopital ]
+famille: [ hôtelier, hôtellerie, hôte ]
+themes: [ maison ]
+sources:
+  - ouvrage: tlfi
+    entree: hôtel
+  - ouvrage: littre
+    entree: hôtel
+  - ouvrage: littre
+    entree: hôpital
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

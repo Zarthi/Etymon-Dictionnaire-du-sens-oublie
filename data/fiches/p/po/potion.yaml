@@ -1,0 +1,30 @@
+mot: potion
+nature: [ nom féminin ]
+etymologie:
+  - forme: potio
+    langue: latin
+    sens: boisson, breuvage
+explication: >-
+  Potio a désigné la boisson avant de désigner le médicament liquide, sens dans
+  lequel le français l'a emprunté vers 1200. Le mot désigne aujourd'hui un
+  médicament liquide, et aussi un breuvage aux pouvoirs extraordinaires.
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: potion
+  - ouvrage: littre
+    entree: potion
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: Le nom de la boisson serait tiré du grec, qui la nomme d'un mot
+        semblable.
+      citation: Potio a Graeca derivatione vocata; hanc enim illi POTOS dicunt.
+      sources:
+        - ouvrage: etymologies
+          entree: XX, 3, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX
+statut: brouillon

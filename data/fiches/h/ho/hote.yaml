@@ -1,0 +1,36 @@
+mot: hôte
+nature: [ nom ]
+etymologie:
+  - forme: hospes
+    langue: latin
+    sens: celui qui offre l'hospitalité, ou celui qui la reçoit
+explication: >-
+  Le français a gardé les deux sens du latin, attestés l'un et l'autre au XIIe
+  siècle. Il y a ajouté, vers 1150, l'aubergiste, qui loge contre paiement ; le
+  mot désigne aussi aujourd'hui l'organisme qui héberge un parasite.
+famille: [ hôtesse, hospice, hospitalier, hôtel, hôpital, hospitalité ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: hôte
+  - ouvrage: littre
+    entree: hôte
+  - ouvrage: littre
+    entree: hospice
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "On parle d'hospitalité quand on reçoit quelqu'un comme quand on est
+        reçu : de là vient que celui qui arrive et celui chez qui il arrive
+        portent le même nom."
+      citation: Nam hospitium tunc vocatur, cum aut aliquem recipimus, aut cum ab
+        aliquo ipsi recipimur; unde et qui venit, et ad quem venitur, hospes
+        dicitur.
+      sources:
+        - ouvrage: differences
+          entree: I, 160
+          url: https://la.wikisource.org/wiki/Differentiae
+statut: brouillon

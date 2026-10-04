@@ -1,0 +1,33 @@
+mot: poison
+nature: [ nom masculin ]
+etymologie:
+  - forme: potio
+    langue: latin
+    sens: action de boire, boisson
+explication: >-
+  Le mot a d'abord désigné une boisson (fin du XIe siècle), le plus souvent
+  suspecte ou empoisonnée, mais aussi un remède ou un philtre. Il désigne
+  aujourd'hui toute substance qui peut nuire à l'organisme ; féminin, il a pris
+  au XVIe siècle le genre masculin, sans doute d'après venin.
+doublets: [ potion ]
+famille: [ empoisonner, empoisonnement, empoisonneur ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: poison
+  - ouvrage: littre
+    entree: poison
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: Le nom de la boisson serait tiré du grec, qui la nomme d'un mot
+        semblable.
+      citation: Potio a Graeca derivatione vocata; hanc enim illi POTOS dicunt.
+      sources:
+        - ouvrage: etymologies
+          entree: XX, 3, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX
+statut: brouillon

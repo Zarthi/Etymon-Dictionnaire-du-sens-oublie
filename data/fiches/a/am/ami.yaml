@@ -1,0 +1,44 @@
+mot: ami
+nature: [ nom ]
+etymologie:
+  - forme: amicus
+    langue: latin
+    sens: ami
+explication: >-
+  Amicus a le même radical que le verbe latin qui signifie aimer. Vers 1165,
+  amie désigne aussi celle qui aime un homme, d'où ami au sens d'amant ; par
+  affaiblissement, le mot désigne aujourd'hui aussi une simple relation de
+  rencontre.
+famille: [ amie, amitié, amical, ennemi ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: ami
+  - ouvrage: littre
+    entree: ami
+  - ouvrage: littre
+    entree: ennemi
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le nom dirait le gardien de l'âme ; ou bien il viendrait de l'hameçon,
+        c'est-à-dire de la chaîne de la charité : de là aussi le nom des hameçons,
+        parce qu'ils retiennent."
+      citation: Amicus, per derivationem, quasi animi custos. […] amicus ab hamo, id
+        est, a catena caritatis; unde et hami quod teneant.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 4-5
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+    - texte: Est proprement ami celui à qui l'on veut du bien ; ce que l'on veut pour
+        soi, on le convoite.
+      citation: Nam ille proprie dicitur amicus, cui aliquod bonum volumus, illud
+        autem dicimur concupiscere, quod volumus nobis.
+      sources:
+        - ouvrage: somme-theologique
+          entree: I-II, q. 26, a. 4, ad 1
+          url: https://la.wikisource.org/wiki/Summa_Theologiae/Prima_secundae_pars/Quaestio_XXVI
+statut: brouillon

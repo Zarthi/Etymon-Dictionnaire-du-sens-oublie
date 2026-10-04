@@ -1,0 +1,17 @@
+titre: Différences
+titreOriginal: Differentiae
+auteur: isidore-de-seville
+date: "630"
+licence: domaine public
+texte: https://la.wikisource.org/wiki/Differentiae
+description: >-
+  Traité en deux livres qui distingue les mots voisins par leur sens propre,
+  puis les notions de la doctrine.
+sources:
+  - ouvrage: bnf
+    entree: cb12349332d
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

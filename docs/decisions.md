@@ -17,6 +17,8 @@ Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a ét�
 | Sens d'*amicus* (*ami*) | « ami », d'après le Littré (à *ennemi* : « amicus, ami ») ; fiche rédigée avec le drapeau `doute` | le validateur exige un sens au maillon premier, et aucune autre glose n'est accessible ; le rapprochement avec *amare* (même radical, Littré) n'est pas une dérivation | à relire |
 | Doublets du lot | déclarés sur *hôtel* (→ *hôpital*), *poison* (→ *potion*) et *captif* (→ *chétif*) ; la fiche *chétif* n'est pas touchée | un doublet se déclare d'un seul côté ; *chétif* garde *captif* dans sa famille, ce que le validateur accepte | à relire |
 | Mots étrangers hors chaîne (*hostis* pour *ennemi*, *amare* pour *ami*) | non cités dans l'explication, dits en français | un mot étranger cité est une forme de la chaîne ; ni l'un ni l'autre n'en est un maillon | à relire |
+| Lecture d'Isidore sur *potio* (*Étymologies* XX, 3, 1) | posée sur *poison* et sur *potion* | elle lit l'étymon commun aux deux doublets, et un `tradition.renvois` ne vaut que pour un mot qui ne lit pas le même étymon | à relire |
+| Explication d'*hospitalité* | proposition du relecteur adoptée, moins « et protégés » | elle dépassait de huit caractères la limite de 300 | à relire |
 
 ## 2026-09-25 — Second pilote
 
