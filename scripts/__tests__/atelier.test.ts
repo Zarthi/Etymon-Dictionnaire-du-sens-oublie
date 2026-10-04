@@ -2,7 +2,7 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { schemaDossier, schemaVerdict, sourcesDuDossier, squeletteDossier } from "../lib/atelier.ts";
 import { annee, datesAffichees, lireNotices } from "../lib/bnf.ts";
-import { lireTlfi } from "../lib/tlfi.ts";
+import { lireTlfi, premierAvecEtymologie, type ReponseTlfi } from "../lib/tlfi.ts";
 import { ajouter } from "../liste.ts";
 import { passages } from "../texte.ts";
 import { validerDepot } from "../valider-fiches.ts";
@@ -57,6 +57,36 @@ describe("TLFi", () => {
       etymologie: "Du lat. pop. *extonare",
     });
     expect(lireTlfi({ content: [{ id: "tlfi", content: [] }] })).toBeUndefined();
+  });
+});
+
+describe("TLFi : choix de la nature", () => {
+  const avecEtymologie = (nature: string): ReponseTlfi => ({
+    header: { full_pos: nature },
+    content: [{ id: "etymology", content: ["<div>Du lat. amicus</div>"] }],
+  });
+  const adjectif: ReponseTlfi = { header: { full_pos: "adjectif", others: [{ pos: "nom" }] }, content: [] };
+
+  it("essaie les autres natures quand la première n'a pas d'étymologie (ami, ennemi)", async () => {
+    const demandees: (string | undefined)[] = [];
+    const charger = async (nature?: string) => {
+      demandees.push(nature);
+      return { reponse: nature === "nom" ? avecEtymologie("nom") : adjectif };
+    };
+    expect(await premierAvecEtymologie(charger)).toMatchObject({ tlfi: { nature: "nom", etymologie: "Du lat. amicus" } });
+    expect(demandees).toEqual([undefined, "nom"]);
+  });
+  it("ne demande rien de plus quand la première nature a son étymologie", async () => {
+    let appels = 0;
+    const charger = async () => (appels++, { reponse: avecEtymologie("verbe") });
+    expect((await premierAvecEtymologie(charger)).tlfi?.nature).toBe("verbe");
+    expect(appels).toBe(1);
+  });
+  it("rend un résultat vide si aucune nature n'a d'étymologie", async () => {
+    expect(await premierAvecEtymologie(async () => ({ reponse: adjectif }))).toEqual({});
+  });
+  it("ne cherche rien dans une page non lue, et dit pourquoi", async () => {
+    expect(await premierAvecEtymologie(async () => ({ injoignable: "HTTP 503" }))).toEqual({ injoignable: "HTTP 503" });
   });
 });
 
@@ -117,7 +147,7 @@ describe("essai de fiches avec le dépôt", () => {
     const essai = {
       fichier: "e/ex/exemple.yaml",
       texte:
-        "mot: exemple\nnature: [ nom masculin ]\netymologie:\n  - forme: exemplum\n    langue: latin\n    sens: échantillon\nexplication: Un essai.\nrenvois: [ inconnu ]\nthemes: []\nredaction:\n  - par: IA\n    detail: essai\nstatut: a-verifier\n",
+        "mot: exemple\nnature: [ nom masculin ]\netymologie:\n  - forme: exemplum\n    langue: latin\n    sens: échantillon\nexplication: Un essai.\nrenvois: [ inconnu ]\nthemes: [ savoir ]\nredaction:\n  - par: IA\n    detail: essai\nstatut: a-verifier\n",
     };
     const { fiches, erreurs } = await validerDepot(depot, [essai]);
     expect(fiches.map((f) => f.id)).toContain("exemple");

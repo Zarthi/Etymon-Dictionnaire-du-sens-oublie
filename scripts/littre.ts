@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { extraireEntrees, indexer, type IndexLittre } from "./lib/littre.ts";
+import { lireOuErreur } from "./lib/reseau.ts";
 
 /**
  * Copie locale du Littré (XMLittré, François Gannaz, CC BY-SA 3.0), hors du dépôt.
@@ -31,9 +32,7 @@ if (import.meta.main) {
     const fichier = join(dossierXml, `${lettre}.xml`);
     if (!existsSync(fichier)) {
       process.stdout.write(`téléchargement ${lettre}.xml… `);
-      const reponse = await fetch(`${DEPOT}/${VERSION}/${lettre}.xml`);
-      if (!reponse.ok) throw new Error(`${lettre}.xml : HTTP ${reponse.status}`);
-      await writeFile(fichier, await reponse.text());
+      await writeFile(fichier, await lireOuErreur(`${DEPOT}/${VERSION}/${lettre}.xml`));
       console.log("ok");
     }
     entrees.push(...extraireEntrees(await readFile(fichier, "utf8")));

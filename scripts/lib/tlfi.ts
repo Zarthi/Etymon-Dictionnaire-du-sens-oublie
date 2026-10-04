@@ -1,4 +1,5 @@
 import { texteBrut } from "./littre.ts";
+import { lire } from "./reseau.ts";
 
 /**
  * TLFi (non libre) : consultation seulement, un mot à la fois. Le portail du CNRTL charge ses
@@ -6,10 +7,11 @@ import { texteBrut } from "./littre.ts";
  * nature, le plan des sens (avec leurs marques d'usage : « Vieilli », « Moderne ») et la rubrique
  * « Étymologie et historique », pour en tirer des faits, jamais la rédaction.
  */
-export const urlApiTlfi = (mot: string) => `https://www.cnrtl.fr/api/word/${encodeURIComponent(mot)}/`;
+export const urlApiTlfi = (mot: string, nature?: string) => `https://www.cnrtl.fr/api/word/${encodeURIComponent(mot)}/${nature ? `${encodeURIComponent(nature)}/` : ""}`;
 
 export interface ReponseTlfi {
-  header?: { full_pos?: string };
+  /** `others` : les autres natures du même mot (« ami » adjectif a pour autre article « ami » nom). */
+  header?: { full_pos?: string; others?: { pos: string }[] };
   content?: { id: string; content: unknown }[];
 }
 
@@ -54,8 +56,37 @@ export function lireTlfi(reponse: ReponseTlfi): Tlfi | undefined {
   return { ...(nature ? { nature } : {}), sens, etymologie };
 }
 
-export async function consulterTlfi(mot: string): Promise<Tlfi | undefined> {
-  const reponse = await fetch(urlApiTlfi(mot)).catch(() => undefined);
-  if (!reponse?.ok) return undefined;
-  return lireTlfi((await reponse.json()) as ReponseTlfi);
+/** Réponse JSON de l'API, ou la raison pour laquelle on ne l'a pas : page non lue, ou lue mais illisible. */
+async function chargerReponse(mot: string, nature?: string): Promise<{ reponse: ReponseTlfi } | { injoignable: string }> {
+  const page = await lire(urlApiTlfi(mot, nature));
+  if (!page.lue) return { injoignable: page.raison };
+  try {
+    return { reponse: JSON.parse(page.texte) as ReponseTlfi };
+  } catch {
+    return { injoignable: "réponse illisible" };
+  }
 }
+
+export type ResultatTlfi = { tlfi?: Tlfi; injoignable?: string };
+
+/**
+ * L'article de la nature par défaut, puis, s'il n'a pas d'étymologie (l'API rend l'adjectif pour
+ * *ami* et *ennemi*, dont l'étymologie est à l'article du nom), les autres natures annoncées.
+ * Ne cherche que dans une réponse lue : sinon, la raison pour laquelle elle ne l'a pas été.
+ */
+export async function premierAvecEtymologie(
+  charger: (nature?: string) => Promise<{ reponse: ReponseTlfi } | { injoignable: string }>,
+): Promise<ResultatTlfi> {
+  const premiere = await charger();
+  if ("injoignable" in premiere) return premiere;
+  const trouve = lireTlfi(premiere.reponse);
+  if (trouve) return { tlfi: trouve };
+  for (const { pos } of premiere.reponse.header?.others ?? []) {
+    const autre = await charger(pos);
+    const tlfi = "reponse" in autre ? lireTlfi(autre.reponse) : undefined;
+    if (tlfi) return { tlfi };
+  }
+  return {};
+}
+
+export const consulterTlfi = (mot: string) => premierAvecEtymologie((nature) => chargerReponse(mot, nature));

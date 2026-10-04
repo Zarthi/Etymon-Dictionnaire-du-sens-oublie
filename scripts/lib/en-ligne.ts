@@ -1,3 +1,5 @@
+import { voixDe } from "../../src/lib/traditions.ts";
+import type { LectureTraditionnelle } from "../../src/lib/types.ts";
 import { texteBrut } from "./littre.ts";
 
 /** Texte lisible d'une page HTML : scripts et styles retirés, balises ôtées, entités décodées. */
@@ -41,4 +43,19 @@ export function morceauxAbsents(citation: string, texteSource: string): string[]
 /** Page d'entrée absente de bailly.app : le site répond 200 avec ce titre. */
 export function pageIntrouvable(html: string): boolean {
   return /<title>[^<]*introuvable/i.test(html);
+}
+
+/**
+ * Nom de la voix d'une lecture, pour les messages : son auteur (celui de la lecture, ou de l'œuvre
+ * citée), sinon le titre de l'œuvre, qui signe seule (l'Écriture).
+ */
+export function nomDeLaVoix(
+  lecture: LectureTraditionnelle,
+  auteurs: Map<string, { nom: string }>,
+  ouvrages: Map<string, { auteur?: string; abrege?: string; titre: string }>,
+): string {
+  const { auteur, ouvrage } = voixDe(lecture, ouvrages);
+  if (auteur !== undefined) return auteurs.get(auteur)?.nom ?? auteur;
+  const oeuvre = ouvrages.get(ouvrage);
+  return oeuvre?.abrege ?? oeuvre?.titre ?? ouvrage;
 }

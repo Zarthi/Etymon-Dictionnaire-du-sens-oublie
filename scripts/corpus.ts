@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { chercherDans, CORPUS, pageWikisource, type Oeuvre, type Page } from "./lib/corpus.ts";
 import { texteDePage } from "./lib/en-ligne.ts";
+import { lire as lirePage, type Lecture } from "./lib/reseau.ts";
 
 /**
  * Corpus de réflexe des lectures traditionnelles (scripts/lib/corpus.ts), en local, hors du dépôt,
@@ -23,13 +24,13 @@ const attendre = (ms: number) => new Promise((r) => setTimeout(r, ms));
 /** Wikimedia demande qu'un script s'identifie, et limite le débit : une page à la fois, reprise après un refus. */
 const ENTETES = { "User-Agent": "Etymon/0.1 (https://github.com/Zarthi/Etymon-Dictionnaire-du-sens-oublie)" };
 
-async function lire(url: string): Promise<Response | undefined> {
-  for (let essai = 0; essai < 4; essai++) {
-    const reponse = await fetch(url, { headers: ENTETES }).catch(() => undefined);
-    if (reponse?.status !== 429) return reponse;
-    await attendre(15_000 * (essai + 1));
+async function lire(url: string): Promise<Lecture> {
+  let page = await lirePage(url, ENTETES);
+  for (let essai = 1; essai < 4 && !page.lue && page.statut === 429; essai++) {
+    await attendre(15_000 * essai);
+    page = await lirePage(url, ENTETES);
   }
-  return undefined;
+  return page;
 }
 
 /** Pages d'une œuvre : sa liste, ou celles de son préfixe sur Wikisource, demandées à l'API. */
@@ -42,8 +43,8 @@ async function pagesDe(oeuvre: Oeuvre): Promise<Page[]> {
     await attendre(800);
     const url = `https://${langue}.wikisource.org/w/api.php?action=query&list=allpages&apnamespace=0&aplimit=500&format=json&apprefix=${encodeURIComponent(prefixe)}${suite ? `&apcontinue=${encodeURIComponent(suite)}` : ""}`;
     const reponse = await lire(url);
-    if (!reponse?.ok) throw new Error(`${oeuvre.titre} : liste des pages inaccessible`);
-    const donnees = (await reponse.json()) as { query: { allpages: { title: string }[] }; continue?: { apcontinue: string } };
+    if (!reponse.lue) throw new Error(`${oeuvre.titre} : liste des pages inaccessible`);
+    const donnees = JSON.parse(reponse.texte) as { query: { allpages: { title: string }[] }; continue?: { apcontinue: string } };
     titres.push(...donnees.query.allpages.map((p) => p.title));
     suite = donnees.continue?.apcontinue;
   } while (suite);
@@ -61,12 +62,12 @@ async function telecharger(): Promise<number> {
       if (existsSync(fichier(oeuvre.id, rang))) continue;
       await attendre(800);
       const reponse = await lire(page.url);
-      if (!reponse?.ok) {
-        console.log(`✗ ${oeuvre.titre}, ${page.repere} : ${reponse ? `HTTP ${reponse.status}` : "injoignable"} (${page.url})`);
+      if (!reponse.lue) {
+        console.log(`✗ ${oeuvre.titre}, ${page.repere} : ${reponse.raison} (${page.url})`);
         echecs++;
         continue;
       }
-      await writeFile(fichier(oeuvre.id, rang), texteDePage(await reponse.text()));
+      await writeFile(fichier(oeuvre.id, rang), texteDePage(reponse.texte));
       nouvelles++;
     }
     console.log(`✓ ${oeuvre.titre} : ${pages.length} page(s), dont ${nouvelles} téléchargée(s)`);

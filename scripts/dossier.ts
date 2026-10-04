@@ -72,7 +72,7 @@ async function principal(): Promise<number> {
       await mkdir(dirname(chemin), { recursive: true });
       await writeFile(chemin, JSON.stringify(squeletteDossier(mot, littre), null, 2) + "\n");
     }
-    const tlfi = await consulterTlfi(mot);
+    const { tlfi, injoignable } = await consulterTlfi(mot);
     console.log(values.consulter ? `■ ${mot}` : `■ ${mot} → atelier/${id}/dossier.json (${cree ? "créé" : "existant"})`);
     if (littre.length === 0) console.log("Littré : absent (mot postérieur à 1872, ou autre graphie)");
     for (const e of littre)
@@ -80,7 +80,7 @@ async function principal(): Promise<number> {
     console.log(
       tlfi
         ? `TLFi${tlfi.nature ? ` (${tlfi.nature})` : ""} https://www.cnrtl.fr/etymologie/${encodeURIComponent(mot)} — consultation : n'en garder que les faits\n  Sens :\n${tlfi.sens.length ? tlfi.sens.map((s) => `    ${s}`).join("\n") : "    (pas de plan des sens par l'API)"}\n  Étymologie et historique : ${tlfi.etymologie}`
-        : `TLFi : rien par l'API pour cette graphie ; voir https://www.cnrtl.fr/etymologie/${encodeURIComponent(mot)} dans le navigateur intégré`,
+        : `TLFi : ${injoignable ? `injoignable (${injoignable})` : "rien par l'API pour cette graphie"} ; voir https://www.cnrtl.fr/etymologie/${encodeURIComponent(mot)} dans le navigateur intégré`,
     );
     console.log("Étymons : npm run texte -- bailly:<forme grecque> ; Gaffiot (gaffiot.fr/#<forme latine>) dans le navigateur intégré, s'il le faut.\n");
   }

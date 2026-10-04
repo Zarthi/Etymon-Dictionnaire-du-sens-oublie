@@ -3,6 +3,8 @@
  * UNIMARC : forme retenue, variantes, dates, note. Source des faits des fiches d'auteurs et
  * d'ouvrages (noms, dates).
  */
+import { lireOuErreur } from "./reseau.ts";
+
 const SRU = "https://catalogue.bnf.fr/api/SRU?version=1.2&operation=searchRetrieve&recordSchema=unimarcxchange";
 
 export interface Notice {
@@ -96,9 +98,7 @@ export function lireNotices(xml: string): Notice[] {
 }
 
 async function interroger(requete: string, nombre: number): Promise<Notice[]> {
-  const reponse = await fetch(`${SRU}&maximumRecords=${nombre}&query=${encodeURIComponent(requete)}`);
-  if (!reponse.ok) throw new Error(`BnF : HTTP ${reponse.status}`);
-  return lireNotices(await reponse.text());
+  return lireNotices(await lireOuErreur(`${SRU}&maximumRecords=${nombre}&query=${encodeURIComponent(requete)}`));
 }
 
 /**
