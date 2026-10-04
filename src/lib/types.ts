@@ -56,7 +56,6 @@ export type OuvrageAssemble = Ouvrage & {
   issus: MotCite[];
 };
 
-/** Entrée de `index.json` : de quoi chercher et tirer un mot sans charger les fiches. */
 /** Entrée de l'index : de quoi chercher et tirer un mot ; `sacre` l'exclut du tirage. */
 export type EntreeIndex = Pick<FicheIdentifiee, "id" | "mot" | "statut"> & { sacre?: true };
 

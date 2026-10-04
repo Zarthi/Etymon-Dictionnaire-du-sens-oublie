@@ -32,8 +32,17 @@
   let vue = $state<Vue>(lireVue(location.hash));
   let parametres = $state(lireParametres());
 
-  const duJour = motDuJour(entrees, dateDuJour());
-  const ficheDuJour = duJour ? chargerFiche(duJour.id) : Promise.resolve(undefined);
+  // Recalculé quand l'application revient au premier plan : une page restée ouverte passe minuit.
+  let jour = $state(dateDuJour());
+  const duJour = $derived(motDuJour(entrees, jour));
+  const ficheDuJour = $derived(duJour ? chargerFiche(duJour.id) : Promise.resolve(undefined));
+  $effect(() => {
+    const auRetour = () => {
+      if (document.visibilityState === "visible") jour = dateDuJour();
+    };
+    document.addEventListener("visibilitychange", auRetour);
+    return () => document.removeEventListener("visibilitychange", auRetour);
+  });
   const ficheOuverte = $derived(vue.nom === "fiche" ? chargerFiche(vue.id) : undefined);
 
   /** Adresse d'une fiche existante ; rien pour un mot qui n'a pas encore sa fiche. */

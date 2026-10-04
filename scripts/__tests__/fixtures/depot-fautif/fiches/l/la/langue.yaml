@@ -6,7 +6,7 @@ etymologie:
     langue: klingon
     sens: test
 explication: Test.
-themes: []
+themes: [ savoir ]
 sources:
   - ouvrage: wiktionnaire
     entree: langue

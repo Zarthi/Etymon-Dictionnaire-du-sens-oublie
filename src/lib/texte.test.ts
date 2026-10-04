@@ -38,8 +38,13 @@ describe("analyser : liens automatiques", () => {
   it("lie les mots qui ont une fiche, sans tenir compte des accents ni de la casse", () => {
     expect(rendu("L'Hôtel et l'hôpital.")).toBe("L'[Hôtel→hotel] et l'[hôpital→hopital].");
   });
-  it("reconnaît le pluriel en s ou en x", () => {
+  it("reconnaît le pluriel en -es ou -ons", () => {
     expect(rendu("Les anges et les hôtes.")).toBe("Les [anges→ange] et les [hôtes→hote].");
+  });
+
+  it("ne lie pas un mot en -s ou -x à une fiche voisine", () => {
+    const avec = (texte: string) => analyser(texte, (id) => ["foi", "temp", "ame"].includes(id)).filter((s) => s.type === "lien");
+    expect(avec("Une fois, longtemps, en tout temps.")).toEqual([]);
   });
   it("ne lie que la première occurrence", () => {
     expect(rendu("L'âme, l'âme, toujours l'âme.")).toBe("L'[âme→ame], l'âme, toujours l'âme.");

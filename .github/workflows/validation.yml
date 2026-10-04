@@ -2,6 +2,7 @@ name: Validation et déploiement
 
 on:
   push:
+    branches: [main]
   pull_request:
   # Publication manuelle seulement : onglet Actions, « Run workflow » sur main.
   workflow_dispatch:

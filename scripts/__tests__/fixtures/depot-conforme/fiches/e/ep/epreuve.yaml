@@ -10,7 +10,7 @@ explication: >
 incertain: true
 doublets: [ essai ]
 famille: [ prouver ]
-themes: []
+themes: [ savoir ]
 sources:
   - ouvrage: gaffiot
     entree: probatio

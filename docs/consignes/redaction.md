@@ -56,7 +56,7 @@ Un fichier JSON, `atelier/<id>/fiche.json` : la fiche seule, avec les champs ci-
 | `doublets` | liste d'identifiants | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | non | Mots français apparentés, de la même racine. |
 | `renvois` | liste d'identifiants | non | Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté. |
-| `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
+| `themes` | liste non vide de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json), un ou deux. |
 | `tradition` | objet (voir plus bas) | non | Les mots où la tradition parle de celui-ci ; les lectures s'écrivent à part. |
 
 ### `etymologie[]`

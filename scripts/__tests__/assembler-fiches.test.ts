@@ -23,6 +23,15 @@ describe("assembler", () => {
     expect(assembler(entree).lots.get("en")?.[0].statut).toBe("a-verifier");
   });
 
+  it("transmet `sacre: true` dans l'index, et rien pour un mot profane", () => {
+    const manne = { ...avec("manne", "brouillon"), sacre: ["juive", "chrétienne"] } as FicheIdentifiee;
+    const { index } = assembler([manne, avec("ennui", "brouillon")]);
+    expect(index).toEqual([
+      { id: "ennui", mot: "ennui", statut: "brouillon" },
+      { id: "manne", mot: "manne", statut: "brouillon", sacre: true },
+    ]);
+  });
+
   it("produit un index léger (id, mot, statut), trié par id quel que soit l'ordre d'entrée", () => {
     const entree = [avec("zero", "validee"), avec("chiffre", "validee"), avec("chetif", "brouillon")];
     const attendu = [

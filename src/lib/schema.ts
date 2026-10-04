@@ -72,11 +72,11 @@ const socle = {
   sources: z
     .array(schemaSource)
     .default([])
-    .describe("Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire."),
+    .describe("Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire."),
   redaction: z.array(schemaRedaction).min(1).describe("Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger."),
   statut: z
     .enum(["a-verifier", "brouillon", "validee"])
-    .describe("a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."),
+    .describe("a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."),
   historique: z
     .array(z.object({ date, note: z.string().min(1).describe("Nature de la correction.") }).strict())
     .default([])
@@ -290,7 +290,7 @@ const objetFiche = z
       .describe(
         "Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté.",
       ),
-    themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
+    themes: z.array(z.enum(themes)).min(1).max(2).describe("Thèmes (liste fermée : data/themes.json), un ou deux."),
     tradition: objetTradition
       .prefault({})
       .describe("Ce que dit la tradition du mot : ses lectures, ou les mots où elle en parle. Une seule rubrique, « Lectures traditionnelles »."),

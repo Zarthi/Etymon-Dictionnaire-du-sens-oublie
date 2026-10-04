@@ -572,6 +572,8 @@
       }
     },
     "themes": {
+      "minItems": 1,
+      "maxItems": 2,
       "type": "array",
       "items": {
         "type": "string",
@@ -598,7 +600,7 @@
           "temps"
         ]
       },
-      "description": "Thèmes (liste fermée : data/themes.json)."
+      "description": "Thèmes (liste fermée : data/themes.json), un ou deux."
     },
     "tradition": {
       "description": "Ce que dit la tradition du mot : ses lectures, ou les mots où elle en parle. Une seule rubrique, « Lectures traditionnelles ».",
@@ -763,7 +765,7 @@
     },
     "sources": {
       "default": [],
-      "description": "Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire.",
+      "description": "Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire.",
       "type": "array",
       "items": {
         "type": "object",
@@ -853,7 +855,7 @@
         "brouillon",
         "validee"
       ],
-      "description": "a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
+      "description": "a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
     },
     "historique": {
       "default": [],

@@ -281,6 +281,8 @@ describe("validerFiches : structure", () => {
   it.each([
     ["statut", { statut: "publiee" }],
     ["themes.0", { themes: ["inconnu"] }],
+    ["themes", { themes: [] }],
+    ["themes", { themes: ["émotions", "météo", "savoir"] }],
     ["etymologie", { etymologie: [] }],
     ["etymologie.0.langue", maillon({ forme: "x", langue: "klingon", sens: "y" })],
     ["etymologie.0.forme", maillon({ langue: "latin", sens: "y" })],
@@ -491,6 +493,15 @@ describe("validerFiches : doublets et renvois", () => {
       { fichier: "p/po/potion.yaml", champ, regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches" },
     ]);
   });
+  it("refuse un renvoi vers un doublet déclaré de l'autre côté, dans les deux sens", () => {
+    const regle = (cible: string) => `« ${cible} » est un doublet (déclaré dans sa fiche) : pas un renvoi`;
+    expect(validerFiches([fiche("poison", { renvois: ["potion"] }), fiche("potion", { doublets: ["poison"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/poison.yaml", champ: "renvois", regle: regle("potion") },
+    ]);
+    expect(validerFiches([fiche("poison", { doublets: ["potion"] }), fiche("potion", { renvois: ["poison"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/potion.yaml", champ: "renvois", regle: regle("poison") },
+    ]);
+  });
   it("doublet : vers une fiche existante seulement", () => {
     expect(validerFiches([fiche("poison", { doublets: ["potion"] })], REF, new Set(["potion"])).erreurs).toEqual([
       { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
@@ -566,6 +577,13 @@ describe("validerFiches : règles éditoriales", () => {
     expect(valider({ explication: "  \n" }).erreurs.map((e) => e.champ)).toEqual(["explication"]);
     expect(erreursDe({ explication: "é".repeat(300) + "." })).toEqual(["explication : 300 caractères maximum (301)"]);
   });
+  it("refuse un texte de lecture qui commence par le nom de son auteur, mais pas un mot qui le prolonge", () => {
+    const lecture = (texte: string) => ({ tradition: { lectures: [{ ...lectureBase, texte }] } });
+    expect(erreursDe(lecture("Lactance voit ici un lien."))).toEqual([expect.stringMatching(/^tradition\.lectures\.0\.texte : ne commence pas par le nom de l'auteur/)]);
+    expect(erreursDe(lecture("lactance voit ici un lien."))).toHaveLength(1);
+    expect(erreursDe(lecture("Religio viendrait de religare, selon Lactance."))).toEqual([]);
+    expect(erreursDe(lecture("Lactancien dans l'esprit."))).toEqual([]);
+  });
   it("refuse des guillemets dans un sens, où qu'il soit", () => {
     expect(erreursDe({ etymologie: [{ forme: "x", langue: "latin", sens: "« frapper »" }] })).toEqual([
       "etymologie.0.sens : sans guillemets : l'app les ajoute à l'affichage",
@@ -582,6 +600,13 @@ describe("validerFiches : règles éditoriales", () => {
     ],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs).toEqual([expect.objectContaining({ champ, regle: expect.stringMatching(/espace insécable/) })]);
+  });
+});
+
+describe("validerFiches : fiche a-verifier", () => {
+  it("n'a que l'IA pour source : aucun ouvrage consulté", () => {
+    expect(erreursDe({ statut: "a-verifier" })).toEqual([expect.stringMatching(/^sources : une fiche a-verifier n'a que l'IA pour source/)]);
+    expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
   });
 });
 

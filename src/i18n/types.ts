@@ -25,6 +25,8 @@ export interface Grammaire {
   /** Deux-points et point-virgule, avec l'espace qui les précède selon la langue. */
   deuxPoints: string;
   pointVirgule: string;
+  /** Liaison avant le dernier terme d'une suite, avec ses espaces : le dernier élément d'une composition (« , et »), le dernier de plusieurs auteurs possibles (« ou »). */
+  liaisons: { et: string; ou: string };
   /** Liste en toutes lettres : « juive et chrétienne », « a, b ou c ». */
   enumerer(elements: string[], liaison: "et" | "ou"): string;
   /** Première lettre en majuscule (début de phrase). */

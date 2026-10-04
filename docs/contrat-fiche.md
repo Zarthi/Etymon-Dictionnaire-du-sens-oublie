@@ -21,11 +21,11 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `doublets` | liste d'identifiants | non | Fiches issues du même étymon par une autre voie ; la relation se déclare sur une seule des deux fiches. |
 | `famille` | liste de textes | non | Mots français apparentés, de la même racine. |
 | `renvois` | liste d'identifiants | non | Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté. |
-| `themes` | liste de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json). |
+| `themes` | liste non vide de valeurs d'une liste fermée (voir plus bas) | oui | Thèmes (liste fermée : data/themes.json), un ou deux. |
 | `tradition` | objet (voir plus bas) | non | Ce que dit la tradition du mot : ses lectures, ou les mots où elle en parle. Une seule rubrique, « Lectures traditionnelles ». |
-| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire. |
+| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire. |
 | `redaction` | liste non vide d'objets (voir plus bas) | oui | Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger. |
-| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
+| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
 | `historique` | liste d'objets (voir plus bas) | non | Corrections successives (ex. suite à une Critique). |
 
 ### `etymologie[]`
@@ -183,9 +183,9 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `description` | texte | oui | Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie. |
 | `traditions` | liste non vide de `juive` \| `chrétienne` \| `grecque` | non | Traditions dans lesquelles il parle ; un auteur qui en a signe des lectures traditionnelles. Plusieurs : chaque lecture précise la sienne. |
 | `cite` | liste de textes | non | Formes courtes sous lesquelles on le cite dans un texte (Bleuler, Comte, More) : l'élément d'entrée de la notice BnF, retenue ou variante. Le nom usuel est toujours reconnu. |
-| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire. |
+| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire. |
 | `redaction` | liste non vide d'objets (voir plus bas) | oui | Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger. |
-| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
+| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
 | `historique` | liste d'objets (voir plus bas) | non | Corrections successives (ex. suite à une Critique). |
 
 ### `sources[]`
@@ -227,9 +227,9 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `texte` | adresse https | non | Adresse du texte, pour une œuvre de la tradition. |
 | `modeleEntree` | texte | non | Modèle d'adresse d'une entrée (dictionnaires) : {entree}, ou {grec} pour l'entrée translittérée. |
 | `description` | texte | oui | Une ou deux phrases, 200 caractères au plus : ce qui le situe (époque, tradition, œuvre), pas une biographie. |
-| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire. |
+| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire. |
 | `redaction` | liste non vide d'objets (voir plus bas) | oui | Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger. |
-| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
+| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
 | `historique` | liste d'objets (voir plus bas) | non | Corrections successives (ex. suite à une Critique). |
 
 ### `sources[]`

@@ -22,10 +22,14 @@ export function idDe(mot: string): string {
     .replace(/^-|-$/g, "");
 }
 
-/** Fiche visée par un mot du texte : le mot lui-même, ou son singulier (« anges » → « ange »). */
+/**
+ * Fiche visée par un mot du texte : le mot lui-même, ou son singulier pour les pluriels réguliers
+ * en -es et -ons (« anges » → « ange », « religions » → « religion »). Un mot en -s ou -x qui est
+ * lui-même un mot courant (« fois », « temps ») ne perd jamais sa lettre : il ne vise ni *foi* ni *temp*.
+ */
 function ficheDe(mot: string, existe: (id: string) => boolean): string | undefined {
   const id = idDe(mot);
-  const singulier = id.replace(/[sx]$/, "");
+  const singulier = id.replace(/((?:e|on)s)$/, (m) => m.slice(0, -1));
   if (existe(id)) return id;
   if (singulier !== id && existe(singulier)) return singulier;
   return undefined;

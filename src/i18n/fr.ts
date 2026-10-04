@@ -21,6 +21,7 @@ export const grammaire: Grammaire = {
   citer: (texte) => `«${NBSP}${texte}${NBSP}»`,
   deuxPoints: `${NBSP}:`,
   pointVirgule: `${NBSP};`,
+  liaisons: { et: ", et ", ou: " ou " },
   enumerer: (elements, liaison) =>
     elements.length <= 1 ? (elements[0] ?? "") : `${elements.slice(0, -1).join(", ")} ${liaison} ${elements.at(-1)}`,
   majuscule: (texte) => texte.charAt(0).toUpperCase() + texte.slice(1),

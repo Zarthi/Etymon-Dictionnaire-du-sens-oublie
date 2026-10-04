@@ -156,7 +156,10 @@ export function validerOuvrages(sources: FichierSource[], auteurs: Map<string, A
 }
 
 /** Sources d'une fiche : l'ouvrage a sa fiche, et l'adresse n'est écrite que si elle ne se déduit pas. */
-function verifierSources(fiche: { sources: Fiche["sources"] }, ref: Referentiel, ajouter: (champ: string, regle: string) => void) {
+function verifierSources(fiche: { sources: Fiche["sources"]; statut: Fiche["statut"] }, ref: Referentiel, ajouter: (champ: string, regle: string) => void) {
+  if (fiche.statut === "a-verifier" && fiche.sources.length > 0) {
+    ajouter("sources", "une fiche a-verifier n'a que l'IA pour source (champ redaction) : aucun ouvrage consulté, sinon c'est un brouillon");
+  }
   fiche.sources.forEach((s, i) => {
     const ouvrage = ref.ouvrages.get(s.ouvrage);
     if (!ouvrage) return ajouter(`sources.${i}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
@@ -164,6 +167,12 @@ function verifierSources(fiche: { sources: Fiche["sources"] }, ref: Referentiel,
     if (s.url && s.url === deduite) ajouter(`sources.${i}.url`, "adresse inutile : elle se déduit de l'entrée, la retirer");
     if (!s.url && !deduite && s.page === undefined) ajouter(`sources.${i}.url`, "indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)");
   });
+}
+
+/** Le texte commence-t-il par ce nom, mot entier et sans tenir compte de la casse ? */
+function commencePar(texte: string, nom: string): boolean {
+  const debut = texte.trimStart();
+  return debut.toLowerCase().startsWith(nom.toLowerCase()) && !/^[\p{L}\p{M}]/u.test(debut.slice(nom.length));
 }
 
 /** Règles propres à une fiche de mot (identifiant, chaîne, références, rédaction). */
@@ -185,6 +194,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   if (fiche.renvois.includes(id)) ajouter("renvois", "une fiche ne peut pas renvoyer à elle-même");
   if (fiche.tradition.renvois.includes(id)) ajouter("tradition.renvois", "une fiche ne peut pas renvoyer à elle-même");
   // Un renvoi relie des notions sans racine commune : même étymon ou même famille, c'est un doublet ou la famille.
+  // Le doublet déclaré de l'autre côté se contrôle entre fiches (verifierRelations).
   const parente = new Set([...fiche.doublets, ...fiche.famille.map(slug)]);
   for (const renvoi of fiche.renvois.filter((r) => parente.has(r))) {
     ajouter("renvois", `« ${renvoi} » est un doublet ou de la famille : pas un renvoi`);
@@ -319,6 +329,9 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     const auteur = voixAuteur !== undefined ? ref.auteurs.get(voixAuteur) : undefined;
     if (voixAuteur !== undefined && !auteur) return ajouter(`${c}.auteur`, `auteur « ${voixAuteur} » sans fiche (data/auteurs)`);
     const nomVoix = auteur?.nom ?? oeuvres[0]!.titre;
+    if (auteur && commencePar(l.texte, auteur.nom)) {
+      ajouter(`${c}.texte`, `ne commence pas par le nom de l'auteur (« ${auteur.nom} »), que la citation affichée dessous donne déjà`);
+    }
     const siennes = (auteur ? auteur.traditions : oeuvres[0]!.traditions) ?? [];
     if (siennes.length === 0) return ajouter(`${c}.auteur`, `${nomVoix} n'est pas une voix de la tradition (traditions)`);
     // Une parole rapportée dans une œuvre sans auteur (Resh Lakish dans le Talmud) est de la tradition de l'œuvre.
@@ -370,6 +383,8 @@ function verifierRelations(
       const fichier = fichierDe.get(fiche.id)!;
       if (!idsPresents.has(cible)) {
         if (!attendus.has(cible)) erreurs.push({ fichier, champ, regle: `fiche « ${cible} » introuvable${champ === "doublets" ? "" : ", ni candidat à faire"}` });
+      } else if (champ === "renvois" && parId.get(cible)?.doublets.includes(fiche.id)) {
+        erreurs.push({ fichier, champ, regle: `« ${cible} » est un doublet (déclaré dans sa fiche) : pas un renvoi` });
       } else if (champ !== "tradition.renvois" && fiche.id > cible && cibles(parId.get(cible)!).includes(fiche.id)) {
         erreurs.push({
           fichier,
