@@ -73,3 +73,11 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Lewis & Short | ouvrage `lewis-short` à créer d'après la BnF, source des sens latins du lot | décision du 2026-09 (sources) : dictionnaire latin du domaine public consultable par script | à relire |
 | Croisement (*algorithme*) | dit dans l'explication ; ἀριθμός gardé dans `ecartees` comme étymon, la raison nommant le croisement | deuxième cas après *chétif* : le modèle reste en l'état, le point est signalé | à relire |
 | Fiche d'ouvrage `lewis-short` | écrite sans notice BnF, en `a-verifier`, sans auteur | la BnF n'a pas de notice d'œuvre pour ce dictionnaire, comme pour le Gaffiot et le Bailly (AGENTS.md §6.1) ; deux auteurs, dont un sans notice | à relire |
+
+## 2026-10-04 — Reprise lot B (passe 1)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Date de *Schizophrenie* | `forge.date` : 1908, sans `ouvrage` | la bibliographie de Bleuler (*Dementia praecox*, 1911, n° 73) cite son article de 1908 « Die Prognose der Dp. (Schizophreniegruppe) » ; le TLFi date du livre de 1911 ; l'article n'a pas de fiche d'ouvrage | à relire |
+| Suffixe *-isme* (*altruisme*) | élément *-isme*, « ensemble de penchants » | le schéma veut deux éléments au moins ; aucune source consultée ne glose le suffixe ; Littré définit *altruisme* et *égoïsme*, termes de philosophie, par ce même genre | à relire |
+| Sens de *Utopia* | « ce qui ne se rencontre en aucun lieu » (Littré) sur le maillon latin | le validateur veut un maillon porteur de sens, et un jeu d'alternatives n'en tient pas lieu | à relire |
