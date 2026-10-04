@@ -6,7 +6,7 @@ Tu ajoutes à la fiche écrite d'un mot (`data/fiches/<initiale>/<préfixe>/<id>
 
 ## Étapes
 
-1. Le corpus de réflexe, toujours : `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi ; en hébreu, les consonnes : שטן). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture.
+1. Le corpus de réflexe, toujours : `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi ; en hébreu, les consonnes : שטן). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture. Note dans `corpus` du dossier (`atelier/<id>/dossier.json`) ce que tu as cherché dans chaque œuvre et ce que tu y as trouvé, même rien : `{ "oeuvre": "cite-de-dieu", "cherche": "angel", "trouve": "X, 25" }`. `npm run dossier -- --verifier <mot>` dit les œuvres qui manquent.
 2. Puis au-delà, toujours aussi : le corpus est un plancher, jamais une limite. Tout autre auteur traditionnel qui a lu le mot se cherche (Augustin, Lactance, Thomas d'Aquin, le Talmud, les Pères, Guénon…), d'après les `notes` du dossier et ce que tu sais ; mais on ne cite que ce qu'on a lu. L'auteur doit avoir lu le mot, ou son étymon, pas la chose qu'il désigne aujourd'hui.
 3. Trouve le passage dans un texte original en ligne, du domaine public (Wikisource en latin, en grec, en hébreu ; thelatinlibrary.com ; archive.org), et lis-le tel quel : `npm run texte -- <adresse> --autour "<mot>"`. Jamais un outil qui résume la page pour une citation.
 4. Écris la lecture dans `tradition.lectures` : la citation copiée de la page, mot pour mot, `[…]` pour une coupe ; le texte, ce que le passage dit du mot, en une ou deux phrases, sans commencer par le nom de l'auteur, sans répéter l'hypothèse, sans rien ajouter à la citation.

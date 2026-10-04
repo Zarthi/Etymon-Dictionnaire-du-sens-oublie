@@ -2,6 +2,22 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-04 — Affinage après le second pilote
+
+- **La recherche dans le corpus de réflexe se note au dossier** (`corpus` : l'œuvre, ce qui a été
+  cherché, ce qui a été trouvé, même rien), pour chaque œuvre, aux mots du drapeau `tradition` ;
+  `npm run dossier -- --verifier` dit les œuvres qui manquent, et le relecteur le contrôle en
+  seconde passe. Cause : pour *ange*, Augustin, qui est au corpus, n'avait pas été cherché.
+- **`npm run bnf` lit les dates affichées de la notice** (« 0427?-0348? av. J.-C. » : « vers 427
+  av. J.-C. », « vers 348 av. J.-C. ») et ne se rabat sur les dates codées qu'à défaut. Cause : la
+  fiche de Platon portait une naissance exacte et aucune mort.
+- **L'écriture régénère les consignes** : `npm run rediger` (hors essai) et `npm run bnf --cb`
+  relancent `npm run contrat`, comme `npm run liste`. Cause : les auteurs et ouvrages créés pendant
+  le lot n'y figuraient pas, et le test du contrat échouait jusqu'à la fin du lot.
+- Restent en attente : le repli de `npm run dossier` sur Stella (si l'API du TLFi manque encore un
+  mot) et la nature des mots dont l'usage a changé de nature (*panique*, décision au journal des
+  décisions).
+
 ## 2026-09-25 — Second pilote, avec la méthode refondue
 
 Mêmes dix mots, un rédacteur et un relecteur (Opus 5.5, réflexion élevée), quatre passes. Deux

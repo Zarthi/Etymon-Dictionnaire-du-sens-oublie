@@ -2,6 +2,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import { schemaSource } from "../../src/lib/schema.ts";
+import { CORPUS } from "./corpus.ts";
 
 /**
  * Artefacts de la rédaction autonome (docs/methode.md) : le dossier de faits d'un mot, la fiche
@@ -63,6 +64,18 @@ export const schemaDossier = z
       .array(z.string().min(1))
       .default([])
       .describe("Doute sur le §3.3 et sa raison ; piste pour les lectures traditionnelles (auteur, œuvre, passage) ; ce que le modèle ne permet pas de dire."),
+    corpus: z
+      .array(
+        z
+          .object({
+            oeuvre: z.enum(CORPUS.map((o) => o.id) as [string, ...string[]]).describe("Œuvre du corpus de réflexe (identifiant de npm run corpus)."),
+            cherche: z.string().min(1).describe("Ce qui a été cherché : le radical de l'étymon (religi, misericord ; en hébreu, les consonnes)."),
+            trouve: z.string().min(1).describe("Le passage qui lit le mot (repère), ou « rien »."),
+          })
+          .strict(),
+      )
+      .default([])
+      .describe("Recherche faite dans chaque œuvre du corpus de réflexe pour les lectures, même vaine (docs/consignes/lectures.md)."),
   })
   .strict()
   .describe("Dossier de faits d'un mot (atelier/<id>/dossier.json).");
@@ -71,6 +84,10 @@ export const schemaDossier = z
 export const squeletteDossier = (mot: string, littre: z.infer<typeof entreeLittre>[]) => ({ mot, littre, faits: [], manques: [], notes: [] });
 
 export type Dossier = z.infer<typeof schemaDossier>;
+
+/** Œuvres du corpus de réflexe que le dossier d'un mot au drapeau `tradition` ne dit pas avoir consultées. */
+export const oeuvresNonConsultees = (dossier: Dossier): string[] =>
+  dossier.drapeaux.includes("tradition") ? CORPUS.map((o) => o.id).filter((id) => !dossier.corpus.some((c) => c.oeuvre === id)) : [];
 
 /**
  * Sources d'une fiche rédigée d'après son dossier : les entrées réellement consultées, sans doublon,

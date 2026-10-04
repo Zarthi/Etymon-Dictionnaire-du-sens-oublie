@@ -5,6 +5,7 @@ import { parseArgs } from "node:util";
 import { cheminDossier, schemaDossier, sourcesDuDossier } from "./lib/atelier.ts";
 import { chercher, natureDepuisLittre } from "./lib/littre.ts";
 import { lireReflexion, preparerAuteur, preparerFiche, preparerOuvrage, versYaml } from "./lib/redaction.ts";
+import { regenererContrat } from "./lib/regenerer.ts";
 import { cheminFiche, slug } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
 import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts";
@@ -172,6 +173,7 @@ async function principal(): Promise<number> {
     if (gardees.length !== lignes.length) await writeFile(chemin, gardees.join("\n"));
   }
 
+  if (ecrits.length + referencesEcrites > 0) regenererContrat();
   const statut = values.dossier ? "brouillon" : "a-verifier";
   console.log(`✓ ${ecrits.length} fiche(s) de mot (${statut}) et ${referencesEcrites} fiche(s) d'auteur ou d'ouvrage écrite(s).`);
   if (refus.length > 0) console.log(`\nNon écrites (${refus.length}) :\n- ${refus.join("\n- ")}`);

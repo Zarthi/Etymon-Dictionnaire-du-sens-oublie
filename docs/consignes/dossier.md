@@ -37,6 +37,7 @@ Tu rassembles les faits dont la fiche du mot sera tirée : elle n'affirmera rien
 | `faits` | liste non vide d'objets (voir plus bas) | oui | Ce que disent les sources consultées : la chaîne et le sens de chaque maillon qui en porte un, les étapes datées du sens en français. La rédaction n'affirme rien qui n'y soit. |
 | `manques` | liste de textes | non | Sources inaccessibles, questions restées sans réponse. |
 | `notes` | liste de textes | non | Doute sur le §3.3 et sa raison ; piste pour les lectures traditionnelles (auteur, œuvre, passage) ; ce que le modèle ne permet pas de dire. |
+| `corpus` | liste d'objets (voir plus bas) | non | Recherche faite dans chaque œuvre du corpus de réflexe pour les lectures, même vaine (docs/consignes/lectures.md). |
 
 ### `littre[]`
 
@@ -77,5 +78,13 @@ Tu rassembles les faits dont la fiche du mot sera tirée : elle n'affirmera rien
 | `entree` | texte | oui | Entrée consultée (« étonner », « adtono », « φρήν »). |
 | `page` | nombre ou texte | non | Page de l'édition papier consultée. |
 | `url` | adresse https | non | Adresse (https), seulement si elle ne se déduit pas de l'entrée. |
+
+### `corpus[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `oeuvre` | `etymologies` \| `differences` \| `noms-hebreux` \| `rashi-torah` \| `cite-de-dieu` \| `confessions` \| `doctrine-chretienne` \| `somme-theologique` | oui | Œuvre du corpus de réflexe (identifiant de npm run corpus). |
+| `cherche` | texte | oui | Ce qui a été cherché : le radical de l'étymon (religi, misericord ; en hébreu, les consonnes). |
+| `trouve` | texte | oui | Le passage qui lit le mot (repère), ou « rien ». |
 
 Chemins : ordinaire, forge, debattu, recent, sacre, consacre. Drapeaux : tradition, doute, nom-propre.

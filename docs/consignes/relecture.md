@@ -18,6 +18,7 @@ Après la reprise, relis seulement :
 
 - pour chaque remarque de ton premier verdict, si elle est réglée ; et si ce que le rédacteur a changé n'affirme rien hors du dossier ;
 - les lectures traditionnelles ajoutées (`tradition.lectures` de la fiche écrite dans data/) : le texte dit ce que la citation dit, sans rien lui prêter ; la voix est la bonne ; la citation vient d'un texte original.
+- pour un mot au drapeau `tradition`, le `corpus` du dossier : chaque œuvre du corpus de réflexe a été consultée (`npm run dossier -- --verifier <mot>` dit celles qui manquent) ; un passage trouvé et écarté l'a été avec raison.
 
 Ne rouvre pas ce que tu avais accepté. Réécris `atelier/<id>/verdict.json` avec ce qui reste ouvert, ou `accepte`.
 

@@ -37,6 +37,23 @@ export function annee(code: string | undefined): string | undefined {
   return m[1] ? `${n} av. J.-C.` : String(n);
 }
 
+/**
+ * Dates d'une personne telles que la notice les affiche (zone 200 $f) : « 1857-1939 »,
+ * « 0106-0043 av. J.-C. », « 0427?-0348? av. J.-C. » (incertaines : « vers »), « 0004 av. J.-C.?-0065 ».
+ * Une ère écrite à la fin seulement vaut pour les deux dates (la mort ne précède pas notre ère sans la
+ * naissance). Rien si la forme n'est pas reconnue : la zone 103 sert alors.
+ */
+export function datesAffichees(f: string | undefined): { naissance?: string; mort?: string } | undefined {
+  const m = /^(\d{1,4})(\?)?( av\. J\.-C\.)?(\?)?-(?:(\d{1,4})(\?)?( av\. J\.-C\.)?(\?)?)?$/.exec(f?.trim() ?? "");
+  if (!m) return undefined;
+  const [, n, nDoute1, nAv, nDoute2, d, dDoute1, dAv, dDoute2] = m;
+  const date = (annee: string, doute: boolean, av: boolean) => `${doute ? "vers " : ""}${Number(annee)}${av ? " av. J.-C." : ""}`;
+  return {
+    naissance: date(n, Boolean(nDoute1 || nDoute2), Boolean(nAv || dAv)),
+    ...(d ? { mort: date(d, Boolean(dDoute1 || dDoute2), Boolean(dAv)) } : {}),
+  };
+}
+
 /** Notices d'une réponse SRU. */
 export function lireNotices(xml: string): Notice[] {
   const notices: Notice[] = [];
@@ -55,8 +72,10 @@ export function lireNotices(xml: string): Notice[] {
         type: "personne",
         entree: premiere("200", "a") ?? "",
         ...(premiere("200", "b") ? { rejet: premiere("200", "b") } : {}),
-        ...(annee(naissance) ? { naissance: annee(naissance) } : {}),
-        ...(annee(mort) ? { mort: annee(mort) } : {}),
+        ...(datesAffichees(premiere("200", "f")) ?? {
+          ...(annee(naissance) ? { naissance: annee(naissance) } : {}),
+          ...(annee(mort) ? { mort: annee(mort) } : {}),
+        }),
         variantes: (zones.get("400") ?? []).map((z) => [z.get("a")?.[0], z.get("b")?.[0]].filter(Boolean).join(", ")),
       });
     } else if (zones.has("230") || zones.has("240")) {

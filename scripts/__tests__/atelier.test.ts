@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { schemaDossier, schemaVerdict, sourcesDuDossier, squeletteDossier } from "../lib/atelier.ts";
-import { annee, lireNotices } from "../lib/bnf.ts";
+import { annee, datesAffichees, lireNotices } from "../lib/bnf.ts";
 import { lireTlfi } from "../lib/tlfi.ts";
 import { ajouter } from "../liste.ts";
 import { passages } from "../texte.ts";
@@ -68,6 +68,15 @@ describe("BnF", () => {
     ["19..", undefined],
   ])("année de « %s »", (code, attendue) => expect(annee(code)).toBe(attendue));
 
+  it.each([
+    ["1857-1939", { naissance: "1857", mort: "1939" }],
+    ["0106-0043 av. J.-C.", { naissance: "106 av. J.-C.", mort: "43 av. J.-C." }],
+    ["0427?-0348? av. J.-C.", { naissance: "vers 427 av. J.-C.", mort: "vers 348 av. J.-C." }],
+    ["0004 av. J.-C.?-0065", { naissance: "vers 4 av. J.-C.", mort: "65" }],
+    ["1940-", { naissance: "1940" }],
+    ["13..-14..", undefined],
+  ])("dates affichées « %s »", (f, attendues) => expect(datesAffichees(f)).toEqual(attendues));
+
   const zone = (tag: string, sousZones: Record<string, string>) =>
     `<mxc:datafield tag="${tag}" ind1=" " ind2=" ">${Object.entries(sousZones)
       .map(([c, v]) => `<mxc:subfield code="${c}">${v}</mxc:subfield>`)
@@ -82,10 +91,12 @@ describe("BnF", () => {
         zone("200", { a: "Cicéron", f: "0106-0043 av. J.-C." }),
         zone("400", { a: "Tullius Cicero", b: "Marcus" }),
       ),
+      notice("cb11920019p", zone("103", { a: "-0427" }), zone("200", { a: "Platon", f: "0427?-0348? av. J.-C." })),
       notice("cb11938048d", zone("103", { a: " 1516 " }), zone("240", { a: "Thomas More", t: "Utopia" }), zone("440", { a: "Thomas More", t: "L'utopie" })),
     ].join("");
     expect(lireNotices(xml)).toEqual([
       { cb: "cb11885977m", type: "personne", entree: "Cicéron", naissance: "106 av. J.-C.", mort: "43 av. J.-C.", variantes: ["Tullius Cicero, Marcus"] },
+      { cb: "cb11920019p", type: "personne", entree: "Platon", naissance: "vers 427 av. J.-C.", mort: "vers 348 av. J.-C.", variantes: [] },
       { cb: "cb11938048d", type: "oeuvre", entree: "Utopia", auteur: "Thomas More", date: "1516", variantes: ["L'utopie"] },
     ]);
   });

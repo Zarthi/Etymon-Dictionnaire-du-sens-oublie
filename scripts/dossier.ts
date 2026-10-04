@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import { parseArgs } from "node:util";
-import { cheminDossier, cheminVerdict, schemaDossier, schemaVerdict, squeletteDossier } from "./lib/atelier.ts";
+import { cheminDossier, cheminVerdict, oeuvresNonConsultees, schemaDossier, schemaVerdict, squeletteDossier } from "./lib/atelier.ts";
 import { chercher, urlLittre } from "./lib/littre.ts";
 import { consulterTlfi } from "./lib/tlfi.ts";
 import { slug } from "./lib/validation.ts";
@@ -41,8 +41,12 @@ async function principal(): Promise<number> {
         continue;
       }
       const resultat = schemaDossier.safeParse(JSON.parse(await readFile(chemin, "utf8")));
-      if (resultat.success) console.log(`✓ ${mot} : ${resultat.data.chemin}, ${resultat.data.faits.length} fait(s)`);
-      else {
+      if (resultat.success) {
+        console.log(`✓ ${mot} : ${resultat.data.chemin}, ${resultat.data.faits.length} fait(s)`);
+        // Avant les lectures, toutes manquent : c'est un rappel, non une erreur.
+        const manquantes = oeuvresNonConsultees(resultat.data);
+        if (manquantes.length > 0) console.log(`  corpus de réflexe, à consulter pour les lectures : ${manquantes.join(", ")}`);
+      } else {
         echecs++;
         console.log(`✗ ${mot} :\n${problemes(resultat.error.issues)}`);
       }
