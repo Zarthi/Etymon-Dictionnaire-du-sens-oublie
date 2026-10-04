@@ -1,0 +1,15 @@
+titre: Dictionnaire latin
+abrege: Lewis & Short
+titreOriginal: A Latin Dictionary
+date: "1879"
+edition: édition numérique du Perseus Digital Library (Tufts University), consultée en ligne
+licence: domaine public
+modeleEntree: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry={entree}"
+description: >-
+  Dictionnaire latin-anglais de Charlton T. Lewis et Charles Short : sens des étymons latins,
+  appuyés sur les auteurs, avec les étymologies des Anciens et des modernes.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: a-verifier

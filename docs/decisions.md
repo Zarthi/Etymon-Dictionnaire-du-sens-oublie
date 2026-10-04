@@ -9,6 +9,20 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-04 — Mots sacrés repris à part (manne, sabbat, alléluia, Pâque, Pâques)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| *manne*, degré 3 | deux lectures `premier` : chrétienne, la Vulgate (Exode 16, 15, « qu'est-ce que c'est ? ») ; juive, Rashi (même verset, « c'est une préparation de nourriture ») ; la lecture du texte hébreu seul retirée | le texte hébreu est reçu par les deux traditions : signé seul, il ne peut porter qu'un sens, or elles le lisent autrement ; Rashi cite déjà le verset | à relire |
+| Septante (*manne*) | non citée : la Vulgate signe seule la lecture chrétienne | pas de fiche d'ouvrage pour la Septante ; une voix suffit | à relire |
+| Rashi, *Commentaire sur la Torah* | auteur `rashi` (BnF cb11923509g) et ouvrage `commentaire-sur-la-torah` (BnF cb11985540b) créés, en `brouillon` | Rashi signe désormais des lectures (*manne*, *sabbat*, *Pâque*) | à relire |
+| *sabbat* : verset du texte d'origine | Genèse 2, 3, sens « il cessa » (et non « cesser ») | 2, 3 donne la raison du jour béni par le verbe, dont la forme a les consonnes du nom ; 2, 2 dit seulement qu'il cessa ; le sens est la forme du texte, comme « il passa par-dessus » pour *Pâque* | à relire |
+| *alléluia* | « louez Yah » gardé, d'après le Littré et le TLFi, le Nom écrit comme le texte l'écrit | aucun lexique de l'hébreu biblique (Gesenius, BDB) n'est encore un ouvrage du dépôt ; les deux dictionnaires donnent « louez » et le Nom abrégé | à relire |
+| Lecture du Talmud sur *alléluia* (Pesahim 117a) | signée du Talmud seul, sans `auteur` | Rabbi Yehoshua ben Levi, qui la prononce, n'a pas de notice à la BnF : pas de fiche d'auteur écrite à la main | à relire |
+| Rabban Gamliel | « de Yavné » retiré (nom complet et description) ; la description dit les deux maîtres de ce nom et l'attribution discutée ; fiche toujours `a-verifier`, sans source | aucune notice BnF (ni Gamaliel l'Ancien ni Gamaliel II) ; la Michna dit seulement « Rabban Gamliel » | à relire |
+| Lecture de la Michna (*Pâque*) | citation étendue à l'obligation (« qui n'a pas dit ces trois choses… ») ; le texte ne dit plus que la citation | la lecture redisait le texte d'origine, et ajoutait une phrase absente de la citation | à relire |
+| Citations étendues | *Pâque* et *Pâques* : Exode 12, 27 jusqu'à « quand il frappa l'Égypte » ; Isidore (*Pâques*) jusqu'à Jean 13, 1 | le texte de la lecture disait ces deux faits sans que la citation les porte | à relire |
+
 ## 2026-10-04 — Décisions déléguées après la relecture critique
 
 Thibault a délégué ces décisions à l'agent, y compris la modification d'AGENTS.md.
@@ -49,3 +63,12 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | *captif* | ajouté aux candidats (`a-faire`) | doublet de *chétif* (Littré), mot important | à relire |
 | « Littré nommé sans référence » (*ennui*, écartée *noxa*) | laissé | Littré est le tenant qui écarte, déjà cité en source ; même cas qu'*algorithme* | à relire |
 | Ajustements de méthode relevés au journal de méthode (corpus noté au dossier, dates BnF incertaines, consignes régénérées, repli Stella) | faits à l'affinage, avant le prochain lot | méthode §6 : on ajuste entre deux lots | à relire |
+
+## 2026-10-04 — Reprise lot A
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Ordre des hypothèses de *religio* | *religare* en premier, *relegere* ensuite | le Lewis & Short (1879) donne *religare* pour l'avis de la plupart des modernes ; Littré et le TLFi ne tranchent pas | à relire |
+| Lewis & Short | ouvrage `lewis-short` à créer d'après la BnF, source des sens latins du lot | décision du 2026-09 (sources) : dictionnaire latin du domaine public consultable par script | à relire |
+| Croisement (*algorithme*) | dit dans l'explication ; ἀριθμός gardé dans `ecartees` comme étymon, la raison nommant le croisement | deuxième cas après *chétif* : le modèle reste en l'état, le point est signalé | à relire |
+| Fiche d'ouvrage `lewis-short` | écrite sans notice BnF, en `a-verifier`, sans auteur | la BnF n'a pas de notice d'œuvre pour ce dictionnaire, comme pour le Gaffiot et le Bailly (AGENTS.md §6.1) ; deux auteurs, dont un sans notice | à relire |

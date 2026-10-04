@@ -10,17 +10,34 @@ etymologie:
       - forme: scientia
         sens: savoir
 explication: >-
-  Conscientia désigne d'abord la connaissance partagée avec un autre, celle d'un complice
-  ou d'un témoin, puis celle qu'on a de soi-même. Le sens moral, un jugement intérieur sur
-  le bien et le mal, est venu ensuite.
-famille: [ conscient, inconscient ]
+  Conscientia se disait d'un savoir partagé avec un autre, celui de complices
+  par exemple, et déjà de la connaissance intime de soi et du sens du bien et du
+  mal. Le français n'en a gardé que ces deux derniers sens : le sens moral
+  d'abord (vers 1165), le sens psychologique en 1676.
+famille: [ conscient, inconscient, consciencieux ]
 themes: [ esprit, morale ]
 sources:
-  - ouvrage: littre
-    entree: conscience
   - ouvrage: tlfi
     entree: conscience
+  - ouvrage: littre
+    entree: conscience
+  - ouvrage: lewis-short
+    entree: conscientia
+  - ouvrage: lewis-short
+    entree: cum
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=cum1
+  - ouvrage: lewis-short
+    entree: scientia
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Selon le sens propre du mot, conscientia dit un savoir rapporté à quelque chose : elle se dit « savoir avec autre chose » ; et comme l'application d'un savoir à quelque chose se fait par un acte, le nom montre que la conscience est un acte."
+      citation: "Conscientia enim, secundum proprietatem vocabuli, importat ordinem scientiae ad aliquid, nam conscientia dicitur cum alio scientia. Applicatio autem scientiae ad aliquid fit per aliquem actum. Unde ex ista ratione nominis patet quod conscientia sit actus."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "I, q. 79, a. 13"
+          url: https://la.wikisource.org/wiki/Summa_Theologiae/Prima_pars/Quaestio_LXXIX
 statut: brouillon

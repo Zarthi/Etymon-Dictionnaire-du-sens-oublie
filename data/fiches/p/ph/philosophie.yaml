@@ -5,23 +5,48 @@ etymologie:
     langue: latin
   - forme: φιλοσοφία
     langue: grec ancien
-    sens: amour de la sagesse
+    sens: amour du savoir
     elements:
       - forme: φίλος
-        sens: ami, qui aime
+        sens: qui aime
       - forme: σοφία
-        sens: sagesse, savoir
+        sens: habileté, savoir, sagesse
 explication: >-
-  Le philosophe ne se disait pas sage : il aimait une sagesse qu'il ne possédait pas. Le
-  mot désigne aujourd'hui une discipline, et même une simple manière de voir.
-famille: [ philosophe, philosophique ]
+  En grec, φιλοσοφία se disait de l'étude de tout art ou de toute science, et de
+  la recherche de la vérité. En français, le mot a d'abord désigné l'ensemble
+  des disciplines spéculatives (vers 1175) ; il nomme aujourd'hui une discipline
+  parmi d'autres, et la manière dont chacun prend la vie.
+famille: [ philosophe, philosophique, philosopher ]
 themes: [ savoir, esprit ]
 sources:
-  - ouvrage: littre
-    entree: philosophie
   - ouvrage: tlfi
     entree: philosophie
+  - ouvrage: bailly
+    entree: φιλοσοφία
+  - ouvrage: littre
+    entree: philosophe
+  - ouvrage: tlfi
+    entree: philosophe
+  - ouvrage: bailly
+    entree: φίλος
+  - ouvrage: bailly
+    entree: σοφία
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Traduit en latin, le nom professe l'amour de la sagesse ; et si la sagesse est Dieu, par qui tout a été fait, le vrai philosophe est celui qui aime Dieu."
+      citation: "quorum ipsum nomen si Latine interpretemur, amorem sapientiae profitetur. Porro si sapientia Deus est, per quem facta sunt omnia, sicut diuina auctoritas ueritasque monstrauit, uerus philosophus est amator Dei."
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "VIII, 1"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_VIII
+    - texte: "Le nom viendrait de Pythagore : on appelait jusque-là certains hommes des sages ; lui, interrogé sur ce qu'il professait, répondit qu'il était philosophe, c'est-à-dire épris de sagesse, car se dire sage lui semblait d'une extrême arrogance."
+      citation: "a quo etiam ferunt ipsum philosophiae nomen exortum. Nam cum antea sapientes appellarentur, […] iste interrogatus, quid profiteretur, philosophum se esse respondit, id est studiosum uel amatorem sapientiae; quoniam sapientem profiteri arrogantissimum uidebatur."
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "VIII, 2"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_VIII
 statut: brouillon

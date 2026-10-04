@@ -72,6 +72,6 @@ Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est b
 Lectures du dépôt (Lactance sur *religion* ; Resh Lakish, parole rapportée par le Talmud, sur *Satan*) :
 
 ```json
-{"texte":"La religion est le lien de piété qui attache l'homme à Dieu, et non le soin des rites que Cicéron y voyait.","citation":"hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio nomen accepit, non ut Cicero interpretatus est a relegendo","hypothese":"religare","sources":[{"ouvrage":"institutions-divines","entree":"IV, 28, 3","url":"https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV"}]}
+{"texte":"C'est le lien de la piété, qui nous tient attachés à Dieu, qui a donné son nom à la religion ; non relegere, comme l'a compris Cicéron.","citation":"hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio nomen accepit, non ut Cicero interpretatus est a relegendo","hypothese":"religare","sources":[{"ouvrage":"institutions-divines","entree":"IV, 28, 3","url":"https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV"}]}
 {"texte":"Le satan, le mauvais penchant et l'ange de la mort ne font qu'un : c'est celui qui, dans le livre de Job, « sortit de devant le Seigneur ».","citation":"הוא שטן הוא יצר הרע הוא מלאך המות","auteur":"resh-lakish","sources":[{"ouvrage":"talmud-de-babylone","entree":"Baba Batra 16a","url":"https://he.wikisource.org/wiki/בבא_בתרא_טז_א"}]}
 ```

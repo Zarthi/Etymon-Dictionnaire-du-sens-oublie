@@ -1,6 +1,8 @@
 mot: algorithme
 nature: [ nom masculin ]
 etymologie:
+  - forme: algorisme
+    langue: ancien français
   - forme: alguarismo
     langue: ancien espagnol
     sens: art de compter
@@ -10,23 +12,27 @@ etymologie:
     sens: celui du Khwarezm
     personne: al-khwarizmi
 explication: >-
-  Le mot vient du nom d'al-Khwârizmî, dont les traités firent connaître en Europe le
-  calcul avec les chiffres dits arabes. Son nom latinisé a désigné ce calcul, puis toute
-  méthode de calcul réglée.
+  Algorisme a d'abord nommé le calcul avec les chiffres arabes, que les
+  traductions des œuvres d'al-Khwârizmî avaient introduit dans l'Europe
+  médiévale ; croisé avec ἀριθμός, il est devenu algorithme. Le mot désigne
+  aujourd'hui l'ensemble des procédés propres à un calcul.
 ecartees:
   - forme: ἀριθμός
     langue: grec ancien
     sens: nombre
-    raison: "Littré la rapporte et l'écarte : seul le nom du mathématicien rend
-      compte du g."
+    raison: Littré l'écarte comme étymon, précédé de l'article arabe, car seul le
+      nom d'al-Khwârizmî rend compte du g ; le TLFi n'y voit qu'un croisement,
+      qui a donné la forme algorithme.
 famille: [ algorithmique ]
+renvois: [ algebre ]
 themes: [ savoir ]
 sources:
-  - ouvrage: littre
-    entree: algorithme
   - ouvrage: tlfi
+    entree: algorithme
+  - ouvrage: littre
     entree: algorithme
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

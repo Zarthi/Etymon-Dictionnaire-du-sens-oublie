@@ -4,14 +4,11 @@ etymologie:
   - forme: persona
     langue: latin
     sens: masque de l'acteur
-    premier: true
-  - forme: φersu
-    langue: étrusque
-    sens: personnage masqué
 explication: >-
-  La persona est le masque que l'acteur porte sur la scène, puis le rôle qu'il joue. Le
-  droit romain en a fait le sujet de droits, et la théologie chrétienne l'a appliqué aux
-  trois Personnes divines ; le mot désigne aujourd'hui tout individu.
+  Persona, mot latin d'origine étrusque, a désigné aussi le rôle, le personnage,
+  l'individu, et la langue chrétienne l'a dit des Personnes de la Trinité. En
+  français, le mot a d'abord nommé la prestance (vers 1135) ; il désigne
+  aujourd'hui tout être humain.
 ecartees:
   - forme: personare
     langue: latin
@@ -21,11 +18,22 @@ ecartees:
 famille: [ personnage, personnel, personnalité ]
 themes: [ esprit, société ]
 sources:
-  - ouvrage: littre
-    entree: personne
   - ouvrage: tlfi
     entree: personne
+  - ouvrage: littre
+    entree: personne
+  - ouvrage: lewis-short
+    entree: persona
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Comme le théâtre représentait des hommes illustres, le nom a été donné à ceux qui ont une dignité ; et parce que subsister dans une nature raisonnable est d'une grande dignité, tout individu de nature raisonnable est dit personne."
+      citation: "Quia enim in comoediis et tragoediis repraesentabantur aliqui homines famosi, impositum est hoc nomen persona ad significandum aliquos dignitatem habentes. […] Et quia magnae dignitatis est in rationali natura subsistere, ideo omne individuum rationalis naturae dicitur persona"
+      sources:
+        - ouvrage: somme-theologique
+          entree: "I, q. 29, a. 3, ad 2"
+          url: https://la.wikisource.org/wiki/Summa_Theologiae/Prima_pars/Quaestio_XXIX
 statut: brouillon

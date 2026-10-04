@@ -3,22 +3,26 @@ nature: [ nom masculin ]
 etymologie:
   - forme: zero
     langue: italien
-    sens: zéro, rien
+  - forme: zefiro
+    langue: italien
+  - forme: zephirum
+    langue: latin médiéval
   - forme: صفر
     translitteration: ṣifr
     langue: arabe
     sens: vide
 explication: >-
-  Zéro et chiffre sont un même mot arabe, venu en français par deux voies : l'italien pour
-  l'un, le latin médiéval pour l'autre. Chiffre a d'abord désigné le zéro, avant que zéro
-  ne le remplace dans ce sens.
+  Le mot a gardé l'idée de vide : il nomme une valeur nulle, rien, et, dès 1512,
+  une personne sans valeur. Il désigne aussi, depuis 1757, le point d'où part
+  une échelle, comme celle du thermomètre.
 themes: [ savoir ]
 sources:
-  - ouvrage: littre
-    entree: zéro
   - ouvrage: tlfi
+    entree: zéro
+  - ouvrage: littre
     entree: zéro
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon
