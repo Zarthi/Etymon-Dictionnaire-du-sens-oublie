@@ -13,12 +13,14 @@
 - { mot: particulier, statut: a-faire }
 - { mot: passion, statut: a-faire }
 - { mot: patience, statut: a-faire }
+- { mot: patient, statut: a-faire }
 - { mot: patrie, statut: a-faire }
 - { mot: patron, statut: a-faire }
 - { mot: pauvre, statut: a-faire }
 - { mot: payer, statut: a-faire }
 - { mot: pays, statut: a-faire }
 - { mot: paysan, statut: a-faire }
+- { mot: péché, statut: a-faire }
 - { mot: pécher, statut: a-faire }
 - { mot: pédagogie, statut: a-faire }
 - { mot: pédant, statut: a-faire }
@@ -60,6 +62,7 @@
 - { mot: ponctuel, statut: a-faire }
 - { mot: pontife, statut: a-faire }
 - { mot: populaire, statut: a-faire }
+- { mot: possession, statut: a-faire }
 - { mot: possible, statut: a-faire }
 - { mot: pouvoir, statut: a-faire }
 - { mot: précaire, statut: a-faire }

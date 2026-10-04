@@ -32,7 +32,7 @@ Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est b
 
 - Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Resh Lakish dans le Talmud).
 - `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.
-- Le Nom divin s'écrit comme le texte l'écrit, jamais vocalisé (« Jéhovah », « Yahvé ») ; dans une citation en hébreu, tel que le texte l'écrit.
+- Le Nom divin s'écrit comme le texte l'écrit, jamais traduit (« Dieu ») ni vocalisé (« Jéhovah », « Yahvé ») ; une citation garde le texte tel quel. Dans le texte d'une lecture, « le Seigneur » est admis : c'est le substitut traditionnel, juif et chrétien, qui évite de prononcer le Nom, non une traduction.
 - Rien trouvé dans un texte en ligne : pas de lecture ; note la piste dans les signalements.
 - Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et note-le dans les signalements ; une tradition de trop se retire à la relecture plus aisément qu'une tradition manquante ne s'ajoute après coup.
 

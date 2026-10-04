@@ -10,14 +10,14 @@ Tu rassembles les faits dont la fiche du mot sera tirée : elle n'affirmera rien
 2. Choisis le chemin et les drapeaux du mot (ci-dessous).
 3. `usage` : ce que le mot désigne aujourd'hui, d'après le plan des sens du TLFi : les sens sans marque d'ancienneté, ou marqués « Moderne » ; pas un sens « Vieilli », « vx » ou « Littér. », qui n'est plus l'usage courant.
 4. Les étapes du sens en français, datées, d'après la rubrique « Étymologie et historique » du TLFi : première attestation et changements de sens.
-5. La chaîne jusqu'au sens premier, sans aller plus loin qu'il ne faut (AGENTS.md §3.2) : pour chaque maillon, la forme et la langue ; et, pour chaque maillon qui portera un sens, ce sens avec sa source. Le sens d'un étymon (et non du mot français) se prend au Littré ou au TLFi s'ils le glosent ; sinon au Gaffiot pour le latin (gaffiot.fr, dans le navigateur intégré), au Bailly pour le grec (`npm run texte -- bailly:φρήν`) : ils sont alors obligatoires. Un mot voisin (« déverbal de ennuyer ») est un maillon : consulte-le aussi (`npm run dossier -- --consulter ennuyer` ; si l'API n'a rien, cnrtl.fr/etymologie/<mot> dans le navigateur intégré).
+5. La chaîne jusqu'au sens premier, sans aller plus loin qu'il ne faut (AGENTS.md §3.2) : pour chaque maillon, la forme et la langue ; et, pour chaque maillon qui portera un sens, ce sens avec sa source. Le sens d'un étymon (et non du mot français) se prend au Littré ou au TLFi s'ils le glosent ; sinon, pour le latin, au Lewis & Short (Perseus) ou au Georges (1913), domaine public, ou au Gaffiot (gaffiot.fr, dans le navigateur intégré, jamais par script) ; au Bailly pour le grec (`npm run texte -- bailly:φρήν`) : ils sont alors obligatoires. Un mot voisin (« déverbal de ennuyer ») est un maillon : consulte-le aussi (`npm run dossier -- --consulter ennuyer` ; si l'API n'a rien, cnrtl.fr/etymologie/<mot> dans le navigateur intégré).
 6. Mot forgé : l'auteur, la date et l'ouvrage, tels que les sources les donnent. Origine débattue : chaque hypothèse, qui la défend, et qui la rapporte seulement. Doublet ou famille que les sources signalent (voy. CAPTIF) : un fait.
 7. Écris `chemin`, `drapeaux`, `usage`, `faits`, `manques` et `notes` dans le fichier, puis `npm run dossier -- --verifier <mot>`.
 
 ## Règles
 
 - Un fait est ce qu'une source dit, en une phrase à toi, avec l'ouvrage (identifiant de data/ouvrages : littre, tlfi, gaffiot, bailly…) et l'entrée consultée. Jamais de mémoire : ce que tu sais sans l'avoir lu va dans `notes`, comme une piste.
-- Du Littré (domaine public), tu peux recopier. Du TLFi (non libre), du Gaffiot et du Bailly (CC BY-NC-ND), les faits seuls, reformulés.
+- Du Littré, du Lewis & Short et du Georges (domaine public), tu peux recopier. Du TLFi (non libre), du Gaffiot et du Bailly (CC BY-NC-ND), les faits seuls, reformulés.
 - Jamais le Wiktionnaire (l'API du TLFi en contient une rubrique : l'ignorer), ni le Robert, ni Bloch et Wartburg, ni le FEW.
 - Deux sources en désaccord (le Littré dépassé par le TLFi, deux étymons proposés) : les deux faits, chacun avec sa source ; la fiche suivra le plus récent, ou présentera l'origine comme débattue.
 - Un « probablement » de la source reste un « probablement » dans le fait.

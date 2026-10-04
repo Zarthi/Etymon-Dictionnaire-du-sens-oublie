@@ -8,8 +8,9 @@ langue source directe, le sens de cet étymon, et en une à trois phrases ce que
 Application web installable, utilisable hors ligne, sans serveur ni appel réseau
 (pas encore publiée).
 
-Chaque fiche s'appuie sur des sources citées et vérifiables : Littré, Gaffiot, Bailly,
-vérifiées sur le TLFi. Aucune étymologie n'est publiée sans avoir été relue et validée.
+Chaque fiche est rédigée d'après des sources citées et vérifiables : Littré, TLFi, Gaffiot,
+Bailly. L'app affiche toutes les fiches ; celles que Thibault n'a pas encore validées portent la
+mention « En relecture ».
 Le cadrage complet du projet est dans [AGENTS.md](AGENTS.md).
 
 ## Démarrer
@@ -31,8 +32,8 @@ npm run dev          # app en local
 | `npm run bnf -- auteur\|ouvrage "…"` | notices BnF ; avec `--cb`, écrit la fiche d'auteur ou d'ouvrage |
 | `npm run texte -- <adresse>` | texte brut d'une page en ligne (citations, Bailly) |
 | `npm run liste -- <liste> "<valeur>"` | ajoute une langue, une tradition ou un thème (`docs/methode.md`, §7 bis) |
-| `npm run rediger -- <fiche.json>… --modele "…"` | écrit des fiches rédigées par l'IA (`--dossier` : d'après leur dossier, en brouillon ; `--essai` : sans écrire) |
-| `npm run verifier` | confronte les fiches au Littré local (`npm run littre` une fois) et signale les contrôles |
+| `npm run rediger -- <fiche.json>… --dossier --modele "…"` | écrit en brouillon des fiches rédigées par l'IA d'après leur dossier (`--essai` : sans écrire) |
+| `npm run verifier` | contrôle les fiches contre le Littré local (`npm run littre` une fois) ; signale, ne change rien |
 | `npm run verifier:en-ligne` | vérifie les entrées du Bailly et les citations des lectures traditionnelles |
 | `npm run contrat` | régénère le contrat de données et les consignes de chaque étape (`docs/`) |
 | `npm test` | tests (Vitest) |
@@ -53,8 +54,8 @@ un agent relecteur, qui n'a pas écrit, relit tout le lot ; le rédacteur repren
 et ouvrages d'après la BnF, écrit les fiches en brouillon et cherche les lectures traditionnelles.
 
 **À la main** : créer `data/fiches/<initiale>/<deux lettres>/<id>.yaml` (par exemple
-`data/fiches/e/et/etonner.yaml`) après avoir consulté les sources (Littré, Gaffiot ou Bailly ;
-TLFi pour vérifier), retirer le mot de `data/candidats/<initiale>.yaml`, puis
+`data/fiches/e/et/etonner.yaml`) après avoir consulté les sources (Littré, TLFi, et Gaffiot
+ou Bailly pour les étymons), retirer le mot de `data/candidats/<initiale>.yaml`, puis
 `npm run valider` : chaque erreur indique le fichier, le champ et la règle enfreinte.
 
 Seul Thibault passe une fiche en `validee`, après relecture dans l'app (`npm run dev`).

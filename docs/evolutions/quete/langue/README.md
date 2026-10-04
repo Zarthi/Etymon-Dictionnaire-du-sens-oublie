@@ -45,8 +45,10 @@ mémoire). Plein ou vide, c'est la première séparation, la lumière et les té
 vérifié) : la langue est binaire parce que la première distinction l'est.
 
 Les trois premières lettres de l'axe (le centre ; le haut et le bas en face ; la colonne) sont le
-**triangle de trois**, le symbole métaphysique sur lequel toutes les traditions relevées
-s'accordent : un principe, deux contraires, le milieu qui les sépare (`triangles.yaml`). Le
+**triangle de trois** : un principe, deux contraires, le milieu qui les sépare. C'est une
+proposition de l'agent, non une lecture traditionnelle : des sept traditions relevées
+(`triangles.yaml`), la plupart nomment deux contraires et un milieu entre eux, mais quatre ne
+donnent rien de sûr au premier rang. Le
 quatrième rang, la manifestation, est ce qui les sépare ; il n'est pas dans le Centre, il est dans
 le Pourtour.
 
@@ -74,7 +76,8 @@ même figure lue à rebours dit le retour.
 
 ## La lecture
 
-Chaque mot est accompagné d'une lecture, toujours signée : par le lecteur qui la fait, dans la
+Les mots de `mots/` sont des propositions de l'agent, non des lectures traditionnelles, même
+quand ils citent un texte. Chaque mot est accompagné d'une lecture, toujours signée : par le lecteur qui la fait, dans la
 Quête, sur son appareil seulement ; ou par la tradition qui la porte, par ses textes cités. Aucune
 règle de composition : la suite est le temps, la figure est le sens, le reste est lecture.
 

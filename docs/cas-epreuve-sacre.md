@@ -1,6 +1,7 @@
 # Cas d'épreuve : les mots sacrés
 
-Hypothèse éprouvée (proposition, non implémentée). Un mot **sacré par origine** (né dans
+Hypothèse éprouvée le 24 septembre 2026, implémentée depuis (voir la fin) ; le degré 3, d'abord
+sans cas, a trouvé le sien le 4 octobre 2026 (§5). Un mot **sacré par origine** (né dans
 l'ordre sacré : *manne*, *sabbat*, *alléluia*, *Pâque*), à distinguer d'un mot **consacré**
 (profane à l'origine : *église*, *ange*, *religion*), n'a pas de partie profane :
 
@@ -8,7 +9,8 @@ l'ordre sacré : *manne*, *sabbat*, *alléluia*, *Pâque*), à distinguer d'un m
 - le **sens en tête**, par degré :
   1. le texte d'origine donne lui-même le sens du mot : on le prend, signé ;
   2. sinon, le sens du mot dans sa langue, selon un dictionnaire de référence de cette langue ;
-  3. si les traditions divergent sur le sens même : pas de sens en tête, les traditions côte à côte ;
+  3. si les traditions divergent sur le sens même du texte d'origine : un sens par tradition,
+     chacun signé de sa lecture `premier` ;
 - pas d'explication profane ; les lectures suivent, par tradition, dépliées.
 
 Sources consultées le 24 septembre 2026, textes sous les yeux : Littré (local), TLFi (en
@@ -74,15 +76,34 @@ passé par-dessus ; chrétienne : le passage, du peuple hors d'Égypte et du Chr
 et une lecture ancienne par *paschein*, « souffrir », qu'Isidore réfute), pas sur le **texte
 d'origine**, qu'elles reçoivent toutes. Sens en tête : « il passa par-dessus », signé Exode 12,
 27 ; les lectures suivent. Le degré 3 ne servirait que si les traditions n'avaient pas de texte
-d'origine commun : aucun cas pour l'instant, on ne l'écrit pas.
+d'origine commun : aucun cas pour l'instant, on ne l'écrit pas. (Corrigé le 4 octobre 2026 : le
+degré 3 vaut aussi pour un texte commun dont les traditions lisent autrement le sens même ;
+*manne* en est le cas, §5.)
 
 **Autre découverte :** le français a séparé le mot par tradition. Depuis le XVe siècle (TLFi),
 *Pâque* désigne la fête juive, *Pâques* la fête chrétienne.
 
+## 5. *manne*, de nouveau (degré 3)
+
+Relecture critique du 4 octobre 2026 : le §1 ne prenait que le texte hébreu. Les traditions qui
+reçoivent Exode 16, 15 n'en lisent pas le même sens :
+
+- la Septante et la Vulgate rendent מן הוא par une question, « qu'est-ce que c'est ? » ;
+- Rashi, sur ce verset : מן הוא - הכנת מזון הוא, « c'est une préparation de nourriture » (corpus
+  de réflexe, *Commentaire sur la Torah*) : non une question, mais un nom.
+
+**Verdict : le degré 3 a son cas.** Le texte d'origine est commun, son sens ne l'est pas. Il n'y
+a donc pas un sens unique en tête, mais un sens par tradition, chacun signé de sa lecture
+`premier` (chrétienne : la Septante, la Vulgate ; juive : Rashi). La fiche actuelle, qui ne porte
+que « qu'est-ce que c'est ? », est à reprendre ; le modèle suivra (plusieurs lectures `premier`,
+une par tradition). *Pâque* reste au degré 1 : ses traditions divergent dans la lecture, non sur
+le sens d'Exode 12, 27.
+
 ## Bilan
 
 L'hypothèse tient, simplifiée : **deux degrés** (texte d'origine, sinon lexique de la langue
-sacrée) ; le troisième n'a pas de cas. Ce que l'épreuve ajoute :
+sacrée) ; le troisième n'avait pas de cas (il en a un depuis, §5 : *manne*). Ce que l'épreuve
+ajoute :
 
 1. **Un mot sacré l'est dans des traditions précises** : *sabbat* (juive), *Pâques*
    (chrétienne), *Pâque* (juive), *manne* et *alléluia* (juive et chrétienne). Plutôt que
