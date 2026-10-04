@@ -9,6 +9,15 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-04 — Lot hospes, amicus, potio, captif
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Gaffiot (gaffiot.fr répond, mais ne sert que le dictionnaire entier, 21 Mo) | non consulté ; la décision du second pilote s'applique (sens latins glosés par le Littré ou le TLFi) | le télécharger serait l'extraction que AGENTS.md §5 interdit ; le scan d'archive.org est l'édition de 1935 augmentée par Blaise, non libre | à relire |
+| Sens d'*amicus* (*ami*) | « ami », d'après le Littré (à *ennemi* : « amicus, ami ») ; fiche rédigée avec le drapeau `doute` | le validateur exige un sens au maillon premier, et aucune autre glose n'est accessible ; le rapprochement avec *amare* (même radical, Littré) n'est pas une dérivation | à relire |
+| Doublets du lot | déclarés sur *hôtel* (→ *hôpital*), *poison* (→ *potion*) et *captif* (→ *chétif*) ; la fiche *chétif* n'est pas touchée | un doublet se déclare d'un seul côté ; *chétif* garde *captif* dans sa famille, ce que le validateur accepte | à relire |
+| Mots étrangers hors chaîne (*hostis* pour *ennemi*, *amare* pour *ami*) | non cités dans l'explication, dits en français | un mot étranger cité est une forme de la chaîne ; ni l'un ni l'autre n'en est un maillon | à relire |
+
 ## 2026-09-25 — Second pilote
 
 | Sujet | Décision | Raison | Relecture |
