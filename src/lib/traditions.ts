@@ -61,3 +61,21 @@ export function parTradition(
 export function nommerTraditions(traditions: string[], { grammaire, libelles }: { grammaire: Grammaire; libelles: Libelles }): string {
   return grammaire.enumerer(traditions.map(libelles.tradition), "et");
 }
+
+/**
+ * Mot sacré : les lectures `premier` en tête de fiche. Une seule, reçue par toutes les traditions,
+ * s'affiche sans libellé ; quand les traditions divergent sur le texte d'origine, une par
+ * tradition, chacune avec le libellé de la sienne (« tradition juive »).
+ */
+export function originesParTradition(
+  lectures: LectureTraditionnelle[],
+  auteurs: Map<string, AuteurTraditions>,
+  ouvrages: Map<string, OuvrageVoix>,
+  langue: { grammaire: Grammaire; libelles: Libelles; messages: { fiche: { traditionDuSens(traditions: string): string } } },
+): { lecture: LectureTraditionnelle; libelle?: string }[] {
+  const origines = lectures.filter((l) => l.premier);
+  return origines.map((lecture) => ({
+    lecture,
+    libelle: origines.length > 1 ? langue.messages.fiche.traditionDuSens(nommerTraditions(traditionsDe(lecture, auteurs, ouvrages), langue)) : undefined,
+  }));
+}

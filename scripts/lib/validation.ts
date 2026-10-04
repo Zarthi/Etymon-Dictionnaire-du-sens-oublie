@@ -223,11 +223,10 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
       ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
     }
   }
-  if (lecturePremiere.length > 1) ajouter("tradition.lectures", "une seule lecture premier : celle du texte d'origine");
   fiche.tradition.lectures.forEach((l, i) => {
     if (l.premier && fiche.sacre === undefined) ajouter(`tradition.lectures.${i}.premier`, "seulement pour un mot sacré (sacre)");
     if (l.premier && l.sens === undefined) ajouter(`tradition.lectures.${i}.sens`, "la lecture premier donne le sens affiché en tête");
-    if (!l.premier && l.sens !== undefined) ajouter(`tradition.lectures.${i}.sens`, "seulement pour la lecture premier");
+    if (!l.premier && l.sens !== undefined) ajouter(`tradition.lectures.${i}.sens`, "seulement pour une lecture premier");
   });
 
   // La chaîne : un seul sens premier ; translittération seulement là où elle ne se déduit pas ; références.
@@ -311,6 +310,9 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   // précisée seulement si la voix en a plusieurs (sauf l'Écriture reçue en commun), une hypothèse
   // de la chaîne ; pour un mot sacré, des traditions où il l'est.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
+  // Lectures premier : une seule, reçue par toutes les traditions du mot (degrés 1 et 2) ; ou une par
+  // tradition quand elles divergent sur le texte d'origine (degré 3), de traditions distinctes qui couvrent le mot.
+  const traditionsDesPremieres: { c: string; traditions: string[] }[] = [];
   fiche.tradition.lectures.forEach((l, i) => {
     const c = `tradition.lectures.${i}`;
     const oeuvres = l.sources.map((s) => ref.ouvrages.get(s.ouvrage));
@@ -349,8 +351,8 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     const traditions = l.tradition !== undefined ? [l.tradition] : siennes;
     if (fiche.sacre !== undefined) {
       // Le texte d'origine est reçu par toutes les traditions où le mot est sacré ; une autre lecture parle dans l'une d'elles.
-      if (l.premier && !fiche.sacre.every((t) => traditions.includes(t))) {
-        ajouter(`${c}.premier`, `le texte d'origine doit être reçu par toutes les traditions du mot (${fiche.sacre.join(", ")})`);
+      if (l.premier) {
+        traditionsDesPremieres.push({ c, traditions });
       } else if (!l.premier && !traditions.some((t) => fiche.sacre!.includes(t))) {
         ajouter(`${c}`, `lecture hors des traditions où le mot est sacré (${fiche.sacre.join(", ")})`);
       }
@@ -359,6 +361,24 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
       ajouter(`${c}.hypothese`, `« ${l.hypothese} » n'est pas une hypothèse de la chaîne (alternatives)`);
     }
   });
+  if (fiche.sacre !== undefined && traditionsDesPremieres.length === 1) {
+    const [{ c, traditions }] = traditionsDesPremieres;
+    if (!fiche.sacre.every((t) => traditions.includes(t))) {
+      ajouter(`${c}.premier`, `une seule lecture premier : le texte d'origine doit être reçu par toutes les traditions du mot (${fiche.sacre.join(", ")}) ; sinon une lecture premier par tradition`);
+    }
+  } else if (fiche.sacre !== undefined && traditionsDesPremieres.length > 1) {
+    const vues = new Set<string>();
+    for (const { c, traditions } of traditionsDesPremieres) {
+      for (const t of traditions) {
+        if (vues.has(t)) ajouter(`${c}.premier`, `plusieurs lectures premier : une par tradition, et « ${t} » en a déjà une`);
+        vues.add(t);
+      }
+    }
+    const manquantes = fiche.sacre.filter((t) => !vues.has(t));
+    if (manquantes.length > 0) {
+      ajouter("tradition.lectures", `plusieurs lectures premier : elles doivent couvrir toutes les traditions du mot (manque ${manquantes.join(", ")})`);
+    }
+  }
 
   return erreurs;
 }

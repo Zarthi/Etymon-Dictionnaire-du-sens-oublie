@@ -44,6 +44,16 @@ export function indexPremier(etymologie: Maillon[]): number {
   return Math.max(0, etymologie.findIndex(porteSens));
 }
 
+/**
+ * Le sens premier est-il le sens littéral d'une composition sans forme composée attestée
+ * (schizophrénie : « esprit fendu », fait de ses éléments) ? Il s'affiche alors précédé de
+ * « littéralement » ; un sens porté par une forme (celle d'un étymon) reste sans mention.
+ */
+export function sensLitteral(etymologie: Maillon[]): boolean {
+  const m = etymologie[indexPremier(etymologie)];
+  return m !== undefined && m.sens !== undefined && m.forme === undefined && (m.elements?.length ?? 0) > 0;
+}
+
 /** Toutes les formes d'un maillon, avec leurs écritures : pour l'italique et les vérifications. */
 export function formesDuMaillon(m: Maillon): AvecForme[] {
   const formes: AvecForme[] = [];

@@ -13,8 +13,9 @@ describe("assembler", () => {
     expect(index).toEqual([
       { id: "epreuve", mot: "épreuve", statut: "brouillon" },
       { id: "essai", mot: "essai", statut: "validee" },
+      { id: "sacree", mot: "sacrée", statut: "brouillon", sacre: true },
     ]);
-    expect([...lots.keys()]).toEqual(["ep", "es"]);
+    expect([...lots.keys()]).toEqual(["ep", "es", "sa"]);
   });
 
   it("transmet le statut, y compris a-verifier, pour que l'app le signale", () => {

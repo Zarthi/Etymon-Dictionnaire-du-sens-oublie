@@ -552,8 +552,31 @@ describe("validerFiches : mots sacrés", () => {
     expect(erreursDe({ tradition: { lectures: [origine] } })).toContain("tradition.lectures.0.premier : seulement pour un mot sacré (sacre)");
     const talmud = { ...origine, sources: [{ ...origine.sources[0], ouvrage: "talmud" }] };
     expect(erreursDe({ ...sacree, tradition: { lectures: [talmud] } })).toEqual([
-      "tradition.lectures.0.premier : le texte d'origine doit être reçu par toutes les traditions du mot (juive, chrétienne)",
+      "tradition.lectures.0.premier : une seule lecture premier : le texte d'origine doit être reçu par toutes les traditions du mot (juive, chrétienne) ; sinon une lecture premier par tradition",
     ]);
+  });
+  describe("degré 3 : une lecture premier par tradition", () => {
+    const talmud = { ...origine, sens: "une préparation", sources: [{ ...origine.sources[0], ouvrage: "talmud" }] };
+    const chretienne = { ...lectureBase, premier: true, sens: "qu'est-ce que c'est", texte: "Lecture chrétienne." };
+    it("accepte une lecture premier par tradition, qui couvrent toutes celles du mot", () => {
+      expect(erreursDe({ ...sacree, tradition: { lectures: [talmud, chretienne] } })).toEqual([]);
+    });
+    it("refuse deux lectures premier d'une même tradition", () => {
+      expect(erreursDe({ ...sacree, tradition: { lectures: [chretienne, { ...chretienne, texte: "Autre.", sources: [{ ...chretienne.sources[0] }] }] } })).toEqual([
+        "tradition.lectures.1.premier : plusieurs lectures premier : une par tradition, et « chrétienne » en a déjà une",
+        "tradition.lectures : plusieurs lectures premier : elles doivent couvrir toutes les traditions du mot (manque juive)",
+      ]);
+    });
+    it("refuse des lectures premier qui ne couvrent pas toutes les traditions du mot", () => {
+      expect(erreursDe({ ...sacree, sacre: ["juive", "chrétienne", "grecque"], tradition: { lectures: [talmud, chretienne] } })).toEqual([
+        "tradition.lectures : plusieurs lectures premier : elles doivent couvrir toutes les traditions du mot (manque grecque)",
+      ]);
+    });
+    it("refuse une lecture premier qui recouvre les autres (reçue par toutes) à côté d'une autre", () => {
+      expect(erreursDe({ ...sacree, tradition: { lectures: [origine, chretienne] } })).toEqual([
+        "tradition.lectures.1.premier : plusieurs lectures premier : une par tradition, et « chrétienne » en a déjà une",
+      ]);
+    });
   });
   it("refuse une lecture hors des traditions où le mot est sacré", () => {
     expect(erreursDe({ ...sacree, sacre: ["juive"], tradition: { lectures: [origine, lectureBase] } })).toEqual([

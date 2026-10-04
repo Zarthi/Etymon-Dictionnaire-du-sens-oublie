@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import * as langue from "../i18n/index.ts";
-import { nommerTraditions, parTradition, traditionsDe, voixDe } from "./traditions.ts";
+import { nommerTraditions, originesParTradition, parTradition, traditionsDe, voixDe } from "./traditions.ts";
 import type { LectureTraditionnelle } from "./types.ts";
 
 const auteurs = new Map([
@@ -40,6 +40,21 @@ describe("parTradition", () => {
       ["juive", 1],
       ["chrétienne", 2],
       ["juive et chrétienne", 1],
+    ]);
+  });
+});
+
+describe("originesParTradition", () => {
+  const premiere = (ouvrage: string, sens: string) => lecture(ouvrage, { premier: true, sens });
+  it("une seule lecture premier, reçue par toutes : sans libellé", () => {
+    const origines = originesParTradition([premiere("bible-hebraique", "x"), lecture("talmud")], auteurs, ouvrages, langue);
+    expect(origines.map((o) => o.libelle)).toEqual([undefined]);
+  });
+  it("une par tradition : chacune avec le libellé de la sienne, les autres lectures écartées", () => {
+    const origines = originesParTradition([premiere("talmud", "a"), lecture("cite-de-dieu"), premiere("cite-de-dieu", "b")], auteurs, ouvrages, langue);
+    expect(origines.map((o) => [o.lecture.sens, o.libelle])).toEqual([
+      ["a", "tradition juive"],
+      ["b", "tradition chrétienne"],
     ]);
   });
 });

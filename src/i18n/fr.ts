@@ -88,6 +88,8 @@ export const messages = {
   },
   fiche: {
     motSacre: (traditions: string) => `· mot sacré, tradition ${traditions}`,
+    traditionDuSens: (traditions: string) => `tradition ${traditions}`,
+    litteralement: "littéralement",
     incertaine: "· étymologie incertaine",
     ideeRecue: "Idée reçue",
     ecartee: "Étymologie écartée",

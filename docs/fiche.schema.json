@@ -639,12 +639,12 @@
                 ]
               },
               "premier": {
-                "description": "Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne).",
+                "description": "Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne). Une seule, reçue par toutes les traditions du mot ; ou, quand elles divergent sur le texte, une par tradition.",
                 "type": "boolean",
                 "const": true
               },
               "sens": {
-                "description": "Sens que le texte d'origine donne au mot ; seulement pour la lecture premier.",
+                "description": "Sens que le texte d'origine donne au mot ; seulement pour une lecture premier.",
                 "type": "string",
                 "minLength": 1
               },

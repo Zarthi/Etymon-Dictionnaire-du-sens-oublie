@@ -206,8 +206,8 @@ export const schemaLectureTraditionnelle = z
     premier: z
       .literal(true)
       .optional()
-      .describe("Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne)."),
-    sens: sens.optional().describe("Sens que le texte d'origine donne au mot ; seulement pour la lecture premier."),
+      .describe("Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne). Une seule, reçue par toutes les traditions du mot ; ou, quand elles divergent sur le texte, une par tradition."),
+    sens: sens.optional().describe("Sens que le texte d'origine donne au mot ; seulement pour une lecture premier."),
     hypothese: z.string().min(1).optional().describe("Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter."),
     sources: z.array(schemaSourceLecture).min(1).describe("Passages cités, d'une même voix : œuvres de l'auteur, œuvre collective qui rapporte sa parole, ou Écriture."),
     redaction: z.array(schemaRedaction).min(1).optional().describe("Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche."),

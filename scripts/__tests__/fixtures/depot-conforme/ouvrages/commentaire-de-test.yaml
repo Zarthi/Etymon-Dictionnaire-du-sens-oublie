@@ -1,0 +1,9 @@
+# Œuvre fictive d'une tradition, sans auteur, pour les tests uniquement.
+titre: Commentaire de test
+traditions: [ juive ]
+licence: domaine public
+description: Œuvre de test.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: a-verifier
