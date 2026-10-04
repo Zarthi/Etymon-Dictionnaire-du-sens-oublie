@@ -16,13 +16,13 @@ import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts"
  * `{ fiches, auteurs, ouvrages }` quand il faut créer des auteurs ou des ouvrages (le contenu seul ;
  * statut, rédaction et sources sont posés ici ou par npm run verifier). Un mot écarté par Thibault
  * n'est jamais rédigé.
- * - sans option : fiches en `a-verifier` (rédigées de mémoire) ;
- * - --dossier : fiches rédigées d'après leur dossier (atelier/<id>/dossier.json, docs/methode.md) :
- *   les entrées consultées du dossier deviennent leurs sources, et elles passent en `brouillon` ;
+ * - --dossier (obligatoire) : fiches rédigées d'après leur dossier (atelier/<id>/dossier.json,
+ *   docs/methode.md) : les entrées consultées du dossier deviennent leurs sources, et elles
+ *   passent en `brouillon`. Une fiche ne s'écrit jamais de mémoire ;
  * - --essai : rien n'est écrit ; chaque fiche est validée avec le dépôt, et les auteurs ou ouvrages
  *   qui n'ont pas encore leur fiche sont signalés à part (à créer : npm run bnf).
  *
- * Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] [--dossier] [--essai] [--remplacer]
+ * Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] --dossier [--essai] [--remplacer]
  */
 type Brute = Record<string, unknown>;
 
@@ -49,7 +49,11 @@ async function principal(): Promise<number> {
     },
   });
   if (fichiers.length === 0 || (!values.modele && !values.essai)) {
-    console.log('Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] [--dossier] [--essai] [--remplacer]');
+    console.log('Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] --dossier [--essai] [--remplacer]');
+    return 1;
+  }
+  if (!values.dossier) {
+    console.log("Rédiger d'après un dossier (--dossier) : une fiche ne s'écrit pas de mémoire. Voir npm run dossier -- <mot>.");
     return 1;
   }
   const reflexion = lireReflexion(values.reflexion);
@@ -117,21 +121,22 @@ async function principal(): Promise<number> {
       refus.push(...resultat.erreurs.map((e) => `${mot} › ${e}`));
       continue;
     }
-    let fiche = resultat.fiche;
-    if (values.dossier) {
-      if (!existsSync(cheminDossier(id))) {
-        refus.push(`${mot} : pas de dossier (atelier/${id}/dossier.json)`);
-        continue;
-      }
-      const dossier = schemaDossier.safeParse(JSON.parse(await readFile(cheminDossier(id), "utf8")));
-      if (!dossier.success) {
-        refus.push(`${mot} : dossier incomplet (npm run dossier -- --verifier ${mot})`);
-        continue;
-      }
-      // Les sources précèdent la rédaction, comme dans les fiches écrites à la main.
-      const { redaction, statut: _statut, ...contenu } = fiche;
-      fiche = { ...contenu, sources: sourcesDuDossier(dossier.data), redaction, statut: "brouillon" };
+    if (!existsSync(cheminDossier(id))) {
+      refus.push(`${mot} : pas de dossier (atelier/${id}/dossier.json)`);
+      continue;
     }
+    const dossier = schemaDossier.safeParse(JSON.parse(await readFile(cheminDossier(id), "utf8")));
+    if (!dossier.success) {
+      refus.push(`${mot} : dossier incomplet (npm run dossier -- --verifier ${mot})`);
+      continue;
+    }
+    if (dossier.data.chemin === "sacre") {
+      refus.push(`${mot} : mot sacré, il se rédige à part (texte d'origine sous les yeux), non en lot`);
+      continue;
+    }
+    // Les sources précèdent la rédaction, comme dans les fiches écrites à la main.
+    const { redaction, statut: _statut, ...contenu } = resultat.fiche;
+    const fiche = { ...contenu, sources: sourcesDuDossier(dossier.data), redaction, statut: "brouillon" as const };
     if (values.essai) {
       essais.push({ fichier: cheminFiche(id), texte: versYaml(fiche) });
       continue;
@@ -174,13 +179,12 @@ async function principal(): Promise<number> {
   }
 
   if (ecrits.length + referencesEcrites > 0) regenererContrat();
-  const statut = values.dossier ? "brouillon" : "a-verifier";
-  console.log(`✓ ${ecrits.length} fiche(s) de mot (${statut}) et ${referencesEcrites} fiche(s) d'auteur ou d'ouvrage écrite(s).`);
+  console.log(`✓ ${ecrits.length} fiche(s) de mot (brouillon) et ${referencesEcrites} fiche(s) d'auteur ou d'ouvrage écrite(s).`);
   if (refus.length > 0) console.log(`\nNon écrites (${refus.length}) :\n- ${refus.join("\n- ")}`);
   const { erreurs } = await validerDepot();
   const concernees = erreurs.filter((e) => ecrits.some((id) => e.fichier.endsWith(`/${id}.yaml`)));
   if (concernees.length > 0) console.log(`\nÀ corriger (npm run valider) :\n${concernees.map(formaterErreur).join("\n")}`);
-  console.log(`\nSuite : ${values.dossier ? "" : "npm run verifier, puis "}npm run valider.`);
+  console.log("\nSuite : npm run valider.");
   return concernees.length > 0 ? 1 : 0;
 }
 

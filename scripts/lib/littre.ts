@@ -88,42 +88,24 @@ const GREC: Record<string, string> = {
   ν: "n", ξ: "x", ο: "o", π: "p", ρ: "r", σ: "s", ς: "s", τ: "t", υ: "y", φ: "ph", χ: "kh", ψ: "ps", ω: "o",
 };
 
-/** Lettres latines seules, sans accents ni ponctuation, grec translittéré : « ex-tonare » → « extonare ». */
-function lettres(texte: string): string {
+/** Mots en lettres latines seules, sans accents ni ponctuation, grec translittéré : « ex-tonare » → « extonare ». */
+function mots(texte: string): string[] {
   const sansAccents = texte.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
-  return [...sansAccents].map((c) => GREC[c] ?? c).join("").replace(/[^a-z]/g, "");
+  const latin = [...sansAccents].map((c) => GREC[c] ?? c).join("");
+  return latin.replace(/-/g, "").replace(/[^a-z]+/g, " ").trim().split(" ").filter((m) => m !== "");
 }
+
+/** Radical d'un mot : moins ses deux dernières lettres, 4 au minimum, pour tolérer les cas latins (« merces » cité « mercedem »). */
+const radical = (mot: string) => (mot.length <= 4 ? mot : mot.slice(0, Math.max(4, mot.length - 2)));
 
 /**
  * L'étymologie du Littré mentionne-t-elle l'étymon de la fiche ?
- * On compare le radical (étymon moins ses deux dernières lettres, 4 au minimum),
- * pour tolérer les cas latins : « merces » est cité « mercedem », « potio » « potionem ».
+ * Comparaison par mots entiers (le mot cité commence par le radical du mot cherché), jamais en
+ * sous-chaîne : « res » ne concorde pas avec « pressare ». Une forme de moins de 5 lettres est refusée.
  */
 export function concorde(etymon: string, etymologie: string): boolean {
-  const forme = lettres(etymon);
-  if (forme.length < 3) return false;
-  const radical = forme.length <= 4 ? forme : forme.slice(0, Math.max(4, forme.length - 2));
-  return lettres(etymologie).includes(radical);
-}
-
-/** Le Littré exprime-t-il lui-même un doute sur l'étymologie ? */
-export function douteux(etymologie: string): boolean {
-  return /douteu|incertain|obscur|inconnu/i.test(etymologie);
-}
-
-export type Verdict =
-  | { resultat: "concorde"; entree: EntreeLittre }
-  | { resultat: "doute" | "discordance"; entree: EntreeLittre }
-  | { resultat: "absent" };
-
-/**
- * Verdict du Littré sur une fiche rédigée de mémoire : l'étymon ou la racine doit figurer
- * dans son étymologie. Seule une concordance sans doute exprimé permet de passer la fiche en brouillon.
- */
-export function verdict(formes: string[], toutes: EntreeLittre[] | undefined): Verdict {
-  const entrees = (toutes ?? []).filter((e) => e.etymologie !== "");
-  if (entrees.length === 0) return { resultat: "absent" };
-  const concordante = entrees.find((e) => formes.some((f) => concorde(f, e.etymologie)));
-  if (!concordante) return { resultat: "discordance", entree: entrees[0] };
-  return { resultat: douteux(concordante.etymologie) ? "doute" : "concorde", entree: concordante };
+  const cherches = mots(etymon);
+  if (cherches.join("").length < 5) return false;
+  const cites = mots(etymologie);
+  return cites.some((_, i) => cherches.every((c, j) => cites[i + j]?.startsWith(radical(c))));
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { chercher, concorde, douteux, extraireEntrees, indexer, natureDepuisLittre, texteBrut, urlLittre, verdict } from "../lib/littre.ts";
+import { chercher, concorde, extraireEntrees, indexer, natureDepuisLittre, texteBrut, urlLittre } from "../lib/littre.ts";
 
 /** Extrait au format XMLittré : entrée normale, homonyme, entrée sans étymologie, supplément. */
 const XML = `<?xml version="1.0" encoding="utf-8"?>
@@ -96,8 +96,6 @@ describe("concorde", () => {
     ["potio", "Lat. potionem"],
     ["in odio", "le latin in odio"],
     ["religio", "du lat. religionem"],
-    ["ṣifr", "de l'arabe sifr, vide"],
-    ["zero", "ital. zero"],
     ["análysis", "Ἀνάλυσις, de ἀναλύω, résoudre"],
     ["anarkhía", "Ἀναρχία, de ἀν privatif, et ἀρχὴ"],
     ["apátheia", "Ἀπάθεια, de ἀ privatif, et de πάθος"],
@@ -107,15 +105,11 @@ describe("concorde", () => {
   it.each([
     ["captivus", "du lat. noxa, tort"],
     ["os", "du lat. os"],
+    ["res", "du lat. pressare, presser"],
+    ["zero", "ital. zero"],
+    ["ṣifr", "de l'arabe sifr, vide"],
+    ["merces", "du lat. commercium"],
   ])("ne reconnaît pas %s dans « %s »", (etymon, etymologie) => expect(concorde(etymon, etymologie)).toBe(false));
-});
-
-describe("douteux", () => {
-  it("repère un doute exprimé par le Littré", () => {
-    expect(douteux("Mot d'origine douteuse")).toBe(true);
-    expect(douteux("Étymologie incertaine")).toBe(true);
-    expect(douteux("Du lat. mercedem")).toBe(false);
-  });
 });
 
 describe("chercher", () => {
@@ -125,27 +119,5 @@ describe("chercher", () => {
     expect(chercher(index, "ancêtre")?.[0].terme).toBe("ancêtres");
     expect(chercher(index, "absolus")?.[0].terme).toBe("absolu");
     expect(chercher(index, "potion")).toBeUndefined();
-  });
-});
-
-describe("verdict", () => {
-  const index = indexer(extraireEntrees(XML));
-  it("concorde quand un homonyme au moins cite l'étymon, sans doute exprimé", () => {
-    expect(verdict(["*extonare"], index.etonner)).toMatchObject({ resultat: "concorde", entree: { terme: "étonner" } });
-    expect(verdict(["merces"], index.merci).resultat).toBe("concorde");
-  });
-  it("accepte la concordance par la racine quand l'étymon direct n'est pas cité", () => {
-    const critique = [{ terme: "critique", etymologie: "Κριτιϰὸς, de ϰρίνειν" }];
-    expect(verdict(["criticus", "kritikós"], critique).resultat).toBe("concorde");
-    expect(verdict(["criticus"], critique).resultat).toBe("discordance");
-  });
-  it("signale un doute même quand l'étymon est cité", () => {
-    expect(verdict(["in odio"], index.ennui).resultat).toBe("doute");
-  });
-  it("signale une discordance ou une absence", () => {
-    expect(verdict(["noxa"], index.etonner).resultat).toBe("discordance");
-    expect(verdict(["potio"], undefined).resultat).toBe("absent");
-    expect(verdict(["potio"], []).resultat).toBe("absent");
-    expect(verdict(["potio"], index.en).resultat).toBe("absent");
   });
 });
