@@ -2,6 +2,25 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-04 — Troisième lot (hospes, amicus, potio), dans le cloud
+
+Dix mots par familles et doublets, quatre passes, Opus 5.5 réflexion élevée. Compteurs de fin :
+rédacteur 194 000 jetons, relecteur 148 000. Dix fiches écrites ; douze remarques en passe 2,
+deux restées ouvertes en passe 4 (textes de lectures qui ajoutaient à la citation), réglées sans
+boucle.
+
+- **Le relecteur confronte le dossier aux sources brutes** (`npm run dossier -- --consulter`) :
+  essai sur ce lot, après la relecture critique du projet (des erreurs du dossier passaient). Il
+  a trouvé une infidélité (*captif* : le croisement de *chétif* non rapporté). À inscrire dans la
+  consigne de relecture.
+- **Le corpus noté au dossier fonctionne** : les huit œuvres consultées pour chaque mot au
+  drapeau `tradition`, et le relecteur l'a contrôlé.
+- **Réseau dans le cloud** : le `fetch` de Node ne passe par le proxy qu'avec
+  `NODE_USE_ENV_PROXY=1` ; sans lui, TLFi, BnF et Wikisource répondent 403, ce que les scripts
+  prennent pour une absence. À traiter dans le code.
+- **TLFi** : pour *ami* et *ennemi*, l'API rend d'abord l'adjectif, sans étymologie ; l'article
+  du nom se lit à `/api/word/<mot>/nom/`. À faire : `npm run dossier` essaie les autres natures.
+
 ## 2026-10-04 — Affinage après le second pilote
 
 - **La recherche dans le corpus de réflexe se note au dossier** (`corpus` : l'œuvre, ce qui a été
