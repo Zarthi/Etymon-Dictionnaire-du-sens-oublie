@@ -16,18 +16,30 @@ famille: [ pascal, Pâques ]
 themes: [ religion, temps ]
 tradition:
   lectures:
-    - texte: "La Pâque porte le nom de ce que fit le Seigneur la nuit où il frappa l'Égypte :
-        il passa par-dessus les maisons des fils d'Israël."
-      citation: זבח־פסח הוא ליהוה אשר פסח על־בתי בני־ישראל במצרים
+    - texte: "Le nom du sacrifice et le verbe du passage s'écrivent des mêmes lettres : c'est le
+        sacrifice de la Pâque pour le Seigneur, qui passa par-dessus les maisons des fils
+        d'Israël en Égypte, quand il frappa l'Égypte."
+      citation: "זבח־פסח הוא ליהוה אשר פסח על־בתי בני־ישראל במצרים בנגפו את־מצרים"
       premier: true
-      sens: il passa par-dessus
+      sens: "il passa par-dessus"
       sources:
         - ouvrage: bible-hebraique
           entree: Exode 12, 27
           url: https://he.wikisource.org/wiki/שמות_יב
-    - texte: Le nom rappelle que Dieu passa par-dessus les maisons des pères en Égypte ;
-        à la fête, qui ne le dit pas n'a pas accompli son devoir.
-      citation: פסח, על שום שפסח המקום על בתי אבותינו במצרים
+    - texte: "Le sacrifice est appelé ainsi d'après le saut : le Saint, béni soit-il, sautait
+        les maisons d'Israël parmi celles d'Égypte, bondissant d'un Égyptien à l'autre, et
+        l'Israélite, au milieu, échappait."
+      citation: "הקרבן הוא קרוי פסח על שם הדלוג והפסיחה שהקב\"ה מדלג בתי ישראל מבין בתי מצרים וקופץ
+        ממצרי למצרי וישראל אמצעי נמלט"
+      sources:
+        - ouvrage: commentaire-sur-la-torah
+          entree: Exode 12, 11
+          url: https://he.wikisource.org/wiki/רש"י_על_שמות_יב
+    - texte: "Qui n'a pas dit, à la fête, ces trois choses, la Pâque, le pain azyme et les
+        herbes amères, n'a pas accompli son devoir. La Pâque, parce que le Lieu passa
+        par-dessus les maisons de nos pères en Égypte."
+      citation: "כל שלא אמר שלשה דברים אלו בפסח לא יצא ידי חובתו, ואלו הן: פסח, מצה ומרור. פסח, על
+        שום שפסח המקום על בתי אבותינו במצרים"
       auteur: rabban-gamliel
       sources:
         - ouvrage: michna
@@ -41,4 +53,5 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

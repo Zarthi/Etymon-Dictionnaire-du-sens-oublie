@@ -1,0 +1,17 @@
+nom: Rashi
+nomComplet: Salomon ben Isaac
+naissance: "1040"
+mort: "1105"
+description: >-
+  Rabbin, commentateur de la Bible et du Talmud ; son commentaire de la Torah
+  explique le texte verset par verset.
+traditions: [ juive ]
+cite: [ Salomon ben Isaac ]
+sources:
+  - ouvrage: bnf
+    entree: cb11923509g
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

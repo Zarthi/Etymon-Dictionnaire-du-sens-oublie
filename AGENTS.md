@@ -138,7 +138,7 @@ sens profane premier est justement ce que le dictionnaire révèle.
   *manne* : juive et chrétienne). L'agent le pose, Thibault relit.
 - La chaîne ne garde que les **formes** : par quelles langues le mot est passé.
 - Le **sens en tête** vient du **texte d'origine**, que toutes les traditions du mot reçoivent :
-  la lecture `premier`, avec son `sens`, signée (*sabbat* : « il cessa », Genèse 2, 2). Si le
+  la lecture `premier`, avec son `sens`, signée (*sabbat* : « il cessa », Genèse 2, 3). Si le
   texte d'origine n'explique pas le mot, c'est le sens du mot dans sa langue, selon un
   dictionnaire de cette langue (*alléluia* : « louez Yah ») : seul ce maillon porte un sens.
 - Si les traditions divergent sur le sens même du texte d'origine, il n'y a pas un sens unique

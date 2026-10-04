@@ -33,7 +33,7 @@ dans l'ordre sacré, la question ne se pose plus, le texte d'origine fait autori
   *shavat*, « s'arrêter, se reposer » (Littré : « se reposer »).
 - Texte d'origine, Genèse 2, 2-3 : וישבת ביום השביעי מכל־מלאכתו, « il cessa, le septième
   jour, de toute son œuvre » ; ויברך… כי בו שבת, « il le bénit… car en lui il cessa ».
-- Sens en tête : « il cessa », signé Genèse 2, 2. Le texte dit *cesser* avant *se reposer*.
+- Sens en tête : « il cessa », signé Genèse 2, 3 (la forme nue שבת, raison de la bénédiction). Le texte dit *cesser* avant *se reposer*.
 
 **Verdict : tient, mais révèle un cas imprévu.** Le TLFi donne un sens 3, « assemblée de
 sorciers » (XVe siècle), qui a aussi touché *synagogue* : une **profanation polémique** du mot.

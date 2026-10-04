@@ -1,0 +1,17 @@
+titre: Commentaire sur la Torah
+titreOriginal: Perush Rashi al ha-Torah
+auteur: rashi
+edition: consultée sur Wikisource en hébreu
+licence: domaine public
+texte: https://he.wikisource.org/wiki/רש"י_על_התורה
+description: >-
+  Commentaire des cinq livres de la Torah, verset par verset : le sens simple du
+  texte, et le récit traditionnel qui l'éclaire.
+sources:
+  - ouvrage: bnf
+    entree: cb11985540b
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

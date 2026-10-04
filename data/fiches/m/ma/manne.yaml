@@ -15,15 +15,26 @@ etymologie:
 themes: [ religion, nourriture ]
 tradition:
   lectures:
-    - texte: "Les Hébreux nommèrent la nourriture du désert par la question qu'ils se
-        posèrent en la voyant : ils ne savaient pas ce que c'était."
-      citation: ויאמרו איש אל־אחיו מן הוא כי לא ידעו מה־הוא
+    - texte: "Le mot est une question : en la voyant, les fils d'Israël se demandèrent l'un à
+        l'autre ce que c'était, car ils ne le savaient pas."
+      citation: "Quod cum vidissent filii Israël, dixerunt ad invicem : Manhu ? quod significat :
+        Quid est hoc ? ignorabant enim quid esset."
       premier: true
       sens: "qu'est-ce que c'est ?"
       sources:
-        - ouvrage: bible-hebraique
+        - ouvrage: vulgate
           entree: Exode 16, 15
-          url: https://he.wikisource.org/wiki/שמות_טז
+          url: https://la.wikisource.org/wiki/Vulgata_Clementina/Liber_Exodus
+    - texte: "Le mot s'entend comme dans Daniel : « le roi leur assigna ». « Car ils ne savaient
+        pas ce que c'était » : ils ne savaient pas de quel nom l'appeler."
+      citation: "מן הוא - הכנת מזון הוא כמו (דנייאל א) וימן להם המלך \"כי לא ידעו מה הוא\" -
+        שיקראוהו בשמו"
+      premier: true
+      sens: "c'est une préparation de nourriture"
+      sources:
+        - ouvrage: commentaire-sur-la-torah
+          entree: Exode 16, 15
+          url: https://he.wikisource.org/wiki/רש"י_על_שמות_טז
 sources:
   - ouvrage: littre
     entree: manne
@@ -32,4 +43,5 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

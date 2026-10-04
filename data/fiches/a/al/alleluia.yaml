@@ -9,15 +9,43 @@ etymologie:
     langue: hébreu
     sens: louez Yah
 themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: "Des dix mots de louange par lesquels est dit le livre des Psaumes, celui-ci est le
+        plus grand : il comprend à la fois le Nom et la louange."
+      citation: "בעשרה מאמרות של שבח נאמר ספר תהלים […] גדול מכולן הללויה שכולל שם ושבח בבת אחת"
+      sources:
+        - ouvrage: talmud-de-babylone
+          entree: Pesahim 117a
+          url: https://he.wikisource.org/wiki/פסחים_קיז_א
+    - texte: "Le mot, hébreu, joint deux mots : la louange, et l'un des dix noms par lesquels
+        les Hébreux nomment Dieu. Comme amen, il n'est permis ni aux Grecs, ni aux Latins, ni
+        aux barbares de le traduire : on le pourrait, mais les apôtres l'ont gardé dans sa
+        langue, pour sa plus sainte autorité."
+      citation: "Alleluia duorum verborum interpretatio est, hoc est laus Dei, et est Hebraeum. Ia
+        enim unum est de decem nominibus, quibus apud Hebraeos Deus vocatur. […] Quae duo
+        verba amen et alleluia nec Graecis nec Latinis nec barbaris licet in suam linguam
+        omnino transferre vel alia lingua adnuntiare. Nam quamvis interpretari possint,
+        propter sanctiorem tamen auctoritatem servata est ab Apostolis in his propriae
+        linguae antiquitas."
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 19, 19-20
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
 sources:
   - ouvrage: littre
     entree: alleluia
   - ouvrage: tlfi
     entree: alléluia
+  - ouvrage: brown-driver-briggs
+    entree: הָלַל²
+  - ouvrage: brown-driver-briggs
+    entree: יָהּ
   - ouvrage: bible-hebraique
     entree: Psaume 104, 35
     url: https://he.wikisource.org/wiki/תהלים_קד
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

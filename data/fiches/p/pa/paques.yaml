@@ -16,21 +16,23 @@ famille: [ pâque, pascal ]
 themes: [ religion, temps ]
 tradition:
   lectures:
-    - texte: "La Pâque porte le nom de ce que fit le Seigneur la nuit où il frappa l'Égypte :
-        il passa par-dessus les maisons des fils d'Israël."
-      citation: זבח־פסח הוא ליהוה אשר פסח על־בתי בני־ישראל במצרים
+    - texte: "Le nom du sacrifice et le verbe du passage s'écrivent des mêmes lettres : c'est le
+        sacrifice de la Pâque pour le Seigneur, qui passa par-dessus les maisons des fils
+        d'Israël en Égypte, quand il frappa l'Égypte."
+      citation: "זבח־פסח הוא ליהוה אשר פסח על־בתי בני־ישראל במצרים בנגפו את־מצרים"
       premier: true
-      sens: il passa par-dessus
+      sens: "il passa par-dessus"
       sources:
         - ouvrage: bible-hebraique
           entree: Exode 12, 27
           url: https://he.wikisource.org/wiki/שמות_יב
     - texte: "Le nom est hébreu, non grec : il ne vient pas de la passion, mais du passage,
-        celui du peuple de Dieu sortant d'Égypte, et celui du Christ allant de ce monde au
-        Père."
-      citation: Paschae autem vocabulum non Graecum, sed Hebraeum est; nec a passione,
-        quoniam PASCHEIN Graece dicitur pati, sed a transitu Hebraeo verbo pascha
-        appellata est, eo quod tunc populus Dei ex Aegypto transierit
+        celui du peuple de Dieu sortant d'Égypte ; d'où, dans l'Évangile, l'heure vient
+        pour Jésus de passer de ce monde au Père."
+      citation: "Paschae autem vocabulum non Graecum, sed Hebraeum est; nec a passione, quoniam
+        PASCHEIN Graece dicitur pati, sed a transitu Hebraeo verbo pascha appellata est,
+        eo quod tunc populus Dei ex Aegypto transierit. Vnde et in Evangelio (Ioann.13,1):
+        'Cum vidisset,' inquit, 'Iesus quia venit hora ut transiret de mundo ad Patrem.'"
       sources:
         - ouvrage: etymologies
           entree: VI, 17, 11
@@ -43,4 +45,5 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon
