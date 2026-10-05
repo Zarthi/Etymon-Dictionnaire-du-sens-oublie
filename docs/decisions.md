@@ -183,3 +183,18 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 |---|---|---|---|
 | Lectures de *sens* | Isidore, *Étymologies*, XI, 1, 19, et Augustin, *La Cité de Dieu*, XI, 3, retenus ; Isidore, XI, 1, 13 non retenu | XI, 1, 13 redit Augustin (l'esprit appelé *sensus*, d'où *sententia*) : une voix suffit, la plus ancienne | à relire |
 | Isidore (*sapiens a sapore*, X, 240) et Thomas d'Aquin (*sapientia, quasi sapida scientia*, I, q. 43, a. 5, ad 2) | non retenus sur *sage* et *sagesse* ; notés au corpus ; *sapience* ajouté aux candidats (`a-faire`) pour les accueillir | *sapiens* et *sapientia* ne sont pas des formes des chaînes (une lecture ne porte que sur le mot ou une forme de sa chaîne) | à relire |
+
+## 2026-10-05 — Lot 9 (passe 1 : croire, crédit, foi, fidèle, confiance, dette, devoir, payer, paix)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Sens premier de *credere* (*croire*) | « confier en prêt », seul maillon | le TLFi (« proprement ») et le Lewis & Short (« orig. belonging to the lang. of business ») s'accordent ; le sens religieux vient du latin chrétien (chemin `consacre`) | à relire |
+| Darmesteter (*çrad*, « cœur », et *do*, « je donne ») | non repris, ni maillon ni écartée | rapporté par le Littré (1878) ; le Lewis & Short glose *crad* « trust » ; le TLFi s'arrête à *credere* : un maillon indo-européen serait mal établi | à relire |
+| Mot de base latin sans sens (*credere* dans *crédit*, *fides* dans *fidèle*, *pax* dans *payer*, *debita* et *debitum* dans *dette*) | maillon nommé sans `sens` ; le sens en tête est celui du maillon qui apprend quelque chose (*creditum*, *fidelis*, *pacare*, *debere*) | le maillon montre la filiation avec la fiche voisine du lot (*croire*, *foi*, *paix*) sans répéter son sens, et le sens en tête reste celui qui éclaire le mot | à relire |
+| Chaîne de *confiance* | *confidentia*, puis *confidere* (sens en tête : « se fier pleinement ») ; *confiant* (Littré) non suivi ; la francisation d'après *fiance* (TLFi) non représentée | le TLFi, plus récent, en fait un emprunt à *confidentia* ; *fiance* n'est pas un étymon, et le modèle (`modele`) se lirait comme une formation latine | à relire |
+| Composition de *debere* (*devoir*) | *de* et *habere*, sens du Lewis & Short (« to have or keep from some one ») ; le « ne pas avoir » du Littré non suivi | les deux s'accordent sur la composition, non sur son sens ; le Lewis & Short l'appuie sur Cicéron (*qui autem debet, aes retinet alienum*) | à relire |
+| *devoir* verbe et nom | une seule fiche | le nom est l'infinitif substantivé (Littré, TLFi) | à relire |
+| Sens premier de *pax* (*paix*) | « accord, traité » | le Lewis & Short : « orig. an agreement, contract, treaty » ; le Littré le met au radical de *pacisci* ; la racine *pac-*, *pag-* n'est pas un maillon | à relire |
+| Chemins | `consacre` pour *croire* et *foi* ; `ordinaire` pour les sept autres | le TLFi dit le sens religieux de *credere* et de *fides* venu du latin chrétien ; il ne le dit pas de *fidelis* ni de *pax* | à relire |
+| Drapeau `tradition` | posé sur *croire*, *foi*, *fidèle*, *confiance*, *paix* ; non posé sur *crédit*, *dette*, *devoir*, *payer* | Isidore lit *fides* (V, 17 ; VIII, 4), *fidelis* (X, 98), *confidentia* (Différences) ; Thomas d'Aquin lit *credere* (IIa-IIae, q. 2, a. 2, hors corpus local) ; Festus (Sinnius Capito) lit *pax* ; Isidore (V, 18) lit *pactum*, non *pacare* | à relire |
+| Renvois | *croire* → *foi* ; *crédit* → *dette* ; *payer* → *dette* | notions voisines sans racine commune ; *payer* → *merci* non retenu (*merci* dit aujourd'hui le remerciement, non le paiement) | à relire |
