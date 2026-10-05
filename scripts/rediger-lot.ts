@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { parseArgs } from "node:util";
 import { cheminDossier, schemaDossier, sourcesDuDossier } from "./lib/atelier.ts";
@@ -175,7 +175,10 @@ async function principal(): Promise<number> {
       const mot = /mot: ([^,}]+)/.exec(l)?.[1].trim();
       return !(mot && retires.has(slug(mot)));
     });
-    if (gardees.length !== lignes.length) await writeFile(chemin, gardees.join("\n"));
+    if (gardees.length === lignes.length) continue;
+    // Une liste vidée de son dernier candidat est refusée par la validation : on la retire.
+    if (gardees.every((l) => l.trim() === "")) await rm(chemin);
+    else await writeFile(chemin, gardees.join("\n"));
   }
 
   if (ecrits.length + referencesEcrites > 0) regenererContrat();
