@@ -28,6 +28,12 @@ tradition:
         - ouvrage: la-cite-de-dieu
           entree: "X, 25"
           url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+    - texte: "Ange veut dire messager : tous les esprits célestes sont appelés anges en tant qu'ils manifestent les choses divines. Les ordres supérieurs tirent leur nom d'une excellence dans cette manifestation ; le dernier, qui n'y ajoute aucune excellence, est nommé de la simple manifestation."
+      citation: "Angelus nuntius dicitur. Omnes ergo caelestes spiritus, inquantum sunt manifestatores divinorum, Angeli vocantur. Sed superiores Angeli habent quandam excellentiam in hac manifestatione, a qua superiores ordines nominantur. Infimus autem Angelorum ordo nullam excellentiam supra communem manifestationem addit, et ideo a simplici manifestatione nominatur."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "I, q. 108, a. 5, ad 1"
+          url: https://la.wikisource.org/wiki/Summa_Theologiae/Prima_pars/Quaestio_CVIII
 sources:
   - ouvrage: tlfi
     entree: ange

@@ -25,6 +25,12 @@ tradition:
         - ouvrage: etymologies
           entree: "VIII, 11, 19"
           url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+    - texte: "Ici, l'adversaire était un ange de miséricorde : il voulait l'empêcher de pécher, pour qu'il ne pèche pas et ne se perde pas."
+      citation: '"לשטן לו" - (שם) מלאך של רחמים היה והיה רוצה למנעו מלחטוא שלא יחטא ויאבד'
+      sources:
+        - ouvrage: commentaire-sur-la-torah
+          entree: "Nombres 22, 22"
+          url: https://he.wikisource.org/wiki/רש"י_על_במדבר_כב
 sources:
   - ouvrage: tlfi
     entree: Satan
