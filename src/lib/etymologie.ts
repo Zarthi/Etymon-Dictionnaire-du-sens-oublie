@@ -82,13 +82,13 @@ export function formesComparables(etymologie: Maillon[]): string[] {
   return etymologie.flatMap(formesDuMaillon).flatMap((f) => [f.forme, translitterationDe(f)].filter((x): x is string => Boolean(x)));
 }
 
+/** Mots de la citation qui s'écrivent aussi en français (est, non, qui…) : ils ne passent pas en italique dans le texte. */
+const MOTS_FRANCAIS = new Set(["est", "non", "qui", "plus", "sur", "par", "des", "les", "une", "sous", "nos", "vos", "son", "ses"]);
+
 /**
  * Mots de la citation d'une lecture traditionnelle (au moins 3 lettres), tels qu'écrits : le texte de
  * la lecture peut nommer le mot que l'auteur lit, et l'app le met alors en italique comme une forme.
  */
-/** Mots de la citation qui s'écrivent aussi en français (est, non, qui…) : ils ne passent pas en italique dans le texte. */
-const MOTS_FRANCAIS = new Set(["est", "non", "qui", "plus", "sur", "par", "des", "les", "une", "sous", "nos", "vos", "son", "ses"]);
-
 export function formesCitation(citation: string): string[] {
   const mots = citation.match(/\p{L}+(?:-\p{L}+)*/gu) ?? [];
   return [...new Set(mots.filter((mot) => [...mot].length >= 3 && !MOTS_FRANCAIS.has(mot.toLowerCase())))];
