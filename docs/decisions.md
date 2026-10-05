@@ -444,3 +444,11 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Renvois | *parole* → *mot*, *langue* ; *mot* → *nom* ; *parabole* → *allégorie*, *fable* ; *fable* → *récit*, *mythe* ; *récit* → *histoire* ; *discours* → *éloquence* (candidats : *langue*, *allégorie*, *mythe*, *histoire*, *éloquence*) | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
 | Drapeau `tradition` | posé sur *parabole*, *verbe*, *nom*, *discours*, *fable* ; non posé sur *parole*, *mot*, *récit* | Isidore lit *parabola* (I, 37, 33 ; VI, 8, 13), *verbum* (I, 9, 1), *nomen* (I, 7, 1), *fabula* (I, 40, 1) ; Thomas d'Aquin lit *discursus* (Ia, q. 58, a. 3, ad 1) ; rien qui lise *parabola* au sens de parole, *muttum* ou *recitare* | à relire |
 | Thèmes | `parole` pour tous ; *parabole* : `religion`, `parole` ; *verbe* : `parole`, `religion` | le domaine de l'usage d'aujourd'hui | à relire |
+
+## 2026-10-05 — Lot 17 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Verdicts | propositions du relecteur adoptées telles quelles : explications de *parole*, *parabole*, *verbe*, *mot*, *nom*, *discours* ; langue de *muttum* : `latin` ; fait du TLFi ajouté au dossier de *nom* (sens vieilli : l'ensemble de ceux qui portent un même nom) | toutes justes et sourcées | à relire |
+| Lectures | *verbe* : Isidore, I, 9, 1 ; Thomas d'Aquin, Ia, q. 34, a. 1, co. ; *nom* : Isidore, I, 7, 1 ; *fable* : Isidore, I, 40, 1 ; *discours* : Thomas d'Aquin, Ia, q. 58, a. 3, ad 1 ; *parabole* : Isidore, VI, 8, 13 | chaque passage lit une forme de la chaîne et dit autre chose que l'histoire, ou la complète | à relire |
+| Non retenus | Isidore, I, 37, 33 (*parabola*, comparaison entre choses dissemblables : conforme à l'histoire) ; Augustin, *De la doctrine chrétienne*, I (*verbum quod corde gestamus*) ; Thomas, Ia, q. 1, a. 10, ad 3 (*parabolicus*, hors chaîne) | conforme ; œuvre sans fiche, et Thomas dit la même distinction ; forme absente de la chaîne | à relire |

@@ -1,0 +1,48 @@
+mot: parabole
+nature: [ nom féminin ]
+etymologie:
+  - forme: parabola
+    langue: latin ecclésiastique
+  - forme: παραβολή
+    langue: grec ancien
+    sens: comparaison, rapprochement
+  - forme: παραβάλλω
+    langue: grec ancien
+    sens: jeter auprès de, mettre à côté
+    elements:
+      - forme: παρά
+        sens: auprès de
+      - forme: βάλλω
+        sens: lancer, jeter
+explication: >-
+  Comparaison de la rhétorique grecque et latine, le mot est devenu le nom des
+  récits allégoriques du Nouveau Testament. En français, la parabole cache un
+  enseignement, et parler par paraboles, c'est parler en termes détournés ; la
+  courbe (1555) tient son nom du terme de géométrie grec.
+famille: [ parabolique, balistique ]
+renvois: [ allegorie, fable ]
+themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: "Par leur nom même, les parabolae et les problemata indiquent qu'il faut les scruter plus profondément : la parabola porte devant elle la ressemblance d'une autre chose."
+      citation: "Parabolae et problemata nominibus suis indicant altius se perscrutari oportere. Parabola quippe alicuius rei similitudinem prae se gerit."
+      sources:
+        - ouvrage: etymologies
+          entree: "VI, 8, 13"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: littre
+    entree: parabole
+  - ouvrage: tlfi
+    entree: parabole
+  - ouvrage: lewis-short
+    entree: parabola
+  - ouvrage: bailly
+    entree: παραβολή
+  - ouvrage: bailly
+    entree: παραβάλλω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

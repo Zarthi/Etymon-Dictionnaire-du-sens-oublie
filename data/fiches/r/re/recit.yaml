@@ -1,0 +1,30 @@
+mot: récit
+nature: [ nom masculin ]
+etymologie:
+  - forme: réciter
+    langue: français
+  - forme: recitare
+    langue: latin
+    sens: lire à haute voix
+explication: >-
+  Recitare se disait de la lecture publique d'une loi, d'un acte, ou de son
+  propre ouvrage ; réciter a eu ce sens en français (vers 1150). Récit, d'abord
+  la relation d'un événement (1498), désigne aujourd'hui la présentation, orale
+  ou écrite, d'événements réels ou imaginaires.
+famille: [ récitation, citer ]
+renvois: [ histoire ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: réciter
+  - ouvrage: tlfi
+    entree: récit
+  - ouvrage: tlfi
+    entree: réciter
+  - ouvrage: lewis-short
+    entree: recito
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

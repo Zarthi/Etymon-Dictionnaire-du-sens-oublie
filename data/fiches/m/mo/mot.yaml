@@ -1,0 +1,28 @@
+mot: mot
+nature: [ nom masculin ]
+etymologie:
+  - forme: muttum
+    langue: latin
+    sens: grognement, murmure
+explication: >-
+  En bas latin, muttum s'employait dans des phrases négatives, ne pas dire un
+  son, comme les premiers emplois de mot en français (fin du Xe siècle). Sorti
+  de ce tour, mot a pris le sens de parole ; il nomme aujourd'hui l'unité de
+  sens de la langue, et ne dire mot garde l'ancien tour.
+famille: [ motet ]
+renvois: [ nom ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: mot
+  - ouvrage: tlfi
+    entree: mot
+  - ouvrage: lewis-short
+    entree: muttum
+  - ouvrage: lewis-short
+    entree: mutio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

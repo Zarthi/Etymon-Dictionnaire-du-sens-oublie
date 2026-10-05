@@ -1,0 +1,36 @@
+mot: discours
+nature: [ nom masculin ]
+etymologie:
+  - forme: discursus
+    langue: latin
+    sens: action de courir çà et là
+explication: >-
+  En bas latin, discursus a pris le sens de conversation ; la course çà et là,
+  attestée en français au XVIe siècle, s'est perdue. Discours a d'abord nommé un
+  récit, un exposé (1503) ; il désigne aujourd'hui un développement oratoire,
+  des propos suivis, la pensée qui procède par une suite d'énoncés.
+famille: [ discourir, discursif, courir ]
+renvois: [ eloquence ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: "Discursus nomme un mouvement, et tout mouvement va d'un premier à un suivant : la connaissance discursive passe d'une chose déjà connue à la connaissance d'une autre, jusque-là ignorée."
+      citation: "discursus quendam motum nominat. Omnis autem motus est de uno priori in aliud posterius. Unde discursiva cognitio attenditur secundum quod ex aliquo prius noto devenitur in cognitionem alterius posterius noti, quod prius erat ignotum."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia, q. 58, a. 3, ad 1"
+          url: https://www.corpusthomisticum.org/sth1050.html
+sources:
+  - ouvrage: littre
+    entree: discours
+  - ouvrage: tlfi
+    entree: discours
+  - ouvrage: lewis-short
+    entree: discursus2
+  - ouvrage: lewis-short
+    entree: discurro
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
