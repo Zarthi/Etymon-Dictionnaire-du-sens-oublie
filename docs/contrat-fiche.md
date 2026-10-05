@@ -37,6 +37,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `langue` | liste fermée (voir plus bas) | oui | Langue (liste fermée : data/langues.json). |
 | `sens` | texte | non | Sens de ce maillon, seulement s'il apprend quelque chose (pas pour l'allemand Schizophrenie, ni le latin Satanas). |
 | `elements` | liste non vide d'objets (voir plus bas) | non | Composition : les éléments dont la forme est faite (φίλος + σοφία). |
+| `croisement` | liste non vide d'objets (voir plus bas) | non | Croisement : formes avec lesquelles celle du maillon s'est croisée (captivus croisé avec le gaulois *cactos ; algorisme croisé avec ἀριθμός). Seulement si une source le dit. |
 | `alternatives` | objet (voir plus bas) | non | Plusieurs origines : débattues, ou voulues ensemble. |
 | `forge` | objet (voir plus bas) | non | Mot forgé par un auteur connu : qui, quand, où. |
 | `modele` | objet (voir plus bas) | non | Mot sur le modèle duquel celui-ci a été fait (persona, calque de πρόσωπον ; altruisme, sur le modèle d'égoïsme). |
@@ -52,6 +53,15 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `translitteration` | texte | non | Translittération, seulement pour une écriture ni latine ni grecque (arabe, hébreu) : celle du grec se déduit. |
 | `langue` | liste fermée (voir plus bas) | non | Langue de l'élément, si elle diffère de celle du maillon. |
 | `sens` | texte | oui | Sens, sans guillemets (l'app les ajoute). |
+
+### `etymologie[].croisement[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `forme` | texte | oui | Forme dans son écriture d'origine (religio, φρήν, صفر) ; reconstruite, elle commence par `*` et s'écrit entre guillemets. |
+| `translitteration` | texte | non | Translittération, seulement pour une écriture ni latine ni grecque (arabe, hébreu) : celle du grec se déduit. |
+| `langue` | liste fermée (voir plus bas) | oui | Langue (liste fermée : data/langues.json). |
+| `sens` | texte | non | Sens, sans guillemets (l'app les ajoute). |
 
 ### `etymologie[].alternatives`
 
@@ -69,7 +79,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `langue` | liste fermée (voir plus bas) | non | Langue, si elle diffère de celle du maillon. |
 | `sens` | texte | oui | Sens, sans guillemets (l'app les ajoute). |
 | `elements` | liste non vide d'objets (voir plus bas) | non | Composition de cette forme. |
-| `selon` | liste d'identifiants | non | Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs). Un ouvrage qui la rapporte n'en est pas tenant. |
+| `selon` | liste d'identifiants | non | Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs, ou d'un ouvrage sans auteur unique : un dictionnaire comme Lewis & Short). Un ouvrage qui ne fait que la rapporter n'en est pas tenant. |
 
 ### `etymologie[].alternatives.formes[].elements[]`
 
@@ -274,7 +284,8 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 - Toute référence (auteur, ouvrage, doublet) vise une fiche existante ; un renvoi (`renvois`, `tradition.renvois`), une fiche ou un candidat à faire (l'app ne l'affiche qu'une fois la fiche écrite ; vers la tradition, une fois qu'elle a des lectures).
 - `etymologie` : un maillon porte une forme, des éléments, ou les deux ; ou bien des alternatives. Le maillon du sens premier porte un sens (une composition, le sens littéral de ses éléments) ; au plus un maillon est `premier`.
 - Translittération : seulement pour une écriture ni latine ni grecque (arabe, hébreu), et alors obligatoire.
-- `selon` : seulement dans une origine débattue ; un ouvrage qui rapporte une hypothèse n'en est pas le tenant.
+- `selon` : seulement dans une origine débattue ; chaque tenant est un auteur ou un ouvrage existant (un dictionnaire sans auteur unique, Lewis & Short, peut être tenant) ; un ouvrage qui ne fait que rapporter une hypothèse n'en est pas le tenant.
+- `croisement` : seulement pour un maillon qui a une forme ; mêmes règles que les formes d'un maillon (langue de la liste fermée, translittération seulement pour une écriture ni latine ni grecque, sens sans guillemets).
 - Lecture traditionnelle : sa voix se déduit de l'œuvre citée (son auteur, ou l'œuvre elle-même pour l'Écriture) ; `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Rabban Gamliel dans la Michna), de la tradition de l'œuvre si elle n'a pas d'auteur ; une seule voix par lecture ; `tradition` seulement si un auteur en a plusieurs (l'Écriture reçue en commun les garde toutes) ; une `hypothese` parmi les alternatives de la chaîne ; la citation figure mot pour mot à l'adresse de la source (`npm run verifier:en-ligne`).
 - Une œuvre ne porte `traditions` que si elle n'a pas d'auteur (Talmud, Écriture) ; une traduction de l'Écriture (Vulgate, Septante) est une œuvre sans auteur, le traducteur allant dans `edition` ou `description`.
 - Mot sacré (`sacre`) : pas d'explication ; les maillons n'ont pas de sens, sauf, si aucune lecture n'est `premier`, celui de la langue sacrée ; la lecture `premier` (le texte d'origine, avec son `sens`) est reçue par toutes les traditions du mot, les autres lectures parlent dans l'une d'elles.

@@ -37,6 +37,7 @@
   </p>
 
   <ListeMots titre={m.ouvrage.lectures} mots={ouvrage.lectures} />
+  <ListeMots titre={m.ouvrage.hypotheses} mots={ouvrage.hypotheses} />
   <ListeMots titre={m.ouvrage.forges} mots={ouvrage.forges} />
   <ListeMots titre={m.ouvrage.issus} mots={ouvrage.issus} />
 

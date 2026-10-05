@@ -13,6 +13,7 @@ Tu rédiges une fiche d'Étymon, dictionnaire du sens premier des mots français
 - Formes dans leur écriture d'origine (φρήν, صفر) ; translittération seulement pour l'arabe ou l'hébreu (celle du grec se déduit).
 - `sens` seulement là où il apprend quelque chose : le sens premier, affiché seul en tête de fiche, est celui du maillon le plus lointain attesté qui en porte un. Chaque sens vient du dossier.
 - Découper une forme composée, du tout vers les parties : la forme garde son sens attesté (jamais déduit des parties), puis ses `elements`, chacun avec son sens ; seulement si les parties parlent encore (re-legere, oui ; śāṭān, non). Une hypothèse d'une origine débattue se découpe de même (relegere : re-, « de nouveau », et legere, « recueillir »). Un même élément peut avoir deux sens selon le composé (re- : « de nouveau » dans relegere, « en arrière » dans religare) : chacun vient de l'entrée de son composé.
+- `croisement` d'un maillon : les formes avec lesquelles la sienne s'est croisée (chétif : captivus croisé avec le gaulois *cactos ; algorithme : algorisme croisé avec ἀριθμός), seulement si une source le dit ; jamais une hypothèse tirée de la ressemblance des formes.
 - `explication` : ce qui s'est perdu, affaibli ou retourné entre le sens premier et l'usage d'aujourd'hui (le fait `usage` du dossier). Elle n'explique pas une seconde fois le sens, affiché juste au-dessus ; mais mieux vaut redire le mot juste qu'un détour. Ton sobre, sans emphase ni jugement. Le sens ancien n'est pas le « vrai » sens du mot, ni l'usage actuel une erreur : l'explication dit ce qui a changé, l'histoire n'en juge pas.
 - `themes` : le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier (étonner : émotions, pas météo) ; un ou deux, affichés sur la fiche. Aucune liste fermée n'est exhaustive. Une langue qui manque est un fait : ajoute-la (`npm run liste -- langues "<langue>"`) et note-le dans les signalements. Un thème qui manque ne s'ajoute pas pendant le lot : mets le plus proche, et propose le thème manquant dans les signalements, avec la raison.
 - Tout mot étranger cité dans un texte est une forme de la chaîne : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.
@@ -21,7 +22,7 @@ Tu rédiges une fiche d'Étymon, dictionnaire du sens premier des mots français
 - Une composition : si la forme composée est attestée, elle porte son sens attesté, puis chaque élément le sien ; si le mot est forgé sur des éléments sans forme composée avant lui (schizophrénie), le sens premier est le sens littéral des éléments (esprit fendu), que l'app affiche comme tel (« littéralement »), jamais comme le sens d'une forme qui n'a pas existé.
 - `ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.
 - Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce) ; un mot nommé dans l'explication n'est donc pas aussi un renvoi. `renvois` (Voir aussi) : notions voisines du même ordre que l'usage d'aujourd'hui, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `tradition.renvois` (sous « Lectures traditionnelles » : voir obsession) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.
-- Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) : elle se crée d'après sa notice BnF avant l'écriture des fiches (docs/consignes/references.md).
+- Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, qui accepte aussi un ouvrage sans auteur unique comme tenant, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) : elle se crée d'après sa notice BnF avant l'écriture des fiches (docs/consignes/references.md).
 - Dans un texte, nomme un auteur sous son nom usuel ou une de ses formes de citation (liste ci-dessous) : l'app en fait un lien, s'il est aussi cité dans un champ de la fiche.
 - Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles (`tradition.lectures`) : les scripts posent les premiers (npm run rediger), les lectures se rédigent à part, texte source sous les yeux.
 - Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.
@@ -68,6 +69,7 @@ Un fichier JSON, `atelier/<id>/fiche.json` : la fiche seule, avec les champs ci-
 | `langue` | liste fermée (voir plus bas) | oui | Langue (liste fermée : data/langues.json). |
 | `sens` | texte | non | Sens de ce maillon, seulement s'il apprend quelque chose (pas pour l'allemand Schizophrenie, ni le latin Satanas). |
 | `elements` | liste non vide d'objets (voir plus bas) | non | Composition : les éléments dont la forme est faite (φίλος + σοφία). |
+| `croisement` | liste non vide d'objets (voir plus bas) | non | Croisement : formes avec lesquelles celle du maillon s'est croisée (captivus croisé avec le gaulois *cactos ; algorisme croisé avec ἀριθμός). Seulement si une source le dit. |
 | `alternatives` | objet (voir plus bas) | non | Plusieurs origines : débattues, ou voulues ensemble. |
 | `forge` | objet (voir plus bas) | non | Mot forgé par un auteur connu : qui, quand, où. |
 | `modele` | objet (voir plus bas) | non | Mot sur le modèle duquel celui-ci a été fait (persona, calque de πρόσωπον ; altruisme, sur le modèle d'égoïsme). |
@@ -83,6 +85,15 @@ Un fichier JSON, `atelier/<id>/fiche.json` : la fiche seule, avec les champs ci-
 | `translitteration` | texte | non | Translittération, seulement pour une écriture ni latine ni grecque (arabe, hébreu) : celle du grec se déduit. |
 | `langue` | liste fermée (voir plus bas) | non | Langue de l'élément, si elle diffère de celle du maillon. |
 | `sens` | texte | oui | Sens, sans guillemets (l'app les ajoute). |
+
+### `etymologie[].croisement[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `forme` | texte | oui | Forme dans son écriture d'origine (religio, φρήν, صفر) ; reconstruite, elle commence par `*` et s'écrit entre guillemets. |
+| `translitteration` | texte | non | Translittération, seulement pour une écriture ni latine ni grecque (arabe, hébreu) : celle du grec se déduit. |
+| `langue` | liste fermée (voir plus bas) | oui | Langue (liste fermée : data/langues.json). |
+| `sens` | texte | non | Sens, sans guillemets (l'app les ajoute). |
 
 ### `etymologie[].alternatives`
 
@@ -100,7 +111,7 @@ Un fichier JSON, `atelier/<id>/fiche.json` : la fiche seule, avec les champs ci-
 | `langue` | liste fermée (voir plus bas) | non | Langue, si elle diffère de celle du maillon. |
 | `sens` | texte | oui | Sens, sans guillemets (l'app les ajoute). |
 | `elements` | liste non vide d'objets (voir plus bas) | non | Composition de cette forme. |
-| `selon` | liste d'identifiants | non | Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs). Un ouvrage qui la rapporte n'en est pas tenant. |
+| `selon` | liste d'identifiants | non | Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs, ou d'un ouvrage sans auteur unique : un dictionnaire comme Lewis & Short). Un ouvrage qui ne fait que la rapporter n'en est pas tenant. |
 
 ### `etymologie[].alternatives.formes[].elements[]`
 

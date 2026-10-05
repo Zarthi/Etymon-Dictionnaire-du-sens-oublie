@@ -185,6 +185,13 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   const ouvrage = (champ: string, cible: string) => {
     if (!ref.ouvrages.has(cible)) ajouter(champ, `ouvrage « ${cible} » sans fiche (data/ouvrages)`);
   };
+  // Un tenant est un auteur ou un ouvrage (dictionnaire sans auteur unique) ; jamais les deux à la fois.
+  const tenant = (champ: string, cible: string) => {
+    const estAuteur = ref.auteurs.has(cible);
+    const estOuvrage = ref.ouvrages.has(cible);
+    if (!estAuteur && !estOuvrage) ajouter(champ, `tenant « ${cible} » sans fiche (auteur : data/auteurs, ouvrage : data/ouvrages)`);
+    if (estAuteur && estOuvrage) ajouter(champ, `tenant « ${cible} » ambigu : à la fois un auteur et un ouvrage`);
+  };
 
   if (ID_VALIDE.test(id) && id !== slug(fiche.mot) && !new RegExp(`^${slug(fiche.mot)}-\\d+$`).test(id)) {
     ajouter("id", `le nom de fichier doit correspondre au mot : « ${slug(fiche.mot)}.yaml »`);
@@ -261,7 +268,12 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
         sens.push([`${ca}.elements.${k}.sens`, e.sens]);
       });
       if (a.selon && m.alternatives!.mode !== "debattue") ajouter(`${ca}.selon`, "des tenants seulement pour une origine débattue (mode: debattue)");
-      a.selon?.forEach((s, k) => auteur(`${ca}.selon.${k}`, s));
+      a.selon?.forEach((s, k) => tenant(`${ca}.selon.${k}`, s));
+    });
+    if (m.croisement && !m.forme) ajouter(`${c}.croisement`, "seulement pour un maillon qui a une forme (celle qui s'est croisée)");
+    m.croisement?.forEach((x, j) => {
+      lire(`${c}.croisement.${j}`, x);
+      sens.push([`${c}.croisement.${j}.sens`, x.sens]);
     });
     if (m.modele) {
       lire(`${c}.modele`, m.modele);

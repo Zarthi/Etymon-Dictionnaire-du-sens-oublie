@@ -16,6 +16,8 @@ export interface Grammaire {
   de(forme: string): string;
   /** La matière d'un mot forgé : « sur le grec », « sur l'arabe ». */
   sur(langue: string): string;
+  /** Ce avec quoi une forme s'est croisée : « avec le gaulois », « avec l'arabe ». */
+  avec(langue: string): string;
   /** Date ISO en toutes lettres : « 23 septembre 2026 ». */
   dateLongue(dateIso: string): string;
   /** Guillemets ouvrant et fermant, avec leurs espaces : ceux d'une citation qui garde sa propre langue. */

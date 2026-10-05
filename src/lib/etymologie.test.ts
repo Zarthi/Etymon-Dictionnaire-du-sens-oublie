@@ -52,6 +52,16 @@ describe("translittération et italique", () => {
   });
 });
 
+describe("formes d'un croisement", () => {
+  it("comptent comme formes de la chaîne (italique, translittération comprise)", () => {
+    const formes = formesItaliques({
+      etymologie: [m({ forme: "captivus", croisement: [{ forme: "*cactos", langue: "gaulois" }, { forme: "ἀριθμός", langue: "grec ancien" }] })],
+      ecartees: [],
+    });
+    expect(formes).toEqual(["captivus", "*cactos", "ἀριθμός", "arithmos"]);
+  });
+});
+
 describe("sensLitteral", () => {
   const elements = [{ forme: "σχίζω", sens: "fendre" }, { forme: "φρήν", sens: "diaphragme" }];
   it("une composition sans forme composée : le sens est littéral", () => {

@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import type { FicheIdentifiee } from "../../src/lib/types.ts";
-import { assembler } from "../assembler-fiches.ts";
+import { assembler, assemblerReferences } from "../assembler-fiches.ts";
 import { validerDepot } from "../valider-fiches.ts";
 
 const { fiches } = await validerDepot(fileURLToPath(new URL("fixtures/depot-conforme", import.meta.url)));
@@ -11,11 +11,12 @@ describe("assembler", () => {
   it("garde toutes les fiches, quel que soit leur statut", () => {
     const { index, lots } = assembler(fiches);
     expect(index).toEqual([
+      { id: "croisee", mot: "croisée", statut: "brouillon" },
       { id: "epreuve", mot: "épreuve", statut: "brouillon" },
       { id: "essai", mot: "essai", statut: "validee" },
       { id: "sacree", mot: "sacrée", statut: "brouillon", sacre: true },
     ]);
-    expect([...lots.keys()]).toEqual(["ep", "es", "sa"]);
+    expect([...lots.keys()]).toEqual(["cr", "ep", "es", "sa"]);
   });
 
   it("transmet le statut, y compris a-verifier, pour que l'app le signale", () => {
@@ -79,5 +80,16 @@ describe("assembler", () => {
       ze: ["zero"],
     });
     expect(lots.get("ze")?.[0]).toEqual(avec("zero", "validee"));
+  });
+});
+
+describe("assemblerReferences : tenants", () => {
+  it("attribue l'hypothèse à l'auteur ou à l'ouvrage tenant, jamais à l'autre", async () => {
+    const depot = await validerDepot(fileURLToPath(new URL("fixtures/depot-conforme", import.meta.url)));
+    const { auteurs, ouvrages } = assemblerReferences(depot.fiches, depot.auteurs, depot.ouvrages);
+    const mot = { id: "croisee", mot: "croisée" };
+    expect(ouvrages.find((o) => o.id === "gaffiot")?.hypotheses).toEqual([mot]);
+    expect(ouvrages.find((o) => o.id === "tlfi")?.hypotheses).toEqual([]);
+    expect(auteurs.find((a) => a.id === "lactance")?.hypotheses).toEqual([mot]);
   });
 });

@@ -48,4 +48,11 @@ describe("controler", () => {
     expect(controler(fiche({ explication: "Littré le rapporte." }), index, auteurs)).toEqual(["auteur nommé sans référence : Émile Littré"]);
     expect(controler(fiche({ explication: "Cicéron le rapporte." }), index, auteurs)).toEqual(["auteur nommé sans référence : Cicéron"]);
   });
+  it("contrôle aussi les formes d'un croisement, comme formes de la chaîne", () => {
+    const etymologie = [
+      { forme: "religionem", langue: "latin" as const },
+      { forme: "religio", langue: "latin" as const, sens: "attention scrupuleuse", croisement: [{ forme: "*cruxos", langue: "gaulois" as const }] },
+    ];
+    expect(controler(fiche({ etymologie }), index)).toEqual(["formes d'origine non citées par le Littré : *cruxos"]);
+  });
 });

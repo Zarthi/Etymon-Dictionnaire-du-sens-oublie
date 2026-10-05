@@ -124,13 +124,26 @@ export const schemaAlternative = z
     sens,
     elements: z.array(schemaElement).min(2).optional().describe("Composition de cette forme."),
     selon: z
-      .array(identifiant("Auteur (data/auteurs)."))
+      .array(identifiant("Auteur (data/auteurs) ou ouvrage (data/ouvrages)."))
       .optional()
-      .describe("Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs). Un ouvrage qui la rapporte n'en est pas tenant."),
+      .describe(
+        "Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs, ou d'un ouvrage sans auteur unique : un dictionnaire comme Lewis & Short). Un ouvrage qui ne fait que la rapporter n'en est pas tenant.",
+      ),
   })
   .strict()
   .refine((a) => a.forme !== undefined || a.elements !== undefined, { message: "une forme ou des éléments", path: ["forme"] })
   .describe("Une hypothèse (origine débattue) ou un sens voulu (double sens).");
+
+/** Forme avec laquelle celle d'un maillon s'est croisée : chétif, captivus croisé avec le gaulois *cactos. */
+export const schemaCroisement = z
+  .object({
+    forme,
+    translitteration,
+    langue,
+    sens: sens.optional(),
+  })
+  .strict()
+  .describe("Forme avec laquelle celle du maillon s'est croisée.");
 
 export const MODES_ALTERNATIVE = ["debattue", "jeu"] as const;
 
@@ -142,6 +155,11 @@ export const schemaMaillon = z
     langue,
     sens: sens.optional().describe("Sens de ce maillon, seulement s'il apprend quelque chose (pas pour l'allemand Schizophrenie, ni le latin Satanas)."),
     elements: z.array(schemaElement).min(2).optional().describe("Composition : les éléments dont la forme est faite (φίλος + σοφία)."),
+    croisement: z
+      .array(schemaCroisement)
+      .min(1)
+      .optional()
+      .describe("Croisement : formes avec lesquelles celle du maillon s'est croisée (captivus croisé avec le gaulois *cactos ; algorisme croisé avec ἀριθμός). Seulement si une source le dit."),
     alternatives: z
       .object({
         mode: z

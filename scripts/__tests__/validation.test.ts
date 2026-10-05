@@ -376,6 +376,42 @@ describe("validerFiches : chaîne étymologique", () => {
     ];
     expect(erreursDe({ etymologie })).toEqual(["etymologie.1.alternatives.formes.0.selon : des tenants seulement pour une origine débattue (mode: debattue)"]);
   });
+  it("accepte un ouvrage pour tenant d'une hypothèse, avec ou sans auteur", () => {
+    const etymologie = [
+      { forme: "x", langue: "latin", sens: "y" },
+      { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["gaffiot", "ciceron"] }, { forme: "c", sens: "d" }] } },
+    ];
+    expect(erreursDe({ etymologie })).toEqual([]);
+  });
+  it("refuse un identifiant à la fois auteur et ouvrage pour tenant", () => {
+    const ref = referentiel([auteur("gaffiot", "Gaffiot")], [ouvrage("gaffiot", "Dictionnaire latin-français", { abrege: "Gaffiot" })]);
+    const etymologie = [
+      { forme: "x", langue: "latin", sens: "y" },
+      { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["gaffiot"] }, { forme: "c", sens: "d" }] } },
+    ];
+    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify({ ...ficheBase, etymologie }) }], ref);
+    expect(erreurs.map((e) => `${e.champ} : ${e.regle}`)).toContain("etymologie.1.alternatives.formes.0.selon.0 : tenant « gaffiot » ambigu : à la fois un auteur et un ouvrage");
+  });
+  it("accepte un croisement, aux mêmes règles que les formes d'un maillon", () => {
+    const maillon = (croisement: unknown, extra = {}) => [{ forme: "captivus", langue: "latin", sens: "prisonnier", croisement, ...extra }];
+    expect(erreursDe({ etymologie: maillon([{ forme: "*cactos", langue: "gaulois", sens: "prisonnier" }]) })).toEqual([]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "ἀριθμός", langue: "grec ancien" }]) })).toEqual([]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "صفر", langue: "arabe" }]) })).toEqual(["etymologie.0.croisement.0.translitteration : obligatoire pour une écriture ni latine ni grecque"]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "ἀριθμός", translitteration: "arithmos", langue: "grec ancien" }]) })).toEqual([
+      "etymologie.0.croisement.0.translitteration : inutile pour le grec : elle se déduit de la forme",
+    ]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "*cactos", langue: "gaulois", sens: "« prisonnier »" }]) })).toEqual([
+      "etymologie.0.croisement.0.sens : sans guillemets : l'app les ajoute à l'affichage",
+    ]);
+  });
+  it("refuse un croisement vide, d'une langue inconnue, ou sans forme au maillon", () => {
+    const base = { forme: "captivus", langue: "latin", sens: "prisonnier" };
+    expect(erreursDe({ etymologie: [{ ...base, croisement: [] }] }).length).toBe(1);
+    expect(erreursDe({ etymologie: [{ ...base, croisement: [{ forme: "x", langue: "klingon" }] }] }).length).toBe(1);
+    expect(erreursDe({ etymologie: [{ langue: "latin", sens: "e", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], croisement: [{ forme: "x", langue: "gaulois" }] }] })).toEqual([
+      "etymologie.0.croisement : seulement pour un maillon qui a une forme (celle qui s'est croisée)",
+    ]);
+  });
   it("refuse un nom de personne ou un titre sans forme", () => {
     const etymologie = [{ langue: "latin", sens: "e", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], personne: "ciceron" }];
     expect(erreursDe({ etymologie })).toEqual(["etymologie.0 : personne ou ouvrage : seulement pour une forme (nom propre, titre)"]);
@@ -390,7 +426,7 @@ describe("validerFiches : références", () => {
   it.each([
     ["auteur", { etymologie: [{ forme: "x", langue: "latin", sens: "y", forge: { par: ["inconnu"], date: 1900 } }] }, "etymologie.0.forge.par.0 : auteur « inconnu » sans fiche (data/auteurs)"],
     ["ouvrage", { sources: [{ ouvrage: "wiktionnaire", entree: "x" }] }, "sources.0.ouvrage : ouvrage « wiktionnaire » sans fiche (data/ouvrages)"],
-    ["tenant", { etymologie: debattue(["varron"]) }, "etymologie.1.alternatives.formes.0.selon.0 : auteur « varron » sans fiche (data/auteurs)"],
+    ["tenant", { etymologie: debattue(["varron"]) }, "etymologie.1.alternatives.formes.0.selon.0 : tenant « varron » sans fiche (auteur : data/auteurs, ouvrage : data/ouvrages)"],
     ["personne", { etymologie: [{ forme: "x", langue: "latin", sens: "y", personne: "inconnu" }] }, "etymologie.0.personne : auteur « inconnu » sans fiche (data/auteurs)"],
   ])("refuse une référence (%s) sans fiche", (_, surcharges, attendu) => {
     expect(erreursDe(surcharges)).toEqual([attendu]);

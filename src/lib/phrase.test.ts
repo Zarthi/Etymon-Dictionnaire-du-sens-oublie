@@ -57,6 +57,31 @@ describe("la phrase de la chaîne", () => {
   });
 });
 
+describe("le croisement", () => {
+  it("croisé avec une forme d'une autre langue, la forme reconstruite en italique comme les autres", () => {
+    const chetif: Maillon[] = [
+      { forme: "captivus", langue: "latin", sens: "prisonnier", croisement: [{ forme: "*cactos", langue: "gaulois", sens: "prisonnier" }] },
+    ];
+    expect(phrase(chetif)).toBe(`Du latin captivus, croisé avec le gaulois *cactos, ${q("prisonnier")}.`);
+    const segments = phraseChaine(chetif, langue);
+    expect(segments).toContainEqual({ type: "forme", forme: "*cactos" });
+  });
+
+  it("élision, translittération, plusieurs formes", () => {
+    const algorithme: Maillon[] = [
+      {
+        forme: "algorisme",
+        langue: "ancien français",
+        croisement: [
+          { forme: "ἀριθμός", langue: "grec ancien", sens: "nombre" },
+          { forme: "صفر", translitteration: "ṣifr", langue: "arabe" },
+        ],
+      },
+    ];
+    expect(phrase(algorithme)).toBe(`De l'ancien français algorisme, croisé avec le grec ancien ἀριθμός, ${q("nombre")}, et avec l'arabe صفر.`);
+  });
+});
+
 describe("les hypothèses", () => {
   const religion: Maillon[] = [
     { forme: "religio", langue: "latin", sens: "attention scrupuleuse, scrupule" },

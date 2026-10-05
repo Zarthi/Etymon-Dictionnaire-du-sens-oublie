@@ -163,3 +163,12 @@ Causes, et ce qui change :
   (*De la langue latine*, VI, 66), que AGENTS.md §5 compte parmi les sources des lectures, lit
   *legere*, *collegae* et *diligens* ; aucune tradition de la liste ne lui convenait. À retirer à
   la relecture si Thibault la juge de trop.
+
+## 2026-10-05 — Affinage du modèle entre deux lots
+
+- **`croisement` sur un maillon** : liste de formes (`forme`, `langue`, `sens?`, `translitteration?`)
+  avec lesquelles la forme du maillon s'est croisée (*chétif* : *captivus* et le gaulois
+  *\*cactos* ; *algorithme* : *algorisme* et ἀριθμός, TLFi). Affiché « …, croisé avec le gaulois
+  *cactos ». Les formes comptent comme formes de la chaîne. Seulement si une source le dit.
+- **Tenant ouvrage** : `selon` accepte l'identifiant d'un ouvrage (Lewis & Short), pour une hypothèse
+  tenue par un dictionnaire sans auteur unique ; la page de l'ouvrage liste ses hypothèses.

@@ -59,6 +59,7 @@ export function formesDuMaillon(m: Maillon): AvecForme[] {
   const formes: AvecForme[] = [];
   if (m.forme) formes.push({ forme: m.forme, translitteration: m.translitteration });
   for (const e of m.elements ?? []) formes.push(e);
+  for (const x of m.croisement ?? []) formes.push(x);
   for (const a of m.alternatives?.formes ?? []) {
     if (a.forme) formes.push({ forme: a.forme, translitteration: a.translitteration });
     for (const e of a.elements ?? []) formes.push(e);

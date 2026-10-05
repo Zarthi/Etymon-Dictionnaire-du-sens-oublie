@@ -15,6 +15,7 @@ export const grammaire: Grammaire = {
   origine: (langue) => (ELISION.test(langue) ? `de l'${langue}` : `du ${langue}`),
   de: (forme) => (ELISION.test(forme.replace(/^\*/, "")) ? "d'" : "de "),
   sur: (langue) => (ELISION.test(langue) ? `sur l'${langue}` : `sur le ${langue}`),
+  avec: (langue) => (ELISION.test(langue) ? `avec l'${langue}` : `avec le ${langue}`),
   dateLongue: (dateIso) =>
     new Date(`${dateIso}T00:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }),
   guillemets: [`«${NBSP}`, `${NBSP}»`],
@@ -79,6 +80,7 @@ export const messages = {
     compose: "Composé ",
     plusHaut: `${NBSP}; plus haut, `,
     composeDe: ", composé ",
+    croise: ", croisé ",
     forgePar: ", forgé par ",
     dans: ", dans ",
     calque: ", calque ",
@@ -129,6 +131,7 @@ export const messages = {
     licence: (licence: string) => `Licence${deuxPoints} ${licence}.`,
     lire: "Lire le texte",
     lectures: "Mots éclairés",
+    hypotheses: "Étymologies proposées",
     forges: "Mots forgés dans cet ouvrage",
     issus: "Mots issus de son titre",
   },
