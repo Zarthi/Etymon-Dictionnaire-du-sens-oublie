@@ -1,0 +1,43 @@
+mot: joie
+nature: [ nom féminin ]
+etymologie:
+  - forme: gaudia
+    langue: bas latin
+  - forme: gaudium
+    langue: latin
+    sens: joie intérieure, contentement
+explication: >-
+  Le latin opposait gaudium, que l'âme éprouve avec mesure, à la joie qui éclate
+  au dehors, nommée d'un autre mot. Vers 1100, joie se disait déjà de ce
+  sentiment dans ses manifestations ; le mot nomme aujourd'hui l'émotion vive
+  qui emplit l'être, et aussi la liesse publique.
+renvois: [ plaisir, bonheur ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: joie
+  - ouvrage: littre
+    entree: joie
+  - ouvrage: lewis-short
+    entree: gaudium
+  - ouvrage: lewis-short
+    entree: gaudeo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
+tradition:
+  lectures:
+    - texte: "Selon les stoïciens, le gaudium est l'élévation de l'âme qui exulte de ce qui en est digne ; l'autre joie, sans frein, ignore la mesure. D'où la parole de l'Écriture : il n'y a pas de gaudium pour les impies."
+      citation: "Stoici sic distinguunt: gaudium quippe esse aiunt elationem animi […] in his quae digna sunt exsultantis, laetitiam vero effrenatam animi […] elationem, quae modum nesciat; et in his quoque quae vitio sunt mista laetetur. Unde et Scriptura: Non est gaudium […] impiis, dicit Dominus."
+      sources:
+        - ouvrage: differences
+          entree: "I, 265"
+          url: https://la.wikisource.org/wiki/Differentiae
+    - texte: "Le nom de gaudium ne convient qu'au plaisir qui suit la raison : on ne l'attribue pas aux bêtes, à qui l'on prête seulement le plaisir."
+      citation: "Sed nomen gaudii non habet locum nisi in delectatione quae consequitur rationem, unde gaudium non attribuimus brutis animalibus, sed solum nomen delectationis."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 31, a. 3, co."
+          url: https://www.corpusthomisticum.org/sth2026.html

@@ -1,0 +1,27 @@
+mot: plaisir
+nature: [ nom masculin ]
+etymologie:
+  - forme: plaisir
+    langue: ancien français
+  - forme: placere
+    langue: latin
+    sens: plaire, être agréable, agréer
+explication: >-
+  Plaisir était un infinitif de plaire, employé comme nom : vers 1100, à son
+  plaisir, c'est à son gré, et le plaisir dit une volonté, d'où le bon plaisir
+  du roi. Le sens de sensation agréable n'est attesté qu'en 1349 ; le mot nomme
+  aujourd'hui l'état agréable que donne un désir satisfait.
+famille: [ plaire ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: plaisir
+  - ouvrage: littre
+    entree: plaire
+  - ouvrage: lewis-short
+    entree: placeo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,43 @@
+mot: envie
+nature: [ nom féminin ]
+etymologie:
+  - forme: invidia
+    langue: latin
+    sens: malveillance, jalousie
+  - forme: invidere
+    langue: latin
+    sens: regarder d'un œil malveillant, jeter le mauvais œil
+    elements:
+      - forme: in
+        sens: en
+      - forme: videre
+        sens: voir
+explication: >-
+  Vers 980, envie nommait l'hostilité, la haine ; en 1155, la jalousie haineuse
+  devant les avantages d'autrui, et déjà le désir de quelque chose. Le mot dit
+  aujourd'hui le besoin, le désir (avoir envie de), et le désir de ce qu'un
+  autre possède ; le regard malveillant d'invidere ne s'y entend plus.
+famille: [ envier, envieux ]
+themes: [ émotions, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: envie
+  - ouvrage: littre
+    entree: envier
+  - ouvrage: lewis-short
+    entree: invidia
+  - ouvrage: lewis-short
+    entree: invideo1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
+tradition:
+  lectures:
+    - texte: "L'invidia se tourmente du bonheur d'un autre, et son nom vient de ce qu'elle regarde trop ce bonheur."
+      citation: "invidia vero, ut dictum est, aliena felicitate torquetur […] Invidiae autem nomen dictum est a nimis intuendo felicitatem […] alterius"
+      sources:
+        - ouvrage: differences
+          entree: "I, 610"
+          url: https://la.wikisource.org/wiki/Differentiae

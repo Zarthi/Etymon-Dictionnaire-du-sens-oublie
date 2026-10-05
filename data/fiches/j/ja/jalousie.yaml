@@ -1,0 +1,44 @@
+mot: jalousie
+nature: [ nom féminin ]
+etymologie:
+  - forme: jaloux
+    langue: français
+  - forme: zelosus
+    langue: bas latin
+    sens: plein d'amour et de prévenance
+  - forme: zelus
+    langue: latin
+  - forme: ζῆλος
+    langue: grec ancien
+    sens: ardeur, émulation, jalousie
+explication: >-
+  Entre 1181 et 1191, jalousie disait l'inquiétude de l'amant sur la fidélité de
+  l'être aimé ; en 1501, l'envie devant ce qu'un autre possède. Le mot nomme
+  aujourd'hui l'amour exclusif qui craint l'infidélité et la peine devant les
+  biens d'autrui ; zèle, issu du même mot latin, a gardé l'ardeur.
+famille: [ jaloux ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: jalousie
+  - ouvrage: tlfi
+    entree: jaloux
+  - ouvrage: littre
+    entree: jaloux
+  - ouvrage: lewis-short
+    entree: zelus
+  - ouvrage: bailly
+    entree: ζῆλος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
+tradition:
+  lectures:
+    - texte: "Le zelus naît de l'intensité de l'amour : qui convoite ardemment se dresse contre tout ce qui l'empêche de jouir en paix de ce qu'il aime ; ainsi les maris sont dits zelare leurs épouses, pour qu'aucun partage ne leur ôte la singularité qu'ils cherchent en elles."
+      citation: "zelus, quocumque modo sumatur, ex intensione amoris provenit. […] Nam in amore concupiscentiae, qui intense aliquid concupiscit, movetur contra omne illud quod repugnat consecutioni vel fruitioni quietae eius quod amatur. Et hoc modo viri dicuntur zelare uxores, ne per consortium aliorum impediatur singularitas quam in uxore quaerunt."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 28, a. 4, co."
+          url: https://www.corpusthomisticum.org/sth2026.html

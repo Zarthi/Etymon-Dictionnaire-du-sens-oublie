@@ -1,0 +1,27 @@
+mot: volupté
+nature: [ nom féminin ]
+etymologie:
+  - forme: voluptas
+    langue: latin
+    sens: plaisir, de l'âme comme du corps
+explication: >-
+  Volupté est entré en français pour les plaisirs des sens (1404), puis le
+  plaisir sexuel (1554) ; la délectation de l'esprit, que voluptas disait aussi,
+  n'y est attestée qu'en 1588. Le mot dit aujourd'hui l'impression agréable des
+  sens et de l'amour, et la vive satisfaction de l'esprit.
+renvois: [ luxure ]
+themes: [ émotions, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: volupté
+  - ouvrage: littre
+    entree: volupté
+  - ouvrage: lewis-short
+    entree: voluptas
+  - ouvrage: lewis-short
+    entree: volup
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

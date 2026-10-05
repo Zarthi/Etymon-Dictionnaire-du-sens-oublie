@@ -1,0 +1,39 @@
+mot: zèle
+nature: [ nom masculin ]
+etymologie:
+  - forme: zelus
+    langue: latin
+  - forme: ζῆλος
+    langue: grec ancien
+    sens: ardeur, émulation, jalousie
+explication: >-
+  Chez les auteurs chrétiens, zelus nommait aussi la colère de Dieu, la ferveur,
+  le zèle vengeur. Zèle est d'abord une vive ardeur en matière de religion (XIVe
+  siècle), puis, dès 1512, pour toute chose ; le mot dit aujourd'hui
+  l'empressement au service d'une cause, souvent excessif (faire du zèle).
+famille: [ zélé, jaloux, jalousie ]
+themes: [ morale, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: zèle
+  - ouvrage: littre
+    entree: zèle
+  - ouvrage: lewis-short
+    entree: zelus
+  - ouvrage: bailly
+    entree: ζῆλος
+  - ouvrage: bailly
+    entree: ζέω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
+tradition:
+  lectures:
+    - texte: "Le zelus naît de l'intensité de l'amour ; dans l'amitié, il porte à repousser tout ce qui s'oppose au bien de l'ami, et l'on est dit zelare pour Dieu quand on s'efforce d'écarter ce qui est contraire à son honneur ou à sa volonté."
+      citation: "zelus, quocumque modo sumatur, ex intensione amoris provenit. […] Amor autem amicitiae quaerit bonum amici, unde quando est intensus, facit hominem moveri contra omne illud quod repugnat bono amici. […] Et per hunc etiam modum aliquis dicitur zelare pro Deo, quando ea quae sunt contra honorem vel voluntatem Dei, repellere secundum posse conatur"
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 28, a. 4, co."
+          url: https://www.corpusthomisticum.org/sth2026.html

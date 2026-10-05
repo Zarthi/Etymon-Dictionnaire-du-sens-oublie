@@ -1,0 +1,39 @@
+mot: colère
+nature: [ nom féminin ]
+etymologie:
+  - forme: cholera
+    langue: latin
+    sens: maladie bilieuse, bile
+  - forme: χολέρα
+    langue: grec ancien
+    sens: choléra
+explication: >-
+  Vers 1265, colère nommait la bile, quand l'emportement se disait ire ; le sens
+  d'état affectif violent, que cholera avait pris chez Jérôme, n'est attesté
+  qu'en 1416. Le mot grec, d'où vient aussi choléra, nommait la maladie.
+renvois: [ fureur, rage ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: colère
+  - ouvrage: littre
+    entree: colère
+  - ouvrage: lewis-short
+    entree: cholera
+  - ouvrage: bailly
+    entree: χολέρα
+  - ouvrage: bailly
+    entree: χολή
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
+tradition:
+  lectures:
+    - texte: "Comme il y a quatre éléments, il y a quatre humeurs, et chacune imite le sien : la cholera imite le feu. Elle est dite fellicula, épanchement du fiel, car les Grecs nomment le fiel CHOLEN."
+      citation: "Sicut autem quattuor sunt elementa, sic et quattuor humores, et unusquisque humor suum elementum imitatur: sanguis aerem, cholera ignem […] unde et cholera, id est fellicula, nominata est, hoc est, fellis effusio. Graeci enim fel CHOLEN dicunt."
+      sources:
+        - ouvrage: etymologies
+          entree: "IV, 5, 3-4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
