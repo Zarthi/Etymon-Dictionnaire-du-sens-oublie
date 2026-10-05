@@ -96,3 +96,16 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Racine de *souffle* | le fait reste au dossier ; l'explication ne compare pas *souffle* et *esprit* ; renvoi *souffle* → *respirer* (sans racine commune) | les sources donnent deux étymons distincts (*sufflare*, de *sub* et *flare* ; *spiritus*, de *spirare*) mais ne les comparent pas en toutes lettres | à relire |
 | Sens d'*anima* | « souffle de vie » sur *animal*, « souffle, air » sur *âme* | chaque fiche suit la glose de son entrée (TLFi à *animal* ; Littré, TLFi, Lewis & Short à *âme*) | à relire |
 | Corpus de réflexe des lectures | noté au dossier en passe 2, avec les lectures ; pistes d'Isidore notées dès la passe 1 | la passe 1 ne rédige pas les lectures ; le drapeau `tradition` est posé d'après les passages lus | à relire |
+
+## 2026-10-05 — Lot 5 (passe 1 : lire, lecture, élire, élégant, intelligence, collègue, diligence, légende)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Origine de *collega* (*collègue*) | chemin `debattu` : *legare*, « envoyer avec une mission, députer » (Lewis & Short, de *lex*), en premier ; *colligere*, « recueillir, rassembler » (Littré), ensuite ; le TLFi ne remonte pas au-delà de *collega* | les deux sources se contredisent ; le Lewis & Short (1879) est le plus récent ; Gaffiot et Georges non joignables | à relire |
+| Tenants de *collega* | `selon: [emile-littre]` pour *colligere* ; aucun pour *legare* | le tenant est le Lewis & Short, un ouvrage sans fiche d'auteur ; `selon` n'accepte que des auteurs | à relire |
+| Varron et Isidore sur *collega* | pistes de lectures traditionnelles (drapeau `tradition`), non tenants | Varron tire *collegae* de *legere* (« qui una lecti »), non de *colligere* ; Isidore de *conligatio* : aucun des deux ne défend une des deux hypothèses telle que les dictionnaires la donnent | à relire |
+| Participe intermédiaire | *diligens* est un maillon de *diligence* ; *intelligens* n'en est pas un d'*intelligence* | le Littré place à *diligens* le passage de « qui aime » à « soigneux » ; le TLFi dérive *intelligentia* directement d'*intellegere* | à relire |
+| *élégant* | `incertain: true` ; chaîne *elegans* puis *eligere* | le Lewis & Short dit le rattachement probable (« prob. »), le Littré l'attribue aux étymologistes latins | à relire |
+| Sens de *legere* selon le composé | « cueillir » dans *eligere* (Littré, *élire*), « choisir » dans *intellegere* et *diligere* (Littré, *intelligent*, *dilection*), « ramasser, recueillir » seul (TLFi, *lire*) | chaque élément suit l'entrée de son composé (consigne de rédaction) | à relire |
+| *légende* | chemin `ordinaire`, non `consacre` | *legenda* est formé sur un verbe profane et son sens premier, « ce qui doit être lu », n'a rien de sacré, même si le mot naît dans l'usage liturgique | à relire |
+| *religion* et le lot | ni renvoi ni famille vers *religion* | *relegere* n'est qu'une des deux hypothèses de *religio* (une famille l'affirmerait) ; un renvoi suppose l'absence de racine commune | à relire |
