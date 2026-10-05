@@ -1,0 +1,38 @@
+mot: savoir
+nature: [ verbe ]
+etymologie:
+  - forme: "*sapēre"
+    langue: latin populaire
+  - forme: sapere
+    langue: latin
+    sens: avoir de la saveur
+explication: >-
+  Le latin sapere se disait aussi des personnes : avoir du discernement, être
+  sage ; avec un complément, il a signifié comprendre, savoir, et a pris la
+  place de scire. En ancien français, savoir employé seul signifiait encore
+  sentir et plaire, du XIIe au XIVe siècle.
+ecartees:
+  - forme: scire
+    langue: latin
+    sens: savoir
+    raison: La graphie sçavoir, aux XVe et XVIe siècles, supposait que le mot venait
+      de scire ; il vient de sapere.
+famille: [ savant, saveur, sage ]
+renvois: [ connaitre, science ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: savoir
+  - ouvrage: littre
+    entree: savoir
+  - ouvrage: lewis-short
+    entree: sapio
+  - ouvrage: tlfi
+    entree: savant
+  - ouvrage: littre
+    entree: saveur
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

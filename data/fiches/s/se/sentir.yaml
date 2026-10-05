@@ -1,0 +1,33 @@
+mot: sentir
+nature: [ verbe ]
+etymologie:
+  - forme: sentire
+    langue: latin
+    sens: percevoir par les sens et par l'intelligence
+explication: >-
+  Le sens olfactif de sentir ne semble pas attesté en latin ; il est très
+  répandu en gallo-roman. En français, sentir a d'abord dit percevoir par
+  intuition (vers 1100), puis percevoir par l'odorat (1121-1134) et exhaler une
+  odeur (1225-1250).
+famille: [ sens, sentiment, sensible, pressentir, ressentir ]
+themes: [ corps, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: sentir
+  - ouvrage: littre
+    entree: sentir
+  - ouvrage: lewis-short
+    entree: sentio
+  - ouvrage: tlfi
+    entree: sentiment
+  - ouvrage: tlfi
+    entree: sensible
+  - ouvrage: littre
+    entree: pressentir
+  - ouvrage: littre
+    entree: ressentir
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

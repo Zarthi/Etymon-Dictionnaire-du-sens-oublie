@@ -1,0 +1,30 @@
+mot: savant
+nature: [ adjectif ]
+etymologie:
+  - forme: savoir
+    langue: français
+  - forme: "*sapēre"
+    langue: latin populaire
+  - forme: sapere
+    langue: latin
+    sens: avoir de la saveur
+explication: >-
+  Le latin sapere n'a signifié savoir qu'ensuite, employé avec un complément.
+  Savant, ancien participe présent de savoir, se disait vers 1120 de la personne
+  qui sait ; il qualifie aujourd'hui qui a un grand savoir, et le nom (1588) la
+  personne de grande érudition.
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: savant
+  - ouvrage: littre
+    entree: savant
+  - ouvrage: tlfi
+    entree: savoir
+  - ouvrage: lewis-short
+    entree: sapio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

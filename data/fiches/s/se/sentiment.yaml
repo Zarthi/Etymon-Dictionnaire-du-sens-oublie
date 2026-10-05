@@ -1,0 +1,29 @@
+mot: sentiment
+nature: [ nom masculin ]
+etymologie:
+  - forme: sentement
+    langue: ancien français
+  - forme: sentir
+    langue: français
+  - forme: sentire
+    langue: latin
+    sens: percevoir par les sens et par l'intelligence
+explication: >-
+  À la fin du XIIe siècle, sentement nommait la sensation physique et la
+  connaissance d'une chose ; le sens d'émotion est attesté en 1279. Le mot
+  désigne aujourd'hui un état affectif, ou la conscience plus ou moins claire
+  qu'on a de quelque chose ; le sens de sensation a vieilli.
+renvois: [ passion ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: sentiment
+  - ouvrage: littre
+    entree: sentiment
+  - ouvrage: tlfi
+    entree: sentir
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
