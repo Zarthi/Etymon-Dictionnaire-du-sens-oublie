@@ -1,0 +1,34 @@
+mot: moment
+nature: [ nom masculin ]
+etymologie:
+  - forme: momentum
+    langue: latin
+    sens: mouvement, impulsion
+explication: >-
+  Momentum s'est dit du poids léger qui fait pencher la balance, d'où une
+  parcelle, puis une petite division du temps. Moment a d'abord nommé un très
+  petit espace de temps (1119) ; il désigne aussi un temps précis ou propice, et
+  la mécanique l'a repris au latin en 1634 (moment d'une force).
+famille: [ momentané, mouvement, mouvoir ]
+renvois: [ instant ]
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: "Le moment est le temps le plus petit et le plus resserré, nommé d'après le mouvement des astres : l'extrémité de l'heure, dans les courts intervalles où une chose cède la place à une autre."
+      citation: "Momentum est minimum atque angustissimum tempus, a motu siderum dictum. [2] Est enim extremitas horae in brevibus intervallis, cum aliquid sibi cedit atque succedit."
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 29, 1-2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: moment
+  - ouvrage: lewis-short
+    entree: momentum
+  - ouvrage: littre
+    entree: moment
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

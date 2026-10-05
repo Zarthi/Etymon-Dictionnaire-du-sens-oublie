@@ -1,0 +1,39 @@
+mot: occasion
+nature: [ nom féminin ]
+etymologie:
+  - forme: occasio
+    langue: latin
+    sens: moment favorable
+  - forme: occidere
+    langue: latin
+    sens: tomber
+explication: >-
+  Tiré de occidere, occasio a d'abord dit ce qui arrive, ce qui échoit. Occasion
+  a signifié en français raison, motif (1174), puis la circonstance qui vient à
+  propos (fin du XIVe siècle) ; il désigne aussi, depuis le XIXe siècle, l'achat
+  avantageux et le bien de seconde main.
+famille: [ occident, occasionnel, occasionner ]
+renvois: [ opportun ]
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: "L'occasion est la partie du temps qui porte en elle l'opportunité de faire ou de ne pas faire une chose. Elle diffère du temps en ceci : dans l'occasion, à l'espace de temps s'ajoute une opportunité d'agir."
+      citation: "pars temporis habens in se alicuius rei idoneam faciendi aut non faciendi opportunitatem. Quare cum tempore hoc differt […] in occasione ad spatium temporis faciendi quaedam opportunitas intellegitur adiuncta."
+      sources:
+        - ouvrage: de-l-invention
+          entree: "I, 27, 40"
+          url: https://www.thelatinlibrary.com/cicero/inventione1.shtml
+sources:
+  - ouvrage: tlfi
+    entree: occasion
+  - ouvrage: littre
+    entree: occasion
+  - ouvrage: lewis-short
+    entree: occasio
+  - ouvrage: littre
+    entree: occident
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

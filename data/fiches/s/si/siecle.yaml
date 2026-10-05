@@ -1,0 +1,39 @@
+mot: siècle
+nature: [ nom masculin ]
+etymologie:
+  - forme: saeculum
+    langue: latin
+    sens: génération, race
+explication: >-
+  Saeculum a désigné la durée d'une génération, puis, dans la langue chrétienne,
+  la vie présente et le monde, opposés à l'éternité. Siècle a d'abord nommé la
+  vie terrestre (881) ; la durée de cent ans n'est attestée en français que vers
+  1380, et la langue religieuse garde le sens de monde profane.
+famille: [ séculier, séculaire, séculariser ]
+themes: [ temps, religion ]
+tradition:
+  lectures:
+    - texte: "Les siècles sont faits de générations, et tiennent leur nom de ce qu'ils se suivent : les uns s'en vont, les autres leur succèdent."
+      citation: "Saecula generationibus constant; et inde saecula, quod se sequantur: abeuntibus enim aliis alia succedunt."
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 38, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+    - texte: "On a appelé siècle un espace de cent ans, d'après le vieillard, parce qu'on tenait cet espace pour le plus long que puisse atteindre la vieillesse des hommes."
+      citation: "Seclum spatium annorum centum vocarunt, dictum a sene, quod longissimum spatium senescendorum hominum id putarunt."
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 11"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+sources:
+  - ouvrage: tlfi
+    entree: siècle
+  - ouvrage: lewis-short
+    entree: saeculum
+  - ouvrage: littre
+    entree: siècle
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

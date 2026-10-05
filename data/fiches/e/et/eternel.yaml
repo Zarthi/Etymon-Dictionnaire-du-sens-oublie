@@ -1,0 +1,44 @@
+mot: éternel
+nature: [ adjectif ]
+etymologie:
+  - forme: aeternalis
+    langue: latin ecclésiastique
+  - forme: aeternus
+    langue: latin
+  - forme: aevum
+    langue: latin
+    sens: temps sans fin ; durée de la vie, âge
+explication: >-
+  Formé sur aevum, aeternus qualifiait ce qui n'a ni commencement ni fin.
+  Éternel le dit encore, et, substantivé, nomme Dieu ; par hyperbole, il se dit
+  aussi de ce qui semble ne devoir jamais finir, ou qui se répète sans cesse.
+famille: [ éternité, éterniser ]
+themes: [ temps, religion ]
+tradition:
+  lectures:
+    - texte: "L'aevum est l'âge perpétuel, dont on ne connaît ni le commencement ni la fin, que les Grecs nomment d'un mot qu'ils emploient tantôt pour le siècle, tantôt pour l'éternel."
+      citation: "Nam aevum est aetas perpetua, cuius neque initium neque extremum noscitur, quod Graeci vocant AIONAS; quod aliquando apud eos pro saeculo, aliquando pro aeterno ponitur."
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 38, 4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+    - texte: "Aevum vient de l'âge de toutes les années, et aeternus en dérive."
+      citation: "Aevum ab aetate omnium annorum (hinc aeviternum, quod factum est aeternum)"
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 11"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+sources:
+  - ouvrage: tlfi
+    entree: éternel
+  - ouvrage: littre
+    entree: éternel
+  - ouvrage: lewis-short
+    entree: aeternus
+  - ouvrage: lewis-short
+    entree: aevum
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

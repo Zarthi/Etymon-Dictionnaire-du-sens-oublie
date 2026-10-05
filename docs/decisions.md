@@ -347,3 +347,17 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Ouvrage *de-l-invention* | créé d'après la BnF (cb13169332m), auteur `ciceron` | citable pour la lecture de *patience* | à relire |
 | *compassion*, « chez Augustin » | laissé, malgré le contrôle « auteur nommé sans référence » | fait du Lewis & Short (*compatior*, Augustin, *Lettres* et *Confessions*) ; même cas que Littré dans *ennui* | à relire |
 
+
+## 2026-10-05 — Lot 14 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| *temps*, *moment*, *instant*, *éternel* | propositions du relecteur adoptées telles quelles (explications) | justes : le sens de durée était déjà latin ; la mécanique a repris *momentum* en 1634, elle ne l'a pas gardé ; *instare* relié au nom par « imminent » ; figure « élevé au-dessus de tout temps » retirée | à relire |
+| Raison de l'écartée de *saison* | « Les mots italien et espagnol qui l'appuyaient viennent de *statio* » ; ni Littré, ni *stagione*, ni *estacion* nommés | Littré, dictionnaire des sources, n'est pas cité dans un champ de la fiche (`npm run verifier`) ; un mot étranger cité doit être une forme de la chaîne | à relire |
+| Lectures de *siècle* | Isidore, V, 38, 1 (*sequi*) et Varron, VI, 11 (*seclum*, d'après *senex*) ; non retenus : *Différences*, I, 67, Augustin, *La Cité de Dieu*, XII, Thomas d'Aquin, Ia q. 10 | les deux premières lisent le mot et s'écartent de l'histoire ; les autres disent l'emploi (*saecula saeculorum*, *periodus*) sans en donner le nom ; la qualité, non la quantité | à relire |
+| Lectures d'*éternel* | Isidore, V, 38, 4 (*aevum*) et Varron, VI, 11 (*aevum* tiré de l'âge ; *aeternus* en vient) | toutes deux lisent une forme de la chaîne ; Varron tire *aevum* de l'âge, Isidore l'âge de *aevum* | à relire |
+| Lecture de *temps* | Varron, VI, 2, et Isidore, V, 35, 1 ; Cicéron, *De l'invention*, I, 26, 39, non retenu | Varron et Isidore tirent le nom du cours tempéré des astres, ou du tempérament des saisons ; Cicéron définit le temps sans rien dire de son nom | à relire |
+| Lecture d'*occasion* | Cicéron, *De l'invention*, I, 27, 40 ; *Différences*, I, 399, non retenu | Cicéron distingue *occasio* de *tempus* (une opportunité jointe à l'espace de temps) ; Isidore ne dit qu'une tournure (*occasio arrisit*) | à relire |
+| Lectures de *heure* et de *moment* | Isidore, V, 29, 2 (*hora*) et V, 29, 1-2 (*momentum*) | Isidore tient *hora* pour grec et y lit la limite du temps ; il nomme *momentum* d'après le mouvement des astres | à relire |
+| Mots étrangers dans les textes des lectures | *tempestiva*, *ora*, *αἰών*, *aeviternum*, *aetas* paraphrasés, non cités | règle : un mot étranger cité dans un texte est une forme de la chaîne ; la citation les garde | à relire |
+| Renvois numériques de Varron | « VI, 2 » et « VI, 11 », d'après le Lewis & Short (numérotation de Müller) | le texte en ligne (The Latin Library) n'a que des chapitres | à relire |

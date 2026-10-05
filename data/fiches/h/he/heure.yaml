@@ -1,0 +1,35 @@
+mot: heure
+nature: [ nom féminin ]
+etymologie:
+  - forme: hora
+    langue: latin
+    sens: espace de temps réglé par la nature, heure
+explication: >-
+  Les Romains comptaient douze heures du lever au coucher du soleil : l'heure
+  était plus longue en été qu'en hiver. Le mot désigne aujourd'hui un espace de
+  soixante minutes, un point du jour que donne l'horloge, et le moment propre à
+  quelque chose.
+famille: [ horaire ]
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: "Le nom est grec, et sonne pourtant latin ; l'heure est la limite du temps, comme le bord, dont le nom latin lui ressemble, est la limite de la mer, des fleuves, des vêtements."
+      citation: "Hora Graecum nomen est, et tamen Latinum sonat. Hora enim finis est temporis, sicut et ora sunt finis […] fluviorum, vestimentorum."
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 29, 2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: heure
+  - ouvrage: littre
+    entree: heure
+  - ouvrage: lewis-short
+    entree: hora
+  - ouvrage: bailly
+    entree: ὥρα
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

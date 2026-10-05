@@ -1,0 +1,16 @@
+nom: Auguste Scheler
+naissance: "1819"
+mort: "1890"
+description: >-
+  Philologue et lexicographe belge d'origine suisse (XIXe siècle), auteur d'un
+  Dictionnaire d'étymologie française d'après les résultats de la science
+  moderne.
+cite: [ Scheler ]
+sources:
+  - ouvrage: bnf
+    entree: cb123958398
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

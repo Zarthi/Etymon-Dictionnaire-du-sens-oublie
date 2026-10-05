@@ -5,7 +5,6 @@
 - { mot: sacrifice, statut: a-faire }
 - { mot: sacrilège, statut: a-faire }
 - { mot: saint, statut: a-faire }
-- { mot: saison, statut: a-faire }
 - { mot: salaire, statut: a-faire }
 - { mot: salut, statut: a-faire }
 - { mot: sanction, statut: a-faire }
@@ -28,7 +27,6 @@
 - { mot: sérieux, statut: a-faire }
 - { mot: serf, statut: a-faire }
 - { mot: sermon, statut: a-faire }
-- { mot: siècle, statut: a-faire }
 - { mot: silence, statut: a-faire }
 - { mot: simple, statut: a-faire }
 - { mot: sincère, statut: a-faire }

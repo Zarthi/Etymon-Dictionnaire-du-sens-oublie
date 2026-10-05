@@ -1,0 +1,33 @@
+mot: instant
+nature: [ adjectif ]
+etymologie:
+  - forme: instans
+    langue: latin
+    sens: présent, pressant
+  - forme: instare
+    langue: latin
+    sens: se tenir sur, serrer de près
+    elements:
+      - forme: in-
+        sens: sur
+      - forme: stare
+        sens: se tenir debout
+explication: >-
+  Instare s'est dit de ce qui approche, de ce qui est imminent, d'où instans,
+  présent. L'adjectif a gardé le sens de pressant (une prière instante) ; le
+  nom, attesté en 1377, ne désigne que le temps : un très petit espace de temps,
+  ou le moment présent.
+famille: [ instance, instamment, instantané ]
+themes: [ temps ]
+sources:
+  - ouvrage: tlfi
+    entree: instant
+  - ouvrage: lewis-short
+    entree: insto
+  - ouvrage: littre
+    entree: instant
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
