@@ -3,7 +3,7 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { parseArgs } from "node:util";
 import { cheminDossier, schemaDossier, sourcesDuDossier } from "./lib/atelier.ts";
-import { chercher, natureDepuisLittre } from "./lib/littre.ts";
+import { chercher, natureDuMot } from "./lib/littre.ts";
 import { lireReflexion, preparerAuteur, preparerFiche, preparerOuvrage, versYaml } from "./lib/redaction.ts";
 import { regenererContrat } from "./lib/regenerer.ts";
 import { cheminFiche, slug } from "./lib/validation.ts";
@@ -115,7 +115,7 @@ async function principal(): Promise<number> {
       refus.push(`${mot} : la fiche existe déjà (--remplacer pour l'écraser)`);
       continue;
     }
-    const natureLittre = (chercher(index, mot) ?? []).map((e) => natureDepuisLittre(e.nature)).find(Boolean);
+    const natureLittre = natureDuMot(chercher(index, mot) ?? [], mot);
     const resultat = preparerFiche(brute, { ...moteur, natureLittre });
     if ("erreurs" in resultat) {
       refus.push(...resultat.erreurs.map((e) => `${mot} › ${e}`));

@@ -82,6 +82,15 @@ export function chercher(index: IndexLittre, mot: string): EntreeLittre[] | unde
   return index[cle] ?? index[`${cle}s`] ?? index[cle.replace(/s$/, "")];
 }
 
+/**
+ * Nature d'un mot d'après ses entrées du Littré : celle de l'entrée écrite comme le mot, accents
+ * compris (« âme », non l'adjectif « amé », que la normalisation confond), sinon la première connue.
+ */
+export function natureDuMot(entrees: EntreeLittre[], mot: string): (typeof NATURES)[number] | undefined {
+  const exactes = entrees.filter((e) => e.terme.toLowerCase() === mot.toLowerCase());
+  return [...exactes, ...entrees].map((e) => natureDepuisLittre(e.nature)).find(Boolean);
+}
+
 /** Translittération des lettres grecques, pour comparer aux étymons écrits en alphabet latin. */
 const GREC: Record<string, string> = {
   α: "a", β: "b", γ: "g", δ: "d", ε: "e", ζ: "z", η: "e", θ: "th", ι: "i", κ: "k", ϰ: "k", λ: "l", μ: "m",

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { chercher, concorde, extraireEntrees, indexer, natureDepuisLittre, texteBrut, urlLittre } from "../lib/littre.ts";
+import { chercher, concorde, extraireEntrees, indexer, natureDepuisLittre, natureDuMot, texteBrut, urlLittre } from "../lib/littre.ts";
 
 /** Extrait au format XMLittré : entrée normale, homonyme, entrée sans étymologie, supplément. */
 const XML = `<?xml version="1.0" encoding="utf-8"?>
@@ -65,6 +65,17 @@ describe("indexer", () => {
     const index = indexer(extraireEntrees(XML));
     expect(Object.keys(index)).toEqual(["absolu", "ancetres", "etonner", "ennui", "en", "merci"]);
     expect(index.ennui).toHaveLength(2);
+  });
+});
+
+describe("natureDuMot", () => {
+  it("prend l'entrée écrite comme le mot, accents compris", () => {
+    const entrees = [
+      { terme: "AMÉ", nature: "adj.", etymologie: "" },
+      { terme: "ÂME", nature: "s. f.", etymologie: "" },
+    ];
+    expect(natureDuMot(entrees, "âme")).toBe(natureDepuisLittre("s. f."));
+    expect(natureDuMot(entrees, "amé")).toBe(natureDepuisLittre("adj."));
   });
 });
 
