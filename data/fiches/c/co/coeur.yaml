@@ -1,0 +1,33 @@
+mot: cœur
+nature: [ nom masculin ]
+etymologie:
+  - forme: cor
+    langue: latin
+    sens: cœur, siège de la vie, des sentiments et de l'intelligence
+explication: >-
+  Le français a reçu ces sens aux XIe et XIIe siècles ; la mémoire, que la
+  conception antique y plaçait aussi, reste dans « par cœur ». Mais le cœur
+  n'est plus le siège de l'intelligence : il désigne celui des sentiments, et
+  une connaissance intuitive que l'on oppose à l'intelligence rationnelle.
+famille: [ courage, accord, miséricorde, concorder ]
+themes: [ émotions, corps ]
+tradition:
+  lectures:
+    - texte: "Le nom du cœur viendrait du grec, ou du souci : c'est en lui que demeurent toute sollicitude et la cause du savoir."
+      citation: "Cor a Graeca appellatione derivatum, quod illi KARDIAN dicunt, sive a cura. In eo enim omnis sollicitudo et scientiae causa manet."
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 1, 118"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: cœur
+  - ouvrage: littre
+    entree: cœur
+  - ouvrage: lewis-short
+    entree: cor
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

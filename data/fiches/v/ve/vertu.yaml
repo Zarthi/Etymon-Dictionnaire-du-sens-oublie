@@ -1,0 +1,44 @@
+mot: vertu
+nature: [ nom féminin ]
+etymologie:
+  - forme: virtus
+    langue: latin
+    sens: virilité ; vigueur, courage, valeur
+  - forme: vir
+    langue: latin
+    sens: homme, par opposition à la femme
+explication: >-
+  Le français a d'abord entendu par vertu le pouvoir (fin du Xe siècle), puis la
+  vaillance (vers 1100) et la pratique du bien (vers 1145) ; au XVIIe siècle, le
+  mot s'est dit aussi de la chasteté féminine. Il nomme aujourd'hui la
+  disposition à faire le bien ; le pouvoir reste dans « en vertu de ».
+famille: [ vertueux, virtuel ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Vir est ainsi nommé parce qu'il y a en lui plus de force que chez les femmes, et c'est de là que virtus a reçu son nom."
+      citation: "Vir nuncupatus, quia maior in eo vis est quam in feminis: unde et virtus nomen accepit"
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 2, 17"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+    - texte: "Le nom de vertu désigne une perfection de la puissance ; or la perfection d'une chose se considère par rapport à sa fin, et la fin d'une puissance est l'acte."
+      citation: "virtus nominat quandam potentiae perfectionem. Uniuscuiusque autem perfectio praecipue consideratur in ordine ad suum finem. Finis autem potentiae actus est."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 55, a. 1"
+          url: https://www.corpusthomisticum.org/sth2055.html
+sources:
+  - ouvrage: tlfi
+    entree: vertu
+  - ouvrage: littre
+    entree: vertu
+  - ouvrage: lewis-short
+    entree: virtus
+  - ouvrage: lewis-short
+    entree: vir
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -150,3 +150,36 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Sens en tête de *vertu* | `premier: true` sur *virtus*, « virilité ; vigueur, courage, valeur » ; *vir*, « homme, par opposition à la femme », en maillon | « homme » seul, en tête, se lirait « être humain » ; *virtus* dit ce que *vir* apporte | à relire |
 | Chaîne de *virtuel* | *virtualis* (latin médiéval, « potentiel »), puis *virtus*, « force, puissance » ; *vir* non repris | le sens utile à *virtuel* est la force (Littré, Lewis & Short) ; *vir* n'ajoute rien | à relire |
 | *humilité*, *humain*, *courage*, *accord*, *virtuel* | drapeau `tradition` non posé | aucun passage du corpus ne lit *humilitas*, *humanus*, *coraticum*, *accordare* ni *virtualis* (Isidore lit *humilis*, X, 115 ; Thomas d'Aquin emploie *virtualis* sans le lire) | à relire |
+
+## 2026-10-05 — Lot 8 (passe 1 : savoir, savant, saveur, sage, sagesse, sens, sentir, sentiment, sensible)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Sens premier de *sapere* | « avoir de la saveur » (*savoir*, *savant*, *saveur*) ; « avoir du discernement, être sage » et « comprendre, savoir » dits dans l'explication de *savoir* | le TLFi, le Littré et le Lewis & Short placent d'abord le sens propre (des choses) ; le TLFi dit le sens transitif venu « ensuite » ; l'ordre entre la saveur et le discernement n'est pas daté, la fiche ne l'ordonne pas | à relire |
+| *scire* (*savoir*) | dans `ecartees` (graphie *sçavoir*, Littré), sans tenant ni `populaire` ; nommé aussi dans l'explication, comme verbe que *sapere* a remplacé (TLFi) | c'est une fausse étymologie savante, des scribes ; une seule forme sert aux deux mentions, l'app la met en italique | à relire |
+| Chaîne de *sage* | *\*sabius*, *\*sabidus*, *sapidus* (TLFi) ; le *\*sapius* du Littré non repris ; *sapiens* dans `ecartees` (Littré) | le TLFi est plus récent ; le Littré n'écarte pas sa propre forme, et le TLFi ne la discute pas : ce n'est ni une écartée ni une hypothèse débattue avec tenants | à relire |
+| Chaîne de *sagesse* et *savant* | le dérivé ouvre la chaîne (*sage*, *savoir*, langue `français`), puis toute la chaîne du mot de base, formes reconstruites comprises | comme *travail* et *ennui* ; « de *sage*, du latin *sapidus* » sauterait deux maillons | à relire |
+| *saveur* | *sapor* sans sens ; sens premier sur *sapere* | « goût, saveur » n'apprend rien sur *saveur* ; *sapere* porte le lien avec *savoir*, que dit l'explication | à relire |
+| *sens* « direction » | une seule fiche, *sens* (*sensus*) ; le sens de direction dit en une phrase, selon le TLFi (croisement avec un mot germanique, *sensus* n'ayant pas la notion de direction) ; pas de fiche homonyme | le TLFi en fait un article distinct, le Littré une extension du sens primitif : le TLFi, plus récent, est suivi ; la forme *sen* n'est pas citée (elle n'est pas dans la chaîne) ; une fiche *sens-2* ne remplirait le §3.3 que pour Thibault | à relire |
+| Famille de *sens* | *forcené*, *assener* exclus | ils viennent de *sen*, non de *sensus* (TLFi, Littré) | à relire |
+| Chaîne de *sentiment* | *sentement* (ancien français, sans sens), *sentir*, *sentire* | le TLFi en fait une réfection de *sentement*, dérivé de *sentir* | à relire |
+| *philosophie* | ni renvoi ni famille depuis *sage* ou *sagesse* | le Lewis & Short dit *sapio* apparenté à σοφός et le Littré rapporte qu'on rattache *sapere* à σοφός : racine commune possible (un renvoi la suppose absente), non établie (une famille l'affirmerait) | à relire |
+| Drapeau `tradition` | posé sur *sage*, *sagesse*, *sens* ; non posé sur les six autres | Isidore lit *sapiens* (X, 240) et *sensus* (XI, 1, 19), Thomas d'Aquin *sapientia* (I, q. 43, a. 5) ; *sapiens* et *sapientia* ne sont pas des maillons de *sage* et *sagesse* : à trancher en passe 2, comme *servitus* au lot 6 | à relire |
+
+## 2026-10-05 — Lot 7 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Sens en tête de *vertu* | `premier: true` retiré : le sens en tête est celui de *vir*, « homme, par opposition à la femme » (remplace la décision de passe 1) | proposition du relecteur : *vir* est un maillon sûr, et c'est la règle par défaut (§3.1), comme pour *humus* dans *humble* | à relire |
+| *\*accordare* | langue `latin`, non `latin populaire` | le TLFi dit « empr. au lat. » sans préciser (relecteur) | à relire |
+| Isidore, *Étymologies*, X, 37 (*concors*) et III, 6 (*chordas a corde*) | non retenus pour *accord* | *concors* et *chorda* ne sont pas des maillons (*chorda* est écartée) ; même règle qu'au lot 6 pour *servus* | à relire |
+| Thomas d'Aquin, IIa-IIae, q. 161, a. 1, ad 1 | retenu pour *humilité*, lu au Corpus Thomisticum (la Secunda secundae manque au corpus local) | il lit *humilis* (maillon d'*humilité*) et distingue l'humilité subie, peine, de l'humilité vertu : cela complète l'histoire du mot | à relire |
+| Thomas d'Aquin, Ia-IIae, q. 55, a. 1 | retenu pour *vertu* | « virtus nominat quandam potentiae perfectionem » lit le nom ; il complète l'histoire (force, pouvoir) | à relire |
+| Drapeau `tradition` d'*humain* et d'*humilité* | posé en passe 2 | Isidore lit *humanus* (X, 116), Thomas lit *humilis* à propos de l'humilité ; la décision de passe 1 (aucun passage) est donc revue | à relire |
+
+## 2026-10-05 — Lot 8 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Lectures de *sens* | Isidore, *Étymologies*, XI, 1, 19, et Augustin, *La Cité de Dieu*, XI, 3, retenus ; Isidore, XI, 1, 13 non retenu | XI, 1, 13 redit Augustin (l'esprit appelé *sensus*, d'où *sententia*) : une voix suffit, la plus ancienne | à relire |
+| Isidore (*sapiens a sapore*, X, 240) et Thomas d'Aquin (*sapientia, quasi sapida scientia*, I, q. 43, a. 5, ad 2) | non retenus sur *sage* et *sagesse* ; notés au corpus ; *sapience* ajouté aux candidats (`a-faire`) pour les accueillir | *sapiens* et *sapientia* ne sont pas des formes des chaînes (une lecture ne porte que sur le mot ou une forme de sa chaîne) | à relire |
