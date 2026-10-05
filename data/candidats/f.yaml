@@ -4,7 +4,6 @@
 - { mot: faible, statut: a-faire }
 - { mot: faillir, statut: a-faire }
 - { mot: familier, statut: a-faire }
-- { mot: famille, statut: a-faire }
 - { mot: fanatique, statut: a-faire }
 - { mot: fantaisie, statut: a-faire }
 - { mot: fantôme, statut: a-faire }
@@ -32,7 +31,6 @@
 - { mot: formidable, statut: a-faire }
 - { mot: fortune, statut: a-faire }
 - { mot: fou, statut: a-faire }
-- { mot: foyer, statut: a-faire }
 - { mot: fraternité, statut: a-faire }
 - { mot: frivole, statut: a-faire }
 - { mot: frugal, statut: a-faire }

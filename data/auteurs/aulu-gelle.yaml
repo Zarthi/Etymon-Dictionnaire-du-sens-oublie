@@ -1,0 +1,16 @@
+nom: Aulu-Gelle
+nomComplet: Aulus Gellius
+naissance: vers 123
+mort: vers 180
+description: >-
+  Grammairien romain du IIe siècle ; ses Nuits attiques rassemblent des notes
+  sur la langue, le droit et la philosophie, avec des citations d'auteurs
+  perdus.
+sources:
+  - ouvrage: bnf
+    entree: cb11886402k
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

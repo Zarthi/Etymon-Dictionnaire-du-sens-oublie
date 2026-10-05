@@ -1,0 +1,17 @@
+titre: Académiques
+titreOriginal: Academica
+auteur: ciceron
+licence: domaine public
+texte: https://la.wikisource.org/wiki/Academica_priora
+description: >-
+  Dialogues philosophiques de Cicéron sur la connaissance, entre la Nouvelle
+  Académie et Antiochus d'Ascalon ; le Lucullus en est le second livre de la
+  première rédaction.
+sources:
+  - ouvrage: bnf
+    entree: cb124305302
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

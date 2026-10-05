@@ -1,0 +1,16 @@
+nom: Nigidius Figulus
+nomComplet: Publius Nigidius Figulus
+naissance: vers 98 av. J.-C.
+mort: vers 44 av. J.-C.
+description: >-
+  Sénateur et érudit romain du Ier siècle av. J.-C., pythagoricien, auteur
+  d'ouvrages sur la grammaire, les dieux et la divination, connus par fragments.
+traditions: [ romaine ]
+sources:
+  - ouvrage: bnf
+    entree: cb12406787d
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

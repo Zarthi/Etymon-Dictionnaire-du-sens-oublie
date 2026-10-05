@@ -18,7 +18,6 @@
 - { mot: enchanter, statut: a-faire }
 - { mot: énergie, statut: a-faire }
 - { mot: énergumène, statut: a-faire }
-- { mot: enfant, statut: a-faire }
 - { mot: enfer, statut: a-faire }
 - { mot: engager, statut: a-faire }
 - { mot: énorme, statut: a-faire }
@@ -30,10 +29,8 @@
 - { mot: envie, statut: a-faire }
 - { mot: épargne, statut: a-faire }
 - { mot: épouvante, statut: a-faire }
-- { mot: époux, statut: a-faire }
 - { mot: équilibre, statut: a-faire }
 - { mot: équité, statut: a-faire }
-- { mot: erreur, statut: a-faire }
 - { mot: espace, statut: a-faire }
 - { mot: espérance, statut: a-faire }
 - { mot: espoir, statut: a-faire }
@@ -44,7 +41,6 @@
 - { mot: étymologie, statut: a-faire }
 - { mot: évangile, statut: a-faire }
 - { mot: évêque, statut: a-faire }
-- { mot: évidence, statut: a-faire }
 - { mot: évoluer, statut: a-faire }
 - { mot: exact, statut: a-faire }
 - { mot: exalter, statut: a-faire }

@@ -10,7 +10,6 @@
 - { mot: paroisse, statut: a-faire }
 - { mot: parole, statut: a-faire }
 - { mot: particulier, statut: a-faire }
-- { mot: patrie, statut: a-faire }
 - { mot: patron, statut: a-faire }
 - { mot: pauvre, statut: a-faire }
 - { mot: pays, statut: a-faire }
@@ -22,7 +21,6 @@
 - { mot: penser, statut: a-faire }
 - { mot: pension, statut: a-faire }
 - { mot: perdre, statut: a-faire }
-- { mot: père, statut: a-faire }
 - { mot: perfide, statut: a-faire }
 - { mot: péril, statut: a-faire }
 - { mot: persévérer, statut: a-faire }
@@ -62,7 +60,6 @@
 - { mot: présent, statut: a-faire }
 - { mot: président, statut: a-faire }
 - { mot: prêtre, statut: a-faire }
-- { mot: preuve, statut: a-faire }
 - { mot: prévenir, statut: a-faire }
 - { mot: prière, statut: a-faire }
 - { mot: prince, statut: a-faire }

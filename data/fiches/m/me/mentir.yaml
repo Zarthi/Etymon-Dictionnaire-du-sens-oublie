@@ -1,0 +1,46 @@
+mot: mentir
+nature: [ verbe ]
+etymologie:
+  - forme: mentiri
+    langue: latin
+  - forme: mens
+    langue: latin
+    sens: esprit, imagination
+explication: >-
+  Mentiri aurait d'abord signifié inventer, imaginer ; le verbe latin disait
+  aussi se tromper et contrefaire. En français, mentir, c'est affirmer pour vrai
+  ce qu'on sait faux, ou nier ce qui est vrai.
+incertain: true
+famille: [ menteur, démentir, mental, mensonge ]
+themes: [ parole, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: mentir
+  - ouvrage: littre
+    entree: mentir
+  - ouvrage: lewis-short
+    entree: mentior
+  - ouvrage: lewis-short
+    entree: mens
+  - ouvrage: littre
+    entree: menteur
+  - ouvrage: littre
+    entree: démentir
+  - ouvrage: littre
+    entree: mental
+  - ouvrage: littre
+    entree: mensonge
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Mentir n'est pas dire un mensonge : qui ment n'est pas trompé lui-même, il cherche à tromper autrui ; qui dit un mensonge est trompé lui-même."
+      citation: "Inter mendacium dicere et mentiri distat. Qui mentitur, ipse non fallitur, alterum fallere conatur; qui mendacium dicit, ipse fallitur."
+      auteur: nigidius-figulus
+      sources:
+        - ouvrage: nuits-attiques
+          entree: "XI, 11, 1"
+          url: https://www.thelatinlibrary.com/gellius/gellius11.shtml
+statut: brouillon

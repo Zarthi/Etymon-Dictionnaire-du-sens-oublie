@@ -1,0 +1,50 @@
+mot: vérité
+nature: [ nom féminin ]
+etymologie:
+  - forme: veritas
+    langue: latin
+    sens: le vrai, la réalité
+explication: >-
+  Le mot paraît dans la seconde moitié du Xe siècle pour l'opinion conforme à ce
+  qui est, en matière de religion, opposée à l'erreur ; aux XIIIe et XIVe
+  siècles, il nomme le caractère de toute connaissance jugée vraie. Il garde le
+  sens latin de réalité : ce qui existe indépendamment de l'esprit.
+famille: [ vrai, véritable, véridique, vérifier ]
+renvois: [ mensonge ]
+themes: [ savoir, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: vérité
+  - ouvrage: lewis-short
+    entree: veritas
+  - ouvrage: lewis-short
+    entree: verus
+  - ouvrage: littre
+    entree: vérité
+  - ouvrage: littre
+    entree: vrai
+  - ouvrage: littre
+    entree: véritable
+  - ouvrage: littre
+    entree: véridique
+  - ouvrage: littre
+    entree: vérifier
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "La vérité est du droit de nature, que nulle opinion n'a fait naître, avec la religion et la piété : c'est par elle qu'on dit, sans les altérer, les choses qui sont, qui ont été ou qui seront."
+      citation: "Naturae ius est, quod non opinio genuit, sed quaedam in natura vis insevit, ut religionem, pietatem, gratiam, vindicationem, observantiam, veritatem. […] per quam inmutata ea, quae sunt [ante] aut fuerunt aut futura sunt, dicuntur."
+      sources:
+        - ouvrage: de-l-invention
+          entree: "II, 161"
+          url: https://www.thelatinlibrary.com/cicero/inventione2.shtml
+    - texte: "La vérité est d'abord dans l'intelligence ; elle n'est dans les choses que secondairement, selon qu'elles se rapportent à une intelligence comme à leur principe."
+      citation: "Sic ergo veritas principaliter est in intellectu; secundario vero in rebus, secundum quod comparantur ad intellectum ut ad principium."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia, q. 16, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth1015.html
+statut: brouillon

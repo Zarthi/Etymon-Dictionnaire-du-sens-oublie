@@ -1,0 +1,50 @@
+mot: évidence
+nature: [ nom féminin ]
+etymologie:
+  - forme: evidentia
+    langue: latin
+  - forme: evidens
+    langue: latin
+    sens: visible, manifeste
+    elements:
+      - forme: ex
+        sens: hors de
+      - forme: videre
+        sens: voir
+explication: >-
+  En latin, evidentia se disait de la clarté, notamment de celle du discours. Le
+  mot français nomme ce qui entraîne aussitôt l'assentiment de l'esprit ; le
+  sens de ce qui se voit lui reste, comme dans « mettre en évidence », rendre
+  visible.
+famille: [ évident, évidemment ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: évidence
+  - ouvrage: littre
+    entree: évidence
+  - ouvrage: lewis-short
+    entree: evidentia
+  - ouvrage: lewis-short
+    entree: evidens
+  - ouvrage: tlfi
+    entree: évident
+  - ouvrage: littre
+    entree: évident
+  - ouvrage: lewis-short
+    entree: ex
+  - ouvrage: littre
+    entree: évidemment
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le mot des Grecs, on le rendra par evidentia, quitte à forger des mots ; et l'on jugeait qu'aucun discours ne peut être plus clair que l'évidence même, ni qu'il faille définir ce qui est si clair."
+      citation: "ut Graeci: perspicuitatem aut euidentiam nos, si placet, nominemus fabricemurque, si opus erit, uerba […] sed tamen orationem nullam putabant illustriorem ipsa euidentia reperiri posse nec ea, quae tam clara essent, definienda censebant."
+      sources:
+        - ouvrage: academiques
+          entree: "II, 6, 17"
+          url: https://la.wikisource.org/wiki/Academica_priora
+statut: brouillon

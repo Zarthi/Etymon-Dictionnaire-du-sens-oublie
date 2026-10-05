@@ -1,0 +1,41 @@
+mot: mensonge
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*mentionica"
+    langue: latin populaire
+  - forme: mentio
+    langue: bas latin
+    sens: mensonge
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: mentio
+          sens: action de rappeler, mention
+        - forme: mentiri
+          sens: ne pas dire la vérité
+explication: >-
+  Le bas latin aurait dit mentio d'une mention mensongère, puis du mensonge. Le
+  mot français nomme l'affirmation contraire à la vérité faite pour tromper ; il
+  se dit aussi, depuis le XIIe siècle, de l'illusion, de ce qui trompe.
+incertain: true
+famille: [ mensonger ]
+themes: [ parole, morale ]
+tradition:
+  renvois: [ mentir ]
+sources:
+  - ouvrage: tlfi
+    entree: mensonge
+  - ouvrage: lewis-short
+    entree: mentio1
+  - ouvrage: littre
+    entree: mensonge
+  - ouvrage: littre
+    entree: mensonger
+  - ouvrage: tlfi
+    entree: mentir
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

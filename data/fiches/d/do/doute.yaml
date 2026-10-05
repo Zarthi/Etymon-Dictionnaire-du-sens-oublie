@@ -1,0 +1,41 @@
+mot: doute
+nature: [ nom masculin ]
+etymologie:
+  - forme: douter
+    langue: français
+  - forme: dubitare
+    langue: latin
+    sens: osciller d'un parti à l'autre, hésiter
+  - forme: duo
+    langue: latin
+    sens: deux
+explication: >-
+  En ancien français, doute a d'abord nommé la crainte (vers 1050), sens que
+  redouter a gardé ; puis l'hésitation, l'incertitude (1155). Le mot nomme
+  aussi, depuis 1637, l'attitude philosophique qui tient tout jugement pour
+  douteux.
+famille: [ douter, douteux, redouter, dubitatif ]
+renvois: [ certitude ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: doute
+  - ouvrage: tlfi
+    entree: douter
+  - ouvrage: littre
+    entree: douter
+  - ouvrage: lewis-short
+    entree: dubito
+  - ouvrage: lewis-short
+    entree: dubius
+  - ouvrage: tlfi
+    entree: redouter
+  - ouvrage: littre
+    entree: douteux
+  - ouvrage: littre
+    entree: dubitatif
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
