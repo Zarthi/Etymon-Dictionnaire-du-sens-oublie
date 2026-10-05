@@ -134,3 +134,19 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Tradition « romaine » | ajoutée à data/traditions.json (passe 2), pour Varron | AGENTS.md §5 compte Varron parmi les sources des lectures ; aucune tradition existante ne lui convient ; une tradition de trop se retire plus aisément qu'elle ne s'ajoute | à relire |
 | Varron | fiche d'auteur `varron` (BnF cb119277168, tradition romaine) et ouvrage `de-la-langue-latine` (BnF cb12425965t, texte : thelatinlibrary.com) ; lectures sur *lire*, *collègue*, *diligence* (VI, 66) | ses étymologies, lues texte sous les yeux, lisent les mots eux-mêmes ; l'identifiant suit le titre français que le validateur exige | à relire |
 | Reprises de la relecture (*élire*, *intelligence*) | propositions adoptées, sauf « sens courant » et « ne garde que » (*élire*) et « surtout » (*intelligence*), retirés | le dossier ne dit ni quel sens est courant ni quel emploi domine | à relire |
+
+## 2026-10-05 — Lot 7 (passe 1 : homme, humain, humble, humilité, cœur, courage, accord, vertu, virtuel)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| *humus* dans la chaîne d'*homme* | maillon *humus*, « terre », après *homo*, avec `incertain: true` ; `premier: true` sur *homo*, « être humain » | le Lewis & Short met la racine de *homo* dans *humus*, le Littré n'y voit qu'une conjecture, le TLFi s'arrête à *homo* : la filiation n'est pas sûre, le sens en tête ne doit pas être « terre » | à relire |
+| Bopp (*bhūman*) pour *homo* | non retenu dans les écartées | le Littré le rejette d'une ligne (« on aurait eu fumon ») ; il faudrait une langue (sanscrit) et un auteur absents, pour un fait qui n'éclaire pas le mot | à relire |
+| *vir* dans l'explication d'*homme* | « en supplantant le mot dont vient *vertu* » | une forme citée dans un texte doit être de la chaîne ; *vir* ne l'est pas, *vertu* (fiche du lot) mène à lui | à relire |
+| *humus* dans *humble* et *humilité* | maillon *humus*, « terre », sens en tête (par défaut) | le Littré, le TLFi et le Lewis & Short tirent *humilis* de *humus* : c'est une filiation, non une conjecture | à relire |
+| Chaîne d'*humilité* | *humilitas*, *humilis*, *humus* | maillon par maillon, comme le Littré et le TLFi la donnent ; chemin `consacre` (sens chrétien de *humilitas*) | à relire |
+| Chaîne de *courage* | *cœur* (français), puis *cor*, « cœur » ; le *coraticum* du Littré n'est pas un maillon | le TLFi, plus récent, y voit un dérivé français de *cœur* en -age | à relire |
+| Sens de *cor* | « cœur, siège de la vie, des sentiments et de l'intelligence » sur *cœur* ; « cœur » sur *courage* et *accord* | chaque fiche suit son entrée : conception antique (TLFi, *cœur* ; Lewis & Short, *cor*) ; glose simple du Littré à *courage* et *accorder* | à relire |
+| Chaîne d'*accord* | *accorder*, *\*accordare* (sur le modèle de *concordare*, « être d'accord »), *cor* ; *chorda* dans les écartées, sans tenant | le TLFi (après Ernout) et le Littré tirent *accorder* de *cor* ; le sens de *\*accordare*, reconstruit, n'est pas attesté ; Ménage n'a pas de fiche d'auteur | à relire |
+| Sens en tête de *vertu* | `premier: true` sur *virtus*, « virilité ; vigueur, courage, valeur » ; *vir*, « homme, par opposition à la femme », en maillon | « homme » seul, en tête, se lirait « être humain » ; *virtus* dit ce que *vir* apporte | à relire |
+| Chaîne de *virtuel* | *virtualis* (latin médiéval, « potentiel »), puis *virtus*, « force, puissance » ; *vir* non repris | le sens utile à *virtuel* est la force (Littré, Lewis & Short) ; *vir* n'ajoute rien | à relire |
+| *humilité*, *humain*, *courage*, *accord*, *virtuel* | drapeau `tradition` non posé | aucun passage du corpus ne lit *humilitas*, *humanus*, *coraticum*, *accordare* ni *virtualis* (Isidore lit *humilis*, X, 115 ; Thomas d'Aquin emploie *virtualis* sans le lire) | à relire |
