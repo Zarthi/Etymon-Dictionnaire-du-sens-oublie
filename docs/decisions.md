@@ -250,3 +250,19 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Lecture de *légitime* | Varron, VI, 66 (*legitima*) retenu | *legitima* est le pluriel neutre de *legitimus*, forme de la chaîne ; Varron le tire de *legere*, non de *lex* : cela diffère de l'histoire | à relire |
 | Lecture d'*ordinaire* | Isidore, IX, 3, 33, retenu | il lit *ordinarius* (le soldat du rang, sans grade), ce qui complète l'histoire du sens « commun, moyen » | à relire |
 | Lectures de *roi* | Isidore (IX, 3, 4) et Augustin (*La Cité de Dieu*, V, 12) | Isidore lie le nom à la conduite droite ; Augustin oppose la discipline de celui qui dirige à l'orgueil de celui qui domine : deux apports distincts | à relire |
+
+## 2026-10-05 — Lot 11 (passe 1 : œuvre, ouvrage, ouvrier, opulent, loisir, oisif, négoce, école)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaîne de *œuvre* | *opera* seul, « peine prise à un travail, service » ; *opus* non repris | le TLFi fait d'*opera* un ancien pluriel d'*opus* (« ouvrage, travail ») : ce sens n'ajoute rien à celui d'*opera* (§3.2) ; le Lewis & Short distingue *opera*, peine prise de plein gré, d'*opus*, travail surtout mécanique : c'est ce qu'*œuvre* a quitté | à relire |
+| Chaîne de *ouvrage* | *œuvre* (français, sans sens), puis *opera* | le TLFi le dérive d'*œuvre* (suffixe *-age*) ; le Littré (*operaticum*, de *operari*) est plus ancien | à relire |
+| Chaîne de *ouvrier* | *operarius* seul, « homme de peine, travailleur » | *opera*, dernier maillon, n'y porterait pas de sens nouveau (règle du lot 9) ; la parenté avec *œuvre* est dans la famille | à relire |
+| *opulent* et *opus* | aucune parenté écrite (ni chaîne, ni famille) | le Lewis & Short renvoie d'*opus* à *ops* (« v. ops ») sans l'affirmer ; le Littré et le TLFi ne la disent pas | à relire |
+| Sens en tête de *opulent* | *ops*, « puissance, ressources, secours » ; *opulentus* sans sens | le Lewis & Short tire *opulentus* de *ops* et range ses sens : puissance, moyens et richesses, aide | à relire |
+| Chaîne de *loisir* | ancien français *loisir* (verbe, sans sens), puis *licere*, « être permis » | substantivation du verbe (TLFi, Littré) ; le sens du verbe français redirait celui de *licere* | à relire |
+| Chaîne de *oisif* | *oisdif* (croisé avec *oiseux*), *oisdive*, *oiseux*, *otiosus*, *otium* (« loisir, temps libre des affaires ») ; le couple *voisos*–*voisdie* non repris | la fiche suit le TLFi, plus récent que le Littré (*otiivus*) ; le modèle *voisdie* dit le procédé de dérivation, non un sens | à relire |
+| *négoce* | *negotium* découpé en *nec*, « ne pas », et *otium*, « loisir » ; *oisif* en famille, et réciproquement | le Littré et le Lewis & Short (Paul Diacre d'après Festus) donnent la composition ; même racine *otium* | à relire |
+| Sens en tête de *école* | *σχολή*, « arrêt, repos, loisir » ; *schola*, « loisir studieux, leçon » | le Bailly : « proprement arrêt, d'où repos, loisir » ; le TLFi : « proprement arrêt de travail » | à relire |
+| Drapeau `tradition` | posé sur *opulent* (Varron, V, 92), *négoce* (Isidore, XVIII, 15, 3), *loisir* (Cicéron, *Philippiques*, XIII, 14, à juger) ; non posé sur *œuvre*, *ouvrage*, *ouvrier*, *oisif*, *école* | le corpus n'a pour ces derniers que des emplois ; Isidore, XX, 4, lit *opulentia*, hors de la chaîne d'*opulent* | à relire |
+| Renvois | *œuvre* → *travail* ; *opulent* → *riche* ; *loisir* → *repos*, *vacances* ; *oisif* → *paresse* ; *négoce* → *commerce* | notions voisines sans racine commune ; *riche*, *repos*, *vacances*, *paresse*, *commerce* sont des candidats | à relire |
