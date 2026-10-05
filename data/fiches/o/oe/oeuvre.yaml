@@ -1,0 +1,26 @@
+mot: œuvre
+nature: [ nom féminin ]
+etymologie:
+  - forme: opera
+    langue: latin
+    sens: peine prise à un travail, service
+explication: >-
+  Opera supposait la libre volonté et le désir de servir. Dès le XIIe siècle,
+  œuvre nomme ce que le travail produit et l'action elle-même ; il se dit
+  aujourd'hui en particulier de la composition d'un artiste ou d'un écrivain.
+famille: [ ouvrage, ouvrier, œuvrer, désœuvré ]
+themes: [ travail, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: œuvre
+  - ouvrage: littre
+    entree: œuvre
+  - ouvrage: lewis-short
+    entree: opera
+  - ouvrage: lewis-short
+    entree: opus1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

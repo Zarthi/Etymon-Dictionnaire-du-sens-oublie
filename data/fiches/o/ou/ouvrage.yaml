@@ -1,0 +1,29 @@
+mot: ouvrage
+nature: [ nom masculin ]
+etymologie:
+  - forme: œuvre
+    langue: français
+  - forme: opera
+    langue: latin
+    sens: peine prise à un travail, service
+explication: >-
+  Au XIIIe siècle, ouvrage nomme l'action de travailler, puis le produit du
+  travail (1409) et l'œuvre de l'esprit (1478). Il garde ces trois sens : le
+  travail qu'on fait, la chose faite, dont l'ouvrage d'art, et la production de
+  l'esprit.
+famille: [ ouvrer, ouvragé, ouvrier ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: ouvrage
+  - ouvrage: littre
+    entree: ouvrage
+  - ouvrage: tlfi
+    entree: œuvre
+  - ouvrage: lewis-short
+    entree: opera
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,38 @@
+mot: loisir
+nature: [ nom masculin ]
+etymologie:
+  - forme: loisir
+    langue: ancien français
+  - forme: licere
+    langue: latin
+    sens: être permis
+explication: >-
+  Pris comme nom vers 1100, l'ancien verbe désigne la possibilité de faire une
+  chose ; vers 1165, le temps qu'il y faut ; à la fin du XIVe siècle, le temps
+  libre dont on fait ce qu'on veut. Le mot ne dit plus la permission, mais le
+  temps que laissent le travail et les obligations.
+famille: [ loisible, licite, licence ]
+renvois: [ repos, vacances ]
+themes: [ temps, société ]
+tradition:
+  lectures:
+    - texte: "Est permis ce qu'accordent les lois, la coutume des ancêtres et les institutions ; ce que chacun peut faire ne lui est pas permis pour autant, ni ce à quoi l'on ne fait pas obstacle."
+      citation: "licere id dicimus, quod legibus, quod more maiorum institutisque conceditur. Neque enim, quod quisque potest, id ei licet, nec, si non obstatur, propterea etiam permittitur."
+      sources:
+        - ouvrage: philippiques
+          entree: "XIII, 14"
+          url: https://www.thelatinlibrary.com/cicero/phil13.shtml
+sources:
+  - ouvrage: tlfi
+    entree: loisir
+  - ouvrage: littre
+    entree: loisir
+  - ouvrage: lewis-short
+    entree: licet
+  - ouvrage: tlfi
+    entree: loisible
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

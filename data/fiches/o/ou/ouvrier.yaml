@@ -1,0 +1,27 @@
+mot: ouvrier
+nature: [ nom ]
+etymologie:
+  - forme: operarius
+    langue: latin
+    sens: homme de peine, travailleur
+explication: >-
+  Au XIIe siècle, ouvrier nomme l'auteur d'un acte, puis, vers 1155, celui qui
+  loue ses services pour un salaire, et celui qui fait un travail avec habileté.
+  Il désigne aujourd'hui le travailleur manuel salarié, et encore celui qui
+  excelle dans son métier.
+famille: [ ouvrer, œuvre, ouvrage ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: tlfi
+    entree: ouvrier
+  - ouvrage: littre
+    entree: ouvrier
+  - ouvrage: lewis-short
+    entree: operarius
+  - ouvrage: tlfi
+    entree: ouvrer
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

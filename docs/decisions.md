@@ -266,3 +266,30 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Sens en tête de *école* | *σχολή*, « arrêt, repos, loisir » ; *schola*, « loisir studieux, leçon » | le Bailly : « proprement arrêt, d'où repos, loisir » ; le TLFi : « proprement arrêt de travail » | à relire |
 | Drapeau `tradition` | posé sur *opulent* (Varron, V, 92), *négoce* (Isidore, XVIII, 15, 3), *loisir* (Cicéron, *Philippiques*, XIII, 14, à juger) ; non posé sur *œuvre*, *ouvrage*, *ouvrier*, *oisif*, *école* | le corpus n'a pour ces derniers que des emplois ; Isidore, XX, 4, lit *opulentia*, hors de la chaîne d'*opulent* | à relire |
 | Renvois | *œuvre* → *travail* ; *opulent* → *riche* ; *loisir* → *repos*, *vacances* ; *oisif* → *paresse* ; *négoce* → *commerce* | notions voisines sans racine commune ; *riche*, *repos*, *vacances*, *paresse*, *commerce* sont des candidats | à relire |
+
+## 2026-10-05 — Lot 12 (passe 1 : monde, cosmos, univers, nature, naître, planète, désastre, considérer)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Sens en tête de *monde* | *mundus*, « parure, toilette d'une femme », avec `modele` *κόσμος* (« ordre, parure », relation `calque`) | sens propre au Lewis & Short (*mundus2*, Tite-Live 34, 7) ; le sens d'univers traduit *κόσμος* (Littré, Lewis & Short, Pline, Cicéron) ; `calque` est la relation la plus proche d'un calque de sens | à relire |
+| Adjectif *mundus* (« propre, net ») | non repris en maillon ; *immonde* hors famille | le sens premier du nom est la parure ; l'adjectif n'éclaire pas *monde* et ferait passer « propre » en tête | à relire |
+| Chaîne de *cosmos* | ouverte par le grec *κόσμος*, « ordre, bon ordre » ; Humboldt dans l'explication seulement | le TLFi le donne emprunté au grec, la première attestation étant le titre de la traduction du *Kosmos* (allemand) | à relire |
+| Chaîne d'*univers* | *universum* (sans sens), puis *universus*, « tout entier, rassemblé en un », éléments *unus* et *versus* | le TLFi tire le nom de *universum*, neutre substantivé de *universus* ; « rassemblé, mis en un » est la glose du Littré | à relire |
+| Sens en tête de *nature* | *natura*, « naissance » | sens propre au Lewis & Short et au TLFi (« le fait de la naissance ») ; « l'engendrante » du Littré repose sur une lecture du suffixe que les deux autres ne suivent pas | à relire |
+| Chaîne de *naître* | *nascere* (latin, sans sens), puis *nasci*, « être engendré, naître » | le TLFi donne *nascere* chez Caton (latin), le Littré en bas latin : on suit le TLFi ; « être engendré » : Littré (*gnascor*), Lewis & Short (« to be begotten ») | à relire |
+| Chaîne de *planète* | *planeta*, puis *πλάνης*, « errant » ; *πλανάω* non repris | le TLFi tire *planeta* du pluriel *πλάνητες*, de *πλάνης* ; le Bailly range *πλάνητες ἀστέρες* sous *πλάνης* ; « égarer » n'ajoute pas à « errant » | à relire |
+| Chaîne de *désastre* | italien *disastro*, « mauvais astre », éléments *dis-* (« mauvais ») et *astro* ; pas de *astrum* | le TLFi (emprunt à l'italien) dépasse le Littré (formation française *dés-* et *astre*) ; *astrum* n'ajoute pas de sens | à relire |
+| Origine de *considerare* | *considerare*, « examiner attentivement » (`premier`), puis *sidus*, « astre, constellation » ; `incertain: true`, sans alternatives | le Littré affirme le rattachement à *sidus* ; le Lewis & Short le donne « selon Corssen » et Festus ; le TLFi n'en dit rien ; aucune autre hypothèse dans les sources consultées ; même forme que *homme* (*humus*) et *élégant* | à relire |
+| *désirer* depuis *considérer* | ni famille ni renvoi | apparenté par la même hypothèse seulement (« cf. desidero », Lewis & Short) ; règle du lot 10 | à relire |
+| Renvois | *monde* → *univers* ; *cosmos* → *monde*, *univers* ; *désastre* → *catastrophe*, *malheur* ; *considérer* → *contempler*, *estimer* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
+| Drapeau `tradition` | posé sur *monde*, *cosmos*, *nature*, *planète*, *considérer* ; non posé sur *univers*, *naître*, *désastre* | Isidore lit *mundus* (III, 29, 1 ; XIII, 1), *natura* (XI, 1, 1), *planetae* (III, 71, 20), *sidera* par *considerare* (III, 71, 4) ; Thomas d'Aquin lit *natura* (Ia q. 29 a. 1 ad 4 ; IIIa q. 2 a. 1) ; pour *cosmos*, pistes hors corpus (Platon, *Gorgias* ; Plutarque) ; rien qui lise *universus*, *nasci* ou *disastro* | à relire |
+
+## 2026-10-05 — Lot 11 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| *œuvre*, *négoce* | propositions du relecteur adoptées : explication d'*œuvre* (« Opera supposait la libre volonté et le désir de servir ») ; renvois *travail* et *commerce* retirés | le sens affiché n'est plus redit ; un mot nommé dans l'explication n'est pas aussi un renvoi | à relire |
+| *oisif* | `croisement` avec *oiseux* gardé | le TLFi : « issu, sous l'influence de *oiseux*, de l'ancien français *oisdif* » | à relire |
+| Cicéron, *Philippiques*, XIII, 14 (*loisir*) | retenu ; `traditions: [ romaine ]` ajouté à `ciceron` (champ seul, la fiche existait) ; ouvrage `philippiques` créé d'après la BnF (cb120322781) | Cicéron définit *licere*, forme de la chaîne : est permis ce qu'accordent les lois, la coutume et les institutions, non ce que chacun peut ; `npm run bnf` refuse de réécrire une fiche existante | à relire |
+| Varron, V, 92 (*opulent*) | retenu | il lit *opulentus* et le rattache à *inops* et à *copiosus*, ce que la fiche ne dit pas ; V, 64 (*Ops*, la déesse) non retenu | à relire |
+| Isidore, XVIII, 15, 3 (*négoce*) | retenu, sans répéter *nec otium* | il distingue les sens du mot (affaire, procès) et le réserve aux procès, le commerce ayant son mot propre | à relire |
