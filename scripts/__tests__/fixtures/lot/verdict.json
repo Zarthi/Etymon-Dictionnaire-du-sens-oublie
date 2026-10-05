@@ -1,0 +1,37 @@
+{
+  "decision": "a-reprendre",
+  "remarques": [
+    {
+      "critere": "justesse",
+      "champ": "explication",
+      "probleme": "« le mot dit » : le mot ne dit rien, il désigne.",
+      "remplacement": { "champ": "explication", "valeur": "Vers 1100, étonner, c'était être étourdi par un coup violent ; le mot désigne aujourd'hui la surprise devant l'inattendu." }
+    },
+    {
+      "critere": "regle",
+      "champ": "renvois",
+      "probleme": "stupeur est un mot de la famille de l'explication, non une notion voisine.",
+      "remplacement": { "champ": "renvois.1", "valeur": null }
+    },
+    {
+      "critere": "dossier",
+      "champ": "tradition.lectures.1.texte",
+      "probleme": "le texte redit la citation.",
+      "remplacement": { "champ": "tradition.lectures.1.texte", "valeur": "Ce que le passage dit du mot." }
+    },
+    { "critere": "dossier", "champ": "etymologie.0.sens", "probleme": "le sens n'est pas dans le dossier." },
+    {
+      "critere": "regle",
+      "champ": "themes",
+      "probleme": "chemin faux dans le remplacement.",
+      "remplacement": { "champ": "themes.3.nom", "valeur": "x" }
+    },
+    {
+      "critere": "justesse",
+      "champ": "explication",
+      "probleme": "déjà réglée à la reprise précédente.",
+      "statut": "appliquee",
+      "remplacement": { "champ": "explication", "valeur": "ne doit pas être réappliqué" }
+    }
+  ]
+}

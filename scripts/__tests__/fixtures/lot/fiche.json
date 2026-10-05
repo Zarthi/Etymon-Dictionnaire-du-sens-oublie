@@ -1,0 +1,47 @@
+{
+  "mot": "étonner",
+  "nature": [
+    "verbe"
+  ],
+  "etymologie": [
+    {
+      "forme": "*extonare",
+      "langue": "latin populaire",
+      "sens": "ébranler comme par un coup de tonnerre"
+    }
+  ],
+  "explication": "Vers 1100, étonner, c'était être étourdi par un coup violent ; le mot dit aujourd'hui la surprise devant l'inattendu.",
+  "renvois": [
+    "surprise",
+    "stupeur"
+  ],
+  "themes": [
+    "émotions"
+  ],
+  "tradition": {
+    "lectures": [
+      {
+        "texte": "Premier texte.",
+        "citation": "Premier passage.",
+        "sources": [
+          {
+            "ouvrage": "etymologies",
+            "entree": "X, 1",
+            "url": "https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X"
+          }
+        ]
+      },
+      {
+        "texte": "Second texte, qui redit sa citation.",
+        "citation": "Second passage.",
+        "sources": [
+          {
+            "ouvrage": "etymologies",
+            "entree": "X, 2",
+            "url": "https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X"
+          }
+        ]
+      }
+    ]
+  }
+}

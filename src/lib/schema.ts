@@ -319,16 +319,16 @@ const objetFiche = z
 export const schemaFiche = objetFiche.refine(sourcee, MESSAGE_SOURCE).describe("Fiche d'un mot : son étymologie, ce que le sens premier révèle.");
 
 /**
- * Ce que l'IA écrit pour une fiche (npm run rediger) : le contenu seul. Le socle éditorial et
- * les lectures traditionnelles (passe à part) sont écrits par les scripts ; la nature est tirée
- * du Littré quand elle manque.
+ * Ce que l'IA écrit pour une fiche (npm run rediger) : le contenu seul, lectures traditionnelles
+ * comprises (écrites dans une passe à part). Le socle éditorial est écrit par les scripts ; la
+ * nature est tirée du Littré quand elle manque.
  */
 export const schemaEntreeRedaction = objetFiche
   // Un mot sacré ne se rédige pas de mémoire en lot : il se rédige à part, texte d'origine sous les yeux.
   .omit({ ...CHAMPS_SOCLE, sacre: true })
   .extend({
     nature: objetFiche.shape.nature.optional().describe("Catégorie(s) grammaticale(s) ; tirée du Littré si absente."),
-    tradition: objetTradition.omit({ lectures: true }).strict().optional().describe("Les mots où la tradition parle de celui-ci ; les lectures s'écrivent à part."),
+    tradition: objetTradition.optional().describe("Les mots où la tradition parle de celui-ci, et ses lectures (passe à part, texte source sous les yeux)."),
   })
   .strict()
   .describe("Contenu d'une fiche rédigée par l'IA.");

@@ -3,9 +3,9 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
-import { chercherDans, chercherParagraphes, CORPUS, pageSuivante, pageWikisource, paragraphesThomas, repereDePage, type Oeuvre, type Page } from "./lib/corpus.ts";
+import { chercherDans, chercherParagraphes, CORPUS, lignePassage, pageSuivante, pageWikisource, paragraphesThomas, repereDePage, type Oeuvre, type Page, type Passage } from "./lib/corpus.ts";
 import { texteDePage } from "./lib/en-ligne.ts";
-import { lire as lirePage, type Lecture } from "./lib/reseau.ts";
+import { lireAvecRelance, type Lecture } from "./lib/reseau.ts";
 
 /**
  * Corpus de réflexe des lectures traditionnelles (scripts/lib/corpus.ts), en local, hors du dépôt,
@@ -24,14 +24,7 @@ const attendre = (ms: number) => new Promise((r) => setTimeout(r, ms));
 /** Wikimedia demande qu'un script s'identifie, et limite le débit : une page à la fois, reprise après un refus. */
 const ENTETES = { "User-Agent": "Etymon/0.1 (https://github.com/Zarthi/Etymon-Dictionnaire-du-sens-oublie)" };
 
-async function lire(url: string, encodage?: string): Promise<Lecture> {
-  let page = await lirePage(url, ENTETES, encodage);
-  for (let essai = 1; essai < 4 && !page.lue && page.statut === 429; essai++) {
-    await attendre(15_000 * essai);
-    page = await lirePage(url, ENTETES, encodage);
-  }
-  return page;
-}
+const lire = (url: string, encodage?: string): Promise<Lecture> => lireAvecRelance(url, ENTETES, encodage);
 
 /** Pages d'une œuvre : sa liste, ou celles de son préfixe sur Wikisource, demandées à l'API. */
 async function pagesDe(oeuvre: Oeuvre): Promise<Page[]> {
@@ -107,28 +100,44 @@ async function telecharger(): Promise<number> {
   return echecs > 0 ? 1 : 0;
 }
 
+/** Le corpus a-t-il été téléchargé (npm run corpus -- telecharger) ? */
+export const corpusTelecharge = () => existsSync(DOSSIER);
+
+/** Passages d'une œuvre qui contiennent la forme : les explications de mots d'abord. */
+export interface ResultatOeuvre {
+  oeuvre: Oeuvre;
+  passages: (Passage & { url: string })[];
+}
+
+/** Recherche d'une forme dans les œuvres téléchargées du corpus de réflexe ; les œuvres sans passage n'y figurent pas. */
+export async function rechercherDansLeCorpus(forme: string): Promise<ResultatOeuvre[]> {
+  const resultats: ResultatOeuvre[] = [];
+  for (const oeuvre of CORPUS) {
+    if (!existsSync(sommaire(oeuvre.id))) continue;
+    const passages: ResultatOeuvre["passages"] = [];
+    const pages = JSON.parse(await readFile(sommaire(oeuvre.id), "utf8")) as Page[];
+    for (const [rang, page] of pages.entries()) {
+      if (!existsSync(fichier(oeuvre.id, rang))) continue;
+      const texte = await readFile(fichier(oeuvre.id, rang), "utf8");
+      // Œuvre aux paragraphes repérés : le repère du passage précise celui de la page.
+      const trouves = oeuvre.chaine ? chercherParagraphes(texte, forme) : chercherDans(texte, forme).map((t) => ({ repere: page.repere, ...t }));
+      passages.push(...trouves.map((t) => ({ ...t, url: page.url })));
+    }
+    if (passages.length === 0) continue;
+    // Les explications de mots d'abord, toutes pages confondues : ce sont elles qui peuvent faire une lecture.
+    passages.sort((a, b) => Number(b.explique) - Number(a.explique));
+    resultats.push({ oeuvre, passages });
+  }
+  return resultats;
+}
+
 async function chercher(formes: string[], parOeuvre: number): Promise<number> {
   for (const forme of formes) {
     console.log(`■ ${forme}`);
-    for (const oeuvre of CORPUS) {
-      const trouves: { ligne: string; explique: boolean }[] = [];
-      if (!existsSync(sommaire(oeuvre.id))) continue;
-      const pages = JSON.parse(await readFile(sommaire(oeuvre.id), "utf8")) as Page[];
-      for (const [rang, page] of pages.entries()) {
-        if (!existsSync(fichier(oeuvre.id, rang))) continue;
-        const texte = await readFile(fichier(oeuvre.id, rang), "utf8");
-        // Œuvre aux paragraphes repérés : le repère du passage précise celui de la page.
-        const passages = oeuvre.chaine ? chercherParagraphes(texte, forme) : chercherDans(texte, forme).map((t) => ({ repere: page.repere, ...t }));
-        for (const { repere, passage, explique } of passages) {
-          trouves.push({ ligne: `  ${explique ? "★ " : ""}${repere ? `${repere} · ` : ""}${passage}\n    ${page.url}`, explique });
-        }
-      }
-      if (trouves.length === 0) continue;
-      // Les explications de mots d'abord, toutes pages confondues : ce sont elles qui peuvent faire une lecture.
-      trouves.sort((a, b) => Number(b.explique) - Number(a.explique));
-      console.log(`${oeuvre.titre} (${oeuvre.tradition}) : ${trouves.length} passage(s), dont ${trouves.filter((t) => t.explique).length} qui expliquent (★)`);
-      console.log(trouves.slice(0, parOeuvre).map((t) => t.ligne).join("\n"));
-      if (trouves.length > parOeuvre) console.log(`  … ${trouves.length - parOeuvre} autre(s) : préciser la forme`);
+    for (const { oeuvre, passages } of await rechercherDansLeCorpus(forme)) {
+      console.log(`${oeuvre.titre} (${oeuvre.tradition}) : ${passages.length} passage(s), dont ${passages.filter((t) => t.explique).length} qui expliquent (★)`);
+      console.log(passages.slice(0, parOeuvre).map(lignePassage).join("\n"));
+      if (passages.length > parOeuvre) console.log(`  … ${passages.length - parOeuvre} autre(s) : préciser la forme`);
     }
   }
   return 0;
@@ -139,7 +148,7 @@ async function principal(): Promise<number> {
   const [commande, ...formes] = positionals;
   if (commande === "telecharger") return telecharger();
   if (commande === "chercher" && formes.length > 0) {
-    if (!existsSync(DOSSIER)) {
+    if (!corpusTelecharge()) {
       console.log("Corpus absent : npm run corpus -- telecharger");
       return 1;
     }

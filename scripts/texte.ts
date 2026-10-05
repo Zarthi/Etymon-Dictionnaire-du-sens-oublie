@@ -15,7 +15,7 @@ import { DOSSIER_DATA } from "./valider-fiches.ts";
  *
  * Usage : npm run texte -- <adresse | ouvrage:entrée> [--autour "<texte>"] [--largeur 600]
  */
-function adresse(cible: string): string | undefined {
+export function adresse(cible: string): string | undefined {
   if (/^https?:\/\//.test(cible)) return cible;
   const [ouvrage, ...reste] = cible.split(":");
   const fichier = readdirSync(join(DOSSIER_DATA, "ouvrages")).find((f) => f === `${ouvrage}.yaml`);

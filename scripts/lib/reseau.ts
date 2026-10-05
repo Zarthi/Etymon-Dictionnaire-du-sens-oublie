@@ -37,3 +37,21 @@ export async function lireOuErreur(url: string, entetes?: Record<string, string>
   if (!page.lue) throw new Error(`${url} : ${page.raison}`);
   return page.texte;
 }
+
+const attendre = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Réponses d'un serveur surchargé ou qui limite le débit : on réessaie après une pause. */
+const A_REESSAYER = new Set([429, 503]);
+
+/**
+ * Comme `lire`, avec trois reprises (pause de `pause` ms, puis le double, le triple) quand le serveur
+ * limite le débit (429) ou est surchargé (503). Une autre réponse ne se répète pas.
+ */
+export async function lireAvecRelance(url: string, entetes?: Record<string, string>, encodage?: string, pause = 15_000): Promise<Lecture> {
+  let page = await lire(url, entetes, encodage);
+  for (let essai = 1; essai < 4 && !page.lue && page.statut !== undefined && A_REESSAYER.has(page.statut); essai++) {
+    await attendre(pause * essai);
+    page = await lire(url, entetes, encodage);
+  }
+  return page;
+}

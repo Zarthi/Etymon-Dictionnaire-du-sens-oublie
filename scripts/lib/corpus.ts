@@ -125,6 +125,9 @@ export const CORPUS: Oeuvre[] = [
   },
 ];
 
+/** Menus de Wikisource restés dans les pages téléchargées : ils contiennent « Legere » (lire) sans rien lire. */
+const MENU_WIKISOURCE = /Nexus addere|Instrumenta Tools|Toggle the table of contents/;
+
 /** Phrases d'un texte : on cherche et on rend des unités qui se lisent, non des morceaux coupés. */
 export function phrases(texte: string): string[] {
   return texte.split(/(?<=[.;:?!׃])\s+|\s(?=\[\d+\])/).filter((p) => p.trim() !== "");
@@ -148,6 +151,16 @@ function extrait(phrase: string, forme: string): string {
   return `${debut > 0 ? "…" : ""}${p.slice(debut, debut + LARGEUR)}…`;
 }
 
+/** Passage d'une œuvre qui contient la forme cherchée, avec son repère (livre, chapitre, article). */
+export interface Passage {
+  repere: string;
+  passage: string;
+  explique: boolean;
+}
+
+/** Un passage sur deux lignes : ★ s'il explique un mot, son repère et son extrait, puis l'adresse de la page. */
+export const lignePassage = (p: Passage & { url: string }) => `  ${p.explique ? "★ " : ""}${p.repere ? `${p.repere} · ` : ""}${p.passage}\n    ${p.url}`;
+
 /**
  * Passages qui contiennent la forme cherchée (radical, sans égard aux accents, aux voyelles
  * hébraïques ni à u/v, i/j) : ceux qui expliquent un mot d'abord (`explique`), puis les simples emplois.
@@ -156,7 +169,7 @@ export function chercherDans(texte: string, forme: string): { passage: string; e
   const cle = normaliserCitation(forme);
   if (cle === "") return [];
   return phrases(texte)
-    .filter((p) => normaliserCitation(p).includes(cle))
+    .filter((p) => normaliserCitation(p).includes(cle) && !MENU_WIKISOURCE.test(p))
     .map((p) => ({ passage: extrait(p, forme), explique: EXPLICATION.test(p) }))
     .sort((a, b) => Number(b.explique) - Number(a.explique));
 }
@@ -195,7 +208,7 @@ export function paragraphesThomas(html: string): string {
  * Passages d'un texte à paragraphes repérés (`paragraphesThomas`) : comme `chercherDans`, avec le
  * repère du paragraphe où chaque passage se trouve.
  */
-export function chercherParagraphes(texte: string, forme: string): { repere: string; passage: string; explique: boolean }[] {
+export function chercherParagraphes(texte: string, forme: string): Passage[] {
   return texte.split("\n").flatMap((ligne) => {
     const m = /^\[([^\]]+)\] ([\s\S]*)$/.exec(ligne);
     return m ? chercherDans(m[2], forme).map((t) => ({ repere: m[1], ...t })) : [];
