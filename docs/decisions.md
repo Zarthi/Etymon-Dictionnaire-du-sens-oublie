@@ -109,3 +109,16 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Sens de *legere* selon le composé | « cueillir » dans *eligere* (Littré, *élire*), « choisir » dans *intellegere* et *diligere* (Littré, *intelligent*, *dilection*), « ramasser, recueillir » seul (TLFi, *lire*) | chaque élément suit l'entrée de son composé (consigne de rédaction) | à relire |
 | *légende* | chemin `ordinaire`, non `consacre` | *legenda* est formé sur un verbe profane et son sens premier, « ce qui doit être lu », n'a rien de sacré, même si le mot naît dans l'usage liturgique | à relire |
 | *religion* et le lot | ni renvoi ni famille vers *religion* | *relegere* n'est qu'une des deux hypothèses de *religio* (une famille l'affirmerait) ; un renvoi suppose l'absence de racine commune | à relire |
+
+## 2026-10-05 — Lot 6 (passe 1 : liberté, libéral, libertin, franc, esclave, servir, servitude, vassal)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaîne de *liberté* | arrêtée à *libertas* ; la parenté de *liber* avec *libet* (Littré, Lewis & Short) n'est pas dite | c'est une racine commune, non une filiation, et le TLFi ne la donne pas ; *liber*, « libre », n'ajoute pas de sens | à relire |
+| Chaîne de *franc* | *Francus* (latin médiéval, « homme libre »), *Franci* (bas latin, « les Francs »), *\*frank* (francique, sans sens) ; sens premier : « les Francs » | le TLFi tire l'adjectif du nom du peuple, attesté en latin médiéval au sens d'homme libre ; l'origine du nom des Francs est obscure (Littré) : la chaîne s'y arrête | à relire |
+| Nature de *franc* | `nature: [adjectif]` écrite dans la fiche | la première entrée du Littré écrite *franc* est le nom du peuple (s. m.) ; le script en aurait tiré « nom masculin » | à relire |
+| Chaîne d'*esclave* | arrêtée à *sclavus*, « Slave » ; circonstances selon le TLFi (Balkans, Germains et Byzantins), non selon le Littré (guerres d'Othon le Grand) | *\*slovēninŭ* a le même sens et la formation de *sclavus* n'est que probable ; le TLFi est plus récent | à relire |
+| Étymon de *servitude* | *servitudo* (TLFi), non *servitus* (Littré) | le TLFi est plus récent et rend compte de *servitus* par la forme *servitute* | à relire |
+| Chaînes de *servir* et *servitude* | arrêtées à *servire* et *servitudo* ; *servus* dans la famille (*serf*) | *servus*, « esclave », n'ajoute pas de sens à « être esclave » ni à « esclavage » | à relire |
+| Chaîne de *vassal* | *vassalus*, puis *vassus*, « serviteur » ; l'origine celtique n'est pas un maillon | les formes bretonne, irlandaise et galloise sont apparentées, non ancêtres ; aucune langue celtique n'est dans la liste, et elle n'ajouterait pas de sens | à relire |
+| Lectures de *servitude* (passe 2) | drapeau `tradition` posé ; Isidore et Augustin lisent *servitus* et *servus*, non *servitudo* : à trancher avec les lectures | lecture du mot voisin ou de sa racine ; *esclave* y renvoie (`tradition.renvois`) | à relire |
