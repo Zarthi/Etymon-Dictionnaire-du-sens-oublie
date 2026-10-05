@@ -87,7 +87,7 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Sujet | Décision | Raison | Relecture |
 |---|---|---|---|
 | Chemin de *génie* | `ordinaire`, non `sacre` | *genius* est un dieu de la religion romaine, qui n'est pas une tradition de data/traditions.json ; le mot n'est sacré dans aucune tradition reçue par l'app | à relire |
-| Chaîne de *génie* | maillon *gignere*, « engendrer », après *genius* ; `premier` sur *genius* | le Lewis & Short rattache *genius* à la racine de *gigno*, ce qui relie *génie*, *ingénu*, *ingénieur* ; le sens affiché en tête reste celui du mot, non celui de sa racine | à relire |
+| Chaîne de *génie* | arrêtée à *genius*, sans `premier` (passe 2, proposition du relecteur adoptée ; d'abord *gignere* et `premier`) | le Lewis & Short rattache *genius* à la racine GEN de *gigno*, non au verbe ; *gignere* n'ajoute pas de sens ; la parenté est dans `famille` | à relire |
 | Maillon français d'*ingénieur* | *engigneor*, dérivé d'*engin* (TLFi), non *ingeniatorem* (Littré) | le TLFi est plus récent ; les deux remontent à *ingenium* | à relire |
 | Éléments d'*ingenuus* | *in*, « dans » (Littré), et *gignere*, « engendrer » (Lewis & Short) ; le *genuus* du Littré non retenu | le Lewis & Short dérive *ingenuus* de *ingigno* et ne donne pas *genuus* | à relire |
 | *ingenium* (*ingénieur*) | non découpé | la composition est dite sur *ingénu* ; le sens « nature innée » la porte déjà, et la chaîne a trois maillons | à relire |

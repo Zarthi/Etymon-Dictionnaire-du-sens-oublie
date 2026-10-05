@@ -1,0 +1,48 @@
+mot: esprit
+nature: [ nom masculin ]
+etymologie:
+  - forme: spiritus
+    langue: latin
+    sens: souffle
+explication: >-
+  Entré en français à la fin du Xe siècle par les textes chrétiens, le mot nomme
+  d'abord le principe de vie, puis le souffle créateur et l'inspiration venus de
+  Dieu. Il désigne aujourd'hui le principe de la pensée et l'intelligence ; le
+  sens de souffle vital ne s'emploie plus.
+famille: [ spirituel, inspirer, respirer ]
+renvois: [ ame ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: "L'esprit est nommé de sa nature spirituelle, ou de ce qu'il insuffle dans le corps ; l'âme est esprit en tant qu'elle souffle."
+      citation: "spiritus autem vel pro spiritali natura, vel pro eo quod inspiret in corpore. […] Dum ergo vivificat corpus, anima est: […] dum spirat, spiritus est"
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 1, 10-13"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+    - texte: "L'Esprit se dit par relation, comme ce qui est soufflé ; celui qui souffle inspire par l'esprit, et c'est de là que l'Esprit tient son nom."
+      citation: "Spiritus autem dictus secundum id quod ad aliquid refertur spiratus; et spirans utique spiritu inspirans est, et ex eo appellatus Spiritus est."
+      sources:
+        - ouvrage: etymologies
+          entree: "VII, 3, 2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+    - texte: "Dans les choses corporelles, le nom d'esprit semble signifier une impulsion et un mouvement, car on appelle ainsi le souffle et le vent ; or le propre de l'amour est de mouvoir la volonté de celui qui aime vers ce qu'il aime. Parce que la personne divine procède par mode d'amour, elle est nommée à bon droit Esprit saint."
+      citation: "Nam nomen spiritus, in rebus corporeis, impulsionem quandam et motionem significare videtur, nam flatum et ventum spiritum nominamus. Est autem proprium amoris, quod moveat et impellat voluntatem amantis in amatum. […] Quia igitur persona divina procedit per modum amoris quo Deus amatur, convenienter spiritus sanctus nominatur."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "I, q. 36, a. 1"
+          url: https://la.wikisource.org/wiki/Summa_Theologiae/Prima_pars/Quaestio_XXXVI
+sources:
+  - ouvrage: littre
+    entree: esprit
+  - ouvrage: tlfi
+    entree: esprit
+  - ouvrage: lewis-short
+    entree: spiritus
+  - ouvrage: littre
+    entree: âme
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

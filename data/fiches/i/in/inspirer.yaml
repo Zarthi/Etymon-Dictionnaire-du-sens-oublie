@@ -1,0 +1,33 @@
+mot: inspirer
+nature: [ verbe ]
+etymologie:
+  - forme: inspirare
+    langue: latin
+    sens: souffler dans
+    elements:
+      - forme: in
+        sens: dans
+      - forme: spirare
+        sens: souffler
+explication: >-
+  Le mot apparaît à la fin du XIIe siècle pour Dieu qui anime l'homme en lui
+  donnant une âme par son souffle. Il se dit ensuite d'une pensée suggérée (fin
+  du XIVe siècle), de l'air que l'on fait entrer dans les poumons (XVe), de
+  l'élan créateur du poète (1553).
+famille: [ inspiration, respirer, expirer ]
+renvois: [ enthousiasme ]
+themes: [ esprit ]
+tradition:
+  renvois: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: inspirer
+  - ouvrage: tlfi
+    entree: inspirer
+  - ouvrage: lewis-short
+    entree: inspiro
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

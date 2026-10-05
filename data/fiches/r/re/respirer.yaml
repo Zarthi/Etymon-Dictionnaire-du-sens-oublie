@@ -1,0 +1,30 @@
+mot: respirer
+nature: [ verbe ]
+etymologie:
+  - forme: respirare
+    langue: latin
+    sens: souffler en retour, exhaler
+    elements:
+      - forme: re
+        sens: en retour
+      - forme: spirare
+        sens: souffler
+explication: >-
+  En français, le mot a d'abord signifié reprendre vie après une peine (fin du
+  XIIe siècle), puis attirer l'air dans sa poitrine et le rejeter (début du
+  XIIIe). Il nomme aujourd'hui ce va-et-vient de l'air, et aussi, depuis 1640,
+  le répit que l'on prend après une épreuve.
+famille: [ respiration, esprit, inspirer ]
+themes: [ corps ]
+sources:
+  - ouvrage: littre
+    entree: respirer
+  - ouvrage: tlfi
+    entree: respirer
+  - ouvrage: lewis-short
+    entree: respiro
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

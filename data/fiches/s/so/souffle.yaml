@@ -1,0 +1,39 @@
+mot: souffle
+nature: [ nom masculin ]
+etymologie:
+  - forme: souffler
+    langue: français
+  - forme: sufflare
+    langue: latin
+    sens: souffler sur, gonfler
+    elements:
+      - forme: sub
+        sens: sous
+      - forme: flare
+        sens: souffler
+explication: >-
+  Le mot a d'abord nommé l'air que l'on chasse avec force en expirant (vers
+  1160), puis la respiration (1553). Il se dit au figuré de l'inspiration depuis
+  1562 ; il nomme aujourd'hui aussi le vent léger, le déplacement d'air d'une
+  explosion et l'énergie créatrice.
+famille: [ souffler, soufflet, essouffler ]
+renvois: [ respirer ]
+themes: [ corps ]
+tradition:
+  renvois: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: souffle
+  - ouvrage: littre
+    entree: souffler
+  - ouvrage: tlfi
+    entree: souffler
+  - ouvrage: lewis-short
+    entree: sufflo
+  - ouvrage: lewis-short
+    entree: flo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

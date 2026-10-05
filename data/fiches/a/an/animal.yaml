@@ -1,0 +1,39 @@
+mot: animal
+nature: [ nom masculin ]
+etymologie:
+  - forme: animal
+    langue: latin
+    sens: être vivant
+  - forme: anima
+    langue: latin
+    sens: souffle de vie
+explication: >-
+  En latin, animal nommait tout être vivant, l'homme compris. Dès la fin du XIIe
+  siècle, le français oppose l'homme animal à l'homme spirituel ; dans l'usage
+  courant, le mot désigne aujourd'hui l'être animé privé de raison, par
+  opposition à l'homme.
+famille: [ animalité, âme, animer ]
+renvois: [ bete ]
+themes: [ nature ]
+tradition:
+  lectures:
+    - texte: "Les animaux sont ainsi nommés parce qu'ils sont animés par la vie et mus par le souffle."
+      citation: "Latine autem animalia sive animantia dicta, quod animentur vita et moveantur spiritu."
+      sources:
+        - ouvrage: etymologies
+          entree: "XII, 1, 3"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XII
+sources:
+  - ouvrage: littre
+    entree: animal
+  - ouvrage: tlfi
+    entree: animal
+  - ouvrage: lewis-short
+    entree: animal
+  - ouvrage: lewis-short
+    entree: anima
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

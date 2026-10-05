@@ -1,0 +1,40 @@
+mot: ingénu
+nature: [ adjectif ]
+etymologie:
+  - forme: ingenuus
+    langue: latin
+    sens: inné, naturel
+    elements:
+      - forme: in
+        sens: dans
+      - forme: gignere
+        sens: engendrer
+explication: >-
+  À Rome, ingenuus disait aussi l'homme né libre, et la franchise digne d'un
+  homme libre. Le français l'emprunte en 1480 pour la condition libre ; depuis
+  1611, il qualifie celui qui parle et agit avec une franchise innocente, son
+  usage courant aujourd'hui.
+famille: [ ingénuité, ingénument ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Les ingénus sont ainsi nommés parce qu'ils tiennent leur liberté de leur naissance, non d'un acte, comme les affranchis ; c'est pourquoi les Grecs les disent de bonne naissance."
+      citation: "Ingenui dicti, quia in genere habent libertatem, non in facto sicut liberti. Vnde et eos Graeci EUGENEIS vocant, quod sint boni generis."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 4, 46"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: littre
+    entree: ingénu
+  - ouvrage: tlfi
+    entree: ingénu
+  - ouvrage: lewis-short
+    entree: ingenuus
+  - ouvrage: lewis-short
+    entree: gigno
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

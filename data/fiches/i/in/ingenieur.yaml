@@ -1,0 +1,37 @@
+mot: ingénieur
+nature: [ nom masculin ]
+etymologie:
+  - forme: engigneor
+    langue: ancien français
+    sens: constructeur d'engins de guerre
+  - forme: engin
+    langue: ancien français
+    sens: invention, ruse, machine de guerre
+  - forme: ingenium
+    langue: latin
+    sens: nature innée, talent
+explication: >-
+  La forme ingénieur (1537-1540) refait engigneor d'après ingénier, probablement
+  pour le séparer d'un ancien verbe qui signifiait tromper. Le sens de
+  constructeur de machines de guerre ne s'emploie plus : le mot désigne celui
+  qui conçoit et dirige des travaux techniques à un haut niveau.
+famille: [ ingénierie, ingénieux, engin, génie ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: ingénieur
+  - ouvrage: littre
+    entree: ingénieur
+  - ouvrage: littre
+    entree: ingénier
+  - ouvrage: tlfi
+    entree: engin
+  - ouvrage: littre
+    entree: engin
+  - ouvrage: lewis-short
+    entree: ingenium
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
