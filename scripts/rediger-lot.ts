@@ -53,12 +53,13 @@ export interface Bilan {
 
 /**
  * Prépare les fiches d'un lot d'après leur dossier et les écrit dans data/ (brouillon), ou, en
- * essai, les valide avec le dépôt sans rien écrire. Les mots rédigés sortent des candidats.
+ * essai, les valide avec le dépôt sans rien écrire. Les mots rédigés sortent des candidats. Le contrat
+ * est régénéré après l'écriture, sauf avec `contrat: false` (la clôture d'un lot le fait une fois).
  */
 export async function rediger(
   lots: { fiches: Brute[]; auteurs: Brute[]; ouvrages: Brute[] },
   moteur: Moteur,
-  { essai = false, remplacer = false }: { essai?: boolean; remplacer?: boolean } = {},
+  { essai = false, remplacer = false, contrat = true }: { essai?: boolean; remplacer?: boolean; contrat?: boolean } = {},
 ): Promise<Bilan> {
   const lot = lots.fiches;
   const index = await chargerIndexLittre();
@@ -173,7 +174,7 @@ export async function rediger(
     else await writeFile(chemin, gardees.join("\n"));
   }
 
-  if (ecrits.length + referencesEcrites > 0) regenererContrat();
+  if (contrat && ecrits.length + referencesEcrites > 0) regenererContrat();
   const { erreurs } = await validerDepot();
   return { ecrits, referencesEcrites, refus, aCorriger: concernees(erreurs, ecrits), aCreer: [], essais: 0 };
 }

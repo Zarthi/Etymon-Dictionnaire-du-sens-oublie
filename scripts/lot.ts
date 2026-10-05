@@ -274,7 +274,7 @@ async function clore(mots: string[], moteur: Moteur): Promise<number> {
       }
     }
 
-  const bilan = await rediger({ fiches, auteurs: [], ouvrages: [] }, moteur);
+  const bilan = await rediger({ fiches, auteurs: [], ouvrages: [] }, moteur, { contrat: false });
   const problemes = [...echecs, ...bilan.refus.map((r) => `${r.id} : ${r.message}`), ...bilan.aCorriger.map(formaterErreur)];
 
   // Décisions : reportées en tête du journal une fois les fiches écrites, puis retirées de l'atelier.
