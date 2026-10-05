@@ -26,13 +26,37 @@ export interface Tlfi {
 const LONGUEUR_DEFINITION = 110;
 
 /**
+ * Éléments du plan (numéro, marque d'usage, définition) dans l'ordre de l'article, avec leur contenu
+ * entier : une marque contient des balises (« <span>Vieilli </span>ou dans des <span>loc.</span> »),
+ * que la première balise fermante ne doit pas couper. Un élément dans un autre n'est pas compté deux fois.
+ */
+function elementsDuPlan(article: string): { classe: string; contenu: string }[] {
+  const elements: { classe: string; contenu: string }[] = [];
+  let fin = 0;
+  for (const ouverture of article.matchAll(/<(?:div|span) class=.(s-structure-num|s-usage-indicator|s-definition).[^>]*>/g)) {
+    if (ouverture.index < fin) continue;
+    const debut = ouverture.index + ouverture[0].length;
+    let profondeur = 1;
+    for (const balise of article.slice(debut).matchAll(/<(\/?)(?:div|span)\b[^>]*>/g)) {
+      profondeur += balise[1] ? -1 : 1;
+      if (profondeur === 0) {
+        fin = debut + balise.index + balise[0].length;
+        elements.push({ classe: ouverture[1], contenu: article.slice(debut, debut + balise.index) });
+        break;
+      }
+    }
+  }
+  return elements;
+}
+
+/**
  * Plan des sens d'un article : chaque définition, précédée de son numéro et de ses marques d'usage.
  * Les exemples, les auteurs et les remarques ne sont pas gardés.
  */
 export function planDesSens(article: string): string[] {
   const sens: string[] = [];
   let avant: string[] = [];
-  for (const [, classe, contenu] of article.matchAll(/<(?:div|span) class=.(s-structure-num|s-usage-indicator|s-definition).[^>]*>([\s\S]*?)<\/(?:div|span)>/g)) {
+  for (const { classe, contenu } of elementsDuPlan(article)) {
     const texte = texteBrut(contenu).replace(/\s*—$/, "");
     if (classe === "s-structure-num") avant.push(texte);
     else if (classe === "s-usage-indicator") avant.push(`[${texte}]`);

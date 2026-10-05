@@ -24,7 +24,7 @@ Des œuvres qui lisent les mots eux-mêmes, où l'on peut chercher un mot, et do
 - Augustin, La Cité de Dieu (tradition chrétienne, latin) : les noms de la cité et du culte, lus par Augustin (religio, X, 3).
 - Augustin, Confessions (tradition chrétienne, latin) : les mots de l'âme et de la mémoire.
 - Augustin, De la doctrine chrétienne (tradition chrétienne, latin) : les signes et les mots de l'Écriture.
-- Thomas d'Aquin, Somme théologique (tradition chrétienne, latin) : le nom d'une notion, souvent discuté en tête d'article (« nomen … dicitur »).
+- Thomas d'Aquin, Somme théologique (tradition chrétienne, latin) : le nom d'une notion, souvent discuté en tête d'article (« nomen … dicitur ») ; la Somme entière, Corpus Thomisticum (édition léonine), repérée par article (« IIa-IIae q. 8 a. 1 co. »).
 
 Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est bien. Une lecture n'entre que si l'auteur lit le mot et dit quelque chose qui diffère de l'histoire du mot ou la complète.
 

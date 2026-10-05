@@ -131,7 +131,7 @@ la tradition, un corpus de même rang (`scripts/lib/corpus.ts`, `npm run corpus`
 lisent les mots eux-mêmes, où l'on peut chercher un mot, et dont le texte original est en ligne,
 du domaine public. Aujourd'hui : Isidore (*Étymologies*, *Différences*), Jérôme (*Livre des noms
 hébreux*), Rashi (*Commentaire sur la Torah*), Augustin (*La Cité de Dieu*, *Confessions*, *De la
-doctrine chrétienne*), Thomas d'Aquin (*Somme théologique*, pour la part que Wikisource en donne).
+doctrine chrétienne*), Thomas d'Aquin (*Somme théologique*, entière, d'après le Corpus Thomisticum).
 Téléchargées une fois dans `sources/`, elles s'interrogent par un script, sans jeton : la taille
 d'une œuvre n'est donc pas un obstacle ; la machine trouve et cite, elle ne parle pas à la place de
 la tradition.

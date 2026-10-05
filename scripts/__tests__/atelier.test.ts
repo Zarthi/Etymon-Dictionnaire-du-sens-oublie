@@ -1,9 +1,9 @@
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { schemaDossier, schemaVerdict, sourcesDuDossier, squeletteDossier } from "../lib/atelier.ts";
-import { annee, datesAffichees, lireNotices } from "../lib/bnf.ts";
+import { annee, datesAffichees, lireNotices, lireNoticesIntermarc, reponseEnErreur } from "../lib/bnf.ts";
 import { graphieDuLittre } from "../lib/littre.ts";
-import { lireTlfi, premierAvecEtymologie, type ReponseTlfi } from "../lib/tlfi.ts";
+import { lireTlfi, planDesSens, premierAvecEtymologie, type ReponseTlfi } from "../lib/tlfi.ts";
 import { ajouter } from "../liste.ts";
 import { passages } from "../texte.ts";
 import { validerDepot } from "../valider-fiches.ts";
@@ -58,6 +58,16 @@ describe("TLFi", () => {
       etymologie: "Du lat. pop. *extonare",
     });
     expect(lireTlfi({ content: [{ id: "tlfi", content: [] }] })).toBeUndefined();
+  });
+});
+
+describe("TLFi : plan des sens", () => {
+  it("garde la marque d'usage entière, balises imbriquées comprises (foi : « Vieilli ou dans des loc. »)", () => {
+    const article =
+      "<span class='s-structure-num'>A. —</span><span class='s-usage-condition'>[L'idée dominante est celle d'engagement]</span>" +
+      "<span class='s-usage-indicator'><span class='t-i'>Vieilli </span>ou dans des <span class='t-i'>loc.</span></span>" +
+      "<div role='list'><div><span class='s-structure-num'>1.</span> <span class='s-definition'>Assurance donnée de tenir un <span class='t-i'>engagement</span>.</span></div></div>";
+    expect(planDesSens(article)).toEqual(["A. [Vieilli ou dans des loc.] 1. Assurance donnée de tenir un engagement."]);
   });
 });
 
@@ -159,6 +169,31 @@ describe("BnF", () => {
       { cb: "cb11885977m", type: "personne", entree: "Cicéron", naissance: "106 av. J.-C.", mort: "43 av. J.-C.", variantes: ["Tullius Cicero, Marcus"] },
       { cb: "cb11920019p", type: "personne", entree: "Platon", naissance: "vers 427 av. J.-C.", mort: "vers 348 av. J.-C.", variantes: [] },
       { cb: "cb11938048d", type: "oeuvre", entree: "Utopia", auteur: "Thomas More", date: "1516", variantes: ["L'utopie"] },
+    ]);
+  });
+});
+
+describe("notice d'œuvre que le serveur ne rend pas en UNIMARC", () => {
+  const diagnostic = `<srw:recordData>  <srw:diagnostics>    <sd:diagnostic><sd:uri>info:srw/diagnostic/1/131</sd:uri><sd:message>erreur de traitement</sd:message></sd:diagnostic>  </srw:diagnostics>      </srw:recordData>`;
+  const champ = (tag: string, ...sous: [string, string][]) =>
+    `<mxc:datafield tag="${tag}" ind1=" " ind2=" ">${sous.map(([c, v]) => `<mxc:subfield code="${c}">${v}</mxc:subfield>`).join("")}</mxc:datafield>`;
+  const intermarc = `<mxc:record format="INTERMARC" id="ark:/12148/cb12134897m" type="Authority">${[
+    champ("100", ["a", "Cicéron"], ["d", "0106-0043 av. J.-C."]),
+    champ("145", ["a", "Les devoirs"]),
+    champ("145", ["a", "De officiis"]),
+    champ("445", ["a", "Traité des devoirs"]),
+    champ("609", ["r", "oeu0"], ["d", "-00.. "]),
+  ].join("")}</mxc:record>`;
+
+  it("reconnaît le diagnostic du serveur : ce n'est pas une notice qui n'est pas une œuvre", () => {
+    expect(reponseEnErreur(diagnostic)).toBe(true);
+    expect(lireNotices(diagnostic)).toEqual([]);
+    expect(reponseEnErreur("<srw:records></srw:records>")).toBe(false);
+  });
+
+  it("lit l'œuvre dans le format de repli : titre retenu en 145, titre original et 445 en variantes", () => {
+    expect(lireNoticesIntermarc(intermarc)).toEqual([
+      { cb: "cb12134897m", type: "oeuvre", entree: "Les devoirs", auteur: "Cicéron", variantes: ["De officiis", "Traité des devoirs"] },
     ]);
   });
 });
