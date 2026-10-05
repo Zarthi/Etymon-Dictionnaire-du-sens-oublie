@@ -2,6 +2,11 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-05 — Thème « politique »
+
+- **Thème ajouté** (`npm run liste`) : demandé par plusieurs mots de deux lots (libéral au lot 6 ;
+  roi, régime, ordre au lot 10), rangés jusque-là en « société » faute de mieux. *libéral* reclassé.
+
 ## 2026-10-04 — Troisième lot (hospes, amicus, potio), dans le cloud
 
 Dix mots par familles et doublets, quatre passes, Opus 5.5 réflexion élevée. Compteurs de fin :

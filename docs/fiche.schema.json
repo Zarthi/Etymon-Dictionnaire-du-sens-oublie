@@ -663,7 +663,8 @@
           "maison",
           "nature",
           "météo",
-          "temps"
+          "temps",
+          "politique"
         ]
       },
       "description": "Thèmes (liste fermée : data/themes.json), un ou deux."

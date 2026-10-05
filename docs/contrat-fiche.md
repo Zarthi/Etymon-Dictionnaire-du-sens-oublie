@@ -270,7 +270,7 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 
 - `nature` : nom masculin, nom féminin, nom, nom propre, verbe, adjectif, adverbe, interjection.
 - `langue` (data/langues.json) : latin, latin populaire, bas latin, latin médiéval, latin humaniste, latin ecclésiastique, ancien français, français, grec ancien, gaulois, étrusque, francique, germanique, ancien nordique, arabe, hébreu, araméen, persan, turc, italien, espagnol, ancien espagnol, portugais, occitan, néerlandais, allemand, anglais, indo-européen.
-- `themes` (data/themes.json) : émotions, esprit, parole, savoir, morale, religion, corps, santé, famille, société, droit, guerre, travail, argent, commerce, nourriture, maison, nature, météo, temps.
+- `themes` (data/themes.json) : émotions, esprit, parole, savoir, morale, religion, corps, santé, famille, société, droit, guerre, travail, argent, commerce, nourriture, maison, nature, météo, temps, politique.
 - `traditions` (data/traditions.json) : juive, chrétienne, grecque, romaine.
 - `licence` : domaine public, Licence ouverte, CC BY-SA, CC BY-NC-ND, non libre.
 - `redaction[].par` : IA, Étymon.
