@@ -1,0 +1,41 @@
+mot: considérer
+nature: [ verbe ]
+etymologie:
+  - forme: considerare
+    langue: latin
+    sens: examiner attentivement
+    premier: true
+  - forme: sidus
+    langue: latin
+    sens: astre, constellation
+explication: >-
+  Rattaché à sidus, considerare aurait d'abord dit l'observation attentive des
+  astres ; ce rattachement reste incertain. Considérer, vers 1265, c'est
+  regarder avec attention et examiner avec soin ; le mot dit aujourd'hui aussi
+  l'estime, faire cas de (1643), et le jugement : considérer comme.
+incertain: true
+famille: [ considération, considérable, inconsidéré ]
+renvois: [ contempler, estimer ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: "Les astres tiennent leur nom de ce que les navigateurs, en les considérant, règlent sur eux leur route, pour ne pas être égarés par les flots ou les vents."
+      citation: "Sidera dicta, quod ea navigantes considerando dirigunt ad cursum consilium, ne fallacibus undis aut ventis alibi deducantur."
+      sources:
+        - ouvrage: etymologies
+          entree: "III, 71, 4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_III
+sources:
+  - ouvrage: tlfi
+    entree: considérer
+  - ouvrage: littre
+    entree: considérer
+  - ouvrage: lewis-short
+    entree: considero
+  - ouvrage: lewis-short
+    entree: sidus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,41 @@
+mot: cosmos
+nature: [ nom masculin ]
+etymologie:
+  - forme: κόσμος
+    langue: grec ancien
+    sens: ordre, bon ordre
+explication: >-
+  En grec, κόσμος se disait aussi de la bienséance, de la discipline, de l'ordre
+  d'une cité, de la parure ; selon Plutarque, les Pythagoriciens en ont fait le
+  nom du monde. En français depuis 1847, cosmos nomme l'univers vu comme un
+  ensemble ordonné, puis aussi l'espace interplanétaire (1959).
+famille: [ cosmique, cosmologie, cosmétique, microcosme ]
+themes: [ nature ]
+tradition:
+  lectures:
+    - texte: "On appelle ce tout d'un nom d'ordre, et non de désordre, parce que la communauté, l'amitié, la mesure, la tempérance et la justice tiennent ensemble la terre, les dieux et les hommes."
+      citation: "γῆν καὶ θεοὺς καὶ ἀνθρώπους τὴν κοινωνίαν συνέχειν καὶ φιλίαν καὶ κοσμιότητα καὶ σωφροσύνην καὶ δικαιότητα, καὶ τὸ ὅλον τοῦτο διὰ ταῦτα κόσμον καλοῦσιν, ὦ ἑταῖρε, οὐκ ἀκοσμίαν οὐδὲ ἀκολασίαν."
+      sources:
+        - ouvrage: gorgias
+          entree: "507e-508a"
+          url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0177%3Atext%3DGorg.%3Asection%3D508a
+    - texte: "Les Grecs ont donné au monde un nom d'ornement, pour la diversité de ses éléments et la beauté des astres."
+      citation: "Graeci vero nomen mundo de ornamento adcommodaverunt, propter diversitatem elementorum et pulchritudinum siderum. Appellatur enim apud eos KOSMOS, quod significat ornamentum."
+      sources:
+        - ouvrage: etymologies
+          entree: "XIII, 1, 2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XIII
+sources:
+  - ouvrage: tlfi
+    entree: cosmos
+  - ouvrage: littre
+    entree: cosmos
+  - ouvrage: bailly
+    entree: κόσμος
+  - ouvrage: littre
+    entree: monde
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

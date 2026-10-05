@@ -1,0 +1,26 @@
+mot: naître
+nature: [ verbe ]
+etymologie:
+  - forme: nascere
+    langue: latin
+  - forme: nasci
+    langue: latin
+    sens: être engendré, naître
+explication: >-
+  Nasci se disait de l'enfant engendré par son père comme de celui que sa mère
+  met au monde. Naître nomme la venue au monde, et dès le XIIe siècle ce qui
+  commence à paraître : le jour qui point, un sentiment, un fleuve à sa source.
+famille: [ naissance, natal, natif, naïf, nature ]
+themes: [ famille ]
+sources:
+  - ouvrage: tlfi
+    entree: naître
+  - ouvrage: littre
+    entree: naître
+  - ouvrage: lewis-short
+    entree: nascor
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

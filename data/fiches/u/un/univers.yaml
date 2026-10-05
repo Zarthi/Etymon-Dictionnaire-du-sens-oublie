@@ -1,0 +1,32 @@
+mot: univers
+nature: [ nom masculin ]
+etymologie:
+  - forme: universum
+    langue: latin
+  - forme: universus
+    langue: latin
+    sens: tout entier, rassemblé en un
+    elements:
+      - forme: unus
+        sens: un
+      - forme: versus
+        sens: tourné
+explication: >-
+  En ancien français, univers était un adjectif : le monde univers, expression
+  courante jusqu'au XVIe siècle, était le monde entier. Le nom désigne en 1543
+  la terre habitée, puis l'ensemble de ce qui existe ; il se dit aujourd'hui
+  aussi d'un ensemble particulier, le milieu propre de quelqu'un.
+famille: [ universel, université, universalité ]
+themes: [ nature ]
+sources:
+  - ouvrage: tlfi
+    entree: univers
+  - ouvrage: lewis-short
+    entree: universus
+  - ouvrage: littre
+    entree: univers
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

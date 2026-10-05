@@ -293,3 +293,12 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Cicéron, *Philippiques*, XIII, 14 (*loisir*) | retenu ; `traditions: [ romaine ]` ajouté à `ciceron` (champ seul, la fiche existait) ; ouvrage `philippiques` créé d'après la BnF (cb120322781) | Cicéron définit *licere*, forme de la chaîne : est permis ce qu'accordent les lois, la coutume et les institutions, non ce que chacun peut ; `npm run bnf` refuse de réécrire une fiche existante | à relire |
 | Varron, V, 92 (*opulent*) | retenu | il lit *opulentus* et le rattache à *inops* et à *copiosus*, ce que la fiche ne dit pas ; V, 64 (*Ops*, la déesse) non retenu | à relire |
 | Isidore, XVIII, 15, 3 (*négoce*) | retenu, sans répéter *nec otium* | il distingue les sens du mot (affaire, procès) et le réserve aux procès, le commerce ayant son mot propre | à relire |
+
+## 2026-10-05 — Lot 12 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Festus (*Desiderare et considerare a sideribus dici certum est*, abrégé de Paul Diacre) | pas de lecture sur *considérer* ; ni auteur ni ouvrage créés | le passage redit l'histoire que donnent le Littré et le Lewis & Short, dont il est la source ancienne, sans rien y ajouter pour *considérer* ; le seul texte en ligne est une reconnaissance optique (archive.org, éd. Thewrewk de Ponor, 1889), fautive pour l'autre passage (p. 42 Müller) | à relire |
+| *κόσμος* dans les lectures de *cosmos* | Platon (*Gorgias*, 507e-508a, tradition grecque) et Isidore (*Étymologies*, XIII, 1, 2) | Platon tire le nom de l'ordre moral du tout (amitié, mesure, justice), Isidore de l'ornement : deux lectures qui complètent l'histoire | à relire |
+| Lecture de *planète* | Isidore, III, 71, 20, retenu | outre *ab errore*, il décrit l'errance (vers le sud, le nord, contre le mouvement du monde ou avec lui) : il complète l'histoire | à relire |
+| Lecture de *considérer* | Isidore, III, 71, 4, retenu | il lit *sidus*, forme de la chaîne, dans l'autre sens (les astres nommés d'après ceux qui les considèrent) | à relire |

@@ -1,0 +1,39 @@
+mot: planète
+nature: [ nom féminin ]
+etymologie:
+  - forme: planeta
+    langue: latin
+  - forme: πλάνης
+    langue: grec ancien
+    sens: errant
+explication: >-
+  Les Grecs opposaient les astres errants aux étoiles fixes ; planète a d'abord
+  nommé tout astre errant, Soleil et Lune compris. En 1686, Fontenelle note que
+  le Soleil a cessé d'être planète et que la Terre l'est devenue. Le mot nomme
+  aujourd'hui un corps céleste qui gravite autour d'une étoile.
+famille: [ planétaire ]
+themes: [ nature, savoir ]
+tradition:
+  lectures:
+    - texte: "Les planètes ne sont pas fixées au ciel comme les autres étoiles : leur nom vient de l'errance, car elles vont tantôt vers le sud, tantôt vers le nord, le plus souvent contre le mouvement du monde, parfois avec lui."
+      citation: "Planetae stellae sunt quae non sunt fixae in caelo, ut reliquae, sed in aere feruntur. Dictae autem planetae APO TES PLANES, id est ab errore. Nam interdum in austrum, interdum in septentrionem, plerumque contra mundum, nonnumquam cum mundo feruntur."
+      sources:
+        - ouvrage: etymologies
+          entree: "III, 71, 20"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_III
+sources:
+  - ouvrage: tlfi
+    entree: planète
+  - ouvrage: littre
+    entree: planète
+  - ouvrage: lewis-short
+    entree: planeta
+  - ouvrage: bailly
+    entree: πλάνης
+  - ouvrage: bailly
+    entree: πλανήτης
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

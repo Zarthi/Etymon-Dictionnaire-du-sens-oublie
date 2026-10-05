@@ -1,0 +1,17 @@
+titre: Gorgias
+titreOriginal: Γοργίας
+auteur: platon
+date: 387 av. J.-C.
+licence: domaine public
+texte: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0177
+description: >-
+  Dialogue de Platon sur la rhétorique : Socrate y oppose à Calliclès une vie
+  réglée par la justice et la tempérance.
+sources:
+  - ouvrage: bnf
+    entree: cb12047618p
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
