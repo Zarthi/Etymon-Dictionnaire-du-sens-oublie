@@ -178,7 +178,7 @@ sens profane premier est justement ce que le dictionnaire révèle.
   « Lactance, *Institutions divines*, IV, 28, 3 »).
 - Aucune mise en forme dans les textes : l'app met en italique l'étymon, les formes
   d'origine et la forme légendaire, et pose les liens vers les autres fiches. Un mot étranger
-  cité dans un texte est donc une forme de la chaîne (translittération comprise).
+  cité dans un texte est donc une forme de la chaîne (translittération comprise), ou, dans le texte d'une lecture, un mot de sa citation.
 - Typographie française : espaces insécables avant `:` `;` `?` `!`, guillemets « ».
 
 ## 4. Fonctionnalités

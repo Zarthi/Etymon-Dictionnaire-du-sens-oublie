@@ -2,6 +2,16 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-05 — Le texte d'une lecture peut nommer le mot que l'auteur lit
+
+- **Cause** (lot 14) : le texte d'une lecture ne pouvait pas nommer le mot latin ou grec lu par
+  l'auteur dans sa propre citation (Isidore rapproche *hora* et *ora* : le texte paraphrasait « le
+  bord, dont le nom latin lui ressemble »), faute d'être une forme de la chaîne.
+- **Changement** : dans le texte d'une lecture, un mot de sa citation (au moins 3 lettres, tel
+  qu'écrit) compte aussi comme forme : l'app le met en italique (`formesCitation`). Rien ne change
+  pour l'explication ni les étymologies écartées. Aucun contrôle de `npm run verifier` ne signalait
+  de mot étranger hors chaîne : rien à y assouplir. AGENTS.md §3.4 et la consigne des lectures à jour.
+
 ## 2026-10-05 — Thème « politique »
 
 - **Thème ajouté** (`npm run liste`) : demandé par plusieurs mots de deux lots (libéral au lot 6 ;

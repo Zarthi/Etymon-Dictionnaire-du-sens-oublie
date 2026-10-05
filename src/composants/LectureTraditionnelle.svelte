@@ -1,5 +1,6 @@
 <script lang="ts">
   import { grammaire as g, messages as m } from "../i18n/index.ts";
+  import { formesCitation } from "../lib/etymologie.ts";
   import { auteurs, ouvrages } from "../lib/fiches.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import type { Mention } from "../lib/mentions.ts";
@@ -42,6 +43,9 @@
           : undefined,
   );
 
+  /** Dans le texte d'une lecture, un mot de sa citation compte aussi comme forme (le mot que l'auteur lit). */
+  const formesLecture = $derived([...formes, ...formesCitation(lecture.citation)]);
+
   /** Qui parle : l'auteur (déduit de l'œuvre, ou rapporté par elle) ; sans auteur, l'œuvre signe seule (l'Écriture). */
   const voix = $derived(voixDe(lecture, ouvrages).auteur);
 
@@ -54,7 +58,7 @@
   {#if lecture.hypothese}
     <p class="hypothese">{m.lecture.sur}<em>{lecture.hypothese}</em></p>
   {/if}
-  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} {formes} {mentions} /></p>
+  <p><TexteRiche texte={lecture.texte} {lienVers} {exclu} formes={formesLecture} {mentions} /></p>
   <!-- La citation garde sa langue et son sens d'écriture (l'hébreu va de droite à gauche), isolée des guillemets. -->
   <blockquote>{g.guillemets[0]}<bdi lang={langue}>{lecture.citation}</bdi>{g.guillemets[1]}</blockquote>
   <p class="auteur">

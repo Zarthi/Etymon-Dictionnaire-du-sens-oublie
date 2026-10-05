@@ -81,3 +81,12 @@ export function formesItaliques(fiche: Pick<Fiche, "etymologie" | "ecartees">): 
 export function formesComparables(etymologie: Maillon[]): string[] {
   return etymologie.flatMap(formesDuMaillon).flatMap((f) => [f.forme, translitterationDe(f)].filter((x): x is string => Boolean(x)));
 }
+
+/**
+ * Mots de la citation d'une lecture traditionnelle (au moins 3 lettres), tels qu'écrits : le texte de
+ * la lecture peut nommer le mot que l'auteur lit, et l'app le met alors en italique comme une forme.
+ */
+export function formesCitation(citation: string): string[] {
+  const mots = citation.match(/\p{L}+(?:-\p{L}+)*/gu) ?? [];
+  return [...new Set(mots.filter((mot) => [...mot].length >= 3))];
+}

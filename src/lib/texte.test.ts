@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { formesCitation } from "./etymologie.ts";
 import { analyser, idDe } from "./texte.ts";
 
 const fiches = new Set(["hotel", "hopital", "ange", "ame", "religion", "hote", "porte-monnaie"]);
@@ -88,4 +89,12 @@ describe("idDe", () => {
     ["cœur", "coeur"],
     ["ex æquo", "ex-aequo"],
   ])("%s → %s", (mot, id) => expect(idDe(mot)).toBe(id));
+});
+
+describe("texte d'une lecture : mots de la citation", () => {
+  it("un mot de la citation, écrit dans le texte, est en italique ; les autres restent du texte", () => {
+    const formes = formesCitation("Hora ab ore dicta");
+    const segments = analyser("Isidore rapproche hora et ore, le bord.", existe, undefined, formes);
+    expect(segments.filter((s) => s.type === "italique").map((s) => s.texte)).toEqual(["hora", "ore"]);
+  });
 });

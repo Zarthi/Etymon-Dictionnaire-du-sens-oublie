@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { enAlphabetLatin, formesItaliques, indexPremier, sensLitteral, translitterationDe } from "./etymologie.ts";
+import { enAlphabetLatin, formesCitation, formesItaliques, indexPremier, sensLitteral, translitterationDe } from "./etymologie.ts";
 import type { Maillon } from "./types.ts";
 
 const m = (champs: Partial<Maillon>): Maillon => ({ langue: "latin", ...champs }) as Maillon;
@@ -74,5 +74,14 @@ describe("sensLitteral", () => {
   });
   it("un sens plus lointain porté par une forme l'emporte sur la composition sans sens", () => {
     expect(sensLitteral([m({ elements }), m({ forme: "alter", sens: "l'autre" })])).toBe(false);
+  });
+});
+
+describe("formesCitation", () => {
+  it("rassemble les mots de la citation d'au moins 3 lettres, tels qu'écrits", () => {
+    expect(formesCitation("Hora est ab ore, quasi ora: hora")).toEqual(["Hora", "est", "ore", "quasi", "ora", "hora"]);
+  });
+  it("garde les écritures grecques et ignore la ponctuation", () => {
+    expect(formesCitation("« ὥρα, ἡ ὥρα »")).toEqual(["ὥρα"]);
   });
 });
