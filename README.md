@@ -39,8 +39,10 @@ npm run dev          # app en local
 | `npm test` | tests (Vitest) |
 | `npm run build` | site de production dans `dist/` (fiches non validées signalées comme telles) |
 
-Chaque push est validé par la CI. La publication sur GitHub Pages se déclenche à la main
-(onglet Actions, « Run workflow »), une fois Pages activé dans les réglages du dépôt.
+Chaque push, sur toute branche, est validé par la CI (`validation.yml`). Le travail entre dans
+`main` par une pull request à CI verte. La publication sur GitHub Pages (`publication.yml`) se
+déclenche à la main depuis `main` (onglet Actions, « Publication », « Run workflow »), une fois
+Pages activé dans les réglages du dépôt.
 
 ## Ajouter une fiche
 

@@ -1,15 +1,27 @@
-name: Validation et déploiement
+name: Validation
 
+# Chaque push, sur toute branche, et chaque pull request venue d'un fork.
+# Aussi appelée par la publication, qui ne publie que ce qui a passé la validation.
 on:
   push:
-    branches: [main]
   pull_request:
-  # Publication manuelle seulement : onglet Actions, « Run workflow » sur main.
-  workflow_dispatch:
+  workflow_call:
+
+# Un nouveau push sur la même branche annule la validation en cours, devenue inutile.
+# (Appelée par la publication, elle en reçoit l'événement, workflow_dispatch : jamais annulée.)
+concurrency:
+  group: validation-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' }}
+
+permissions:
+  contents: read
 
 jobs:
   validation:
+    # Une pull request du dépôt lui-même est déjà validée par le push de sa branche.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -23,28 +35,10 @@ jobs:
         run: npm run build
       - name: Vérification des types
         run: npm run check
-      - name: Tests
+      - name: Tests (dont contrat et consignes à jour)
         run: npm test
-      - name: Publication du site construit
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+      - name: Site construit, pour la publication
+        if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
-
-  deploiement:
-    # Publication déclenchée à la main, depuis main, et seulement si la validation a réussi.
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
-    needs: validation
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deploiement.outputs.page_url }}
-    concurrency:
-      group: pages
-      cancel-in-progress: false
-    steps:
-      - id: deploiement
-        uses: actions/deploy-pages@v5

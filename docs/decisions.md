@@ -9,6 +9,19 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-05 — Workflow GitHub
+
+- La CI valide chaque push sur toute branche (avant : `main` seulement, si bien qu'aucune branche
+  de travail n'était validée) ; une pull request venue d'un fork l'est aussi. Un nouveau push annule
+  la validation en cours de la même branche. — à relire
+- La publication devient un workflow à part, manuel, depuis `main`, qui rappelle la validation
+  avant de déployer. — à relire
+- Dependabot (service de GitHub même) : mises à jour mensuelles, une pull request groupée pour npm,
+  une pour les actions. Raison : garder les dépendances à jour sans bruit. — à relire
+- Modèle de pull request : ce qui change, fiches en brouillon, décisions à relire, vérifications.
+  À régler par Thibault dans GitHub (hors du dépôt) : protéger `main` (pull request et CI verte
+  obligatoires). — à relire
+
 ## 2026-10-04 — Mots sacrés repris à part (manne, sabbat, alléluia, Pâque, Pâques)
 
 | Sujet | Décision | Raison | Relecture |

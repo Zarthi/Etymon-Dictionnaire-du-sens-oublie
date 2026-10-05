@@ -501,8 +501,9 @@ parfois dépassées (§5).
 - **Aucun backend, aucune base de données, aucun appel réseau** dans l'app.
 - Pas de React, pas d'Angular, pas de framework CSS lourd (Tailwind, Bootstrap). CSS
   maison, sobre, typographie serif pour les fiches, thème clair/sombre suivant le système.
-- Hébergement statique sur GitHub Pages, publication déclenchée à la main (la CI valide
-  chaque push sans publier).
+- Hébergement statique sur GitHub Pages. `.github/workflows/validation.yml` valide chaque push,
+  sur toute branche ; `publication.yml` publie à la main, depuis `main` seulement, après la même
+  validation. Dependabot propose les mises à jour une fois par mois, groupées.
 - **Langue de l'application** (`src/i18n/`) : le seul endroit où elle se choisit
   (`src/i18n/index.ts`). Chaque langue fournit trois parts : les **messages** de l'interface
   (catalogue typé, avec les accords : « Lecture traditionnelle » / « Lectures traditionnelles ») ;
@@ -624,6 +625,8 @@ etymon/
 - Ne jamais parcourir toute la base de fiches : utiliser `npm run etat` et ouvrir
   seulement les fiches concernées (`data/fiches/<initiale>/<préfixe>/<id>.yaml`).
 - Commits petits et explicites (`feat: recherche par mot`, `data: 10 fiches brouillon`).
+- Branches : le travail se fait sur une branche, jamais sur `main` ; il y entre par une pull
+  request à CI verte, que Thibault fusionne (sa relecture des brouillons et des décisions s'y fait).
 - Tests (Vitest) : le script de validation lui-même (fiches valides et invalides de test
   dans `scripts/__tests__/`), plus des tests unitaires sur `recherche.ts` et `motDuJour.ts`.
 - Optimise l'usage des tokens : utilise **rtk** (rust token killer) pour les actions qui
