@@ -1,0 +1,29 @@
+mot: dette
+nature: [ nom féminin ]
+etymologie:
+  - forme: debita
+    langue: latin
+  - forme: debitum
+    langue: latin
+  - forme: debere
+    langue: latin
+    sens: avoir ou garder ce qu'on tient d'autrui
+explication: >-
+  Debitum, participe de debere, d'où devoir, nommait la chose due ; son pluriel
+  debita, pris pour un féminin, a donné dette, attesté en 1174-1176 au sens de
+  ce que l'on doit à quelqu'un. Le mot dit aussi aujourd'hui les emprunts d'un
+  État et l'obligation morale née d'un bienfait reçu.
+famille: [ endetter, débit, débiteur, devoir ]
+themes: [ argent, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: dette
+  - ouvrage: littre
+    entree: dette
+  - ouvrage: lewis-short
+    entree: debeo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,30 @@
+mot: devoir
+nature: [ verbe ]
+etymologie:
+  - forme: debere
+    langue: latin
+    sens: avoir ou garder ce qu'on tient d'autrui
+    elements:
+      - forme: de
+        sens: de, venant de
+      - forme: habere
+        sens: avoir, garder
+explication: >-
+  Le latin debere avait déjà les sens du français, de la dette d'argent à
+  l'obligation. Suivi d'un infinitif, le verbe marque l'obligation dès 842
+  (Serments de Strasbourg) ; le nom, tiré du verbe, nomme l'obligation vers
+  1275, et aujourd'hui l'impératif de conscience.
+famille: [ dû, dette, débit, débiteur ]
+themes: [ morale, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: devoir
+  - ouvrage: lewis-short
+    entree: debeo
+  - ouvrage: littre
+    entree: devoir
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

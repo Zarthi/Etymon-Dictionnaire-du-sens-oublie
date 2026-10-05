@@ -198,3 +198,43 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chemins | `consacre` pour *croire* et *foi* ; `ordinaire` pour les sept autres | le TLFi dit le sens religieux de *credere* et de *fides* venu du latin chrétien ; il ne le dit pas de *fidelis* ni de *pax* | à relire |
 | Drapeau `tradition` | posé sur *croire*, *foi*, *fidèle*, *confiance*, *paix* ; non posé sur *crédit*, *dette*, *devoir*, *payer* | Isidore lit *fides* (V, 17 ; VIII, 4), *fidelis* (X, 98), *confidentia* (Différences) ; Thomas d'Aquin lit *credere* (IIa-IIae, q. 2, a. 2, hors corpus local) ; Festus (Sinnius Capito) lit *pax* ; Isidore (V, 18) lit *pactum*, non *pacare* | à relire |
 | Renvois | *croire* → *foi* ; *crédit* → *dette* ; *payer* → *dette* | notions voisines sans racine commune ; *payer* → *merci* non retenu (*merci* dit aujourd'hui le remerciement, non le paiement) | à relire |
+
+## 2026-10-05 — Lot 9 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Maillons latins sans sens en fin de chaîne (*credere* dans *crédit*, *fides* dans *fidèle*, *pax* dans *payer*) | retirés (propositions du relecteur), ce qui remplace la décision de passe 1 ; *debita* et *debitum* restent dans *dette*, avant *debere*, qui porte le sens | règle d'arrêt (§3.2) : un dernier maillon sans sens n'ajoute rien ; le lien avec la fiche voisine est dans la famille | à relire |
+| Explication de *foi* | phrase du relecteur adoptée ; la fin (« foi dit aujourd'hui la confiance assurée et la croyance religieuse ») retirée | sans cela l'explication dépassait 300 caractères ; le sens d'engagement « vieilli, ou dans des locutions » dit déjà ce qui a changé | à relire |
+| Lecture de *foi* | Isidore, *Étymologies*, VIII, 2, 4 retenu ; V, 24, 17 non retenu | V, 24, 17 redit la même étymologie, à propos du fidéicommis ; une voix, un passage | à relire |
+| Cicéron, *De officiis*, I, 23 (« quia fiat, quod dictum est appellatam fidem ») | non retenu ; ni fiche d'ouvrage ni tradition ajoutée à `ciceron` | la notice d'œuvre BnF (cb12134897m, « Les devoirs ») existe, mais l'API SRU échoue à la rendre en UNIMARC, et `npm run bnf` la refuse (« pas une notice d'œuvre ») ; pas de fiche écrite à la main | à relire |
+| Festus (Sinnius Capito, *pacem a pactione conditionum*) | non retenu | parole rapportée de Sinnius Capito, sans notice BnF ; le texte de Festus n'a pas été trouvé en ligne | à relire |
+| Augustin, *La Cité de Dieu*, XIX, 11 | retenu pour *paix* | il lit le nom (*pacis nomen*), employé aussi des choses mortelles, et lui préfère pour cela la vie éternelle comme nom de la fin de la cité | à relire |
+| Thomas d'Aquin, IIa-IIae, q. 2, a. 2 | retenu pour *croire*, lu au Corpus Thomisticum | il distingue *credere Deum*, *credere Deo*, *credere in Deum*, un seul acte de foi sous trois rapports : cela complète l'histoire du verbe | à relire |
+| Famille de *payer* | *paye* au lieu de *paie* | graphie du Littré (contrôle de famille) | à relire |
+
+## 2026-10-05 — Lot 10 (passe 1 : roi, règle, régime, droit, loi, légal, légitime, ordre, ordinaire)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Sens en tête de *roi* | *regere*, « mener droit, diriger » ; *rex* sans sens | le Lewis & Short tire *rex* de *rego* et glose *rego* « to keep straight […], to lead straight; to guide » ; le TLFi s'arrête à *rex* (« souverain ») sans le contredire ; « souverain » n'apprend rien | à relire |
+| *regere* dans *règle* et *régime* | maillon sans sens ; sens en tête sur *regula* (« pièce de bois droite, servant à mettre droit ») et *regimen* (« action de guider ») | règle du lot 9 (mot de base sans sens) : le maillon montre la famille de *roi* sans répéter son sens ; pour *règle*, l'instrument concret éclaire mieux que *regere* | à relire |
+| Chaîne de *droit* | *directum* (bas latin, sans sens ; la justice dite dans l'explication), puis *directus*, « sans courbure, en ligne droite » ; *dirigere* non repris | le TLFi tire le nom de *directum* et l'adjectif de *directus*, participe de *dirigere* ; *dirigere* (« mettre en ligne droite ») n'ajoute pas de sens à *directus* (§3.2) | à relire |
+| *droit* adjectif et nom | une seule fiche, chaîne du nom | le nom est l'adjectif substantivé (Littré, TLFi), comme *devoir* au lot 9 ; *directum* précède *directus*, que l'adjectif rejoint | à relire |
+| Origine de *lex* (*loi*) | alternatives débattues : *ligare*, « lier » (selon le Lewis & Short, en premier), *legere*, « choisir » (selon Cicéron, *Des lois*, I, 19) ; `incertain: true` | le Littré rapporte *ligare* aux étymologistes latins, juge les deux difficiles et l'origine obscure ; le Lewis & Short propose *ligo* (« perh. ») ; le TLFi ne discute pas | à relire |
+| Varron (*leges, quae lectae*, VI, 66) et Isidore (*lex a legendo, quia scripta est*) | non tenants de *legere* dans la chaîne ; pistes de lectures (passe 2) | chez Varron, *lectae* peut se lire « lues » ou « choisies » ; Isidore tire *lex* de « lire » ; le sens « choisir » n'est explicite que chez Cicéron (*delectus*) | à relire |
+| Sens en tête de *loi* | *lex*, « proposition de loi faite au peuple » | sens propre au Lewis & Short (« a proposition or motion for a law made to the people by a magistrate »), puis la loi adoptée (« Transf. ») | à relire |
+| *collègue*, *lire*, *élire* depuis *loi* | ni famille ni renvoi | apparentés à *lex* par une hypothèse seulement (*legare*, de *lex*, au Lewis & Short ; *legere*) : un renvoi supposerait la racine absente, une famille l'affirmerait (comme *philosophie* depuis *sage*, lot 8) | à relire |
+| *loyal* (*légal*) | en famille, non en doublet | doublet signalé par le Littré et le TLFi, mais *loyal* n'a pas de fiche (candidat) ; même règle que *féal* au lot 9 | à relire |
+| Mots de base latins sans sens | *lex* dans *légal* et *légitime*, *ordo* dans *ordinaire* | règle du lot 9 : la filiation avec *loi* et *ordre* sans répéter leur sens | à relire |
+| Racine de *ordo* | non reprise (Corssen, *oriri*, rapporté par le Littré et le Lewis & Short) | le TLFi s'arrête à *ordo* ; une racine n'est pas un maillon (comme *pac-* pour *paix*) | à relire |
+| Drapeau `tradition` | posé sur *roi*, *règle*, *loi*, *légitime*, *ordinaire* ; non posé sur *régime*, *droit*, *légal*, *ordre* | Isidore lit *rex* (IX, 3, 4 ; I, 29, 3), Augustin aussi (*Cité de Dieu*, V, 12) ; Isidore lit *regula* (VI, 16, 1 ; XIX, 18, 2), *lex* (V, 3, 2), *ordinarius* (IX, 3, 33) ; Thomas d'Aquin lit *lex* (Ia-IIae, q. 90, a. 1) ; Varron lit *leges* et *legitima* (VI, 66) ; Isidore (*Différences*, I, 176) distingue *directum* et *derectum* sans rien ajouter ; Augustin (XIX, 13) définit l'ordre, non le mot | à relire |
+| Renvois | *roi* → *souverain*, *prince* ; *règle* → *loi* ; *droit* → *loi*, *justice* ; *légitime* → *juste* | notions voisines sans racine commune ; *légal* et *légitime* ne renvoient pas à *loi* (même racine : famille) | à relire |
+
+## 2026-10-05 — Lot 9 (seconde relecture)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Thomas d'Aquin, IIa-IIae, q. 88, a. 3, co. (*foi*) | écarté, noté au corpus | il rapporte Augustin (*fides dicitur ex hoc quod fiunt dicta*), qui redit Isidore, VIII, 2, 4, déjà retenu | à relire |
+| Thomas d'Aquin, IIa-IIae, q. 174, a. 2, ad 3 (*foi*) | retenu | il lit le nom (*nomen fidei importat imperfectionem cognitionis*) : ce que le nom emporte complète l'histoire du mot | à relire |
+| Isidore, *Différences*, I, 207 (*fidèle*) | retenu, avec le texte du relecteur | il lit *fidelis*, qu'il distingue de l'autre mot (dit de l'ami) : un emploi propre au mot, comme I, 217 pour *confiance* | à relire |
+| Thomas d'Aquin, IIa-IIae, q. 29, a. 1, co. (*paix*) | retenu | il lit le nom pris au sens propre (*si nomen pacis proprie sumatur*) et le distingue de la concorde, premier sens de *paix* en français | à relire |
