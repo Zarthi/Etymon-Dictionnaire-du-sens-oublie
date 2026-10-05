@@ -51,12 +51,13 @@ export type AuteurAssemble = Auteur & {
 /** Ouvrage tel que l'app le reçoit : sa fiche, et les mots qu'il éclaire, qu'on y a forgés ou qui viennent de son titre. */
 export type OuvrageAssemble = Ouvrage & {
   lectures: MotCite[];
+  /** Mots dont il est tenant d'une hypothèse (un dictionnaire sans auteur unique : Lewis & Short). */
+  hypotheses: MotCite[];
   forges: MotCite[];
   /** Mots issus de son titre (algèbre, d'al-jabr). */
   issus: MotCite[];
 };
 
-/** Entrée de `index.json` : de quoi chercher et tirer un mot sans charger les fiches. */
 /** Entrée de l'index : de quoi chercher et tirer un mot ; `sacre` l'exclut du tirage. */
 export type EntreeIndex = Pick<FicheIdentifiee, "id" | "mot" | "statut"> & { sacre?: true };
 

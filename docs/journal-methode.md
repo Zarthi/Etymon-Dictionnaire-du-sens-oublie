@@ -2,6 +2,82 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-05 — Bilan des lots 3 à 16, dans le cloud
+
+Quatorze lots par familles et la reprise des 21 fiches antérieures à la méthode (lots A, B et les
+cinq mots sacrés), un rédacteur et un relecteur neuf par lot (Opus 5.5, réflexion élevée), deux lots
+en parallèle. 153 fiches en brouillon. Coût moyen d'un lot de 8 à 10 mots : environ 20 $ (compteurs
+de fin : rédacteur 200 000 à 270 000 jetons, relecteur 130 000 à 180 000).
+
+- **Ce qui a marché** : la confrontation du dossier aux sources brutes par le relecteur (erreurs du
+  dossier trouvées à chaque lot) ; le corpus noté au dossier (lectures manquées retrouvées en
+  seconde passe : Rashi sur Nombres 22, 22 ; Thomas sur ange, foi, paix ; Isidore sur lire, patrie) ;
+  les remarques restées ouvertes en passe 4, réglées sans boucle (textes de lectures qui disaient
+  plus que leur citation : la faute la plus fréquente).
+- **Règles fixées en route, inscrites aux consignes** : un dernier maillon sans sens se retire ;
+  une lecture ne porte que sur le mot ou une forme de sa chaîne (servus, sapiens, mendacium écartés
+  et gardés pour serf, sapience…) ; une origine débattue va en alternatives, jamais en écartées
+  ni en croisement (pénitence, mensonge).
+- **Modèle et outils affinés entre deux lots** : croisement (chétif, algorithme, oisif) ; ouvrage
+  tenant (Lewis & Short) ; degré 3 du sacré (manne) ; « littéralement » ; mots de la citation dans
+  le texte d'une lecture ; Somme entière au corpus (Corpus Thomisticum) ; homographes du TLFi ;
+  repli INTERMARC de la BnF ; nature tirée de l'entrée du Littré écrite comme le mot.
+- **Restent à Thibault** (signalés aux lots, voir `docs/decisions.md`) : un sens premier peu
+  parlant quand une origine débattue suit un maillon redondant (mensonge) ; le calque de sens
+  (passio, evidentia, mundus) ; le nom d'un peuple dans la chaîne (franc, esclave) ; deux chaînes
+  pour le nom et l'adjectif (droit) ; les doutes sur le critère d'entrée relevés à chaque lot ;
+  thèmes demandés (art, ciel, vie, souffrance).
+
+## 2026-10-05 — Le texte d'une lecture peut nommer le mot que l'auteur lit
+
+- **Cause** (lot 14) : le texte d'une lecture ne pouvait pas nommer le mot latin ou grec lu par
+  l'auteur dans sa propre citation (Isidore rapproche *hora* et *ora* : le texte paraphrasait « le
+  bord, dont le nom latin lui ressemble »), faute d'être une forme de la chaîne.
+- **Changement** : dans le texte d'une lecture, un mot de sa citation (au moins 3 lettres, tel
+  qu'écrit) compte aussi comme forme : l'app le met en italique (`formesCitation`). Rien ne change
+  pour l'explication ni les étymologies écartées. Aucun contrôle de `npm run verifier` ne signalait
+  de mot étranger hors chaîne : rien à y assouplir. AGENTS.md §3.4 et la consigne des lectures à jour.
+
+## 2026-10-05 — Thème « politique »
+
+- **Thème ajouté** (`npm run liste`) : demandé par plusieurs mots de deux lots (libéral au lot 6 ;
+  roi, régime, ordre au lot 10), rangés jusque-là en « société » faute de mieux. *libéral* reclassé.
+
+## 2026-10-04 — Troisième lot (hospes, amicus, potio), dans le cloud
+
+Dix mots par familles et doublets, quatre passes, Opus 5.5 réflexion élevée. Compteurs de fin :
+rédacteur 194 000 jetons, relecteur 148 000. Dix fiches écrites ; douze remarques en passe 2,
+deux restées ouvertes en passe 4 (textes de lectures qui ajoutaient à la citation), réglées sans
+boucle.
+
+- **Le relecteur confronte le dossier aux sources brutes** (`npm run dossier -- --consulter`) :
+  essai sur ce lot, après la relecture critique du projet (des erreurs du dossier passaient). Il
+  a trouvé une infidélité (*captif* : le croisement de *chétif* non rapporté). À inscrire dans la
+  consigne de relecture.
+- **Le corpus noté au dossier fonctionne** : les huit œuvres consultées pour chaque mot au
+  drapeau `tradition`, et le relecteur l'a contrôlé.
+- **Réseau dans le cloud** : le `fetch` de Node ne passe par le proxy qu'avec
+  `NODE_USE_ENV_PROXY=1` ; sans lui, TLFi, BnF et Wikisource répondent 403, ce que les scripts
+  prennent pour une absence. À traiter dans le code.
+- **TLFi** : pour *ami* et *ennemi*, l'API rend d'abord l'adjectif, sans étymologie ; l'article
+  du nom se lit à `/api/word/<mot>/nom/`. À faire : `npm run dossier` essaie les autres natures.
+
+## 2026-10-04 — Affinage après le second pilote
+
+- **La recherche dans le corpus de réflexe se note au dossier** (`corpus` : l'œuvre, ce qui a été
+  cherché, ce qui a été trouvé, même rien), pour chaque œuvre, aux mots du drapeau `tradition` ;
+  `npm run dossier -- --verifier` dit les œuvres qui manquent, et le relecteur le contrôle en
+  seconde passe. Cause : pour *ange*, Augustin, qui est au corpus, n'avait pas été cherché.
+- **`npm run bnf` lit les dates affichées de la notice** (« 0427?-0348? av. J.-C. » : « vers 427
+  av. J.-C. », « vers 348 av. J.-C. ») et ne se rabat sur les dates codées qu'à défaut. Cause : la
+  fiche de Platon portait une naissance exacte et aucune mort.
+- **L'écriture régénère les consignes** : `npm run rediger` (hors essai) et `npm run bnf --cb`
+  relancent `npm run contrat`, comme `npm run liste`. Cause : les auteurs et ouvrages créés pendant
+  le lot n'y figuraient pas, et le test du contrat échouait jusqu'à la fin du lot.
+- Restent en attente : le repli de `npm run dossier` sur Stella (si l'API du TLFi manque encore un
+  mot) et la nature des mots dont l'usage a changé de nature (*panique*, décision au journal des
+  décisions).
+
 ## 2026-09-25 — Second pilote, avec la méthode refondue
 
 Mêmes dix mots, un rédacteur et un relecteur (Opus 5.5, réflexion élevée), quatre passes. Deux
@@ -121,3 +197,19 @@ Causes, et ce qui change :
   l'écriture attend les auteurs et ouvrages, et ne demande que des commandes.
 - **Les notices BnF se cherchent avec l'année de naissance** (`Augustin 0354`). Cause : l'API ne
   classe pas ses réponses ; sans l'année, les homonymes récents passent devant.
+
+## 2026-10-05 — Lot 5 : tradition « romaine »
+
+- **Tradition « romaine » ajoutée** (`npm run liste -- traditions "romaine"`). Cause : Varron
+  (*De la langue latine*, VI, 66), que AGENTS.md §5 compte parmi les sources des lectures, lit
+  *legere*, *collegae* et *diligens* ; aucune tradition de la liste ne lui convenait. À retirer à
+  la relecture si Thibault la juge de trop.
+
+## 2026-10-05 — Affinage du modèle entre deux lots
+
+- **`croisement` sur un maillon** : liste de formes (`forme`, `langue`, `sens?`, `translitteration?`)
+  avec lesquelles la forme du maillon s'est croisée (*chétif* : *captivus* et le gaulois
+  *\*cactos* ; *algorithme* : *algorisme* et ἀριθμός, TLFi). Affiché « …, croisé avec le gaulois
+  *cactos ». Les formes comptent comme formes de la chaîne. Seulement si une source le dit.
+- **Tenant ouvrage** : `selon` accepte l'identifiant d'un ouvrage (Lewis & Short), pour une hypothèse
+  tenue par un dictionnaire sans auteur unique ; la page de l'ouvrage liste ses hypothèses.

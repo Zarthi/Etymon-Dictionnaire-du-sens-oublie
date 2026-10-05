@@ -1,0 +1,39 @@
+mot: paix
+nature: [ nom féminin ]
+etymologie:
+  - forme: pax
+    langue: latin
+    sens: accord, traité
+explication: >-
+  De l'accord, pax est passé à la paix conclue entre adversaires, à la
+  tranquillité, au repos. En français, le mot nomme d'abord la concorde entre
+  personnes (Xe siècle), puis la tranquillité que donne l'accomplissement des
+  préceptes religieux (vers 1050) et l'état d'un pays sans guerre (vers 1100).
+famille: [ paisible, apaiser, pacifique, pacifier, payer ]
+themes: [ société, guerre ]
+tradition:
+  lectures:
+    - texte: "La paix pourrait être dite la fin de nos biens, comme la vie éternelle ; mais parce que le nom de paix se dit aussi des choses mortelles, où n'est pas la vie éternelle, c'est la vie éternelle qui est donnée pour fin à la cité de Dieu."
+      citation: "Quapropter possemus dicere fines bonorum nostrorum esse pacem, sicut aeternam diximus uitam […] Sed quoniam pacis nomen etiam in his rebus mortalibus frequentatur, ubi utique non est uita aeterna, propterea finem ciuitatis huius, ubi erit summum bonum eius, aeternam uitam maluimus commemorare quam pacem."
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "XIX, 11"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XIX
+    - texte: "La paix, au sens propre du nom, contient la concorde et y ajoute : la concorde unit les volontés de plusieurs cœurs ; la paix unit aussi les désirs d'un même cœur, qui tendent en sens contraires."
+      citation: "pax includit concordiam et aliquid addit. Unde ubicumque est pax, ibi est concordia, non tamen ubicumque est concordia, est pax, si nomen pacis proprie sumatur. […] Unde concordia importat unionem appetituum diversorum appetentium, pax autem, supra hanc unionem, importat etiam appetituum unius appetentis unionem."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 29, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth3027.html
+sources:
+  - ouvrage: tlfi
+    entree: paix
+  - ouvrage: lewis-short
+    entree: pax1
+  - ouvrage: littre
+    entree: paix
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

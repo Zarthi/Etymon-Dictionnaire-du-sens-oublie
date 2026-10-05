@@ -3,8 +3,9 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
-import { chercherDans, CORPUS, pageWikisource, type Oeuvre, type Page } from "./lib/corpus.ts";
+import { chercherDans, chercherParagraphes, CORPUS, pageSuivante, pageWikisource, paragraphesThomas, repereDePage, type Oeuvre, type Page } from "./lib/corpus.ts";
 import { texteDePage } from "./lib/en-ligne.ts";
+import { lire as lirePage, type Lecture } from "./lib/reseau.ts";
 
 /**
  * Corpus de réflexe des lectures traditionnelles (scripts/lib/corpus.ts), en local, hors du dépôt,
@@ -23,13 +24,13 @@ const attendre = (ms: number) => new Promise((r) => setTimeout(r, ms));
 /** Wikimedia demande qu'un script s'identifie, et limite le débit : une page à la fois, reprise après un refus. */
 const ENTETES = { "User-Agent": "Etymon/0.1 (https://github.com/Zarthi/Etymon-Dictionnaire-du-sens-oublie)" };
 
-async function lire(url: string): Promise<Response | undefined> {
-  for (let essai = 0; essai < 4; essai++) {
-    const reponse = await fetch(url, { headers: ENTETES }).catch(() => undefined);
-    if (reponse?.status !== 429) return reponse;
-    await attendre(15_000 * (essai + 1));
+async function lire(url: string, encodage?: string): Promise<Lecture> {
+  let page = await lirePage(url, ENTETES, encodage);
+  for (let essai = 1; essai < 4 && !page.lue && page.statut === 429; essai++) {
+    await attendre(15_000 * essai);
+    page = await lirePage(url, ENTETES, encodage);
   }
-  return undefined;
+  return page;
 }
 
 /** Pages d'une œuvre : sa liste, ou celles de son préfixe sur Wikisource, demandées à l'API. */
@@ -42,18 +43,50 @@ async function pagesDe(oeuvre: Oeuvre): Promise<Page[]> {
     await attendre(800);
     const url = `https://${langue}.wikisource.org/w/api.php?action=query&list=allpages&apnamespace=0&aplimit=500&format=json&apprefix=${encodeURIComponent(prefixe)}${suite ? `&apcontinue=${encodeURIComponent(suite)}` : ""}`;
     const reponse = await lire(url);
-    if (!reponse?.ok) throw new Error(`${oeuvre.titre} : liste des pages inaccessible`);
-    const donnees = (await reponse.json()) as { query: { allpages: { title: string }[] }; continue?: { apcontinue: string } };
+    if (!reponse.lue) throw new Error(`${oeuvre.titre} : liste des pages inaccessible`);
+    const donnees = JSON.parse(reponse.texte) as { query: { allpages: { title: string }[] }; continue?: { apcontinue: string } };
     titres.push(...donnees.query.allpages.map((p) => p.title));
     suite = donnees.continue?.apcontinue;
   } while (suite);
   return titres.map((titre) => ({ repere: titre.slice(prefixe.length), url: pageWikisource(langue, titre) }));
 }
 
+/**
+ * Œuvre en chaîne de pages (Corpus Thomisticum, en latin-1) : on part de la première, chaque page
+ * donne la suivante. Le sommaire s'écrit page après page, de quoi reprendre où l'on s'est arrêté.
+ */
+async function telechargerChaine(oeuvre: Oeuvre): Promise<{ pages: number; nouvelles: number; echecs: number }> {
+  const pages: Page[] = existsSync(sommaire(oeuvre.id)) ? (JSON.parse(await readFile(sommaire(oeuvre.id), "utf8")) as Page[]) : [];
+  let url: string | undefined = pages.length > 0 ? pages.at(-1)!.suivante : oeuvre.chaine;
+  let nouvelles = 0;
+  // Une page déjà lue ferme la chaîne (la dernière page renvoie à une page connue, ou à l'index).
+  while (url && !pages.some((p) => p.url === url)) {
+    await attendre(800);
+    const reponse = await lire(url, "latin1");
+    if (!reponse.lue) {
+      console.log(`✗ ${oeuvre.titre} : ${reponse.raison} (${url}), à reprendre`);
+      return { pages: pages.length, nouvelles, echecs: 1 };
+    }
+    const suivante = pageSuivante(reponse.texte);
+    await writeFile(fichier(oeuvre.id, pages.length), paragraphesThomas(reponse.texte));
+    pages.push({ repere: repereDePage(reponse.texte), url, ...(suivante ? { suivante } : {}) });
+    await writeFile(sommaire(oeuvre.id), JSON.stringify(pages, null, 1));
+    nouvelles++;
+    url = suivante;
+  }
+  return { pages: pages.length, nouvelles, echecs: 0 };
+}
+
 async function telecharger(): Promise<number> {
   let echecs = 0;
   for (const oeuvre of CORPUS) {
     await mkdir(join(DOSSIER, oeuvre.id), { recursive: true });
+    if (oeuvre.chaine) {
+      const bilan = await telechargerChaine(oeuvre);
+      echecs += bilan.echecs;
+      if (bilan.echecs === 0) console.log(`✓ ${oeuvre.titre} : ${bilan.pages} page(s), dont ${bilan.nouvelles} téléchargée(s)`);
+      continue;
+    }
     const pages = existsSync(sommaire(oeuvre.id)) ? (JSON.parse(await readFile(sommaire(oeuvre.id), "utf8")) as Page[]) : await pagesDe(oeuvre);
     await writeFile(sommaire(oeuvre.id), JSON.stringify(pages, null, 1));
     let nouvelles = 0;
@@ -61,12 +94,12 @@ async function telecharger(): Promise<number> {
       if (existsSync(fichier(oeuvre.id, rang))) continue;
       await attendre(800);
       const reponse = await lire(page.url);
-      if (!reponse?.ok) {
-        console.log(`✗ ${oeuvre.titre}, ${page.repere} : ${reponse ? `HTTP ${reponse.status}` : "injoignable"} (${page.url})`);
+      if (!reponse.lue) {
+        console.log(`✗ ${oeuvre.titre}, ${page.repere} : ${reponse.raison} (${page.url})`);
         echecs++;
         continue;
       }
-      await writeFile(fichier(oeuvre.id, rang), texteDePage(await reponse.text()));
+      await writeFile(fichier(oeuvre.id, rang), texteDePage(reponse.texte));
       nouvelles++;
     }
     console.log(`✓ ${oeuvre.titre} : ${pages.length} page(s), dont ${nouvelles} téléchargée(s)`);
@@ -83,8 +116,11 @@ async function chercher(formes: string[], parOeuvre: number): Promise<number> {
       const pages = JSON.parse(await readFile(sommaire(oeuvre.id), "utf8")) as Page[];
       for (const [rang, page] of pages.entries()) {
         if (!existsSync(fichier(oeuvre.id, rang))) continue;
-        for (const { passage, explique } of chercherDans(await readFile(fichier(oeuvre.id, rang), "utf8"), forme)) {
-          trouves.push({ ligne: `  ${explique ? "★ " : ""}${page.repere ? `${page.repere} · ` : ""}${passage}\n    ${page.url}`, explique });
+        const texte = await readFile(fichier(oeuvre.id, rang), "utf8");
+        // Œuvre aux paragraphes repérés : le repère du passage précise celui de la page.
+        const passages = oeuvre.chaine ? chercherParagraphes(texte, forme) : chercherDans(texte, forme).map((t) => ({ repere: page.repere, ...t }));
+        for (const { repere, passage, explique } of passages) {
+          trouves.push({ ligne: `  ${explique ? "★ " : ""}${repere ? `${repere} · ` : ""}${passage}\n    ${page.url}`, explique });
         }
       }
       if (trouves.length === 0) continue;

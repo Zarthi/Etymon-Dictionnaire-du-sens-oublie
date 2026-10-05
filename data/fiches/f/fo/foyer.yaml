@@ -1,0 +1,44 @@
+mot: foyer
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*focarium"
+    langue: latin populaire
+  - forme: focus
+    langue: latin
+    sens: âtre, lieu où l'on fait le feu
+explication: >-
+  Sur le focus des maisons romaines, on entretenait un feu pour les dieux de la
+  maison, et le mot désignait aussi la maison et la famille. Foyer, l'âtre de la
+  cheminée vers 1135, nomme depuis 1572 le lieu où vit une famille, et depuis
+  1575 le centre d'où quelque chose se propage.
+famille: [ feu ]
+themes: [ maison, famille ]
+tradition:
+  lectures:
+    - texte: "Le focus tient son nom du feu qu'on y entretient : FOS, en grec, se dit ignis en latin."
+      citation: "Ab igne colendo et ligna antiqui appellaverunt focum: FOS enim Graece, Latine ignis est"
+      sources:
+        - ouvrage: etymologies
+          entree: "XX, 10, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX
+    - texte: "Les focos sont dits de ce qu'ils foveant, entretiennent, les feux, le feu étant la flamme même : tout ce qui entretient le feu, autel ou autre chose, s'appelle focus."
+      citation: "Varro autem focos ait dictos quod foveant ignes; nam ignis ipsa flamma est; quidquid autem ignem fovet, focus vocatur, seu ara sit, sive quid aliud in quo ignis fovetur."
+      auteur: varron
+      sources:
+        - ouvrage: etymologies
+          entree: "XX, 10, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX
+sources:
+  - ouvrage: tlfi
+    entree: foyer
+  - ouvrage: tlfi
+    entree: feu
+  - ouvrage: lewis-short
+    entree: focus
+  - ouvrage: littre
+    entree: foyer
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

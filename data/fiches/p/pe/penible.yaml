@@ -1,0 +1,32 @@
+mot: pénible
+nature: [ adjectif ]
+etymologie:
+  - forme: peine
+    langue: français
+  - forme: poena
+    langue: latin
+    sens: réparation, expiation, châtiment
+  - forme: ποινή
+    langue: grec ancien
+    sens: prix du sang, rançon
+explication: >-
+  Pénible a d'abord qualifié ce qui fatigue, ce qui se fait avec peine (début du
+  XIIe siècle), puis ce qui fait du mal (vers 1165). De la réparation et du
+  châtiment que disait poena, il ne garde rien : il dit ce qui coûte de
+  l'effort, ce qui attriste ou ce qui est difficile à supporter.
+famille: [ peine, péniblement ]
+themes: [ travail, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: pénible
+  - ouvrage: littre
+    entree: pénible
+  - ouvrage: tlfi
+    entree: peine
+  - ouvrage: bailly
+    entree: ποινή
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

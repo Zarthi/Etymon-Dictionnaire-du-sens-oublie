@@ -1,0 +1,31 @@
+mot: désastre
+nature: [ nom masculin ]
+etymologie:
+  - forme: disastro
+    langue: italien
+    sens: mauvais astre
+    elements:
+      - forme: dis-
+        sens: mauvais
+      - forme: astro
+        sens: astre
+explication: >-
+  Le mot suppose l'influence que l'astrologie prêtait aux astres sur la vie des
+  hommes. En français depuis 1537, désastre nomme un malheur de grande ampleur,
+  une calamité, une défaite, une ruine, et au figuré un échec ; il ne renvoie
+  plus aux astres.
+famille: [ désastreux, astre ]
+renvois: [ catastrophe ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: désastre
+  - ouvrage: littre
+    entree: désastre
+  - ouvrage: tlfi
+    entree: astre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

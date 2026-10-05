@@ -1,0 +1,32 @@
+mot: saveur
+nature: [ nom féminin ]
+etymologie:
+  - forme: sapor
+    langue: latin
+  - forme: sapere
+    langue: latin
+    sens: avoir du goût
+explication: >-
+  De sapere vient aussi savoir. Vers 1160, saveur nommait l'assaisonnement et la
+  qualité perçue par le goût ; le mot s'est dit par figure d'une personne au
+  XIIIe siècle, puis d'une œuvre de l'esprit en 1718.
+famille: [ savourer, savoureux ]
+themes: [ nourriture ]
+sources:
+  - ouvrage: tlfi
+    entree: saveur
+  - ouvrage: littre
+    entree: saveur
+  - ouvrage: lewis-short
+    entree: sapor
+  - ouvrage: tlfi
+    entree: savoir
+  - ouvrage: littre
+    entree: savourer
+  - ouvrage: littre
+    entree: savoureux
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

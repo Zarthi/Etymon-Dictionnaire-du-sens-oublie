@@ -6,7 +6,7 @@ etymologie:
     langue: latin
     sens: test
 explication: Test.
-themes: []
+themes: [ savoir ]
 sources:
   - { ouvrage: littre, entree: alias }
 redaction:

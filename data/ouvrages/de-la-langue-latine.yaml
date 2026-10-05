@@ -1,0 +1,15 @@
+titre: De la langue latine
+titreOriginal: De lingua latina
+auteur: varron
+licence: domaine public
+texte: https://www.thelatinlibrary.com/varro.ll6.html
+description: >-
+  Traité de Varron sur la langue latine, qui explique l'origine des mots latins.
+sources:
+  - ouvrage: bnf
+    entree: cb12425965t
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,33 @@
+mot: âme
+nature: [ nom féminin ]
+etymologie:
+  - forme: anima
+    langue: latin
+    sens: souffle, air
+explication: >-
+  En latin, anima disait aussi la vie, et l'esprit opposé au corps. Le français
+  reçoit le mot à la fin du IXe siècle pour le principe spirituel de l'homme ;
+  il nomme aujourd'hui aussi le siège de la vie affective et morale, et la
+  partie intérieure d'une chose : l'âme d'un canon.
+famille: [ animer, animal, unanime ]
+themes: [ esprit, religion ]
+tradition:
+  lectures:
+    - texte: "Les païens ont tiré le nom de l'âme du vent, comme si elle était vent ; c'est manifestement faux, car l'âme est engendrée bien avant que la bouche puisse recevoir l'air, puisqu'elle vit déjà dans le sein de la mère. L'âme est nommée de ce qu'elle vit."
+      citation: "Anima autem a gentilibus nomen accepit, eo quod ventus sit. […] sed apertissime falsum est, quia multo prius gignitur anima quam concipi aer ore possit, quia iam in genetricis utero vivit. […] Sed anima dicta propter quod vivit"
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 1, 7-10"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: littre
+    entree: âme
+  - ouvrage: tlfi
+    entree: âme
+  - ouvrage: lewis-short
+    entree: anima
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

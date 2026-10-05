@@ -1,0 +1,65 @@
+mot: loi
+nature: [ nom féminin ]
+etymologie:
+  - forme: lex
+    langue: latin
+    sens: proposition de loi faite au peuple
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: ligare
+          sens: lier
+          selon: [ lewis-short ]
+        - forme: legere
+          sens: choisir
+          selon: [ ciceron ]
+explication: >-
+  Lex s'est dit ensuite de la loi adoptée par le peuple, et en latin chrétien de
+  la loi de Dieu. Le mot ne nomme plus la proposition, mais la règle imposée par
+  une autorité, et depuis 1681 aussi le rapport constant entre des phénomènes.
+incertain: true
+famille: [ légal, légitime, loyal, législateur ]
+themes: [ droit ]
+sources:
+  - ouvrage: tlfi
+    entree: loi
+  - ouvrage: lewis-short
+    entree: lex
+  - ouvrage: lewis-short
+    entree: ligo1
+  - ouvrage: littre
+    entree: loi
+  - ouvrage: traite-des-lois
+    entree: I, 19
+    url: https://www.thelatinlibrary.com/cicero/leg1.shtml
+  - ouvrage: lewis-short
+    entree: lego2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Les lois sont celles qui ont été choisies et portées devant le peuple, pour qu'il les observe."
+      citation: "etiam leges, quae lectae et ad populum latae quas observet"
+      hypothese: legere
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 66"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+    - texte: "La loi, écrite, tient son nom de la lecture ; la coutume est une loi non écrite."
+      citation: "Lex est constitutio scripta. Mos est vetustate probata consuetudo, sive lex non scripta. Nam lex a legendo vocata, quia scripta est."
+      hypothese: legere
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 3, 2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+    - texte: "La loi est une règle et une mesure des actes, qui pousse à agir ou en détourne : elle tient son nom de ligare, parce qu'elle oblige à agir."
+      citation: "lex quaedam regula est et mensura actuum, secundum quam inducitur aliquis ad agendum, vel ab agendo retrahitur, dicitur enim lex a ligando, quia obligat ad agendum."
+      hypothese: ligare
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 90, a. 1"
+          url: https://www.corpusthomisticum.org/sth2090.html
+statut: brouillon

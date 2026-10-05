@@ -3,6 +3,8 @@
  * UNIMARC : forme retenue, variantes, dates, note. Source des faits des fiches d'auteurs et
  * d'ouvrages (noms, dates).
  */
+import { lireOuErreur } from "./reseau.ts";
+
 const SRU = "https://catalogue.bnf.fr/api/SRU?version=1.2&operation=searchRetrieve&recordSchema=unimarcxchange";
 
 export interface Notice {
@@ -37,14 +39,60 @@ export function annee(code: string | undefined): string | undefined {
   return m[1] ? `${n} av. J.-C.` : String(n);
 }
 
-/** Notices d'une réponse SRU. */
-export function lireNotices(xml: string): Notice[] {
-  const notices: Notice[] = [];
-  for (const [, cb, corps] of xml.matchAll(/id="ark:\/12148\/(cb\w+)"[^>]*>([\s\S]*?)<\/mxc:record>/g)) {
+/**
+ * Dates d'une personne telles que la notice les affiche (zone 200 $f) : « 1857-1939 »,
+ * « 0106-0043 av. J.-C. », « 0427?-0348? av. J.-C. » (incertaines : « vers »), « 0004 av. J.-C.?-0065 ».
+ * Une ère écrite à la fin seulement vaut pour les deux dates (la mort ne précède pas notre ère sans la
+ * naissance). Rien si la forme n'est pas reconnue : la zone 103 sert alors.
+ */
+export function datesAffichees(f: string | undefined): { naissance?: string; mort?: string } | undefined {
+  const m = /^(\d{1,4})(\?)?( av\. J\.-C\.)?(\?)?-(?:(\d{1,4})(\?)?( av\. J\.-C\.)?(\?)?)?$/.exec(f?.trim() ?? "");
+  if (!m) return undefined;
+  const [, n, nDoute1, nAv, nDoute2, d, dDoute1, dAv, dDoute2] = m;
+  const date = (annee: string, doute: boolean, av: boolean) => `${doute ? "vers " : ""}${Number(annee)}${av ? " av. J.-C." : ""}`;
+  return {
+    naissance: date(n, Boolean(nDoute1 || nDoute2), Boolean(nAv || dAv)),
+    ...(d ? { mort: date(d, Boolean(dDoute1 || dDoute2), Boolean(dAv)) } : {}),
+  };
+}
+
+/** Notices d'une réponse SRU : leur identifiant et leurs zones (numéro → sous-zones, une par occurrence). */
+function zonesDesNotices(xml: string): { cb: string; zones: Map<string, Map<string, string[]>[]> }[] {
+  return [...xml.matchAll(/id="ark:\/12148\/(cb\w+)"[^>]*>([\s\S]*?)<\/mxc:record>/g)].map(([, cb, corps]) => {
     const zones = new Map<string, Map<string, string[]>[]>();
     for (const [, tag, zone] of corps.matchAll(/<mxc:datafield tag="(\d+)"[^>]*>([\s\S]*?)<\/mxc:datafield>/g)) {
       zones.set(tag, [...(zones.get(tag) ?? []), sousZones(zone)]);
     }
+    return { cb, zones };
+  });
+}
+
+/**
+ * Une réponse où le serveur n'a pu composer une notice (« erreur de traitement » : c'est le cas de
+ * certaines œuvres, comme *De officiis*, dans le format UNIMARC) porte un diagnostic au lieu de la notice.
+ */
+export const reponseEnErreur = (xml: string) => xml.includes("<srw:diagnostics>");
+
+/**
+ * Notices d'œuvre d'une réponse en INTERMARC, format de repli quand UNIMARC échoue : l'auteur est en
+ * zone 100, le titre retenu en 145 (les suivants, titres originaux, sont des variantes comme les 445),
+ * la date en 609 $d (code incomplet, « -00.. », s'il n'y a pas de date).
+ */
+export function lireNoticesIntermarc(xml: string): Notice[] {
+  return zonesDesNotices(xml).flatMap(({ cb, zones }) => {
+    const titres = (zones.get("145") ?? []).map((z) => z.get("a")?.[0] ?? "").filter((t) => t !== "");
+    if (titres.length === 0) return [];
+    const auteur = zones.get("100")?.[0]?.get("a")?.[0];
+    const date = annee(zones.get("609")?.[0]?.get("d")?.[0]?.trim());
+    const variantes = [...titres.slice(1), ...(zones.get("445") ?? []).map((z) => z.get("a")?.[0] ?? "")].filter((v) => v !== "");
+    return [{ cb, type: "oeuvre" as const, entree: titres[0], ...(auteur ? { auteur } : {}), ...(date ? { date } : {}), variantes }];
+  });
+}
+
+/** Notices d'une réponse SRU. */
+export function lireNotices(xml: string): Notice[] {
+  const notices: Notice[] = [];
+  for (const { cb, zones } of zonesDesNotices(xml)) {
     const premiere = (tag: string, code: string) => zones.get(tag)?.[0]?.get(code)?.[0];
     const [naissance, mort] = (premiere("103", "a") ?? "").trim().split(/\s+/);
     const note = premiere("300", "a");
@@ -55,8 +103,10 @@ export function lireNotices(xml: string): Notice[] {
         type: "personne",
         entree: premiere("200", "a") ?? "",
         ...(premiere("200", "b") ? { rejet: premiere("200", "b") } : {}),
-        ...(annee(naissance) ? { naissance: annee(naissance) } : {}),
-        ...(annee(mort) ? { mort: annee(mort) } : {}),
+        ...(datesAffichees(premiere("200", "f")) ?? {
+          ...(annee(naissance) ? { naissance: annee(naissance) } : {}),
+          ...(annee(mort) ? { mort: annee(mort) } : {}),
+        }),
         variantes: (zones.get("400") ?? []).map((z) => [z.get("a")?.[0], z.get("b")?.[0]].filter(Boolean).join(", ")),
       });
     } else if (zones.has("230") || zones.has("240")) {
@@ -77,9 +127,11 @@ export function lireNotices(xml: string): Notice[] {
 }
 
 async function interroger(requete: string, nombre: number): Promise<Notice[]> {
-  const reponse = await fetch(`${SRU}&maximumRecords=${nombre}&query=${encodeURIComponent(requete)}`);
-  if (!reponse.ok) throw new Error(`BnF : HTTP ${reponse.status}`);
-  return lireNotices(await reponse.text());
+  const adresse = `${SRU}&maximumRecords=${nombre}&query=${encodeURIComponent(requete)}`;
+  const xml = await lireOuErreur(adresse);
+  if (!reponseEnErreur(xml)) return lireNotices(xml);
+  const repli = await lireOuErreur(adresse.replace("unimarcxchange", "intermarcxchange"));
+  return lireNoticesIntermarc(repli);
 }
 
 /**

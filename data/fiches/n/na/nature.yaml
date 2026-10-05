@@ -1,0 +1,39 @@
+mot: nature
+nature: [ nom féminin ]
+etymologie:
+  - forme: natura
+    langue: latin
+    sens: naissance
+explication: >-
+  En latin, natura s'est dit aussi de la constitution et du caractère d'un être,
+  et du cours des choses. En français, nature a d'abord nommé la force qui
+  établit et maintient l'ordre de l'univers (1119) ; il désigne aujourd'hui la
+  réalité matérielle indépendante de l'homme, et ce qui définit un être.
+famille: [ naître, naturel, naturaliste, surnaturel, dénaturer ]
+themes: [ nature, esprit ]
+tradition:
+  lectures:
+    - texte: "La nature tient son nom de ce qu'elle fait naître : elle a le pouvoir d'engendrer et de faire."
+      citation: "Natura dicta ab eo quod nasci aliquid faciat. Gignendi enim et faciendi potens est."
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 1, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+    - texte: "Le nom a d'abord désigné la génération des vivants ; puis le principe de cette génération, et, parce que ce principe est intérieur au vivant, tout principe intérieur de mouvement."
+      citation: "Sciendum est igitur quod nomen naturae a nascendo est dictum vel sumptum. Unde primo est impositum hoc nomen ad significandum generationem viventium, quae nativitas vel pullulatio dicitur, ut dicatur natura quasi nascitura. Deinde translatum est nomen naturae ad significandum principium huius generationis. Et quia principium generationis in rebus viventibus est intrinsecum, ulterius derivatum est nomen naturae ad significandum quodlibet principium intrinsecum motus"
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIIa, q. 2, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth4002.html
+sources:
+  - ouvrage: tlfi
+    entree: nature
+  - ouvrage: lewis-short
+    entree: natura
+  - ouvrage: littre
+    entree: nature
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

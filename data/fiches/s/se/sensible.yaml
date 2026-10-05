@@ -1,0 +1,25 @@
+mot: sensible
+nature: [ adjectif ]
+etymologie:
+  - forme: sensibilis
+    langue: latin
+    sens: qui peut être ressenti
+explication: >-
+  Le latin sensibilis a pris ensuite le sens actif de doué de sensibilité. Le
+  français a reçu les deux : qui reçoit les impressions physiques (vers 1265),
+  qui fait impression sur les sens (vers 1320) ; le sens d'aisément ému date de
+  1643.
+famille: [ sentir, sens ]
+themes: [ émotions, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: sensible
+  - ouvrage: littre
+    entree: sensible
+  - ouvrage: lewis-short
+    entree: sensibilis
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -3,81 +3,75 @@ nature: [ nom féminin ]
 etymologie:
   - forme: religio
     langue: latin
-    sens: attention scrupuleuse, scrupule
+    sens: attention scrupuleuse
   - langue: latin
     alternatives:
       mode: debattue
       formes:
-        - forme: relegere
-          sens: reprendre avec soin
-          elements:
-            - forme: re-
-              sens: de nouveau
-            - forme: legere
-              sens: recueillir
-          selon: [ ciceron ]
         - forme: religare
-          sens: attacher
+          sens: attacher, relier
           elements:
             - forme: re-
               sens: en arrière
             - forme: ligare
               sens: lier
           selon: [ lactance ]
+        - forme: relegere
+          sens: recueillir de nouveau
+          elements:
+            - forme: re-
+              sens: de nouveau
+            - forme: legere
+              sens: recueillir
+          selon: [ ciceron ]
 explication: >-
-  La religio est le scrupule qui fait hésiter, celui du juge devant un verdict comme celui
-  du Romain devant les dieux. Le mot ne désignait pas une croyance, mais ce qui retient
-  d'agir.
+  Envers les dieux, religio disait aussi la crainte pieuse, le culte et la
+  croyance. Le mot désigne aujourd'hui le rapport de l'homme au divin et les
+  croyances et pratiques d'un groupe ; le sens de conscience scrupuleuse reste
+  dans « éclairer la religion de quelqu'un ».
 famille: [ religieux, religiosité, irréligion ]
 themes: [ religion ]
 sources:
-  - ouvrage: littre
-    entree: religion
-  - ouvrage: gaffiot
-    entree: religio
-  - ouvrage: gaffiot
-    entree: relego
-  - ouvrage: gaffiot
-    entree: lego
-  - ouvrage: gaffiot
-    entree: religo
-  - ouvrage: gaffiot
-    entree: ligo
-  - ouvrage: la-nature-des-dieux
-    entree: II, 72 (discours de Balbus)
-    url: https://www.thelatinlibrary.com/cicero/nd2.shtml
   - ouvrage: tlfi
     entree: religion
+  - ouvrage: littre
+    entree: religion
+  - ouvrage: lewis-short
+    entree: religio
+  - ouvrage: lewis-short
+    entree: relego
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=relego2
+  - ouvrage: lewis-short
+    entree: lego
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=lego2
+  - ouvrage: lewis-short
+    entree: religo
+  - ouvrage: lewis-short
+    entree: ligo
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=ligo1
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 tradition:
   lectures:
-    - texte: La religion est le lien de piété qui attache l'homme à Dieu, et non le
-        soin des rites que Cicéron y voyait.
-      citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa
-        religio nomen accepit, non ut Cicero interpretatus est a relegendo"
+    - texte: "C'est le lien de la piété, qui nous tient attachés à Dieu, qui a donné son nom à la religion ; non relegere, comme l'a compris Cicéron."
+      citation: "hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio nomen accepit, non ut Cicero interpretatus est a relegendo"
       hypothese: religare
       sources:
         - ouvrage: institutions-divines
-          entree: IV, 28, 3
+          entree: "IV, 28, 3"
           url: https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV
-    - texte: "Dieu, que nous avions perdu par négligence, nous le choisissons à
-        nouveau : la religion est ce choix renouvelé."
-      citation: hunc eligentes uel potius religentes (amiseramus enim neglegentes) —
-        hunc ergo religentes, unde et religio dicta perhibetur
+    - texte: "Dieu, que nous avions perdu par négligence, nous le choisissons de nouveau ; c'est de là, dit-on, que la religion tire son nom."
+      citation: "hunc eligentes uel potius religentes (amiseramus enim neglegentes) — hunc ergo religentes, unde et religio dicta perhibetur"
       sources:
         - ouvrage: la-cite-de-dieu
-          entree: X, 3
+          entree: "X, 3"
           url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
-    - texte: La religion attache nos âmes au seul Dieu pour le servir ; le mot serait
-        pourtant formé sur relegere, compris comme « choisir ».
-      citation: Religio appellata, quod per eam uni Deo religamus animas nostras ad
-        cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo,
-        id est eligendo
-      hypothese: religare
+    - texte: "Par la religion, nous lions nos âmes au seul Dieu pour lui rendre un culte ; le mot est formé sur relegere, entendu au sens de « choisir »."
+      citation: "Religio appellata, quod per eam uni Deo religamus animas nostras ad cultum divinum vinculo serviendi. Quod verbum conpositum est a relegendo, id est eligendo"
       sources:
         - ouvrage: etymologies
-          entree: VIII, 2, 2
+          entree: "VIII, 2, 2"
           url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
 statut: brouillon

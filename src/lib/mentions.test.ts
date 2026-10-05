@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formesAmbigues, mentionsDe, nomme, referencesDe } from "./mentions.ts";
+import { formesAmbigues, mentionsDe, nomme, referencesDe, tenantDe } from "./mentions.ts";
 import type { Fiche } from "./types.ts";
 
 const auteurs = new Map([
@@ -63,5 +63,26 @@ describe("nomme", () => {
     expect(nomme("le comte de Paris", "Comte")).toBe(false);
     expect(nomme("selon Comte, l'altruisme", "Comte")).toBe(true);
     expect(nomme("l'œuvre de More.", "More")).toBe(true);
+  });
+});
+
+describe("tenants d'une hypothèse : auteur ou ouvrage", () => {
+  const auteurs = new Map([["ciceron", { nom: "Cicéron" }]]);
+  const ouvrages = new Map([
+    ["lewis-short", { titre: "A Latin Dictionary", abrege: "Lewis & Short" }],
+    ["gaffiot", { titre: "Dictionnaire latin-français" }],
+  ]);
+  it("nomme un auteur par son nom, un ouvrage par son abrégé ou son titre, avec leur page", () => {
+    expect(tenantDe("ciceron", auteurs, ouvrages)).toEqual({ nom: "Cicéron", lien: "#/auteur/ciceron", ouvrage: false });
+    expect(tenantDe("lewis-short", auteurs, ouvrages)).toEqual({ nom: "Lewis & Short", lien: "#/ouvrage/lewis-short", ouvrage: true });
+    expect(tenantDe("gaffiot", auteurs, ouvrages).nom).toBe("Dictionnaire latin-français");
+  });
+  it("cite l'ouvrage tenant parmi les ouvrages de la fiche, et l'auteur parmi ses auteurs", () => {
+    const etymologie = [
+      { forme: "x", langue: "latin", sens: "y" },
+      { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["ciceron", "lewis-short"] }, { forme: "c", sens: "d" }] } },
+    ];
+    const refs = referencesDe({ etymologie, ecartees: [], tradition: { lectures: [], renvois: [] } } as never, new Map([["lewis-short", {}]]));
+    expect(refs).toEqual({ auteurs: ["ciceron"], ouvrages: ["lewis-short"] });
   });
 });

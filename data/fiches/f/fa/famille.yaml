@@ -1,0 +1,36 @@
+mot: famille
+nature: [ nom féminin ]
+etymologie:
+  - forme: familia
+    langue: latin
+    sens: ensemble des esclaves d'une maison
+explication: >-
+  Au sens large, familia comprenait tous ceux, enfants et apparentés compris,
+  que gouvernait le chef de famille. En français, famille a nommé les personnes
+  vivant sous le même toit (1337), puis celles qu'unit le sang (1580) ; il
+  désigne aujourd'hui les parents et leurs enfants.
+famille: [ familier, familiarité ]
+renvois: [ foyer ]
+themes: [ famille ]
+tradition:
+  lectures:
+    - texte: "La familia tient son nom de la cuisse, femore, par laquelle se montrent la race et la lignée ; c'est par abus, non au sens propre, qu'on la dit des esclaves."
+      citation: "Familia autem a femore. […] Femore enim genus et stirps ostenditur. Nam familia pro servis abusive, non proprie dicitur."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 5, 11-12"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: famille
+  - ouvrage: lewis-short
+    entree: familia
+  - ouvrage: lewis-short
+    entree: famulus1
+  - ouvrage: littre
+    entree: famille
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

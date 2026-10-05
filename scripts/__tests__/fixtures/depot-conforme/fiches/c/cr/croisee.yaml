@@ -1,0 +1,31 @@
+# Fiche fictive, pour les tests uniquement : un croisement, et une hypothèse tenue par un ouvrage.
+mot: croisée
+nature: [ nom féminin ]
+etymologie:
+  - forme: crucia
+    langue: latin
+    sens: forme de test
+    croisement:
+      - forme: "*cruxos"
+        langue: gaulois
+        sens: croix de test
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: crux
+          sens: croix
+          selon: [ gaffiot, lactance ]
+        - forme: cruor
+          sens: sang
+explication: >
+  Fiche fictive servant aux tests : elle n'a aucune valeur étymologique.
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: croisee
+    url: https://example.org/tlfi/croisee
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

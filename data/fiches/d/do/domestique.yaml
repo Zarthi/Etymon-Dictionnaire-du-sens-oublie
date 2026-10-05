@@ -1,0 +1,25 @@
+mot: domestique
+nature: [ adjectif ]
+etymologie:
+  - forme: domesticus
+    langue: latin
+    sens: de la maison, de la famille
+explication: >-
+  L'adjectif a gardé le sens latin. Le nom a désigné un ami intime (avant 1520),
+  puis celui qui est attaché à une maison, souvent rétribué (1534), et
+  l'ensemble des domestiques d'une maison (1732) ; il nomme aujourd'hui la
+  personne employée au service d'une maison.
+famille: [ domesticité, domestiquer ]
+themes: [ maison, travail ]
+sources:
+  - ouvrage: tlfi
+    entree: domestique
+  - ouvrage: lewis-short
+    entree: domesticus
+  - ouvrage: littre
+    entree: domestique
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

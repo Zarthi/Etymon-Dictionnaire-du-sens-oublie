@@ -1,0 +1,33 @@
+mot: humain
+nature: [ adjectif ]
+etymologie:
+  - forme: humanus
+    langue: latin
+    sens: qui appartient à l'homme
+explication: >-
+  Dès 1200, humain se dit aussi de qui est bienveillant, sens que humanus avait
+  déjà, et qu'il garde : qui est sensible à la pitié, indulgent envers les
+  autres. Les lettres humaines (1552) étaient la littérature profane, opposée à
+  la théologie et aux Écritures.
+famille: [ homme, humanité, inhumain ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: "Humanus se dit de qui a pour les hommes de l'amour et de la compassion ; de là vient le nom de l'humanité, par laquelle nous nous protégeons les uns les autres."
+      citation: "Humanus, quod habeat circa homines amorem et miserationis affectum. Vnde et humanitas dicta, qua nos invicem tuemur."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 116"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: humain
+  - ouvrage: littre
+    entree: humain
+  - ouvrage: lewis-short
+    entree: humanus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

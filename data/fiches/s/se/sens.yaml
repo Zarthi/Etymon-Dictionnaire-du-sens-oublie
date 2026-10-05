@@ -1,0 +1,44 @@
+mot: sens
+nature: [ nom masculin ]
+etymologie:
+  - forme: sensus
+    langue: latin
+    sens: perception, sensation
+explication: >-
+  En français, le mot a d'abord nommé la faculté de bien juger (vers 1100) ; les
+  fonctions de la sensation et la signification d'un mot sont attestées en 1119.
+  Le sens de direction, absent de sensus, vient d'un croisement avec un mot
+  d'ancien français d'origine germanique qui signifiait « chemin ».
+famille: [ sentir, sensé, sensation ]
+renvois: [ raison ]
+themes: [ corps, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: sens
+  - ouvrage: littre
+    entree: sens
+  - ouvrage: lewis-short
+    entree: sensus2
+  - ouvrage: littre
+    entree: sensé
+  - ouvrage: littre
+    entree: sensation
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Les sens sont ainsi nommés parce que, par eux, l'âme meut tout le corps avec une extrême finesse, par la force de sentir."
+      citation: "Sensus dicti, quia per eos anima subtilissime totum corpus agitat vigore sentiendi."
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 1, 19"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+    - texte: "L'esprit, qui perçoit les choses invisibles, est lui-même très justement appelé sens ; c'est de là que la sentence a pris son nom."
+      citation: "ita de his, quae animo ac mente sentiuntur (quia et ipse rectissime dicitur sensus, unde et sententia uocabulum accepit), hoc est de inuisibilibus quae a nostro sensu interiore remota sunt"
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "XI, 3"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XI
+statut: brouillon

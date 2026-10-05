@@ -1,6 +1,6 @@
 # Cas d'épreuve : la tradition dans le modèle
 
-Modèle éprouvé (proposition, non implémentée) :
+Modèle éprouvé le 24 septembre 2026, implémenté depuis (AGENTS.md §4.7, `src/lib/traditions.ts`) :
 
 - la **voix** d'une lecture se déduit de sa source : `auteur` de la lecture, sinon auteur de
   l'œuvre, sinon l'œuvre elle-même (Écriture) ; `auteur` ne s'écrit que si la voix diffère de

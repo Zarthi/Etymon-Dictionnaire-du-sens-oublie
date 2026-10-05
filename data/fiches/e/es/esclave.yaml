@@ -1,0 +1,26 @@
+mot: esclave
+nature: [ nom ]
+etymologie:
+  - forme: sclavus
+    langue: latin médiéval
+    sens: Slave
+explication: >-
+  Sclavus, qui nommait le Slave au VIIe siècle, a désigné l'esclave au Xe, parce
+  qu'un grand nombre de Slaves avaient été réduits en esclavage dans les Balkans
+  par les Germains et les Byzantins. Le mot se dit aujourd'hui aussi de qui
+  dépend entièrement d'une personne ou d'une chose.
+famille: [ esclavage ]
+renvois: [ captif ]
+themes: [ société, droit ]
+tradition:
+  renvois: [ serf ]
+sources:
+  - ouvrage: littre
+    entree: esclave
+  - ouvrage: tlfi
+    entree: esclave
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

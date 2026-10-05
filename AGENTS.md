@@ -2,8 +2,10 @@
 
 Ce fichier est le cadrage de référence du projet. Lis-le entièrement avant toute action.
 Tu travailles avec Thibault, ingénieur systèmes (SysML/MBSE), sous Windows 11, dans VS Code.
-Réponds toujours en français. Sois concis et précis. Pose une question quand un choix n'est pas
-tranché ici, plutôt que de supposer.
+Réponds toujours en français. Sois concis et précis. Quand un choix n'est pas
+tranché ici, ne t'arrête pas : décide, applique, et note la décision et sa raison dans
+`docs/decisions.md`, que Thibault relit. Ce qui lui est réservé attend sa décision : valider
+une fiche, écarter un mot, changer un principe de ce cadrage.
 
 ---
 
@@ -28,20 +30,20 @@ une fiche courte, lisible en dix secondes, sans surcharge.
 
 Exemple de fiche cible :
 
-> **Étonner** — du latin *extonare* : « frapper du tonnerre ».
-> Le mot désignait un ébranlement violent, avant de s'affaiblir en simple surprise.
+> **Étonner** — du latin populaire *\*extonare* : « ébranler comme d'un coup de tonnerre ».
+> Le mot désignait un ébranlement violent ; il ne dit plus qu'une surprise.
 
-Autres exemples de mots parlants : *ennui* (latin *in odio*, « en haine »), *chétif*
+Autres exemples de mots parlants : *ennui* (latin *in odio esse*, « être un objet de haine »), *chétif*
 (latin *captivus*, « prisonnier »), *chiffre* (arabe *ṣifr*, « vide »), *merci* (latin
 *merces*, « salaire, récompense »), *critique* (grec *kritikós*, « capable de discerner »).
 
 ## 2. Principes non négociables
 
-1. **Fiabilité avant tout.** Une étymologie fausse détruit la valeur de l'app. Une fiche
-   peut être **rédigée de mémoire**, mais elle porte alors `statut: a-verifier`, avec
-   l'IA pour seule source : l'app l'affiche avec la mention « Étymologie non vérifiée »,
-   et elle ne passe en `brouillon` qu'après vérification sur un ouvrage (§6.5). Une source n'est citée que
-   si elle a réellement été consultée. Attention aux étymologies populaires
+1. **Fiabilité avant tout.** Une étymologie fausse détruit la valeur de l'app. On ne
+   rédige **jamais de mémoire** : une fiche s'écrit d'après son dossier de sources (§6.5) et
+   n'affirme rien qui n'y soit. Une source n'est citée que si elle a réellement été consultée.
+   Le statut `a-verifier` (« Étymologie non vérifiée ») ne sert plus qu'à d'anciennes fiches
+   rédigées de mémoire, s'il en reste, jusqu'à leur reprise d'après un dossier. Attention aux étymologies populaires
    (*sincère* « sans cire »), nombreuses sur les mots « parlants ».
    Une étymologie douteuse est signalée (`incertain: true`) ; une origine débattue est
    présentée avec toutes ses hypothèses et leurs tenants (alternatives de la chaîne).
@@ -59,8 +61,8 @@ Autres exemples de mots parlants : *ennui* (latin *in odio*, « en haine »), *c
    de préparation des fiches, que Thibault relit avant validation. L'app affiche toutes les
    fiches, mais signale clairement celles qui ne sont pas validées (« Étymologie non
    vérifiée », « En relecture »). Aucun appel réseau ni serveur.
-6. **Toute fiche que tu rédiges est `a-verifier` (de mémoire) ou `brouillon` (sources
-   consultées)** tant que Thibault ne l'a pas validée lui-même.
+6. **Toute fiche que tu rédiges est `brouillon`** (rédigée d'après son dossier) tant que
+   Thibault ne l'a pas validée lui-même.
 7. **La qualité, non la quantité** (principe traditionnel). Peu de champs, une page lisible
    en dix secondes, pas de liste interminable, une notice d'autorité (BnF) plutôt qu'une
    encyclopédie. Aucun champ ne sert à tout dire : il dit ce qui situe ou ce qui dévoile.
@@ -91,11 +93,14 @@ les liaisons se déduisent des champs (*de*, *forgé par… sur*, *sur le modèl
 On ne remonte au-delà de la langue source directe que si cela **ajoute un sens** ou si
 l'origine est **débattue**. Un maillon porte :
 - une **forme**, dans son écriture d'origine (religio, φρήν, صفر ; reconstruite : *\*extonare*) ;
-- des **éléments** (composition : φίλος + σοφία), seuls ou avec la forme qu'ils composent ;
-  une composition qui porte le sens premier en donne le sens littéral (« esprit fendu ») ;
-  on découpe **du tout vers les parties**, non l'inverse (l'erreur de Descartes) : la forme
-  composée porte son sens, attesté par une source et non déduit des parties, puis chaque élément
-  le sien ; et seulement si les parties parlent encore (*re-legere*, oui ; *śāṭān*, non). Une
+- des **éléments** (composition : φίλος + σοφία), seuls ou avec la forme qu'ils composent.
+  Quand la forme composée existe (φιλοσοφία, *religio*), on découpe **du tout vers les
+  parties**, non l'inverse (l'erreur de Descartes) : la forme porte son sens, attesté par une
+  source et non déduit des parties, puis chaque élément le sien ; et seulement si les parties
+  parlent encore (*re-legere*, oui ; *śāṭān*, non). Quand le mot est forgé sur des éléments
+  sans forme composée avant lui (*schizophrénie*, sur σχίζω et φρήν), le sens premier est le
+  **sens littéral de ses éléments** (« esprit fendu »), que l'app affiche comme tel
+  (« littéralement ») : jamais comme le sens attesté d'une forme qui n'a pas existé. Une
   hypothèse se découpe de même : celles de *religio* en sont la décomposition (*re-* et *legere*,
   ou *re-* et *ligare*), et l'app les affiche une par ligne ;
 - ou des **alternatives** : hypothèses **débattues** (la plus suivie en premier, chacune avec
@@ -133,31 +138,38 @@ sens profane premier est justement ce que le dictionnaire révèle.
   *manne* : juive et chrétienne). L'agent le pose, Thibault relit.
 - La chaîne ne garde que les **formes** : par quelles langues le mot est passé.
 - Le **sens en tête** vient du **texte d'origine**, que toutes les traditions du mot reçoivent :
-  la lecture `premier`, avec son `sens`, signée (*manne* : « qu'est-ce que c'est ? », Exode 16,
-  15). Si le texte d'origine n'explique pas le mot, c'est le sens du mot dans sa langue, selon
-  un dictionnaire de cette langue (*alléluia* : « louez Yah ») : seul ce maillon porte un sens.
+  la lecture `premier`, avec son `sens`, signée (*sabbat* : « il cessa », Genèse 2, 3). Si le
+  texte d'origine n'explique pas le mot, c'est le sens du mot dans sa langue, selon un
+  dictionnaire de cette langue (*alléluia* : « louez Yah ») : seul ce maillon porte un sens.
+- Si les traditions divergent sur le sens même du texte d'origine, il n'y a pas un sens unique
+  en tête, mais un sens par tradition, chacun signé de sa lecture `premier` (*manne*, Exode 16,
+  15 : « qu'est-ce que c'est ? » selon la Septante et la Vulgate ; « c'est une préparation de
+  nourriture » selon Rashi). Diverger dans la lecture seule ne suffit pas : *Pâques*, lu comme
+  le passage chez Isidore, garde le sens unique d'Exode 12, 27.
 - Pas d'explication : la lecture d'origine en tient lieu ; les autres lectures suivent, par
-  tradition, dépliées. Les traditions peuvent diverger dans la lecture (*Pâques* : le passage
-  chez Isidore), pas sur le texte d'origine.
+  tradition, dépliées.
 - Deux graphies pour deux traditions, deux fiches (*Pâque*, fête juive ; *Pâques*, fête
   chrétienne). Un sens profané (*sabbat* des sorcières) n'a sa fiche, homonyme et profane, que
   s'il remplit par lui-même le critère du §3.3 : c'est rare, et ce n'est pas le cas du sabbat.
 - Le **Nom divin** s'écrit comme le texte l'écrit (*Yah*, YHWH), jamais traduit (« Dieu ») ni
   vocalisé (« Jéhovah », « Yahvé »), ce qui inviterait à le prononcer (Exode 20, 7) ; le validateur
-  refuse ces formes. Dans une citation en hébreu, il reste tel que le texte l'écrit (יהוה).
+  refuse ces formes. Dans une citation, il reste tel que le texte l'écrit (יהוה). Dans le texte
+  d'une lecture, « le Seigneur » est admis : c'est le substitut traditionnel, juif et chrétien,
+  qui évite de prononcer le Nom, non une traduction du Nom.
 - Un mot sacré n'est tiré ni comme mot du jour ni au hasard : on ne tire pas le sacré comme une
   carte (« ne donnez pas ce qui est saint aux chiens », Matthieu 7, 6) ; on y vient par la recherche.
 - Un mot sacré ne se rédige pas en lot, de mémoire : à part, texte d'origine sous les yeux.
 
 ### 3.4 Format d'une fiche
 - `sens` : sens d'un maillon, entre guillemets français « » (posés par l'app), seulement
-  là où il apprend quelque chose (pas pour l'allemand *Schizophrenie*). Pour un mot
-  forgé ou composé, le **sens littéral de ses éléments** (*schizophrénie* : « esprit
-  fendu ») ; l'intention de l'auteur va dans l'explication.
+  là où il apprend quelque chose (pas pour l'allemand *Schizophrenie*). Pour une forme
+  composée attestée, son sens attesté ; pour un mot forgé sur des éléments, le **sens littéral
+  de ses éléments** (*schizophrénie* : « esprit fendu »), affiché comme tel (§3.2).
+  L'intention de l'auteur va dans l'explication.
 - `explication` : une à trois phrases, pas plus (aucune pour un mot sacré, §3.3 bis). Elle doit **dire ce qui s'est perdu,
   affaibli ou retourné** entre le sens premier et l'usage actuel, pas seulement donner le
-  sens premier (*religion* : « le mot ne désignait pas ce que l'on croit, mais ce qui
-  retient d'agir »). Elle n'explique pas une seconde fois le `sens`, déjà affiché juste
+  sens premier (*religion* : « *religio* nommait d'abord le scrupule qui retient
+  d'agir »). Elle n'explique pas une seconde fois le `sens`, déjà affiché juste
   au-dessus ; mais mieux vaut redire le mot juste que le contourner par une périphrase.
   Ton sobre, pas d'emphase, pas de jugement moral. Elle ne présente pas le sens ancien comme le
   « vrai » sens du mot, ni l'usage actuel comme une erreur : elle dit ce qui a changé.
@@ -166,7 +178,7 @@ sens profane premier est justement ce que le dictionnaire révèle.
   « Lactance, *Institutions divines*, IV, 28, 3 »).
 - Aucune mise en forme dans les textes : l'app met en italique l'étymon, les formes
   d'origine et la forme légendaire, et pose les liens vers les autres fiches. Un mot étranger
-  cité dans un texte est donc une forme de la chaîne (translittération comprise).
+  cité dans un texte est donc une forme de la chaîne (translittération comprise), ou, dans le texte d'une lecture, un mot de sa citation.
 - Typographie française : espaces insécables avant `:` `;` `?` `!`, guillemets « ».
 
 ## 4. Fonctionnalités
@@ -282,9 +294,11 @@ Lactance vise *religare* (`hypothese`) et dit ce qu'en tire la doctrine, sans le
 | Usage | Source | Statut |
 |---|---|---|
 | Base textuelle | **Littré** (1864-1873, supplément 1878) | Domaine public. Vérifier la licence de la version numérique utilisée (ex. XMLittré). Étymologies parfois dépassées : à recouper. |
-| Sens des étymons latins | **Gaffiot** (1934) | Domaine public |
+| Sens des étymons latins | **Gaffiot** (1934) | Domaine public. Autorisé ; son édition en ligne (gaffiot.fr) ne se consulte pas par script. |
+| Sens des étymons latins, interrogeable | **Lewis & Short** (1879, sur Perseus) ou **Georges** (1913) | Domaine public. Consultés en ligne, un mot à la fois, quand le Littré et le TLFi ne glosent pas l'étymon. Fiche d'ouvrage à créer (BnF) avant la première citation. |
+| Sens des mots hébreux (mots sacrés, §3.3 bis) | **Gesenius** et **Brown-Driver-Briggs** (1906) | Domaine public. Le lexique de la langue sacrée, quand le texte d'origine n'explique pas le mot. Fiche d'ouvrage à créer (BnF) avant la première citation. |
 | Sens des étymons grecs | **Bailly** (1895) | Domaine public |
-| Vérification seulement | **TLFi / CNRTL** | Non libre. On vérifie qu'une étymologie est toujours admise ; on ne recopie pas le texte. Un fait étymologique n'est pas protégé, une rédaction l'est. Pour un mot absent du Littré (postérieur à 1872), le TLFi, notre source la plus récente, suffit à vérifier l'étymon (avec le Bailly ou le Gaffiot pour les éléments). |
+| Source de faits | **TLFi / CNRTL** | Non libre. On en tire des faits : l'usage d'aujourd'hui (plan des sens), les étapes datées du sens, l'étymologie admise. Jamais sa rédaction recopiée : un fait n'est pas protégé, une rédaction l'est. Pour un mot absent du Littré (postérieur à 1872), le TLFi, notre source la plus récente, suffit à vérifier l'étymon (avec le Bailly ou le Gaffiot pour les éléments). |
 | Lecture traditionnelle | Isidore de Séville (*Étymologies*), Varron, Platon (*Cratyle*), Pères, saint Thomas, Guénon (domaine public en France depuis 2022 ; attention aux éditions annotées) | Domaine public |
 | Auteurs et ouvrages (noms, dates, éditions) | **data.bnf.fr** (catalogue de la BnF) | Licence ouverte. Notice d'autorité (de personne, ou d'œuvre), citée comme source de la fiche d'auteur ou d'ouvrage (`{ ouvrage: bnf, entree: cb… }`). Un ouvrage sans notice d'œuvre (Gaffiot, Bailly) reste sans cette source. Relevé par l'API SRU du catalogue (catalogue.bnf.fr/api/SRU). |
 | Éditions numériques | **Gaffiot 2016** (gaffiot.fr) et **Bailly 2020** (bailly.app), révisions de Gérard Gréco | CC BY-NC-ND 4.0 et droit des bases de données. **Consultation en ligne uniquement**, un mot à la fois : jamais téléchargées, extraites ni recopiées. Formuler le `sens` soi-même plutôt que reprendre leur glose mot pour mot. Seul le Littré (XMLittré, CC BY-SA) peut être utilisé en local. |
@@ -306,7 +320,7 @@ unique ; suffixe `-2`, `-3`… pour les homonymes). Pour éviter les gros dossie
 fiche est rangée selon la première lettre puis les deux premières lettres de son `id` :
 `data/fiches/e/et/etonner.yaml`, `data/fiches/c/ch/chiffre.yaml`.
 
-Trois principes gouvernent le modèle :
+Quatre principes gouvernent le modèle :
 - **le fond, pas la forme** : les textes sont bruts, sans aucune mise en forme. L'app met
   elle-même en italique les formes de la chaîne et des étymologies écartées, et pose les
   liens vers les autres fiches ;
@@ -331,8 +345,8 @@ forgé), `data/fiches/c/ch/chiffre.yaml` (filiation, doublet). Points à retenir
 |---|---|---|
 | `mot`, `etymologie`, `explication`, `ecartees`, `incertain`, `doublets`, `famille`, `renvois`, `tradition.renvois`, `themes` | IA (`npm run rediger`) | validateur ; Littré (`npm run verifier`) ; à la main (Gaffiot, Bailly, TLFi) ; Thibault |
 | `nature` | script, tirée du Littré ; IA pour un mot absent du Littré | contrôle contre le Littré |
-| `sources` | `npm run rediger -- --dossier` (entrées consultées du dossier), `npm run verifier` (Littré), ou à la main | validateur (adresse déduite), `npm run verifier:en-ligne` (Bailly) |
-| `redaction`, `statut` | `npm run rediger` (`brouillon` d'après un dossier, `a-verifier` de mémoire), puis `npm run verifier` ; `validee` : Thibault seul | validateur |
+| `sources` | `npm run rediger -- --dossier` (entrées consultées du dossier), ou à la main | validateur (adresse déduite), `npm run verifier:en-ligne` (Bailly) |
+| `redaction`, `statut` | `npm run rediger -- --dossier` (`brouillon`) ; `validee` : Thibault seul | validateur |
 | `tradition.lectures` | passe à part, texte source sous les yeux (§4.7) | `npm run verifier:en-ligne` (citation mot pour mot) |
 | `historique` | Thibault ou l'agent qui corrige | validateur |
 
@@ -340,8 +354,9 @@ forgé), `data/fiches/c/ch/chiffre.yaml` (filiation, doublet). Points à retenir
   d'IA et son niveau de réflexion : « Claude Opus 5.5, réflexion élevée »), affichée une fois en
   pied de fiche. Une contribution de Thibault ou d'un lecteur s'y ajoute (`par: Étymon`),
   avec une note d'`historique` « corrigée le … ». La simple validation n'y figure pas.
-- `statut` : `a-verifier` (rédigée de mémoire, mention « Étymologie non vérifiée ») |
-  `brouillon` (ouvrage consulté, « En relecture ») | `validee` (par Thibault). Le mot du jour
+- `statut` : `a-verifier` (ancienne fiche rédigée de mémoire, s'il en reste ; mention
+  « Étymologie non vérifiée » ; aucune fiche nouvelle n'y entre) |
+  `brouillon` (rédigée d'après son dossier, « En relecture ») | `validee` (par Thibault). Le mot du jour
   est tiré parmi les fiches `validee` dès qu'il en existe une.
 - **Auteurs** (`data/auteurs/<id>.yaml`) et **ouvrages** (`data/ouvrages/<id>.yaml`) ont leur
   fiche et leur page, avec le même socle éditorial. Un auteur : `nom` usuel, `nomComplet`,
@@ -367,7 +382,8 @@ forgé), `data/fiches/c/ch/chiffre.yaml` (filiation, doublet). Points à retenir
 
 Au build, `scripts/assembler-fiches.ts` produit à partir de toutes les fiches (l'app signale
 celles qui ne sont pas validées) :
-- `src/generes/index.json` : `{ id, mot, statut }` de chaque fiche, pour la recherche, le mot
+- `src/generes/index.json` : `{ id, mot, statut, sacre }` de chaque fiche (`sacre` seulement
+  pour un mot sacré), pour la recherche, le mot
   du jour et le mot au hasard ;
 - `src/generes/fiches/<préfixe>.json` : les fiches complètes par préfixe de deux lettres,
   doublets rendus symétriques, chargées à la demande et mises en cache pour le hors ligne.
@@ -406,7 +422,8 @@ Règles au-delà de la structure :
   l'œuvre, tradition précisée seulement si un auteur en a plusieurs, `hypothese` parmi les
   formes d'origine ; `traditions` sur une œuvre seulement si elle n'a pas d'auteur ;
 - mot sacré : pas d'explication, pas de sens de chaîne (sauf celui de la langue sacrée faute de
-  lecture `premier`), lecture `premier` reçue par toutes ses traditions ;
+  lecture `premier`), lecture `premier` reçue par toutes ses traditions, ou une par tradition
+  quand elles divergent sur le sens du texte d'origine (§3.3 bis ; le validateur suivra) ;
 - `explication` : 1 à 3 phrases, 300 caractères maximum (éviter les abréviations suivies
   d'un point, comptées comme fins de phrase) ;
 - typographie française : guillemets « » (jamais " "), espace insécable avant `:` `;` `?` `!` ;
@@ -439,7 +456,7 @@ Mots envisagés qui n'ont pas encore de fiche, une liste par initiale sans accen
 
 ### 6.5 Travail par lots et suivi (`npm run etat`)
 
-La base est rédigée par lots de 10 à 20 mots, un commit par lot (`data: 12 fiches brouillon (c, e)`).
+La base est rédigée par lots d'une dizaine de mots, un commit par lot (`data: 10 fiches brouillon (c, e)`).
 Pour ne jamais parcourir toute la base, l'agent interroge `npm run etat` :
 - `npm run etat` : résumé (fiches par statut, candidats par statut, conformité) ;
 - `npm run etat -- candidats 15` : les 15 prochains mots à traiter ;
@@ -454,7 +471,7 @@ dans `sources/`, hors du dépôt). On rédige d'après les sources, jamais de m�
 1. **Dossier** : `npm run dossier -- <mot>` crée `atelier/<id>/dossier.json` (hors du dépôt)
    avec le Littré et affiche le plan des sens et l'étymologie du TLFi ; l'agent y écrit l'usage
    d'aujourd'hui et les faits, chacun avec sa source et son entrée (Bailly :
-   `npm run texte -- bailly:φρήν` ; Gaffiot dans le navigateur).
+   `npm run texte -- bailly:φρήν` ; latin : Lewis & Short ou Georges, Gaffiot dans le navigateur).
 2. **Rédaction** d'après le dossier (`docs/consignes/redaction.md`), contrôlée par
    `npm run rediger -- atelier/<id>/fiche.json --essai`.
 3. **Relecture critique** par un autre agent (`docs/consignes/relecture.md`).
@@ -468,11 +485,11 @@ dans `sources/`, hors du dépôt). On rédige d'après les sources, jamais de m�
    contrôle signale, il ne bloque pas), `npm run valider`, un commit par lot. Thibault valide
    ensuite les brouillons.
 
-Une fiche rédigée de mémoire (`npm run rediger` sans `--dossier`) entre en `a-verifier` ;
-`npm run verifier` la confronte au Littré local et la passe en `brouillon` si l'étymon y figure
-sans doute exprimé.
-Le Littré ne vérifie que l'étymon, pas le `sens` ni l'explication : la relecture reste
-nécessaire, et ses étymologies sont parfois dépassées (§5).
+`npm run rediger` n'écrit une fiche que d'après son dossier (`--dossier`). Aucun script ne fait
+passer une fiche en `brouillon` par concordance avec le Littré : `npm run verifier` contrôle et
+signale, il ne change ni le statut ni les sources. Ces contrôles ne voient que l'étymon, pas le
+`sens` ni l'explication : la relecture reste nécessaire, et les étymologies du Littré sont
+parfois dépassées (§5).
 
 ## 7. Stack technique
 
@@ -484,8 +501,9 @@ nécessaire, et ses étymologies sont parfois dépassées (§5).
 - **Aucun backend, aucune base de données, aucun appel réseau** dans l'app.
 - Pas de React, pas d'Angular, pas de framework CSS lourd (Tailwind, Bootstrap). CSS
   maison, sobre, typographie serif pour les fiches, thème clair/sombre suivant le système.
-- Hébergement statique sur GitHub Pages, publication déclenchée à la main (la CI valide
-  chaque push sans publier).
+- Hébergement statique sur GitHub Pages. `.github/workflows/validation.yml` valide chaque push,
+  sur toute branche ; `publication.yml` publie à la main, depuis `main` seulement, après la même
+  validation. Dependabot propose les mises à jour une fois par mois, groupées.
 - **Langue de l'application** (`src/i18n/`) : le seul endroit où elle se choisit
   (`src/i18n/index.ts`). Chaque langue fournit trois parts : les **messages** de l'interface
   (catalogue typé, avec les accords : « Lecture traditionnelle » / « Lectures traditionnelles ») ;
@@ -532,7 +550,7 @@ etymon/
     valider-fiches.ts    # npm run valider : lecture de data/ et rapport d'erreurs
     assembler-fiches.ts  # toutes les fiches, auteurs et ouvrages -> src/generes/ (au build)
     etat.ts              # npm run etat : avancement, candidats, brouillons
-    rediger-lot.ts       # npm run rediger : fiches rédigées par l'IA -> brouillon (--dossier) ou a-verifier
+    rediger-lot.ts       # npm run rediger : fiches rédigées par l'IA d'après leur dossier -> brouillon
     dossier.ts           # npm run dossier -- <mot> : dossier de faits (Littré, TLFi) dans atelier/
     bnf.ts               # npm run bnf : notices BnF, fiches d'auteurs et d'ouvrages
     texte.ts             # npm run texte -- <adresse> : texte brut d'une page (citations, Bailly)
@@ -549,14 +567,14 @@ etymon/
     contrat.ts           # npm run contrat : docs/contrat-fiche.md, *.schema.json, consignes/, schémas du workflow
     littre.ts            # npm run littre : télécharge et indexe le Littré local (sources/)
     preparer-fiche.ts    # npm run preparer -- <mot> : étymologie du Littré et son lien
-    verifier-fiches.ts   # npm run verifier : fiches a-verifier confrontées au Littré
+    verifier-fiches.ts   # npm run verifier : contrôles des fiches contre le Littré (signalent)
     lib/littre.ts        # extraction XMLittré, concordance étymon / Littré
     __tests__/           # tests + dépôts de test conformes et fautifs (fixtures/)
   src/
     App.svelte
     main.ts
     generes/             # généré, jamais édité à la main, ignoré par git
-      index.json         # { id, mot, statut } de toutes les fiches
+      index.json         # { id, mot, statut, sacre } de toutes les fiches
       fiches/et.json     # fiches complètes, par préfixe
       auteurs.json       # auteurs, avec ce qui se calcule (œuvres, mots forgés, lectures…)
       ouvrages.json      # ouvrages, avec ce qui se calcule
@@ -607,6 +625,8 @@ etymon/
 - Ne jamais parcourir toute la base de fiches : utiliser `npm run etat` et ouvrir
   seulement les fiches concernées (`data/fiches/<initiale>/<préfixe>/<id>.yaml`).
 - Commits petits et explicites (`feat: recherche par mot`, `data: 10 fiches brouillon`).
+- Branches : le travail se fait sur une branche, jamais sur `main` ; il y entre par une pull
+  request à CI verte, que Thibault fusionne (sa relecture des brouillons et des décisions s'y fait).
 - Tests (Vitest) : le script de validation lui-même (fiches valides et invalides de test
   dans `scripts/__tests__/`), plus des tests unitaires sur `recherche.ts` et `motDuJour.ts`.
 - Optimise l'usage des tokens : utilise **rtk** (rust token killer) pour les actions qui
@@ -614,8 +634,7 @@ etymon/
 
 ## 10. Ce que tu ne fais jamais
 
-- Citer une source qui n'a pas réellement été consultée, ou faire passer en `brouillon`
-  une fiche rédigée de mémoire sans vérification.
+- Citer une source qui n'a pas réellement été consultée, ou rédiger une fiche de mémoire.
 - Citer le Wiktionnaire comme source, ou recopier du texte du TLFi, du Robert ou de
   Bloch & Wartburg.
 - Marquer une fiche `validee` : seul Thibault le fait.
@@ -628,8 +647,11 @@ etymon/
 
 La v1 (§4.1) est construite ; le modèle de données a été éprouvé sur des cas fondamentaux
 (`docs/modele-v3.md`, `docs/cas-epreuve-traditions.md`, `docs/cas-epreuve-sacre.md`).
-La rédaction autonome suit **`docs/methode.md`** : sources d'abord, tri, moteur adéquat à
-chaque étape, relecture critique, affinage entre deux lots ; ses ajustements sont notés dans
-`docs/journal-methode.md`. Premier pilote fait, méthode refondue (un rédacteur seul pour le lot,
-un relecteur neuf) ; prochaine étape : relancer les dix mots du pilote avec elle.
+La rédaction autonome suit **`docs/methode.md`** : sources d'abord, tri, relecture critique,
+affinage entre deux lots ; ses ajustements sont notés dans `docs/journal-methode.md`, les
+décisions prises à la place de Thibault dans `docs/decisions.md`. Deux pilotes, puis, le 2026-10-04 et le 2026-10-05, une relecture critique du
+projet, la reprise par la méthode actuelle de toutes les fiches antérieures à elle (mots sacrés
+compris) et seize lots par familles (lots 3 à 18) : 170 fiches en brouillon, toutes à relire et
+valider par Thibault. Prochaine étape : la relecture des brouillons et du journal des décisions
+par Thibault ; puis continuer par lots (candidats : `npm run etat -- candidats`).
 À chaque étape, dis brièvement ce que tu as fait et ce qui reste à décider.

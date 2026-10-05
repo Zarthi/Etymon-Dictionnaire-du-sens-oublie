@@ -1,0 +1,38 @@
+mot: confiance
+nature: [ nom féminin ]
+etymologie:
+  - forme: confidentia
+    langue: latin
+    sens: assurance, hardiesse ; audace, impudence
+  - forme: confidere
+    langue: latin
+    sens: se fier pleinement
+explication: >-
+  Rare en latin au sens de ferme confiance, confidentia se disait plus souvent
+  de l'audace que de l'assurance. Le français l'a reçu au sens de foi en
+  quelqu'un (1408), puis d'assurance (1611) ; la présomption en est aujourd'hui
+  un emploi péjoratif.
+famille: [ confier, confiant, confident, confidence ]
+themes: [ émotions, société ]
+tradition:
+  lectures:
+    - texte: "Confidentia se dit de l'assurance dans les choses mauvaises ; pour les bonnes, on emploie un autre mot."
+      citation: "Inter Fiduciam et confidentiam. Fiducia in bonis rebus, confidentia in malis est."
+      sources:
+        - ouvrage: differences
+          entree: "I, 217"
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: confiance
+  - ouvrage: lewis-short
+    entree: confidentia
+  - ouvrage: lewis-short
+    entree: confido
+  - ouvrage: littre
+    entree: confiance
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

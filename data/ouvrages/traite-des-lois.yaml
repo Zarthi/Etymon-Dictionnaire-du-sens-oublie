@@ -1,0 +1,15 @@
+titre: Traité des lois
+titreOriginal: De legibus
+auteur: ciceron
+licence: domaine public
+texte: https://www.thelatinlibrary.com/cicero/leg1.shtml
+description: >-
+  Dialogue de Cicéron sur le fondement du droit et sur les lois.
+sources:
+  - ouvrage: bnf
+    entree: cb12446337k
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

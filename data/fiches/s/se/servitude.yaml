@@ -1,0 +1,26 @@
+mot: servitude
+nature: [ nom féminin ]
+etymologie:
+  - forme: servitudo
+    langue: bas latin
+    sens: esclavage
+explication: >-
+  En français, le mot a d'abord dit, au figuré, la dépendance (1269-1278), puis
+  le servage (1283) ; il s'est étendu à la charge qui pèse sur une propriété
+  (1473), sens qu'il garde en droit. Il désigne aussi une dépendance extrême, ou
+  une contrainte qui entrave la liberté.
+famille: [ servir, serf, servile ]
+renvois: [ esclave ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: littre
+    entree: servitude
+  - ouvrage: tlfi
+    entree: servitude
+  - ouvrage: lewis-short
+    entree: servitudo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

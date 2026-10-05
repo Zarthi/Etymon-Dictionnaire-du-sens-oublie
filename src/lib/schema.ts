@@ -72,11 +72,11 @@ const socle = {
   sources: z
     .array(schemaSource)
     .default([])
-    .describe("Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire."),
+    .describe("Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire."),
   redaction: z.array(schemaRedaction).min(1).describe("Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger."),
   statut: z
     .enum(["a-verifier", "brouillon", "validee"])
-    .describe("a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."),
+    .describe("a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."),
   historique: z
     .array(z.object({ date, note: z.string().min(1).describe("Nature de la correction.") }).strict())
     .default([])
@@ -124,13 +124,26 @@ export const schemaAlternative = z
     sens,
     elements: z.array(schemaElement).min(2).optional().describe("Composition de cette forme."),
     selon: z
-      .array(identifiant("Auteur (data/auteurs)."))
+      .array(identifiant("Auteur (data/auteurs) ou ouvrage (data/ouvrages)."))
       .optional()
-      .describe("Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs). Un ouvrage qui la rapporte n'en est pas tenant."),
+      .describe(
+        "Origine débattue : qui a proposé ou défend cette hypothèse (identifiants d'auteurs, ou d'un ouvrage sans auteur unique : un dictionnaire comme Lewis & Short). Un ouvrage qui ne fait que la rapporter n'en est pas tenant.",
+      ),
   })
   .strict()
   .refine((a) => a.forme !== undefined || a.elements !== undefined, { message: "une forme ou des éléments", path: ["forme"] })
   .describe("Une hypothèse (origine débattue) ou un sens voulu (double sens).");
+
+/** Forme avec laquelle celle d'un maillon s'est croisée : chétif, captivus croisé avec le gaulois *cactos. */
+export const schemaCroisement = z
+  .object({
+    forme,
+    translitteration,
+    langue,
+    sens: sens.optional(),
+  })
+  .strict()
+  .describe("Forme avec laquelle celle du maillon s'est croisée.");
 
 export const MODES_ALTERNATIVE = ["debattue", "jeu"] as const;
 
@@ -142,6 +155,11 @@ export const schemaMaillon = z
     langue,
     sens: sens.optional().describe("Sens de ce maillon, seulement s'il apprend quelque chose (pas pour l'allemand Schizophrenie, ni le latin Satanas)."),
     elements: z.array(schemaElement).min(2).optional().describe("Composition : les éléments dont la forme est faite (φίλος + σοφία)."),
+    croisement: z
+      .array(schemaCroisement)
+      .min(1)
+      .optional()
+      .describe("Croisement : formes avec lesquelles celle du maillon s'est croisée (captivus croisé avec le gaulois *cactos ; algorisme croisé avec ἀριθμός). Seulement si une source le dit."),
     alternatives: z
       .object({
         mode: z
@@ -206,8 +224,8 @@ export const schemaLectureTraditionnelle = z
     premier: z
       .literal(true)
       .optional()
-      .describe("Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne)."),
-    sens: sens.optional().describe("Sens que le texte d'origine donne au mot ; seulement pour la lecture premier."),
+      .describe("Mot sacré : lecture du texte d'origine, qui donne le sens affiché en tête de fiche (Exode 16, 15 pour manne). Une seule, reçue par toutes les traditions du mot ; ou, quand elles divergent sur le texte, une par tradition."),
+    sens: sens.optional().describe("Sens que le texte d'origine donne au mot ; seulement pour une lecture premier."),
     hypothese: z.string().min(1).optional().describe("Forme d'une alternative de la chaîne sur laquelle repose la lecture : le texte n'a pas à la répéter."),
     sources: z.array(schemaSourceLecture).min(1).describe("Passages cités, d'une même voix : œuvres de l'auteur, œuvre collective qui rapporte sa parole, ou Écriture."),
     redaction: z.array(schemaRedaction).min(1).optional().describe("Rédaction propre à cette lecture, seulement si elle diffère de celle de la fiche."),
@@ -290,7 +308,7 @@ const objetFiche = z
       .describe(
         "Voir aussi : notions voisines du même ordre, sans racine commune (schizophrénie → délire) ; fiche ou candidat à faire, trois au plus, déclarés d'un seul côté.",
       ),
-    themes: z.array(z.enum(themes)).describe("Thèmes (liste fermée : data/themes.json)."),
+    themes: z.array(z.enum(themes)).min(1).max(2).describe("Thèmes (liste fermée : data/themes.json), un ou deux."),
     tradition: objetTradition
       .prefault({})
       .describe("Ce que dit la tradition du mot : ses lectures, ou les mots où elle en parle. Une seule rubrique, « Lectures traditionnelles »."),

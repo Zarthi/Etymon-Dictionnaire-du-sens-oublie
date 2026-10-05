@@ -1,0 +1,33 @@
+mot: sagesse
+nature: [ nom féminin ]
+etymologie:
+  - forme: sage
+    langue: français
+  - forme: "*sabius"
+    langue: latin populaire
+  - forme: "*sabidus"
+    langue: latin populaire
+  - forme: sapidus
+    langue: latin
+    sens: qui a du goût, de la saveur
+explication: >-
+  Dès le IVe siècle, sapidus qualifiait une personne sage. Sagesse a d'abord
+  nommé la connaissance juste des choses (1269-1278), puis la connaissance
+  inspirée des choses divines et humaines (1535) ; la modération dans la
+  conduite n'est attestée qu'en 1549, la docilité d'un enfant en 1694.
+renvois: [ prudence ]
+themes: [ morale, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: sagesse
+  - ouvrage: littre
+    entree: sagesse
+  - ouvrage: tlfi
+    entree: sage
+  - ouvrage: lewis-short
+    entree: sapidus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

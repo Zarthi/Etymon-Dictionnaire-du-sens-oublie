@@ -1,0 +1,34 @@
+mot: croire
+nature: [ verbe ]
+etymologie:
+  - forme: credere
+    langue: latin
+    sens: confier en prêt
+explication: >-
+  Hors de la langue des affaires, credere a pris le sens de se fier et celui de
+  tenir pour vrai ce que dit quelqu'un ; le latin chrétien lui a donné son sens
+  religieux. Le français a reçu au Xe siècle croire en Dieu et tenir pour vrai ;
+  vers 1160, croire veut dire aussi penser, être d'avis que.
+famille: [ croyance, créance, crédule, crédit ]
+renvois: [ foi ]
+themes: [ esprit, religion ]
+tradition:
+  lectures:
+    - texte: "Le même acte de foi se dit de trois façons, selon son rapport à son objet : croire Dieu, car rien n'est proposé à croire que ce qui touche à Dieu ; croire à Dieu, car la vérité première est ce pour quoi l'on donne son assentiment ; croire en Dieu, car la volonté y tend comme à sa fin."
+      citation: "Et sic ponitur actus fidei credere Deum, quia, sicut supra dictum est, nihil proponitur nobis ad credendum nisi secundum quod ad Deum pertinet. Aliud autem est formalis ratio obiecti, quod est sicut medium propter quod tali credibili assentitur. Et sic ponitur actus fidei credere Deo, quia, sicut supra dictum est, formale obiectum fidei est veritas prima, cui inhaeret homo ut propter eam creditis assentiat. Si vero consideretur tertio modo obiectum fidei, secundum quod intellectus est motus a voluntate, sic ponitur actus fidei credere in Deum, veritas enim prima ad voluntatem refertur secundum quod habet rationem finis. […] per ista tria non designantur diversi actus fidei, sed unus et idem actus habens diversam relationem ad fidei obiectum."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 2, a. 2, co. et ad 1"
+          url: https://www.corpusthomisticum.org/sth3001.html
+sources:
+  - ouvrage: tlfi
+    entree: croire
+  - ouvrage: lewis-short
+    entree: credo
+  - ouvrage: littre
+    entree: croire
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

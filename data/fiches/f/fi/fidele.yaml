@@ -1,0 +1,39 @@
+mot: fidèle
+nature: [ adjectif ]
+etymologie:
+  - forme: fidelis
+    langue: latin
+    sens: en qui l'on peut avoir confiance, sûr, loyal
+explication: >-
+  À la fin du Xe siècle, fidèle nomme celui qui ne manque pas à son engagement,
+  et spécialement le membre d'une Église ; l'adjectif se dit en 1119 de celui en
+  qui l'on peut se fier. Il se dit aussi de ce qui est conforme à la réalité
+  (1587), de ce qui retient avec exactitude (1637).
+famille: [ fidélité, infidèle, féal, foi ]
+themes: [ morale, religion ]
+tradition:
+  lectures:
+    - texte: "Fidelis, parce que se fait par lui le bien qu'il dit ou qu'il promet."
+      citation: "Fidelis, pro eo quod fit ab eo id quod dicit vel promittit bonum."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 98"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+    - texte: "Fidelis se dit du serviteur ; pour l'ami, on emploie un autre mot."
+      citation: "Inter Fidelem et fidum. Fidus amicus dicitur, fidelis famulus."
+      sources:
+        - ouvrage: differences
+          entree: "I, 207"
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: fidèle
+  - ouvrage: lewis-short
+    entree: fidelis
+  - ouvrage: littre
+    entree: fidèle
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

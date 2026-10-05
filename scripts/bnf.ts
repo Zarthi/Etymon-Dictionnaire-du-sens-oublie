@@ -3,6 +3,7 @@ import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { chercherNotices, noticeDe, type Notice } from "./lib/bnf.ts";
+import { regenererContrat } from "./lib/regenerer.ts";
 import { lireReflexion, preparerAuteur, preparerOuvrage, versYaml } from "./lib/redaction.ts";
 import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts";
 
@@ -104,6 +105,7 @@ async function principal(): Promise<number> {
   // La notice a été consultée par ce script : elle est la source, et la fiche passe en brouillon.
   const { redaction, statut: _statut, ...reste } = resultat.fiche;
   await writeFile(chemin, versYaml({ ...reste, sources: [{ ouvrage: "bnf", entree: v.cb }], redaction, statut: "brouillon" }));
+  regenererContrat();
   const { erreurs } = await validerDepot();
   const siennes = erreurs.filter((e) => e.fichier.endsWith(`${dossier}/${v.id}.yaml`));
   console.log(`✓ data/${dossier}/${v.id}.yaml écrit (brouillon, source BnF ${v.cb}).`);

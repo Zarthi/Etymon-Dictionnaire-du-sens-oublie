@@ -1,0 +1,34 @@
+mot: saison
+nature: [ nom féminin ]
+etymologie:
+  - forme: satio
+    langue: latin
+    sens: action de semer, semailles
+explication: >-
+  Du temps des semailles, le mot est passé au temps propre à toute chose, puis
+  aux époques de l'année. Saison a d'abord dit en français le temps qu'il fait
+  (1119) et le temps propice (hors de saison) ; il nomme aujourd'hui les quatre
+  divisions de l'année et l'époque de certaines activités.
+ecartees:
+  - forme: statio
+    langue: latin
+    sens: fait de se tenir immobile
+    selon: [ auguste-scheler ]
+    raison: "Les mots italien et espagnol qui l'appuyaient viennent de statio, et
+      n'ont avec saison qu'une ressemblance fortuite."
+famille: [ saisonnier, assaisonner ]
+themes: [ temps, nature ]
+sources:
+  - ouvrage: tlfi
+    entree: saison
+  - ouvrage: littre
+    entree: saison
+  - ouvrage: lewis-short
+    entree: satio2
+  - ouvrage: lewis-short
+    entree: statio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

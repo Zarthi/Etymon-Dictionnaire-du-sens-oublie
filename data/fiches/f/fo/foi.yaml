@@ -1,0 +1,39 @@
+mot: foi
+nature: [ nom féminin ]
+etymologie:
+  - forme: fides
+    langue: latin
+    sens: confiance ; loyauté, parole donnée
+explication: >-
+  Le latin chrétien a fait de fides la confiance en Dieu : c'est le sens le plus
+  ancien de foi en français (vers 1050), avant la parole donnée (vers 1100) et
+  la loyauté (bonne foi, 1181-1186). Le sens d'engagement a vieilli, ou vit dans
+  des locutions.
+famille: [ fidèle, fidélité, confiance ]
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: "Le nom de la foi vient proprement de ce que se fait ce qui a été dit ou promis : de ce que s'accomplit ce dont deux parties sont convenues, comme Dieu et l'homme ; de là aussi le nom de l'alliance."
+      citation: "Proprie autem nomen fidei inde est dictum, si omnino fiat quod dictum est aut promissum. Et inde fides vocata, ab eo quod fit illud quod inter utrosque placitum est, quasi inter Deum et hominem; hinc et foedus."
+      sources:
+        - ouvrage: etymologies
+          entree: "VIII, 2, 4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+    - texte: "Le nom de foi emporte une connaissance imparfaite : la connaissance de ceux qui sont en chemin est donc plus proprement appelée foi que celle de la patrie, qui est pourtant plus noble."
+      citation: "nihil prohibet aliquid esse simpliciter melius, quod tamen minus proprie recipit alicuius praedicationem, sicut cognitio patriae est nobilior quam cognitio viae, quae tamen magis proprie dicitur fides, eo quod nomen fidei importat imperfectionem cognitionis."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 174, a. 2, ad 3"
+          url: https://www.corpusthomisticum.org/sth3171.html
+sources:
+  - ouvrage: tlfi
+    entree: foi
+  - ouvrage: lewis-short
+    entree: fides1
+  - ouvrage: littre
+    entree: foi
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

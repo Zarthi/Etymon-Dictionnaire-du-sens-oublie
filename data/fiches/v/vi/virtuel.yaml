@@ -1,0 +1,28 @@
+mot: virtuel
+nature: [ adjectif ]
+etymologie:
+  - forme: virtualis
+    langue: latin médiéval
+    sens: potentiel
+  - forme: virtus
+    langue: latin
+    sens: force, puissance
+explication: >-
+  Dès 1480, d'après le virtualis des scolastiques, virtuel se dit de ce qui
+  n'est qu'en puissance ; le sens de ce qui a de la vertu, de la force (1526),
+  ne s'est pas maintenu. Le mot dit aujourd'hui ce qui existe sans se
+  manifester, ou n'est que possible.
+famille: [ vertu, virtualité ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: virtuel
+  - ouvrage: littre
+    entree: virtuel
+  - ouvrage: lewis-short
+    entree: virtus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

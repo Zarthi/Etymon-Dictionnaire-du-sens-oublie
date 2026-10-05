@@ -1,0 +1,28 @@
+mot: liberté
+nature: [ nom féminin ]
+etymologie:
+  - forme: libertas
+    langue: latin
+    sens: condition de celui qui n'est pas esclave
+explication: >-
+  En français, le mot a d'abord nommé le pouvoir de la volonté de se déterminer
+  (début du XIIIe siècle) ; la condition de qui n'a pas de maître n'y est
+  attestée qu'en 1324. Il désigne aujourd'hui l'absence de contrainte, dans la
+  cité comme dans la conduite et la pensée, et le pouvoir de choisir.
+famille: [ libre, libérer, libéral, libertin ]
+renvois: [ servitude ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: littre
+    entree: liberté
+  - ouvrage: tlfi
+    entree: liberté
+  - ouvrage: lewis-short
+    entree: libertas
+  - ouvrage: lewis-short
+    entree: liber1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,40 @@
+mot: époux
+nature: [ nom ]
+etymologie:
+  - forme: sponsus
+    langue: latin
+    sens: fiancé, promis
+  - forme: spondere
+    langue: latin
+    sens: promettre solennellement
+explication: >-
+  Dans le droit romain primitif, spondere formait le contrat verbal : l'un
+  demandait « promets-tu ? », l'autre répondait « je promets ». Époux, attesté
+  vers 1050, désigne la personne unie à une autre par le mariage, et non celle
+  qui l'a seulement promis.
+famille: [ épouser, répondre ]
+themes: [ famille ]
+tradition:
+  lectures:
+    - texte: "Avant l'usage des tablettes de mariage, les futurs époux échangeaient des engagements écrits par lesquels ils spondebant, promettaient, de consentir au mariage, et donnaient des garants : le sponsus est donc celui qui spondet et donne des sponsores, non celui qui est promis."
+      citation: "Sponsus ab spondendo vocatus. Nam ante usum tabellarum matrimonii cautiones sibi invicem emittebant, in quibus spondebant se invicem consentire in iura matrimonii, et fideiussores dabant. […] Ergo sponsus non quia promittitur, sed quia spondet et sponsores dat."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 7, 3-4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: époux
+  - ouvrage: lewis-short
+    entree: spondeo
+  - ouvrage: littre
+    entree: époux
+  - ouvrage: tlfi
+    entree: épouser
+  - ouvrage: littre
+    entree: répondre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

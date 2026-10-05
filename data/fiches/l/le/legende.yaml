@@ -1,0 +1,24 @@
+mot: légende
+nature: [ nom féminin ]
+etymologie:
+  - forme: legenda
+    langue: latin médiéval
+    sens: ce qui doit être lu
+explication: >-
+  Au XIIIe siècle, la légende était la vie d'un saint, que l'on lisait à
+  l'office de matines. Le mot a pris le sens de récit merveilleux et populaire
+  (1558), puis de représentation déformée de faits réels (1853) ; il désigne
+  aussi le texte qui accompagne une image (1598) ou une carte.
+famille: [ légendaire, lire ]
+renvois: [ mythe, fable ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: légende
+  - ouvrage: tlfi
+    entree: légende
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

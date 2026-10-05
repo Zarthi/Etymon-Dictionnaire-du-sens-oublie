@@ -18,8 +18,9 @@ y parle par ses textes, comme dans les fiches.
 
 ## Une seule option
 
-La Quête s'ouvre par **une seule option** dans les paramètres (« Ouvrir la quête »), par réserve
-comme le reste de l'app, et se referme de même. Jamais contre un don, un score ou une progression :
+La Quête est **facultative** : désactivée par défaut, elle s'active par **une seule option** dans
+les paramètres (« Ouvrir la quête »), par réserve comme le reste de l'app, et se désactive de même.
+Désactivée, rien d'elle ne paraît dans l'app. Jamais contre un don, un score ou une progression :
 rien, dans Étymon, ne se débloque autrement que par le geste du lecteur. Elle ouvre ensemble :
 
 - **une langue qui ne se parle pas** ([langue/](langue/README.md)) : deux langues, le Centre, dont

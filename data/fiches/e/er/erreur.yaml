@@ -1,0 +1,34 @@
+mot: erreur
+nature: [ nom féminin ]
+etymologie:
+  - forme: error
+    langue: latin
+    sens: action d'errer çà et là
+explication: >-
+  En latin, error disait aussi l'incertitude et la méprise, et en latin chrétien
+  la doctrine fausse. Le français l'a d'abord dit de la tromperie (fin du Xe
+  siècle), puis du fait de se tromper (vers 1125) ; le sens d'errance y est
+  vieilli ou littéraire.
+famille: [ errer, erroné, aberration ]
+renvois: [ illusion ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: erreur
+  - ouvrage: lewis-short
+    entree: error
+  - ouvrage: lewis-short
+    entree: erro1
+  - ouvrage: littre
+    entree: erreur
+  - ouvrage: littre
+    entree: aberration
+  - ouvrage: littre
+    entree: erroné
+  - ouvrage: littre
+    entree: errer
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

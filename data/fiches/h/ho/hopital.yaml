@@ -1,0 +1,23 @@
+mot: hôpital
+nature: [ nom masculin ]
+etymologie:
+  - forme: hospitale
+    langue: bas latin
+    sens: lieu de refuge, d'accueil
+explication: >-
+  Vers 1170, ospital désigne un établissement charitable, le plus souvent lié à
+  un monastère, qui accueille les pauvres et les voyageurs ; le sens
+  d'établissement pour les malades est attesté en 1671. Dans son premier sens,
+  le mot a été presque entièrement évincé par hospice.
+famille: [ hospitalier, hospitaliser, hôte ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: hôpital
+  - ouvrage: littre
+    entree: hôpital
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

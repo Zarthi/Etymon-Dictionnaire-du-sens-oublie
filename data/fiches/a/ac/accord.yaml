@@ -1,0 +1,44 @@
+mot: accord
+nature: [ nom masculin ]
+etymologie:
+  - forme: accorder
+    langue: français
+  - forme: "*accordare"
+    langue: latin
+    modele:
+      forme: concordare
+      langue: latin
+      sens: être d'accord
+      relation: analogie
+  - forme: cor
+    langue: latin
+    sens: cœur
+explication: >-
+  Après 1160, accord désigne un pacte scellé par un serment, et l'harmonie des
+  sentiments entre des personnes ; l'harmonie des sons ne vient qu'en 1341. Le
+  mot dit aujourd'hui l'entente entre des personnes ou des États, et la
+  convenance entre des choses, en grammaire et en musique.
+ecartees:
+  - forme: chorda
+    langue: latin
+    sens: corde d'un instrument de musique
+    raison: Le Littré tire accorder de cor, comme le TLFi après Ernout ; l'accord
+      des instruments est un sens figuré, attesté après celui des personnes.
+famille: [ accorder, concorder ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: accord
+  - ouvrage: tlfi
+    entree: accorder
+  - ouvrage: littre
+    entree: accorder
+  - ouvrage: lewis-short
+    entree: concordo
+  - ouvrage: lewis-short
+    entree: cor
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

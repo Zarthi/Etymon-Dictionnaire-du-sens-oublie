@@ -1,0 +1,38 @@
+mot: fable
+nature: [ nom féminin ]
+etymologie:
+  - forme: fabula
+    langue: latin
+    sens: propos, paroles
+explication: >-
+  Le latin fabula est passé des propos au récit fictif, à la pièce de théâtre, à
+  l'apologue. Fable a d'abord nommé un récit imaginaire (1155), puis mensonger
+  (vers 1160) et le petit récit moral à personnages d'animaux (vers 1180) ; être
+  la fable de la ville garde le sens de sujet des propos.
+famille: [ fabuleux, affabulation, enfant ]
+renvois: [ recit, mythe ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: "Les poètes ont nommé les fabulas de fando, parce que ce ne sont pas des choses faites, mais seulement feintes en parlant ; elles ont été introduites pour qu'une image de la vie des hommes se reconnaisse dans l'entretien d'animaux muets que l'on fait parler."
+      citation: "Fabulas poetae a fando nominaverunt, quia non sunt res factae, sed tantum loquendo fictae. Quae ideo sunt inductae, ut fictorum mutorum animalium inter se conloquio imago quaedam vitae hominum nosceretur."
+      sources:
+        - ouvrage: etymologies
+          entree: "I, 40, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: fable
+  - ouvrage: tlfi
+    entree: fable
+  - ouvrage: lewis-short
+    entree: fabula1
+  - ouvrage: lewis-short
+    entree: for
+  - ouvrage: littre
+    entree: enfant
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

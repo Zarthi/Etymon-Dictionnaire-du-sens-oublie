@@ -29,7 +29,8 @@ export function referencesDe(
   const auteurs = new Set<string>();
   const ouvrages = new Set<string>();
   for (const m of fiche.etymologie) {
-    for (const a of m.alternatives?.formes ?? []) a.selon?.forEach((id) => auteurs.add(id));
+    // Un tenant est un auteur, ou un ouvrage sans auteur unique (jamais les deux : le validateur le refuse).
+    for (const a of m.alternatives?.formes ?? []) a.selon?.forEach((id) => (ouvragesCites.has(id) ? ouvrages : auteurs).add(id));
     m.forge?.par.forEach((id) => auteurs.add(id));
     if (m.forge?.ouvrage) ouvrages.add(m.forge.ouvrage);
     if (m.personne) auteurs.add(m.personne);
@@ -42,6 +43,17 @@ export function referencesDe(
     l.sources.forEach((s) => ouvrages.add(s.ouvrage));
   }
   return { auteurs: [...auteurs], ouvrages: [...ouvrages] };
+}
+
+/** Un tenant d'hypothèse, tel que l'app l'affiche : le nom d'un auteur, ou le titre (abrégé) d'un ouvrage, avec sa page. */
+export function tenantDe(
+  id: string,
+  auteurs: Map<string, { nom: string }>,
+  ouvrages: Map<string, { titre: string; abrege?: string }>,
+): { nom: string; lien: string; ouvrage: boolean } {
+  const o = auteurs.has(id) ? undefined : ouvrages.get(id);
+  if (o) return { nom: o.abrege ?? o.titre, lien: lienOuvrage(id), ouvrage: true };
+  return { nom: auteurs.get(id)?.nom ?? id, lien: lienAuteur(id), ouvrage: false };
 }
 
 /** Formes sous lesquelles un auteur ou un ouvrage peut être cité : nom usuel et formes courtes ; titre, abrégé, titre d'origine. */

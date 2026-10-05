@@ -1,0 +1,24 @@
+mot: payer
+nature: [ verbe ]
+etymologie:
+  - forme: pacare
+    langue: latin
+    sens: faire la paix, pacifier
+explication: >-
+  À basse époque, pacare a sans doute pris le sens moral de satisfaire,
+  apaiser ; les langues romanes en ont fait apaiser avec de l'argent. En
+  français, payer a d'abord voulu dire se réconcilier (Xe siècle) ; il dit
+  depuis 1170 donner ce qui est dû.
+famille: [ paye, paiement, payeur, paix ]
+renvois: [ dette ]
+themes: [ argent, commerce ]
+sources:
+  - ouvrage: tlfi
+    entree: payer
+  - ouvrage: littre
+    entree: payer
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,4 +1,4 @@
-import { normaliserCitation } from "./en-ligne.ts";
+import { normaliserCitation, texteDePage } from "./en-ligne.ts";
 
 /**
  * Corpus de réflexe des lectures traditionnelles (docs/methode.md) : les œuvres qu'on interroge
@@ -16,11 +16,15 @@ export interface Oeuvre {
   /** Pages de l'œuvre ; ou, pour une œuvre découpée en beaucoup de pages, le préfixe de ses pages sur Wikisource, listées au téléchargement. */
   pages?: Page[];
   wikisource?: { langue: "la" | "he"; prefixe: string };
+  /** Œuvre en chaîne de pages (Corpus Thomisticum) : adresse de la première, les suivantes se lisent dans chaque page. */
+  chaine?: string;
 }
 
 export interface Page {
   repere: string;
   url: string;
+  /** Page suivante, pour une œuvre en chaîne : de quoi reprendre un téléchargement interrompu. */
+  suivante?: string;
 }
 
 /** Adresse d'une page de Wikisource. */
@@ -29,6 +33,7 @@ export const pageWikisource = (langue: string, titre: string) =>
 
 const WIKISOURCE_LA = "https://la.wikisource.org/wiki/";
 const WIKISOURCE_HE = "https://he.wikisource.org/wiki/";
+const CORPUS_THOMISTICUM = "https://www.corpusthomisticum.org/";
 const ROMAINS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"];
 
 /** Numéral hébreu d'un chapitre (1 à 99) : א, ט״ו s'écrit טו, ט״ז s'écrit טז. */
@@ -115,8 +120,8 @@ export const CORPUS: Oeuvre[] = [
     titre: "Thomas d'Aquin, Somme théologique",
     tradition: "chrétienne",
     langue: "latin",
-    role: "le nom d'une notion, souvent discuté en tête d'article (« nomen … dicitur »)",
-    wikisource: { langue: "la", prefixe: "Summa Theologiae/" },
+    role: "le nom d'une notion, souvent discuté en tête d'article (« nomen … dicitur ») ; la Somme entière, Corpus Thomisticum (édition léonine), repérée par article (« IIa-IIae q. 8 a. 1 co. »)",
+    chaine: CORPUS_THOMISTICUM + "sth1001.html",
   },
 ];
 
@@ -154,4 +159,45 @@ export function chercherDans(texte: string, forme: string): { passage: string; e
     .filter((p) => normaliserCitation(p).includes(cle))
     .map((p) => ({ passage: extrait(p, forme), explique: EXPLICATION.test(p) }))
     .sort((a, b) => Number(b.explique) - Number(a.explique));
+}
+
+/** Entités des pages du Corpus Thomisticum (HTML en latin-1), que `texteBrut` ne décode pas. */
+const ENTITES_THOMAS: Record<string, string> = { ordf: "ª", nbsp: " ", copy: "©", aelig: "æ", oelig: "œ", aacute: "á", eacute: "é", iacute: "í", oacute: "ó", uacute: "ú" };
+const decoder = (html: string) => html.replace(/&([a-z]+);/g, (tout, nom: string) => ENTITES_THOMAS[nom] ?? tout);
+
+/** Adresse de la page suivante d'une page du Corpus Thomisticum (la flèche « ageultra »), s'il y en a une. */
+export function pageSuivante(html: string): string | undefined {
+  const href = /<A HREF="(sth\d+\.html)"><IMG SRC="icons\/ageultra/i.exec(html)?.[1];
+  return href ? CORPUS_THOMISTICUM + href : undefined;
+}
+
+/** Repère d'une page, tiré de son titre : « IIa-IIae q. 1-16 ». */
+export function repereDePage(html: string): string {
+  const titre = /<TITLE>[^<]*?Summa Theologiae,\s*([^<]*)<\/TITLE>/i.exec(html)?.[1] ?? "";
+  return texteDePage(decoder(titre)).replaceAll("ª", "a");
+}
+
+/**
+ * Texte d'une page du Corpus Thomisticum, un paragraphe par ligne, chacun précédé de son repère
+ * d'article : « [IIa-IIae q. 8 a. 1 co.] Respondeo dicendum… ». Ce que la page ajoute (menus,
+ * notes de bas de page) n'est pas gardé.
+ */
+export function paragraphesThomas(html: string): string {
+  const lignes: string[] = [];
+  for (const [, ref, corps] of html.matchAll(/<P TITLE="[^"]*"><A NAME="\d+"><SPAN CLASS="ref">\[\d+\]([^<]*)<\/SPAN><\/A>([\s\S]*?)<\/P>/gi)) {
+    const repere = texteDePage(decoder(ref)).replaceAll("ª", "a");
+    lignes.push(`[${repere}] ${texteDePage(decoder(corps))}`);
+  }
+  return lignes.join("\n");
+}
+
+/**
+ * Passages d'un texte à paragraphes repérés (`paragraphesThomas`) : comme `chercherDans`, avec le
+ * repère du paragraphe où chaque passage se trouve.
+ */
+export function chercherParagraphes(texte: string, forme: string): { repere: string; passage: string; explique: boolean }[] {
+  return texte.split("\n").flatMap((ligne) => {
+    const m = /^\[([^\]]+)\] ([\s\S]*)$/.exec(ligne);
+    return m ? chercherDans(m[2], forme).map((t) => ({ repere: m[1], ...t })) : [];
+  });
 }

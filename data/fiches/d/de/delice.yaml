@@ -1,0 +1,40 @@
+mot: délice
+nature: [ nom masculin ]
+etymologie:
+  - forme: deliciae
+    langue: latin
+    sens: délices, voluptés, objet d'affection
+  - forme: delicere
+    langue: latin
+    sens: détourner du droit chemin par l'attrait
+explication: >-
+  Deliciae nommait ce qui attire et flatte les sens, et aussi l'être aimé.
+  Délice, attesté vers 1120 au féminin pluriel, nomme aujourd'hui un plaisir
+  intense et subtil, ou ce qui le procure ; l'attrait qui détourne du droit
+  chemin ne s'y entend plus.
+famille: [ délecter, délectation ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: délice
+  - ouvrage: littre
+    entree: délice
+  - ouvrage: lewis-short
+    entree: deliciae
+  - ouvrage: lewis-short
+    entree: delicio
+  - ouvrage: lewis-short
+    entree: lacio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
+tradition:
+  lectures:
+    - texte: "Les deliciae sont ainsi nommées parce que les hommes s'y délectent et les recherchent avec douceur."
+      citation: "Deliciae nuncupatae quod his delectentur homines, easque suaviter appetant."
+      sources:
+        - ouvrage: etymologies
+          entree: "XX, 2, 6"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX

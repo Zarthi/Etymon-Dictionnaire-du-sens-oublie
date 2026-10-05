@@ -1,0 +1,41 @@
+mot: oisif
+nature: [ adjectif ]
+etymologie:
+  - forme: oisdif
+    langue: ancien français
+    croisement:
+      - forme: oiseux
+        langue: français
+  - forme: oisdive
+    langue: ancien français
+  - forme: oiseux
+    langue: français
+  - forme: otiosus
+    langue: latin
+  - forme: otium
+    langue: latin
+    sens: loisir, temps libre des affaires
+explication: >-
+  Otium, opposé aux affaires, pouvait être le loisir consacré à l'étude. Oisif
+  s'est dit en 1271 d'une bête qui ne sert à rien, puis d'une personne sans
+  occupation ; il qualifie aujourd'hui qui ne fait rien, parfois avec une nuance
+  péjorative.
+famille: [ oisiveté, oiseux, négoce ]
+renvois: [ paresse ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: oisif
+  - ouvrage: littre
+    entree: oisif
+  - ouvrage: tlfi
+    entree: oiseux
+  - ouvrage: littre
+    entree: oiseux
+  - ouvrage: lewis-short
+    entree: otium
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

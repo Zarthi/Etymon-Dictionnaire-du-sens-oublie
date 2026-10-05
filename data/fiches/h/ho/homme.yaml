@@ -1,0 +1,41 @@
+mot: homme
+nature: [ nom masculin ]
+etymologie:
+  - forme: homo
+    langue: latin
+    sens: être humain
+    premier: true
+  - forme: humus
+    langue: latin
+    sens: terre
+explication: >-
+  Dès l'époque impériale, homo, qui ne distinguait pas les sexes, a pris aussi
+  le sens d'être humain du sexe masculin. Le français a reçu les deux sens dès
+  la fin du Xe siècle, et les garde.
+incertain: true
+famille: [ humain, on ]
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: "Homo tient son nom de humus, parce que l'homme a été fait de la terre. Au sens propre, le nom vient de la terre ; c'est par abus qu'on le dit de l'homme entier, union de l'âme et du corps."
+      citation: "Homo dictus, quia ex humo est factus […] Abusive autem pronuntiatur ex utraque substantia totus homo, id est ex societate animae et corporis. Nam proprie homo ab humo."
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 1, 4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: homme
+  - ouvrage: littre
+    entree: homme
+  - ouvrage: lewis-short
+    entree: homo
+  - ouvrage: lewis-short
+    entree: vir
+  - ouvrage: littre
+    entree: vertu
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

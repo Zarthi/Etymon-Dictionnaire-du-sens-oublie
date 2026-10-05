@@ -1,0 +1,51 @@
+mot: certitude
+nature: [ nom féminin ]
+etymologie:
+  - forme: certitudo
+    langue: bas latin
+  - forme: certus
+    langue: latin
+    sens: décidé, fixé
+  - forme: cernere
+    langue: latin
+    sens: séparer, cribler ; discerner, décider
+explication: >-
+  Certus, participe de cernere, se disait de ce qui a été décidé, fixé.
+  Certitude a d'abord nommé le caractère de ce qui est certain (vers 1375), puis
+  l'état de l'esprit qui tient une chose pour hors de doute (1462) : le mot est
+  passé de la chose fixée à l'esprit.
+famille: [ certain, certes, incertitude, discerner, certifier ]
+renvois: [ evidence ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: certitude
+  - ouvrage: tlfi
+    entree: certain
+  - ouvrage: lewis-short
+    entree: certus
+  - ouvrage: lewis-short
+    entree: cerno
+  - ouvrage: littre
+    entree: certitude
+  - ouvrage: littre
+    entree: certes
+  - ouvrage: littre
+    entree: incertitude
+  - ouvrage: littre
+    entree: discerner
+  - ouvrage: littre
+    entree: certifier
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "La certitude est par essence dans la faculté de connaître, et par participation dans tout ce qu'une faculté de connaître meut sans faillir vers sa fin : ainsi dit-on que la nature agit avec certitude, mue par l'intelligence divine."
+      citation: "certitudo invenitur in aliquo dupliciter, scilicet essentialiter, et participative. Essentialiter quidem invenitur in vi cognoscitiva, participative autem in omni eo quod a vi cognoscitiva movetur infallibiliter ad finem suum; secundum quem modum dicitur quod natura certitudinaliter operatur, tanquam mota ab intellectu divino certitudinaliter movente unumquodque ad suum finem."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 18, a. 4, co."
+          url: https://www.corpusthomisticum.org/sth3017.html
+statut: brouillon

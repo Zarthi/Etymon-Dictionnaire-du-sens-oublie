@@ -1,0 +1,27 @@
+mot: courage
+nature: [ nom masculin ]
+etymologie:
+  - forme: cœur
+    langue: français
+  - forme: cor
+    langue: latin
+    sens: cœur
+explication: >-
+  Le mot a d'abord désigné le cœur comme siège des sentiments (1050), puis, vers
+  1100, l'état d'esprit, les intentions, l'ardeur à faire quelque chose. Il
+  nomme aujourd'hui la fermeté de cœur devant le danger ou l'épreuve ; le
+  premier sens a vieilli.
+famille: [ courageux, encourager, décourager ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: courage
+  - ouvrage: littre
+    entree: courage
+  - ouvrage: tlfi
+    entree: cœur
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,36 @@
+mot: captif
+nature: [ adjectif ]
+etymologie:
+  - forme: captivus
+    langue: latin
+    sens: prisonnier
+explication: >-
+  Attesté en 1450, captif, emprunté au latin, a pris à chétif, de formation
+  populaire, le sens de prisonnier ; chétif s'est alors spécialisé dans celui de
+  malheureux. Captif se dit aussi de l'âme en 1488, et en 1671 de celui que
+  domine une passion.
+doublets: [ chetif ]
+famille: [ captivité, captiver ]
+themes: [ guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: captif
+  - ouvrage: tlfi
+    entree: chétif
+  - ouvrage: littre
+    entree: captif
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le nom dirait celui qui est diminué de tête : il a perdu la condition
+        d'homme libre, et c'est pourquoi les juristes le disent diminué de tête."
+      citation: Captivus dicitur quasi capite deminutus; ingenuitatis enim fortuna ab
+        eo excidit, unde et ab iuris peritis capite deminutus dicitur.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 54
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+statut: brouillon

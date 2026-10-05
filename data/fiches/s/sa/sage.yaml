@@ -1,0 +1,43 @@
+mot: sage
+nature: [ adjectif ]
+etymologie:
+  - forme: "*sabius"
+    langue: latin populaire
+  - forme: "*sabidus"
+    langue: latin populaire
+  - forme: sapidus
+    langue: latin
+    sens: qui a du goût, de la saveur
+explication: >-
+  Au IVe siècle, sapidus qualifiait déjà une personne sage. En français, le mot
+  a qualifié qui est instruit (vers 1050), judicieux (1100), prudent (début du
+  XIIe siècle), puis qui est modéré, maître de ses passions (vers 1590) ; depuis
+  1671, il se dit de l'enfant qui n'est pas turbulent.
+ecartees:
+  - forme: sapiens
+    langue: latin
+    sens: sage, avisé
+    raison: Les formes sabio, savio, saggio des autres langues romanes ne peuvent en
+      venir, ces langues ne dérivant pas du nominatif.
+famille: [ sagesse, sapide, insipide ]
+themes: [ morale, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: sage
+  - ouvrage: littre
+    entree: sage
+  - ouvrage: lewis-short
+    entree: sapio
+  - ouvrage: lewis-short
+    entree: sapidus
+  - ouvrage: littre
+    entree: sapide
+  - ouvrage: littre
+    entree: insipide
+  - ouvrage: tlfi
+    entree: sagesse
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

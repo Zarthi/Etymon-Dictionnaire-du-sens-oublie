@@ -31,7 +31,8 @@
         "enum": [
           "juive",
           "chrétienne",
-          "grecque"
+          "grecque",
+          "romaine"
         ],
         "description": "Tradition (liste fermée : data/traditions.json)."
       }
@@ -84,7 +85,7 @@
     },
     "sources": {
       "default": [],
-      "description": "Ouvrages consultés ; au moins un hors statut a-verifier. Ajoutés par npm run verifier ou à la main, jamais de mémoire.",
+      "description": "Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire.",
       "type": "array",
       "items": {
         "type": "object",
@@ -174,7 +175,7 @@
         "brouillon",
         "validee"
       ],
-      "description": "a-verifier : rédigée de mémoire ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
+      "description": "a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
     },
     "historique": {
       "default": [],

@@ -1,0 +1,16 @@
+titre: Nuits attiques
+titreOriginal: Noctes Atticae
+auteur: aulu-gelle
+licence: domaine public
+texte: https://www.thelatinlibrary.com/gellius/gellius11.shtml
+description: >-
+  Recueil en vingt livres d'Aulu-Gelle, écrit à Athènes : notes de lecture sur
+  la langue, le droit, l'histoire et la philosophie.
+sources:
+  - ouvrage: bnf
+    entree: cb120084087
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,29 @@
+mot: étranger
+nature: [ adjectif ]
+etymologie:
+  - forme: étrange
+    langue: français
+  - forme: extraneus
+    langue: latin
+    sens: du dehors, extérieur ; qui n'est pas de la famille, du pays
+explication: >-
+  Étrange a d'abord signifié étranger (vers 1050), puis hors du commun (vers
+  1165), puis bizarre (1668) ; son dérivé étranger désigne dès 1369 celui qui
+  n'est pas du pays. Étranger désigne aussi ce qui n'est pas familier à
+  quelqu'un.
+famille: [ étrange, étrangeté ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: étranger
+  - ouvrage: littre
+    entree: étranger
+  - ouvrage: tlfi
+    entree: étrange
+  - ouvrage: littre
+    entree: étrange
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

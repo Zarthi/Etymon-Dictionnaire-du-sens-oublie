@@ -1,0 +1,43 @@
+mot: humilité
+nature: [ nom féminin ]
+etymologie:
+  - forme: humilitas
+    langue: latin
+    sens: faible élévation, petitesse
+  - forme: humilis
+    langue: latin
+    sens: près du sol, bas
+  - forme: humus
+    langue: latin
+    sens: terre
+explication: >-
+  En latin classique, humilitas disait aussi l'état modeste ou obscur,
+  l'abaissement, et au moral la bassesse ; le latin chrétien lui a donné le sens
+  de modestie. C'est ce sens que le français reçoit au Xe siècle : la
+  disposition à s'abaisser volontairement, sans orgueil.
+famille: [ humble, humilier ]
+themes: [ morale, religion ]
+tradition:
+  lectures:
+    - texte: "Selon Isidore, est humble qui est comme incliné vers la terre, attaché aux choses les plus basses. On l'est de deux façons : abaissé par un autre, et l'humilité est une peine ; ou de soi-même, quand, considérant son défaut, on se tient en bas selon sa mesure, et l'humilité est alors une vertu."
+      citation: "sicut Isidorus dicit, in libro Etymol., humilis dicitur quasi humi acclinis, idest, imis inhaerens. Quod quidem contingit dupliciter. Uno modo, ex principio extrinseco, puta cum aliquis ab alio deiicitur. Et sic humilitas est poena. Alio modo, a principio intrinseco. Et hoc potest fieri quandoque quidem bene, puta cum aliquis, considerans suum defectum, tenet se in infimis secundum suum modum […] Et hoc modo humilitas ponitur virtus."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 161, a. 1, ad 1"
+          url: https://www.corpusthomisticum.org/sth3155.html
+sources:
+  - ouvrage: tlfi
+    entree: humilité
+  - ouvrage: littre
+    entree: humilité
+  - ouvrage: lewis-short
+    entree: humilitas
+  - ouvrage: tlfi
+    entree: humble
+  - ouvrage: lewis-short
+    entree: humus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

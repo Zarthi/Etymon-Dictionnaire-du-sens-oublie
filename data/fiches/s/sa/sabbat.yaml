@@ -12,11 +12,10 @@ etymologie:
 themes: [ religion, temps ]
 tradition:
   lectures:
-    - texte: Dieu bénit le septième jour et le sanctifia, parce qu'en ce jour il cessa
-        toute l'œuvre qu'il avait faite.
-      citation: ויברך אלהים את־יום השביעי ויקדש אתו כי בו שבת מכל־מלאכתו
+    - texte: "Dieu bénit le septième jour et le sanctifia, car en lui il cessa toute son œuvre."
+      citation: "ויברך אלהים את־יום השביעי ויקדש אתו כי בו שבת מכל־מלאכתו"
       premier: true
-      sens: cesser
+      sens: "il cessa"
       sources:
         - ouvrage: bible-hebraique
           entree: Genèse 2, 3
@@ -29,4 +28,5 @@ sources:
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

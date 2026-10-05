@@ -15,7 +15,6 @@
 - { mot: manœuvre, statut: a-faire }
 - { mot: marchand, statut: a-faire }
 - { mot: marché, statut: a-faire }
-- { mot: mariage, statut: a-faire }
 - { mot: martyr, statut: a-faire }
 - { mot: matière, statut: a-faire }
 - { mot: maudire, statut: a-faire }
@@ -28,12 +27,11 @@
 - { mot: mélancolie, statut: a-faire }
 - { mot: mémoire, statut: a-faire }
 - { mot: ménage, statut: a-faire }
-- { mot: mensonge, statut: a-faire }
-- { mot: mentir, statut: a-faire }
 - { mot: mépris, statut: a-faire }
 - { mot: mérite, statut: a-faire }
 - { mot: merveille, statut: a-faire }
 - { mot: messe, statut: a-faire }
+- { mot: messie, statut: a-faire }
 - { mot: mesure, statut: a-faire }
 - { mot: métaphore, statut: a-faire }
 - { mot: métaphysique, statut: a-faire }
@@ -45,9 +43,7 @@
 - { mot: mode, statut: a-faire }
 - { mot: modeste, statut: a-faire }
 - { mot: moine, statut: a-faire }
-- { mot: moment, statut: a-faire }
 - { mot: monarchie, statut: a-faire }
-- { mot: monde, statut: a-faire }
 - { mot: monnaie, statut: a-faire }
 - { mot: monstre, statut: a-faire }
 - { mot: monument, statut: a-faire }

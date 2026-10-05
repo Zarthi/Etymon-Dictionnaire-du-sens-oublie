@@ -156,7 +156,10 @@ export function validerOuvrages(sources: FichierSource[], auteurs: Map<string, A
 }
 
 /** Sources d'une fiche : l'ouvrage a sa fiche, et l'adresse n'est écrite que si elle ne se déduit pas. */
-function verifierSources(fiche: { sources: Fiche["sources"] }, ref: Referentiel, ajouter: (champ: string, regle: string) => void) {
+function verifierSources(fiche: { sources: Fiche["sources"]; statut: Fiche["statut"] }, ref: Referentiel, ajouter: (champ: string, regle: string) => void) {
+  if (fiche.statut === "a-verifier" && fiche.sources.length > 0) {
+    ajouter("sources", "une fiche a-verifier n'a que l'IA pour source (champ redaction) : aucun ouvrage consulté, sinon c'est un brouillon");
+  }
   fiche.sources.forEach((s, i) => {
     const ouvrage = ref.ouvrages.get(s.ouvrage);
     if (!ouvrage) return ajouter(`sources.${i}.ouvrage`, `ouvrage « ${s.ouvrage} » sans fiche (data/ouvrages)`);
@@ -164,6 +167,12 @@ function verifierSources(fiche: { sources: Fiche["sources"] }, ref: Referentiel,
     if (s.url && s.url === deduite) ajouter(`sources.${i}.url`, "adresse inutile : elle se déduit de l'entrée, la retirer");
     if (!s.url && !deduite && s.page === undefined) ajouter(`sources.${i}.url`, "indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)");
   });
+}
+
+/** Le texte commence-t-il par ce nom, mot entier et sans tenir compte de la casse ? */
+function commencePar(texte: string, nom: string): boolean {
+  const debut = texte.trimStart();
+  return debut.toLowerCase().startsWith(nom.toLowerCase()) && !/^[\p{L}\p{M}]/u.test(debut.slice(nom.length));
 }
 
 /** Règles propres à une fiche de mot (identifiant, chaîne, références, rédaction). */
@@ -176,6 +185,13 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   const ouvrage = (champ: string, cible: string) => {
     if (!ref.ouvrages.has(cible)) ajouter(champ, `ouvrage « ${cible} » sans fiche (data/ouvrages)`);
   };
+  // Un tenant est un auteur ou un ouvrage (dictionnaire sans auteur unique) ; jamais les deux à la fois.
+  const tenant = (champ: string, cible: string) => {
+    const estAuteur = ref.auteurs.has(cible);
+    const estOuvrage = ref.ouvrages.has(cible);
+    if (!estAuteur && !estOuvrage) ajouter(champ, `tenant « ${cible} » sans fiche (auteur : data/auteurs, ouvrage : data/ouvrages)`);
+    if (estAuteur && estOuvrage) ajouter(champ, `tenant « ${cible} » ambigu : à la fois un auteur et un ouvrage`);
+  };
 
   if (ID_VALIDE.test(id) && id !== slug(fiche.mot) && !new RegExp(`^${slug(fiche.mot)}-\\d+$`).test(id)) {
     ajouter("id", `le nom de fichier doit correspondre au mot : « ${slug(fiche.mot)}.yaml »`);
@@ -185,6 +201,7 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   if (fiche.renvois.includes(id)) ajouter("renvois", "une fiche ne peut pas renvoyer à elle-même");
   if (fiche.tradition.renvois.includes(id)) ajouter("tradition.renvois", "une fiche ne peut pas renvoyer à elle-même");
   // Un renvoi relie des notions sans racine commune : même étymon ou même famille, c'est un doublet ou la famille.
+  // Le doublet déclaré de l'autre côté se contrôle entre fiches (verifierRelations).
   const parente = new Set([...fiche.doublets, ...fiche.famille.map(slug)]);
   for (const renvoi of fiche.renvois.filter((r) => parente.has(r))) {
     ajouter("renvois", `« ${renvoi} » est un doublet ou de la famille : pas un renvoi`);
@@ -213,11 +230,10 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
       ajouter("explication", `${LONGUEUR_MAX_EXPLICATION} caractères maximum (${longueur})`);
     }
   }
-  if (lecturePremiere.length > 1) ajouter("tradition.lectures", "une seule lecture premier : celle du texte d'origine");
   fiche.tradition.lectures.forEach((l, i) => {
     if (l.premier && fiche.sacre === undefined) ajouter(`tradition.lectures.${i}.premier`, "seulement pour un mot sacré (sacre)");
     if (l.premier && l.sens === undefined) ajouter(`tradition.lectures.${i}.sens`, "la lecture premier donne le sens affiché en tête");
-    if (!l.premier && l.sens !== undefined) ajouter(`tradition.lectures.${i}.sens`, "seulement pour la lecture premier");
+    if (!l.premier && l.sens !== undefined) ajouter(`tradition.lectures.${i}.sens`, "seulement pour une lecture premier");
   });
 
   // La chaîne : un seul sens premier ; translittération seulement là où elle ne se déduit pas ; références.
@@ -252,7 +268,12 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
         sens.push([`${ca}.elements.${k}.sens`, e.sens]);
       });
       if (a.selon && m.alternatives!.mode !== "debattue") ajouter(`${ca}.selon`, "des tenants seulement pour une origine débattue (mode: debattue)");
-      a.selon?.forEach((s, k) => auteur(`${ca}.selon.${k}`, s));
+      a.selon?.forEach((s, k) => tenant(`${ca}.selon.${k}`, s));
+    });
+    if (m.croisement && !m.forme) ajouter(`${c}.croisement`, "seulement pour un maillon qui a une forme (celle qui s'est croisée)");
+    m.croisement?.forEach((x, j) => {
+      lire(`${c}.croisement.${j}`, x);
+      sens.push([`${c}.croisement.${j}.sens`, x.sens]);
     });
     if (m.modele) {
       lire(`${c}.modele`, m.modele);
@@ -301,6 +322,9 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
   // précisée seulement si la voix en a plusieurs (sauf l'Écriture reçue en commun), une hypothèse
   // de la chaîne ; pour un mot sacré, des traditions où il l'est.
   const hypotheses = new Set(fiche.etymologie.flatMap((m) => (m.alternatives?.formes ?? []).map((a) => a.forme).filter(Boolean)));
+  // Lectures premier : une seule, reçue par toutes les traditions du mot (degrés 1 et 2) ; ou une par
+  // tradition quand elles divergent sur le texte d'origine (degré 3), de traditions distinctes qui couvrent le mot.
+  const traditionsDesPremieres: { c: string; traditions: string[] }[] = [];
   fiche.tradition.lectures.forEach((l, i) => {
     const c = `tradition.lectures.${i}`;
     const oeuvres = l.sources.map((s) => ref.ouvrages.get(s.ouvrage));
@@ -319,6 +343,9 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     const auteur = voixAuteur !== undefined ? ref.auteurs.get(voixAuteur) : undefined;
     if (voixAuteur !== undefined && !auteur) return ajouter(`${c}.auteur`, `auteur « ${voixAuteur} » sans fiche (data/auteurs)`);
     const nomVoix = auteur?.nom ?? oeuvres[0]!.titre;
+    if (auteur && commencePar(l.texte, auteur.nom)) {
+      ajouter(`${c}.texte`, `ne commence pas par le nom de l'auteur (« ${auteur.nom} »), que la citation affichée dessous donne déjà`);
+    }
     const siennes = (auteur ? auteur.traditions : oeuvres[0]!.traditions) ?? [];
     if (siennes.length === 0) return ajouter(`${c}.auteur`, `${nomVoix} n'est pas une voix de la tradition (traditions)`);
     // Une parole rapportée dans une œuvre sans auteur (Resh Lakish dans le Talmud) est de la tradition de l'œuvre.
@@ -336,8 +363,8 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
     const traditions = l.tradition !== undefined ? [l.tradition] : siennes;
     if (fiche.sacre !== undefined) {
       // Le texte d'origine est reçu par toutes les traditions où le mot est sacré ; une autre lecture parle dans l'une d'elles.
-      if (l.premier && !fiche.sacre.every((t) => traditions.includes(t))) {
-        ajouter(`${c}.premier`, `le texte d'origine doit être reçu par toutes les traditions du mot (${fiche.sacre.join(", ")})`);
+      if (l.premier) {
+        traditionsDesPremieres.push({ c, traditions });
       } else if (!l.premier && !traditions.some((t) => fiche.sacre!.includes(t))) {
         ajouter(`${c}`, `lecture hors des traditions où le mot est sacré (${fiche.sacre.join(", ")})`);
       }
@@ -346,6 +373,24 @@ function verifierFiche(fichier: string, id: string, fiche: Fiche, ref: Referenti
       ajouter(`${c}.hypothese`, `« ${l.hypothese} » n'est pas une hypothèse de la chaîne (alternatives)`);
     }
   });
+  if (fiche.sacre !== undefined && traditionsDesPremieres.length === 1) {
+    const [{ c, traditions }] = traditionsDesPremieres;
+    if (!fiche.sacre.every((t) => traditions.includes(t))) {
+      ajouter(`${c}.premier`, `une seule lecture premier : le texte d'origine doit être reçu par toutes les traditions du mot (${fiche.sacre.join(", ")}) ; sinon une lecture premier par tradition`);
+    }
+  } else if (fiche.sacre !== undefined && traditionsDesPremieres.length > 1) {
+    const vues = new Set<string>();
+    for (const { c, traditions } of traditionsDesPremieres) {
+      for (const t of traditions) {
+        if (vues.has(t)) ajouter(`${c}.premier`, `plusieurs lectures premier : une par tradition, et « ${t} » en a déjà une`);
+        vues.add(t);
+      }
+    }
+    const manquantes = fiche.sacre.filter((t) => !vues.has(t));
+    if (manquantes.length > 0) {
+      ajouter("tradition.lectures", `plusieurs lectures premier : elles doivent couvrir toutes les traditions du mot (manque ${manquantes.join(", ")})`);
+    }
+  }
 
   return erreurs;
 }
@@ -370,6 +415,8 @@ function verifierRelations(
       const fichier = fichierDe.get(fiche.id)!;
       if (!idsPresents.has(cible)) {
         if (!attendus.has(cible)) erreurs.push({ fichier, champ, regle: `fiche « ${cible} » introuvable${champ === "doublets" ? "" : ", ni candidat à faire"}` });
+      } else if (champ === "renvois" && parId.get(cible)?.doublets.includes(fiche.id)) {
+        erreurs.push({ fichier, champ, regle: `« ${cible} » est un doublet (déclaré dans sa fiche) : pas un renvoi` });
       } else if (champ !== "tradition.renvois" && fiche.id > cible && cibles(parId.get(cible)!).includes(fiche.id)) {
         erreurs.push({
           fichier,

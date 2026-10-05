@@ -1,7 +1,6 @@
-import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { regenererContrat } from "./lib/regenerer.ts";
 import { DOSSIER_DATA } from "./valider-fiches.ts";
 
 /**
@@ -33,8 +32,7 @@ function principal(): number {
     return 0;
   }
   writeFileSync(fichier, JSON.stringify(ajouter(liste, valeur), null, 2) + "\n");
-  // Un autre processus : celui-ci a déjà lu les listes à l'import du schéma.
-  execFileSync(process.execPath, [fileURLToPath(new URL("./contrat.ts", import.meta.url))], { stdio: "inherit" });
+  regenererContrat();
   console.log(`✓ « ${valeur} » ajouté à data/${nom}.json. À noter au journal de méthode, avec sa raison.`);
   return 0;
 }

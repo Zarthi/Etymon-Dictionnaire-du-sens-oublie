@@ -1,0 +1,48 @@
+mot: illusion
+nature: [ nom féminin ]
+etymologie:
+  - forme: illusio
+    langue: latin
+  - forme: illudere
+    langue: latin
+    sens: jouer avec, se jouer de
+    elements:
+      - forme: in
+        sens: dans
+      - forme: ludere
+        sens: jouer
+explication: >-
+  En latin classique, illusio était l'ironie, figure de rhétorique ; la langue
+  chrétienne l'a dit de la moquerie et de la tromperie des sens. En français, le
+  mot a nommé d'abord la moquerie (XIIe siècle), puis la fausse apparence (vers
+  1223).
+famille: [ illusoire, désillusion, allusion ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: illusion
+  - ouvrage: lewis-short
+    entree: illusio
+  - ouvrage: lewis-short
+    entree: illudo
+  - ouvrage: littre
+    entree: illusion
+  - ouvrage: littre
+    entree: illusoire
+  - ouvrage: littre
+    entree: désillusion
+  - ouvrage: littre
+    entree: allusion
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Un grand mal se prend au sérieux, non comme un jeu ; si on le tourne en jeu ou en rire, ce dont l'illusio tient son nom, c'est qu'on le tient pour petit."
+      citation: "Malum autem si sit magnum, non pro ludo accipitur, sed seriose. Unde si in lusum vel risum vertatur (ex quo irrisionis vel illusionis nomen sumitur), hoc est quia accipitur ut parvum."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 75, a. 2, co."
+          url: https://www.corpusthomisticum.org/sth3061.html
+statut: brouillon

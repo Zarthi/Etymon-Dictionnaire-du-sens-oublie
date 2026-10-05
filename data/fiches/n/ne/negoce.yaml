@@ -1,0 +1,42 @@
+mot: négoce
+nature: [ nom masculin ]
+etymologie:
+  - forme: negotium
+    langue: latin
+    sens: occupation, affaire
+    elements:
+      - forme: nec
+        sens: ne pas
+      - forme: otium
+        sens: loisir
+explication: >-
+  Negotium se disait de toute occupation : affaires de l'État, gestion de la
+  maison, commerce. Négoce a nommé les affaires (vers 1200), la négociation
+  (1616), puis l'activité commerciale (1617), seul sens resté en usage.
+famille: [ négocier, négociant, négociation, oisif ]
+themes: [ commerce ]
+tradition:
+  lectures:
+    - texte: "Le mot a plusieurs sens : le fait de s'occuper d'une chose, dont le loisir est le contraire, et l'action en justice, la querelle d'un procès. Il se dit des procès ; le commerce, où l'on donne pour gagner davantage, a son mot propre."
+      citation: "Negotium multa significat: modo actum rei alicuius, cui contrarium est otium; modo actionem causae, quod est iurgium litis. Et dictum negotium quasi nec otium, id est sine otio. Negotium autem in causis, negotiatio in commerciis dicitur, ubi aliquid datur ut maiora lucrentur."
+      sources:
+        - ouvrage: etymologies
+          entree: "XVIII, 15, 3"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: tlfi
+    entree: négoce
+  - ouvrage: littre
+    entree: négoce
+  - ouvrage: lewis-short
+    entree: negotium
+  - ouvrage: lewis-short
+    entree: otium
+  - ouvrage: etymologies
+    entree: XVIII, 15, 3
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

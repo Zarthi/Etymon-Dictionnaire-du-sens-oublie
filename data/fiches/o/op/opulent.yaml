@@ -1,0 +1,41 @@
+mot: opulent
+nature: [ adjectif ]
+etymologie:
+  - forme: opulentus
+    langue: latin
+  - forme: ops
+    langue: latin
+    sens: puissance, ressources, secours
+explication: >-
+  Opulentus se disait de qui a beaucoup de moyens : des terres, des hommes, des
+  armes, de l'or. Opulent dit aujourd'hui la grande richesse, l'abondance, et,
+  depuis 1852, l'ampleur des formes ; la puissance et le secours que nommait ops
+  ne s'y entendent plus.
+famille: [ opulence ]
+renvois: [ riche ]
+themes: [ argent ]
+tradition:
+  lectures:
+    - texte: "Est opulent celui dont les ressources, ops, sont abondantes ; d'ops vient aussi celui qui en manque, et, de la même source, celui qui abonde."
+      citation: "Opulentus ab ope, cui eae opimae; ab eadem inops qui eius indiget, et ab eodem fonte copis ac copiosus."
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "V, 92"
+          url: https://www.thelatinlibrary.com/varro.ll5.html
+sources:
+  - ouvrage: tlfi
+    entree: opulent
+  - ouvrage: lewis-short
+    entree: opulentus
+  - ouvrage: lewis-short
+    entree: ops1
+  - ouvrage: littre
+    entree: opulence
+  - ouvrage: de-la-langue-latine
+    entree: V, 92
+    url: https://www.thelatinlibrary.com/varro.ll5.html
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

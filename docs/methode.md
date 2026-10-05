@@ -56,7 +56,8 @@ venaient de la rédaction (Fable 5.1, réflexion élevée), et les propositions 
 5.5) étaient sobres et exactes : le travail est d'abord de fidélité aux sources.
 
 Un mot sacré (chemin `sacre`) s'arrête après son dossier : il se rédige à part, texte d'origine
-sous les yeux, avec sa lecture `premier`.
+sous les yeux, avec sa lecture `premier` (une par tradition si elles divergent sur le sens du
+texte d'origine, AGENTS.md §3.3 bis).
 
 ## 4. Le tri
 
@@ -80,7 +81,7 @@ Tout vit dans `atelier/`, hors du dépôt : un lot interrompu reprend où il s'�
 - **Dossier** (`atelier/<id>/dossier.json`) : chemin, drapeaux, l'usage d'aujourd'hui (`usage`),
   et des faits, chacun avec sa source et son entrée : la chaîne, le sens de chaque maillon qui en
   porte un, les étapes datées du sens en français. Du texte recopié seulement pour le domaine
-  public (Littré, Wikisource) ; du TLFi, du Gaffiot et du Bailly, les faits seuls, jamais leur
+  public (Littré, Lewis & Short, Georges, Wikisource) ; du TLFi, du Gaffiot et du Bailly, les faits seuls, jamais leur
   rédaction (AGENTS.md §5). Format : `scripts/lib/atelier.ts`.
 - **Fiche rédigée** (`atelier/<id>/fiche.json`) : le format de `npm run rediger`.
 - **Verdict** (`atelier/<id>/verdict.json`) : décision et remarques du relecteur.
@@ -124,12 +125,13 @@ Le thème dit le domaine où le mot s'emploie aujourd'hui, non celui de son sens
 
 ## 7 bis. Les lectures : un corpus de réflexe
 
-Pour l'histoire du mot, le Littré, le TLFi, le Gaffiot et le Bailly se consultent par réflexe ; pour
+Pour l'histoire du mot, le Littré, le TLFi, un dictionnaire latin (Lewis & Short, Georges ou
+Gaffiot) et le Bailly se consultent par réflexe ; pour
 la tradition, un corpus de même rang (`scripts/lib/corpus.ts`, `npm run corpus`) : des œuvres qui
 lisent les mots eux-mêmes, où l'on peut chercher un mot, et dont le texte original est en ligne,
 du domaine public. Aujourd'hui : Isidore (*Étymologies*, *Différences*), Jérôme (*Livre des noms
 hébreux*), Rashi (*Commentaire sur la Torah*), Augustin (*La Cité de Dieu*, *Confessions*, *De la
-doctrine chrétienne*), Thomas d'Aquin (*Somme théologique*, pour la part que Wikisource en donne).
+doctrine chrétienne*), Thomas d'Aquin (*Somme théologique*, entière, d'après le Corpus Thomisticum).
 Téléchargées une fois dans `sources/`, elles s'interrogent par un script, sans jeton : la taille
 d'une œuvre n'est donc pas un obstacle ; la machine trouve et cite, elle ne parle pas à la place de
 la tradition.

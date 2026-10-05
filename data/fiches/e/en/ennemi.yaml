@@ -1,0 +1,27 @@
+mot: ennemi
+nature: [ nom ]
+etymologie:
+  - forme: inimicus
+    langue: latin
+    sens: ennemi particulier
+    elements:
+      - forme: in-
+        sens: non
+      - forme: amicus
+        sens: ami
+explication: >-
+  Inimicus a désigné l'ennemi particulier, puis aussi l'ennemi public. Le mot
+  français porte les deux sens : celui qui déteste quelqu'un et cherche à lui
+  nuire (vers 880), celui qui fait la guerre (vers 1100).
+famille: [ inimitié, ami ]
+themes: [ société, guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: ennemi
+  - ouvrage: littre
+    entree: ennemi
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

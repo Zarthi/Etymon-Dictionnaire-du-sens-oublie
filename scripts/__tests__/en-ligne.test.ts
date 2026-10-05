@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { morceaux, morceauxAbsents, normaliserCitation, pageIntrouvable, texteDePage } from "../lib/en-ligne.ts";
+import { morceaux, morceauxAbsents, nomDeLaVoix, normaliserCitation, pageIntrouvable, texteDePage } from "../lib/en-ligne.ts";
 
 const PAGE = `<html><head><title>Liber IV</title><style>p { color: red }</style><script>var hoc = 1;</script></head>
 <body><p>Hoc vinculo pietatis obstricti Deo et religati sumus; unde ipsa religio nomen accepit,
@@ -46,5 +46,21 @@ describe("pageIntrouvable", () => {
   it("reconnaît la page d'entrée absente de bailly.app", () => {
     expect(pageIntrouvable("<title>Page introuvable — Bailly.app</title>")).toBe(true);
     expect(pageIntrouvable("<title>φρήν (phrēn) — Bailly.app</title>")).toBe(false);
+  });
+});
+
+describe("nomDeLaVoix", () => {
+  const auteurs = new Map([["augustin", { nom: "Augustin" }]]);
+  const ouvrages = new Map([
+    ["cite-de-dieu", { auteur: "augustin", titre: "La Cité de Dieu" }],
+    ["vulgate", { titre: "Vulgate", abrege: "Vulgate" }],
+  ]);
+  const lecture = (ouvrage: string, auteur?: string) => ({ texte: "t", citation: "c", sources: [{ ouvrage, entree: "x" }], ...(auteur ? { auteur } : {}) }) as never;
+  it("nomme l'auteur de l'œuvre, ou celui dont la parole est rapportée", () => {
+    expect(nomDeLaVoix(lecture("cite-de-dieu"), auteurs, ouvrages)).toBe("Augustin");
+    expect(nomDeLaVoix(lecture("cite-de-dieu", "augustin"), auteurs, ouvrages)).toBe("Augustin");
+  });
+  it("nomme l'œuvre quand elle signe seule (jamais « undefined »)", () => {
+    expect(nomDeLaVoix(lecture("vulgate"), auteurs, ouvrages)).toBe("Vulgate");
   });
 });

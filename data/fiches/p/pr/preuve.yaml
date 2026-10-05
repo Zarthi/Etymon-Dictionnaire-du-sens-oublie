@@ -1,0 +1,40 @@
+mot: preuve
+nature: [ nom féminin ]
+etymologie:
+  - forme: prouver
+    langue: français
+  - forme: probare
+    langue: latin
+    sens: éprouver, vérifier ; trouver bon
+explication: >-
+  Preuve a nommé aussi l'épreuve et l'expérience (1253) ; ce sens reste dans la
+  langue du sucrier (1765) et dans celle du distillateur, pour l'essai du sirop
+  ou de l'eau-de-vie. Le mot désigne aujourd'hui ce qui établit la vérité ou la
+  réalité d'un fait.
+famille: [ prouver, épreuve, éprouver, approuver, probant, probable ]
+renvois: [ evidence ]
+themes: [ savoir, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: preuve
+  - ouvrage: tlfi
+    entree: prouver
+  - ouvrage: lewis-short
+    entree: probo
+  - ouvrage: littre
+    entree: preuve
+  - ouvrage: lewis-short
+    entree: proba
+  - ouvrage: littre
+    entree: approuver
+  - ouvrage: littre
+    entree: probant
+  - ouvrage: littre
+    entree: probable
+  - ouvrage: littre
+    entree: éprouver
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

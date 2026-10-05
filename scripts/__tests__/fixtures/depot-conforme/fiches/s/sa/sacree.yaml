@@ -1,0 +1,37 @@
+# Fiche fictive d'un mot sacré au degré 3 (une lecture premier par tradition), pour les tests uniquement.
+mot: sacrée
+nature: [ nom féminin ]
+sacre: [ juive, chrétienne ]
+etymologie:
+  - forme: sacrata
+    langue: latin ecclésiastique
+  - forme: קֹדֶשׁ
+    translitteration: qodesh
+    langue: hébreu
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Lecture fictive de la tradition juive sur le texte d'origine.
+      citation: sacra ficta
+      premier: true
+      sens: mis à part
+      sources:
+        - ouvrage: commentaire-de-test
+          entree: Exode 1, 1
+          url: https://example.org/commentaire
+    - texte: Lecture fictive de la tradition chrétienne sur le texte d'origine.
+      citation: sacra ficta
+      premier: true
+      sens: consacré
+      sources:
+        - ouvrage: institutions-divines
+          entree: livre I
+          url: https://example.org/lactance
+sources:
+  - ouvrage: tlfi
+    entree: sacrée
+    url: https://example.org/tlfi/sacree
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon

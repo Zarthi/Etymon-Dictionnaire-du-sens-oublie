@@ -1,0 +1,28 @@
+mot: école
+nature: [ nom féminin ]
+etymologie:
+  - forme: schola
+    langue: latin
+    sens: loisir studieux, leçon
+  - forme: σχολή
+    langue: grec ancien
+    sens: arrêt, repos, loisir
+explication: >-
+  En grec, σχολή a désigné le loisir, puis l'occupation de l'homme de loisir,
+  l'étude, et le lieu où l'on étudie. Vers 1050, école nomme déjà
+  l'établissement où l'on enseigne ; le mot ne dit plus le loisir, mais le lieu
+  de l'enseignement, les disciples d'un maître, une doctrine.
+famille: [ écolier, scolaire, scolastique ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: tlfi
+    entree: école
+  - ouvrage: littre
+    entree: école
+  - ouvrage: bailly
+    entree: σχολή
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

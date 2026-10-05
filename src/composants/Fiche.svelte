@@ -3,7 +3,7 @@
   import { formesItaliques } from "../lib/etymologie.ts";
   import { auteurs as fichesAuteurs, ouvrages as fichesOuvrages } from "../lib/fiches.ts";
   import { mentionsDe } from "../lib/mentions.ts";
-  import { nommerTraditions, parTradition } from "../lib/traditions.ts";
+  import { nommerTraditions, originesParTradition, parTradition } from "../lib/traditions.ts";
   import { lienAuteur } from "../lib/liens.ts";
   import { signatureRedaction } from "../lib/sources.ts";
   import type { FicheIdentifiee } from "../lib/types.ts";
@@ -30,8 +30,8 @@
 
   const { grammaire: g, libelles: l, messages: m } = langue;
   const correction = $derived(fiche.historique.at(-1));
-  /** Mot sacré : la lecture du texte d'origine donne le sens en tête et tient lieu d'explication. */
-  const origine = $derived(fiche.tradition.lectures.find((l) => l.premier));
+  /** Mot sacré : la lecture du texte d'origine donne le sens en tête et tient lieu d'explication ; une par tradition quand elles divergent. */
+  const origines = $derived(originesParTradition(fiche.tradition.lectures, fichesAuteurs, fichesOuvrages, langue));
   const lectures = $derived(fiche.tradition.lectures.filter((l) => !l.premier));
   /** Mots où la tradition parle de celui-ci (l'assemblage ne garde que ceux qui ont des lectures). */
   const ailleurs = $derived(fiche.tradition.renvois);
@@ -59,10 +59,13 @@
       >{/if}
   </p>
   <p class="etymon">
-    {#if origine}
-      <!-- Mot sacré : le sens que lui donne le texte d'origine, signé ; aucune lecture profane. -->
-      <span class="sens">{g.citer(origine.sens ?? "")}</span>
-      <span class="signature">{origine.sources.map((s) => s.entree).join(" ; ")}</span>
+    {#if origines.length > 0}
+      <!-- Mot sacré : le sens que lui donne le texte d'origine, signé (un par tradition si elles divergent) ; aucune lecture profane. -->
+      {#each origines as origine, i (i)}
+        {#if origine.libelle}<span class="libelle">{origine.libelle}</span>{" "}{/if}<span class="sens">{g.citer(origine.lecture.sens ?? "")}</span>
+        <span class="signature">{origine.lecture.sources.map((s) => s.entree).join(" ; ")}</span>
+        {#if origine.libelle}<br />{/if}
+      {/each}
     {:else}
       <SensPremier etymologie={fiche.etymologie} />
     {/if}
@@ -71,10 +74,13 @@
 
   <Etymologie etymologie={fiche.etymologie} />
 
-  {#if origine}
-    <div class="origine">
-      <LectureTraditionnelle lecture={origine} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
-    </div>
+  {#if origines.length > 0}
+    {#each origines as origine, i (i)}
+      <div class="origine">
+        {#if origine.libelle}<p class="libelle">{origine.libelle}</p>{/if}
+        <LectureTraditionnelle lecture={origine.lecture} {lienVers} exclu={fiche.id} {redactionFiche} {formes} {mentions} />
+      </div>
+    {/each}
   {:else if fiche.explication}
     <p class="explication"><TexteRiche texte={fiche.explication} {lienVers} exclu={fiche.id} {formes} {mentions} /></p>
   {/if}
@@ -274,6 +280,13 @@
     margin-left: 0.4rem;
     font-family: var(--police-interface);
     font-size: 0.8rem;
+    color: var(--texte-discret);
+  }
+  .libelle {
+    margin: 0;
+    font-family: var(--police-interface);
+    font-size: 0.8rem;
+    font-style: italic;
     color: var(--texte-discret);
   }
   .origine {

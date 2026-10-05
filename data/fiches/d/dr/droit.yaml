@@ -1,0 +1,28 @@
+mot: droit
+nature: [ adjectif ]
+etymologie:
+  - forme: directum
+    langue: bas latin
+  - forme: directus
+    langue: latin
+    sens: sans courbure, en ligne droite
+explication: >-
+  Substantivé en bas latin, directum, ce qui est sans courbure, a nommé la
+  justice au VIe siècle, puis l'ensemble des lois. L'adjectif qualifie encore
+  une ligne aussi bien qu'une conduite ; le nom ne désigne plus que des règles
+  et ce qu'elles permettent ou exigent.
+famille: [ adroit, endroit, droiture, diriger, direct ]
+renvois: [ justice ]
+themes: [ droit, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: droit
+  - ouvrage: littre
+    entree: droit
+  - ouvrage: lewis-short
+    entree: dirigo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

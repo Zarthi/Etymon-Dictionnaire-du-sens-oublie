@@ -1,0 +1,33 @@
+mot: nom
+nature: [ nom masculin ]
+etymologie:
+  - forme: nomen
+    langue: latin
+    sens: nom, renom
+explication: >-
+  Nomen disait déjà le nom, le titre, le renom, et le nom opposé à la réalité ;
+  nom les a gardés. Il a aussi désigné l'ensemble de ceux qui portent un même
+  nom, les chrétiens, les Romains, sens aujourd'hui vieilli ; il nomme en
+  grammaire une partie du discours (1550).
+famille: [ nommer, renom, prénom, surnom ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: "Nomen est dit comme notamen, parce qu'il nous rend les choses connues par son vocable ; si l'on ne sait le nom, la connaissance des choses périt."
+      citation: "Nomen dictum quasi notamen, quod nobis vocabulo suo res notas efficiat. Nisi enim nomen scieris, cognitio rerum perit."
+      sources:
+        - ouvrage: etymologies
+          entree: "I, 7, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: nom
+  - ouvrage: tlfi
+    entree: nom
+  - ouvrage: lewis-short
+    entree: nomen
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,17 @@
+titre: Philippiques
+titreOriginal: Philippicae
+auteur: ciceron
+date: 43 av. J.-C.
+licence: domaine public
+texte: https://www.thelatinlibrary.com/cicero/phil13.shtml
+description: >-
+  Quatorze discours de Cicéron contre Marc Antoine, prononcés en 44 et 43 av.
+  J.-C.
+sources:
+  - ouvrage: bnf
+    entree: cb120322781
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

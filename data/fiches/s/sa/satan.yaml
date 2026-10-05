@@ -1,5 +1,5 @@
 mot: Satan
-nature: [ nom propre ]
+nature: [ nom masculin ]
 etymologie:
   - forme: Satanas
     langue: latin ecclésiastique
@@ -10,45 +10,31 @@ etymologie:
     langue: hébreu
     sens: adversaire, accusateur
 explication: >-
-  Dans la Bible hébraïque, śāṭān est un nom commun, l'adversaire ou l'accusateur : un
-  homme peut tenir ce rôle, et même l'ange du Seigneur qui barre la route à Balaam. En
-  français, le mot n'est plus qu'un nom propre.
+  Dans la Bible hébraïque, śāṭān est un nom commun : un homme peut l'être pour
+  un autre, et l'ange de YHWH se poste en śāṭān sur la route de Balaam ; dans
+  Job, c'est l'office d'accusateur tenu par l'un des anges. Le français a reçu
+  le mot comme nom de l'esprit du mal, à la fin du Xe siècle.
 famille: [ satanique, satanisme ]
-renvois: [ obsession ]
+renvois: [ diable, demon ]
 themes: [ religion ]
 tradition:
   lectures:
-    - texte: "Le satan, le mauvais penchant et l'ange de la mort ne font qu'un : c'est
-        celui qui, dans le livre de Job, « sortit de devant le Seigneur »."
-      citation: הוא שטן הוא יצר הרע הוא מלאך המות
-      auteur: resh-lakish
-      sources:
-        - ouvrage: talmud-de-babylone
-          entree: Baba Batra 16a
-          url: https://he.wikisource.org/wiki/בבא_בתרא_טז_א
-    - texte: Satan est le grand dragon, le serpent ancien, appelé aussi le diable, qui
-        séduit toute la terre.
-      citation: Et projectus est draco ille magnus, serpens antiquus, qui vocatur diabolus,
-        et Satanas
-      sources:
-        - ouvrage: vulgate
-          entree: Apocalypse 12, 9
-          url: https://la.wikisource.org/wiki/Vulgata_Clementina/Apocalypsis
-    - texte: Satan signifie l'adversaire, ennemi de la vérité qui s'oppose sans cesse
-        aux vertus des saints, et le transgresseur, qui n'est pas demeuré dans la
-        vérité où il avait été créé.
-      citation: Satanas in Latino sonat adversarius, sive transgressor. Ipse est enim
-        adversarius, qui est veritatis inimicus, et semper sanctorum virtutibus
-        contraire nititur. Ipse et transgressor, quia praevaricator effectus in
-        veritate, qua conditus est, non stetit.
+    - texte: "En latin, le nom veut dire adversaire ou transgresseur : adversaire, parce qu'il est l'ennemi de la vérité et s'efforce toujours de contrarier les vertus des saints ; transgresseur, parce qu'il est devenu prévaricateur et n'est pas demeuré dans la vérité où il fut créé."
+      citation: "Satanas in Latino sonat adversarius, sive transgressor. Ipse est enim adversarius, qui est veritatis inimicus, et semper sanctorum virtutibus contraire nititur. Ipse et transgressor, quia praevaricator effectus in veritate, qua conditus est, non stetit."
       sources:
         - ouvrage: etymologies
-          entree: VIII, 11, 19
+          entree: "VIII, 11, 19"
           url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+    - texte: "Ici, l'adversaire était un ange de miséricorde : il voulait l'empêcher de pécher, pour qu'il ne pèche pas et ne se perde pas."
+      citation: '"לשטן לו" - (שם) מלאך של רחמים היה והיה רוצה למנעו מלחטוא שלא יחטא ויאבד'
+      sources:
+        - ouvrage: commentaire-sur-la-torah
+          entree: "Nombres 22, 22"
+          url: https://he.wikisource.org/wiki/רש"י_על_במדבר_כב
 sources:
-  - ouvrage: littre
-    entree: satan
   - ouvrage: tlfi
+    entree: Satan
+  - ouvrage: littre
     entree: satan
   - ouvrage: bible-hebraique
     entree: Nombres 22, 22
@@ -56,7 +42,11 @@ sources:
   - ouvrage: bible-hebraique
     entree: 1 Samuel 29, 4
     url: https://he.wikisource.org/wiki/שמואל_א_כט
+  - ouvrage: bible-hebraique
+    entree: Job 1, 6
+    url: https://he.wikisource.org/wiki/איוב_א
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

@@ -1,0 +1,41 @@
+mot: verbe
+nature: [ nom masculin ]
+etymologie:
+  - forme: verbum
+    langue: latin
+    sens: mot, parole
+explication: >-
+  Le latin verbum était déjà un terme de grammaire ; le latin chrétien en a fait
+  le nom du Verbe divin. Le premier sens français, la parole (vers 1050), a
+  vieilli, et parole l'a supplanté au XVIIe siècle pour la parole de Dieu ;
+  verbe nomme le mot qui exprime une action ou un état, et Dieu incarné.
+famille: [ verbal, adverbe, proverbe ]
+themes: [ parole, religion ]
+tradition:
+  lectures:
+    - texte: "Le verbum tient son nom de l'air frappé qui résonne, verberato aere, ou de ce que cette partie revient souvent dans le discours ; les verba sont les signes de l'esprit, par lesquels les hommes se montrent l'un à l'autre leurs pensées en parlant."
+      citation: "Verbum dictum eo, quod verberato aere sonat, vel quod haec pars frequenter in oratione versetur. Sunt autem verba mentis signa, quibus homines cogitationes suas invicem loquendo demonstrant."
+      sources:
+        - ouvrage: etymologies
+          entree: "I, 9, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+    - texte: "La voix extérieure est dite verbum parce qu'elle signifie le concept intérieur de l'esprit : verbum se dit donc d'abord et principalement de ce concept, ensuite de la voix qui le signifie, enfin de l'image de cette voix."
+      citation: "Ex hoc ergo dicitur verbum vox exterior, quia significat interiorem mentis conceptum. Sic igitur primo et principaliter interior mentis conceptus verbum dicitur, secundario vero, ipsa vox interioris conceptus significativa, tertio vero, ipsa imaginatio vocis verbum dicitur."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia, q. 34, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth1028.html
+sources:
+  - ouvrage: littre
+    entree: verbe
+  - ouvrage: tlfi
+    entree: verbe
+  - ouvrage: lewis-short
+    entree: verbum
+  - ouvrage: littre
+    entree: parole
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

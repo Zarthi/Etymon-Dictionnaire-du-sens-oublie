@@ -1,0 +1,38 @@
+mot: humble
+nature: [ adjectif ]
+etymologie:
+  - forme: humilis
+    langue: latin
+    sens: près du sol, bas
+  - forme: humus
+    langue: latin
+    sens: terre
+explication: >-
+  Au figuré, humilis disait déjà une condition basse ou obscure, et, surtout en
+  latin chrétien, la modestie de qui se sait faible. Humble n'a reçu que ces
+  sens figurés : il se dit de qui s'abaisse volontairement, sans orgueil, de qui
+  est d'une condition modeste, et de ce qui est sans éclat.
+famille: [ humilité, humilier ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Est humble qui est comme penché vers la terre."
+      citation: "Humilis, quasi humo adclinis."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 115"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: humble
+  - ouvrage: littre
+    entree: humble
+  - ouvrage: lewis-short
+    entree: humilis
+  - ouvrage: lewis-short
+    entree: humus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

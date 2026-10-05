@@ -4,6 +4,7 @@ import { parseArgs } from "node:util";
 import { parse } from "yaml";
 import { urlDe } from "../src/lib/ouvrages.ts";
 import { texteDePage } from "./lib/en-ligne.ts";
+import { lire } from "./lib/reseau.ts";
 import { DOSSIER_DATA } from "./valider-fiches.ts";
 
 /**
@@ -45,13 +46,13 @@ async function principal(): Promise<number> {
     console.log('Usage : npm run texte -- <adresse | ouvrage:entrée> [--autour "<texte>"] [--largeur 600]');
     return 1;
   }
-  const reponse = await fetch(url).catch(() => undefined);
-  if (!reponse?.ok) {
-    console.error(`${url} : ${reponse ? `HTTP ${reponse.status}` : "injoignable"}`);
+  const page = await lire(url);
+  if (!page.lue) {
+    console.error(`${url} : ${page.raison}`);
     return 1;
   }
   // Certaines pages (bailly.app) portent des retours à la ligne échappés : « \n » écrit en deux signes.
-  const texte = texteDePage(await reponse.text()).replace(/\\n/g, " ");
+  const texte = texteDePage(page.texte).replace(/\\n/g, " ");
   console.log(url);
   if (values.autour === undefined) {
     console.log(texte || "(page vide : elle se construit dans le navigateur, la lire dans le navigateur intégré)");

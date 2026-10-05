@@ -1,0 +1,33 @@
+mot: génie
+nature: [ nom masculin ]
+etymologie:
+  - forme: genius
+    langue: latin
+    sens: dieu tutélaire qui préside à la conception et à la destinée de chacun
+explication: >-
+  Dès le latin tardif, genius a nommé aussi le caractère. Le français l'emprunte
+  en 1532 en ce sens, et nomme depuis 1637 l'aptitude créatrice hors du commun ;
+  le sens technique, celui du génie militaire, vient de l'influence d'ingénieur.
+famille: [ génial, ingénieux ]
+renvois: [ talent ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: "Le génie est ainsi nommé parce qu'il aurait le pouvoir d'engendrer toutes choses, ou d'après l'engendrement des enfants ; d'où le nom du lit que les païens dressaient pour le nouveau marié."
+      citation: "Genium autem dicunt, quod quasi vim habeat omnium rerum gignendarum, seu a gignendis liberis; unde et geniales lecti dicebantur a gentibus, qui novo marito sternebantur."
+      sources:
+        - ouvrage: etymologies
+          entree: "VIII, 11, 88"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: génie
+  - ouvrage: tlfi
+    entree: génie
+  - ouvrage: lewis-short
+    entree: genius
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

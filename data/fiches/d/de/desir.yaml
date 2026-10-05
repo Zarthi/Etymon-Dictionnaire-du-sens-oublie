@@ -1,0 +1,43 @@
+mot: désir
+nature: [ nom masculin ]
+etymologie:
+  - forme: désirer
+    langue: français
+  - forme: desiderare
+    langue: latin
+    sens: regretter l'absence de, souhaiter
+    premier: true
+  - forme: sidus
+    langue: latin
+    sens: astre, constellation
+explication: >-
+  Desiderare disait le regret d'un bien absent et le souhait de l'avoir ; comme
+  considérer, il a été rattaché à sidus, sans certitude. Désir, vers 1170, est
+  un souhait ; le mot nomme aujourd'hui la tendance vers ce qui comblerait un
+  manque, la convoitise, l'instinct sexuel, sans l'idée de regret.
+incertain: true
+famille: [ désirer ]
+renvois: [ appetit ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: désir
+  - ouvrage: tlfi
+    entree: désirer
+  - ouvrage: littre
+    entree: désir
+  - ouvrage: littre
+    entree: désirer
+  - ouvrage: lewis-short
+    entree: desidero
+  - ouvrage: lewis-short
+    entree: desiderium
+  - ouvrage: lewis-short
+    entree: considero
+  - ouvrage: lewis-short
+    entree: sidus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

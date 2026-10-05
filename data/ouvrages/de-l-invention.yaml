@@ -1,0 +1,17 @@
+titre: De l'invention
+titreOriginal: De inventione
+auteur: ciceron
+date: 84 av. J.-C.
+licence: domaine public
+texte: https://www.thelatinlibrary.com/cicero/inventione2.shtml
+description: >-
+  Traité de rhétorique de jeunesse de Cicéron, en deux livres, sur l'invention
+  des arguments ; le second définit les vertus et leurs parties.
+sources:
+  - ouvrage: bnf
+    entree: cb13169332m
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

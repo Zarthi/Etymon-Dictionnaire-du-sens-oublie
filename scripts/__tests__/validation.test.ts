@@ -281,6 +281,8 @@ describe("validerFiches : structure", () => {
   it.each([
     ["statut", { statut: "publiee" }],
     ["themes.0", { themes: ["inconnu"] }],
+    ["themes", { themes: [] }],
+    ["themes", { themes: ["émotions", "météo", "savoir"] }],
     ["etymologie", { etymologie: [] }],
     ["etymologie.0.langue", maillon({ forme: "x", langue: "klingon", sens: "y" })],
     ["etymologie.0.forme", maillon({ langue: "latin", sens: "y" })],
@@ -374,6 +376,42 @@ describe("validerFiches : chaîne étymologique", () => {
     ];
     expect(erreursDe({ etymologie })).toEqual(["etymologie.1.alternatives.formes.0.selon : des tenants seulement pour une origine débattue (mode: debattue)"]);
   });
+  it("accepte un ouvrage pour tenant d'une hypothèse, avec ou sans auteur", () => {
+    const etymologie = [
+      { forme: "x", langue: "latin", sens: "y" },
+      { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["gaffiot", "ciceron"] }, { forme: "c", sens: "d" }] } },
+    ];
+    expect(erreursDe({ etymologie })).toEqual([]);
+  });
+  it("refuse un identifiant à la fois auteur et ouvrage pour tenant", () => {
+    const ref = referentiel([auteur("gaffiot", "Gaffiot")], [ouvrage("gaffiot", "Dictionnaire latin-français", { abrege: "Gaffiot" })]);
+    const etymologie = [
+      { forme: "x", langue: "latin", sens: "y" },
+      { langue: "latin", alternatives: { mode: "debattue", formes: [{ forme: "a", sens: "b", selon: ["gaffiot"] }, { forme: "c", sens: "d" }] } },
+    ];
+    const { erreurs } = validerFiches([{ fichier: "e/et/etonner.yaml", texte: stringify({ ...ficheBase, etymologie }) }], ref);
+    expect(erreurs.map((e) => `${e.champ} : ${e.regle}`)).toContain("etymologie.1.alternatives.formes.0.selon.0 : tenant « gaffiot » ambigu : à la fois un auteur et un ouvrage");
+  });
+  it("accepte un croisement, aux mêmes règles que les formes d'un maillon", () => {
+    const maillon = (croisement: unknown, extra = {}) => [{ forme: "captivus", langue: "latin", sens: "prisonnier", croisement, ...extra }];
+    expect(erreursDe({ etymologie: maillon([{ forme: "*cactos", langue: "gaulois", sens: "prisonnier" }]) })).toEqual([]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "ἀριθμός", langue: "grec ancien" }]) })).toEqual([]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "صفر", langue: "arabe" }]) })).toEqual(["etymologie.0.croisement.0.translitteration : obligatoire pour une écriture ni latine ni grecque"]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "ἀριθμός", translitteration: "arithmos", langue: "grec ancien" }]) })).toEqual([
+      "etymologie.0.croisement.0.translitteration : inutile pour le grec : elle se déduit de la forme",
+    ]);
+    expect(erreursDe({ etymologie: maillon([{ forme: "*cactos", langue: "gaulois", sens: "« prisonnier »" }]) })).toEqual([
+      "etymologie.0.croisement.0.sens : sans guillemets : l'app les ajoute à l'affichage",
+    ]);
+  });
+  it("refuse un croisement vide, d'une langue inconnue, ou sans forme au maillon", () => {
+    const base = { forme: "captivus", langue: "latin", sens: "prisonnier" };
+    expect(erreursDe({ etymologie: [{ ...base, croisement: [] }] }).length).toBe(1);
+    expect(erreursDe({ etymologie: [{ ...base, croisement: [{ forme: "x", langue: "klingon" }] }] }).length).toBe(1);
+    expect(erreursDe({ etymologie: [{ langue: "latin", sens: "e", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], croisement: [{ forme: "x", langue: "gaulois" }] }] })).toEqual([
+      "etymologie.0.croisement : seulement pour un maillon qui a une forme (celle qui s'est croisée)",
+    ]);
+  });
   it("refuse un nom de personne ou un titre sans forme", () => {
     const etymologie = [{ langue: "latin", sens: "e", elements: [{ forme: "a", sens: "b" }, { forme: "c", sens: "d" }], personne: "ciceron" }];
     expect(erreursDe({ etymologie })).toEqual(["etymologie.0 : personne ou ouvrage : seulement pour une forme (nom propre, titre)"]);
@@ -388,7 +426,7 @@ describe("validerFiches : références", () => {
   it.each([
     ["auteur", { etymologie: [{ forme: "x", langue: "latin", sens: "y", forge: { par: ["inconnu"], date: 1900 } }] }, "etymologie.0.forge.par.0 : auteur « inconnu » sans fiche (data/auteurs)"],
     ["ouvrage", { sources: [{ ouvrage: "wiktionnaire", entree: "x" }] }, "sources.0.ouvrage : ouvrage « wiktionnaire » sans fiche (data/ouvrages)"],
-    ["tenant", { etymologie: debattue(["varron"]) }, "etymologie.1.alternatives.formes.0.selon.0 : auteur « varron » sans fiche (data/auteurs)"],
+    ["tenant", { etymologie: debattue(["varron"]) }, "etymologie.1.alternatives.formes.0.selon.0 : tenant « varron » sans fiche (auteur : data/auteurs, ouvrage : data/ouvrages)"],
     ["personne", { etymologie: [{ forme: "x", langue: "latin", sens: "y", personne: "inconnu" }] }, "etymologie.0.personne : auteur « inconnu » sans fiche (data/auteurs)"],
   ])("refuse une référence (%s) sans fiche", (_, surcharges, attendu) => {
     expect(erreursDe(surcharges)).toEqual([attendu]);
@@ -491,6 +529,15 @@ describe("validerFiches : doublets et renvois", () => {
       { fichier: "p/po/potion.yaml", champ, regle: "relation déjà déclarée dans « poison » : ne la déclarer que sur une des deux fiches" },
     ]);
   });
+  it("refuse un renvoi vers un doublet déclaré de l'autre côté, dans les deux sens", () => {
+    const regle = (cible: string) => `« ${cible} » est un doublet (déclaré dans sa fiche) : pas un renvoi`;
+    expect(validerFiches([fiche("poison", { renvois: ["potion"] }), fiche("potion", { doublets: ["poison"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/poison.yaml", champ: "renvois", regle: regle("potion") },
+    ]);
+    expect(validerFiches([fiche("poison", { doublets: ["potion"] }), fiche("potion", { renvois: ["poison"] })], REF).erreurs).toEqual([
+      { fichier: "p/po/potion.yaml", champ: "renvois", regle: regle("poison") },
+    ]);
+  });
   it("doublet : vers une fiche existante seulement", () => {
     expect(validerFiches([fiche("poison", { doublets: ["potion"] })], REF, new Set(["potion"])).erreurs).toEqual([
       { fichier: "p/po/poison.yaml", champ: "doublets", regle: "fiche « potion » introuvable" },
@@ -541,8 +588,31 @@ describe("validerFiches : mots sacrés", () => {
     expect(erreursDe({ tradition: { lectures: [origine] } })).toContain("tradition.lectures.0.premier : seulement pour un mot sacré (sacre)");
     const talmud = { ...origine, sources: [{ ...origine.sources[0], ouvrage: "talmud" }] };
     expect(erreursDe({ ...sacree, tradition: { lectures: [talmud] } })).toEqual([
-      "tradition.lectures.0.premier : le texte d'origine doit être reçu par toutes les traditions du mot (juive, chrétienne)",
+      "tradition.lectures.0.premier : une seule lecture premier : le texte d'origine doit être reçu par toutes les traditions du mot (juive, chrétienne) ; sinon une lecture premier par tradition",
     ]);
+  });
+  describe("degré 3 : une lecture premier par tradition", () => {
+    const talmud = { ...origine, sens: "une préparation", sources: [{ ...origine.sources[0], ouvrage: "talmud" }] };
+    const chretienne = { ...lectureBase, premier: true, sens: "qu'est-ce que c'est", texte: "Lecture chrétienne." };
+    it("accepte une lecture premier par tradition, qui couvrent toutes celles du mot", () => {
+      expect(erreursDe({ ...sacree, tradition: { lectures: [talmud, chretienne] } })).toEqual([]);
+    });
+    it("refuse deux lectures premier d'une même tradition", () => {
+      expect(erreursDe({ ...sacree, tradition: { lectures: [chretienne, { ...chretienne, texte: "Autre.", sources: [{ ...chretienne.sources[0] }] }] } })).toEqual([
+        "tradition.lectures.1.premier : plusieurs lectures premier : une par tradition, et « chrétienne » en a déjà une",
+        "tradition.lectures : plusieurs lectures premier : elles doivent couvrir toutes les traditions du mot (manque juive)",
+      ]);
+    });
+    it("refuse des lectures premier qui ne couvrent pas toutes les traditions du mot", () => {
+      expect(erreursDe({ ...sacree, sacre: ["juive", "chrétienne", "grecque"], tradition: { lectures: [talmud, chretienne] } })).toEqual([
+        "tradition.lectures : plusieurs lectures premier : elles doivent couvrir toutes les traditions du mot (manque grecque)",
+      ]);
+    });
+    it("refuse une lecture premier qui recouvre les autres (reçue par toutes) à côté d'une autre", () => {
+      expect(erreursDe({ ...sacree, tradition: { lectures: [origine, chretienne] } })).toEqual([
+        "tradition.lectures.1.premier : plusieurs lectures premier : une par tradition, et « chrétienne » en a déjà une",
+      ]);
+    });
   });
   it("refuse une lecture hors des traditions où le mot est sacré", () => {
     expect(erreursDe({ ...sacree, sacre: ["juive"], tradition: { lectures: [origine, lectureBase] } })).toEqual([
@@ -566,6 +636,13 @@ describe("validerFiches : règles éditoriales", () => {
     expect(valider({ explication: "  \n" }).erreurs.map((e) => e.champ)).toEqual(["explication"]);
     expect(erreursDe({ explication: "é".repeat(300) + "." })).toEqual(["explication : 300 caractères maximum (301)"]);
   });
+  it("refuse un texte de lecture qui commence par le nom de son auteur, mais pas un mot qui le prolonge", () => {
+    const lecture = (texte: string) => ({ tradition: { lectures: [{ ...lectureBase, texte }] } });
+    expect(erreursDe(lecture("Lactance voit ici un lien."))).toEqual([expect.stringMatching(/^tradition\.lectures\.0\.texte : ne commence pas par le nom de l'auteur/)]);
+    expect(erreursDe(lecture("lactance voit ici un lien."))).toHaveLength(1);
+    expect(erreursDe(lecture("Religio viendrait de religare, selon Lactance."))).toEqual([]);
+    expect(erreursDe(lecture("Lactancien dans l'esprit."))).toEqual([]);
+  });
   it("refuse des guillemets dans un sens, où qu'il soit", () => {
     expect(erreursDe({ etymologie: [{ forme: "x", langue: "latin", sens: "« frapper »" }] })).toEqual([
       "etymologie.0.sens : sans guillemets : l'app les ajoute à l'affichage",
@@ -582,6 +659,13 @@ describe("validerFiches : règles éditoriales", () => {
     ],
   ])("vérifie la typographie du champ %s", (champ, surcharges) => {
     expect(valider(surcharges).erreurs).toEqual([expect.objectContaining({ champ, regle: expect.stringMatching(/espace insécable/) })]);
+  });
+});
+
+describe("validerFiches : fiche a-verifier", () => {
+  it("n'a que l'IA pour source : aucun ouvrage consulté", () => {
+    expect(erreursDe({ statut: "a-verifier" })).toEqual([expect.stringMatching(/^sources : une fiche a-verifier n'a que l'IA pour source/)]);
+    expect(erreursDe({ statut: "a-verifier", sources: [] })).toEqual([]);
   });
 });
 

@@ -3,20 +3,20 @@ nature: [ verbe ]
 etymologie:
   - forme: "*extonare"
     langue: latin populaire
-    sens: ébranler comme d'un coup de tonnerre
+    sens: ébranler comme par un coup de tonnerre
 explication: >-
-  Le sens propre a longtemps survécu : on étonnait la roche ou un diamant
-  en les fêlant, et pour les classiques, être étonné, c'était rester frappé de
-  stupeur. Le mot ne dit plus qu'une surprise.
+  Vers 1100, étonner, c'était être étourdi par un coup violent ; la langue
+  classique y entendait encore épouvanter comme la foudre. Le mot dit
+  aujourd'hui la surprise devant l'extraordinaire ou l'inattendu ; le sens
+  concret reste dans des emplois techniques : étonner une roche, une voûte.
 themes: [ émotions ]
 sources:
-  - ouvrage: littre
-    entree: étonner
-  - ouvrage: gaffiot
-    entree: adtono
   - ouvrage: tlfi
+    entree: étonner
+  - ouvrage: littre
     entree: étonner
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

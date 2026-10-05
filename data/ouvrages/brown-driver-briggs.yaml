@@ -1,0 +1,15 @@
+titre: Lexique hébreu et anglais de l'Ancien Testament
+abrege: Brown-Driver-Briggs
+titreOriginal: A Hebrew and English Lexicon of the Old Testament
+date: "1906"
+edition: édition numérique de Sefaria (domaine public), consultée en ligne, une entrée à la fois
+licence: domaine public
+modeleEntree: "https://www.sefaria.org/BDB,_{entree}.1"
+description: >-
+  Lexique de l'hébreu biblique de Francis Brown, Samuel R. Driver et Charles A. Briggs :
+  sens et formes des mots, avec les versets où ils paraissent.
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: a-verifier

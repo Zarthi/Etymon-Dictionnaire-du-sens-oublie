@@ -1,0 +1,43 @@
+mot: roi
+nature: [ nom masculin ]
+etymologie:
+  - forme: rex
+    langue: latin
+  - forme: regere
+    langue: latin
+    sens: mener droit, diriger
+explication: >-
+  Rex nommait le chef d'après l'action de diriger, et se disait aussi de Jupiter
+  et d'un maître. Roi nomme aujourd'hui l'homme qui règne sur un État, et par
+  analogie celui qui domine les autres ou excelle dans un domaine.
+famille: [ royal, royaume, royauté, régner, régir ]
+renvois: [ souverain, prince ]
+themes: [ politique ]
+sources:
+  - ouvrage: tlfi
+    entree: roi
+  - ouvrage: littre
+    entree: roi
+  - ouvrage: lewis-short
+    entree: rex1
+  - ouvrage: lewis-short
+    entree: rego
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Ne dirige pas qui ne corrige pas : on garde le nom de roi en agissant droitement, on le perd en faisant le mal."
+      citation: "Reges a regendo vocati. Sicut enim sacerdos a sacrificando, ita et rex a regendo. Non autem regit, qui non corrigit. Recte igitur faciendo regis nomen tenetur, peccando amittitur."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 3, 4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+    - texte: "Les rois sont nommés de l'action de diriger ; mais les Romains ont vu dans le faste royal l'orgueil de celui qui domine, non la discipline de celui qui dirige."
+      citation: "cum et reges utique a regendo dicti melius uideantur, ut regnum a regibus, reges autem, ut dictum est, a regendo; sed fastus regius non disciplina putata est regentis uel beniuolentia consulentis, sed superbia dominantis."
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "V, 12"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_V
+statut: brouillon

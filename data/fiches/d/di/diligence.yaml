@@ -1,0 +1,58 @@
+mot: diligence
+nature: [ nom féminin ]
+etymologie:
+  - forme: diligentia
+    langue: latin
+    sens: soin scrupuleux
+  - forme: diligens
+    langue: latin
+    sens: qui aime, d'où soigneux
+  - forme: diligere
+    langue: latin
+    sens: aimer avec choix
+    elements:
+      - forme: di-
+        sens: entre, parmi
+      - forme: legere
+        sens: choisir
+explication: >-
+  Le français n'a reçu que le soin, sans l'amour : diligence a dit le soin, la
+  minutie (fin du XIIe siècle), puis la hâte, faire diligence (1489-1491). Le
+  mot désigne aujourd'hui la célérité et l'exactitude dans une tâche, et
+  l'ancienne voiture publique, nommée probablement pour sa rapidité.
+famille: [ diligent, diligemment, dilection ]
+renvois: [ soin ]
+themes: [ travail, morale ]
+sources:
+  - ouvrage: littre
+    entree: diligence
+  - ouvrage: littre
+    entree: diligent
+  - ouvrage: littre
+    entree: dilection
+  - ouvrage: tlfi
+    entree: diligence
+  - ouvrage: lewis-short
+    entree: diligo
+  - ouvrage: lewis-short
+    entree: dis
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=dis3
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Diligens est tiré, comme le nom de la légion, du verbe legere."
+      citation: "Indidem ab legendo legio et diligens et dilectus."
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 66"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+    - texte: "Selon certains, l'amour est en nous par nature, et diligere vient d'un choix."
+      citation: "Alii dixerunt amare nobis naturaliter insitum, diligere vero electione."
+      sources:
+        - ouvrage: differences
+          entree: "I, 17"
+          url: https://la.wikisource.org/wiki/Differentiae
+statut: brouillon

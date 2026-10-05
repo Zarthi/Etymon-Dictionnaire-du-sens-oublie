@@ -1,0 +1,17 @@
+titre: Somme théologique
+titreOriginal: Summa theologiae
+auteur: thomas-d-aquin
+date: "1266"
+licence: domaine public
+texte: https://la.wikisource.org/wiki/Summa_Theologiae
+description: >-
+  Exposé de la théologie en trois parties, par questions disputées ; chaque
+  article pose les objections, la réponse et les solutions.
+sources:
+  - ouvrage: bnf
+    entree: cb119539301
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

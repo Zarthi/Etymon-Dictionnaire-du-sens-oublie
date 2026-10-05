@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { enAlphabetLatin, formesItaliques, indexPremier, translitterationDe } from "./etymologie.ts";
+import { enAlphabetLatin, formesCitation, formesItaliques, indexPremier, sensLitteral, translitterationDe } from "./etymologie.ts";
 import type { Maillon } from "./types.ts";
 
 const m = (champs: Partial<Maillon>): Maillon => ({ langue: "latin", ...champs }) as Maillon;
@@ -49,5 +49,39 @@ describe("translittération et italique", () => {
       ecartees: [{ forme: "sine cera", sens: "sans cire" }],
     });
     expect(formes).toEqual(["Schizophrenie", "σχίζω", "schizō", "φρήν", "phrēn", "sine cera"]);
+  });
+});
+
+describe("formes d'un croisement", () => {
+  it("comptent comme formes de la chaîne (italique, translittération comprise)", () => {
+    const formes = formesItaliques({
+      etymologie: [m({ forme: "captivus", croisement: [{ forme: "*cactos", langue: "gaulois" }, { forme: "ἀριθμός", langue: "grec ancien" }] })],
+      ecartees: [],
+    });
+    expect(formes).toEqual(["captivus", "*cactos", "ἀριθμός", "arithmos"]);
+  });
+});
+
+describe("sensLitteral", () => {
+  const elements = [{ forme: "σχίζω", sens: "fendre" }, { forme: "φρήν", sens: "diaphragme" }];
+  it("une composition sans forme composée : le sens est littéral", () => {
+    expect(sensLitteral([m({ forme: "Schizophrenie" }), m({ sens: "esprit fendu", elements })])).toBe(true);
+  });
+  it("un sens porté par une forme reste sans mention", () => {
+    expect(sensLitteral([m({ forme: "extonare", sens: "frapper du tonnerre" })])).toBe(false);
+    // Une forme composée attestée porte son propre sens : pas de « littéralement ».
+    expect(sensLitteral([m({ forme: "φιλοσοφία", sens: "amour de la sagesse", elements })])).toBe(false);
+  });
+  it("un sens plus lointain porté par une forme l'emporte sur la composition sans sens", () => {
+    expect(sensLitteral([m({ elements }), m({ forme: "alter", sens: "l'autre" })])).toBe(false);
+  });
+});
+
+describe("formesCitation", () => {
+  it("rassemble les mots de la citation d'au moins 3 lettres, tels qu'écrits, sauf ceux qui s'écrivent aussi en français", () => {
+    expect(formesCitation("Hora est ab ore, quasi ora: hora, non qui")).toEqual(["Hora", "ore", "quasi", "ora", "hora"]);
+  });
+  it("garde les écritures grecques et ignore la ponctuation", () => {
+    expect(formesCitation("« ὥρα, ἡ ὥρα »")).toEqual(["ὥρα"]);
   });
 });

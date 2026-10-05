@@ -48,7 +48,7 @@ function noms(ids: string[], liaison: string): Segment[] {
  */
 function elements(liste: Element[], langueMaillon: string, apresLangue: boolean, { grammaire: g, libelles: l }: Langue): Segment[] {
   return liste.flatMap((e, i) => [
-    ...(i > 0 ? [texte(i === liste.length - 1 ? ", et " : ", ")] : []),
+    ...(i > 0 ? [texte(i === liste.length - 1 ? g.liaisons.et : ", ")] : []),
     ...(e.langue && e.langue !== langueMaillon ? [texte(`${g.origine(l.langue(e.langue))} `)] : !apresLangue ? [texte(prep(g, e))] : []),
     forme(e),
     texte(`, ${g.citer(e.sens)}`),
@@ -80,8 +80,16 @@ export function phraseChaine(etymologie: Maillon[], langue: Langue): Segment[] {
       if (x.sens && x !== premier) segments.push(texte(`, ${g.citer(x.sens)}`));
       if (x.elements) segments.push(texte(m.chaine.composeDe), ...elements(x.elements, x.langue, false, langue));
     } else if (x.elements) segments.push(...elements(x.elements, x.langue, !francais, langue));
+    if (x.croisement) {
+      segments.push(texte(m.chaine.croise));
+      x.croisement.forEach((c, i) => {
+        if (i > 0) segments.push(texte(i === x.croisement!.length - 1 ? g.liaisons.et : ", "));
+        segments.push(texte(`${g.avec(l.langue(c.langue))} `), forme(c));
+        if (c.sens) segments.push(texte(`, ${g.citer(c.sens)}`));
+      });
+    }
     if (x.forge) {
-      segments.push(texte(m.chaine.forgePar), ...noms(x.forge.par, " ou "), texte(` (${x.forge.date})`));
+      segments.push(texte(m.chaine.forgePar), ...noms(x.forge.par, g.liaisons.ou), texte(` (${x.forge.date})`));
       if (x.forge.ouvrage) segments.push(texte(m.chaine.dans), { type: "ouvrage", id: x.forge.ouvrage });
     }
     if (x.modele) {

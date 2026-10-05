@@ -1,0 +1,44 @@
+mot: patient
+nature: [ adjectif ]
+etymologie:
+  - forme: patiens
+    langue: latin
+    sens: qui supporte, endurant
+  - forme: pati
+    langue: latin
+    sens: souffrir, supporter, endurer
+explication: >-
+  L'adjectif a d'abord qualifié celui qui supporte les défauts d'autrui (XIIe
+  siècle), puis celui qui souffre sans murmurer les adversités. Le nom a désigné
+  le malade (XIVe siècle) et celui qui subit, opposé à l'agent ; il nomme
+  aujourd'hui le malade qui subit un examen ou une opération.
+famille: [ patience, patiemment, impatient, passion, pâtir ]
+themes: [ morale, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: patient
+  - ouvrage: littre
+    entree: patient
+  - ouvrage: lewis-short
+    entree: patior
+  - ouvrage: lewis-short
+    entree: patiens
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le patient tiendrait son nom d'un verbe qui veut dire frapper : il est frappé, et il supporte."
+      citation: "Patiens dictus a pavendo. Pavere enim ferire est. Percutitur enim et tolerat."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 201"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+    - texte: "On n'est pas dit patient parce qu'on ne fuit pas, mais parce qu'on se tient comme il faut en souffrant ce qui nuit présentement, sans s'en attrister de façon désordonnée."
+      citation: "patiens aliquis dicitur non ex hoc quod non fugit, sed ex hoc quod laudabiliter se habet in patiendo quae praesentialiter nocent, ut scilicet non inordinate ex eis tristetur."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 136, a. 4, ad 2"
+          url: https://www.corpusthomisticum.org/sth3123.html
+statut: brouillon

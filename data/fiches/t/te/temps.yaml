@@ -1,0 +1,46 @@
+mot: temps
+nature: [ nom masculin ]
+etymologie:
+  - forme: tempus
+    langue: latin
+    sens: portion de temps, moment
+    premier: true
+  - forme: "*tem-"
+    langue: indo-européen
+    sens: couper
+explication: >-
+  Rattaché sans certitude à la racine *tem-, tempus aurait d'abord désigné une
+  section, d'où une portion de temps ; l'idée de coupure s'est perdue. Le latin
+  disait déjà aussi la durée et les circonstances, d'où le temps qu'il fait
+  (vers 1160).
+incertain: true
+famille: [ temporel, temporaire, contemporain, temporiser ]
+themes: [ temps, météo ]
+tradition:
+  lectures:
+    - texte: "On définit le temps comme l'intervalle du mouvement du monde, divisé surtout par le cours du soleil et de la lune ; il tient donc son nom du cours tempéré de ces astres."
+      citation: "Tempus esse dicunt intervallum mundi motus. Id divisum in partes aliquot maxime ab solis et lunae cursu. Itaque ab eorum tenore temperato tempus dictum, unde tempestiva"
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 2"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+    - texte: "Les temps de l'année, qui sont quatre, tiennent leur nom du tempérament qu'ils ont en commun : ils se tempèrent l'un l'autre par l'humide, le sec, le chaud et le froid."
+      citation: "Tempora anni quattuor sunt: ver, aestas, autumnus et hiems. Dicta sunt autem tempora a communionis temperamento, quod invicem se humore, siccitate, calore et frigore temperent."
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 35, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: temps
+  - ouvrage: littre
+    entree: temps
+  - ouvrage: lewis-short
+    entree: tempus
+  - ouvrage: bailly
+    entree: τέμνω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

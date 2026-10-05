@@ -2,6 +2,7 @@
   import * as langue from "../i18n/index.ts";
   import { auteurs, ouvrages } from "../lib/fiches.ts";
   import { lienAuteur, lienOuvrage } from "../lib/liens.ts";
+  import { tenantDe } from "../lib/mentions.ts";
   import { hypotheses, phraseChaine, type Segment } from "../lib/phrase.ts";
   import type { Maillon } from "../lib/types.ts";
   import Forme from "./Forme.svelte";
@@ -15,6 +16,7 @@
 
   const phrase = $derived(phraseChaine(etymologie, langue));
   const alternatives = $derived(etymologie.filter((m) => m.alternatives).map((m) => hypotheses(m, langue)));
+  const tenant = (id: string) => tenantDe(id, auteurs, ouvrages);
   const nom = (id: string) => auteurs.get(id)?.nom ?? id;
   const titre = (id: string) => ouvrages.get(id)?.titre ?? id;
 </script>
@@ -38,7 +40,9 @@
       {#each alternative.lignes as ligne, j (j)}
         <li>
           {@render segments(ligne.segments)}{#if ligne.selon.length > 0}{" "}<span class="selon"
-              >({#each ligne.selon as id, k (id)}{#if k > 0},{" "}{/if}<a class="auteur" href={lienAuteur(id)}>{nom(id)}</a>{/each})</span
+              >({#each ligne.selon as id, k (id)}{#if k > 0},{" "}{/if}{@const t = tenant(id)}<a class={t.ouvrage ? "ouvrage" : "auteur"} href={t.lien}
+                >{#if t.ouvrage}<cite>{t.nom}</cite>{:else}{t.nom}{/if}</a
+              >{/each})</span
             >{/if}
         </li>
       {/each}

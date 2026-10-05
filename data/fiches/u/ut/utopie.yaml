@@ -3,7 +3,7 @@ nature: [ nom féminin ]
 etymologie:
   - forme: Utopia
     langue: latin humaniste
-    sens: pays de nulle part
+    sens: ce qui ne se rencontre en aucun lieu
     forge:
       par: [ thomas-more ]
       date: "1516"
@@ -12,29 +12,38 @@ etymologie:
     alternatives:
       mode: jeu
       formes:
-        - sens: nulle part
+        - sens: en aucun lieu
           elements:
             - forme: οὐ
               sens: non
             - forme: τόπος
               sens: lieu
-        - sens: lieu du bonheur
+        - sens: lieu de félicité
           elements:
             - forme: εὖ
               sens: bien
             - forme: τόπος
               sens: lieu
 explication: >-
-  More nommait une île parfaite qui n'existe en aucun lieu, et le nom laissait aussi
-  entendre le lieu du bonheur. Le mot désigne aujourd'hui un projet jugé irréalisable, et
-  le jeu sur les deux sens ne s'entend plus.
+  More nommait ainsi une île imaginaire au gouvernement idéal. En français, le
+  mot a d'abord nommé un pays imaginaire chez Rabelais (1532), puis une idée
+  jugée irréalisable (1821) ; il nomme aujourd'hui un plan de société idéale, ou
+  ce qui relève du rêve.
 themes: [ société ]
 sources:
-  - ouvrage: littre
-    entree: utopie
   - ouvrage: tlfi
     entree: utopie
+  - ouvrage: littre
+    entree: utopie
+  - ouvrage: utopia
+    entree: Hexastichon Anemolii
+    url: https://archive.org/details/utopiaofsirthom00more
+  - ouvrage: littre
+    entree: eucharistie
+  - ouvrage: bailly
+    entree: τόπος
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

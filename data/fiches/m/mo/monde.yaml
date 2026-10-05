@@ -1,0 +1,37 @@
+mot: monde
+nature: [ nom masculin ]
+etymologie:
+  - forme: mundus
+    langue: latin
+    sens: parure, toilette d'une femme
+explication: >-
+  Mundus a pris le sens d'univers en traduisant le mot grec d'où vient cosmos, qui
+  nommait à la fois l'ordre et la parure. Le français n'en a pas reçu le sens de parure :
+  monde désigne aujourd'hui l'univers, la terre, la société des hommes et les
+  gens.
+famille: [ mondain, mondanité ]
+themes: [ nature, société ]
+tradition:
+  lectures:
+    - texte: "Les philosophes ont nommé le monde par son mouvement sans fin : ciel, soleil, lune, air et mers, dont les éléments n'ont aucun repos."
+      citation: "Mundus Latine a philosophis dictus, quod in sempiterno motu sit, ut caelum, sol, luna, aer, maria. Nulla enim requies eius elementis concessa est, ideoque semper in motu est."
+      sources:
+        - ouvrage: etymologies
+          entree: "XIII, 1, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XIII
+sources:
+  - ouvrage: tlfi
+    entree: monde
+  - ouvrage: lewis-short
+    entree: mundus2
+  - ouvrage: lewis-short
+    entree: mundus1
+  - ouvrage: littre
+    entree: monde
+  - ouvrage: bailly
+    entree: κόσμος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

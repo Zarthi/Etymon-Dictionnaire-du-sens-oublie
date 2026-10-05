@@ -44,11 +44,22 @@ export function indexPremier(etymologie: Maillon[]): number {
   return Math.max(0, etymologie.findIndex(porteSens));
 }
 
+/**
+ * Le sens premier est-il le sens littéral d'une composition sans forme composée attestée
+ * (schizophrénie : « esprit fendu », fait de ses éléments) ? Il s'affiche alors précédé de
+ * « littéralement » ; un sens porté par une forme (celle d'un étymon) reste sans mention.
+ */
+export function sensLitteral(etymologie: Maillon[]): boolean {
+  const m = etymologie[indexPremier(etymologie)];
+  return m !== undefined && m.sens !== undefined && m.forme === undefined && (m.elements?.length ?? 0) > 0;
+}
+
 /** Toutes les formes d'un maillon, avec leurs écritures : pour l'italique et les vérifications. */
 export function formesDuMaillon(m: Maillon): AvecForme[] {
   const formes: AvecForme[] = [];
   if (m.forme) formes.push({ forme: m.forme, translitteration: m.translitteration });
   for (const e of m.elements ?? []) formes.push(e);
+  for (const x of m.croisement ?? []) formes.push(x);
   for (const a of m.alternatives?.formes ?? []) {
     if (a.forme) formes.push({ forme: a.forme, translitteration: a.translitteration });
     for (const e of a.elements ?? []) formes.push(e);
@@ -69,4 +80,16 @@ export function formesItaliques(fiche: Pick<Fiche, "etymologie" | "ecartees">): 
 /** Formes de la chaîne, en alphabet latin (translittérées au besoin) : ce que cite une étymologie de dictionnaire. */
 export function formesComparables(etymologie: Maillon[]): string[] {
   return etymologie.flatMap(formesDuMaillon).flatMap((f) => [f.forme, translitterationDe(f)].filter((x): x is string => Boolean(x)));
+}
+
+/** Mots de la citation qui s'écrivent aussi en français (est, non, qui…) : ils ne passent pas en italique dans le texte. */
+const MOTS_FRANCAIS = new Set(["est", "non", "qui", "plus", "sur", "par", "des", "les", "une", "sous", "nos", "vos", "son", "ses"]);
+
+/**
+ * Mots de la citation d'une lecture traditionnelle (au moins 3 lettres), tels qu'écrits : le texte de
+ * la lecture peut nommer le mot que l'auteur lit, et l'app le met alors en italique comme une forme.
+ */
+export function formesCitation(citation: string): string[] {
+  const mots = citation.match(/\p{L}+(?:-\p{L}+)*/gu) ?? [];
+  return [...new Set(mots.filter((mot) => [...mot].length >= 3 && !MOTS_FRANCAIS.has(mot.toLowerCase())))];
 }

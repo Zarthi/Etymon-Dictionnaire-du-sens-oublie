@@ -7,34 +7,33 @@ etymologie:
     langue: grec ancien
     sens: messager
 explication: >-
-  Chez Homère, ἄγγελος désigne le messager ; dans la Septante, l'envoyé de Dieu, sens que
-  reçoit le latin chrétien angelus. Le mot français désigne aujourd'hui un être spirituel
-  créé par Dieu, en particulier son messager, et par analogie une personne d'une
-  perfection morale ou physique.
+  Chez Homère, ἄγγελος se dit aussi d'Iris et des oiseaux qui annoncent un
+  présage ; la Septante l'emploie pour l'envoyé de Dieu, sens que le latin
+  chrétien angelus porte depuis Tertullien. Le mot désigne aujourd'hui un être
+  spirituel créé par Dieu, et une personne d'une qualité parfaite.
 famille: [ angélique, archange ]
 renvois: [ demon ]
 themes: [ religion ]
 tradition:
   lectures:
-    - texte: Ange est le nom d'une fonction, non d'une nature. Les anges sont toujours des
-        esprits, mais ne sont appelés anges que lorsqu'ils sont envoyés annoncer aux
-        peuples la volonté du Seigneur.
-      citation: Angeli Graece vocantur, Hebraice malachoth, Latine vero nuntii interpretantur,
-        ab eo quod Domini voluntatem populis nuntiant. […] Angelorum autem vocabulum
-        officii nomen est, non naturae. Semper enim spiritus sunt, sed cum mittuntur,
-        vocantur angeli.
+    - texte: "Le nom d'ange dit une fonction, non une nature : les anges sont toujours des esprits, et on les appelle anges quand ils sont envoyés ; ils sont nommés ainsi parce qu'ils annoncent aux peuples la volonté du Seigneur."
+      citation: "Angeli Graece vocantur, Hebraice malachoth, Latine vero nuntii interpretantur, ab eo quod Domini voluntatem populis nuntiant. […] Angelorum autem vocabulum officii nomen est, non naturae. Semper enim spiritus sunt, sed cum mittuntur, vocantur angeli."
       sources:
         - ouvrage: etymologies
-          entree: VII, 5, 1-2
+          entree: "VII, 5, 1-2"
           url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
-    - texte: Les hommes aussi peuvent être, à leur mesure, des anges de Dieu, c'est-à-dire ses
-        messagers, en annonçant sa volonté et en louant sa gloire et sa grâce.
-      citation: simus nos quoque pro modulo nostro angeli Dei, id est nuntii eius, adnuntiantes
-        eius uoluntatem et gloriam gratiamque laudantes.
+    - texte: "Les anges de Dieu sont ses messagers : soyons-le nous aussi, à notre mesure, en annonçant sa volonté et en louant sa gloire et sa grâce."
+      citation: "simus nos quoque pro modulo nostro angeli Dei, id est nuntii eius, adnuntiantes eius uoluntatem et gloriam gratiamque laudantes."
       sources:
         - ouvrage: la-cite-de-dieu
-          entree: X, 25
+          entree: "X, 25"
           url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+    - texte: "Ange veut dire messager : tous les esprits célestes sont appelés anges en tant qu'ils manifestent les choses divines. Les ordres supérieurs tirent leur nom d'une excellence dans cette manifestation ; le dernier, qui n'y ajoute aucune excellence, est nommé de la simple manifestation."
+      citation: "Angelus nuntius dicitur. Omnes ergo caelestes spiritus, inquantum sunt manifestatores divinorum, Angeli vocantur. Sed superiores Angeli habent quandam excellentiam in hac manifestatione, a qua superiores ordines nominantur. Infimus autem Angelorum ordo nullam excellentiam supra communem manifestationem addit, et ideo a simplici manifestatione nominatur."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "I, q. 108, a. 5, ad 1"
+          url: https://la.wikisource.org/wiki/Summa_Theologiae/Prima_pars/Quaestio_CVIII
 sources:
   - ouvrage: tlfi
     entree: ange

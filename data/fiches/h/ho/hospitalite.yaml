@@ -1,0 +1,23 @@
+mot: hospitalité
+nature: [ nom féminin ]
+etymologie:
+  - forme: hospitalitas
+    langue: latin
+    sens: action de recevoir comme hôte ; liens entre les hôtes
+explication: >-
+  Vers 1200, le mot désigne l'hébergement gratuit des étrangers, des pèlerins et
+  des pauvres ; en 1538, il nomme aussi, pour l'Antiquité, le droit réciproque
+  des voyageurs d'être reçus. Il désigne aujourd'hui l'accueil donné chez soi, à
+  l'étranger comme à un proche, et la disposition à accueillir.
+famille: [ hospitalier, inhospitalier, hôte ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: hospitalité
+  - ouvrage: littre
+    entree: hospitalité
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

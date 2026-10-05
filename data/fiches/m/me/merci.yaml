@@ -5,17 +5,19 @@ etymologie:
     langue: latin
     sens: salaire, récompense
 explication: >-
-  Le mot merces, qui nommait le salaire, a pris en bas latin le sens de faveur,
-  de grâce accordée à qui l'on épargne ; merci a d'abord ce sens en français.
-  Grand merci, la grande faveur qu'on vous accorde, en a fait le mot du
-  remerciement.
-famille: [ remercier ]
-themes: [ parole, morale ]
+  À basse époque, merces avait pris le sens de grâce accordée à qui l'on
+  épargne : c'est le premier sens de merci en français (881). Grand merci, vers
+  1135, c'est la grande faveur que vous me faites ; de là le remerciement. La
+  grâce reste dans être à la merci de quelqu'un.
+famille: [ remercier, remerciement ]
+themes: [ parole ]
 sources:
   - ouvrage: tlfi
     entree: merci
   - ouvrage: littre
     entree: merci
+  - ouvrage: littre
+    entree: remercier
 redaction:
   - par: IA
     detail: Claude Opus 5.5
