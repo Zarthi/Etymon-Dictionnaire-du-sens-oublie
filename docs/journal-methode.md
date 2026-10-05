@@ -2,6 +2,32 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-05 — Bilan des lots 3 à 16, dans le cloud
+
+Quatorze lots par familles et la reprise des 21 fiches antérieures à la méthode (lots A, B et les
+cinq mots sacrés), un rédacteur et un relecteur neuf par lot (Opus 5.5, réflexion élevée), deux lots
+en parallèle. 153 fiches en brouillon. Coût moyen d'un lot de 8 à 10 mots : environ 20 $ (compteurs
+de fin : rédacteur 200 000 à 270 000 jetons, relecteur 130 000 à 180 000).
+
+- **Ce qui a marché** : la confrontation du dossier aux sources brutes par le relecteur (erreurs du
+  dossier trouvées à chaque lot) ; le corpus noté au dossier (lectures manquées retrouvées en
+  seconde passe : Rashi sur Nombres 22, 22 ; Thomas sur ange, foi, paix ; Isidore sur lire, patrie) ;
+  les remarques restées ouvertes en passe 4, réglées sans boucle (textes de lectures qui disaient
+  plus que leur citation : la faute la plus fréquente).
+- **Règles fixées en route, inscrites aux consignes** : un dernier maillon sans sens se retire ;
+  une lecture ne porte que sur le mot ou une forme de sa chaîne (servus, sapiens, mendacium écartés
+  et gardés pour serf, sapience…) ; une origine débattue va en alternatives, jamais en écartées
+  ni en croisement (pénitence, mensonge).
+- **Modèle et outils affinés entre deux lots** : croisement (chétif, algorithme, oisif) ; ouvrage
+  tenant (Lewis & Short) ; degré 3 du sacré (manne) ; « littéralement » ; mots de la citation dans
+  le texte d'une lecture ; Somme entière au corpus (Corpus Thomisticum) ; homographes du TLFi ;
+  repli INTERMARC de la BnF ; nature tirée de l'entrée du Littré écrite comme le mot.
+- **Restent à Thibault** (signalés aux lots, voir `docs/decisions.md`) : un sens premier peu
+  parlant quand une origine débattue suit un maillon redondant (mensonge) ; le calque de sens
+  (passio, evidentia, mundus) ; le nom d'un peuple dans la chaîne (franc, esclave) ; deux chaînes
+  pour le nom et l'adjectif (droit) ; les doutes sur le critère d'entrée relevés à chaque lot ;
+  thèmes demandés (art, ciel, vie, souffrance).
+
 ## 2026-10-05 — Le texte d'une lecture peut nommer le mot que l'auteur lit
 
 - **Cause** (lot 14) : le texte d'une lecture ne pouvait pas nommer le mot latin ou grec lu par

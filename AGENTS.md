@@ -646,10 +646,9 @@ La v1 (§4.1) est construite ; le modèle de données a été éprouvé sur des 
 (`docs/modele-v3.md`, `docs/cas-epreuve-traditions.md`, `docs/cas-epreuve-sacre.md`).
 La rédaction autonome suit **`docs/methode.md`** : sources d'abord, tri, relecture critique,
 affinage entre deux lots ; ses ajustements sont notés dans `docs/journal-methode.md`, les
-décisions prises à la place de Thibault dans `docs/decisions.md`. Deux pilotes et un troisième
-lot (*hospes*, *amicus*, *potio*) faits selon la méthode refondue (un rédacteur seul pour le lot,
-un relecteur neuf) ; relecture critique du projet faite le 2026-10-04. Prochaine étape :
-reprendre par la méthode actuelle les fiches antérieures à elle (*algèbre*, *algorithme*,
-*conscience*, *religion*, *personne*, *schizophrénie*, *merci*… et les mots sacrés), puis
-continuer par lots.
+décisions prises à la place de Thibault dans `docs/decisions.md`. Deux pilotes, puis, le 2026-10-04 et le 2026-10-05, une relecture critique du
+projet, la reprise par la méthode actuelle de toutes les fiches antérieures à elle (mots sacrés
+compris) et quatorze lots par familles (lots 3 à 16) : 153 fiches en brouillon, toutes à relire et
+valider par Thibault. Prochaine étape : la relecture des brouillons et du journal des décisions
+par Thibault ; puis continuer par lots (candidats : `npm run etat -- candidats`).
 À chaque étape, dis brièvement ce que tu as fait et ce qui reste à décider.
