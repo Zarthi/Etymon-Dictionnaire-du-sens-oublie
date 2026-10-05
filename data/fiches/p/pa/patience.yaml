@@ -1,0 +1,33 @@
+mot: patience
+nature: [ nom féminin ]
+etymologie:
+  - forme: patientia
+    langue: latin
+    sens: action de supporter, de souffrir, d'endurer
+explication: >-
+  En français, la patience a d'abord été la vertu qui fait supporter les
+  adversités (XIIe siècle), sens qu'elle garde. Le mot a pris ensuite celui de
+  persévérance malgré les obstacles (1256), puis de tranquillité dans l'attente
+  de ce qui tarde (1549).
+famille: [ patient, patiemment, impatience, passion, pâtir ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: patience
+  - ouvrage: lewis-short
+    entree: patientia
+  - ouvrage: littre
+    entree: patience
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "La patience est l'endurance volontaire et prolongée des choses ardues et difficiles, en vue de l'honnête ou de l'utile."
+      citation: "patientia est honestatis aut utilitatis causa rerum arduarum ac difficilium voluntaria ac diuturna perpessio"
+      sources:
+        - ouvrage: de-l-invention
+          entree: "II, 163"
+          url: https://www.thelatinlibrary.com/cicero/inventione2.shtml
+statut: brouillon

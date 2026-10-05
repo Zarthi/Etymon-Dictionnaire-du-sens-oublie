@@ -1,0 +1,37 @@
+mot: compassion
+nature: [ nom féminin ]
+etymologie:
+  - forme: compassio
+    langue: latin ecclésiastique
+  - forme: compati
+    langue: bas latin
+    sens: souffrir avec
+    elements:
+      - forme: cum
+        sens: avec
+      - forme: pati
+        sens: souffrir
+explication: >-
+  Compati disait souffrir avec quelqu'un, puis avoir pitié. En
+  français, compassion nomme dès 1155 le sentiment qu'éveille la souffrance
+  d'autrui, qui incline à la partager ; le mot nomme aussi une fête en mémoire
+  des douleurs de la Vierge (1771).
+famille: [ compatir, compatissant, passion ]
+renvois: [ misericorde ]
+themes: [ émotions, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: compassion
+  - ouvrage: littre
+    entree: compassion
+  - ouvrage: lewis-short
+    entree: compassio
+  - ouvrage: lewis-short
+    entree: compatior
+  - ouvrage: littre
+    entree: passion
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

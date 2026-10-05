@@ -1,0 +1,38 @@
+mot: peine
+nature: [ nom féminin ]
+etymologie:
+  - forme: poena
+    langue: latin
+    sens: réparation, expiation, châtiment
+  - forme: ποινή
+    langue: grec ancien
+    sens: prix du sang, rançon
+explication: >-
+  En latin impérial, poena a pris le sens de souffrance. Le français a gardé le
+  châtiment, devenu la sanction pénale, et la souffrance, devenue la tristesse,
+  l'effort et la difficulté ; la réparation due pour une faute s'est perdue.
+famille: [ pénible, peiner, pénal, pénalité ]
+renvois: [ chagrin ]
+themes: [ droit, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: peine
+  - ouvrage: lewis-short
+    entree: poena
+  - ouvrage: bailly
+    entree: ποινή
+  - ouvrage: littre
+    entree: peine
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le mal se dit de deux façons : celui que l'homme fait est le péché, celui qu'il subit est la peine ; et la peine tient son nom de ce qu'elle punit."
+      citation: "Dupliciter malum appellatur: unum, quod homo facit, alterum, quod patitur. Quod facit, peccatum est; quod patitur, poena. […] Poena dicta quod puniat."
+      sources:
+        - ouvrage: etymologies
+          entree: "V, 27, 1-2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+statut: brouillon

@@ -1,0 +1,32 @@
+mot: souffrir
+nature: [ verbe ]
+etymologie:
+  - forme: "*sufferire"
+    langue: latin populaire
+  - forme: sufferre
+    langue: latin
+    sens: porter sous, soutenir, endurer
+    elements:
+      - forme: sub
+        sens: sous
+      - forme: ferre
+        sens: porter
+explication: >-
+  Souffrir a d'abord voulu dire supporter, endurer une chose pénible (vers
+  1050), puis permettre (vers 1135). L'emploi sans complément, éprouver une
+  douleur, n'est attesté que vers 1480 ; le sens de supporter reste dans « ne
+  pas pouvoir souffrir quelqu'un ».
+famille: [ souffrance, souffrant, souffre-douleur ]
+themes: [ corps, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: souffrir
+  - ouvrage: littre
+    entree: souffrir
+  - ouvrage: lewis-short
+    entree: suffero
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

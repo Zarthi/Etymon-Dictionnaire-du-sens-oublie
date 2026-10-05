@@ -10,9 +10,6 @@
 - { mot: paroisse, statut: a-faire }
 - { mot: parole, statut: a-faire }
 - { mot: particulier, statut: a-faire }
-- { mot: passion, statut: a-faire }
-- { mot: patience, statut: a-faire }
-- { mot: patient, statut: a-faire }
 - { mot: patrie, statut: a-faire }
 - { mot: patron, statut: a-faire }
 - { mot: pauvre, statut: a-faire }
@@ -22,9 +19,6 @@
 - { mot: pécher, statut: a-faire }
 - { mot: pédagogie, statut: a-faire }
 - { mot: pédant, statut: a-faire }
-- { mot: peine, statut: a-faire }
-- { mot: pénible, statut: a-faire }
-- { mot: pénitence, statut: a-faire }
 - { mot: penser, statut: a-faire }
 - { mot: pension, statut: a-faire }
 - { mot: perdre, statut: a-faire }

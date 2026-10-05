@@ -1,0 +1,42 @@
+mot: passion
+nature: [ nom féminin ]
+etymologie:
+  - forme: passio
+    langue: latin
+    sens: fait de subir, de souffrir
+explication: >-
+  Passio s'est dit des souffrances du Christ et des martyrs, puis des affections
+  de l'âme, traduisant le mot grec qui les nommait. Le mot nomme encore la
+  Passion du Christ, mais surtout une tendance affective intense, un amour
+  violent, un goût très vif ; le sens de subir, opposé à agir, a vieilli.
+famille: [ passionné, passif, pâtir, compassion, patient, patience ]
+renvois: [ emotion, desir ]
+themes: [ émotions, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: passion
+  - ouvrage: lewis-short
+    entree: passio
+  - ouvrage: bailly
+    entree: πάθος
+  - ouvrage: littre
+    entree: passion
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Passio traduit mot pour mot le nom grec du trouble : un mouvement de l'âme contraire à la raison."
+      citation: "Perturbatio est enim, quae Graece *Pathos dicitur; unde illa uoluit uocare animo passiua, quia uerbum de uerbo *Pathos passio diceretur motus animi contra rationem."
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "VIII, 17"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_VIII
+    - texte: "Le nom de passion implique que celui qui subit est tiré vers ce qui est propre à l'agent ; or l'âme est tirée vers les choses par l'appétit plus que par la connaissance."
+      citation: "in nomine passionis importatur quod patiens trahatur ad id quod est agentis. Magis autem trahitur anima ad rem per vim appetitivam quam per vim apprehensivam."
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 22, a. 2"
+          url: https://www.corpusthomisticum.org/sth2022.html
+statut: brouillon

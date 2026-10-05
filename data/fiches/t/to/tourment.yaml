@@ -1,0 +1,39 @@
+mot: tourment
+nature: [ nom masculin ]
+etymologie:
+  - forme: tormentum
+    langue: latin
+    sens: machine de guerre, treuil, instrument de torture
+  - forme: torquere
+    langue: latin
+    sens: tordre
+explication: >-
+  Tourment a d'abord dit la torture et la vive douleur physique (Xe siècle),
+  puis aussi l'instrument de torture (1130-1140) et la douleur morale
+  (1150-1160). D'usage aujourd'hui vieilli ou littéraire, il ne nomme plus
+  l'instrument, mais une vive souffrance, ou ce qui tracasse.
+famille: [ tourmenter, tourmente, torture, tordre ]
+renvois: [ supplice ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: tourment
+  - ouvrage: littre
+    entree: tourment
+  - ouvrage: lewis-short
+    entree: tormentum
+  - ouvrage: lewis-short
+    entree: torqueo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Tormentum nomme aussi, sur les navires, un long câble tendu de la proue à la poupe pour qu'ils soient mieux serrés ; les cordages sont ainsi nommés de la torsion."
+      citation: "Tormentum funis in navibus longus, qui a prora ad puppim extenditur quo magis constringantur. Tormenta autem a tortu dicta, restes funesque."
+      sources:
+        - ouvrage: etymologies
+          entree: "XIX, 4, 4"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XIX
+statut: brouillon

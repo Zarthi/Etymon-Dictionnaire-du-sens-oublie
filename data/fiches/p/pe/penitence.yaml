@@ -1,0 +1,50 @@
+mot: pénitence
+nature: [ nom féminin ]
+etymologie:
+  - forme: paenitentia
+    langue: latin
+  - forme: paenitet
+    langue: latin
+    sens: ne pas être satisfait de
+    premier: true
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: paene
+          sens: presque, à peine
+        - forme: poena
+          sens: châtiment
+          selon: [ lewis-short ]
+explication: >-
+  Paenitentia disait le regret ; en latin chrétien, le regret du péché, puis le
+  jeûne, la mortification et le sacrement de la réconciliation. Le mot nomme
+  aussi en français, depuis 1559, une punition hors de toute religion, comme
+  celle de l'enfant mis en pénitence.
+incertain: true
+famille: [ pénitent, pénitentiaire, repentir ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: pénitence
+  - ouvrage: lewis-short
+    entree: paeniteo
+  - ouvrage: lewis-short
+    entree: paene
+  - ouvrage: littre
+    entree: pénitence
+  - ouvrage: tlfi
+    entree: repentir
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "La pénitence est comme une punition : en se repentant, l'homme punit en lui-même le mal qu'il a commis, et ne le laisse pas impuni."
+      citation: "Poenitentia appellata, quasi punitentia, eo quod ipse homo in se poenitendo puniat quod male admisit. Nam nihil aliud agunt, quos veraciter poenitet, nisi ut id, quod male fecerunt, inpunitum esse non sinant."
+      sources:
+        - ouvrage: etymologies
+          entree: "VI, 19, 71"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+statut: brouillon
