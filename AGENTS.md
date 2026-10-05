@@ -456,7 +456,7 @@ Mots envisagés qui n'ont pas encore de fiche, une liste par initiale sans accen
 
 ### 6.5 Travail par lots et suivi (`npm run etat`)
 
-La base est rédigée par lots d'une dizaine de mots, un commit par lot (`data: 10 fiches brouillon (c, e)`).
+La base est rédigée par lots de 12 à 15 mots, un commit par lot (`data: 12 fiches brouillon (c, e)`).
 Pour ne jamais parcourir toute la base, l'agent interroge `npm run etat` :
 - `npm run etat` : résumé (fiches par statut, candidats par statut, conformité) ;
 - `npm run etat -- candidats 15` : les 15 prochains mots à traiter ;
@@ -465,25 +465,30 @@ Pour ne jamais parcourir toute la base, l'agent interroge `npm run etat` :
 L'app (en développement comme en production) affiche toutes les fiches, avec leur
 mention de statut.
 
-**Chaîne de rédaction** (`docs/methode.md` : un rédacteur seul pour le lot, un relecteur neuf,
-agents `.claude/agents/etymon-*.md` ; le Littré local se télécharge une fois : `npm run littre`,
-dans `sources/`, hors du dépôt). On rédige d'après les sources, jamais de mémoire :
-1. **Dossier** : `npm run dossier -- <mot>` crée `atelier/<id>/dossier.json` (hors du dépôt)
-   avec le Littré et affiche le plan des sens et l'étymologie du TLFi ; l'agent y écrit l'usage
-   d'aujourd'hui et les faits, chacun avec sa source et son entrée (Bailly :
-   `npm run texte -- bailly:φρήν` ; latin : Lewis & Short ou Georges, Gaffiot dans le navigateur).
-2. **Rédaction** d'après le dossier (`docs/consignes/redaction.md`), contrôlée par
-   `npm run rediger -- atelier/<id>/fiche.json --essai`.
-3. **Relecture critique** par un autre agent (`docs/consignes/relecture.md`).
-4. **Auteurs et ouvrages** d'après leur notice BnF (`npm run bnf`), puis
-   `npm run rediger -- <fiche.json>… --dossier --modele "<modèle>" --reflexion "<niveau>"` :
-   fiches en `brouillon`,
-   sources tirées du dossier, mots retirés des candidats, mot écarté par Thibault refusé.
-5. **Lectures traditionnelles** (`docs/consignes/lectures.md`), puis
-   `npm run verifier:en-ligne -- <mot>` (citations mot pour mot).
-6. `npm run verifier` (contrôles : nature, famille, formes d'origine, auteurs nommés ; un
-   contrôle signale, il ne bloque pas), `npm run valider`, un commit par lot. Thibault valide
-   ensuite les brouillons.
+**Chaîne de rédaction** (`docs/methode.md` §3 ; compétence `/etymon-lot <mot>…` dans une session
+neuve ; agents `.claude/agents/etymon-*.md` ; le Littré local se télécharge une fois : `npm run littre`,
+dans `sources/`, hors du dépôt). On rédige d'après les sources, jamais de mémoire ; tout se fait dans
+`atelier/`, et `data/` et `docs/` ne bougent qu'à la clôture :
+1. `npm run lot -- sources <mots>` : par script, `atelier/<id>/sources.md` (Littré, TLFi, entrées du
+   Lewis & Short et du Bailly pour les formes d'origine, corpus de réflexe).
+2. **Rédacteur** (Opus) : dossier, fiche et lectures traditionnelles (étape à part, texte source sous les
+   yeux) dans `atelier/<id>/`, références à créer dans `atelier/references.json`, décisions dans
+   `atelier/decisions.md` (`docs/consignes/redacteur.md`).
+3. **Relecteur** neuf (Opus) : un verdict par mot, avec un `remplacement` quand il sait la phrase
+   (`docs/consignes/relecture.md`).
+4. `npm run lot -- reprendre <mots>` : par script, applique les remplacements ; le rédacteur n'est
+   repris que pour `atelier/a-reprendre.md`.
+5. **Vérificateur** (Sonnet) : seulement les remarques appliquées et les lectures.
+6. `npm run lot -- clore <mots>` : écrit les fiches en `brouillon` (sources tirées du dossier, mots
+   retirés des candidats, mot écarté par Thibault refusé), crée les auteurs et ouvrages d'après leur notice
+   BnF, reporte les décisions en tête de `docs/decisions.md`, régénère le contrat, lance
+   `verifier:en-ligne` (citations mot pour mot), `verifier` (contrôles : nature, famille, formes
+   d'origine, auteurs nommés ; ils signalent, ils ne bloquent pas), `valider` et les tests. Puis un
+   commit par lot ; Thibault valide ensuite les brouillons.
+
+Les commandes d'une étape se lancent aussi seules : `npm run dossier -- --consulter <mot>`,
+`npm run texte -- <adresse>` (Bailly : `bailly:φρήν` ; latin : Lewis & Short ou Georges, Gaffiot dans le
+navigateur), `npm run bnf`, `npm run rediger -- atelier/<id>/fiche.json --essai`.
 
 `npm run rediger` n'écrit une fiche que d'après son dossier (`--dossier`). Aucun script ne fait
 passer une fiche en `brouillon` par concordance avec le Littré : `npm run verifier` contrôle et
@@ -523,7 +528,8 @@ parfois dépassées (§5).
 etymon/
   AGENTS.md
   README.md
-  .claude/agents/        # agents de la rédaction : etymon-redacteur, etymon-relecteur (modèle, réflexion)
+  .claude/agents/        # agents de la rédaction : etymon-redacteur, etymon-relecteur, etymon-verificateur (modèle, réflexion)
+  .claude/skills/        # etymon-lot : la compétence qui orchestre un lot
   docs/                  # méthode et son journal ; evolutions/ ; générés par npm run contrat : contrat, schémas JSON, consignes/
   atelier/               # dossiers et fiches en cours de rédaction, hors du dépôt
   LICENSE                # MIT (code)
@@ -551,6 +557,7 @@ etymon/
     assembler-fiches.ts  # toutes les fiches, auteurs et ouvrages -> src/generes/ (au build)
     etat.ts              # npm run etat : avancement, candidats, brouillons
     rediger-lot.ts       # npm run rediger : fiches rédigées par l'IA d'après leur dossier -> brouillon
+    lot.ts               # npm run lot : sources, reprendre, clore (un lot, par script)
     dossier.ts           # npm run dossier -- <mot> : dossier de faits (Littré, TLFi) dans atelier/
     bnf.ts               # npm run bnf : notices BnF, fiches d'auteurs et d'ouvrages
     texte.ts             # npm run texte -- <adresse> : texte brut d'une page (citations, Bailly)
@@ -559,6 +566,8 @@ etymon/
     lib/corpus.ts        # les œuvres du corpus de réflexe, recherche des passages
     verifier-en-ligne.ts # npm run verifier:en-ligne : entrées du Bailly, citations des lectures
     lib/redaction.ts     # préparation d'une fiche rédigée (typographie, valeurs par défaut)
+    lib/lot.ts           # sources.md, remplacements d'un verdict, report des décisions (fonctions pures)
+    lib/formes.ts        # formes latines et grecques d'une étymologie, entrées des dictionnaires des étymons
     lib/controles.ts     # contrôles contre le Littré (nature, famille, formes, auteurs nommés)
     lib/en-ligne.ts      # texte d'une page, recherche d'une citation
     lib/atelier.ts       # formats du dossier, du verdict et des sorties des agents

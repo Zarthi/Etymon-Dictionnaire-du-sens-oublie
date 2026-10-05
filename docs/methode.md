@@ -1,8 +1,10 @@
 # Méthode de rédaction autonome
 
 Comment l'agent remplit seul le dictionnaire (mots, auteurs, ouvrages, lectures), jusqu'au
-statut `brouillon`, pour que Thibault n'ait plus qu'à relire. Seconde version, refondue après le
-premier pilote (`docs/journal-methode.md`) : un rédacteur seul pour tout le lot, un relecteur neuf.
+statut `brouillon`, pour que Thibault n'ait plus qu'à relire. Troisième version : après le premier
+pilote, un rédacteur seul pour tout le lot et un relecteur neuf ; puis (2026-10-05), pour réduire le
+coût d'un lot, les consultations et les reprises mécaniques confiées à des scripts
+(`npm run lot`, `docs/journal-methode.md`).
 
 ## 1. Principes
 
@@ -34,26 +36,34 @@ décision et sa raison dans `docs/decisions.md` ; Thibault relit ce journal, con
 une décision infirmée se défait. Restent à Thibault seul, sans décision provisoire : `validee`,
 écarter un mot, changer un principe d'AGENTS.md (l'agent y décide pour le lot, sans y toucher).
 
-## 3. Le lot, en quatre passes
+## 3. Le lot
 
-Un lot est une dizaine de mots, choisis par familles et voisinage (doublets, renvois, même
-racine), jamais dans l'ordre alphabétique.
+Un lot est de **12 à 15 mots**, choisis par familles et voisinage (doublets, renvois, même racine),
+jamais dans l'ordre alphabétique. Il se fait dans **une session neuve**, lancée par la compétence
+`/etymon-lot <mot>…` (`.claude/skills/etymon-lot/SKILL.md`) : l'orchestrateur est bref, n'ouvre
+aucune fiche, ne relaie aucun rapport. Chaque agent écrit son résultat dans `atelier/` et ne rend
+qu'une ligne d'état ; `data/` et `docs/` ne bougent qu'à la clôture, et le commit est fait une fois, à la fin.
 
-| Passe | Qui | Quoi | Consigne |
-|---|---|---|---|
-| 1 | rédacteur | pour chaque mot : dossier (tri compris), puis fiche dans `atelier/<id>/` | `docs/consignes/redacteur.md` |
-| 2 | relecteur (neuf) | toutes les fiches du lot, d'après leurs dossiers : un verdict par mot | `docs/consignes/relecture.md` |
-| 3 | rédacteur (repris, avec son contexte) | reprises (il adopte la proposition du relecteur quand elle est juste), auteurs et ouvrages d'après la BnF, écriture des fiches, lectures traditionnelles | `docs/consignes/redacteur.md` |
-| 4 | relecteur (repris) | seulement les remarques de la passe 2 et les lectures ajoutées | `docs/consignes/relecture.md` |
+| Étape | Qui | Quoi |
+|---|---|---|
+| 1 | script : `npm run lot -- sources <mots>` | pour chaque mot, `atelier/<id>/sources.md` : le Littré (famille comprise), le TLFi (plan des sens, étymologie et historique, autres articles), le début des entrées du Lewis & Short et du Bailly pour les formes latines et grecques relevées dans ces étymologies, la recherche de leurs radicaux dans le corpus de réflexe (passages ★ d'abord). Une page non lue est signalée (⚠), jamais prise pour une absence ; reprise après un 429 ou un 503 |
+| 2 | rédacteur (Opus, réflexion élevée) | pour chaque mot : dossier d'après `sources.md` (tri compris), fiche, **lectures traditionnelles** (une étape à part, texte source sous les yeux), dans `atelier/<id>/` ; les auteurs et ouvrages à créer dans `atelier/references.json`, les décisions dans `atelier/decisions.md`, les doutes dans `atelier/signalements.md` ; consigne `docs/consignes/redacteur.md` |
+| 3 | relecteur (Opus, réflexion élevée, neuf) | toutes les fiches du lot, d'après leurs dossiers : un verdict par mot, avec un `remplacement` (`{ champ, valeur }`) quand il sait exactement la phrase à écrire ; consigne `docs/consignes/relecture.md` |
+| 4 | script : `npm run lot -- reprendre <mots>` | applique les remplacements à `fiche.json`, essaie chaque fiche (typographie, validation avec le dépôt), marque les remarques `appliquee` ; ce qui reste (remarque sans remplacement, remplacement au chemin faux, essai refusé) va dans `atelier/a-reprendre.md` |
+| 4 bis | rédacteur (repris) | seulement pour `atelier/a-reprendre.md`, puis `reprendre` de nouveau |
+| 5 | vérificateur (Sonnet) | seulement les remarques appliquées et ce qu'elles changent, les lectures et le corpus du dossier ; il réécrit le verdict (`accepte`, ou les remarques restées ouvertes) |
+| 6 | script : `npm run lot -- clore <mots>` | écrit les fiches (lectures comprises, en `brouillon`), crée les auteurs et ouvrages de `references.json` d'après leur notice BnF, reporte `decisions.md` en tête de `docs/decisions.md` (section datée), régénère le contrat, lance `verifier:en-ligne` (adresses, citations mot pour mot), `verifier`, `valider` et les tests, et rend un résumé court |
 
-Puis `npm run valider` et un commit par lot, que Thibault relit. Une remarque restée ouverte à la
-passe 4 ne relance pas de boucle : le rédacteur la règle si elle est simple, sinon la fiche
-reste dans l'atelier et va aux signalements.
+Puis le commit et le push du lot, par l'orchestrateur ; Thibault relit. Une remarque restée ouverte
+après le vérificateur ne relance pas de boucle : le mot sort du lot (la clôture refuse un mot dont
+une remarque est ouverte), reste dans l'atelier et va aux signalements.
 
-Moteurs : **Claude Opus 5.5, réflexion élevée**, pour les deux rôles (agents du projet
-`.claude/agents/etymon-redacteur.md` et `etymon-relecteur.md`). Au premier pilote, les fautes
-venaient de la rédaction (Fable 5.1, réflexion élevée), et les propositions du relecteur (Opus
-5.5) étaient sobres et exactes : le travail est d'abord de fidélité aux sources.
+Moteurs : **Claude Opus 5.5, réflexion élevée** pour le rédacteur et le relecteur, **Sonnet** pour le
+vérificateur (agents du projet `.claude/agents/etymon-redacteur.md`, `etymon-relecteur.md`,
+`etymon-verificateur.md`). Au premier pilote, les fautes venaient de la rédaction (Fable 5.1,
+réflexion élevée), et les propositions du relecteur (Opus 5.5) étaient sobres et exactes : le travail
+est d'abord de fidélité aux sources, d'où Opus pour juger, et un modèle plus léger pour vérifier ce qui
+a été changé et copié.
 
 Un mot sacré (chemin `sacre`) s'arrête après son dossier : il se rédige à part, texte d'origine
 sous les yeux, avec sa lecture `premier` (une par tradition si elles divergent sur le sens du
@@ -83,10 +93,18 @@ Tout vit dans `atelier/`, hors du dépôt : un lot interrompu reprend où il s'�
   porte un, les étapes datées du sens en français. Du texte recopié seulement pour le domaine
   public (Littré, Lewis & Short, Georges, Wikisource) ; du TLFi, du Gaffiot et du Bailly, les faits seuls, jamais leur
   rédaction (AGENTS.md §5). Format : `scripts/lib/atelier.ts`.
-- **Fiche rédigée** (`atelier/<id>/fiche.json`) : le format de `npm run rediger`.
-- **Verdict** (`atelier/<id>/verdict.json`) : décision et remarques du relecteur.
+- **Sources** (`atelier/<id>/sources.md`) : ce que disent le Littré, le TLFi, les dictionnaires des
+  étymons et le corpus de réflexe, écrit par `npm run lot -- sources`, sans interprétation.
+- **Fiche rédigée** (`atelier/<id>/fiche.json`) : le format de `npm run rediger`, lectures
+  traditionnelles (`tradition.lectures`) comprises.
+- **Verdict** (`atelier/<id>/verdict.json`) : décision et remarques du relecteur ; une remarque peut
+  porter un `remplacement` (`{ champ, valeur }`), que `npm run lot -- reprendre` applique, et passe alors au
+  statut `appliquee`.
+- **À reprendre** (`atelier/a-reprendre.md`) : ce que `reprendre` n'a pas pu régler seul.
+- **Références** (`atelier/references.json`) : les auteurs et ouvrages à créer, avec leur notice BnF.
 - **Signalements** (`atelier/signalements.md`) : doutes sur le critère d'entrée, listes fermées
   touchées, limites du modèle, sources inaccessibles, remarques non suivies.
+- **Décisions du lot** (`atelier/decisions.md`) : lignes de tableau, reportées par `clore`.
 - **Journal des décisions** (`docs/decisions.md`, versionné) : les décisions prises à la place de
   Thibault, avec leur raison, qu'il relit (§2).
 - **Journal de méthode** (`docs/journal-methode.md`, versionné) : chaque ajustement de la méthode
@@ -145,25 +163,34 @@ la tradition.
 
 ## 8. L'économie
 
-- Les scripts d'abord (zéro jeton) ; le jugement seulement là où il faut juger.
-- Deux agents par lot, chacun repris une fois avec son contexte : le cadrage et les consignes se
-  lisent deux fois par lot, non plus cinq fois par mot (premier pilote : 51 agents, 3,9 millions
-  de jetons, environ 77 000 par agent, pour deux fiches acceptées).
+Mesure du 2026-10-05 (lots 3 à 18) : environ 1,20 $ par fiche, presque tout en relecture de contexte
+(chaque appel d'outil relit tout le contexte de l'agent ou de l'orchestrateur). But : 0,40 à 0,50 $
+par fiche, même rigueur.
+
+- Les scripts d'abord (zéro jeton) : les sources d'un mot se lisent en un appel (`sources.md`), non en
+  vingt ; les remplacements se font par script ; la clôture est une seule commande.
+- Peu d'appels d'outil par agent : un agent qui écrit dans `atelier/` et rend une ligne d'état ;
+  l'orchestrateur n'ouvre rien et ne relaie rien.
+- Le bon modèle à chaque étape : Opus pour rédiger et pour relire, Sonnet pour vérifier ce qui a changé.
+- Une session neuve par lot, de 12 à 15 mots : le cadrage et les consignes se lisent une fois par agent.
+- `data/` et `docs/` ne bougent pas pendant le lot : le hook de fin de tour qui réclame un commit ne se
+  déclenche pas.
 - Des dossiers complets du premier coup (usage d'aujourd'hui, étapes datées, sens de chaque
   maillon sourcé) : c'est leur manque qui faisait refuser les fiches.
-- La seconde relecture ne relit que les remarques et les lectures.
-- Mesurer chaque lot (jetons, fiches acceptées, remarques par critère) et ajuster d'après la
-  mesure, non d'après l'intuition.
+- Mesurer chaque lot (jetons, fiches acceptées, remarques par critère, remarques réglées par script) et
+  ajuster d'après la mesure, non d'après l'intuition.
 
 ## 9. Les outils
 
 | Outil | Rôle |
 |---|---|
+| `npm run lot -- sources\|reprendre\|clore <mot>…` | le lot, par script : le dossier brut d'un mot (`sources.md`), l'application des remplacements d'un verdict, la clôture (écriture des fiches, références, décisions, contrôles) ; §3 |
 | `npm run dossier -- <mot>` | crée le dossier (Littré recopié) et affiche le Littré, le plan des sens du TLFi (avec ses marques d'usage) et sa rubrique « Étymologie et historique », lus par l'API du portail du CNRTL ; `--consulter` pour un mot voisin ; `--verifier` contrôle un dossier et son verdict |
 | `npm run texte -- <adresse>` | texte brut d'une page, tel quel (`bailly:φρήν` pour une entrée du Bailly) ; `--autour "<mot>"` pour n'en lire que les passages utiles |
 | `npm run bnf -- auteur\|ouvrage "<nom>"` | cherche les notices BnF ; avec `--cb`, écrit la fiche en brouillon d'après la notice |
-| `npm run rediger -- <fiche.json>… --dossier` | écrit les fiches d'après leur dossier, avec `--modele` et `--reflexion` ; `--essai` valide sans écrire |
+| `npm run rediger -- <fiche.json>… --dossier` | écrit les fiches d'après leur dossier (lectures comprises), avec `--modele` et `--reflexion` ; `--essai` valide sans écrire |
 | `npm run corpus -- chercher <radical>` | cherche un étymon dans le corpus de réflexe des lectures (après `npm run corpus -- telecharger`) ; les passages ★ expliquent un mot |
 | `npm run liste -- <liste> "<valeur>"` | ajoute une langue, une tradition ou un thème, et régénère les consignes ; `npm run etat -- themes` montre les mots de chaque thème |
 | `docs/consignes/*.md` | les consignes du rédacteur, du relecteur et de chaque étape, générées par `npm run contrat` |
-| `.claude/agents/etymon-*.md` | les deux agents, avec leur modèle et leur réflexion |
+| `.claude/agents/etymon-*.md` | les trois agents (rédacteur, relecteur, vérificateur), avec leur modèle et leur réflexion |
+| `.claude/skills/etymon-lot/SKILL.md` | la compétence qui orchestre un lot (`/etymon-lot <mot>…`) |
