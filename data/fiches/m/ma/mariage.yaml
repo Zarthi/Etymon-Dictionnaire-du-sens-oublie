@@ -1,0 +1,49 @@
+mot: mariage
+nature: [ nom masculin ]
+etymologie:
+  - forme: marier
+    langue: français
+  - forme: maritare
+    langue: latin
+    sens: donner en mariage
+  - forme: maritus
+    langue: latin
+  - forme: mas
+    langue: latin
+    sens: mâle
+explication: >-
+  Maritus nommait l'homme marié ; maritare, c'était donner un mari à une femme,
+  ou attacher la vigne à un arbre. Mariage a nommé le sacrement (vers 1135),
+  puis l'union légitime ; il désigne aujourd'hui l'union consacrée par des actes
+  civils ou religieux, et sa célébration.
+famille: [ marier, mari, remarier ]
+renvois: [ epoux ]
+themes: [ famille ]
+tradition:
+  lectures:
+    - texte: "Vir dit le sexe, non l'union, à moins qu'on n'ajoute eius ; maritus, même employé seul, dit l'époux, et il est tiré de mas."
+      citation: "Vir sexum significat, non coniugium, nisi adieceris vir eius. […] Maritus vero etiam sine adiectione coniugem sonat; et a mare maritus, quasi mas."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 7, 1-2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: mariage
+  - ouvrage: tlfi
+    entree: marier
+  - ouvrage: lewis-short
+    entree: marito
+  - ouvrage: tlfi
+    entree: mari
+  - ouvrage: littre
+    entree: mari
+  - ouvrage: lewis-short
+    entree: mas
+  - ouvrage: littre
+    entree: mariage
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

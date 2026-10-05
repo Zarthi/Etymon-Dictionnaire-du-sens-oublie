@@ -1,0 +1,26 @@
+mot: orphelin
+nature: [ nom ]
+etymologie:
+  - forme: orphanus
+    langue: latin ecclésiastique
+  - forme: ὀρφανός
+    langue: grec ancien
+    sens: privé de son père ou de sa mère
+explication: >-
+  Ὀρφανός se disait aussi de qui est privé d'enfants, et de l'oiseau privé de
+  ses petits. Le latin de l'Église l'a reçu à la fin du IVe siècle ; orphelin
+  désigne aujourd'hui l'enfant qui a perdu l'un de ses parents ou les deux, et,
+  adjectif, qui est privé de protection ou d'affection.
+themes: [ famille ]
+sources:
+  - ouvrage: tlfi
+    entree: orphelin
+  - ouvrage: bailly
+    entree: ὀρφανός
+  - ouvrage: littre
+    entree: orphelin
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

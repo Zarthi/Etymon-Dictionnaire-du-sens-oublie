@@ -1,0 +1,35 @@
+mot: patrie
+nature: [ nom féminin ]
+etymologie:
+  - forme: patria
+    langue: latin
+    sens: terre des pères, pays natal
+explication: >-
+  Emprunté en 1516 au sens de communauté politique à laquelle on appartient,
+  patrie passait encore sous Henri II pour un néologisme ; il désigne aussi,
+  depuis 1611, le lieu où l'on est né.
+famille: [ patriote, compatriote, patriotisme, père ]
+renvois: [ nation, pays ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: "La patria est ainsi nommée parce qu'elle est commune à tous ceux qui y sont nés."
+      citation: "Patria autem vocata quod communis sit omnium, qui in ea nati sunt."
+      sources:
+        - ouvrage: etymologies
+          entree: "XIV, 5, 19"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XIV
+sources:
+  - ouvrage: tlfi
+    entree: patrie
+  - ouvrage: lewis-short
+    entree: patrius1
+  - ouvrage: littre
+    entree: patrie
+  - ouvrage: littre
+    entree: patriote
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

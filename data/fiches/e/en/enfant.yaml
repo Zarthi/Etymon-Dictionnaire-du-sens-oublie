@@ -1,0 +1,42 @@
+mot: enfant
+nature: [ nom masculin ]
+etymologie:
+  - forme: infans
+    langue: latin
+    sens: qui ne parle pas
+    elements:
+      - forme: in-
+        sens: non
+      - forme: fari
+        sens: parler
+explication: >-
+  Infans se disait aussi de qui n'est pas éloquent, et du petit enfant parce
+  qu'il ne parle pas encore ; le mot a fini par désigner tout enfant. Enfant
+  nomme aujourd'hui l'être humain jusqu'à l'adolescence, et le fils ou la fille
+  par rapport à ses parents.
+famille: [ enfance, enfanter, infantile, infanterie ]
+themes: [ famille ]
+tradition:
+  lectures:
+    - texte: "L'infans est l'homme du premier âge, qui ne sait pas encore parler : ses dents, pas encore bien rangées, articulent mal la parole."
+      citation: "Infans dicitur homo primae aetatis; dictus autem infans quia adhuc fari nescit, id est loqui non potest. Nondum enim bene ordinatis dentibus minus est sermonis expressio."
+      sources:
+        - ouvrage: etymologies
+          entree: "XI, 2, 9"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: enfant
+  - ouvrage: littre
+    entree: enfant
+  - ouvrage: lewis-short
+    entree: infans
+  - ouvrage: lewis-short
+    entree: for
+  - ouvrage: littre
+    entree: infanterie
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -409,3 +409,18 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Lecture d'*illusion* | Thomas d'Aquin, IIa-IIae, q. 75, a. 2, co. (plutôt que a. 1, s. c., plus bref) | il tire le nom d'*illusio* du jeu où l'on tourne un mal tenu pour petit | à relire |
 | Lecture d'*évidence* | Cicéron, *Académiques*, II, 6, 17 (*Lucullus*), texte de Wikisource (*Academica priora*) ; ouvrage `academiques` créé d'après la BnF (cb124305302) ; la voix est celle de l'œuvre (Cicéron), non du personnage | il lit *euidentia*, forme de la chaîne : mot choisi pour rendre le grec, qu'on ne définit pas tant il est clair ; le mot grec n'est pas nommé dans le texte de la lecture (il n'est pas dans la chaîne) | à relire |
 | Lecture de *certitude* | Thomas d'Aquin, IIa-IIae, q. 18, a. 4, co. | certitude par essence dans la faculté de connaître, par participation dans ce qui est mû sans faillir vers sa fin : il complète l'histoire (du caractère de la chose à l'état de l'esprit) | à relire |
+
+
+## 2026-10-05 — Lot 16 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Verdicts | propositions du relecteur adoptées telles quelles : *domestique* (proposition sur *famille* retirée, « l'ensemble des domestiques d'une maison »), *père* (« épithète de vénération » sans « aux dieux » ; Dieu le Père gardé dans l'usage), *patrie* (*patrius* retiré : sens premier « terre des pères, pays natal » ; première phrase retirée), *mariage*, *époux*, *enfant*, *orphelin* (explications) | toutes justes ; pas de renvoi *domestique* → *famille* : notions d'ordres différents | à relire |
+| Lectures de *père* | Isidore, IX, 5, 3 (*pater*, de l'acte qui engendre) et Augustin, *La Cité de Dieu*, XIX, 16 (nom de père de famille) ; Isidore, IX, 5, 7, non retenu | IX, 5, 7 redit Augustin, XIX, 16 ; la qualité, non la quantité | à relire |
+| Lecture de *famille* | Isidore, IX, 5, 11-12 : *familia* tirée de la cuisse (la lignée), dite des esclaves « par abus » | lit le mot et prend le contre-pied de l'histoire | à relire |
+| Lectures de *foyer* | Isidore, XX, 10, 1 (du grec) et Varron rapporté par Isidore au même passage (`auteur: varron`) ; *Différences*, I, 307, non retenu | deux voix dans un passage, une lecture chacune ; les *Différences* redisent Varron | à relire |
+| Lecture de *mariage* | Isidore, IX, 7, 1-2 (*maritus* dit l'époux même seul ; tiré de *mas*) | lit une forme de la chaîne et la distingue du nom de l'homme | à relire |
+| Lecture d'*époux* | Isidore, IX, 7, 3-4 : le *sponsus* est celui qui promet et donne des garants, non celui qui est promis | lit le mot et s'écarte du sens « promis » | à relire |
+| Lecture d'*enfant* | Isidore, XI, 2, 9 (dents encore mal rangées) ; *Différences* et Augustin, XVI, non retenus | Isidore complète l'histoire par la raison qu'il donne ; les deux autres la redisent | à relire |
+| Mots étrangers des lectures | *femur*, *patratio*, *vir*, *sponsores*, *FOS* paraphrasés, non cités | règle : un mot étranger cité dans un texte est une forme de la chaîne | à relire |
+| Seconde relecture | propositions adoptées telles quelles : textes des lectures de *famille*, *foyer*, *père*, *mariage*, *époux* nommant les mots tels que la citation les écrit (*femore*, *FOS*, *foveant*, *patratione*, *vir*, *eius*, *spondebant*…) ; citation de *père* allongée (« Patratio enim est rei veneriae consummatio. ») ; *patrie* : lecture d'Isidore, XIV, 5, 19, drapeau `tradition`, `corpus` corrigé ; *orphelin* : Isidore, XI, 2, 12, noté au `corpus` comme écarté (redit l'histoire) | justes ; le texte d'une lecture peut nommer le mot que l'auteur lit, tel que sa citation l'écrit | à relire |
