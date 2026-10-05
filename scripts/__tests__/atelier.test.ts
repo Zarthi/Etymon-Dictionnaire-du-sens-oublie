@@ -2,6 +2,7 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { schemaDossier, schemaVerdict, sourcesDuDossier, squeletteDossier } from "../lib/atelier.ts";
 import { annee, datesAffichees, lireNotices } from "../lib/bnf.ts";
+import { graphieDuLittre } from "../lib/littre.ts";
 import { lireTlfi, premierAvecEtymologie, type ReponseTlfi } from "../lib/tlfi.ts";
 import { ajouter } from "../liste.ts";
 import { passages } from "../texte.ts";
@@ -81,6 +82,36 @@ describe("TLFi : choix de la nature", () => {
     const charger = async () => (appels++, { reponse: avecEtymologie("verbe") });
     expect((await premierAvecEtymologie(charger)).tlfi?.nature).toBe("verbe");
     expect(appels).toBe(1);
+  });
+  describe("homographes (lire : monnaie ou verbe)", () => {
+    const article = (pos: string, full: string, autres: string[]): ReponseTlfi => ({
+      header: { pos, full_pos: full, others: autres.map((p) => ({ pos: p })) },
+      content: [{ id: "etymology", content: [`<div>${full}</div>`] }],
+    });
+    const lire = (nature?: string) =>
+      Promise.resolve({ reponse: nature === "verbe" ? article("verbe", "verbe", ["nom"]) : article("nom", "nom féminin", ["verbe"]) });
+    it("préfère la nature attendue, et liste les autres articles", async () => {
+      expect(await premierAvecEtymologie(lire, "verbe")).toMatchObject({ tlfi: { nature: "verbe" }, autres: ["nom"] });
+    });
+    it("reconnaît « nom féminin » dans l'article « nom »", async () => {
+      expect(await premierAvecEtymologie(lire, "nom féminin")).toMatchObject({ tlfi: { nature: "nom féminin" }, autres: ["verbe"] });
+    });
+    it("sans nature attendue, garde l'ordre de l'API", async () => {
+      expect(await premierAvecEtymologie(lire)).toMatchObject({ tlfi: { nature: "nom féminin" }, autres: ["verbe"] });
+    });
+    it("une nature attendue absente du portail laisse l'article par défaut", async () => {
+      expect(await premierAvecEtymologie(lire, "adjectif")).toMatchObject({ tlfi: { nature: "nom féminin" } });
+    });
+  });
+  describe("graphie du Littré", () => {
+    const entree = (terme: string) => ({ terme, nature: "v. a.", etymologie: "" });
+    it("rend la graphie accentuée d'un mot écrit sans accents", () => {
+      expect(graphieDuLittre([entree("ÉLIRE")], "elire")).toBe("élire");
+    });
+    it("rien si le mot est déjà écrit comme le Littré, ou si l'entrée est un autre mot", () => {
+      expect(graphieDuLittre([entree("élire")], "élire")).toBeUndefined();
+      expect(graphieDuLittre([entree("elirer")], "elire")).toBeUndefined();
+    });
   });
   it("rend un résultat vide si aucune nature n'a d'étymologie", async () => {
     expect(await premierAvecEtymologie(async () => ({ reponse: adjectif }))).toEqual({});

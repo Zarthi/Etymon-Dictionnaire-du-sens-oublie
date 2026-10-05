@@ -83,6 +83,16 @@ export function chercher(index: IndexLittre, mot: string): EntreeLittre[] | unde
 }
 
 /**
+ * Graphie accentuée du Littré pour un mot écrit sans accents (« elire » → « élire »), si elle
+ * diffère de celle donnée : l'entrée de l'index garde les accents que la recherche ignore.
+ */
+export function graphieDuLittre(entrees: EntreeLittre[], mot: string): string | undefined {
+  const sansAccents = (t: string) => t.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+  const graphie = entrees.map((e) => e.terme.toLowerCase()).find((t) => t !== mot.toLowerCase() && sansAccents(t) === sansAccents(mot));
+  return graphie;
+}
+
+/**
  * Nature d'un mot d'après ses entrées du Littré : celle de l'entrée écrite comme le mot, accents
  * compris (« âme », non l'adjectif « amé », que la normalisation confond), sinon la première connue.
  */

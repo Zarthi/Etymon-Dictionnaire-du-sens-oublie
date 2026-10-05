@@ -11,7 +11,7 @@ export const urlApiTlfi = (mot: string, nature?: string) => `https://www.cnrtl.f
 
 export interface ReponseTlfi {
   /** `others` : les autres natures du même mot (« ami » adjectif a pour autre article « ami » nom). */
-  header?: { full_pos?: string; others?: { pos: string }[] };
+  header?: { pos?: string; full_pos?: string; others?: { pos: string }[] };
   content?: { id: string; content: unknown }[];
 }
 
@@ -67,26 +67,47 @@ async function chargerReponse(mot: string, nature?: string): Promise<{ reponse: 
   }
 }
 
-export type ResultatTlfi = { tlfi?: Tlfi; injoignable?: string };
+export type ResultatTlfi = {
+  tlfi?: Tlfi;
+  injoignable?: string;
+  /** Natures des autres articles du portail pour ce mot (homographes), à aller lire si ce n'est pas le bon. */
+  autres?: string[];
+};
+
+/** La nature attendue (« nom féminin ») est-elle celle d'un article du portail (« nom ») ? */
+const convient = (attendue: string, pos: string | undefined) => pos !== undefined && (attendue === pos || attendue.startsWith(`${pos} `));
 
 /**
- * L'article de la nature par défaut, puis, s'il n'a pas d'étymologie (l'API rend l'adjectif pour
- * *ami* et *ennemi*, dont l'étymologie est à l'article du nom), les autres natures annoncées.
+ * L'article de la nature attendue (celle du Littré, quand on la connaît), sinon celui que l'API
+ * rend par défaut ; puis, s'il n'a pas d'étymologie (l'API rend l'adjectif pour *ami* et *ennemi*,
+ * dont l'étymologie est à l'article du nom), les autres natures annoncées. Avec l'article choisi,
+ * la liste des natures des autres articles : *lire* nom (la monnaie) ou verbe.
  * Ne cherche que dans une réponse lue : sinon, la raison pour laquelle elle ne l'a pas été.
  */
 export async function premierAvecEtymologie(
   charger: (nature?: string) => Promise<{ reponse: ReponseTlfi } | { injoignable: string }>,
+  attendue?: string,
 ): Promise<ResultatTlfi> {
   const premiere = await charger();
   if ("injoignable" in premiere) return premiere;
-  const trouve = lireTlfi(premiere.reponse);
-  if (trouve) return { tlfi: trouve };
-  for (const { pos } of premiere.reponse.header?.others ?? []) {
-    const autre = await charger(pos);
-    const tlfi = "reponse" in autre ? lireTlfi(autre.reponse) : undefined;
-    if (tlfi) return { tlfi };
+  const posDefaut = premiere.reponse.header?.pos;
+  const autresPos = (premiere.reponse.header?.others ?? []).map((o) => o.pos);
+  const toutes = [posDefaut, ...autresPos];
+  // Ordre d'essai : la nature attendue d'abord, puis la nature par défaut, puis les autres.
+  const voulue = attendue && !convient(attendue, posDefaut) ? autresPos.find((p) => convient(attendue, p)) : undefined;
+  const ordre = voulue ? [voulue, posDefaut, ...autresPos.filter((p) => p !== voulue)] : toutes;
+  for (const pos of ordre) {
+    let reponse: ReponseTlfi | undefined = premiere.reponse;
+    if (pos !== posDefaut) {
+      const autre = await charger(pos);
+      reponse = "reponse" in autre ? autre.reponse : undefined;
+    }
+    const tlfi = reponse && lireTlfi(reponse);
+    if (!tlfi) continue;
+    const autres = toutes.filter((p): p is string => p !== undefined && p !== pos);
+    return { tlfi, ...(autres.length ? { autres } : {}) };
   }
   return {};
 }
 
-export const consulterTlfi = (mot: string) => premierAvecEtymologie((nature) => chargerReponse(mot, nature));
+export const consulterTlfi = (mot: string, attendue?: string) => premierAvecEtymologie((nature) => chargerReponse(mot, nature), attendue);
