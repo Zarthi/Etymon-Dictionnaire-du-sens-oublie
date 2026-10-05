@@ -6,23 +6,36 @@ etymologie:
     sens: compassion, pitié
   - forme: misericors
     langue: latin
-    sens: qui a le cœur sensible au malheur
+    sens: qui a le cœur sensible à la pitié
     elements:
-      - forme: miser
-        sens: malheureux
+      - forme: misereo
+        sens: avoir pitié
       - forme: cor
         sens: cœur
 explication: >-
-  Le mot unit la misère et le cœur : il désigne la pitié de celui que touche le malheur
-  d'autrui. L'usage l'a surtout réservé au pardon, en particulier à celui de Dieu.
+  Le français a reçu le mot au XIIe siècle pour la bonté par laquelle Dieu
+  pardonne aux hommes ; la vertu qui porte à soulager les misères d'autrui n'est
+  attestée que vers 1268. Il désigne aujourd'hui cette compassion, et la
+  générosité qui pardonne au coupable ou au vaincu.
 famille: [ miséricordieux ]
-themes: [ religion, morale ]
+themes: [ morale, religion ]
+tradition:
+  lectures:
+    - texte: "Le miséricordieux tient son nom de ce qu'il compatit à la misère d'autrui, et la miséricorde, de ce que la misère d'autrui rend malheureux le cœur de qui s'en afflige. L'étymologie ne vaut pas partout : en Dieu, la miséricorde est sans aucune misère du cœur."
+      citation: "Misericors a conpatiendo alienae miseriae vocabulum est sortitus: et hinc appellata misericordia, quod miserum cor faciat dolentis aliena miseria. Non autem occurrit ubique haec etymologia; nam est in Deo misericordia sine ulla cordis miseria."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 164"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
 sources:
-  - ouvrage: littre
-    entree: miséricorde
   - ouvrage: tlfi
     entree: miséricorde
+  - ouvrage: littre
+    entree: miséricorde
+  - ouvrage: lewis-short
+    entree: misericors
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

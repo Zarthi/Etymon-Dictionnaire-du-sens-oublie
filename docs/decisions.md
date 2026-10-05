@@ -79,5 +79,20 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Sujet | Décision | Raison | Relecture |
 |---|---|---|---|
 | Date de *Schizophrenie* | `forge.date` : 1908, sans `ouvrage` | la bibliographie de Bleuler (*Dementia praecox*, 1911, n° 73) cite son article de 1908 « Die Prognose der Dp. (Schizophreniegruppe) » ; le TLFi date du livre de 1911 ; l'article n'a pas de fiche d'ouvrage | à relire |
-| Suffixe *-isme* (*altruisme*) | élément *-isme*, « ensemble de penchants » | le schéma veut deux éléments au moins ; aucune source consultée ne glose le suffixe ; Littré définit *altruisme* et *égoïsme*, termes de philosophie, par ce même genre | à relire |
+| Chaîne d'*altruisme* | sans découpage : maillon français de forme *altruisme* (forgé, sur le modèle d'*égoïsme*), puis *alter* ; *autrui* dans la famille | aucune source consultée ne glose *-isme*, et le schéma veut deux éléments sourcés (relecture : un sens tiré du tout ne vaut pas pour la partie) | à relire |
 | Sens de *Utopia* | « ce qui ne se rencontre en aucun lieu » (Littré) sur le maillon latin | le validateur veut un maillon porteur de sens, et un jeu d'alternatives n'en tient pas lieu | à relire |
+
+## 2026-10-05 — Lot 4 (passe 1 : esprit, souffle, inspirer, respirer, âme, animal, génie, ingénieur, ingénu)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chemin de *génie* | `ordinaire`, non `sacre` | *genius* est un dieu de la religion romaine, qui n'est pas une tradition de data/traditions.json ; le mot n'est sacré dans aucune tradition reçue par l'app | à relire |
+| Chaîne de *génie* | maillon *gignere*, « engendrer », après *genius* ; `premier` sur *genius* | le Lewis & Short rattache *genius* à la racine de *gigno*, ce qui relie *génie*, *ingénu*, *ingénieur* ; le sens affiché en tête reste celui du mot, non celui de sa racine | à relire |
+| Maillon français d'*ingénieur* | *engigneor*, dérivé d'*engin* (TLFi), non *ingeniatorem* (Littré) | le TLFi est plus récent ; les deux remontent à *ingenium* | à relire |
+| Éléments d'*ingenuus* | *in*, « dans » (Littré), et *gignere*, « engendrer » (Lewis & Short) ; le *genuus* du Littré non retenu | le Lewis & Short dérive *ingenuus* de *ingigno* et ne donne pas *genuus* | à relire |
+| *ingenium* (*ingénieur*) | non découpé | la composition est dite sur *ingénu* ; le sens « nature innée » la porte déjà, et la chaîne a trois maillons | à relire |
+| Chaîne d'*esprit* | arrêtée à *spiritus* | *spirare*, « souffler », n'ajoute rien à « souffle » ; la parenté avec *inspirer* et *respirer* est dans `famille` | à relire |
+| *esprit*, *âme* | chemin `consacre` | profanes en latin (souffle), reçus en français d'abord par des textes chrétiens (TLFi) ; rédigés comme les autres (§3.3 bis) | à relire |
+| Racine de *souffle* | le fait reste au dossier ; l'explication ne compare pas *souffle* et *esprit* ; renvoi *souffle* → *respirer* (sans racine commune) | les sources donnent deux étymons distincts (*sufflare*, de *sub* et *flare* ; *spiritus*, de *spirare*) mais ne les comparent pas en toutes lettres | à relire |
+| Sens d'*anima* | « souffle de vie » sur *animal*, « souffle, air » sur *âme* | chaque fiche suit la glose de son entrée (TLFi à *animal* ; Littré, TLFi, Lewis & Short à *âme*) | à relire |
+| Corpus de réflexe des lectures | noté au dossier en passe 2, avec les lectures ; pistes d'Isidore notées dès la passe 1 | la passe 1 ne rédige pas les lectures ; le drapeau `tradition` est posé d'après les passages lus | à relire |

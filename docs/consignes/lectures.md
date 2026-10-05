@@ -30,7 +30,7 @@ Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est b
 
 ## Règles
 
-- Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Resh Lakish dans le Talmud).
+- Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Rabban Gamliel dans la Michna).
 - `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.
 - Le Nom divin s'écrit comme le texte l'écrit, jamais traduit (« Dieu ») ni vocalisé (« Jéhovah », « Yahvé ») ; une citation garde le texte tel quel. Dans le texte d'une lecture, « le Seigneur » est admis : c'est le substitut traditionnel, juif et chrétien, qui évite de prononcer le Nom, non une traduction.
 - Rien trouvé dans un texte en ligne : pas de lecture ; note la piste dans les signalements.
@@ -69,9 +69,9 @@ Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est b
 
 ## Exemples
 
-Lectures du dépôt (Lactance sur *religion* ; Resh Lakish, parole rapportée par le Talmud, sur *Satan*) :
+Lectures du dépôt (Lactance sur *religion* ; Rabban Gamliel, parole rapportée par la Michna, sur *Pâque*) :
 
 ```json
 {"texte":"C'est le lien de la piété, qui nous tient attachés à Dieu, qui a donné son nom à la religion ; non relegere, comme l'a compris Cicéron.","citation":"hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio nomen accepit, non ut Cicero interpretatus est a relegendo","hypothese":"religare","sources":[{"ouvrage":"institutions-divines","entree":"IV, 28, 3","url":"https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV"}]}
-{"texte":"Le satan, le mauvais penchant et l'ange de la mort ne font qu'un : c'est celui qui, dans le livre de Job, « sortit de devant le Seigneur ».","citation":"הוא שטן הוא יצר הרע הוא מלאך המות","auteur":"resh-lakish","sources":[{"ouvrage":"talmud-de-babylone","entree":"Baba Batra 16a","url":"https://he.wikisource.org/wiki/בבא_בתרא_טז_א"}]}
+{"texte":"Qui n'a pas dit, à la fête, ces trois choses, la Pâque, le pain azyme et les herbes amères, n'a pas accompli son devoir. La Pâque, parce que le Lieu passa par-dessus les maisons de nos pères en Égypte.","citation":"כל שלא אמר שלשה דברים אלו בפסח לא יצא ידי חובתו, ואלו הן: פסח, מצה ומרור. פסח, על שום שפסח המקום על בתי אבותינו במצרים","auteur":"rabban-gamliel","sources":[{"ouvrage":"michna","entree":"Pesahim 10, 5","url":"https://he.wikisource.org/wiki/משנה_פסחים_י_ה"}]}
 ```

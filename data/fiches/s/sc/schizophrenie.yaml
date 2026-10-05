@@ -5,19 +5,19 @@ etymologie:
     langue: allemand
     forge:
       par: [ eugen-bleuler ]
-      date: "1911"
-      ouvrage: dementia-praecox
+      date: "1908"
   - langue: grec ancien
     sens: esprit fendu
     elements:
       - forme: σχίζω
         sens: fendre
       - forme: φρήν
-        sens: diaphragme
+        sens: esprit
 explication: >-
-  Bleuler renommait la démence précoce : non un dédoublement de la personnalité,
-  contresens devenu courant, mais une discordance entre pensée, affects et volonté. Les
-  Grecs situaient la pensée dans la poitrine, non dans la tête.
+  Bleuler renommait la démence précoce, parce que la scission des fonctions
+  psychiques en était à ses yeux l'un des caractères les plus importants. En
+  grec, φρήν désignait d'abord le diaphragme, puis le cœur ou l'âme, siège des
+  sentiments et de la pensée.
 famille: [ schizophrène, frénésie, frénétique ]
 renvois: [ delire, folie ]
 themes: [ esprit, santé ]
@@ -26,11 +26,27 @@ tradition:
 sources:
   - ouvrage: tlfi
     entree: schizophrénie
+  - ouvrage: tlfi
+    entree: schizo-
+  - ouvrage: tlfi
+    entree: -phrénie
   - ouvrage: bailly
     entree: σχίζω
   - ouvrage: bailly
     entree: φρήν
+  - ouvrage: littre
+    entree: frénésie
+  - ouvrage: dementia-praecox
+    entree: p. 5
+    url: https://archive.org/details/b21296157
+  - ouvrage: dementia-praecox
+    entree: Vorwort
+    url: https://archive.org/details/b21296157
+  - ouvrage: dementia-praecox
+    entree: Literaturverzeichnis, n° 73
+    url: https://archive.org/details/b21296157
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

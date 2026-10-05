@@ -6,32 +6,42 @@ etymologie:
     sens: action d'assiéger, blocus
   - forme: obsidere
     langue: latin
-    sens: être installé devant, investir
+    sens: s'asseoir devant une place, l'assiéger
+    elements:
+      - forme: ob
+        sens: devant
+      - forme: sedere
+        sens: être assis
 explication: >-
-  Obsidere, c'est assiéger : l'ennemi s'installe devant la ville sans y entrer.
-  L'obsession désigne aujourd'hui une idée qui s'impose à l'esprit malgré lui, et le mot
-  ne suppose plus d'assaillant extérieur.
-famille: [ obséder, obsédant ]
-renvois: [ demon, oppression ]
-themes: [ esprit, religion ]
+  En français, le mot a d'abord nommé le siège d'une place (1470), puis l'état
+  d'une personne obsédée par un démon (1590). Depuis 1799, il désigne une idée
+  ou une image qui s'impose à l'esprit sans relâche, et en psychiatrie (1866)
+  une pensée involontaire et angoissante.
+famille: [ obséder, obsédant, obsessionnel ]
+themes: [ esprit, santé ]
 tradition:
   lectures:
-    - texte: Le démon obsède en tourmentant du dehors, sans entrer dans le corps ;
-        il possède quand il y est entré et ne le quitte plus.
-      citation: L'obsession, au contraire, est lorsque le démon, sans entrer dans
-        le corps d'une personne, la tourmente et l'obsède au dehors
+    - texte: "L'obsession, c'est le démon qui tourmente une personne du dehors, sans entrer dans son corps."
+      citation: "L'obsession, au contraire, est lorsque le démon, sans entrer dans le corps d'une personne, la tourmente et l'obsède au dehors"
       sources:
         - ouvrage: dictionnaire-de-la-bible
-          entree: Obsession du démon
+          entree: "Obsession du démon"
           url: https://archive.org/download/dictionnairehis03calm/dictionnairehis03calm_djvu.txt
 sources:
-  - ouvrage: littre
+  - ouvrage: tlfi
     entree: obsession
-  - ouvrage: gaffiot
+  - ouvrage: lewis-short
     entree: obsessio
-  - ouvrage: gaffiot
+  - ouvrage: littre
+    entree: obséder
+  - ouvrage: lewis-short
     entree: obsideo
+  - ouvrage: lewis-short
+    entree: ob
+  - ouvrage: tlfi
+    entree: obséder
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon

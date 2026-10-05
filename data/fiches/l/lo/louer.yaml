@@ -4,19 +4,22 @@ etymologie:
   - forme: locare
     langue: latin
     sens: placer
-  - forme: locus
-    langue: latin
-    sens: lieu
 explication: >-
-  Le latin locare signifie placer, mettre en un lieu ; il a pris le sens de donner à
-  loyer, c'est-à-dire placer une chose chez un autre contre un prix. Le rapport avec le
-  lieu ne s'entend plus dans louer.
-famille: [ location, lieu ]
+  Locare joignait déjà au sens de placer celui de donner à loyer. En français,
+  louer a d'abord dit, vers 1100, l'engagement d'un homme contre un salaire,
+  puis le fait d'obtenir contre paiement l'usage d'un bien ; il se dit
+  aujourd'hui d'un bien, d'un service ou d'une place réservée.
+famille: [ loyer, louage, location ]
 themes: [ commerce ]
 sources:
   - ouvrage: littre
     entree: louer
+  - ouvrage: tlfi
+    entree: louer
+  - ouvrage: littre
+    entree: loyer
 redaction:
   - par: IA
     detail: Claude Opus 5.5
+    reflexion: élevée
 statut: brouillon
