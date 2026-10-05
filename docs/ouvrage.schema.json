@@ -31,7 +31,8 @@
         "enum": [
           "juive",
           "chrétienne",
-          "grecque"
+          "grecque",
+          "romaine"
         ],
         "description": "Tradition (liste fermée : data/traditions.json)."
       }

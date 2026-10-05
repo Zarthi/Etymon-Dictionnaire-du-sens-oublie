@@ -1,0 +1,16 @@
+nom: Varron
+nomComplet: Marcus Terentius Varro
+naissance: 116 av. J.-C.
+mort: 27 av. J.-C.
+description: >-
+  Érudit romain du Ier siècle av. J.-C. ; son traité De la langue latine
+  explique l'origine des mots latins.
+traditions: [ romaine ]
+sources:
+  - ouvrage: bnf
+    entree: cb119277168
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

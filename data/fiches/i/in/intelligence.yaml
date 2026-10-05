@@ -1,0 +1,48 @@
+mot: intelligence
+nature: [ nom féminin ]
+etymologie:
+  - forme: intelligentia
+    langue: latin
+  - forme: intellegere
+    langue: latin
+    sens: comprendre, discerner
+    elements:
+      - forme: inter
+        sens: entre
+      - forme: legere
+        sens: choisir
+explication: >-
+  Le latin médiéval avait donné à intelligentia les sens d'ange et de bonne
+  entente ; le français les a reçus : un être spirituel chez Oresme (1370-1372),
+  des relations secrètes vers 1500. Le mot nomme aujourd'hui la faculté de
+  comprendre, que désignait déjà le latin.
+famille: [ intelligent, intelligible ]
+renvois: [ esprit, raison ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: intelligence
+  - ouvrage: littre
+    entree: intelligent
+  - ouvrage: tlfi
+    entree: intelligence
+  - ouvrage: lewis-short
+    entree: intellego
+  - ouvrage: lewis-short
+    entree: intellegentia
+  - ouvrage: lewis-short
+    entree: inter
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=inter1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le nom d'intellect dit une connaissance intime : comprendre, c'est comme lire au-dedans. La connaissance des sens s'arrête aux qualités extérieures ; celle de l'intellect pénètre jusqu'à l'essence de la chose."
+      citation: "nomen intellectus quandam intimam cognitionem importat, dicitur enim intelligere quasi intus legere. Et hoc manifeste patet considerantibus differentiam intellectus et sensus, nam cognitio sensitiva occupatur circa qualitates sensibiles exteriores; cognitio autem intellectiva penetrat usque ad essentiam rei"
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 8, a. 1"
+          url: https://www.corpusthomisticum.org/sth3001.html
+statut: brouillon

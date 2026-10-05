@@ -1,0 +1,40 @@
+mot: lire
+nature: [ verbe ]
+etymologie:
+  - forme: legere
+    langue: latin
+    sens: ramasser, recueillir
+explication: >-
+  En latin, legere se disait proprement de ce qu'on recueille (olives, fleurs,
+  ossements d'un mort), puis de la lecture. En français, lire signifie dès le
+  XIe siècle suivre une écriture des yeux et la dire à haute voix ; depuis 1592,
+  aussi deviner d'après des signes : lire dans les yeux.
+famille: [ lecture, lecteur, élire, légende ]
+themes: [ savoir ]
+sources:
+  - ouvrage: littre
+    entree: lire
+  - ouvrage: tlfi
+    entree: lire
+  - ouvrage: lewis-short
+    entree: lego
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=lego2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Lire est ainsi nommé parce que les yeux recueillent les lettres."
+      citation: "Legere dictum, quod leguntur ab oculis litterae"
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 66"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+    - texte: "Le lecteur est nommé de legere, c'est-à-dire parcourir ; c'est pourquoi l'on dit d'un navire qu'il lit tout ce qu'il traverse."
+      citation: "Lector dicitur a legendo, id est percurrendo. Vnde et navis dicitur legere quicquid transit."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 154"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+statut: brouillon

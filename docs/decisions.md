@@ -101,9 +101,9 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 
 | Sujet | Décision | Raison | Relecture |
 |---|---|---|---|
-| Origine de *collega* (*collègue*) | chemin `debattu` : *legare*, « envoyer avec une mission, députer » (Lewis & Short, de *lex*), en premier ; *colligere*, « recueillir, rassembler » (Littré), ensuite ; le TLFi ne remonte pas au-delà de *collega* | les deux sources se contredisent ; le Lewis & Short (1879) est le plus récent ; Gaffiot et Georges non joignables | à relire |
-| Tenants de *collega* | `selon: [emile-littre]` pour *colligere* ; aucun pour *legare* | le tenant est le Lewis & Short, un ouvrage sans fiche d'auteur ; `selon` n'accepte que des auteurs | à relire |
-| Varron et Isidore sur *collega* | pistes de lectures traditionnelles (drapeau `tradition`), non tenants | Varron tire *collegae* de *legere* (« qui una lecti »), non de *colligere* ; Isidore de *conligatio* : aucun des deux ne défend une des deux hypothèses telle que les dictionnaires la donnent | à relire |
+| Origine de *collega* (*collègue*) | chemin `debattu`, `incertain: true` (passe 2) : *colligere*, « recueillir, rassembler » (Littré), en premier ; *legare*, « envoyer avec une mission, députer » (Lewis & Short, de *lex*), ensuite ; **ordre non établi** | une source pour chaque hypothèse, le TLFi ne tranche pas, et aucune ne dit laquelle est la plus suivie ; le Georges (zeno.org) reste injoignable (script et curl), le Gaffiot ne se lit pas par script ; faute de mieux, la source la plus ancienne d'abord (consigne du coordinateur), l'ordre revient à Thibault | à relire |
+| Tenants de *collega* | `selon: [emile-littre]` pour *colligere* ; `selon: [charlton-t-lewis]` pour *legare* (fiche d'auteur créée d'après la notice BnF cb16606079r) ; Charles Short, coauteur, sans fiche | Short n'a pas de notice BnF, et une fiche d'auteur ne s'écrit jamais à la main | à relire |
+| Varron et Isidore sur *collega* | lectures traditionnelles (passe 2), non tenants | Varron tire *collegae* de *legere* (« qui una lecti »), non de *colligere* ; Isidore de *conligatio* : aucun des deux ne défend une des deux hypothèses telle que les dictionnaires la donnent | à relire |
 | Participe intermédiaire | *diligens* est un maillon de *diligence* ; *intelligens* n'en est pas un d'*intelligence* | le Littré place à *diligens* le passage de « qui aime » à « soigneux » ; le TLFi dérive *intelligentia* directement d'*intellegere* | à relire |
 | *élégant* | `incertain: true` ; chaîne *elegans* puis *eligere* | le Lewis & Short dit le rattachement probable (« prob. »), le Littré l'attribue aux étymologistes latins | à relire |
 | Sens de *legere* selon le composé | « cueillir » dans *eligere* (Littré, *élire*), « choisir » dans *intellegere* et *diligere* (Littré, *intelligent*, *dilection*), « ramasser, recueillir » seul (TLFi, *lire*) | chaque élément suit l'entrée de son composé (consigne de rédaction) | à relire |
@@ -122,3 +122,15 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chaînes de *servir* et *servitude* | arrêtées à *servire* et *servitudo* ; *servus* dans la famille (*serf*) | *servus*, « esclave », n'ajoute pas de sens à « être esclave » ni à « esclavage » | à relire |
 | Chaîne de *vassal* | *vassalus*, puis *vassus*, « serviteur » ; l'origine celtique n'est pas un maillon | les formes bretonne, irlandaise et galloise sont apparentées, non ancêtres ; aucune langue celtique n'est dans la liste, et elle n'ajouterait pas de sens | à relire |
 | Lectures de *servitude* (passe 2) | drapeau `tradition` posé ; Isidore et Augustin lisent *servitus* et *servus*, non *servitudo* : à trancher avec les lectures | lecture du mot voisin ou de sa racine ; *esclave* y renvoie (`tradition.renvois`) | à relire |
+
+## 2026-10-05 — Lot 6 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Lectures sur *servus* et *servitus* (Isidore, *Étymologies*, V, 27, 32 et IX, 4, 43 ; Augustin, *La Cité de Dieu*, XIX, 15) | non retenues sur *servitude* ni sur *servir* ; notées au corpus de *servitude* | aucune de ces formes n'est un maillon des chaînes (*servitudo*, *servire*) ; *servus* n'y ajouterait pas de sens (§3.2) | à relire |
+| *serf* | ajouté aux candidats (`a-faire`) ; `tradition.renvois` d'*esclave* : *serf* (au lieu de *servitude*) | héritier direct de *servus*, que lisent Isidore et Augustin : c'est là que leurs lectures se placeront | à relire |
+| Jérôme, *Noms hébreux* (« Libertinorum, facientium paleas ») | non retenu pour *libertin* | Jérôme dit lui-même les noms de la lettre L presque tous « violenter usurpata » | à relire |
+| Isidore, *Différences*, I, 324 | non retenu (*liberté*, *libéral*) | pour *libertas*, il dit ce que dit l'histoire du mot ; *liberalitas* n'est pas dans la chaîne de *libéral* | à relire |
+| Tradition « romaine » | ajoutée à data/traditions.json (passe 2), pour Varron | AGENTS.md §5 compte Varron parmi les sources des lectures ; aucune tradition existante ne lui convient ; une tradition de trop se retire plus aisément qu'elle ne s'ajoute | à relire |
+| Varron | fiche d'auteur `varron` (BnF cb119277168, tradition romaine) et ouvrage `de-la-langue-latine` (BnF cb12425965t, texte : thelatinlibrary.com) ; lectures sur *lire*, *collègue*, *diligence* (VI, 66) | ses étymologies, lues texte sous les yeux, lisent les mots eux-mêmes ; l'identifiant suit le titre français que le validateur exige | à relire |
+| Reprises de la relecture (*élire*, *intelligence*) | propositions adoptées, sauf « sens courant » et « ne garde que » (*élire*) et « surtout » (*intelligence*), retirés | le dossier ne dit ni quel sens est courant ni quel emploi domine | à relire |

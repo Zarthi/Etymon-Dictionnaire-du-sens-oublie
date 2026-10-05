@@ -156,3 +156,10 @@ Causes, et ce qui change :
   l'écriture attend les auteurs et ouvrages, et ne demande que des commandes.
 - **Les notices BnF se cherchent avec l'année de naissance** (`Augustin 0354`). Cause : l'API ne
   classe pas ses réponses ; sans l'année, les homonymes récents passent devant.
+
+## 2026-10-05 — Lot 5 : tradition « romaine »
+
+- **Tradition « romaine » ajoutée** (`npm run liste -- traditions "romaine"`). Cause : Varron
+  (*De la langue latine*, VI, 66), que AGENTS.md §5 compte parmi les sources des lectures, lit
+  *legere*, *collegae* et *diligens* ; aucune tradition de la liste ne lui convenait. À retirer à
+  la relecture si Thibault la juge de trop.

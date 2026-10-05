@@ -1,0 +1,32 @@
+mot: élégant
+nature: [ adjectif ]
+etymologie:
+  - forme: elegans
+    langue: latin
+    sens: distingué, de bon goût
+  - forme: eligere
+    langue: latin
+    sens: choisir
+explication: >-
+  Jusqu'au temps de Caton, selon Aulu-Gelle, elegans était un reproche : il se
+  disait de qui vivait de manière trop recherchée ; le latin classique en fit un
+  éloge. Élégant qualifie aujourd'hui une grâce aisée, un goût sûr dans le choix
+  des vêtements ou des mots, une solution simple et claire.
+incertain: true
+famille: [ élégance, élégamment, inélégant ]
+renvois: [ grace ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: élégant
+  - ouvrage: tlfi
+    entree: élégant
+  - ouvrage: lewis-short
+    entree: elegans
+  - ouvrage: lewis-short
+    entree: eligo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

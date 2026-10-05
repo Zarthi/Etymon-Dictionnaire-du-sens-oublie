@@ -1,0 +1,60 @@
+mot: collègue
+nature: [ nom masculin ]
+etymologie:
+  - forme: collega
+    langue: latin
+    sens: celui qui est choisi en même temps qu'un autre
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: colligere
+          sens: recueillir, rassembler
+          selon: [ emile-littre ]
+        - forme: legare
+          sens: envoyer avec une mission, députer
+          selon: [ charlton-t-lewis ]
+explication: >-
+  À Rome, collega désignait en particulier le magistrat qui partageait une
+  charge avec un autre, comme les consuls ; le latin l'étendait déjà à tout
+  associé. Emprunté avant 1520 pour qui exerce la même charge qu'un autre,
+  collègue se dit aujourd'hui de qui a la même fonction ou la même activité.
+incertain: true
+famille: [ collège, collégial ]
+renvois: [ compagnon, camarade ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: littre
+    entree: collègue
+  - ouvrage: littre
+    entree: cueillir
+  - ouvrage: tlfi
+    entree: cueillir
+  - ouvrage: tlfi
+    entree: collègue
+  - ouvrage: lewis-short
+    entree: collega
+  - ouvrage: lewis-short
+    entree: lego
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=lego1
+  - ouvrage: lewis-short
+    entree: collegium
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Les collègues tiennent leur nom de legere : ce sont ceux qui ont été choisis ensemble."
+      citation: "Hinc legitima et collegae, qui una lecti"
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 66"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+    - texte: "Le collègue est nommé du lien qui unit les associés et de l'étreinte de l'amitié."
+      citation: "Collega a conligatione societatis et amicitiae conplexu dictus."
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 49"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+statut: brouillon

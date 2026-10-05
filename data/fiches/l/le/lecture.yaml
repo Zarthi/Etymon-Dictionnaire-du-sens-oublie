@@ -1,0 +1,27 @@
+mot: lecture
+nature: [ nom féminin ]
+etymologie:
+  - forme: lectura
+    langue: latin médiéval
+  - forme: legere
+    langue: latin
+    sens: ramasser, recueillir
+explication: >-
+  Le latin médiéval lectura n'avait déjà plus le sens de recueillir : il
+  signifiait lecture, études, érudition. En français, lecture a d'abord désigné
+  l'instruction (vers 1350), puis l'action de lire à haute voix (1445) et pour
+  soi (1561), et aujourd'hui aussi la manière d'interpréter un texte.
+famille: [ lire, lecteur ]
+themes: [ savoir ]
+sources:
+  - ouvrage: littre
+    entree: lecture
+  - ouvrage: tlfi
+    entree: lecture
+  - ouvrage: tlfi
+    entree: lire
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

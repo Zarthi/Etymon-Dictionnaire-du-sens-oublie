@@ -1,0 +1,37 @@
+mot: élire
+nature: [ verbe ]
+etymologie:
+  - forme: exlegere
+    langue: latin populaire
+  - forme: eligere
+    langue: latin
+    sens: choisir
+    elements:
+      - forme: e-
+        sens: hors de
+      - forme: legere
+        sens: cueillir
+explication: >-
+  Vers 1100, eslire signifiait choisir entre plusieurs personnes ou choses ; le
+  sens de nommer par suffrages, attesté vers 1207, reste rare avant le XVIe
+  siècle. Le mot dit aujourd'hui ce choix par suffrages ; du choix en général,
+  il garde la préférence pour une personne ou une chose parmi d'autres.
+famille: [ élu, élection, électeur, élite ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: élire
+  - ouvrage: tlfi
+    entree: élire
+  - ouvrage: lewis-short
+    entree: eligo
+  - ouvrage: lewis-short
+    entree: ex
+  - ouvrage: lewis-short
+    entree: lego
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=lego2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

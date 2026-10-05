@@ -1,0 +1,15 @@
+nom: Charlton T. Lewis
+naissance: "1834"
+mort: "1904"
+description: >-
+  Juriste et latiniste américain ; auteur, avec Charles Short, du Dictionnaire
+  latin (1879) qui porte leurs deux noms.
+cite: [ Lewis ]
+sources:
+  - ouvrage: bnf
+    entree: cb16606079r
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
