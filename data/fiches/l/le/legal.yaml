@@ -1,0 +1,27 @@
+mot: légal
+nature: [ adjectif ]
+etymologie:
+  - forme: legalis
+    langue: latin
+    sens: relatif à la loi
+explication: >-
+  Loyal, forme héritée de legalis, et légal, refait sur le latin, sont le même
+  mot : en latin médiéval, legalis voulait aussi dire « loyal », et légal l'a
+  dit jusqu'au XVIIe siècle, où les deux formes se sont séparées. Légal se dit
+  aujourd'hui de ce qui est conforme à la loi.
+famille: [ loyal, loyauté, légalité, illégal ]
+themes: [ droit ]
+sources:
+  - ouvrage: tlfi
+    entree: légal
+  - ouvrage: lewis-short
+    entree: legalis
+  - ouvrage: littre
+    entree: légal
+  - ouvrage: littre
+    entree: loyal
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

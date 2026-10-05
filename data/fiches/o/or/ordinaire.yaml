@@ -1,0 +1,33 @@
+mot: ordinaire
+nature: [ adjectif ]
+etymologie:
+  - forme: ordinarius
+    langue: latin
+    sens: rangé en ordre, régulier
+explication: >-
+  À Rome, ordinarius qualifiait les consuls élus au début de l'année, selon
+  l'ordre habituel. En français, ordinaire se dit en 1348 de ce qui est conforme
+  à l'ordre normal, puis de ce dont on use habituellement ; depuis 1675, aussi
+  de ce qui ne dépasse pas le niveau commun.
+famille: [ ordre, extraordinaire, ordinairement ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: ordinaire
+  - ouvrage: littre
+    entree: ordinaire
+  - ouvrage: lewis-short
+    entree: ordinarius
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Le soldat ordinaire sert dans le rang sans avoir encore obtenu de grade : c'est un simple soldat, d'humble milice. L'extraordinaire est promu hors du rang pour sa valeur."
+      citation: "Miles aut ordinarius dicitur, aut extraordinarius. Ordinarius est, qui per ordinem militat, nec adhuc aliquem consecutus est gradum honoris. Est enim gregarius, id est humilis militiae. Extraordinarius vero, qui ob virtutem promovetur ex ordine."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 3, 33"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+statut: brouillon

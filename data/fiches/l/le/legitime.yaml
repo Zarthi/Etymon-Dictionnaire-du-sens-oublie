@@ -1,0 +1,34 @@
+mot: légitime
+nature: [ adjectif ]
+etymologie:
+  - forme: legitimus
+    langue: latin
+    sens: fixé par la loi, conforme à la loi
+explication: >-
+  Le latin disait aussi legitimus de ce qui est conforme aux règles. En
+  français, légitime se dit dès 1266 de ce qui est fondé en droit, vers 1300 de
+  l'enfant né d'un mariage ; aujourd'hui aussi de ce qui est conforme à
+  l'équité, au droit naturel ou à la morale, et de ce que justifie la raison.
+famille: [ légitimité, légitimer, illégitime ]
+renvois: [ juste ]
+themes: [ droit, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: légitime
+  - ouvrage: littre
+    entree: légitime
+  - ouvrage: lewis-short
+    entree: legitimus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "Ce qui est légitime est nommé, comme les lois, de ce qui est choisi ; de même les collègues, choisis ensemble."
+      citation: "etiam leges, quae lectae et ad populum latae quas observet. Hinc legitima et collegae, qui una lecti"
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: "VI, 66"
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+statut: brouillon

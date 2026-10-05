@@ -1,0 +1,33 @@
+mot: règle
+nature: [ nom féminin ]
+etymologie:
+  - forme: regula
+    langue: latin
+    sens: pièce de bois droite, servant à mettre droit
+explication: >-
+  Au figuré, regula se disait déjà de l'étalon qui sert à juger et du modèle à
+  suivre. Le français a gardé l'instrument et le principe qui dirige la
+  conduite : la règle morale porte le nom de la pièce de bois qui trace droit.
+famille: [ régler, règlement, régulier, dérégler ]
+renvois: [ loi ]
+themes: [ morale, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: règle
+  - ouvrage: littre
+    entree: règle
+  - ouvrage: lewis-short
+    entree: regula
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: "La règle est nommée de ce qu'elle conduit droit, sans jamais tirer d'un autre côté ; d'autres la disent nommée de ce qu'elle dirige, donne la norme d'une vie droite, ou corrige ce qui est tordu."
+      citation: "Regula autem dicta quod recte ducit, nec aliquando aliorsum trahit. Alii dixerunt regulam dictam vel quod regat, vel quod normam recte vivendi praebeat, vel quod distortum pravumque quid corrigat."
+      sources:
+        - ouvrage: etymologies
+          entree: "VI, 16, 1"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+statut: brouillon

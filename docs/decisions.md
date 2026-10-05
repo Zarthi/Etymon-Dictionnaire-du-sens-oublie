@@ -238,3 +238,15 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Thomas d'Aquin, IIa-IIae, q. 174, a. 2, ad 3 (*foi*) | retenu | il lit le nom (*nomen fidei importat imperfectionem cognitionis*) : ce que le nom emporte complète l'histoire du mot | à relire |
 | Isidore, *Différences*, I, 207 (*fidèle*) | retenu, avec le texte du relecteur | il lit *fidelis*, qu'il distingue de l'autre mot (dit de l'ami) : un emploi propre au mot, comme I, 217 pour *confiance* | à relire |
 | Thomas d'Aquin, IIa-IIae, q. 29, a. 1, co. (*paix*) | retenu | il lit le nom pris au sens propre (*si nomen pacis proprie sumatur*) et le distingue de la concorde, premier sens de *paix* en français | à relire |
+
+## 2026-10-05 — Lot 10 (passe 2)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Dernier maillon sans sens (*regere* dans *règle* et *régime* ; *lex* dans *légal* et *légitime* ; *ordo* dans *ordinaire*) | retiré (remplace la décision de passe 1) | règle du lot 9 (passe 2), rappelée par le relecteur : la filiation est dans la famille | à relire |
+| Thèmes | *roi* : politique ; *régime* : politique, santé ; *ordre* : société, politique | le thème `politique` existe ; l'ordre garde `société` (classes, ordre social) | à relire |
+| Ouvrage de Cicéron | `traite-des-lois` (titre retenu de la notice BnF cb12446337k, « Traité des lois »), non `des-lois` | identifiant tiré du titre de la notice | à relire |
+| Lectures de *loi* | Varron (VI, 66), Isidore (V, 3, 2), Thomas d'Aquin (Ia-IIae, q. 90, a. 1) ; *lectae* rendu par « choisies » chez Varron | même lecture de *legere* que pour *collègue* (« qui una lecti », choisis ensemble) | à relire |
+| Lecture de *légitime* | Varron, VI, 66 (*legitima*) retenu | *legitima* est le pluriel neutre de *legitimus*, forme de la chaîne ; Varron le tire de *legere*, non de *lex* : cela diffère de l'histoire | à relire |
+| Lecture d'*ordinaire* | Isidore, IX, 3, 33, retenu | il lit *ordinarius* (le soldat du rang, sans grade), ce qui complète l'histoire du sens « commun, moyen » | à relire |
+| Lectures de *roi* | Isidore (IX, 3, 4) et Augustin (*La Cité de Dieu*, V, 12) | Isidore lie le nom à la conduite droite ; Augustin oppose la discipline de celui qui dirige à l'orgueil de celui qui domine : deux apports distincts | à relire |

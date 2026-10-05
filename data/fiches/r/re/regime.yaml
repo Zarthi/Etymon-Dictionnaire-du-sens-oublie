@@ -1,0 +1,25 @@
+mot: régime
+nature: [ nom masculin ]
+etymologie:
+  - forme: regimen
+    langue: latin
+    sens: action de guider, direction
+explication: >-
+  Le mot a d'abord nommé l'action de gouverner (vers 1265) ; dès 1314, le
+  traitement d'une maladie, puis la manière de vivre et de se nourrir pour
+  garder la santé. Ce premier sens a vieilli : régime nomme aujourd'hui la
+  manière dont une chose est régie, un État, l'alimentation, un moteur.
+famille: [ régir, régiment ]
+themes: [ politique, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: régime
+  - ouvrage: littre
+    entree: régime
+  - ouvrage: lewis-short
+    entree: regimen
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

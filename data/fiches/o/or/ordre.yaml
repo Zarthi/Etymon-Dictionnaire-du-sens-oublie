@@ -1,0 +1,25 @@
+mot: ordre
+nature: [ nom masculin ]
+etymologie:
+  - forme: ordo
+    langue: latin
+    sens: rangée, suite régulière
+explication: >-
+  Ordo désignait aussi une classe de citoyens. En français, ordre a nommé les
+  degrés de la hiérarchie cléricale, les communautés religieuses et les classes
+  de la société ; vers 1225, comme ordonner, il prend le sens de commandement :
+  non plus une disposition des choses, mais l'acte d'une autorité.
+famille: [ ordonner, ordinaire, ordination, désordre ]
+themes: [ société, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: ordre
+  - ouvrage: lewis-short
+    entree: ordo
+  - ouvrage: littre
+    entree: ordre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
