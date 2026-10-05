@@ -9,9 +9,7 @@
 - { mot: effrayer, statut: a-faire }
 - { mot: église, statut: a-faire }
 - { mot: égoïsme, statut: a-faire }
-- { mot: élégant, statut: a-faire }
 - { mot: élève, statut: a-faire }
-- { mot: élire, statut: a-faire }
 - { mot: éloquence, statut: a-faire }
 - { mot: embarras, statut: a-faire }
 - { mot: émerveiller, statut: a-faire }
@@ -37,7 +35,6 @@
 - { mot: équilibre, statut: a-faire }
 - { mot: équité, statut: a-faire }
 - { mot: erreur, statut: a-faire }
-- { mot: esclave, statut: a-faire }
 - { mot: espace, statut: a-faire }
 - { mot: espérance, statut: a-faire }
 - { mot: espoir, statut: a-faire }

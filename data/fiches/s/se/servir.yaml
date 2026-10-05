@@ -1,0 +1,25 @@
+mot: servir
+nature: [ verbe ]
+etymologie:
+  - forme: servire
+    langue: latin
+    sens: être esclave
+explication: >-
+  Servire disait aussi, au figuré, la dépendance et le dévouement. Le français
+  l'a reçu d'abord au sens religieux (vers 880), puis pour les devoirs envers un
+  maître ou un seigneur ; vers 1165, servir à prend le sens d'être utile, et le
+  verbe se dit aujourd'hui des choses comme des personnes.
+famille: [ service, serviteur, serf, servitude ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: littre
+    entree: servir
+  - ouvrage: tlfi
+    entree: servir
+  - ouvrage: lewis-short
+    entree: servio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

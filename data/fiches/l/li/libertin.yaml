@@ -1,0 +1,33 @@
+mot: libertin
+nature: [ adjectif ]
+etymologie:
+  - forme: libertinus
+    langue: latin
+    sens: affranchi
+explication: >-
+  Le français l'emprunte en 1468 pour l'affranchi de Rome. Appliqué en 1525 à
+  une secte juive des Actes des Apôtres, puis à une secte de Genève, il a dû
+  être rapproché de liberté : il a désigné celui qui s'affranchit de toute
+  religion (avant 1555), puis celui qui est déréglé dans ses mœurs (1662).
+famille: [ libertinage, libérer ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Chez les Anciens, on appelait libertins les fils des affranchis, comme nés d'affranchis."
+      citation: "Libertorum autem filii apud antiquos libertini appellabantur, quasi de libertis nati."
+      sources:
+        - ouvrage: etymologies
+          entree: "IX, 4, 47"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: littre
+    entree: libertin
+  - ouvrage: tlfi
+    entree: libertin
+  - ouvrage: lewis-short
+    entree: libertinus1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

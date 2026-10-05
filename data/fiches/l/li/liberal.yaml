@@ -1,0 +1,33 @@
+mot: libéral
+nature: [ adjectif ]
+etymologie:
+  - forme: liberalis
+    langue: latin
+    sens: qui appartient, qui convient à une personne libre
+explication: >-
+  En latin, liberalis disait aussi la générosité et la noblesse dignes d'un
+  homme libre. Le français l'a reçu au sens de généreux (vers 1175), puis de ce
+  qui convient à un homme libre (vers 1200), d'où l'éducation et la profession
+  libérales ; depuis 1750, il qualifie ce qui est favorable aux libertés.
+famille: [ libéralité, libéralisme, libre ]
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: "Les lettres sont dites libérales parce que seuls les connaissent ceux qui écrivent des livres et savent la règle du bien parler et du bien composer."
+      citation: "Liberales, quia eas tantum illi noverunt, qui libros conscribunt recteque loquendi dictandique rationem noverunt."
+      sources:
+        - ouvrage: etymologies
+          entree: "I, 4, 2"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: libéral
+  - ouvrage: tlfi
+    entree: libéral
+  - ouvrage: lewis-short
+    entree: liberalis1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,26 @@
+mot: vassal
+nature: [ nom ]
+etymologie:
+  - forme: vassalus
+    langue: latin médiéval
+  - forme: vassus
+    langue: latin médiéval
+    sens: serviteur
+explication: >-
+  Vassus nommait le simple serviteur, puis, dans les chartes latines, l'homme
+  d'armes qui dépend d'un seigneur. En français, vassal a d'abord dit l'homme
+  vaillant et brave (vers 1100), puis celui qui tient un fief d'un seigneur
+  (1283) ; il se dit aujourd'hui de qui est sous la dépendance d'un autre.
+famille: [ vassalité, vasselage ]
+renvois: [ seigneur ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: vassal
+  - ouvrage: tlfi
+    entree: vassal
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon
