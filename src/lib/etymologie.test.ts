@@ -78,8 +78,8 @@ describe("sensLitteral", () => {
 });
 
 describe("formesCitation", () => {
-  it("rassemble les mots de la citation d'au moins 3 lettres, tels qu'écrits", () => {
-    expect(formesCitation("Hora est ab ore, quasi ora: hora")).toEqual(["Hora", "est", "ore", "quasi", "ora", "hora"]);
+  it("rassemble les mots de la citation d'au moins 3 lettres, tels qu'écrits, sauf ceux qui s'écrivent aussi en français", () => {
+    expect(formesCitation("Hora est ab ore, quasi ora: hora, non qui")).toEqual(["Hora", "ore", "quasi", "ora", "hora"]);
   });
   it("garde les écritures grecques et ignore la ponctuation", () => {
     expect(formesCitation("« ὥρα, ἡ ὥρα »")).toEqual(["ὥρα"]);
