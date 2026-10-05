@@ -6,6 +6,9 @@ etymologie:
   - forme: captivus
     langue: latin
     sens: prisonnier
+    croisement:
+      - forme: "*cactos"
+        langue: gaulois
 explication: >-
   Les auteurs chrétiens nommaient captivus l'homme captif du péché ; de là le
   sens de malheureux qu'a pris chétif en ancien français. Le sens de faible

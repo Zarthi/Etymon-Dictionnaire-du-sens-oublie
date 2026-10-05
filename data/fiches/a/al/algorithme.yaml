@@ -3,6 +3,9 @@ nature: [ nom masculin ]
 etymologie:
   - forme: algorisme
     langue: ancien français
+    croisement:
+      - forme: ἀριθμός
+        langue: grec ancien
   - forme: alguarismo
     langue: ancien espagnol
     sens: art de compter
