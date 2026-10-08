@@ -9,6 +9,16 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-07 — Mot du jour et statut
+
+- Le mot du jour est tiré parmi toutes les fiches non sacrées, sans filtrer sur le statut (avant :
+  parmi les `validee` dès qu'il en existe une). Raison : demandé par Thibault. Le statut reste
+  affiché sur la fiche tirée (« En relecture »), donc la fiabilité n'est pas masquée. AGENTS.md §6.1
+  mis à jour. — à relire
+- Le statut `brouillon` / `a-verifier` / `validee` est conservé, avec ses mentions. Thibault a
+  envisagé de le supprimer ; après examen de son rôle (trace de la relecture, marqueur de
+  fiabilité), il a choisi de le garder. — à relire
+
 ## 2026-10-05 — Workflow GitHub
 
 - La CI valide chaque push sur toute branche (avant : `main` seulement, si bien qu'aucune branche

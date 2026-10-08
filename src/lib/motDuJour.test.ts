@@ -36,12 +36,10 @@ describe("motDuJour", () => {
       expect(new Set(jours("2026-01-01", n).map((d) => motDuJour(liste, d)?.id)).size).toBe(n);
     }
   });
-  it("se limite aux fiches validées s'il y en a, sinon puise dans toutes", () => {
+  it("puise dans toutes les fiches, sans filtrer sur le statut", () => {
     const melange = index.map((e, i) => ({ ...e, statut: i < 3 ? ("validee" as const) : ("a-verifier" as const) }));
-    const tires = new Set(jours("2026-09-23", 30).map((d) => motDuJour(melange, d)?.id));
-    expect(tires).toEqual(new Set(["mot0", "mot1", "mot2"]));
-    const aucune = index.map((e) => ({ ...e, statut: "brouillon" as const }));
-    expect(motDuJour(aucune, "2026-09-23")).toBeDefined();
+    const tires = new Set(jours("2026-09-23", index.length).map((d) => motDuJour(melange, d)?.id));
+    expect(tires.size).toBe(index.length);
   });
   it("ne renvoie rien pour un index vide", () => {
     expect(motDuJour([], "2026-09-23")).toBeUndefined();

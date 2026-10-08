@@ -24,12 +24,11 @@ function pgcd(a: number, b: number): number {
  * Mot du jour, déterministe à partir de la date.
  * Le pas, premier avec le nombre de mots, parcourt tout l'index avant de revenir au même mot,
  * en sautant loin dans l'alphabet d'un jour à l'autre.
- * Vitrine du site, il est tiré parmi les fiches validées dès qu'il en existe une.
+ * Tiré parmi toutes les fiches non sacrées, quel que soit leur statut : une fiche non validée
+ * s'affiche avec sa mention « En relecture ».
  */
 export function motDuJour(index: EntreeIndex[], date: string): EntreeIndex | undefined {
-  const tires = tirables(index);
-  const validees = tires.filter((e) => e.statut === "validee");
-  const choix = validees.length > 0 ? validees : tires;
+  const choix = tirables(index);
   const n = choix.length;
   if (n === 0) return undefined;
   const jour = Math.floor(Date.parse(`${date}T00:00:00Z`) / MS_PAR_JOUR);
