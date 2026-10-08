@@ -357,7 +357,7 @@ forgé), `data/fiches/c/ch/chiffre.yaml` (filiation, doublet). Points à retenir
 - `statut` : `a-verifier` (ancienne fiche rédigée de mémoire, s'il en reste ; mention
   « Étymologie non vérifiée » ; aucune fiche nouvelle n'y entre) |
   `brouillon` (rédigée d'après son dossier, « En relecture ») | `validee` (par Thibault). Le mot du jour
-  est tiré parmi les fiches `validee` dès qu'il en existe une.
+  est tiré parmi toutes les fiches non sacrées (§3.3 bis), quel que soit leur statut.
 - **Auteurs** (`data/auteurs/<id>.yaml`) et **ouvrages** (`data/ouvrages/<id>.yaml`) ont leur
   fiche et leur page, avec le même socle éditorial. Un auteur : `nom` usuel, `nomComplet`,
   dates (exactes ou approximatives), `description` qui le situe (200 caractères), `traditions`
