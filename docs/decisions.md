@@ -23,6 +23,14 @@ Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a ét�
   `--accent` (sens premier) et de `--tradition` (lectures). La langue est portée par le segment de
   la phrase (`src/lib/phrase.ts`) et la couleur posée par `Forme.svelte`. Raison : Thibault veut
   distinguer d'un coup d'œil la part grecque et latine du dictionnaire. — à relire
+- **Racines grecques et latines, entrées de plein droit** : un quatrième type de fiche
+  (`data/racines/`, `schemaRacine`) donne à une racine latine ou grecque sa forme, son sens et les
+  mots français qui en sont issus (calculés à l'assemblage : même forme à la translittération près,
+  même famille de langue), et sa page `#/racine/<id>`. Depuis la chaîne, une forme qui a une racine
+  devient un lien vers elle. Trois racines d'exemple (`religio`, `captivus`, `phren`), en
+  `brouillon`, sens et sources repris des fiches existantes ; l'export passe en version 2
+  (`racines`). Raison : donner corps à la « partie grecque et latine du dictionnaire » (décision de
+  Thibault, 2026-10-09). — à relire
 
 ## 2026-10-07 — Mot du jour et statut
 
