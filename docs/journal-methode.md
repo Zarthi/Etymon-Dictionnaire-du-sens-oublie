@@ -245,3 +245,21 @@ Causes, et ce qui change :
   *cactos ». Les formes comptent comme formes de la chaîne. Seulement si une source le dit.
 - **Tenant ouvrage** : `selon` accepte l'identifiant d'un ouvrage (Lewis & Short), pour une hypothèse
   tenue par un dictionnaire sans auteur unique ; la page de l'ouvrage liste ses hypothèses.
+
+## 2026-10-09 — Lot porté à ~50 mots ; reprise en session neuve
+
+- **Un lot fait désormais environ 50 mots** (au lieu de 12 à 15) : `docs/methode.md` §3 et le skill
+  `etymon-lot` sont ajustés. Cause : Thibault veut une production plus large par session ; la qualité
+  tient à la méthode (relecture *neuve* + vérificateur), non au nombre de mots.
+- **Lancer `npm run lot -- sources` par paquets de 10 à 15 mots.** Cause : au-delà, le réseau sature
+  le TLFi (« injoignable »). Les ⚠ se relancent **une fois** ; ce qui reste, le rédacteur le consulte
+  lui-même (`npm run dossier -- --consulter <mot>`, ou le RAG `sources`).
+- **Le RAG MCP `sources` (bibliothèque) sert aux étymons et aux lectures** : `sources.chercher`
+  (Lewis & Short, Bailly, Gaffiot) pour le sens des maillons, `sources.corpus` pour les lectures
+  traditionnelles. Cause : le corpus local n'est pas toujours téléchargé, et l'accès groupé au TLFi
+  est fragile.
+- **Un homonyme peut tromper le script** : pour *souci*, `npm run lot -- sources` avait retenu
+  l'étymon de la **fleur** (*solsequium*) au lieu de l'inquiétude (*soucier* < *sollicitare*). Cause :
+  deux mots de même graphie ; le rédacteur tranche selon le sens retenu (§3.3).
+- **Travail solo** : sur `main`, commits et fusions locaux, sans pull request (AGENTS.md §9). Cause :
+  Thibault est seul sur le projet.

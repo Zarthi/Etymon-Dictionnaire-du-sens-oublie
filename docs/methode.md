@@ -38,7 +38,7 @@ une décision infirmée se défait. Restent à Thibault seul, sans décision pro
 
 ## 3. Le lot
 
-Un lot est de **12 à 15 mots**, choisis par familles et voisinage (doublets, renvois, même racine),
+Un lot est d'**environ 50 mots**, choisis par familles et voisinage (doublets, renvois, même racine),
 jamais dans l'ordre alphabétique. Il se fait dans **une session neuve**, lancée par la compétence
 `/etymon-lot <mot>…` (`.claude/skills/etymon-lot/SKILL.md`) : l'orchestrateur est bref, n'ouvre
 aucune fiche, ne relaie aucun rapport. Chaque agent écrit son résultat dans `atelier/` et ne rend
@@ -172,7 +172,7 @@ par fiche, même rigueur.
 - Peu d'appels d'outil par agent : un agent qui écrit dans `atelier/` et rend une ligne d'état ;
   l'orchestrateur n'ouvre rien et ne relaie rien.
 - Le bon modèle à chaque étape : Opus pour rédiger et pour relire, Sonnet pour vérifier ce qui a changé.
-- Une session neuve par lot, de 12 à 15 mots : le cadrage et les consignes se lisent une fois par agent.
+- Une session neuve par lot, d'environ 50 mots : le cadrage et les consignes se lisent une fois par agent.
 - `data/` et `docs/` ne bougent pas pendant le lot : le hook de fin de tour qui réclame un commit ne se
   déclenche pas.
 - Des dossiers complets du premier coup (usage d'aujourd'hui, étapes datées, sens de chaque

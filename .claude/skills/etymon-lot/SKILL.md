@@ -1,7 +1,7 @@
 ---
 name: etymon-lot
-description: Orchestre un lot de rédaction Étymon, de la liste de mots au commit et au push (sources par script, rédacteur, relecteur, reprise par script, vérificateur, clôture). À lancer dans une session neuve, avec 12 à 15 mots choisis par familles.
-argument-hint: <mot>… (12 à 15 mots)
+description: Orchestre un lot de rédaction Étymon, de la liste de mots au commit et au push (sources par script, rédacteur, relecteur, reprise par script, vérificateur, clôture). À lancer dans une session neuve, avec environ 50 mots choisis par familles.
+argument-hint: <mot>… (environ 50 mots)
 ---
 
 # Lot Étymon
@@ -12,7 +12,8 @@ Les mots du lot : `$ARGUMENTS`. La méthode est dans `docs/methode.md` §3 ; AGE
 
 - **Bref.** Tu n'ouvres ni fiche, ni dossier, ni verdict, ni `sources.md` ; tu ne relaies aucun rapport. Chaque agent écrit son résultat dans `atelier/` et ne te rend qu'une ligne d'état ; les scripts te rendent un résumé.
 - **`data/` et `docs/` ne bougent pas** avant la clôture (sauf `npm run liste`, par le rédacteur, pour une langue ou une tradition qui manque). Pas de commit avant la fin.
-- Plus de 15 mots : traite les 15 premiers, dis le reste dans ton compte rendu.
+- Plus de 50 mots : traite les 50 premiers, dis le reste dans ton compte rendu.
+- **Lance `sources` par paquets de 10 à 15 mots** : au-delà, le réseau sature (TLFi « injoignable »). Accumule les ⚠ et relance-les **une fois** ; ce qui reste injoignable, le rédacteur le consultera lui-même (`npm run dossier -- --consulter <mot>`, ou le RAG `sources`).
 - Les mots sacrés (chemin `sacre`) ne se rédigent pas en lot : le rédacteur les signale, ils sortent du lot.
 
 ## Le lot
