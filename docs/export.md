@@ -2,7 +2,7 @@
 
 `npm run export` écrit `export/etymon.json` : un **instantané stable et versionné** des données
 d'Étymon, destiné à un consommateur hors de l'app — aujourd'hui le jeu **Sphynx**, qui en fait un
-mod hors ligne (`etymon:`, voir `projet-sphynx/docs/questions/0045-dictionnaire-etymon-dependance-hors-ligne.md`).
+mod hors ligne (`etymon:`, voir `projet-sphynx/docs/questions/0047-dictionnaire-etymon-dependance-hors-ligne.md`).
 
 Ce n'est pas un fichier de l'app : il ne se régénère **pas** au build, il se **publie**. Sa forme
 est un contrat ; son champ `version` s'incrémente quand elle change (ajout, retrait ou
