@@ -1,0 +1,38 @@
+mot: timide
+nature: [ adjectif ]
+etymologie:
+  - forme: timidus
+    langue: latin
+    sens: craintif, timide
+  - forme: timeo
+    langue: latin
+    sens: craindre
+explication: >-
+  Timidus vient de timeo, « craindre » : le timide est celui que la crainte
+  retient. Le mot dit aujourd'hui la réserve et la gêne plus que la peur.
+famille: [ timidité, intimider, intimidé ]
+themes: [ émotions, morale ]
+sources:
+  - ouvrage: littre
+    entree: timide
+  - ouvrage: lewis-short
+    entree: timidus
+  - ouvrage: tlfi
+    entree: timide
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        La crainte glace le sang, et le sang figé engendre à son tour l'effroi : aussi le
+        timide est-il celui qui craint longtemps.
+      citation: >-
+        Timidus, quod timeat diu, id est sanguine; nam timor sanguinem gelat, qui coactus
+        gignit timorem.
+      sources:
+        - ouvrage: etymologies
+          entree: "X, 272"
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+statut: brouillon

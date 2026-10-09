@@ -1,0 +1,21 @@
+mot: péril
+nature: [ nom masculin ]
+etymologie:
+  - forme: periculum
+    langue: latin
+    sens: essai, épreuve ; danger
+explication: >-
+  Periculum disait l'épreuve, ce par quoi l'on passe et se met à l'essai. Le
+  péril en a gardé le risque, mais perdu l'idée d'expérience.
+famille: [ périlleux, périlleusement ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: péril
+  - ouvrage: tlfi
+    entree: péril
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

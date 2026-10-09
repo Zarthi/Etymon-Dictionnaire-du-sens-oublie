@@ -1,0 +1,28 @@
+mot: terreur
+nature: [ nom féminin ]
+etymologie:
+  - forme: terror
+    langue: latin
+    sens: terreur, épouvante
+  - forme: terrere
+    langue: latin
+    sens: faire trembler
+explication: >-
+  Terror vient de terrere, « faire trembler » : c'est la peur qui fait trembler.
+  Terreur a pris un sens politique en 1793, celui d'un régime qui règne par
+  l'effroi.
+famille: [ terrible, terroriser, terrifier ]
+renvois: [ epouvante ]
+themes: [ émotions, politique ]
+sources:
+  - ouvrage: littre
+    entree: terreur
+  - ouvrage: lewis-short
+    entree: terror
+  - ouvrage: tlfi
+    entree: terreur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

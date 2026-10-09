@@ -20,7 +20,6 @@
 - { mot: agenda, statut: a-faire }
 - { mot: agir, statut: a-faire }
 - { mot: agonie, statut: a-faire }
-- { mot: alarme, statut: a-faire }
 - { mot: aliéner, statut: a-faire }
 - { mot: allégorie, statut: a-faire }
 - { mot: allégresse, statut: a-faire }
@@ -33,8 +32,6 @@
 - { mot: anarchie, statut: a-faire }
 - { mot: anathème, statut: a-faire }
 - { mot: ancêtre, statut: a-faire }
-- { mot: angoisse, statut: a-faire }
-- { mot: anxiété, statut: a-faire }
 - { mot: apathie, statut: a-faire }
 - { mot: apocalypse, statut: a-faire }
 - { mot: apôtre, statut: a-faire }

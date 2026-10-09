@@ -1,0 +1,23 @@
+mot: redouter
+nature: [ verbe ]
+etymologie:
+  - forme: douter
+    langue: français
+  - forme: dubitare
+    langue: latin
+    sens: hésiter, osciller
+explication: >-
+  Redouter est fait de re- et de douter, qui voulait dire craindre en ancien
+  français. L'hésitation de douter s'y est changée en crainte redoublée.
+famille: [ douter, redoutable, doute ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: redouter
+  - ouvrage: littre
+    entree: douter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

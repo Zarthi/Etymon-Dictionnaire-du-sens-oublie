@@ -1,0 +1,24 @@
+mot: souci
+nature: [ nom masculin ]
+etymologie:
+  - forme: soucier
+    langue: français
+  - forme: sollicitare
+    langue: latin
+    sens: ébranler, remuer, tourmenter
+explication: >-
+  Souci est le déverbal de soucier, du latin sollicitare, « ébranler, remuer,
+  tourmenter ». Le mot a gardé le tourment, mais non l'idée de secousse qu'il
+  portait.
+famille: [ soucier, soucieux, sollicitude ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: soucier
+  - ouvrage: tlfi
+    entree: soucier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

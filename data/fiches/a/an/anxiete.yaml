@@ -1,0 +1,24 @@
+mot: anxiété
+nature: [ nom féminin ]
+etymologie:
+  - forme: anxietas
+    langue: latin
+    sens: disposition naturelle à l'inquiétude
+explication: >-
+  Anxietas dit l'inquiétude comme état durable et habituel, non comme un
+  sursaut. Anxiété garde cette durée : un fond d'inquiétude, une disposition à
+  s'alarmer.
+famille: [ anxieux, angoisser, angoisse ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: anxiété
+  - ouvrage: lewis-short
+    entree: anxietas
+  - ouvrage: tlfi
+    entree: anxiété
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

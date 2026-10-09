@@ -1,0 +1,25 @@
+mot: épouvante
+nature: [ nom féminin ]
+etymologie:
+  - forme: épouvanter
+    langue: français
+  - forme: "*expaventare"
+    langue: latin populaire
+  - forme: expavere
+    langue: latin
+    sens: craindre, être troublé
+explication: >-
+  Épouvanter est fait sur le latin expavere, « craindre » : donner l'épouvante,
+  c'est faire naître la peur. L'épouvante est cette peur portée à son comble.
+famille: [ épouvanter, épouvantable ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: épouvante
+  - ouvrage: littre
+    entree: épouvanter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

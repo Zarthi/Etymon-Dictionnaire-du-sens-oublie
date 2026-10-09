@@ -1,0 +1,23 @@
+mot: angoisse
+nature: [ nom féminin ]
+etymologie:
+  - forme: angustia
+    langue: latin
+    sens: resserrement, passage resserré
+explication: >-
+  Angustia disait l'étroitesse d'un lieu, le défilé, puis la difficulté et la
+  situation critique. L'angoisse en a tiré le sens d'oppression et d'anxiété.
+famille: [ angoisser, angoissant, anxiété ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: angoisse
+  - ouvrage: lewis-short
+    entree: angustia
+  - ouvrage: tlfi
+    entree: angoisse
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

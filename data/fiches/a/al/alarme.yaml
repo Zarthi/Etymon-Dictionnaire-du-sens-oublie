@@ -1,0 +1,22 @@
+mot: alarme
+nature: [ nom féminin ]
+etymologie:
+  - forme: all'arme
+    langue: italien
+    sens: aux armes
+explication: >-
+  Alarme est venue de l'italien all'arme, « aux armes ! », le cri qui
+  rassemblait les combattants. Le mot dit aujourd'hui le signal du danger, et
+  l'inquiétude qu'il jette.
+famille: [ alarmer, alarmant ]
+themes: [ émotions, guerre ]
+sources:
+  - ouvrage: littre
+    entree: alarme
+  - ouvrage: tlfi
+    entree: alarme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

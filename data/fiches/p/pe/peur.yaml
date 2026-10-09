@@ -1,0 +1,23 @@
+mot: peur
+nature: [ nom féminin ]
+etymologie:
+  - forme: pavor
+    langue: latin
+    sens: crainte, épouvante, effroi
+explication: >-
+  Pavor nommait l'émotion qui fait trembler. La peur en a gardé le saisissement,
+  du frisson léger à l'effroi.
+famille: [ peureux, apeuré ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: peur
+  - ouvrage: lewis-short
+    entree: pavor
+  - ouvrage: tlfi
+    entree: peur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

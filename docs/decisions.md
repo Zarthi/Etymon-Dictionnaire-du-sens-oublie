@@ -580,3 +580,20 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chaîne de *superbe* | *superbus* seul | *superbus* est la source directe ; *super* (« au-dessus ») reste au dossier, hors chaîne (règle d'arrêt) | à relire |
 | Renvois | *orgueil* → *vanité* ; *honneur* → *gloire* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
 | Lectures traditionnelles | *superbe* : *superbia*, « tendre au-dessus de ce qu'on est » (Thomas, IIa-IIae q. 162 a. 1) ; *honneur* : *honor*, « témoignage de l'excellence » (Thomas, IIa-IIae q. 103 a. 1) ; pistes non retenues : *gloria*, *vanitas* | citations vérifiées en ligne (2/2) | faites |
+
+## 2026-10-09 — Lot « peur » (crainte, peur, angoisse, anxiété, terreur, alarme, épouvante, souci, péril, timide, redouter)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaîne de *crainte* | *craindre*, *cremere* (latin populaire, croisé avec le gaulois *\*crit-*), *tremere*, « trembler » | le TLFi : *tremere* altéré en *\*cremere* par croisement celtique | à relire |
+| Chaîne d'*angoisse* | *angustia*, « resserrement, passage resserré » | source directe ; le sens d'oppression vient du français | à relire |
+| Chaîne d'*anxiété* | *anxietas*, « disposition à l'inquiétude » | *anxietas* et *angustia* partagent la racine *angere* : mises en famille, non en renvoi | à relire |
+| Chaîne de *terreur* | *terror*, puis *terrere*, « faire trembler » | le TLFi donne *terrere* comme base | à relire |
+| Chaîne d'*alarme* | *all'arme* (italien), « aux armes » | emprunt à l'italien, cri devenu nom | à relire |
+| Chaîne d'*épouvante* | *épouvanter*, *\*expaventare*, *expavere*, « craindre » | le Littré et le TLFi : *\*expaventare* formé sur *expavere* | à relire |
+| Chaîne de *souci* | *soucier*, *sollicitare*, « ébranler, tourmenter » | le souci « inquiétude » vient de *soucier*, non de *solsequium* (la fleur, homonyme, qu'avait retenue le script) | à relire |
+| Chaîne de *péril* | *periculum*, « essai, épreuve ; danger » | source directe | à relire |
+| Chaîne de *timide* | *timidus*, puis *timeo*, « craindre » | le Lewis & Short : *timidus* de *timeo* | à relire |
+| Chaîne de *redouter* | *douter* (ancien sens « craindre »), *dubitare*, « hésiter » | le Littré : redouter = *re-* + *douter*, qui signifiait craindre | à relire |
+| Renvois | *crainte* → *peur* ; *terreur* → *épouvante* | notions voisines sans racine commune, d'un seul côté | à relire |
+| Lecture traditionnelle | *timide* : Isidore, *Étymologies* X, 272 (« Timidus, quod timeat diu ») | vérifiée en ligne (1/1) ; pistes non retenues : *pavor*, *angustia*, *terror*, *sollicitus* | faite |

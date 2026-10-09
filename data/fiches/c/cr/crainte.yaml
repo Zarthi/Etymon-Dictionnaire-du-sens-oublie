@@ -1,0 +1,32 @@
+mot: crainte
+nature: [ nom féminin ]
+etymologie:
+  - forme: craindre
+    langue: français
+  - forme: "*cremere"
+    langue: latin populaire
+    sens: trembler
+    croisement:
+      - forme: "*crit-"
+        langue: gaulois
+        sens: frisson, tremblement
+  - forme: tremere
+    langue: latin
+    sens: trembler
+explication: >-
+  Le latin tremere, « trembler », a donné craindre en gallo-roman, croisé avec
+  un mot gaulois du frisson. La crainte garde le saisissement, mais non le
+  tremblement d'où elle vient.
+famille: [ craindre, craintif, craintivement ]
+renvois: [ peur ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: crainte
+  - ouvrage: tlfi
+    entree: craindre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

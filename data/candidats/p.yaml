@@ -20,7 +20,6 @@
 - { mot: pension, statut: a-faire }
 - { mot: perdre, statut: a-faire }
 - { mot: perfide, statut: a-faire }
-- { mot: péril, statut: a-faire }
 - { mot: persévérer, statut: a-faire }
 - { mot: personnage, statut: a-faire }
 - { mot: perspective, statut: a-faire }
@@ -28,7 +27,6 @@
 - { mot: perte, statut: a-faire }
 - { mot: pervers, statut: a-faire }
 - { mot: peuple, statut: a-faire }
-- { mot: peur, statut: a-faire }
 - { mot: pharmacie, statut: a-faire }
 - { mot: phénomène, statut: a-faire }
 - { mot: physique, statut: a-faire }
