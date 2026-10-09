@@ -1,0 +1,40 @@
+mot: admirer
+nature: [ verbe ]
+etymologie:
+  - forme: admirari
+    langue: latin
+    sens: admirer
+  - forme: mirari
+    langue: latin
+    sens: regarder, s'étonner
+explication: >-
+  Admirer suppose le regard : admirari est fait de mirari, « regarder ». Le mot
+  dit aujourd'hui le plaisir et l'approbation plus que l'attention qui le
+  retenait.
+famille: [ admiration, admirable, miroir ]
+renvois: [ respect ]
+themes: [ émotions, esprit ]
+sources:
+  - ouvrage: littre
+    entree: admirer
+  - ouvrage: tlfi
+    entree: admirer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        L'admiration est un désir de savoir : elle naît de ce qu'on voit l'effet sans en
+        connaître la cause, et elle cause du plaisir, parce que s'y joint l'espoir de
+        connaître ce qu'on désire savoir.
+      citation: >-
+        Est autem admiratio desiderium quoddam sciendi, quod in homine contingit ex hoc quod
+        videt effectum et ignorat causam […] Et ideo admiratio est causa delectationis
+        inquantum habet adiunctam spem consequendi cognitionem eius quod scire desiderat.
+      sources:
+        - ouvrage: somme-theologique
+          entree: "Ia-IIae, q. 32, a. 8, co."
+          url: https://www.corpusthomisticum.org/sth2026.html
+statut: brouillon

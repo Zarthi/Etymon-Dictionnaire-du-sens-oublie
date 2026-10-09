@@ -7,7 +7,7 @@ import { z } from "zod";
 import langues from "../data/langues.json" with { type: "json" };
 import themes from "../data/themes.json" with { type: "json" };
 import traditions from "../data/traditions.json" with { type: "json" };
-import { LICENCES, NATURES, schemaAuteur, schemaEntreeRedaction, schemaFiche, schemaLectureTraditionnelle, schemaOuvrage } from "../src/lib/schema.ts";
+import { LICENCES, NATURES, schemaAuteur, schemaEntreeRedaction, schemaFiche, schemaLectureTraditionnelle, schemaOuvrage, schemaRacine } from "../src/lib/schema.ts";
 import { REDACTEURS } from "../src/lib/sources.ts";
 import { CHEMINS, DRAPEAUX, schemaDossier, schemaVerdict } from "./lib/atelier.ts";
 import { CORPUS } from "./lib/corpus.ts";
@@ -27,6 +27,7 @@ export const SCHEMAS_JSON = [
   { fichier: docs("fiche.schema.json"), schema: schemaFiche, titre: "Fiche d'Étymon" },
   { fichier: docs("auteur.schema.json"), schema: schemaAuteur, titre: "Auteur d'Étymon" },
   { fichier: docs("ouvrage.schema.json"), schema: schemaOuvrage, titre: "Ouvrage d'Étymon" },
+  { fichier: docs("racine.schema.json"), schema: schemaRacine, titre: "Racine d'Étymon" },
 ];
 export const FICHIER_CONTRAT = docs("contrat-fiche.md");
 const DATA = fileURLToPath(new URL("../data", import.meta.url));
@@ -126,6 +127,8 @@ function lireReferences(dossier: string): { id: string; [cle: string]: unknown }
 
 const REGLES = [
   "Le fichier d'un mot s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes, dans l'ordre du Littré), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`. Un auteur : `data/auteurs/<nom>.yaml` ; un ouvrage : `data/ouvrages/<abrégé ou titre>.yaml`.",
+  "Le fichier d'une racine s'appelle `<id>.yaml`, rangé à plat dans `data/racines/` : l'`id` est la forme latine sans accent, ou la translittération du grec (`religio`, `phren` pour φρήν). Sa `langue` est le latin et ses variantes, ou le grec ancien.",
+  "Les mots issus d'une racine se calculent (fiches dont un maillon porte la même forme, à la translittération près, dans la même famille de langue) : ils ne s'écrivent pas dans la fiche de la racine.",
   "Une forme reconstruite commence par `*` ; une valeur commençant par `*`, contenant `: `, ou une virgule dans `{ … }`, s'écrit entre guillemets.",
   "Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches ; l'adresse d'une entrée se déduit du modèle d'adresse de l'ouvrage ; la translittération du grec se déduit de la forme ; ce qui se calcule (œuvres d'un auteur, mots qu'il a forgés) ne s'écrit pas.",
   "Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, listes vides).",
@@ -154,8 +157,8 @@ export function genererMarkdown(): string {
     "> Les mêmes contrats existent en schémas JSON (`docs/*.schema.json`), utilisés par VS Code",
     "> pour l'autocomplétion et la vérification des fiches pendant la saisie.",
     "",
-    "Trois types de fiches, en YAML, avec le même socle éditorial (`sources`, `redaction`, `statut`, `historique`).",
-    "Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data/ouvrages/littre.yaml`.",
+    "Quatre types de fiches, en YAML, avec le même socle éditorial (`sources`, `redaction`, `statut`, `historique`).",
+    "Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data/ouvrages/littre.yaml`, `data/racines/religio.yaml`.",
     "",
     "## Fiche d'un mot (`data/fiches`)",
     "",
@@ -166,6 +169,9 @@ export function genererMarkdown(): string {
     "## Fiche d'un ouvrage (`data/ouvrages`)",
     "",
     ...contrat(schemaOuvrage, "###"),
+    "## Racine grecque ou latine (`data/racines`)",
+    "",
+    ...contrat(schemaRacine, "###"),
     "## Listes fermées",
     "",
     `- \`nature\` : ${NATURES.join(", ")}.`,

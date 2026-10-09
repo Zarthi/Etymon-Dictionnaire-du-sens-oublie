@@ -1,0 +1,33 @@
+mot: amour
+nature: [ nom masculin ]
+etymologie:
+  - forme: amor
+    langue: latin
+    sens: affection, amour
+explication: >-
+  Amor disait l'affection comme la passion, et servait de nom au dieu qui les
+  inspire. Amour garde ces sens, du plus tendre au désir.
+famille: [ aimer, amateur, aimable ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: amour
+  - ouvrage: tlfi
+    entree: amour
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        Deux amours ont fait deux cités : l'amour de soi jusqu'au mépris de Dieu, la cité
+        terrestre ; l'amour de Dieu jusqu'au mépris de soi, la cité céleste.
+      citation: >-
+        Fecerunt itaque ciuitates duas amores duo, terrenam scilicet amor sui usque ad
+        contemptum Dei, caelestem uero amor Dei usque ad contemptum sui.
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: "XIV, 28"
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XIV
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: vanité
+nature: [ nom féminin ]
+etymologie:
+  - forme: vanitas
+    langue: latin
+    sens: état de vide, vaine apparence
+  - forme: vanus
+    langue: latin
+    sens: vide, vain
+explication: >-
+  Vanitas venait de vanus, « vide » : la vanité est d'abord un néant, une
+  apparence sans réalité. L'orgueil ne s'y est joint qu'en 1580, quand le mot
+  s'est dit d'une personne contente d'elle-même.
+famille: [ vain, vaniteux ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: vanité
+  - ouvrage: tlfi
+    entree: vanité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

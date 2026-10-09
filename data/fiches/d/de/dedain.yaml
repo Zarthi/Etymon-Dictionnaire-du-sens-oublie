@@ -1,0 +1,32 @@
+mot: dédain
+nature: [ nom masculin ]
+etymologie:
+  - forme: dédaigner
+    langue: français
+    sens: ne pas juger digne
+    elements:
+      - forme: dé-
+        sens: préfixe de privation
+      - forme: daigner
+        sens: juger digne
+  - forme: dignus
+    langue: latin
+    sens: digne
+explication: >-
+  Dédaigner, c'est cesser de juger digne : daigner dit qu'on trouve digne, et le
+  préfixe le retire. Le dédain ne dit plus le jugement, mais le refus d'accorder
+  de l'importance.
+famille: [ dédaigner, daigner, digne ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: dédain
+  - ouvrage: littre
+    entree: dédaigner
+  - ouvrage: tlfi
+    entree: dédain
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

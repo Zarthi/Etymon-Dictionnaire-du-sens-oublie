@@ -1,12 +1,12 @@
 import { isAlias, LineCounter, parseDocument, visit } from "yaml";
 import { z } from "zod";
 import { prefixe } from "../../src/lib/decoupage.ts";
-import { enAlphabetLatin, enGrec, indexPremier } from "../../src/lib/etymologie.ts";
+import { enAlphabetLatin, enGrec, indexPremier, translitterationDe } from "../../src/lib/etymologie.ts";
 import { formesAmbigues, mentionsDe, textesDe } from "../../src/lib/mentions.ts";
 import { urlDeduite } from "../../src/lib/ouvrages.ts";
-import { ID_VALIDE, schemaAuteur, schemaCandidats, schemaComptes, schemaFiche, schemaOuvrage } from "../../src/lib/schema.ts";
+import { ID_VALIDE, schemaAuteur, schemaCandidats, schemaComptes, schemaFiche, schemaOuvrage, schemaRacine } from "../../src/lib/schema.ts";
 import { analyser, idDe } from "../../src/lib/texte.ts";
-import type { Auteur, Candidat, Fiche, FicheIdentifiee, LigneComptes, Ouvrage, Referentiel } from "../../src/lib/types.ts";
+import type { Auteur, Candidat, Fiche, FicheIdentifiee, LigneComptes, Ouvrage, RacineIdentifiee, Referentiel } from "../../src/lib/types.ts";
 
 z.config(z.locales.fr());
 
@@ -167,6 +167,53 @@ function verifierSources(fiche: { sources: Fiche["sources"]; statut: Fiche["stat
     if (s.url && s.url === deduite) ajouter(`sources.${i}.url`, "adresse inutile : elle se déduit de l'entrée, la retirer");
     if (!s.url && !deduite && s.page === undefined) ajouter(`sources.${i}.url`, "indiquer une page ou une url (l'adresse de cet ouvrage ne se déduit pas de l'entrée)");
   });
+}
+
+/** Nom de fichier attendu d'une racine : slug de la translittération (grec) ou de la forme (latin). */
+export function idRacine(racine: { forme: string; translitteration?: string }): string {
+  const translit = translitterationDe(racine);
+  return slug(enGrec(racine.forme) && translit ? translit : racine.forme);
+}
+
+/**
+ * Valide les racines grecques et latines (`data/racines/<id>.yaml`) : nom de fichier, langue du
+ * sous-ensemble (latin et variantes, grec ancien), sens sans guillemets, typographie et sources.
+ */
+export function validerRacines(sources: FichierSource[], ref: Referentiel): { racines: RacineIdentifiee[]; erreurs: Erreur[] } {
+  const erreurs: Erreur[] = [];
+  const racines: RacineIdentifiee[] = [];
+  for (const source of sources) {
+    const lu = lireEtValider(source, schemaRacine);
+    erreurs.push(...lu.erreurs);
+    if (!("id" in lu)) continue;
+    const ajouter = (champ: string, regle: string) => erreurs.push({ fichier: source.fichier, champ, regle });
+    const attendu = idRacine(lu.valeur);
+    if (lu.id !== attendu && !new RegExp(`^${attendu}-\\d+$`).test(lu.id)) {
+      ajouter("id", `le nom de fichier doit correspondre à la racine : « ${attendu}.yaml »`);
+    }
+    // La translittération se déduit du grec et n'a pas lieu d'être en alphabet latin.
+    const verifierForme = (champ: string, f: { forme: string; translitteration?: string }) => {
+      const suffixe = champ ? `${champ}.translitteration` : "translitteration";
+      const latin = enAlphabetLatin(f.forme);
+      if (f.translitteration && (latin || enGrec(f.forme))) {
+        ajouter(suffixe, latin ? "inutile pour une forme en alphabet latin" : "inutile pour le grec : elle se déduit de la forme");
+      }
+      if (!f.translitteration && !latin && !enGrec(f.forme)) ajouter(suffixe, "obligatoire pour une écriture ni latine ni grecque");
+    };
+    verifierForme("", { forme: lu.valeur.forme, translitteration: lu.valeur.translitteration });
+    lu.valeur.elements?.forEach((e, i) => verifierForme(`elements.${i}`, e));
+    const sensAffiches: [string, string][] = [
+      ["sens", lu.valeur.sens],
+      ...(lu.valeur.elements?.map((e, i): [string, string] => [`elements.${i}.sens`, e.sens]) ?? []),
+    ];
+    for (const [champ, texte] of sensAffiches) {
+      if (/[«»"“”]/.test(texte)) ajouter(champ, "sans guillemets : l'app les ajoute à l'affichage");
+    }
+    verifierTextes([...sensAffiches, ...lu.valeur.historique.map((h, i): [string, string] => [`historique.${i}.note`, h.note])], ajouter);
+    verifierSources(lu.valeur, ref, ajouter);
+    racines.push({ id: lu.id, ...lu.valeur });
+  }
+  return { racines, erreurs };
 }
 
 /** Le texte commence-t-il par ce nom, mot entier et sans tenir compte de la casse ? */

@@ -6,11 +6,12 @@ const fixture = (nom: string) => fileURLToPath(new URL(`fixtures/${nom}`, import
 
 describe("validerDepot", () => {
   it("valide un dépôt conforme (fiches rangées par préfixe, candidats, comptes)", async () => {
-    const { fiches, auteurs, ouvrages, candidats, comptes, erreurs } = await validerDepot(fixture("depot-conforme"));
+    const { fiches, auteurs, ouvrages, racines, candidats, comptes, erreurs } = await validerDepot(fixture("depot-conforme"));
     expect(erreurs).toEqual([]);
     expect(fiches.map((f) => f.id)).toEqual(["croisee", "epreuve", "essai", "sacree"]);
     expect(auteurs.map((a) => a.id)).toEqual(["lactance"]);
     expect(ouvrages.map((o) => o.id)).toEqual(["commentaire-de-test", "gaffiot", "institutions-divines", "tlfi"]);
+    expect(racines.map((r) => r.id)).toEqual(["probatio"]);
     expect(candidats.map((c) => c.mot)).toEqual(["exemple", "essorer"]);
     expect(comptes).toHaveLength(1);
   });

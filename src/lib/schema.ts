@@ -201,6 +201,32 @@ export const schemaMaillon = z
   })
   .describe("Un maillon de la chaîne étymologique.");
 
+/** Langues d'une racine : le latin et ses variantes, ou le grec ancien (celles dont l'UI teinte la forme). */
+const LANGUES_RACINE = langues.filter((l) => l === "grec ancien" || l.split(" ").includes("latin"));
+
+/**
+ * Racine grecque ou latine, entrée de plein droit : une page qui rassemble les mots français issus
+ * d'elle. Son nom de fichier est la forme latine sans accent, ou la translittération du grec.
+ */
+const objetRacine = z
+  .object({
+    forme: z.string().min(1).describe("Forme de la racine dans son écriture d'origine (religio, φρήν)."),
+    translitteration: z
+      .string()
+      .min(1)
+      .optional()
+      .describe("Translittération, seulement pour une écriture ni latine ni grecque : celle du grec se déduit."),
+    langue: z.enum(LANGUES_RACINE).describe("Langue de la racine : le latin et ses variantes, ou le grec ancien."),
+    sens: sens.describe("Sens de la racine, sans guillemets (l'app les ajoute)."),
+    elements: z.array(schemaElement).min(2).optional().describe("Composition : les éléments dont la racine est faite (φίλος + σοφία)."),
+    ...socle,
+  })
+  .strict();
+
+export const schemaRacine = objetRacine
+  .refine(sourcee, MESSAGE_SOURCE)
+  .describe("Racine grecque ou latine : une entrée de plein droit, qui rassemble les mots issus d'elle.");
+
 export const schemaLectureTraditionnelle = z
   .object({
     texte: z

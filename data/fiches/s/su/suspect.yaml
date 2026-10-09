@@ -1,0 +1,31 @@
+mot: suspect
+nature: [ adjectif ]
+etymologie:
+  - forme: suspectus
+    langue: latin
+    sens: soupçonné
+  - forme: suspicere
+    langue: latin
+    sens: regarder de bas en haut ; soupçonner
+    elements:
+      - forme: susum
+        sens: en haut
+      - forme: specere
+        sens: regarder
+explication: >-
+  Suspicere, « regarder de bas en haut », est l'étymon de suspect : la défiance
+  était un regard. Suspect ne dit plus le regard, mais la défiance qu'il
+  éveille.
+famille: [ soupçon, suspicion, suspecter ]
+renvois: [ doute ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: suspect
+  - ouvrage: tlfi
+    entree: suspect
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

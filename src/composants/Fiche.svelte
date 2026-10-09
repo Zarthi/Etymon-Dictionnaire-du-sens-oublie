@@ -91,6 +91,7 @@
       <strong>{e.populaire ? m.fiche.ideeRecue : m.fiche.ecartee}</strong>{g.deuxPoints} <Forme
         forme={e.forme}
         translitteration={e.translitteration}
+        langue={e.langue}
       />, {g.citer(e.sens)}{#if e.selon?.length}{" "}({#each e.selon as id, j (id)}{#if j > 0},{" "}{/if}<a
             href={lienAuteur(id)}>{fichesAuteurs.get(id)?.nom ?? id}</a
           >{/each}){/if}.

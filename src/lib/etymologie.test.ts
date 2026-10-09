@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { enAlphabetLatin, formesCitation, formesItaliques, indexPremier, sensLitteral, translitterationDe } from "./etymologie.ts";
+import { enAlphabetLatin, formesCitation, formesItaliques, indexPremier, sensLitteral, teinte, translitterationDe } from "./etymologie.ts";
 import type { Maillon } from "./types.ts";
 
 const m = (champs: Partial<Maillon>): Maillon => ({ langue: "latin", ...champs }) as Maillon;
@@ -83,5 +83,22 @@ describe("formesCitation", () => {
   });
   it("garde les écritures grecques et ignore la ponctuation", () => {
     expect(formesCitation("« ὥρα, ἡ ὥρα »")).toEqual(["ὥρα"]);
+  });
+});
+
+describe("teinte d'une langue source", () => {
+  it("range le latin et ses variantes sous le latin, le grec ancien sous le grec", () => {
+    expect(teinte("latin")).toBe("latin");
+    expect(teinte("latin populaire")).toBe("latin");
+    expect(teinte("bas latin")).toBe("latin");
+    expect(teinte("latin médiéval")).toBe("latin");
+    expect(teinte("grec ancien")).toBe("grec");
+  });
+  it("ne teinte ni le français, ni une autre langue, ni l'absence de langue", () => {
+    expect(teinte("français")).toBeUndefined();
+    expect(teinte("ancien français")).toBeUndefined();
+    expect(teinte("arabe")).toBeUndefined();
+    expect(teinte("gaulois")).toBeUndefined();
+    expect(teinte(undefined)).toBeUndefined();
   });
 });

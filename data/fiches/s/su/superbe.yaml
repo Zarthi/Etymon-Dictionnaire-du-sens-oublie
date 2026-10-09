@@ -1,0 +1,32 @@
+mot: superbe
+nature: [ adjectif ]
+etymologie:
+  - forme: superbus
+    langue: latin
+    sens: orgueilleux, hautain ; magnifique
+explication: >-
+  Superbus disait ensemble l'orgueilleux et le magnifique. Superbe a gardé ces
+  deux sens, sans les séparer.
+famille: [ superbement ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: superbe
+  - ouvrage: tlfi
+    entree: superbe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        L'orgueil se nomme de ce qu'on tend, par la volonté, au-dessus de ce qu'on est :
+        c'est le péché de qui veut passer sa mesure.
+      citation: >-
+        superbia nominatur ex hoc quod aliquis per voluntatem tendit supra id quod est
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 162, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth3155.html
+statut: brouillon

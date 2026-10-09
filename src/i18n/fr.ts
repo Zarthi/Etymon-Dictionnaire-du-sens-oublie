@@ -61,6 +61,7 @@ export const messages = {
     mot: "Ce mot n'a pas (encore) de fiche.",
     auteur: "Cet auteur n'a pas de fiche.",
     ouvrage: "Cet ouvrage n'a pas de fiche.",
+    racine: "Cette racine n'a pas (encore) de page.",
     accueil: "Aucune fiche publiée pour l'instant.",
   },
   recherche: {
@@ -134,6 +135,9 @@ export const messages = {
     hypotheses: "Étymologies proposées",
     forges: "Mots forgés dans cet ouvrage",
     issus: "Mots issus de son titre",
+  },
+  racine: {
+    mots: "Mots issus de cette racine",
   },
   parametres: {
     titre: "Paramètres",

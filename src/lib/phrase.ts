@@ -12,7 +12,7 @@ import type { Element, Maillon } from "./types.ts";
  */
 export type Segment =
   | { type: "texte"; texte: string }
-  | { type: "forme"; forme: string; translitteration?: string; personne?: string; ouvrage?: string }
+  | { type: "forme"; forme: string; translitteration?: string; langue?: string; personne?: string; ouvrage?: string }
   | { type: "auteur"; id: string }
   | { type: "ouvrage"; id: string };
 
@@ -31,10 +31,12 @@ export interface Hypothese {
 const texte = (t: string): Segment => ({ type: "texte", texte: t });
 /** « de » ou « d' » devant une forme, selon sa lecture en alphabet latin (φρήν se lit phrēn). */
 const prep = (g: Grammaire, f: { forme: string; translitteration?: string }) => g.de(translitterationDe(f) ?? f.forme);
-const forme = (f: { forme: string; translitteration?: string }): Segment => ({
+/** Une forme, avec sa langue (pour la teinter : latin, grec) quand elle est connue. */
+const forme = (f: { forme: string; translitteration?: string }, langue?: string): Segment => ({
   type: "forme",
   forme: f.forme,
   ...(f.translitteration ? { translitteration: f.translitteration } : {}),
+  ...(langue ? { langue } : {}),
 });
 
 /** Des noms d'auteurs liés : « Comte ou Andrieux », « Cicéron, Varron ». */
@@ -50,7 +52,7 @@ function elements(liste: Element[], langueMaillon: string, apresLangue: boolean,
   return liste.flatMap((e, i) => [
     ...(i > 0 ? [texte(i === liste.length - 1 ? g.liaisons.et : ", ")] : []),
     ...(e.langue && e.langue !== langueMaillon ? [texte(`${g.origine(l.langue(e.langue))} `)] : !apresLangue ? [texte(prep(g, e))] : []),
-    forme(e),
+    forme(e, e.langue ?? langueMaillon),
     texte(`, ${g.citer(e.sens)}`),
   ]);
 }
@@ -76,7 +78,7 @@ export function phraseChaine(etymologie: Maillon[], langue: Langue): Segment[] {
   function maillon(x: Maillon, francais: boolean): Segment[] {
     const segments: Segment[] = [];
     if (x.forme) {
-      segments.push({ ...forme({ forme: x.forme, translitteration: x.translitteration }), ...(x.personne ? { personne: x.personne } : x.ouvrage ? { ouvrage: x.ouvrage } : {}) } as Segment);
+      segments.push({ ...forme({ forme: x.forme, translitteration: x.translitteration }, x.langue), ...(x.personne ? { personne: x.personne } : x.ouvrage ? { ouvrage: x.ouvrage } : {}) } as Segment);
       if (x.sens && x !== premier) segments.push(texte(`, ${g.citer(x.sens)}`));
       if (x.elements) segments.push(texte(m.chaine.composeDe), ...elements(x.elements, x.langue, false, langue));
     } else if (x.elements) segments.push(...elements(x.elements, x.langue, !francais, langue));
@@ -84,7 +86,7 @@ export function phraseChaine(etymologie: Maillon[], langue: Langue): Segment[] {
       segments.push(texte(m.chaine.croise));
       x.croisement.forEach((c, i) => {
         if (i > 0) segments.push(texte(i === x.croisement!.length - 1 ? g.liaisons.et : ", "));
-        segments.push(texte(`${g.avec(l.langue(c.langue))} `), forme(c));
+        segments.push(texte(`${g.avec(l.langue(c.langue))} `), forme(c, c.langue));
         if (c.sens) segments.push(texte(`, ${g.citer(c.sens)}`));
       });
     }
@@ -96,7 +98,7 @@ export function phraseChaine(etymologie: Maillon[], langue: Langue): Segment[] {
       const calque = x.modele.relation === "calque";
       segments.push(texte(calque ? m.chaine.calque : m.chaine.surLeModele));
       segments.push(texte(calque || x.modele.langue !== x.langue ? `${g.origine(l.langue(x.modele.langue))} ` : prep(g, x.modele)));
-      segments.push(forme(x.modele));
+      segments.push(forme(x.modele, x.modele.langue));
       if (x.modele.sens) segments.push(texte(`, ${g.citer(x.modele.sens)}`));
     }
     return segments;
@@ -120,7 +122,7 @@ export function hypotheses(x: Maillon, langue: Langue): { titre: string; lignes:
       const segments: Segment[] = a.forme
         ? [
             texte(a.langue && a.langue !== x.langue ? `${g.majuscule(g.origine(l.langue(a.langue)))} ` : g.majuscule(prep(g, { forme: a.forme, translitteration: a.translitteration }))),
-            forme({ forme: a.forme, translitteration: a.translitteration }),
+            forme({ forme: a.forme, translitteration: a.translitteration }, a.langue ?? x.langue),
             texte(`, ${g.citer(a.sens)}`),
             ...(a.elements ? [texte(`${g.deuxPoints} `), ...elements(a.elements, langueA, true, langue)] : []),
           ]

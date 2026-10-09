@@ -9,6 +9,29 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-09 — Export pour un autre projet, et couleur des langues
+
+- **Export stable et versionné** (`npm run export` → `export/etymon.json`) : les fiches (statut
+  compris), les ouvrages et les listes fermées, triés par identifiant, sous une `version` de
+  format (`docs/export.md`). Raison : le jeu Sphynx réutilise Étymon comme dictionnaire hors
+  ligne (décision de Thibault) ; un artefact publié et épinglé vaut mieux qu'un appel réseau,
+  interdit dans l'app. Le consommateur choisit ce qu'il publie ; l'export n'entre pas dans l'app.
+  — à relire
+- **Teinte des langues** : la forme d'un maillon se teinte selon sa langue source — le latin (et
+  ses variantes) en pourpre impérial, le grec ancien en vert-de-gris ; le français et les autres
+  langues restent sans teinte. Variables `--latin` / `--grec` (clair et sombre), axe distinct de
+  `--accent` (sens premier) et de `--tradition` (lectures). La langue est portée par le segment de
+  la phrase (`src/lib/phrase.ts`) et la couleur posée par `Forme.svelte`. Raison : Thibault veut
+  distinguer d'un coup d'œil la part grecque et latine du dictionnaire. — à relire
+- **Racines grecques et latines, entrées de plein droit** : un quatrième type de fiche
+  (`data/racines/`, `schemaRacine`) donne à une racine latine ou grecque sa forme, son sens et les
+  mots français qui en sont issus (calculés à l'assemblage : même forme à la translittération près,
+  même famille de langue), et sa page `#/racine/<id>`. Depuis la chaîne, une forme qui a une racine
+  devient un lien vers elle. Trois racines d'exemple (`religio`, `captivus`, `phren`), en
+  `brouillon`, sens et sources repris des fiches existantes ; l'export passe en version 2
+  (`racines`). Raison : donner corps à la « partie grecque et latine du dictionnaire » (décision de
+  Thibault, 2026-10-09). — à relire
+
 ## 2026-10-07 — Mot du jour et statut
 
 - Le mot du jour est tiré parmi toutes les fiches non sacrées, sans filtrer sur le statut (avant :
@@ -504,3 +527,48 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Lectures | *joie* : Isidore, *Différences*, I, 265, et Thomas d'Aquin, Ia-IIae, q. 31, a. 3, co. ; *délice* : Isidore, XX, 2, 6 ; *envie* : Isidore, *Différences*, I, 610 ; *jalousie* : Thomas, Ia-IIae, q. 28, a. 4, co. (amour de convoitise) ; *zèle* : le même article (amour d'amitié, *zelare pro Deo*) ; *colère* : Isidore, IV, 5, 3-4 | chaque passage lit une forme de la chaîne et dit autre chose que l'histoire, ou la complète ; l'article de Thomas sur *zelus* partagé selon ses deux parties, une par fiche | à relire |
 | Non retenus | Festus (Paul Diacre, p. 75 Müller) pour *désir* ; Isidore, X, 134 (*invidus*) ; Isidore, XIV, 3, 2 (*Eden*) ; Isidore, *Différences*, I, 610 pour *zèle* ; Thomas, Ia-IIae, q. 48, a. 2, ad 1 | Festus redit le rattachement à *sidus* sans rien dire du sens ; *invidus* et *Eden* sont hors chaîne ; le *zelus* en bonne part est l'histoire même ; Thomas y lit *ira*, non *cholera* | à relire |
 | `data/candidats/z.yaml` | supprimé | `npm run rediger` l'a laissé vide après avoir retiré *zèle*, son seul candidat ; un fichier vide est refusé par la validation, et les initiales sans candidat n'ont pas de fichier | à relire |
+
+## 2026-10-09 — Relecture de validation (lots 4 à 18, puis fiches hors lots)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Fiches relues | lots 4 à 18 (129 fiches) et 41 fiches hors lots ; conformes aux dossiers après les corrections ci-dessous | relecture contre le Littré local, l'étymologie du TLFi et la bibliothèque `sources` (Lewis & Short, Bailly) | à valider |
+| *crédit* | renvoi *dette* retiré | « dette » est nommé dans l'explication : un mot déjà nommé n'est pas aussi un renvoi (règle du lot 18) | à relire |
+| *considérer* | renvoi *estimer* retiré (*contempler* gardé) | l'explication dit « l'estime » : même règle | à relire |
+| *moment* | l'explication ne rattache plus « moment d'une force » à 1634 : 1634 est le « produit d'un bras de levier par la force », l'expression datant de 1811 (TLFi) | exactitude du fait daté | à relire |
+| *franc*, *opulent*, *homme*, *schizophrénie* | sans changement, après contrôle | dates de *franc* confirmées par l'article *adjectif* du TLFi ; énumération d'*opulent* tirée des exemples de Lewis & Short ; *humus* maillon voulu, `incertain` ; *Schizophrenie* 1908 = décision du lot B | à relire |
+| *travail* | chaîne laissée à *trepalium*, sans *τριπάσσαλον* | le TLFi donne *τριπάσσαλον*, « trois pieux » (grec byzantin), comme calque **probable** de *trepalium* : l'ajouter changerait le sens premier et demande la langue « grec byzantin » — à trancher (§3.2) | à relire |
+
+## 2026-10-09 — Lot « affection » (aimer, amour, affection, adorer, amateur, charité)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaînes d'*aimer*, *amour*, *amateur* | *amare*, *amor*, *amator* seuls, un maillon par fiche ; pas de maillon commun repris | règle d'arrêt (§3.2), comme *œuvre*/*ouvrier* (lot 11) | à relire |
+| Chaîne d'*adorer* | *adorare*, « rendre un culte », décomposé de *ad*, « vers », et *orare*, « prier » | le Littré (*ad* + *orare*) et le TLFi (dér. de *orare*) ; la composition dit « adresser une prière » | à relire |
+| Chaîne d'*affection* | *affectio* seul, « disposition de l'âme reçue d'une influence » | *affectio* est la source directe ; le sens médical français ne vient pas du maillon | à relire |
+| Chaîne de *charité* | *caritas*, « cherté ; amour, tendresse », puis *carus*, « cher » | le Littré tire *caritas* de *carus* ; « cherté » éclaire le nom | à relire |
+| Chemin de *charité* | `consacre` | *caritas* profane (cherté) devenu le nom de l'amour du prochain (agapè) | à relire |
+| Renvois | *adorer* → *aimer* ; *charité* → *misericorde* | notions voisines, sans racine commune, d'un seul côté ; *amour* → *passion* retiré (« passion » nommé dans l'explication) | à relire |
+| Lectures traditionnelles | ajoutées et vérifiées en ligne : *amour* (Augustin, *Cité de Dieu*, XIV, 28 : deux amours ont fait deux cités), *adorer* (Thomas, IIa-IIae q. 84 a. 1 : l'adoration est l'acte de la religion), *charité* (Thomas, IIa-IIae q. 23 a. 1 : la charité, amitié de l'homme pour Dieu) | `npm run verifier:en-ligne` : 3/3 citations trouvées | faites |
+
+## 2026-10-09 — Lot « regard » (respect, suspect, soupçon, mépris, dédain, admirer)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaînes de *respect*, *suspect*, *soupçon* | *respectus* (*re* + *specere*), *suspectus*/*suspicere* (*susum* + *specere*), *suspicio*/*suspicere* | même racine *specere* ; la composition se découpe du tout vers les parties (§3.2) | à relire |
+| Chaîne de *mépris* | *mépriser* (*mes-* + *priser*), puis *pretium*, « prix » | *mépriser* = « priser mal » ; le sens premier est *pretium* : le mépris est un jugement porté sur un prix | à relire |
+| Chaîne de *dédain* | *dédaigner* (*dé-* + *daigner*), puis *dignus*, « digne » | *dédaigner* = « ne plus juger digne » ; *daigner* vient de *dignari*, de *dignus* | à relire |
+| Chaîne d'*admirer* | *admirari*, « admirer », puis *mirari*, « regarder » | *admirari* est une forme composée : son sens est attesté, non déduit des parties (§3.4) | à relire |
+| Renvois | *suspect* → *doute* ; *mépris* → *dédain* ; *admirer* → *respect* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
+| Lecture traditionnelle | *admirer* : *admiratio*, « désir de savoir », cause de plaisir (Thomas d'Aquin, Ia-IIae q. 32 a. 8) ; rien de net pour les autres | vérifiée en ligne (1/1) | faite |
+
+## 2026-10-09 — Lot « orgueil » (orgueil, vanité, honneur, gloire, ambition, superbe)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaîne d'*orgueil* | *\*urgol* (francique), « fierté » | le TLFi tire orgueil de l'a. b. frq. *\*urgol*, dérivé d'un adjectif signifiant « excellent » : l'origine est germanique, non latine | à relire |
+| Chaînes de *vanité*, *honneur*, *gloire* | *vanitas*/*vanus*, *honor*, *gloria* seuls | sources directes ; le sens premier reste le maillon qui apprend (*vanus*, « vide ») | à relire |
+| Chaîne d'*ambition* | *ambitio*, « démarche des candidats », découpé de *amb*, « autour », et *ire*, « aller » | le Littré donne la composition ; la démarche du candidat éclaire le sens | à relire |
+| Chaîne de *superbe* | *superbus* seul | *superbus* est la source directe ; *super* (« au-dessus ») reste au dossier, hors chaîne (règle d'arrêt) | à relire |
+| Renvois | *orgueil* → *vanité* ; *honneur* → *gloire* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
+| Lectures traditionnelles | *superbe* : *superbia*, « tendre au-dessus de ce qu'on est » (Thomas, IIa-IIae q. 162 a. 1) ; *honneur* : *honor*, « témoignage de l'excellence » (Thomas, IIa-IIae q. 103 a. 1) ; pistes non retenues : *gloria*, *vanitas* | citations vérifiées en ligne (2/2) | faites |

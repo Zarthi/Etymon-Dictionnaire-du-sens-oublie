@@ -9,6 +9,10 @@
   --tradition: #4b5e8a;
   --brouillon: #9a6a00;
   --non-verifie: #a33a2b;
+  /* Couleur d'une langue source, sur la forme elle-même : le latin (pourpre impérial),
+     le grec (vert-de-gris, patine du bronze). Axe distinct de --accent et --tradition. */
+  --latin: #7a2f5a;
+  --grec: #2f6d63;
   --police-fiche: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --police-interface: system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light dark;
@@ -26,6 +30,8 @@
     --tradition: #9fb2dc;
     --brouillon: #e0b450;
     --non-verifie: #f08a78;
+    --latin: #cf8fb4;
+    --grec: #7fc0b0;
   }
 }
 

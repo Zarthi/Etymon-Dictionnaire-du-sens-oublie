@@ -10,6 +10,7 @@ import {
   validerComptes,
   validerFiches,
   validerOuvrages,
+  validerRacines,
   verifierSourcesDesReferences,
   type Erreur,
   type FichierSource,
@@ -52,6 +53,7 @@ export async function validerDepot(dossierData = DOSSIER_DATA, essais: FichierSo
   );
   const attendus = new Set(candidats.filter((c) => c.statut === "a-faire").map((c) => slug(c.mot)));
   const { fiches, erreurs: erreursFiches } = validerFiches(sourcesFiches, ref, attendus);
+  const { racines, erreurs: erreursRacines } = validerRacines(await lireDossier(join(dossierData, "racines")), ref);
   const { comptes, erreurs: erreursComptes } = validerComptes({
     fichier: "comptes.json",
     texte: await readFile(join(dossierData, "comptes.json"), "utf8"),
@@ -61,10 +63,11 @@ export async function validerDepot(dossierData = DOSSIER_DATA, essais: FichierSo
     ...erreursOuvrages.map(prefixer(`${nomDepot}/ouvrages`)),
     ...verifierSourcesDesReferences(ref, (id) => `auteurs/${id}.yaml`, (id) => `ouvrages/${id}.yaml`).map(prefixer(nomDepot)),
     ...erreursFiches.map(prefixer(`${nomDepot}/fiches`)),
+    ...erreursRacines.map(prefixer(`${nomDepot}/racines`)),
     ...erreursCandidats.map(prefixer(`${nomDepot}/candidats`)),
     ...erreursComptes.map(prefixer(nomDepot)),
   ];
-  return { fiches, auteurs, ouvrages, ref, candidats, comptes, erreurs };
+  return { fiches, auteurs, ouvrages, ref, racines, candidats, comptes, erreurs };
 }
 
 export function formaterErreur({ fichier, champ, regle }: Erreur): string {
@@ -80,9 +83,9 @@ export function arreterSiErreurs(erreurs: Erreur[]): void {
 }
 
 if (import.meta.main) {
-  const { fiches, auteurs, ouvrages, candidats, comptes, erreurs } = await validerDepot();
+  const { fiches, auteurs, ouvrages, racines, candidats, comptes, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
   console.log(
-    `✓ ${fiches.length} fiche(s), ${auteurs.length} auteur(s), ${ouvrages.length} ouvrage(s), ${candidats.length} candidat(s) et ${comptes.length} ligne(s) de comptes conformes.`,
+    `✓ ${fiches.length} fiche(s), ${racines.length} racine(s), ${auteurs.length} auteur(s), ${ouvrages.length} ouvrage(s), ${candidats.length} candidat(s) et ${comptes.length} ligne(s) de comptes conformes.`,
   );
 }

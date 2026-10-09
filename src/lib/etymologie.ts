@@ -1,8 +1,8 @@
 import { translitterer } from "./grec.ts";
 import type { Fiche, Maillon } from "./types.ts";
 
-/** Une forme et ce qui permet de la lire : écriture d'origine, translittération éventuelle. */
-type AvecForme = { forme: string; translitteration?: string };
+/** Une forme et ce qui permet de la lire : écriture d'origine, translittération éventuelle, langue source. */
+type AvecForme = { forme: string; translitteration?: string; langue?: string };
 
 const GREC = /[\u0370-\u03ff\u1f00-\u1fff]/u;
 const LATIN = /^[\p{Script=Latin}\p{M}\p{N}\s*'’().\-]+$/u;
@@ -15,6 +15,18 @@ export function enGrec(forme: string): boolean {
 /** La forme s'écrit-elle en alphabet latin (religio, *extonare, per sonare, *(s)tenh₂-) ? */
 export function enAlphabetLatin(forme: string): boolean {
   return LATIN.test(forme);
+}
+
+/**
+ * Couleur d'une langue source : le latin (et ses variantes : populaire, bas, médiéval…), le grec
+ * ancien, ou rien (langue neutre, dont le français). Sert à teinter la forme elle-même, sans
+ * confondre les deux ordres que sont l'étymon et la lecture traditionnelle.
+ */
+export function teinte(langue: string | undefined): "latin" | "grec" | undefined {
+  if (langue === undefined) return undefined;
+  if (langue === "grec ancien") return "grec";
+  if (langue.split(" ").includes("latin")) return "latin";
+  return undefined;
 }
 
 /**
@@ -57,14 +69,14 @@ export function sensLitteral(etymologie: Maillon[]): boolean {
 /** Toutes les formes d'un maillon, avec leurs écritures : pour l'italique et les vérifications. */
 export function formesDuMaillon(m: Maillon): AvecForme[] {
   const formes: AvecForme[] = [];
-  if (m.forme) formes.push({ forme: m.forme, translitteration: m.translitteration });
-  for (const e of m.elements ?? []) formes.push(e);
-  for (const x of m.croisement ?? []) formes.push(x);
+  if (m.forme) formes.push({ forme: m.forme, translitteration: m.translitteration, langue: m.langue });
+  for (const e of m.elements ?? []) formes.push({ forme: e.forme, translitteration: e.translitteration, langue: e.langue ?? m.langue });
+  for (const x of m.croisement ?? []) formes.push({ forme: x.forme, translitteration: x.translitteration, langue: x.langue });
   for (const a of m.alternatives?.formes ?? []) {
-    if (a.forme) formes.push({ forme: a.forme, translitteration: a.translitteration });
-    for (const e of a.elements ?? []) formes.push(e);
+    if (a.forme) formes.push({ forme: a.forme, translitteration: a.translitteration, langue: a.langue ?? m.langue });
+    for (const e of a.elements ?? []) formes.push({ forme: e.forme, translitteration: e.translitteration, langue: e.langue ?? a.langue ?? m.langue });
   }
-  if (m.modele) formes.push(m.modele);
+  if (m.modele) formes.push({ forme: m.modele.forme, translitteration: m.modele.translitteration, langue: m.modele.langue });
   return formes;
 }
 
