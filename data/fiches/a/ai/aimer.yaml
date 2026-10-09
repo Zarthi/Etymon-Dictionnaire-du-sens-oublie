@@ -1,0 +1,22 @@
+mot: aimer
+nature: [ verbe ]
+etymologie:
+  - forme: amare
+    langue: latin
+    sens: aimer
+explication: >-
+  En ancien français, aimer a dit attacher du prix à, estimer à une valeur ; ce
+  sens s'est perdu. Aimer dit aujourd'hui l'attachement ou le goût, du sentiment
+  le plus tendre au plus vif.
+famille: [ amour, amateur, aimable ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: aimer
+  - ouvrage: tlfi
+    entree: aimer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

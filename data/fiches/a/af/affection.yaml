@@ -1,0 +1,23 @@
+mot: affection
+nature: [ nom féminin ]
+etymologie:
+  - forme: affectio
+    langue: latin
+    sens: disposition de l'âme reçue d'une influence
+explication: >-
+  Affectio disait la disposition de l'âme reçue d'une influence. En français,
+  affection a d'abord nommé ce mouvement de l'âme, puis, en 1609, l'attachement
+  pour une personne.
+famille: [ affectif, affectueux, désaffection ]
+renvois: [ sentiment ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: affection
+  - ouvrage: littre
+    entree: affection
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

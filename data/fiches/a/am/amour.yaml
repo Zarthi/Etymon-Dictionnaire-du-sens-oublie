@@ -1,0 +1,21 @@
+mot: amour
+nature: [ nom masculin ]
+etymologie:
+  - forme: amor
+    langue: latin
+    sens: affection, amour
+explication: >-
+  Amor disait l'affection comme la passion, et servait de nom au dieu qui les
+  inspire. Amour garde ces sens, du plus tendre au désir.
+famille: [ aimer, amateur, aimable ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: amour
+  - ouvrage: tlfi
+    entree: amour
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

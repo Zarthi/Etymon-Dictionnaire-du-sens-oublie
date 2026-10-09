@@ -1,0 +1,26 @@
+mot: charité
+nature: [ nom féminin ]
+etymologie:
+  - forme: caritas
+    langue: latin
+    sens: cherté ; amour, tendresse
+  - forme: carus
+    langue: latin
+    sens: cher, qui coûte cher
+explication: >-
+  Caritas venait de carus, « cher » : il dit d'abord la cherté, puis l'amour et
+  la tendresse. L'Église en a fait le nom de l'amour du prochain, et de l'aumône
+  qui l'exprime.
+famille: [ cher, chéri, charitable ]
+renvois: [ misericorde ]
+themes: [ religion, morale ]
+sources:
+  - ouvrage: littre
+    entree: charité
+  - ouvrage: tlfi
+    entree: charité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

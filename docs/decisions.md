@@ -515,3 +515,15 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | *moment* | l'explication ne rattache plus « moment d'une force » à 1634 : 1634 est le « produit d'un bras de levier par la force », l'expression datant de 1811 (TLFi) | exactitude du fait daté | à relire |
 | *franc*, *opulent*, *homme*, *schizophrénie* | sans changement, après contrôle | dates de *franc* confirmées par l'article *adjectif* du TLFi ; énumération d'*opulent* tirée des exemples de Lewis & Short ; *humus* maillon voulu, `incertain` ; *Schizophrenie* 1908 = décision du lot B | à relire |
 | *travail* | chaîne laissée à *trepalium*, sans *τριπάσσαλον* | le TLFi donne *τριπάσσαλον*, « trois pieux » (grec byzantin), comme calque **probable** de *trepalium* : l'ajouter changerait le sens premier et demande la langue « grec byzantin » — à trancher (§3.2) | à relire |
+
+## 2026-10-09 — Lot « affection » (aimer, amour, affection, adorer, amateur, charité)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaînes d'*aimer*, *amour*, *amateur* | *amare*, *amor*, *amator* seuls, un maillon par fiche ; pas de maillon commun repris | règle d'arrêt (§3.2), comme *œuvre*/*ouvrier* (lot 11) | à relire |
+| Chaîne d'*adorer* | *adorare*, « rendre un culte », décomposé de *ad*, « vers », et *orare*, « prier » | le Littré (*ad* + *orare*) et le TLFi (dér. de *orare*) ; la composition dit « adresser une prière » | à relire |
+| Chaîne d'*affection* | *affectio* seul, « disposition de l'âme reçue d'une influence » | *affectio* est la source directe ; le sens médical français ne vient pas du maillon | à relire |
+| Chaîne de *charité* | *caritas*, « cherté ; amour, tendresse », puis *carus*, « cher » | le Littré tire *caritas* de *carus* ; « cherté » éclaire le nom | à relire |
+| Chemin de *charité* | `consacre` | *caritas* profane (cherté) devenu le nom de l'amour du prochain (agapè) | à relire |
+| Renvois | *adorer* → *aimer* ; *charité* → *misericorde* | notions voisines, sans racine commune, d'un seul côté ; *amour* → *passion* retiré (« passion » nommé dans l'explication) | à relire |
+| Lectures traditionnelles | à chercher pour *charité* (*caritas*, agapè), *amour* (*amor* chrétien), *adorer* (*adorare* biblique) | passe à part (docs/consignes/lectures.md) | à faire |

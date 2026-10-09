@@ -1,0 +1,20 @@
+mot: amateur
+nature: [ nom masculin ]
+etymologie:
+  - forme: amator
+    langue: latin
+    sens: celui qui aime
+explication: >-
+  Amator disait celui qui aime, d'un être comme d'une chose. Amateur l'a d'abord
+  dit ainsi ; depuis le XVIIIe siècle, il dit aussi celui qui cultive un art
+  sans en faire métier.
+famille: [ amour, aimer, amatrice ]
+themes: [ société, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: amateur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon
