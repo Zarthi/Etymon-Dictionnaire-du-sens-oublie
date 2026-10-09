@@ -528,6 +528,14 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Non retenus | Festus (Paul Diacre, p. 75 Müller) pour *désir* ; Isidore, X, 134 (*invidus*) ; Isidore, XIV, 3, 2 (*Eden*) ; Isidore, *Différences*, I, 610 pour *zèle* ; Thomas, Ia-IIae, q. 48, a. 2, ad 1 | Festus redit le rattachement à *sidus* sans rien dire du sens ; *invidus* et *Eden* sont hors chaîne ; le *zelus* en bonne part est l'histoire même ; Thomas y lit *ira*, non *cholera* | à relire |
 | `data/candidats/z.yaml` | supprimé | `npm run rediger` l'a laissé vide après avoir retiré *zèle*, son seul candidat ; un fichier vide est refusé par la validation, et les initiales sans candidat n'ont pas de fichier | à relire |
 
+## 2026-10-08 — Retrait du serveur MCP Étymon ; MCP général « sources »
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| MCP Étymon | retiré (`.mcp.json`, `.opencode/`, `scripts/mcp/`, test) | la recherche de sources passe à un serveur MCP unique, partagé, hors dépôt ; les scripts `npm` (`valider`, `verifier`, `etat`) restent la voie de contrôle du projet | à relire |
+| MCP général | `../bibliotheque/mcp/server.py` (outils `chercher`, `littre`, `corpus`, `ouvrages`, `statistiques`), enregistré globalement (opencode + Claude) | une seule source pour les deux projets, sans dépendre d'un dépôt | à relire |
+| App | inchangée (hors ligne, sans réseau) | l'outillage est hors de l'app | — |
+
 ## 2026-10-09 — Relecture de validation (lots 4 à 18, puis fiches hors lots)
 
 | Sujet | Décision | Raison | Relecture |
