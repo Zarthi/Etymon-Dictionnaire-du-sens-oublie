@@ -625,8 +625,9 @@ etymon/
 - Ne jamais parcourir toute la base de fiches : utiliser `npm run etat` et ouvrir
   seulement les fiches concernées (`data/fiches/<initiale>/<préfixe>/<id>.yaml`).
 - Commits petits et explicites (`feat: recherche par mot`, `data: 10 fiches brouillon`).
-- Branches : le travail se fait sur une branche, jamais sur `main` ; il y entre par une pull
-  request à CI verte, que Thibault fusionne (sa relecture des brouillons et des décisions s'y fait).
+- Branches : Thibault étant seul sur le projet, le travail se fait **sur `main`**, par commits
+  et fusions **locaux** ; pas de pull request. L'agent pousse sur `main` après `npm run valider`
+  et les tests. Une branche de travail reste possible pour un chantier risqué, fusionnée en local.
 - Tests (Vitest) : le script de validation lui-même (fiches valides et invalides de test
   dans `scripts/__tests__/`), plus des tests unitaires sur `recherche.ts` et `motDuJour.ts`.
 - Optimise l'usage des tokens : utilise **rtk** (rust token killer) pour les actions qui
