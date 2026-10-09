@@ -504,3 +504,14 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Lectures | *joie* : Isidore, *Différences*, I, 265, et Thomas d'Aquin, Ia-IIae, q. 31, a. 3, co. ; *délice* : Isidore, XX, 2, 6 ; *envie* : Isidore, *Différences*, I, 610 ; *jalousie* : Thomas, Ia-IIae, q. 28, a. 4, co. (amour de convoitise) ; *zèle* : le même article (amour d'amitié, *zelare pro Deo*) ; *colère* : Isidore, IV, 5, 3-4 | chaque passage lit une forme de la chaîne et dit autre chose que l'histoire, ou la complète ; l'article de Thomas sur *zelus* partagé selon ses deux parties, une par fiche | à relire |
 | Non retenus | Festus (Paul Diacre, p. 75 Müller) pour *désir* ; Isidore, X, 134 (*invidus*) ; Isidore, XIV, 3, 2 (*Eden*) ; Isidore, *Différences*, I, 610 pour *zèle* ; Thomas, Ia-IIae, q. 48, a. 2, ad 1 | Festus redit le rattachement à *sidus* sans rien dire du sens ; *invidus* et *Eden* sont hors chaîne ; le *zelus* en bonne part est l'histoire même ; Thomas y lit *ira*, non *cholera* | à relire |
 | `data/candidats/z.yaml` | supprimé | `npm run rediger` l'a laissé vide après avoir retiré *zèle*, son seul candidat ; un fichier vide est refusé par la validation, et les initiales sans candidat n'ont pas de fichier | à relire |
+
+## 2026-10-09 — Relecture de validation (lots 4 à 18, puis fiches hors lots)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Fiches relues | lots 4 à 18 (129 fiches) et 41 fiches hors lots ; conformes aux dossiers après les corrections ci-dessous | relecture contre le Littré local, l'étymologie du TLFi et la bibliothèque `sources` (Lewis & Short, Bailly) | à valider |
+| *crédit* | renvoi *dette* retiré | « dette » est nommé dans l'explication : un mot déjà nommé n'est pas aussi un renvoi (règle du lot 18) | à relire |
+| *considérer* | renvoi *estimer* retiré (*contempler* gardé) | l'explication dit « l'estime » : même règle | à relire |
+| *moment* | l'explication ne rattache plus « moment d'une force » à 1634 : 1634 est le « produit d'un bras de levier par la force », l'expression datant de 1811 (TLFi) | exactitude du fait daté | à relire |
+| *franc*, *opulent*, *homme*, *schizophrénie* | sans changement, après contrôle | dates de *franc* confirmées par l'article *adjectif* du TLFi ; énumération d'*opulent* tirée des exemples de Lewis & Short ; *humus* maillon voulu, `incertain` ; *Schizophrenie* 1908 = décision du lot B | à relire |
+| *travail* | chaîne laissée à *trepalium*, sans *τριπάσσαλον* | le TLFi donne *τριπάσσαλον*, « trois pieux » (grec byzantin), comme calque **probable** de *trepalium* : l'ajouter changerait le sens premier et demande la langue « grec byzantin » — à trancher (§3.2) | à relire |
