@@ -680,6 +680,65 @@
       "historique": []
     },
     {
+      "id": "ambition",
+      "mot": "ambition",
+      "nature": [
+        "nom féminin"
+      ],
+      "etymologie": [
+        {
+          "forme": "ambitio",
+          "langue": "latin",
+          "sens": "démarche des candidats, désir des honneurs",
+          "elements": [
+            {
+              "forme": "amb",
+              "sens": "autour"
+            },
+            {
+              "forme": "ire",
+              "sens": "aller"
+            }
+          ]
+        }
+      ],
+      "explication": "Ambitio, c'était tourner autour : la démarche du candidat qui sollicitait les suffrages. L'ambition a gardé le désir, perdu la marche et les électeurs.",
+      "ecartees": [],
+      "incertain": false,
+      "doublets": [],
+      "famille": [
+        "ambitieux"
+      ],
+      "renvois": [],
+      "themes": [
+        "morale",
+        "politique"
+      ],
+      "tradition": {
+        "lectures": [],
+        "renvois": []
+      },
+      "sources": [
+        {
+          "ouvrage": "tlfi",
+          "entree": "ambition"
+        },
+        {
+          "ouvrage": "littre",
+          "entree": "ambition"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash Latest",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
       "id": "ame",
       "mot": "âme",
       "nature": [
@@ -4880,6 +4939,57 @@
       "historique": []
     },
     {
+      "id": "gloire",
+      "mot": "gloire",
+      "nature": [
+        "nom féminin"
+      ],
+      "etymologie": [
+        {
+          "forme": "gloria",
+          "langue": "latin",
+          "sens": "renom, réputation ; splendeur de Dieu"
+        }
+      ],
+      "explication": "Gloria disait la renommée, et, chez les chrétiens, la splendeur de Dieu. En français, gloire a d'abord dit la béatitude céleste (vers 1050), avant la renommée (1130).",
+      "ecartees": [],
+      "incertain": false,
+      "doublets": [],
+      "famille": [
+        "glorieux",
+        "glorifier",
+        "gloriole"
+      ],
+      "renvois": [],
+      "themes": [
+        "société",
+        "religion"
+      ],
+      "tradition": {
+        "lectures": [],
+        "renvois": []
+      },
+      "sources": [
+        {
+          "ouvrage": "littre",
+          "entree": "gloire"
+        },
+        {
+          "ouvrage": "tlfi",
+          "entree": "gloire"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash Latest",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
       "id": "heure",
       "mot": "heure",
       "nature": [
@@ -5020,6 +5130,71 @@
         {
           "par": "IA",
           "detail": "Claude Opus 5.5",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
+      "id": "honneur",
+      "mot": "honneur",
+      "nature": [
+        "nom masculin"
+      ],
+      "etymologie": [
+        {
+          "forme": "honor",
+          "langue": "latin",
+          "sens": "honneur rendu, marque de considération"
+        }
+      ],
+      "explication": "Honor disait l'honneur rendu, mais aussi la charge publique et le fief qu'elle apportait. Honneur a gardé l'estime et le sentiment de sa dignité, perdu la charge.",
+      "ecartees": [],
+      "incertain": false,
+      "doublets": [],
+      "famille": [
+        "honorable",
+        "honorer",
+        "honoraire"
+      ],
+      "renvois": [
+        "gloire"
+      ],
+      "themes": [
+        "morale",
+        "société"
+      ],
+      "tradition": {
+        "lectures": [
+          {
+            "texte": "L'honneur est un témoignage rendu à l'excellence de quelqu'un : devant les hommes il passe par des signes extérieurs, devant Dieu le témoignage de la conscience suffit.",
+            "citation": "honor testificationem quandam importat de excellentia alicuius",
+            "sources": [
+              {
+                "ouvrage": "somme-theologique",
+                "entree": "IIa-IIae, q. 103, a. 1, co.",
+                "url": "https://www.corpusthomisticum.org/sth3102.html"
+              }
+            ]
+          }
+        ],
+        "renvois": []
+      },
+      "sources": [
+        {
+          "ouvrage": "littre",
+          "entree": "honneur"
+        },
+        {
+          "ouvrage": "tlfi",
+          "entree": "honneur"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash Latest",
           "reflexion": "élevée"
         }
       ],
@@ -8544,6 +8719,53 @@
         {
           "par": "IA",
           "detail": "Claude Opus 5.5",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
+      "id": "orgueil",
+      "mot": "orgueil",
+      "nature": [
+        "nom masculin"
+      ],
+      "etymologie": [
+        {
+          "forme": "*urgol",
+          "langue": "francique",
+          "sens": "fierté"
+        }
+      ],
+      "explication": "Orgueil vient d'un mot franc qui disait la fierté, formé sur un adjectif signifiant « excellent ». Le mot a d'abord dit l'estime exagérée de soi ; le sens favorable, la fierté justifiée, ne s'y est joint qu'en 1637.",
+      "ecartees": [],
+      "incertain": false,
+      "doublets": [],
+      "famille": [
+        "orgueilleux",
+        "orgueilleusement"
+      ],
+      "renvois": [
+        "vanite"
+      ],
+      "themes": [
+        "morale"
+      ],
+      "tradition": {
+        "lectures": [],
+        "renvois": []
+      },
+      "sources": [
+        {
+          "ouvrage": "tlfi",
+          "entree": "orgueil"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash Latest",
           "reflexion": "élevée"
         }
       ],
@@ -12458,6 +12680,66 @@
       "historique": []
     },
     {
+      "id": "superbe",
+      "mot": "superbe",
+      "nature": [
+        "adjectif"
+      ],
+      "etymologie": [
+        {
+          "forme": "superbus",
+          "langue": "latin",
+          "sens": "orgueilleux, hautain ; magnifique"
+        }
+      ],
+      "explication": "Superbus disait ensemble l'orgueilleux et le magnifique. Superbe a gardé ces deux sens, sans les séparer.",
+      "ecartees": [],
+      "incertain": false,
+      "doublets": [],
+      "famille": [
+        "superbement"
+      ],
+      "renvois": [],
+      "themes": [
+        "morale"
+      ],
+      "tradition": {
+        "lectures": [
+          {
+            "texte": "L'orgueil se nomme de ce qu'on tend, par la volonté, au-dessus de ce qu'on est : c'est le péché de qui veut passer sa mesure.",
+            "citation": "superbia nominatur ex hoc quod aliquis per voluntatem tendit supra id quod est",
+            "sources": [
+              {
+                "ouvrage": "somme-theologique",
+                "entree": "IIa-IIae, q. 162, a. 1, co.",
+                "url": "https://www.corpusthomisticum.org/sth3155.html"
+              }
+            ]
+          }
+        ],
+        "renvois": []
+      },
+      "sources": [
+        {
+          "ouvrage": "littre",
+          "entree": "superbe"
+        },
+        {
+          "ouvrage": "tlfi",
+          "entree": "superbe"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash Latest",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
       "id": "suspect",
       "mot": "suspect",
       "nature": [
@@ -12931,6 +13213,60 @@
         {
           "par": "IA",
           "detail": "Claude Opus 5.5",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
+      "id": "vanite",
+      "mot": "vanité",
+      "nature": [
+        "nom féminin"
+      ],
+      "etymologie": [
+        {
+          "forme": "vanitas",
+          "langue": "latin",
+          "sens": "état de vide, vaine apparence"
+        },
+        {
+          "forme": "vanus",
+          "langue": "latin",
+          "sens": "vide, vain"
+        }
+      ],
+      "explication": "Vanitas venait de vanus, « vide » : la vanité est d'abord un néant, une apparence sans réalité. L'orgueil ne s'y est joint qu'en 1580, quand le mot s'est dit d'une personne contente d'elle-même.",
+      "ecartees": [],
+      "incertain": false,
+      "doublets": [],
+      "famille": [
+        "vain",
+        "vaniteux"
+      ],
+      "renvois": [],
+      "themes": [
+        "morale"
+      ],
+      "tradition": {
+        "lectures": [],
+        "renvois": []
+      },
+      "sources": [
+        {
+          "ouvrage": "littre",
+          "entree": "vanité"
+        },
+        {
+          "ouvrage": "tlfi",
+          "entree": "vanité"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash Latest",
           "reflexion": "élevée"
         }
       ],
