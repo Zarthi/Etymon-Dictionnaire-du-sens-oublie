@@ -1,0 +1,13 @@
+forme: captivus
+langue: latin
+sens: prisonnier
+sources:
+  - ouvrage: littre
+    entree: captif
+  - ouvrage: tlfi
+    entree: captif
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

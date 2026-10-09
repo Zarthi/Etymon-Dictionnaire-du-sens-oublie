@@ -1,8 +1,9 @@
 import auteursAssembles from "../generes/auteurs.json";
 import index from "../generes/index.json";
 import ouvragesAssembles from "../generes/ouvrages.json";
+import racinesAssemblees from "../generes/racines.json";
 import { prefixe } from "./decoupage.ts";
-import type { AuteurAssemble, EntreeIndex, FicheIdentifiee, OuvrageAssemble } from "./types.ts";
+import type { AuteurAssemble, EntreeIndex, FicheIdentifiee, OuvrageAssemble, RacineAssemblee } from "./types.ts";
 
 // Fichiers générés à partir de fiches validées par le schéma : le JSON n'en garde pas les types littéraux.
 
@@ -12,6 +13,9 @@ export const entrees = index as EntreeIndex[];
 /** Auteurs et ouvrages, peu nombreux : embarqués, pour nommer et relier ce que les fiches citent. */
 export const auteurs = new Map((auteursAssembles as AuteurAssemble[]).map((a) => [a.id, a]));
 export const ouvrages = new Map((ouvragesAssembles as OuvrageAssemble[]).map((o) => [o.id, o]));
+
+/** Racines grecques et latines, avec les mots français issus d'elles (calculés à l'assemblage). */
+export const racines = new Map((racinesAssemblees as RacineAssemblee[]).map((r) => [r.id, r]));
 
 /** Lots de fiches complètes, un par préfixe, chargés à la demande (et mis en cache hors ligne). */
 const lots = import.meta.glob<FicheIdentifiee[]>("../generes/fiches/*.json", { import: "default" });

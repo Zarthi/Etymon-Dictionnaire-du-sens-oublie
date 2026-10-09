@@ -3,21 +3,23 @@
   import MotDuJour from "./composants/MotDuJour.svelte";
   import PageAuteur from "./composants/PageAuteur.svelte";
   import PageOuvrage from "./composants/PageOuvrage.svelte";
+  import PageRacine from "./composants/PageRacine.svelte";
   import Parametres from "./composants/Parametres.svelte";
   import Recherche from "./composants/Recherche.svelte";
-  import { auteurs, chargerFiche, entrees, ouvrages } from "./lib/fiches.ts";
+  import { auteurs, chargerFiche, entrees, ouvrages, racines } from "./lib/fiches.ts";
   import { lienMot } from "./lib/liens.ts";
   import { dateDuJour, motAuHasard, motDuJour } from "./lib/motDuJour.ts";
   import { ecrireParametres, lireParametres } from "./lib/stockage.ts";
   import { tick } from "svelte";
   import { grammaire as g, messages as m } from "./i18n/index.ts";
 
-  /** Vue affichée, déduite de l'adresse : `#/`, `#/mot/<id>`, `#/auteur/<id>`, `#/ouvrage/<id>`, `#/parametres`. */
+  /** Vue affichée, déduite de l'adresse : `#/`, `#/mot/<id>`, `#/auteur/<id>`, `#/ouvrage/<id>`, `#/racine/<id>`, `#/parametres`. */
   type Vue =
     | { nom: "accueil" }
     | { nom: "fiche"; id: string }
     | { nom: "auteur"; id: string }
     | { nom: "ouvrage"; id: string }
+    | { nom: "racine"; id: string }
     | { nom: "parametres" };
 
   function lireVue(hash: string): Vue {
@@ -25,6 +27,7 @@
     if (page === "mot" && id) return { nom: "fiche", id: decodeURIComponent(id) };
     if (page === "auteur" && id) return { nom: "auteur", id: decodeURIComponent(id) };
     if (page === "ouvrage" && id) return { nom: "ouvrage", id: decodeURIComponent(id) };
+    if (page === "racine" && id) return { nom: "racine", id: decodeURIComponent(id) };
     if (page === "parametres") return { nom: "parametres" };
     return { nom: "accueil" };
   }
@@ -140,6 +143,9 @@
       {:else if vue.nom === "ouvrage"}
         {@const ouvrage = ouvrages.get(vue.id)}
         {#if ouvrage}<PageOuvrage {ouvrage} />{:else}<p class="message">{m.absent.ouvrage}</p>{/if}
+      {:else if vue.nom === "racine"}
+        {@const racine = racines.get(vue.id)}
+        {#if racine}<PageRacine {racine} />{:else}<p class="message">{m.absent.racine}</p>{/if}
       {:else if vue.nom === "fiche"}
         {#await ficheOuverte then fiche}
           {#if fiche}

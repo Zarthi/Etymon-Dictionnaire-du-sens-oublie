@@ -1,9 +1,10 @@
 <script lang="ts">
   import * as langue from "../i18n/index.ts";
   import { auteurs, ouvrages } from "../lib/fiches.ts";
-  import { lienAuteur, lienOuvrage } from "../lib/liens.ts";
+  import { lienAuteur, lienOuvrage, lienRacine } from "../lib/liens.ts";
   import { tenantDe } from "../lib/mentions.ts";
   import { hypotheses, phraseChaine, type Segment } from "../lib/phrase.ts";
+  import { racineDe } from "../lib/racines.ts";
   import type { Maillon } from "../lib/types.ts";
   import Forme from "./Forme.svelte";
 
@@ -19,13 +20,20 @@
   const tenant = (id: string) => tenantDe(id, auteurs, ouvrages);
   const nom = (id: string) => auteurs.get(id)?.nom ?? id;
   const titre = (id: string) => ouvrages.get(id)?.titre ?? id;
+  /** Page visée par une forme : le nom ou le titre qu'elle est, sinon la racine dont elle est l'étymon. */
+  const lienForme = (s: Extract<Segment, { type: "forme" }>): string | undefined => {
+    if (s.personne) return lienAuteur(s.personne);
+    if (s.ouvrage) return lienOuvrage(s.ouvrage);
+    const racine = racineDe(s, s.langue);
+    return racine ? lienRacine(racine) : undefined;
+  };
 </script>
 
 {#snippet segments(liste: Segment[])}{#each liste as s, i (i)}{#if s.type === "texte"}{s.texte}{:else if s.type === "forme"}<Forme
         forme={s.forme}
         translitteration={s.translitteration}
         langue={s.langue}
-        lien={s.personne ? lienAuteur(s.personne) : s.ouvrage ? lienOuvrage(s.ouvrage) : undefined}
+        lien={lienForme(s)}
       />{:else if s.type === "auteur"}<a class="auteur" href={lienAuteur(s.id)}>{nom(s.id)}</a>{:else}<a
         class="ouvrage"
         href={lienOuvrage(s.id)}><cite>{titre(s.id)}</cite></a

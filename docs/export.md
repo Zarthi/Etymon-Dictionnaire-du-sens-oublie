@@ -12,8 +12,9 @@ changement de sens d'un champ).
 
 ```jsonc
 {
-  "version": 1,
+  "version": 2,
   "fiches": [ /* FicheIdentifiee : le schéma de src/lib/schema.ts, + id */ ],
+  "racines": [ /* RacineIdentifiee : le schéma de src/lib/schema.ts, + id */ ],
   "ouvrages": [ /* Ouvrage : pour l'attribution, que la licence CC BY-SA exige */ ],
   "langues": [ "latin", "grec ancien", … ],
   "themes": [ "esprit", … ]
@@ -23,10 +24,14 @@ changement de sens d'un champ).
 - **Toutes** les fiches sont exportées, `a-verifier`, `brouillon` et `validee`, avec leur `statut` :
   c'est le consommateur qui décide ce qu'il publie (le jeu peut n'afficher que les `validee`, ou
   signaler les autres comme l'app le fait).
-- `fiches` et `ouvrages` sont **triés par `id`** : l'export est déterministe, quel que soit
-  l'ordre des fichiers sur le disque.
-- Aucun dérivé n'est recalculé (doublets symétriques, adresses d'entrées) : le consommateur
-  applique le même calcul s'il en a besoin, ou s'en passe.
+- `racines` : les racines grecques et latines (`data/racines`), entrées de plein droit du
+  dictionnaire. Comme les autres données, elles sont exportées brutes : la liste des mots issus
+  d'elles se recalcule à partir des fiches (même forme à la translittération près, même famille de
+  langue), comme l'app le fait à l'assemblage.
+- `fiches`, `racines` et `ouvrages` sont **triés par `id`** : l'export est déterministe, quel que
+  soit l'ordre des fichiers sur le disque.
+- Aucun dérivé n'est recalculé (doublets symétriques, adresses d'entrées, mots issus d'une racine) :
+  le consommateur applique le même calcul s'il en a besoin, ou s'en passe.
 
 ## Droits
 

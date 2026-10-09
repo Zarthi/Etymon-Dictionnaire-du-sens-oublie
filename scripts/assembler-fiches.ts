@@ -2,8 +2,9 @@ import { mkdir, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { prefixe } from "../src/lib/decoupage.ts";
+import { formesDuMaillon, teinte, translitterationDe } from "../src/lib/etymologie.ts";
 import { voixDe } from "../src/lib/traditions.ts";
-import type { Auteur, AuteurAssemble, EntreeIndex, FicheIdentifiee, MotCite, Ouvrage, OuvrageAssemble } from "../src/lib/types.ts";
+import type { Auteur, AuteurAssemble, EntreeIndex, FicheIdentifiee, MotCite, Ouvrage, OuvrageAssemble, RacineAssemblee, RacineIdentifiee } from "../src/lib/types.ts";
 import { arreterSiErreurs, validerDepot } from "./valider-fiches.ts";
 
 export const DOSSIER_SORTIE = fileURLToPath(new URL("../src/generes", import.meta.url));
@@ -80,19 +81,46 @@ export function assemblerReferences(
   };
 }
 
+/** Clé comparable d'une forme : sa translittération si l'écriture n'est pas latine, sinon la forme elle-même. */
+const cleForme = (f: { forme: string; translitteration?: string }) => translitterationDe(f) ?? f.forme;
+
+/**
+ * Mots français issus de chaque racine : les fiches dont un maillon porte une forme égale à la
+ * sienne (à la translittération près), de la même famille de langue (latin ou grec). Ce qui se
+ * calcule ne s'écrit pas dans la fiche de la racine.
+ */
+export function assemblerRacines(racines: RacineIdentifiee[], fiches: FicheIdentifiee[]): RacineAssemblee[] {
+  const motsDe = (racine: RacineIdentifiee): MotCite[] => {
+    const famille = teinte(racine.langue);
+    const cle = cleForme(racine);
+    return fiches
+      .filter((f) =>
+        f.etymologie.some((m) => {
+          if (teinte(m.langue) !== famille) return false;
+          return formesDuMaillon(m).some((x) => teinte(x.langue ?? m.langue) === famille && cleForme(x) === cle);
+        }),
+      )
+      .map(({ id, mot }) => ({ id, mot }))
+      .sort(parId);
+  };
+  return racines.map((r) => ({ ...r, mots: motsDe(r) })).sort(parId);
+}
+
 if (import.meta.main) {
-  const { fiches, auteurs, ouvrages, erreurs } = await validerDepot();
+  const { fiches, auteurs, ouvrages, racines, erreurs } = await validerDepot();
   arreterSiErreurs(erreurs);
   const { index, lots } = assembler(fiches);
   const references = assemblerReferences(fiches, auteurs, ouvrages);
+  const racinesAssemblees = assemblerRacines(racines, fiches);
   await rm(DOSSIER_SORTIE, { recursive: true, force: true });
   await mkdir(join(DOSSIER_SORTIE, "fiches"), { recursive: true });
   await writeFile(join(DOSSIER_SORTIE, "index.json"), JSON.stringify(index) + "\n");
   await writeFile(join(DOSSIER_SORTIE, "auteurs.json"), JSON.stringify(references.auteurs) + "\n");
   await writeFile(join(DOSSIER_SORTIE, "ouvrages.json"), JSON.stringify(references.ouvrages) + "\n");
+  await writeFile(join(DOSSIER_SORTIE, "racines.json"), JSON.stringify(racinesAssemblees) + "\n");
   for (const [p, lot] of lots) await writeFile(join(DOSSIER_SORTIE, "fiches", `${p}.json`), JSON.stringify(lot) + "\n");
   const validees = index.filter((e) => e.statut === "validee").length;
   console.log(
-    `✓ ${index.length} fiche(s) assemblée(s), dont ${validees} validée(s), en ${lots.size} lot(s), ${auteurs.length} auteur(s) et ${ouvrages.length} ouvrage(s) dans src/generes/`,
+    `✓ ${index.length} fiche(s) assemblée(s), dont ${validees} validée(s), en ${lots.size} lot(s), ${racinesAssemblees.length} racine(s), ${auteurs.length} auteur(s) et ${ouvrages.length} ouvrage(s) dans src/generes/`,
   );
 }

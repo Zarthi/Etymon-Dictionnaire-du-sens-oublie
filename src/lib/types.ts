@@ -9,6 +9,7 @@ import type {
   schemaLigneComptes,
   schemaMaillon,
   schemaOuvrage,
+  schemaRacine,
 } from "./schema.ts";
 
 /** Fiche d'un mot, telle qu'écrite dans `data/fiches/<initiale>/<préfixe>/<id>.yaml`. */
@@ -37,6 +38,12 @@ export interface MotCite {
   id: string;
   mot: string;
 }
+
+/** Racine grecque ou latine (`data/racines/<id>.yaml`), entrée de plein droit du dictionnaire. */
+export type Racine = z.infer<typeof schemaRacine>;
+export type RacineIdentifiee = Racine & { id: string };
+/** Racine telle que l'app la reçoit : sa fiche, et les mots français qui en sont issus (calculés). */
+export type RacineAssemblee = RacineIdentifiee & { mots: MotCite[] };
 
 /** Auteur tel que l'app le reçoit : sa fiche, et ce qui se calcule (jamais écrit). */
 export type AuteurAssemble = Auteur & {

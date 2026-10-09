@@ -1,0 +1,15 @@
+forme: religio
+langue: latin
+sens: attention scrupuleuse
+sources:
+  - ouvrage: lewis-short
+    entree: religio
+  - ouvrage: littre
+    entree: religion
+  - ouvrage: tlfi
+    entree: religion
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
