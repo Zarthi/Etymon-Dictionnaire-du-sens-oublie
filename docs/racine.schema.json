@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "forme": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Forme de la racine dans son écriture d'origine (religio, φρήν)."
+    },
+    "translitteration": {
+      "description": "Translittération, seulement pour une écriture ni latine ni grecque : celle du grec se déduit.",
+      "type": "string",
+      "minLength": 1
+    },
+    "langue": {
+      "type": "string",
+      "enum": [
+        "latin",
+        "latin populaire",
+        "bas latin",
+        "latin médiéval",
+        "latin humaniste",
+        "latin ecclésiastique",
+        "grec ancien"
+      ],
+      "description": "Langue de la racine : le latin et ses variantes, ou le grec ancien."
+    },
+    "sens": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Sens de la racine, sans guillemets (l'app les ajoute)."
+    },
+    "elements": {
+      "description": "Composition : les éléments dont la racine est faite (φίλος + σοφία).",
+      "minItems": 2,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "forme": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Forme dans son écriture d'origine (religio, φρήν, صفر) ; reconstruite, elle commence par * et s'écrit entre guillemets."
+          },
+          "translitteration": {
+            "description": "Translittération, seulement pour une écriture ni latine ni grecque (arabe, hébreu) : celle du grec se déduit.",
+            "type": "string",
+            "minLength": 1
+          },
+          "langue": {
+            "description": "Langue de l'élément, si elle diffère de celle du maillon.",
+            "type": "string",
+            "enum": [
+              "latin",
+              "latin populaire",
+              "bas latin",
+              "latin médiéval",
+              "latin humaniste",
+              "latin ecclésiastique",
+              "ancien français",
+              "français",
+              "grec ancien",
+              "gaulois",
+              "étrusque",
+              "francique",
+              "germanique",
+              "ancien nordique",
+              "arabe",
+              "hébreu",
+              "araméen",
+              "persan",
+              "turc",
+              "italien",
+              "espagnol",
+              "ancien espagnol",
+              "portugais",
+              "occitan",
+              "néerlandais",
+              "allemand",
+              "anglais",
+              "indo-européen"
+            ]
+          },
+          "sens": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Sens, sans guillemets (l'app les ajoute)."
+          }
+        },
+        "required": [
+          "forme",
+          "sens"
+        ],
+        "additionalProperties": false,
+        "description": "Élément d'une forme composée."
+      }
+    },
+    "sources": {
+      "default": [],
+      "description": "Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ouvrage": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Ouvrage consulté (identifiant d'une fiche de data/ouvrages)."
+          },
+          "entree": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Entrée consultée (« étonner », « adtono », « φρήν »)."
+          },
+          "page": {
+            "description": "Page de l'édition papier consultée.",
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "string",
+                "minLength": 1
+              }
+            ]
+          },
+          "url": {
+            "description": "Adresse (https), seulement si elle ne se déduit pas de l'entrée.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "ouvrage",
+          "entree"
+        ],
+        "additionalProperties": false,
+        "description": "Ouvrage consulté."
+      }
+    },
+    "redaction": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "par": {
+            "type": "string",
+            "enum": [
+              "IA",
+              "Étymon"
+            ],
+            "description": "IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."
+          },
+          "reflexion": {
+            "description": "Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale).",
+            "type": "string",
+            "enum": [
+              "basse",
+              "moyenne",
+              "élevée",
+              "très élevée",
+              "maximale"
+            ]
+          }
+        },
+        "required": [
+          "par",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "description": "Qui a rédigé. Ce n'est pas une source."
+      },
+      "description": "Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger."
+    },
+    "statut": {
+      "type": "string",
+      "enum": [
+        "a-verifier",
+        "brouillon",
+        "validee"
+      ],
+      "description": "a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault."
+    },
+    "historique": {
+      "default": [],
+      "description": "Corrections successives (ex. suite à une Critique).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+            "description": "Date au format AAAA-MM-JJ."
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nature de la correction."
+          }
+        },
+        "required": [
+          "date",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "forme",
+    "langue",
+    "sens",
+    "redaction",
+    "statut"
+  ],
+  "additionalProperties": false,
+  "description": "Racine grecque ou latine : une entrée de plein droit, qui rassemble les mots issus d'elle.",
+  "title": "Racine d'Étymon"
+}

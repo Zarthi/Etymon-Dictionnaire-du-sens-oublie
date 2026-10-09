@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "fiches": [
     {
       "id": "accord",
@@ -13507,6 +13507,87 @@
         {
           "par": "IA",
           "detail": "Claude Opus 5.5",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    }
+  ],
+  "racines": [
+    {
+      "id": "captivus",
+      "forme": "captivus",
+      "langue": "latin",
+      "sens": "prisonnier",
+      "sources": [
+        {
+          "ouvrage": "littre",
+          "entree": "captif"
+        },
+        {
+          "ouvrage": "tlfi",
+          "entree": "captif"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
+      "id": "phren",
+      "forme": "φρήν",
+      "langue": "grec ancien",
+      "sens": "esprit",
+      "sources": [
+        {
+          "ouvrage": "bailly",
+          "entree": "φρήν"
+        },
+        {
+          "ouvrage": "littre",
+          "entree": "frénésie"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash",
+          "reflexion": "élevée"
+        }
+      ],
+      "statut": "brouillon",
+      "historique": []
+    },
+    {
+      "id": "religio",
+      "forme": "religio",
+      "langue": "latin",
+      "sens": "attention scrupuleuse",
+      "sources": [
+        {
+          "ouvrage": "lewis-short",
+          "entree": "religio"
+        },
+        {
+          "ouvrage": "littre",
+          "entree": "religion"
+        },
+        {
+          "ouvrage": "tlfi",
+          "entree": "religion"
+        }
+      ],
+      "redaction": [
+        {
+          "par": "IA",
+          "detail": "DeepSeek Flash",
           "reflexion": "élevée"
         }
       ],

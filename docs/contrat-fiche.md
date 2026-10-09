@@ -4,8 +4,8 @@
 > Les mêmes contrats existent en schémas JSON (`docs/*.schema.json`), utilisés par VS Code
 > pour l'autocomplétion et la vérification des fiches pendant la saisie.
 
-Trois types de fiches, en YAML, avec le même socle éditorial (`sources`, `redaction`, `statut`, `historique`).
-Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data/ouvrages/littre.yaml`.
+Quatre types de fiches, en YAML, avec le même socle éditorial (`sources`, `redaction`, `statut`, `historique`).
+Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data/ouvrages/littre.yaml`, `data/racines/religio.yaml`.
 
 ## Fiche d'un mot (`data/fiches`)
 
@@ -266,6 +266,53 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 | `date` | date AAAA-MM-JJ | oui | Date au format AAAA-MM-JJ. |
 | `note` | texte | oui | Nature de la correction. |
 
+## Racine grecque ou latine (`data/racines`)
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `forme` | texte | oui | Forme de la racine dans son écriture d'origine (religio, φρήν). |
+| `translitteration` | texte | non | Translittération, seulement pour une écriture ni latine ni grecque : celle du grec se déduit. |
+| `langue` | `latin` \| `latin populaire` \| `bas latin` \| `latin médiéval` \| `latin humaniste` \| `latin ecclésiastique` \| `grec ancien` | oui | Langue de la racine : le latin et ses variantes, ou le grec ancien. |
+| `sens` | texte | oui | Sens de la racine, sans guillemets (l'app les ajoute). |
+| `elements` | liste non vide d'objets (voir plus bas) | non | Composition : les éléments dont la racine est faite (φίλος + σοφία). |
+| `sources` | liste d'objets (voir plus bas) | non | Ouvrages consultés ; au moins un hors statut a-verifier. Tirés du dossier par npm run rediger -- --dossier, ou ajoutés à la main ; jamais de mémoire. |
+| `redaction` | liste non vide d'objets (voir plus bas) | oui | Qui a rédigé ; affiché une fois, en pied de page. Écrit par npm run rediger. |
+| `statut` | `a-verifier` \| `brouillon` \| `validee` | oui | a-verifier : rédigée de mémoire (anciennes fiches : l'IA seule pour source) ; brouillon : ouvrage(s) consulté(s) ; validee : validée par Thibault. |
+| `historique` | liste d'objets (voir plus bas) | non | Corrections successives (ex. suite à une Critique). |
+
+### `elements[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `forme` | texte | oui | Forme dans son écriture d'origine (religio, φρήν, صفر) ; reconstruite, elle commence par `*` et s'écrit entre guillemets. |
+| `translitteration` | texte | non | Translittération, seulement pour une écriture ni latine ni grecque (arabe, hébreu) : celle du grec se déduit. |
+| `langue` | liste fermée (voir plus bas) | non | Langue de l'élément, si elle diffère de celle du maillon. |
+| `sens` | texte | oui | Sens, sans guillemets (l'app les ajoute). |
+
+### `sources[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `ouvrage` | identifiant | oui | Ouvrage consulté (identifiant d'une fiche de data/ouvrages). |
+| `entree` | texte | oui | Entrée consultée (« étonner », « adtono », « φρήν »). |
+| `page` | nombre ou texte | non | Page de l'édition papier consultée. |
+| `url` | adresse https | non | Adresse (https), seulement si elle ne se déduit pas de l'entrée. |
+
+### `redaction[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `par` | `IA` \| `Étymon` | oui | IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique). |
+| `detail` | texte | oui | Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution. |
+| `reflexion` | `basse` \| `moyenne` \| `élevée` \| `très élevée` \| `maximale` | non | Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale). |
+
+### `historique[]`
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `date` | date AAAA-MM-JJ | oui | Date au format AAAA-MM-JJ. |
+| `note` | texte | oui | Nature de la correction. |
+
 ## Listes fermées
 
 - `nature` : nom masculin, nom féminin, nom, nom propre, verbe, adjectif, adverbe, interjection.
@@ -278,6 +325,8 @@ Exemples : `data/fiches/r/re/religion.yaml`, `data/auteurs/augustin.yaml`, `data
 ## Règles vérifiées en plus de la structure (`npm run valider`)
 
 - Le fichier d'un mot s'appelle `<id>.yaml`, où `id` est le mot sans accent, en minuscules, mots séparés par des tirets (`-2`, `-3` pour les homonymes, dans l'ordre du Littré), rangé dans `data/fiches/<initiale>/<deux premières lettres>/`. Un auteur : `data/auteurs/<nom>.yaml` ; un ouvrage : `data/ouvrages/<abrégé ou titre>.yaml`.
+- Le fichier d'une racine s'appelle `<id>.yaml`, rangé à plat dans `data/racines/` : l'`id` est la forme latine sans accent, ou la translittération du grec (`religio`, `phren` pour φρήν). Sa `langue` est le latin et ses variantes, ou le grec ancien.
+- Les mots issus d'une racine se calculent (fiches dont un maillon porte la même forme, à la translittération près, dans la même famille de langue) : ils ne s'écrivent pas dans la fiche de la racine.
 - Une forme reconstruite commence par `*` ; une valeur commençant par `*`, contenant `: `, ou une virgule dans `{ … }`, s'écrit entre guillemets.
 - Pas de doublon : un doublet ou un renvoi se déclare sur une seule des deux fiches ; l'adresse d'une entrée se déduit du modèle d'adresse de l'ouvrage ; la translittération du grec se déduit de la forme ; ce qui se calcule (œuvres d'un auteur, mots qu'il a forgés) ne s'écrit pas.
 - Un champ facultatif à sa valeur par défaut ne s'écrit pas (`incertain: false`, listes vides).
