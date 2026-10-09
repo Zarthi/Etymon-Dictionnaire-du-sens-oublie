@@ -18,6 +18,18 @@ export function enAlphabetLatin(forme: string): boolean {
 }
 
 /**
+ * Couleur d'une langue source : le latin (et ses variantes : populaire, bas, médiéval…), le grec
+ * ancien, ou rien (langue neutre, dont le français). Sert à teinter la forme elle-même, sans
+ * confondre les deux ordres que sont l'étymon et la lecture traditionnelle.
+ */
+export function teinte(langue: string | undefined): "latin" | "grec" | undefined {
+  if (langue === undefined) return undefined;
+  if (langue === "grec ancien") return "grec";
+  if (langue.split(" ").includes("latin")) return "latin";
+  return undefined;
+}
+
+/**
  * Translittération à afficher après une forme en écriture non latine : celle donnée, sinon
  * celle du grec, déduite (φρήν → phrēn) ; rien pour une forme en alphabet latin.
  */

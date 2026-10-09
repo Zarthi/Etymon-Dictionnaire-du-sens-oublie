@@ -24,6 +24,7 @@
 {#snippet segments(liste: Segment[])}{#each liste as s, i (i)}{#if s.type === "texte"}{s.texte}{:else if s.type === "forme"}<Forme
         forme={s.forme}
         translitteration={s.translitteration}
+        langue={s.langue}
         lien={s.personne ? lienAuteur(s.personne) : s.ouvrage ? lienOuvrage(s.ouvrage) : undefined}
       />{:else if s.type === "auteur"}<a class="auteur" href={lienAuteur(s.id)}>{nom(s.id)}</a>{:else}<a
         class="ouvrage"

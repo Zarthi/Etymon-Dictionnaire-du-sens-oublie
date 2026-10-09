@@ -9,6 +9,21 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-09 — Export pour un autre projet, et couleur des langues
+
+- **Export stable et versionné** (`npm run export` → `export/etymon.json`) : les fiches (statut
+  compris), les ouvrages et les listes fermées, triés par identifiant, sous une `version` de
+  format (`docs/export.md`). Raison : le jeu Sphynx réutilise Étymon comme dictionnaire hors
+  ligne (décision de Thibault) ; un artefact publié et épinglé vaut mieux qu'un appel réseau,
+  interdit dans l'app. Le consommateur choisit ce qu'il publie ; l'export n'entre pas dans l'app.
+  — à relire
+- **Teinte des langues** : la forme d'un maillon se teinte selon sa langue source — le latin (et
+  ses variantes) en pourpre impérial, le grec ancien en vert-de-gris ; le français et les autres
+  langues restent sans teinte. Variables `--latin` / `--grec` (clair et sombre), axe distinct de
+  `--accent` (sens premier) et de `--tradition` (lectures). La langue est portée par le segment de
+  la phrase (`src/lib/phrase.ts`) et la couleur posée par `Forme.svelte`. Raison : Thibault veut
+  distinguer d'un coup d'œil la part grecque et latine du dictionnaire. — à relire
+
 ## 2026-10-07 — Mot du jour et statut
 
 - Le mot du jour est tiré parmi toutes les fiches non sacrées, sans filtrer sur le statut (avant :

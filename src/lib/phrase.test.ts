@@ -48,6 +48,17 @@ describe("la phrase de la chaîne", () => {
     expect(phrase(chiffre)).toBe(`Du latin médiéval cifra, ${q("zéro")}, de l'arabe صفر.`);
   });
 
+  it("porte la langue de chaque forme, pour la teinter (latin, grec) sans rien composer", () => {
+    const deux: Maillon[] = [
+      { forme: "cifra", langue: "latin médiéval", sens: "zéro" },
+      { forme: "φρήν", langue: "grec ancien", sens: "diaphragme" },
+    ];
+    expect(phraseChaine(deux, langue).filter((s) => s.type === "forme")).toEqual([
+      { type: "forme", forme: "cifra", langue: "latin médiéval" },
+      { type: "forme", forme: "φρήν", langue: "grec ancien" },
+    ]);
+  });
+
   it("sens premier forcé plus haut dans la chaîne : c'est lui qui n'est pas répété", () => {
     const personne: Maillon[] = [
       { forme: "persona", langue: "latin", sens: "masque de l'acteur", premier: true },
@@ -64,7 +75,7 @@ describe("le croisement", () => {
     ];
     expect(phrase(chetif)).toBe(`Du latin captivus, croisé avec le gaulois *cactos, ${q("prisonnier")}.`);
     const segments = phraseChaine(chetif, langue);
-    expect(segments).toContainEqual({ type: "forme", forme: "*cactos" });
+    expect(segments).toContainEqual({ type: "forme", forme: "*cactos", langue: "gaulois" });
   });
 
   it("élision, translittération, plusieurs formes", () => {
