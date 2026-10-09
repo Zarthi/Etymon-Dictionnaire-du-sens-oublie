@@ -1,0 +1,26 @@
+mot: ambition
+nature: [ nom féminin ]
+etymologie:
+  - forme: ambitio
+    langue: latin
+    sens: démarche des candidats, désir des honneurs
+    elements:
+      - forme: amb
+        sens: autour
+      - forme: ire
+        sens: aller
+explication: >-
+  Ambitio, c'était tourner autour : la démarche du candidat qui sollicitait les
+  suffrages. L'ambition a gardé le désir, perdu la marche et les électeurs.
+famille: [ ambitieux ]
+themes: [ morale, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: ambition
+  - ouvrage: littre
+    entree: ambition
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

@@ -553,3 +553,14 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chaîne d'*admirer* | *admirari*, « admirer », puis *mirari*, « regarder » | *admirari* est une forme composée : son sens est attesté, non déduit des parties (§3.4) | à relire |
 | Renvois | *suspect* → *doute* ; *mépris* → *dédain* ; *admirer* → *respect* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
 | Lecture traditionnelle | *admirer* : *admiratio*, « désir de savoir », cause de plaisir (Thomas d'Aquin, Ia-IIae q. 32 a. 8) ; rien de net pour les autres | vérifiée en ligne (1/1) | faite |
+
+## 2026-10-09 — Lot « orgueil » (orgueil, vanité, honneur, gloire, ambition, superbe)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaîne d'*orgueil* | *\*urgol* (francique), « fierté » | le TLFi tire orgueil de l'a. b. frq. *\*urgol*, dérivé d'un adjectif signifiant « excellent » : l'origine est germanique, non latine | à relire |
+| Chaînes de *vanité*, *honneur*, *gloire* | *vanitas*/*vanus*, *honor*, *gloria* seuls | sources directes ; le sens premier reste le maillon qui apprend (*vanus*, « vide ») | à relire |
+| Chaîne d'*ambition* | *ambitio*, « démarche des candidats », découpé de *amb*, « autour », et *ire*, « aller » | le Littré donne la composition ; la démarche du candidat éclaire le sens | à relire |
+| Chaîne de *superbe* | *superbus* seul | *superbus* est la source directe ; *super* (« au-dessus ») reste au dossier, hors chaîne (règle d'arrêt) | à relire |
+| Renvois | *orgueil* → *vanité* ; *honneur* → *gloire* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
+| Lectures traditionnelles | *superbe* : *superbia*, « tendre au-dessus de ce qu'on est » (Thomas, IIa-IIae q. 162 a. 1) ; *honneur* : *honor*, « témoignage de l'excellence » (Thomas, IIa-IIae q. 103 a. 1) ; pistes non retenues : *gloria*, *vanitas* | citations vérifiées en ligne (2/2) | faites |

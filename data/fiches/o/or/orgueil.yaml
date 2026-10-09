@@ -1,0 +1,21 @@
+mot: orgueil
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*urgol"
+    langue: francique
+    sens: fierté
+explication: >-
+  Orgueil vient d'un mot franc qui disait la fierté, formé sur un adjectif
+  signifiant « excellent ». Le mot a d'abord dit l'estime exagérée de soi ; le
+  sens favorable, la fierté justifiée, ne s'y est joint qu'en 1637.
+famille: [ orgueilleux, orgueilleusement ]
+renvois: [ vanite ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: orgueil
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

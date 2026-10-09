@@ -1,0 +1,34 @@
+mot: honneur
+nature: [ nom masculin ]
+etymologie:
+  - forme: honor
+    langue: latin
+    sens: honneur rendu, marque de considération
+explication: >-
+  Honor disait l'honneur rendu, mais aussi la charge publique et le fief qu'elle
+  apportait. Honneur a gardé l'estime et le sentiment de sa dignité, perdu la
+  charge.
+famille: [ honorable, honorer, honoraire ]
+renvois: [ gloire ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: littre
+    entree: honneur
+  - ouvrage: tlfi
+    entree: honneur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        L'honneur est un témoignage rendu à l'excellence de quelqu'un : devant les hommes il
+        passe par des signes extérieurs, devant Dieu le témoignage de la conscience suffit.
+      citation: >-
+        honor testificationem quandam importat de excellentia alicuius
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 103, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth3102.html
+statut: brouillon

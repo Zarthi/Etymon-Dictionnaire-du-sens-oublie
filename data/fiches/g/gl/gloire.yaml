@@ -1,0 +1,22 @@
+mot: gloire
+nature: [ nom féminin ]
+etymologie:
+  - forme: gloria
+    langue: latin
+    sens: renom, réputation ; splendeur de Dieu
+explication: >-
+  Gloria disait la renommée, et, chez les chrétiens, la splendeur de Dieu. En
+  français, gloire a d'abord dit la béatitude céleste (vers 1050), avant la
+  renommée (1130).
+famille: [ glorieux, glorifier, gloriole ]
+themes: [ société, religion ]
+sources:
+  - ouvrage: littre
+    entree: gloire
+  - ouvrage: tlfi
+    entree: gloire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon
