@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import type { FicheIdentifiee } from "../../src/lib/types.ts";
-import { assembler, assemblerReferences } from "../assembler-fiches.ts";
+import type { FicheIdentifiee, RacineIdentifiee } from "../../src/lib/types.ts";
+import { assembler, assemblerRacines, assemblerReferences } from "../assembler-fiches.ts";
 import { validerDepot } from "../valider-fiches.ts";
 
 const { fiches } = await validerDepot(fileURLToPath(new URL("fixtures/depot-conforme", import.meta.url)));
@@ -91,5 +91,56 @@ describe("assemblerReferences : tenants", () => {
     expect(ouvrages.find((o) => o.id === "gaffiot")?.hypotheses).toEqual([mot]);
     expect(ouvrages.find((o) => o.id === "tlfi")?.hypotheses).toEqual([]);
     expect(auteurs.find((a) => a.id === "lactance")?.hypotheses).toEqual([mot]);
+  });
+});
+
+describe("assemblerRacines", () => {
+  it("rassemble les fiches dont la chaîne porte la forme de la racine, de la même famille", async () => {
+    const depot = await validerDepot(fileURLToPath(new URL("fixtures/depot-conforme", import.meta.url)));
+    const [probatio] = assemblerRacines(depot.racines, depot.fiches);
+    expect(probatio.id).toBe("probatio");
+    expect(probatio.mots).toEqual([{ id: "epreuve", mot: "épreuve" }]);
+  });
+
+  it("égale les formes à la translittération près, dans la même famille de langue", () => {
+    const fiche: FicheIdentifiee = {
+      ...fiches[0],
+      id: "phrenesie",
+      mot: "phrénésie",
+      etymologie: [
+        { forme: "φρήν", langue: "grec ancien", sens: "esprit" },
+        { forme: "religio", langue: "latin", sens: "scrupule" },
+      ],
+    };
+    const racine = (id: string, forme: string, langue: RacineIdentifiee["langue"]): RacineIdentifiee => ({
+      id,
+      forme,
+      langue,
+      sens: "sens de test",
+      sources: [],
+      redaction: [{ par: "IA", detail: "test" }],
+      statut: "a-verifier",
+      historique: [],
+    });
+    const mots = assemblerRacines([racine("phren", "φρήν", "grec ancien"), racine("religio", "religio", "latin")], [fiche]);
+    expect(mots.map((r) => [r.id, r.mots])).toEqual([
+      ["phren", [{ id: "phrenesie", mot: "phrénésie" }]],
+      ["religio", [{ id: "phrenesie", mot: "phrénésie" }]],
+    ]);
+  });
+
+  it("ne confond pas les familles : une racine latine ne retient pas une forme grecque", () => {
+    const fiche: FicheIdentifiee = { ...fiches[0], id: "greconly", mot: "grec", etymologie: [{ forme: "φρήν", langue: "grec ancien", sens: "esprit" }] };
+    const racine: RacineIdentifiee = {
+      id: "phren",
+      forme: "phren",
+      langue: "latin",
+      sens: "test",
+      sources: [],
+      redaction: [{ par: "IA", detail: "test" }],
+      statut: "a-verifier",
+      historique: [],
+    };
+    expect(assemblerRacines([racine], [fiche])[0].mots).toEqual([]);
   });
 });

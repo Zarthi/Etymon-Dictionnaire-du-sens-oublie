@@ -1,0 +1,12 @@
+# Racine fictive, pour les tests uniquement.
+forme: probatio
+langue: latin
+sens: preuve de test
+sources:
+  - ouvrage: gaffiot
+    entree: probatio
+    page: 1238
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+statut: brouillon
