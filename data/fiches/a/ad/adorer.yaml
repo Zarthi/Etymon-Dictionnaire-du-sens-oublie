@@ -24,4 +24,15 @@ redaction:
   - par: IA
     detail: DeepSeek Flash Latest
     reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        L'adoration rend à celui qu'on adore la révérence qui lui est due ; aussi est-elle
+        l'acte de la religion, par lequel Dieu est adoré.
+      citation: >-
+        Unde adoratio qua Deus adoratur est religionis actus.
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 84, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth3082.html
 statut: brouillon

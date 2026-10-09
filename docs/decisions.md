@@ -526,4 +526,4 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chaîne de *charité* | *caritas*, « cherté ; amour, tendresse », puis *carus*, « cher » | le Littré tire *caritas* de *carus* ; « cherté » éclaire le nom | à relire |
 | Chemin de *charité* | `consacre` | *caritas* profane (cherté) devenu le nom de l'amour du prochain (agapè) | à relire |
 | Renvois | *adorer* → *aimer* ; *charité* → *misericorde* | notions voisines, sans racine commune, d'un seul côté ; *amour* → *passion* retiré (« passion » nommé dans l'explication) | à relire |
-| Lectures traditionnelles | à chercher pour *charité* (*caritas*, agapè), *amour* (*amor* chrétien), *adorer* (*adorare* biblique) | passe à part (docs/consignes/lectures.md) | à faire |
+| Lectures traditionnelles | ajoutées et vérifiées en ligne : *amour* (Augustin, *Cité de Dieu*, XIV, 28 : deux amours ont fait deux cités), *adorer* (Thomas, IIa-IIae q. 84 a. 1 : l'adoration est l'acte de la religion), *charité* (Thomas, IIa-IIae q. 23 a. 1 : la charité, amitié de l'homme pour Dieu) | `npm run verifier:en-ligne` : 3/3 citations trouvées | faites |

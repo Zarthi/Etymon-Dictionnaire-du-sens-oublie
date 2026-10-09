@@ -23,4 +23,15 @@ redaction:
   - par: IA
     detail: DeepSeek Flash Latest
     reflexion: élevée
+tradition:
+  lectures:
+    - texte: >-
+        La charité est une amitié de l'homme pour Dieu, fondée sur la communication de la
+        béatitude éternelle.
+      citation: >-
+        Unde manifestum est quod caritas amicitia quaedam est hominis ad Deum.
+      sources:
+        - ouvrage: somme-theologique
+          entree: "IIa-IIae, q. 23, a. 1, co."
+          url: https://www.corpusthomisticum.org/sth3023.html
 statut: brouillon
