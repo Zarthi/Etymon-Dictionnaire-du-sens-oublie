@@ -1,0 +1,30 @@
+mot: soupçon
+nature: [ nom masculin ]
+etymologie:
+  - forme: suspicio
+    langue: latin
+    sens: soupçon
+  - forme: suspicere
+    langue: latin
+    sens: regarder de bas en haut ; soupçonner
+    elements:
+      - forme: susum
+        sens: en haut
+      - forme: spicere
+        sens: voir
+explication: >-
+  Suspicio tient le soupçon pour un regard porté de bas en haut. Le français en
+  a gardé la défiance, non l'image : le soupçon ne dit plus qu'une opinion
+  défavorable.
+famille: [ suspect, suspicion, suspecter ]
+themes: [ société, esprit ]
+sources:
+  - ouvrage: littre
+    entree: soupçon
+  - ouvrage: tlfi
+    entree: soupçon
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

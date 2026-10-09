@@ -527,3 +527,14 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chemin de *charité* | `consacre` | *caritas* profane (cherté) devenu le nom de l'amour du prochain (agapè) | à relire |
 | Renvois | *adorer* → *aimer* ; *charité* → *misericorde* | notions voisines, sans racine commune, d'un seul côté ; *amour* → *passion* retiré (« passion » nommé dans l'explication) | à relire |
 | Lectures traditionnelles | ajoutées et vérifiées en ligne : *amour* (Augustin, *Cité de Dieu*, XIV, 28 : deux amours ont fait deux cités), *adorer* (Thomas, IIa-IIae q. 84 a. 1 : l'adoration est l'acte de la religion), *charité* (Thomas, IIa-IIae q. 23 a. 1 : la charité, amitié de l'homme pour Dieu) | `npm run verifier:en-ligne` : 3/3 citations trouvées | faites |
+
+## 2026-10-09 — Lot « regard » (respect, suspect, soupçon, mépris, dédain, admirer)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chaînes de *respect*, *suspect*, *soupçon* | *respectus* (*re* + *specere*), *suspectus*/*suspicere* (*susum* + *specere*), *suspicio*/*suspicere* | même racine *specere* ; la composition se découpe du tout vers les parties (§3.2) | à relire |
+| Chaîne de *mépris* | *mépriser* (*mes-* + *priser*), puis *pretium*, « prix » | *mépriser* = « priser mal » ; le sens premier est *pretium* : le mépris est un jugement porté sur un prix | à relire |
+| Chaîne de *dédain* | *dédaigner* (*dé-* + *daigner*), puis *dignus*, « digne » | *dédaigner* = « ne plus juger digne » ; *daigner* vient de *dignari*, de *dignus* | à relire |
+| Chaîne d'*admirer* | *admirari*, « admirer », puis *mirari*, « regarder » | *admirari* est une forme composée : son sens est attesté, non déduit des parties (§3.4) | à relire |
+| Renvois | *suspect* → *doute* ; *mépris* → *dédain* ; *admirer* → *respect* | notions voisines sans racine commune, déclarées d'un seul côté | à relire |
+| Lecture traditionnelle | *admirer* : *admiratio*, « désir de savoir », cause de plaisir (Thomas d'Aquin, Ia-IIae q. 32 a. 8) ; rien de net pour les autres | vérifiée en ligne (1/1) | faite |

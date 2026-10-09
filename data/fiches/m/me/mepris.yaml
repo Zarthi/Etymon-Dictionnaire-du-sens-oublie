@@ -1,0 +1,34 @@
+mot: mépris
+nature: [ nom masculin ]
+etymologie:
+  - forme: mépriser
+    langue: français
+    sens: priser peu, estimer au-dessous de la valeur
+    elements:
+      - forme: mes-
+        sens: mal
+      - forme: priser
+        sens: estimer
+  - forme: pretium
+    langue: latin
+    sens: prix, valeur
+explication: >-
+  Mépriser, c'est priser mal, estimer au-dessous de la valeur. Le mépris a gardé
+  le jugement, mais perdu l'idée de prix qu'il portait d'abord.
+famille: [ mépriser, priser, prix ]
+renvois: [ dedain ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: littre
+    entree: mépris
+  - ouvrage: littre
+    entree: mépriser
+  - ouvrage: tlfi
+    entree: mépris
+  - ouvrage: littre
+    entree: priser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon

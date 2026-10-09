@@ -43,7 +43,6 @@
 - { mot: sort, statut: a-faire }
 - { mot: sot, statut: a-faire }
 - { mot: souci, statut: a-faire }
-- { mot: soupçon, statut: a-faire }
 - { mot: souvenir, statut: a-faire }
 - { mot: souverain, statut: a-faire }
 - { mot: spectacle, statut: a-faire }
@@ -68,7 +67,6 @@
 - { mot: supplier, statut: a-faire }
 - { mot: sûr, statut: a-faire }
 - { mot: surprise, statut: a-faire }
-- { mot: suspect, statut: a-faire }
 - { mot: symbole, statut: a-faire }
 - { mot: sympathie, statut: a-faire }
 - { mot: système, statut: a-faire }

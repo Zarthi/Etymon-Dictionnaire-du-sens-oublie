@@ -1,0 +1,27 @@
+mot: respect
+nature: [ nom masculin ]
+etymologie:
+  - forme: respectus
+    langue: latin
+    sens: action de regarder en arrière ; égard
+    elements:
+      - forme: re
+        sens: en arrière
+      - forme: specere
+        sens: regarder
+explication: >-
+  Le respect est proprement un regard jeté en arrière, pour considérer ce qu'on
+  estime. Le mot ne dit plus le regard, mais les égards et la considération
+  qu'il marquait.
+famille: [ respecter, respectueux, répit ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: littre
+    entree: respect
+  - ouvrage: tlfi
+    entree: respect
+redaction:
+  - par: IA
+    detail: DeepSeek Flash Latest
+    reflexion: élevée
+statut: brouillon
