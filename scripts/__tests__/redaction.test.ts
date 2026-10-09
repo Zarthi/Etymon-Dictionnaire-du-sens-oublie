@@ -57,6 +57,12 @@ describe("preparerFiche", () => {
   it("garde la nature donnée, qui l'emporte sur celle du Littré", () => {
     expect(ficheDe(preparerFiche({ ...brute, nature: ["nom"] }, options)).nature).toEqual(["nom"]);
   });
+  it("accepte les lectures traditionnelles, validées par le schéma, et les garde telles quelles", () => {
+    const lecture = { texte: "Ce que le passage dit.", citation: "Religio appellata", sources: [{ ouvrage: "etymologies", entree: "VIII, 2, 2", url: "https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII" }] };
+    const fiche = ficheDe(preparerFiche({ ...brute, tradition: { lectures: [lecture] } }, options)) as { tradition: { lectures: unknown[] } };
+    expect(fiche.tradition.lectures).toEqual([lecture]);
+    expect(preparerFiche({ ...brute, tradition: { lectures: [{ texte: "sans citation" }] } }, options)).toEqual({ erreurs: expect.arrayContaining([expect.stringMatching(/^tradition\.lectures\.0\.citation : /)]) });
+  });
   it("refuse les champs que les scripts écrivent", () => {
     expect(preparerFiche({ ...brute, sources: [], statut: "brouillon" }, options)).toEqual({
       erreurs: [expect.stringMatching(/^sources, statut : écrits par les scripts/)],

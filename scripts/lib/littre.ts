@@ -11,7 +11,7 @@ export interface EntreeLittre {
 /** Index du Littré : forme normalisée du mot → entrées (plusieurs en cas d'homonymes). */
 export type IndexLittre = Record<string, EntreeLittre[]>;
 
-const ENTITES: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" };
+const ENTITES: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
 
 /** Texte brut d'un fragment XML : balises retirées, entités décodées, blancs réduits. */
 export function texteBrut(fragment: string): string {

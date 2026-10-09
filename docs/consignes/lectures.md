@@ -2,17 +2,17 @@
 
 > Généré par `npm run contrat` : ne pas modifier à la main. Rédaction autonome (docs/methode.md) ; AGENTS.md fait foi.
 
-Tu ajoutes à la fiche écrite d'un mot (`data/fiches/<initiale>/<préfixe>/<id>.yaml`) les lectures qu'une tradition a faites du mot lui-même, texte source sous les yeux (AGENTS.md §4.7). Aucune lecture vaut mieux qu'une lecture approximative : la tradition parle par ses textes, jamais par ta paraphrase.
+Tu ajoutes à la fiche d'un mot (`tradition.lectures` de `atelier/<id>/fiche.json`) les lectures qu'une tradition a faites du mot lui-même, texte source sous les yeux (AGENTS.md §4.7), après avoir écrit le reste de la fiche. Aucune lecture vaut mieux qu'une lecture approximative : la tradition parle par ses textes, jamais par ta paraphrase.
 
 ## Étapes
 
-1. Le corpus de réflexe, toujours : `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi ; en hébreu, les consonnes : שטן). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture. Note dans `corpus` du dossier (`atelier/<id>/dossier.json`) ce que tu as cherché dans chaque œuvre et ce que tu y as trouvé, même rien : `{ "oeuvre": "cite-de-dieu", "cherche": "angel", "trouve": "X, 25" }`. `npm run dossier -- --verifier <mot>` dit les œuvres qui manquent.
+1. Le corpus de réflexe, toujours : `atelier/<id>/sources.md` donne déjà la recherche du radical de chaque forme latine relevée dans les huit œuvres ; pour une autre forme (en hébreu, les consonnes : שטן ; un radical que le script n'a pas tiré), `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture. Note dans `corpus` du dossier (`atelier/<id>/dossier.json`) ce que tu as cherché dans chaque œuvre et ce que tu y as trouvé, même rien : `{ "oeuvre": "cite-de-dieu", "cherche": "angel", "trouve": "X, 25" }`. `npm run dossier -- --verifier <mot>` dit les œuvres qui manquent.
 2. Puis au-delà, toujours aussi : le corpus est un plancher, jamais une limite. Tout autre auteur traditionnel qui a lu le mot se cherche (Augustin, Lactance, Thomas d'Aquin, le Talmud, les Pères, Guénon…), d'après les `notes` du dossier et ce que tu sais ; mais on ne cite que ce qu'on a lu. L'auteur doit avoir lu le mot, ou une forme de sa chaîne, pas la chose qu'il désigne aujourd'hui. Un auteur qui lit une forme voisine absente de la chaîne (servus pour servitude, sapiens pour sagesse) n'entre pas : note-le au `corpus` et, si un autre mot a cette forme dans sa chaîne, garde la piste pour lui.
 3. Trouve le passage dans un texte original en ligne, du domaine public (Wikisource en latin, en grec, en hébreu ; thelatinlibrary.com ; archive.org), et lis-le tel quel : `npm run texte -- <adresse> --autour "<mot>"`. Jamais un outil qui résume la page pour une citation.
 4. Écris la lecture dans `tradition.lectures` : la citation copiée de la page, mot pour mot, `[…]` pour une coupe ; le texte, ce que le passage dit du mot, en une ou deux phrases, sans commencer par le nom de l'auteur, sans répéter l'hypothèse, sans rien ajouter à la citation.
    Le texte peut nommer le mot que l'auteur lit, tel que sa citation l'écrit (l'app le met en italique).
-5. L'œuvre et son auteur doivent avoir leur fiche (`npm run bnf`, docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.
-6. `npm run verifier:en-ligne -- <mot>`, puis `npm run valider`. Une citation introuvable est une erreur : corrige-la, ou retire la lecture.
+5. L'œuvre et son auteur doivent avoir leur fiche : s'ils n'en ont pas (`npm run rediger -- atelier/<id>/fiche.json --essai` les dit « à créer »), ajoute-les à `atelier/references.json` (docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.
+6. Relis chaque citation dans sa page (`npm run texte -- <adresse> --autour "<mot>"`) : elle y figure mot pour mot. `npm run verifier:en-ligne` la vérifiera à la clôture du lot, sur la fiche écrite : une citation introuvable y est une erreur.
 
 ## Le corpus de réflexe
 
@@ -34,8 +34,8 @@ Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est b
 - Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Rabban Gamliel dans la Michna).
 - `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.
 - Le Nom divin s'écrit comme le texte l'écrit, jamais traduit (« Dieu ») ni vocalisé (« Jéhovah », « Yahvé ») ; une citation garde le texte tel quel. Dans le texte d'une lecture, « le Seigneur » est admis : c'est le substitut traditionnel, juif et chrétien, qui évite de prononcer le Nom, non une traduction.
-- Rien trouvé dans un texte en ligne : pas de lecture ; note la piste dans les signalements.
-- Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et note-le dans les signalements ; une tradition de trop se retire à la relecture plus aisément qu'une tradition manquante ne s'ajoute après coup.
+- Rien trouvé dans un texte en ligne : pas de lecture ; note la piste dans `atelier/signalements.md`.
+- Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et note-le dans `atelier/signalements.md` ; une tradition de trop se retire à la relecture plus aisément qu'une tradition manquante ne s'ajoute après coup.
 
 ## Format
 
@@ -70,7 +70,7 @@ Consulter n'oblige pas à trouver : la plupart des mots n'y ont rien, et c'est b
 
 ## Exemples
 
-Lectures du dépôt (Lactance sur *religion* ; Rabban Gamliel, parole rapportée par la Michna, sur *Pâque*) :
+Lectures du dépôt, telles qu'on les écrit dans `fiche.json` (Lactance sur *religion* ; Rabban Gamliel, parole rapportée par la Michna, sur *Pâque*) :
 
 ```json
 {"texte":"C'est le lien de la piété, qui nous tient attachés à Dieu, qui a donné son nom à la religion ; non relegere, comme l'a compris Cicéron.","citation":"hoc uinculo pietatis obstricti deo et religati sumus: unde ipsa religio nomen accepit, non ut Cicero interpretatus est a relegendo","hypothese":"religare","sources":[{"ouvrage":"institutions-divines","entree":"IV, 28, 3","url":"https://la.wikisource.org/wiki/Divinae_institutiones/Liber_IV"}]}

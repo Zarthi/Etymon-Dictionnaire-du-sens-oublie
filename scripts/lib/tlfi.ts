@@ -1,5 +1,5 @@
-import { texteBrut } from "./littre.ts";
-import { lire } from "./reseau.ts";
+import { graphieDuLittre, natureDuMot, texteBrut, type EntreeLittre } from "./littre.ts";
+import { lireAvecRelance } from "./reseau.ts";
 
 /**
  * TLFi (non libre) : consultation seulement, un mot à la fois. Le portail du CNRTL charge ses
@@ -82,7 +82,7 @@ export function lireTlfi(reponse: ReponseTlfi): Tlfi | undefined {
 
 /** Réponse JSON de l'API, ou la raison pour laquelle on ne l'a pas : page non lue, ou lue mais illisible. */
 async function chargerReponse(mot: string, nature?: string): Promise<{ reponse: ReponseTlfi } | { injoignable: string }> {
-  const page = await lire(urlApiTlfi(mot, nature));
+  const page = await lireAvecRelance(urlApiTlfi(mot, nature));
   if (!page.lue) return { injoignable: page.raison };
   try {
     return { reponse: JSON.parse(page.texte) as ReponseTlfi };
@@ -135,3 +135,15 @@ export async function premierAvecEtymologie(
 }
 
 export const consulterTlfi = (mot: string, attendue?: string) => premierAvecEtymologie((nature) => chargerReponse(mot, nature), attendue);
+
+/**
+ * Article du TLFi d'un mot, d'après ses entrées du Littré : la nature attendue est celle du Littré,
+ * et un mot écrit sans accents est cherché dans la graphie accentuée du Littré quand l'API ne répond
+ * rien. `graphie` est celle qui a servi.
+ */
+export async function consulterTlfiDuMot(mot: string, littre: EntreeLittre[]): Promise<ResultatTlfi & { graphie: string }> {
+  const attendue = natureDuMot(littre, mot);
+  const premier = await consulterTlfi(mot, attendue);
+  const accentuee = premier.tlfi || premier.injoignable ? undefined : graphieDuLittre(littre, mot);
+  return accentuee ? { ...(await consulterTlfi(accentuee, attendue)), graphie: accentuee } : { ...premier, graphie: mot };
+}

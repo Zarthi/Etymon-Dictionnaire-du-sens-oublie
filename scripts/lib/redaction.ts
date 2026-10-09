@@ -65,11 +65,8 @@ function preparer<T extends object>(
   { modele, reflexion }: Moteur,
   completer: (contenu: T) => Record<string, unknown> | string = (c) => ({ ...c }) as Record<string, unknown>,
 ): Resultat {
-  const tradition = brute.tradition as Record<string, unknown> | undefined;
-  const interdits = [...CHAMPS_INTERDITS.filter((c) => c in brute), ...(tradition && "lectures" in tradition ? ["tradition.lectures"] : [])];
-  if (interdits.length > 0) {
-    return { erreurs: [`${interdits.join(", ")} : écrits par les scripts (sources : npm run verifier ; lectures : passe à part)`] };
-  }
+  const interdits = CHAMPS_INTERDITS.filter((c) => c in brute);
+  if (interdits.length > 0) return { erreurs: [`${interdits.join(", ")} : écrits par les scripts (sources : npm run verifier)`] };
   const resultat = schema.safeParse(brute);
   if (!resultat.success) return { erreurs: resultat.error.issues.map((i) => `${i.path.join(".") || "(racine)"} : ${i.message}`) };
   const complete = completer(resultat.data);

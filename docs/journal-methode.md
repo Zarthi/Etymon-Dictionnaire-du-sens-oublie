@@ -2,6 +2,38 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-05 — Réduire le coût d'un lot : scripts, session neuve, bon modèle
+
+- **Cause** : les lots 3 à 18 ont coûté environ 1,20 $ par fiche, presque tout en relecture de contexte
+  (chaque appel d'outil relit tout le contexte de l'agent ou de l'orchestrateur : consultations une à une,
+  reprises à la main, rapports relayés). But : 0,40 à 0,50 $ par fiche, même rigueur.
+- **Changements** (`docs/methode.md` §3, AGENTS.md §6.5) :
+  - `npm run lot -- sources <mots>` : le dossier brut d'un mot (Littré avec sa famille, TLFi, entrées du
+    Lewis & Short et du Bailly pour les formes relevées, recherche des radicaux dans le corpus de réflexe)
+    écrit en un appel dans `atelier/<id>/sources.md`, au lieu d'une consultation par source.
+  - Le verdict gagne `remplacement` (`{ champ, valeur }`) et le statut `appliquee` ;
+    `npm run lot -- reprendre` applique les remplacements, essaie les fiches et ne laisse au rédacteur que
+    `atelier/a-reprendre.md`.
+  - Les lectures traditionnelles s'écrivent dans `fiche.json` (`tradition.lectures`), dès la première passe,
+    dans une étape à part ; `npm run rediger` les accepte, validées comme dans `data/`.
+  - `npm run lot -- clore <mots>` : écrit les fiches, crée les auteurs et ouvrages
+    (`atelier/references.json`), reporte `atelier/decisions.md`, régénère le contrat, vérifie, et rend un
+    résumé. `data/` et `docs/` ne bougent plus pendant le lot : le hook de fin de tour qui réclame un
+    commit ne se déclenche plus.
+  - Un nouvel agent, le vérificateur (Sonnet), pour la seconde passe, qui ne relit que les remarques
+    appliquées et les lectures ; Opus reste le moteur du rédacteur et du relecteur.
+  - Une compétence, `/etymon-lot <mot>…` (`.claude/skills/etymon-lot/SKILL.md`), orchestre le lot dans une
+    session neuve, de 12 à 15 mots : l'orchestrateur n'ouvre rien et ne relaie rien ; chaque agent rend une
+    ligne d'état ; commit et push à la fin.
+- **Approximatif, à mesurer au premier lot** : l'extraction des formes latines et grecques d'un texte
+  d'étymologie (marques « lat. », « lat. pop. », « b. lat. », « latin » ; une forme au cas régime ou à
+  l'infinitif est ramenée à l'entrée du dictionnaire par quelques règles) ; la lecture des entrées de
+  Perseus et du Bailly, tronquées à 900 caractères ; la famille tirée de l'index du Littré (mots qui
+  partagent le début du mot, ou dont une étymologie courte le nomme). Un oubli ou un bruit se corrige en
+  consultant la source, comme avant ; mesurer ce que ces cas coûtent.
+- **Mesure** à tenir pour le prochain lot : jetons du rédacteur, du relecteur, du vérificateur et de
+  l'orchestrateur, remarques réglées par script contre remarques reprises par le rédacteur.
+
 ## 2026-10-05 — Bilan des lots 3 à 16, dans le cloud
 
 Quatorze lots par familles et la reprise des 21 fiches antérieures à la méthode (lots A, B et les

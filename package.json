@@ -26,7 +26,8 @@
     "bnf": "node --use-env-proxy scripts/bnf.ts",
     "texte": "node --use-env-proxy scripts/texte.ts",
     "liste": "node scripts/liste.ts",
-    "corpus": "node --use-env-proxy scripts/corpus.ts"
+    "corpus": "node --use-env-proxy scripts/corpus.ts",
+    "lot": "node --use-env-proxy scripts/lot.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",

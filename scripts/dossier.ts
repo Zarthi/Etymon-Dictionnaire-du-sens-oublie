@@ -3,8 +3,8 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import { parseArgs } from "node:util";
 import { cheminDossier, cheminVerdict, oeuvresNonConsultees, schemaDossier, schemaVerdict, squeletteDossier } from "./lib/atelier.ts";
-import { chercher, graphieDuLittre, natureDuMot, urlLittre } from "./lib/littre.ts";
-import { consulterTlfi, urlApiTlfi } from "./lib/tlfi.ts";
+import { chercher, urlLittre, type EntreeLittre } from "./lib/littre.ts";
+import { consulterTlfiDuMot, urlApiTlfi } from "./lib/tlfi.ts";
 import { slug } from "./lib/validation.ts";
 import { chargerIndexLittre } from "./littre.ts";
 
@@ -20,6 +20,15 @@ import { chargerIndexLittre } from "./littre.ts";
  */
 const problemes = (issues: { path: PropertyKey[]; message: string }[]) =>
   issues.map((i) => `  ${i.path.join(".") || "(racine)"} : ${i.message}`).join("\n");
+
+/** Pose le squelette du dossier d'un mot s'il n'existe pas ; vrai s'il vient d'être créé. */
+export async function creerSquelette(mot: string, littre: EntreeLittre[]): Promise<boolean> {
+  const chemin = cheminDossier(slug(mot));
+  if (existsSync(chemin)) return false;
+  await mkdir(dirname(chemin), { recursive: true });
+  await writeFile(chemin, JSON.stringify(squeletteDossier(mot, littre), null, 2) + "\n");
+  return true;
+}
 
 async function principal(): Promise<number> {
   const { values, positionals: mots } = parseArgs({
@@ -65,22 +74,9 @@ async function principal(): Promise<number> {
   const index = await chargerIndexLittre();
   for (const mot of mots) {
     const id = slug(mot);
-    const chemin = cheminDossier(id);
     const littre = chercher(index, mot) ?? [];
-    const cree = !values.consulter && !existsSync(chemin);
-    if (cree) {
-      await mkdir(dirname(chemin), { recursive: true });
-      await writeFile(chemin, JSON.stringify(squeletteDossier(mot, littre), null, 2) + "\n");
-    }
-    const attendue = natureDuMot(littre, mot);
-    let graphie = mot;
-    let { tlfi, injoignable, autres } = await consulterTlfi(mot, attendue);
-    // Mot écrit sans accents : l'API ne répond rien, le Littré garde la graphie accentuée.
-    const accentuee = tlfi || injoignable ? undefined : graphieDuLittre(littre, mot);
-    if (accentuee) {
-      graphie = accentuee;
-      ({ tlfi, injoignable, autres } = await consulterTlfi(accentuee, attendue));
-    }
+    const cree = !values.consulter && (await creerSquelette(mot, littre));
+    const { tlfi, injoignable, autres, graphie } = await consulterTlfiDuMot(mot, littre);
     console.log(values.consulter ? `■ ${mot}` : `■ ${mot} → atelier/${id}/dossier.json (${cree ? "créé" : "existant"})`);
     if (littre.length === 0) console.log("Littré : absent (mot postérieur à 1872, ou autre graphie)");
     for (const e of littre)

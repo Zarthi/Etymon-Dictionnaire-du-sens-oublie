@@ -12,6 +12,12 @@ import { CORPUS } from "./corpus.ts";
 export const DOSSIER_ATELIER = fileURLToPath(new URL("../../atelier", import.meta.url));
 export const cheminDossier = (id: string) => join(DOSSIER_ATELIER, id, "dossier.json");
 export const cheminVerdict = (id: string) => join(DOSSIER_ATELIER, id, "verdict.json");
+export const cheminFicheAtelier = (id: string) => join(DOSSIER_ATELIER, id, "fiche.json");
+export const cheminSources = (id: string) => join(DOSSIER_ATELIER, id, "sources.md");
+/** Fichiers du lot, communs à tous ses mots. */
+export const cheminReferences = join(DOSSIER_ATELIER, "references.json");
+export const cheminDecisions = join(DOSSIER_ATELIER, "decisions.md");
+export const cheminAReprendre = join(DOSSIER_ATELIER, "a-reprendre.md");
 
 /** Chemin d'un mot dans la chaîne de rédaction (un seul par mot). */
 export const CHEMINS = ["ordinaire", "forge", "debattu", "recent", "sacre", "consacre"] as const;
@@ -123,6 +129,18 @@ export const schemaVerdict = z
             champ: z.string().min(1).describe("Champ visé (explication, etymologie.1.sens…)."),
             probleme: z.string().min(1),
             proposition: z.string().min(1).optional().describe("Ce qu'il faudrait écrire, si tu le sais."),
+            remplacement: z
+              .object({
+                champ: z
+                  .string()
+                  .min(1)
+                  .describe("Chemin dans atelier/<id>/fiche.json, séparé par des points, un rang pour une liste : explication, etymologie.2.sens, tradition.lectures.1.texte, renvois."),
+                valeur: z.json().describe("Le JSON exact à y mettre (un texte entre guillemets, une liste, un objet) ; null retire le champ ou l'élément de liste."),
+              })
+              .strict()
+              .optional()
+              .describe("Quand tu sais exactement ce qu'il faut écrire : `npm run lot -- reprendre` l'applique à la fiche, sans agent."),
+            statut: z.literal("appliquee").optional().describe("Posé par `npm run lot -- reprendre` : le remplacement est appliqué à la fiche. Tu ne l'écris jamais."),
           })
           .strict(),
       )
@@ -131,3 +149,42 @@ export const schemaVerdict = z
   .strict()
   .refine((v) => v.decision === "accepte" || v.remarques.length > 0, { message: "une fiche à reprendre a au moins une remarque", path: ["remarques"] })
   .describe("Verdict de la relecture critique (atelier/<id>/verdict.json).");
+
+/** Auteurs et ouvrages à créer d'après leur notice BnF à la clôture du lot (atelier/references.json). */
+export const schemaReferences = z
+  .object({
+    auteurs: z
+      .array(
+        z
+          .object({
+            id: z.string().min(1).describe("Identifiant : prénom et nom sans accent (eugen-bleuler)."),
+            cb: z.string().min(1).describe("Identifiant de la notice BnF, choisie avec `npm run bnf -- auteur \"<nom> <année>\"` (cb12065087s)."),
+            description: z.string().min(1).describe("200 caractères au plus : ce qui situe l'auteur."),
+            nom: z.string().min(1).optional().describe("Nom usuel, si ce n'est pas « prénom nom » (Augustin, Cicéron)."),
+            nomComplet: z.string().min(1).optional().describe("Forme complète, si elle diffère (Aurelius Augustinus)."),
+            traditions: z.array(z.string().min(1)).min(1).optional().describe("Seulement pour un auteur qui parle dans une tradition (liste fermée)."),
+          })
+          .strict(),
+      )
+      .default([]),
+    ouvrages: z
+      .array(
+        z
+          .object({
+            id: z.string().min(1).describe("Identifiant : abrégé ou titre sans accent (utopia)."),
+            cb: z.string().min(1).describe("Identifiant de la notice BnF d'œuvre, choisie avec `npm run bnf -- ouvrage \"<auteur> <titre>\"`."),
+            titre: z.string().min(1).describe("Titre français."),
+            licence: z.string().min(1).describe("Licence de l'édition consultée (liste fermée)."),
+            description: z.string().min(1).describe("200 caractères au plus : ce qui situe l'ouvrage."),
+            auteur: z.string().min(1).optional().describe("Identifiant de l'auteur (d'une fiche existante ou listée ci-dessus)."),
+            abrege: z.string().min(1).optional(),
+            titreOriginal: z.string().min(1).optional(),
+            texte: z.string().min(1).optional().describe("Adresse d'un texte en ligne libre."),
+            traditions: z.array(z.string().min(1)).min(1).optional().describe("Seulement pour une œuvre sans auteur (l'Écriture)."),
+          })
+          .strict(),
+      )
+      .default([]),
+  })
+  .strict()
+  .describe("Auteurs et ouvrages à créer à la clôture du lot (atelier/references.json).");

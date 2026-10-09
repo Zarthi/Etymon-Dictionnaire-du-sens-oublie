@@ -9,7 +9,7 @@ import themes from "../data/themes.json" with { type: "json" };
 import traditions from "../data/traditions.json" with { type: "json" };
 import { LICENCES, NATURES, schemaAuteur, schemaEntreeRedaction, schemaFiche, schemaLectureTraditionnelle, schemaOuvrage, schemaRacine } from "../src/lib/schema.ts";
 import { REDACTEURS } from "../src/lib/sources.ts";
-import { CHEMINS, DRAPEAUX, schemaDossier, schemaVerdict } from "./lib/atelier.ts";
+import { CHEMINS, DRAPEAUX, schemaDossier, schemaReferences, schemaVerdict } from "./lib/atelier.ts";
 import { CORPUS } from "./lib/corpus.ts";
 import { cheminFiche } from "./lib/validation.ts";
 
@@ -72,6 +72,8 @@ function type(n: Noeud): string {
     return `liste${n.minItems ? " non vide" : ""} ${/^[aeiouy]/.test(element) ? "d'" : "de "}${element}`;
   }
   if (n.type === "object") return "objet (voir plus bas)";
+  // Une valeur de n'importe quel type JSON (le remplacement d'un verdict).
+  if (n.type === undefined) return "JSON";
   if (n.type === "boolean") return "`true` \\| `false`";
   if (n.type === "integer" || n.type === "number") return "nombre";
   if (n.format === "uri") return "adresse https";
@@ -111,9 +113,11 @@ function tableau(n: Noeud, chemin: string, sections: string[], titre = "###"): s
 }
 
 /** Tableau principal d'un schéma, suivi de ceux de ses objets imbriqués. */
-function contrat(schema: z.ZodType, titre: string): string[] {
+function contrat(schema: z.ZodType, titre: string, retirer?: (json: Noeud) => void): string[] {
   const sections: string[] = [];
-  const principal = tableau(genererSchemaJson(schema, "") as Noeud, "", sections, titre);
+  const json = genererSchemaJson(schema, "") as Noeud;
+  retirer?.(json);
+  const principal = tableau(json, "", sections, titre);
   return [principal, "", ...sections.flatMap((s) => [s, ""])];
 }
 
@@ -212,24 +216,24 @@ function contenuDe(id: string): Record<string, unknown> {
 
 const CONSIGNES = [
   "Principe : la justesse des noms, au service de la vérité. Étymon rend à chaque mot son nom juste, et s'écrit de même : chaque mot dans son sens propre, chaque phrase conforme à ce qui est et à ce que disent les sources, rien de plus. Pas de figure, pas de formule, pas d'effet. Relis chaque phrase avec une question : « que veux-tu dire exactement ? » ; si la réponse est plus claire que la phrase, écris la réponse.",
-  "Tu rédiges d'après le dossier (`atelier/<id>/dossier.json`) : la fiche n'affirme rien qui n'y soit (forme, langue, sens, date, auteur, tenant, histoire du mot, usage d'aujourd'hui). Si un fait te manque, va le chercher et ajoute-le au dossier avec sa source ; ce que tu sais sans l'avoir lu ne s'écrit pas. Si le dossier doute de la chaîne, `incertain: true`.",
-  "Un mot entre s'il est important (usage courant, porteur de sens dans la vie intellectuelle, morale, spirituelle ou sociale) et si son sens premier éclaire ce qu'on dit en l'employant. Un mot douteux est rédigé quand même : seul Thibault écarte ; note ton doute dans les signalements.",
+  "Tu rédiges d'après le dossier (`atelier/<id>/dossier.json`, tiré de `atelier/<id>/sources.md`) : la fiche n'affirme rien qui n'y soit (forme, langue, sens, date, auteur, tenant, histoire du mot, usage d'aujourd'hui). Si un fait te manque, va le chercher et ajoute-le au dossier avec sa source ; ce que tu sais sans l'avoir lu ne s'écrit pas. Si le dossier doute de la chaîne, `incertain: true`.",
+  "Un mot entre s'il est important (usage courant, porteur de sens dans la vie intellectuelle, morale, spirituelle ou sociale) et si son sens premier éclaire ce qu'on dit en l'employant. Un mot douteux est rédigé quand même : seul Thibault écarte ; note ton doute dans `atelier/signalements.md`.",
   "`etymologie` : la chaîne, du plus proche au plus lointain, maillon par maillon comme le dossier la donne (un déverbal passe par son verbe : travail, de travailler). Le premier maillon est la langue source directe (latin pour un mot hérité, italien pour un emprunt à l'italien) ; on ne remonte que si cela ajoute un sens ou si l'origine est débattue. Un dernier maillon sans sens (le mot de base latin, credere, lex, regere) se retire : la chaîne s'arrête au maillon qui apprend quelque chose.",
   "Formes dans leur écriture d'origine (φρήν, صفر) ; translittération seulement pour l'arabe ou l'hébreu (celle du grec se déduit).",
   "`sens` seulement là où il apprend quelque chose : le sens premier, affiché seul en tête de fiche, est celui du maillon le plus lointain attesté qui en porte un. Chaque sens vient du dossier.",
   "Découper une forme composée, du tout vers les parties : la forme garde son sens attesté (jamais déduit des parties), puis ses `elements`, chacun avec son sens ; seulement si les parties parlent encore (re-legere, oui ; śāṭān, non). Une hypothèse d'une origine débattue se découpe de même (relegere : re-, « de nouveau », et legere, « recueillir »). Un même élément peut avoir deux sens selon le composé (re- : « de nouveau » dans relegere, « en arrière » dans religare) : chacun vient de l'entrée de son composé.",
   "`croisement` d'un maillon : les formes avec lesquelles la sienne s'est croisée (chétif : captivus croisé avec le gaulois *cactos ; algorithme : algorisme croisé avec ἀριθμός), seulement si une source le dit ; jamais une hypothèse tirée de la ressemblance des formes.",
   "`explication` : ce qui s'est perdu, affaibli ou retourné entre le sens premier et l'usage d'aujourd'hui (le fait `usage` du dossier). Elle n'explique pas une seconde fois le sens, affiché juste au-dessus ; mais mieux vaut redire le mot juste qu'un détour. Ton sobre, sans emphase ni jugement. Le sens ancien n'est pas le « vrai » sens du mot, ni l'usage actuel une erreur : l'explication dit ce qui a changé, l'histoire n'en juge pas.",
-  "`themes` : le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier (étonner : émotions, pas météo) ; un ou deux, affichés sur la fiche. Aucune liste fermée n'est exhaustive. Une langue qui manque est un fait : ajoute-la (`npm run liste -- langues \"<langue>\"`) et note-le dans les signalements. Un thème qui manque ne s'ajoute pas pendant le lot : mets le plus proche, et propose le thème manquant dans les signalements, avec la raison.",
+  "`themes` : le domaine où le mot s'emploie aujourd'hui, non celui de son sens premier (étonner : émotions, pas météo) ; un ou deux, affichés sur la fiche. Aucune liste fermée n'est exhaustive. Une langue qui manque est un fait : ajoute-la (`npm run liste -- langues \"<langue>\"`) et note-le dans `atelier/signalements.md`. Un thème qui manque ne s'ajoute pas pendant le lot : mets le plus proche, et propose le thème manquant dans `atelier/signalements.md`, avec la raison.",
   "Tout mot étranger cité dans un texte est une forme de la chaîne : l'app le met en italique. Aucune mise en forme, aucun lien écrit à la main.",
-  "Un mot sacré par origine (né dans l'ordre sacré : manne, sabbat, alléluia) ne se rédige pas dans le lot : signale-le, il se rédige à part, texte d'origine sous les yeux. Un mot consacré (profane à l'origine : église, ange, baptême) se rédige comme les autres : son sens profane premier est justement ce que le dictionnaire révèle.",
+  "Un mot sacré par origine (né dans l'ordre sacré : manne, sabbat, alléluia) ne se rédige pas dans le lot : signale-le dans `atelier/signalements.md`, il se rédige à part, texte d'origine sous les yeux. Un mot consacré (profane à l'origine : église, ange, baptême) se rédige comme les autres : son sens profane premier est justement ce que le dictionnaire révèle.",
   "Le Nom divin s'écrit comme le texte l'écrit (Yah, YHWH), jamais traduit (« Dieu ») ni vocalisé (« Jéhovah », « Yahvé »).",
   "Une composition : si la forme composée est attestée, elle porte son sens attesté, puis chaque élément le sien ; si le mot est forgé sur des éléments sans forme composée avant lui (schizophrénie), le sens premier est le sens littéral des éléments (esprit fendu), que l'app affiche comme tel (« littéralement »), jamais comme le sens d'une forme qui n'a pas existé.",
   "`ecartees` : étymologies proposées puis écartées ; `populaire: true` pour une idée reçue (*sincère*, « sans cire »), jamais dans la chaîne.",
   "Liens entre mots, un seul endroit selon leur raison. Un lien qui s'explique en une phrase va dans l'explication : l'app lie tout mot qui a une fiche (Bleuler renommait la démence précoce) ; un mot nommé dans l'explication n'est donc pas aussi un renvoi. `renvois` (Voir aussi) : notions voisines du même ordre que l'usage d'aujourd'hui, sans racine commune (schizophrénie → délire, folie) ; trois au plus, souvent aucun. `tradition.renvois` (sous « Lectures traditionnelles » : voir obsession) : mots que la tradition a lus et où elle parle de ce dont traite celui-ci (schizophrénie → obsession) ; deux au plus, rare. Un renvoi vise un mot important du dictionnaire, qu'il ait déjà sa fiche ou non.",
-  "Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, qui accepte aussi un ouvrage sans auteur unique comme tenant, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) : elle se crée d'après sa notice BnF avant l'écriture des fiches (docs/consignes/references.md).",
+  "Auteurs et ouvrages sont cités par leur identifiant dans les champs (`selon`, qui accepte aussi un ouvrage sans auteur unique comme tenant, `forge`, `personne`, `ouvrage`). S'il manque une fiche, choisis son identifiant (prénom et nom sans accent : eugen-bleuler ; abrégé ou titre : utopia) : tu la listes dans `atelier/references.json` (docs/consignes/references.md) ; elle se crée d'après sa notice BnF à la clôture du lot.",
   "Dans un texte, nomme un auteur sous son nom usuel ou une de ses formes de citation (liste ci-dessous) : l'app en fait un lien, s'il est aussi cité dans un champ de la fiche.",
-  "Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` ni les lectures traditionnelles (`tradition.lectures`) : les scripts posent les premiers (npm run rediger), les lectures se rédigent à part, texte source sous les yeux.",
+  "Tu n'écris jamais `sources`, `redaction`, `statut`, `historique` : les scripts les posent. Les lectures traditionnelles (`tradition.lectures`) s'écrivent dans le même fichier, mais dans une étape à part, texte source sous les yeux (docs/consignes/lectures.md).",
   "Typographie : le script pose les espaces insécables et les guillemets « » ; les sens s'écrivent sans guillemets.",
 ];
 
@@ -274,7 +278,8 @@ export function genererPrompt(): string {
     "",
     "Un fichier JSON, `atelier/<id>/fiche.json` : la fiche seule, avec les champs ci-dessous et eux seuls ; un champ facultatif à sa valeur par défaut ne s'écrit pas ; `nature` se déduit du Littré et ne s'écrit que pour un mot qui n'y figure pas (postérieur à 1872 : le TLFi la donne).",
     "",
-    ...contrat(schemaEntreeRedaction, "###"),
+    // Les lectures s'écrivent dans une étape à part, avec leur propre format (docs/consignes/lectures.md).
+    ...contrat(schemaEntreeRedaction, "###", (json) => delete json.properties?.tradition?.properties?.lectures),
     "### Listes fermées",
     "",
     `- \`nature\` : ${NATURES.join(", ")}.`,
@@ -304,39 +309,41 @@ export function genererPrompt(): string {
 /** Contrat d'un schéma d'atelier, sans le titre de premier niveau. */
 const contratAtelier = (schema: z.ZodType) => contrat(schema, "###");
 
-/** Procédure du rédacteur : un seul agent, tout le lot, en deux passes séparées par la relecture. */
+/** Procédure du rédacteur : un seul agent, tout le lot, tout dans atelier/ ; un script, un relecteur et un vérificateur passent après lui. */
 export function genererConsigneRedacteur(): string {
   return [
     "# Rédiger un lot",
     "",
     ENTETE,
     "",
-    "Tu reçois une liste de mots. Tu travailles seul, mot après mot, et tu gardes le lot en tête : familles, doublets et renvois entre ses mots. Un relecteur qui n'a pas écrit relira ton travail entre tes deux passes.",
+    "Tu reçois une liste de mots, dont `npm run lot -- sources` a déjà rassemblé les sources (`atelier/<id>/sources.md`). Tu travailles seul, mot après mot, et tu gardes le lot en tête : familles, doublets et renvois entre ses mots. **Tout s'écrit dans `atelier/` : tu ne touches ni `data/` ni `docs/`**, et tu ne commites pas (une langue ou une tradition qui manque est la seule exception : `npm run liste`, voir plus bas). Après toi, un relecteur qui n'a pas écrit relit, `npm run lot -- reprendre` applique ses remplacements, un vérificateur contrôle ce qui a changé, puis `npm run lot -- clore` écrit les fiches.",
     "",
-    "## Passe 1 : dossiers et fiches",
+    "## Passe 1 : dossiers, fiches et lectures",
     "",
     "Pour chaque mot, dans l'ordre de la liste :",
     "",
-    "1. Le dossier (`docs/consignes/dossier.md`). Un mot sacré (chemin `sacre`) s'arrête là : il se rédige à part ; signale-le.",
+    "1. Le dossier (`docs/consignes/dossier.md`), d'après `atelier/<id>/sources.md` : tu n'en refais aucune consultation, sauf pour ce qu'il signale (⚠, « Aucune entrée ») ou ce qu'il ne couvre pas. Un mot sacré (chemin `sacre`) s'arrête là : il se rédige à part ; signale-le.",
     "2. La fiche, d'après le dossier (`docs/consignes/redaction.md`), dans `atelier/<id>/fiche.json`, puis `npm run rediger -- atelier/<id>/fiche.json --essai`.",
+    "3. Les lectures traditionnelles (`docs/consignes/lectures.md`), dans `tradition.lectures` du même `fiche.json`, texte source sous les yeux : une étape à part, après la fiche, pour chaque mot au drapeau `tradition` ou dont le corpus a donné un passage ★.",
+    "4. Les auteurs et ouvrages que l'essai dit « à créer » : une entrée dans `atelier/references.json` (`docs/consignes/references.md`), commune au lot.",
     "",
-    "Si une fiche demande un fait que le dossier n'a pas, va le chercher et ajoute-le au dossier avec sa source, avant de l'écrire. Puis rends la main : les mots traités, ceux mis à part, et les signalements.",
+    "Si une fiche demande un fait que le dossier n'a pas, va le chercher et ajoute-le au dossier avec sa source, avant de l'écrire. Puis rends une ligne d'état : les mots traités, ceux mis à part. Rien d'autre : le reste est dans les fichiers.",
     "",
-    "## Passe 2 : après la relecture",
+    "## Reprise",
     "",
-    "1. Pour chaque `atelier/<id>/verdict.json` à reprendre : adopte la proposition du relecteur telle quelle quand elle est juste ; sinon, corrige autrement ou pas du tout, et dis pourquoi dans les signalements. Ne reformule pas ce que le relecteur n'a pas relevé.",
-    "2. Les auteurs et ouvrages « à créer » : `docs/consignes/references.md`.",
-    '3. Écris les fiches, sauf celles dont une remarque reste ouverte : `npm run rediger -- atelier/<id>/fiche.json… --dossier --modele "<ton modèle>" --reflexion "<ton niveau de réflexion>"`.',
-    "4. Les lectures traditionnelles des mots au drapeau `tradition` : `docs/consignes/lectures.md`.",
-    "5. `npm run verifier`, puis `npm run valider`. Rends la main : les fiches écrites, celles qui ne l'ont pas été et pourquoi, les lectures ajoutées.",
+    "Si on te reprend après la relecture, lis seulement `atelier/a-reprendre.md` : les remarques que le script n'a pas pu régler seul. Corrige `fiche.json` (la proposition du relecteur, telle quelle quand elle est juste ; sinon autrement, ou pas du tout, et dis pourquoi dans `atelier/signalements.md`), puis relance l'essai. Ne reformule pas ce que le relecteur n'a pas relevé. Rends une ligne d'état.",
     "",
     "## Signalements (`atelier/signalements.md`)",
     "",
     "Une ligne par point, avec le mot : doute sur le critère d'entrée ; langue ou tradition ajoutée, thème proposé ; ce que le modèle de données ne permet pas de dire ; source inaccessible ; remarque du relecteur que tu n'as pas suivie, et pourquoi. Thibault et l'affinage entre deux lots s'en servent.",
     "",
-    "## Décisions (`docs/decisions.md`)",
+    "## Décisions (`atelier/decisions.md`)",
     "",
-    "Un point qui attendrait Thibault ne t'arrête pas : décide, applique, et note la décision et sa raison dans `docs/decisions.md` (une ligne, relecture « à relire »). Restent à Thibault seul : `validee`, écarter un mot, changer un principe d'AGENTS.md.",
+    "Un point qui attendrait Thibault ne t'arrête pas : décide, applique, et note la décision et sa raison dans `atelier/decisions.md`, une ligne de tableau par décision : `| sujet | décision | raison | à relire |`. `npm run lot -- clore` les reporte en tête de `docs/decisions.md`, sous une section datée. Restent à Thibault seul : `validee`, écarter un mot, changer un principe d'AGENTS.md.",
+    "",
+    "## Langue ou tradition qui manque",
+    "",
+    '`npm run liste -- langues "<langue>"` ou `traditions` : la seule commande qui écrit dans `data/` (et régénère le contrat) pendant un lot, parce que l\'essai refuse une valeur hors liste. Note-la dans `atelier/signalements.md` : l\'orchestrateur la commite avec le lot.',
     "",
   ].join("\n");
 }
@@ -352,11 +359,11 @@ export function genererConsigneDossier(): string {
     "",
     "## Étapes",
     "",
-    "1. `npm run dossier -- <mot>` : crée `atelier/<id>/dossier.json`, avec les entrées du Littré local, et affiche le Littré, puis du TLFi le plan des sens et la rubrique « Étymologie et historique ».",
+    "1. Lis `atelier/<id>/sources.md`, que `npm run lot -- sources` a écrit : le Littré, du TLFi le plan des sens et la rubrique « Étymologie et historique », le début des entrées du Lewis & Short (latin) et du Bailly (grec) pour les formes relevées dans ces étymologies, et la recherche de leurs radicaux dans le corpus de réflexe. Le squelette `atelier/<id>/dossier.json` est posé. Un ⚠ ou « Aucune entrée » n'est pas une absence : consulte alors la source toi-même (`npm run dossier -- --consulter <mot voisin>`, `npm run texte -- bailly:<forme grecque>`, ou l'entrée entière d'un étymon) ; de même pour une forme que `sources.md` n'a pas relevée.",
     "2. Choisis le chemin et les drapeaux du mot (ci-dessous).",
     "3. `usage` : ce que le mot désigne aujourd'hui, d'après le plan des sens du TLFi : les sens sans marque d'ancienneté, ou marqués « Moderne » ; pas un sens « Vieilli », « vx » ou « Littér. », qui n'est plus l'usage courant.",
     "4. Les étapes du sens en français, datées, d'après la rubrique « Étymologie et historique » du TLFi : première attestation et changements de sens.",
-    "5. La chaîne jusqu'au sens premier, sans aller plus loin qu'il ne faut (AGENTS.md §3.2) : pour chaque maillon, la forme et la langue ; et, pour chaque maillon qui portera un sens, ce sens avec sa source. Le sens d'un étymon (et non du mot français) se prend au Littré ou au TLFi s'ils le glosent ; sinon, pour le latin, au Lewis & Short (Perseus) ou au Georges (1913), domaine public, ou au Gaffiot (gaffiot.fr, dans le navigateur intégré, jamais par script) ; au Bailly pour le grec (`npm run texte -- bailly:φρήν`) : ils sont alors obligatoires. Un mot voisin (« déverbal de ennuyer ») est un maillon : consulte-le aussi (`npm run dossier -- --consulter ennuyer` ; si l'API n'a rien, cnrtl.fr/etymologie/<mot> dans le navigateur intégré).",
+    "5. La chaîne jusqu'au sens premier, sans aller plus loin qu'il ne faut (AGENTS.md §3.2) : pour chaque maillon, la forme et la langue ; et, pour chaque maillon qui portera un sens, ce sens avec sa source. Le sens d'un étymon (et non du mot français) se prend au Littré ou au TLFi s'ils le glosent ; sinon, pour le latin, au Lewis & Short (début de l'entrée dans `sources.md`) ou au Georges (1913), domaine public, ou au Gaffiot (gaffiot.fr, dans le navigateur intégré, jamais par script) ; au Bailly pour le grec : ils sont alors obligatoires. Un mot voisin (« déverbal de ennuyer ») est un maillon : consulte-le aussi (`npm run dossier -- --consulter ennuyer` ; si l'API n'a rien, cnrtl.fr/etymologie/<mot> dans le navigateur intégré).",
     "6. Mot forgé : l'auteur, la date et l'ouvrage, tels que les sources les donnent. Origine débattue : chaque hypothèse, qui la défend, et qui la rapporte seulement. Doublet ou famille que les sources signalent (voy. CAPTIF) : un fait.",
     "7. Écris `chemin`, `drapeaux`, `usage`, `faits`, `manques` et `notes` dans le fichier, puis `npm run dossier -- --verifier <mot>`.",
     "",
@@ -386,7 +393,7 @@ export function genererConsigneRelecture(): string {
     "",
     ENTETE,
     "",
-    "Tu relis des fiches qu'un autre agent a rédigées ; tu ne les réécris pas. Pour chaque mot, lis `atelier/<id>/dossier.json` et `atelier/<id>/fiche.json`, et l'étymologie brute du mot (`npm run dossier -- --consulter <mot>`) pour vérifier le dossier ; le dossier tient lieu des autres sources. Écris ton verdict dans `atelier/<id>/verdict.json`, puis `npm run dossier -- --verifier <mot>` le contrôle.",
+    "Tu relis des fiches qu'un autre agent a rédigées ; tu ne les réécris pas. Pour chaque mot, lis `atelier/<id>/dossier.json` et `atelier/<id>/fiche.json`, et l'étymologie brute du mot (`npm run dossier -- --consulter <mot>`) pour vérifier le dossier ; le dossier tient lieu des autres sources. Si `atelier/<id>/sources.md` existe, il tient lieu de l'étymologie brute : confronte-y le dossier sans refaire les consultations. Écris ton verdict dans `atelier/<id>/verdict.json`, puis `npm run dossier -- --verifier <mot>` le contrôle.",
     "",
     "## Trois critères, et rien d'autre",
     "",
@@ -394,17 +401,19 @@ export function genererConsigneRelecture(): string {
     "2. **justesse** : chaque phrase répond à « que veux-tu dire exactement ? » (AGENTS.md §3) ; chaque mot dans son sens propre, sans figure, sans effet, sans jargon ; l'explication dit ce qui s'est perdu, affaibli ou retourné, sans redire le sens affiché au-dessus.",
     "3. **regle** : les règles que les scripts ne voient pas : le sens premier au bon maillon ; la règle d'arrêt ; étymologie et tradition distinctes ; aucune étymologie populaire dans la chaîne ; `renvois` vers des notions du même ordre, sans racine commune, et pas un mot déjà nommé dans l'explication ; `tradition.renvois` seulement vers un mot que la tradition a lu ; `incertain` quand le dossier doute de la chaîne ; des `themes` qui disent le domaine où le mot s'emploie aujourd'hui ; aucune phrase qui fasse du sens ancien le « vrai » sens du mot ; une composition découpée du tout vers les parties, le sens du tout pris dans le dossier et non déduit des parties.",
     "",
-    "Ne relève ni ce que les scripts vérifient (typographie, longueurs, identifiants, listes fermées), ni une préférence de style : seulement ce qui rend la fiche fausse, obscure ou contraire aux règles. `accepte` : aucune remarque. `a-reprendre` : les remarques qui obligent à changer la fiche, chacune avec, si tu le sais, la phrase à écrire telle quelle, tirée du dossier : le rédacteur l'adoptera sans la reformuler.",
+    "Ne relève ni ce que les scripts vérifient (typographie, longueurs, identifiants, listes fermées), ni une préférence de style : seulement ce qui rend la fiche fausse, obscure ou contraire aux règles. `accepte` : aucune remarque. `a-reprendre` : les remarques qui obligent à changer la fiche. Quand tu sais exactement ce qu'il faut écrire, donne un `remplacement` : `npm run lot -- reprendre` l'applique à `fiche.json` sans agent ; sans `remplacement`, la remarque va au rédacteur, qui adopte ta `proposition` quand elle est juste.",
     "",
-    "## Seconde passe : les reprises et les lectures",
+    "Un `remplacement` est `{ champ, valeur }` : `champ` est un chemin dans `atelier/<id>/fiche.json`, séparé par des points, un rang pour un élément de liste (`explication`, `etymologie.1.sens`, `tradition.lectures.0.texte`, `renvois`) ; `valeur` est le JSON exact à y mettre, texte entre guillemets, liste ou objet ; `null` retire le champ ou l'élément de liste. Les remplacements s'appliquent dans l'ordre : après un `null` sur un élément de liste, les rangs suivants se décalent. Ne donne que le texte tel qu'il doit paraître, tiré du dossier ; la typographie est posée par le script.",
     "",
-    "Après la reprise, relis seulement :",
+    "## Seconde passe : le vérificateur",
     "",
-    "- pour chaque remarque de ton premier verdict, si elle est réglée ; et si ce que le rédacteur a changé n'affirme rien hors du dossier ;",
-    "- les lectures traditionnelles ajoutées (`tradition.lectures` de la fiche écrite dans data/) : le texte ne dit rien de plus que sa citation ; la voix est la bonne ; la citation vient d'un texte original.",
-    "- pour un mot au drapeau `tradition`, le `corpus` du dossier : chaque œuvre du corpus de réflexe a été consultée (`npm run dossier -- --verifier <mot>` dit celles qui manquent) ; un passage trouvé et écarté l'a été avec raison.",
+    "Après `npm run lot -- reprendre`, un autre agent (le vérificateur) ne relit que ce qui a changé, dans `atelier/<id>/fiche.json` :",
     "",
-    "Ne rouvre pas ce que tu avais accepté. Réécris `atelier/<id>/verdict.json` avec ce qui reste ouvert, ou `accepte`.",
+    "- chaque remarque `appliquee` de `verdict.json` : ce que le remplacement a changé n'affirme rien hors du dossier, et répond à la remarque ;",
+    "- les lectures traditionnelles (`tradition.lectures`) : le texte ne dit rien de plus que sa citation ; la voix est la bonne ; la citation vient d'un texte original. Les scripts vérifient la citation mot pour mot (`npm run verifier:en-ligne`, à la clôture) : n'y revenir que si le passage cité ne dit pas ce que le texte lui fait dire ;",
+    "- pour un mot au drapeau `tradition`, le `corpus` du dossier : chaque œuvre du corpus de réflexe a été consultée (`npm run dossier -- --verifier <mot>` dit celles qui manquent) ; un passage ★ de `sources.md` écarté l'a été avec raison.",
+    "",
+    "Ne rouvre pas ce que le premier relecteur avait accepté. Réécris `atelier/<id>/verdict.json` : `accepte` si tout est réglé ; sinon `a-reprendre`, avec seulement les remarques restées ouvertes (les remarques `appliquee` n'y figurent plus), chacune avec son `remplacement` quand tu sais la phrase. Une remarque ouverte à ce stade ne relance pas de boucle : le rédacteur la règle si elle est simple, sinon la fiche reste dans l'atelier.",
     "",
     "## Verdict",
     "",
@@ -419,19 +428,22 @@ export function genererConsigneReferences(): string {
     "",
     ENTETE,
     "",
-    "Pour chaque auteur ou ouvrage cité par une fiche du lot et qui n'a pas encore la sienne (`npm run rediger -- --essai` les dit « à créer ») :",
+    "Pour chaque auteur ou ouvrage cité par une fiche du lot et qui n'a pas encore la sienne (`npm run rediger -- atelier/<id>/fiche.json --essai` les dit « à créer »), tu choisis sa notice BnF et tu l'ajoutes à `atelier/references.json`, commun au lot. `npm run lot -- clore` crée les fiches, d'après la notice, avant d'écrire celles des mots.",
     "",
     "1. Si `data/auteurs/<id>.yaml` (ou `data/ouvrages/<id>.yaml`) existe, rien à faire.",
-    '2. Cherche sa notice : `npm run bnf -- auteur "<nom> <année de naissance sur quatre chiffres>"` (`Augustin 0354`, `Bleuler 1857`) ; `npm run bnf -- ouvrage "<auteur> <titre>"`. Choisis la notice qui répond à ce que dit le dossier (dates, note).',
-    '3. Écris la fiche : `npm run bnf -- auteur --cb <cb> --id <id> --description "…" --modele "<ton modèle>" --reflexion "<ton niveau>"`, avec `--nom` si le nom usuel n\'est pas « prénom nom » (Augustin, Cicéron), `--nom-complet` s\'il diffère (Aurelius Augustinus), `--traditions` seulement pour un auteur qui parle dans une tradition (une tradition absente de la liste : `npm run liste -- traditions "<tradition>"` d\'abord). Un ouvrage : `npm run bnf -- ouvrage --cb <cb> --id <id> --titre "<titre français>" --licence "<licence>" --description "…" --modele "…" --reflexion "…"`, avec `--auteur <id>` (l\'auteur d\'abord), `--abrege`, `--titre-original`.',
+    '2. Cherche sa notice : `npm run bnf -- auteur "<nom> <année de naissance sur quatre chiffres>"` (`Augustin 0354`, `Bleuler 1857`) ; `npm run bnf -- ouvrage "<auteur> <titre>"`. Choisis la notice qui répond à ce que dit le dossier (dates, note) ; plusieurs recherches se lancent dans une même commande.',
+    "3. Ajoute-la à `atelier/references.json` : `id` (prénom et nom sans accent ; abrégé ou titre pour un ouvrage), `cb` (l'identifiant de la notice), `description`, et `nom` si le nom usuel n'est pas « prénom nom » (Augustin, Cicéron), `nomComplet` s'il diffère (Aurelius Augustinus), `traditions` seulement pour un auteur qui parle dans une tradition (une tradition absente de la liste : `npm run liste -- traditions \"<tradition>\"` d'abord). Un ouvrage : `titre` français, `licence`, `description`, `auteur` (l'identifiant de l'auteur, d'une fiche existante ou listée au même fichier), `abrege`, `titreOriginal`, `texte` (adresse en ligne libre).",
     "",
     "## Règles",
     "",
     "- Dates et forme d'entrée viennent de la notice : le script les pose, tu ne les écris pas.",
     "- Description : 200 caractères au plus ; ce qui situe (époque, domaine, œuvre), pas une biographie, pas de jugement.",
     `- Licence d'un ouvrage : ${LICENCES.join(", ")} ; domaine public si l'auteur est mort depuis plus de soixante-dix ans.`,
-    "- Sans notice qui réponde : la fiche du mot ne s'écrit pas ; signale-le. Jamais de fiche d'auteur écrite à la main.",
+    "- Sans notice qui réponde : la fiche du mot ne s'écrit pas ; signale-le dans `atelier/signalements.md`. Jamais de fiche d'auteur écrite à la main.",
     "",
+    "## Format de `atelier/references.json`",
+    "",
+    ...contratAtelier(schemaReferences),
   ].join("\n");
 }
 
@@ -447,17 +459,17 @@ export function genererConsigneLectures(): string {
     "",
     ENTETE,
     "",
-    "Tu ajoutes à la fiche écrite d'un mot (`data/fiches/<initiale>/<préfixe>/<id>.yaml`) les lectures qu'une tradition a faites du mot lui-même, texte source sous les yeux (AGENTS.md §4.7). Aucune lecture vaut mieux qu'une lecture approximative : la tradition parle par ses textes, jamais par ta paraphrase.",
+    "Tu ajoutes à la fiche d'un mot (`tradition.lectures` de `atelier/<id>/fiche.json`) les lectures qu'une tradition a faites du mot lui-même, texte source sous les yeux (AGENTS.md §4.7), après avoir écrit le reste de la fiche. Aucune lecture vaut mieux qu'une lecture approximative : la tradition parle par ses textes, jamais par ta paraphrase.",
     "",
     "## Étapes",
     "",
-    "1. Le corpus de réflexe, toujours : `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi ; en hébreu, les consonnes : שטן). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture. Note dans `corpus` du dossier (`atelier/<id>/dossier.json`) ce que tu as cherché dans chaque œuvre et ce que tu y as trouvé, même rien : `{ \"oeuvre\": \"cite-de-dieu\", \"cherche\": \"angel\", \"trouve\": \"X, 25\" }`. `npm run dossier -- --verifier <mot>` dit les œuvres qui manquent.",
+    "1. Le corpus de réflexe, toujours : `atelier/<id>/sources.md` donne déjà la recherche du radical de chaque forme latine relevée dans les huit œuvres ; pour une autre forme (en hébreu, les consonnes : שטן ; un radical que le script n'a pas tiré), `npm run corpus -- chercher <radical de l'étymon>` (misericord, religi). Les passages marqués ★ expliquent un mot : ce sont eux qui peuvent faire une lecture. Note dans `corpus` du dossier (`atelier/<id>/dossier.json`) ce que tu as cherché dans chaque œuvre et ce que tu y as trouvé, même rien : `{ \"oeuvre\": \"cite-de-dieu\", \"cherche\": \"angel\", \"trouve\": \"X, 25\" }`. `npm run dossier -- --verifier <mot>` dit les œuvres qui manquent.",
     "2. Puis au-delà, toujours aussi : le corpus est un plancher, jamais une limite. Tout autre auteur traditionnel qui a lu le mot se cherche (Augustin, Lactance, Thomas d'Aquin, le Talmud, les Pères, Guénon…), d'après les `notes` du dossier et ce que tu sais ; mais on ne cite que ce qu'on a lu. L'auteur doit avoir lu le mot, ou une forme de sa chaîne, pas la chose qu'il désigne aujourd'hui. Un auteur qui lit une forme voisine absente de la chaîne (servus pour servitude, sapiens pour sagesse) n'entre pas : note-le au `corpus` et, si un autre mot a cette forme dans sa chaîne, garde la piste pour lui.",
     '3. Trouve le passage dans un texte original en ligne, du domaine public (Wikisource en latin, en grec, en hébreu ; thelatinlibrary.com ; archive.org), et lis-le tel quel : `npm run texte -- <adresse> --autour "<mot>"`. Jamais un outil qui résume la page pour une citation.',
     "4. Écris la lecture dans `tradition.lectures` : la citation copiée de la page, mot pour mot, `[…]` pour une coupe ; le texte, ce que le passage dit du mot, en une ou deux phrases, sans commencer par le nom de l'auteur, sans répéter l'hypothèse, sans rien ajouter à la citation.",
     "   Le texte peut nommer le mot que l'auteur lit, tel que sa citation l'écrit (l'app le met en italique).",
-    "5. L'œuvre et son auteur doivent avoir leur fiche (`npm run bnf`, docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.",
-    "6. `npm run verifier:en-ligne -- <mot>`, puis `npm run valider`. Une citation introuvable est une erreur : corrige-la, ou retire la lecture.",
+    "5. L'œuvre et son auteur doivent avoir leur fiche : s'ils n'en ont pas (`npm run rediger -- atelier/<id>/fiche.json --essai` les dit « à créer »), ajoute-les à `atelier/references.json` (docs/consignes/references.md) : l'auteur avec ses `traditions`, l'œuvre avec l'adresse de son `texte`.",
+    "6. Relis chaque citation dans sa page (`npm run texte -- <adresse> --autour \"<mot>\"`) : elle y figure mot pour mot. `npm run verifier:en-ligne` la vérifiera à la clôture du lot, sur la fiche écrite : une citation introuvable y est une erreur.",
     "",
     "## Le corpus de réflexe",
     "",
@@ -472,15 +484,15 @@ export function genererConsigneLectures(): string {
     "- Une seule voix par lecture. Elle se déduit de l'œuvre citée : son auteur, ou l'œuvre elle-même pour l'Écriture. `auteur` ne s'écrit que pour une parole rapportée par l'œuvre d'un autre (Rabban Gamliel dans la Michna).",
     "- `tradition` seulement si la voix parle dans plusieurs traditions ; `hypothese` quand la lecture repose sur l'une des alternatives de la chaîne.",
     "- Le Nom divin s'écrit comme le texte l'écrit, jamais traduit (« Dieu ») ni vocalisé (« Jéhovah », « Yahvé ») ; une citation garde le texte tel quel. Dans le texte d'une lecture, « le Seigneur » est admis : c'est le substitut traditionnel, juif et chrétien, qui évite de prononcer le Nom, non une traduction.",
-    "- Rien trouvé dans un texte en ligne : pas de lecture ; note la piste dans les signalements.",
-    '- Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et note-le dans les signalements ; une tradition de trop se retire à la relecture plus aisément qu\'une tradition manquante ne s\'ajoute après coup.',
+    "- Rien trouvé dans un texte en ligne : pas de lecture ; note la piste dans `atelier/signalements.md`.",
+    '- Une voix qui parle dans une tradition absente de la liste : ajoute la tradition (`npm run liste -- traditions "<tradition>"`) et note-le dans `atelier/signalements.md` ; une tradition de trop se retire à la relecture plus aisément qu\'une tradition manquante ne s\'ajoute après coup.',
     "",
     "## Format",
     "",
     ...contrat(schemaLectureTraditionnelle, "###"),
     "## Exemples",
     "",
-    "Lectures du dépôt (Lactance sur *religion* ; Rabban Gamliel, parole rapportée par la Michna, sur *Pâque*) :",
+    "Lectures du dépôt, telles qu'on les écrit dans `fiche.json` (Lactance sur *religion* ; Rabban Gamliel, parole rapportée par la Michna, sur *Pâque*) :",
     "",
     "```json",
     JSON.stringify(lecturesDe("religion", 0)),
