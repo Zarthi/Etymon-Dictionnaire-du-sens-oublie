@@ -1,0 +1,52 @@
+mot: argument
+nature: [ nom masculin ]
+etymologie:
+  - forme: argumentum
+    langue: latin
+    sens: ce qui rend une chose claire, preuve
+  - forme: arguere
+    langue: latin
+    sens: rendre clair, montrer, prouver
+explication: >-
+  Argumentum nommait en particulier la preuve qui s'appuie sur les faits, et
+  arguere voulait dire aussi accuser. En français, argument nomme un
+  raisonnement qui prouve ou réfute (après 1170), puis le sujet d'une œuvre
+  (avant 1544) ; il se dit aujourd'hui de ce qu'on avance pour convaincre.
+famille: [ arguer, argumenter, argumentation ]
+themes: [ parole, esprit ]
+tradition:
+  lectures:
+    - texte: "L'argument tient son nom de ce qu'il est une trouvaille subtile : il ne
+        prouve ni par des témoins ni par des écrits, mais trouve la vérité par
+        la seule recherche."
+      citation: Argumentum numquam testibus, numquam tabulis dat probationem, sed sola
+        investigatione invenit veritatem; unde et dictum argumentum, id est
+        argutum inventum.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII, 15, 5
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+    - texte: "Argument se dit de deux façons : toute raison qui fait croire une chose
+        douteuse, ou un signe sensible qu'on avance pour manifester une vérité."
+      citation: argumentum dupliciter dicitur. Quandoque dicitur argumentum quaecumque
+        ratio rei dubiae faciens fidem. Quandoque autem dicitur argumentum
+        aliquod sensibile signum quod inducitur ad alicuius veritatis
+        manifestationem
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIIa, q. 55, a. 5, co.
+          url: https://www.corpusthomisticum.org/sth4053.html
+sources:
+  - ouvrage: littre
+    entree: argument
+  - ouvrage: tlfi
+    entree: argument
+  - ouvrage: lewis-short
+    entree: argumentum
+  - ouvrage: lewis-short
+    entree: arguo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

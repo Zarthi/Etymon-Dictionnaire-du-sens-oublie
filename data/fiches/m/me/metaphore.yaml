@@ -1,0 +1,45 @@
+mot: métaphore
+nature: [ nom féminin ]
+etymologie:
+  - forme: metaphora
+    langue: latin
+  - forme: μεταφορά
+    langue: grec ancien
+    sens: transport
+explication: >-
+  En grec, μεταφορά se disait du transport, d'où le changement ; chez Isocrate
+  et Aristote, il dit déjà le passage d'un mot du sens propre au sens figuré. Le
+  français l'a reçu vers 1275 comme terme de rhétorique, sans le sens concret de
+  transport.
+famille: [ métaphorique, métaphoriquement ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: La metaphora est le transfert d'un mot pris ailleurs. Ces tours couvrent
+        d'un vêtement figuré ce qu'il faut comprendre, pour exercer l'esprit du
+        lecteur, et pour que, laissé nu et à portée de main, il ne perde pas son
+        prix.
+      citation: Metaphora est verbi alicuius usurpata translatio […] Sed hac atque
+        aliae tropicae locutiones ad ea, quae intellegenda sunt, propterea
+        figuratis amictibus obteguntur, ut sensus legentis exerceant, et ne nuda
+        atque in promptu vilescant.
+      sources:
+        - ouvrage: etymologies
+          entree: I, 37, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: métaphore
+  - ouvrage: tlfi
+    entree: métaphore
+  - ouvrage: lewis-short
+    entree: metaphora
+  - ouvrage: bailly
+    entree: μεταφορά
+  - ouvrage: bailly
+    entree: μεταφέρω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

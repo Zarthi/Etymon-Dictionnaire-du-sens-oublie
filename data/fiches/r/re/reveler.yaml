@@ -1,0 +1,34 @@
+mot: révéler
+nature: [ verbe ]
+etymologie:
+  - forme: revelare
+    langue: latin
+    sens: dévoiler, découvrir, mettre à nu
+    elements:
+      - forme: re-
+        sens: marque le passage à l'état contraire
+      - forme: velare
+        sens: couvrir, voiler
+explication: >-
+  Au propre, revelare se disait de la tête ou du visage qu'on découvre. Le
+  français a reçu le mot au figuré : communiquer une connaissance d'ordre divin
+  (première moitié du XIIe siècle), puis faire connaître ce qui était secret
+  (1160-1174) ; la photographie lui donne en 1895 un sens concret.
+famille: [ révélation, révélateur, voile, voiler ]
+themes: [ savoir, religion ]
+sources:
+  - ouvrage: littre
+    entree: révéler
+  - ouvrage: tlfi
+    entree: révéler
+  - ouvrage: lewis-short
+    entree: revelo
+  - ouvrage: lewis-short
+    entree: velo
+  - ouvrage: lewis-short
+    entree: re
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

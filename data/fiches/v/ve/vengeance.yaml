@@ -1,0 +1,41 @@
+mot: vengeance
+nature: [ nom féminin ]
+etymologie:
+  - forme: venger
+    langue: français
+  - forme: vindicare
+    langue: latin
+    sens: revendiquer en justice
+explication: >-
+  Vindicare, c'était réclamer en justice son bien ou la liberté d'un homme, d'où
+  venger et punir. Vengeance, déjà dans la Chanson de Roland, nomme le mal
+  infligé en retour à l'offenseur et le désir de le rendre ; l'idée d'un droit
+  qu'on fait reconnaître s'est perdue.
+famille: [ venger, vengeur, vendetta ]
+themes: [ morale, émotions ]
+tradition:
+  lectures:
+    - texte: Ulcisci se dit de l'injure déjà faite, que l'on venge ; vindicare, de
+        celle qu'on empêche de se faire.
+      citation: Inter Ulcisci et vindicare. Ulciscimur injuriam factam; vindicamus, ne
+        fiat.
+      sources:
+        - ouvrage: differences
+          entree: I, 580
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: vengeance
+  - ouvrage: tlfi
+    entree: venger
+  - ouvrage: littre
+    entree: venger
+  - ouvrage: lewis-short
+    entree: vindico
+  - ouvrage: lewis-short
+    entree: vindex
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

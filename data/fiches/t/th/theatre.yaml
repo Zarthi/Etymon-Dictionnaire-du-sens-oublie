@@ -1,0 +1,42 @@
+mot: théâtre
+nature: [ nom masculin ]
+etymologie:
+  - forme: theatrum
+    langue: latin
+  - forme: θέατρον
+    langue: grec ancien
+    sens: lieu où l'on assiste à un spectacle
+  - forme: θεάομαι
+    langue: grec ancien
+    sens: regarder, contempler
+explication: >-
+  Le mot grec nommait le lieu des spectateurs, et les spectateurs eux-mêmes. En
+  français, théâtre nomme l'édifice dès 1213, puis la scène où jouent les
+  acteurs (1542), l'art du dramaturge et celui du comédien (1657) : le mot est
+  passé de ceux qui regardent à ce qu'on leur montre.
+famille: [ théâtral, théâtralement ]
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: "Le théâtre tient son nom du spectacle, de la contemplation : le peuple
+        s'y tenait debout, en haut, et regardait les jeux en les contemplant."
+      citation: Theatrum autem ab spectaculo nominatum, APO TES THEORIAS, quod in eo
+        populus stans desuper atque spectans ludos contemplaretur.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII, 42, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: littre
+    entree: théâtre
+  - ouvrage: tlfi
+    entree: théâtre
+  - ouvrage: lewis-short
+    entree: theatrum
+  - ouvrage: bailly
+    entree: θέατρον
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

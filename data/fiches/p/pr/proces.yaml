@@ -1,0 +1,27 @@
+mot: procès
+nature: [ nom masculin ]
+etymologie:
+  - forme: processus
+    langue: latin médiéval
+  - forme: processus
+    langue: latin
+    sens: action de s'avancer, progrès
+explication: >-
+  Procès a d'abord voulu dire développement, marche (1250) ; le latin des
+  juristes médiévaux lui a donné le sens d'affaire poursuivie en justice,
+  attesté en 1324. Il désigne aujourd'hui le litige porté devant un tribunal ;
+  le sens de marche a vieilli.
+famille: [ procéder, processus, procès-verbal, processif ]
+themes: [ droit ]
+sources:
+  - ouvrage: littre
+    entree: procès
+  - ouvrage: tlfi
+    entree: procès
+  - ouvrage: lewis-short
+    entree: processus2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

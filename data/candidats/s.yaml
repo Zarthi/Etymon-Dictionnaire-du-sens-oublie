@@ -7,7 +7,6 @@
 - { mot: saint, statut: a-faire }
 - { mot: salaire, statut: a-faire }
 - { mot: salut, statut: a-faire }
-- { mot: sanction, statut: a-faire }
 - { mot: sanctuaire, statut: a-faire }
 - { mot: santé, statut: a-faire }
 - { mot: sapience, statut: a-faire }
@@ -51,7 +50,6 @@
 - { mot: stoïque, statut: a-faire }
 - { mot: stupeur, statut: a-faire }
 - { mot: stupide, statut: a-faire }
-- { mot: style, statut: a-faire }
 - { mot: subir, statut: a-faire }
 - { mot: substance, statut: a-faire }
 - { mot: subtil, statut: a-faire }
@@ -65,6 +63,5 @@
 - { mot: supplier, statut: a-faire }
 - { mot: sûr, statut: a-faire }
 - { mot: surprise, statut: a-faire }
-- { mot: symbole, statut: a-faire }
 - { mot: sympathie, statut: a-faire }
 - { mot: système, statut: a-faire }

@@ -1,0 +1,41 @@
+mot: arbitre
+nature: [ nom masculin ]
+etymologie:
+  - forme: arbiter
+    langue: latin
+    sens: témoin, spectateur
+    elements:
+      - forme: ar-
+        sens: vers (forme de ad)
+      - forme: bito
+        sens: aller
+explication: >-
+  Arbiter, le témoin, est devenu en droit celui dont la décision tranche un
+  différend. En français, le mot nomme dès 1213 la personne désignée pour régler
+  un litige, puis le maître d'une chose (1654) et, depuis 1902, celui qui veille
+  à la régularité d'une épreuve sportive.
+famille: [ arbitrer, arbitrage, arbitral ]
+renvois: [ juge ]
+themes: [ droit, société ]
+tradition:
+  lectures:
+    - texte: L'arbiter tient sa charge d'une volonté, le judex, de la loi.
+      citation: Inter Arbitrum et judicem. Arbiter ex voluntate fit, judex ex lege.
+      sources:
+        - ouvrage: differences
+          entree: I, 33
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: arbitre
+  - ouvrage: lewis-short
+    entree: arbiter
+  - ouvrage: lewis-short
+    entree: arbitrium
+  - ouvrage: tlfi
+    entree: arbitre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

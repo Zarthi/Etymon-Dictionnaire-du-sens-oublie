@@ -1,0 +1,24 @@
+mot: défendre
+nature: [ verbe ]
+etymologie:
+  - forme: defendere
+    langue: latin
+    sens: repousser, écarter
+explication: >-
+  Dès la Chanson de Roland, vers 1100, défendre veut dire à la fois protéger
+  quelqu'un, tenir un lieu contre l'ennemi et interdire de faire. Prendre la
+  défense d'un accusé en jugement n'est attesté qu'en 1559.
+famille: [ défense, défenseur, défendeur, offense, manifeste ]
+themes: [ droit, guerre ]
+sources:
+  - ouvrage: littre
+    entree: défendre
+  - ouvrage: lewis-short
+    entree: defendo
+  - ouvrage: tlfi
+    entree: défendre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

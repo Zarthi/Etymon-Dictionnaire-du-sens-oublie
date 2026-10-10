@@ -1,0 +1,33 @@
+mot: traduire
+nature: [ verbe ]
+etymologie:
+  - forme: traducere
+    langue: latin humaniste
+    sens: faire passer d'une langue dans une autre
+  - forme: traducere
+    langue: latin
+    sens: conduire au-delà, faire passer
+    elements:
+      - forme: tra-
+        sens: au-delà de
+      - forme: ducere
+        sens: conduire, mener
+explication: >-
+  En latin, traducere disait le passage d'un lieu à un autre, celui d'une armée
+  par exemple ; Bruni l'appliqua vers 1400 au passage d'une langue à une autre.
+  Le français a pris les deux sens : citer en justice (1480), traduire un livre
+  (1520), où il a remplacé translater.
+famille: [ traduction, traducteur, intraduisible ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: traduire
+  - ouvrage: tlfi
+    entree: traduire
+  - ouvrage: lewis-short
+    entree: traduco
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

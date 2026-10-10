@@ -1,0 +1,43 @@
+mot: juge
+nature: [ nom masculin ]
+etymologie:
+  - forme: judex
+    langue: latin
+    sens: juge, arbitre
+    elements:
+      - forme: jus
+        sens: droit
+      - forme: dicere
+        sens: dire
+explication: >-
+  Juge a nommé dès le XIIe siècle celui qui tranche un différend et celui qui
+  applique les lois. Depuis 1564, il se dit aussi de quiconque est capable
+  d'apprécier une chose, sans avoir à dire le droit.
+famille: [ juger, jugement, judiciaire ]
+themes: [ droit ]
+tradition:
+  lectures:
+    - texte: "Le juge est nommé comme celui qui dit le droit au peuple, ou qui tranche
+        selon le droit, c'est-à-dire qui juge justement : il n'est pas juge s'il
+        n'y a pas en lui de justice."
+      citation: "Iudex dictus quasi ius dicens populo, sive quod iure disceptet. Iure
+        autem disceptare est iuste iudicare: non est autem iudex si non est in
+        eo iustitia."
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII, 15, 6
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: littre
+    entree: juge
+  - ouvrage: tlfi
+    entree: juge
+  - ouvrage: lewis-short
+    entree: judex
+  - ouvrage: lewis-short
+    entree: jus2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

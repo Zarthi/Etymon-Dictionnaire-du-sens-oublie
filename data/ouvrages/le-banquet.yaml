@@ -1,0 +1,17 @@
+titre: Le Banquet
+titreOriginal: Συμπόσιον
+auteur: platon
+date: 375 av. J.-C.
+licence: domaine public
+texte: https://el.wikisource.org/wiki/Συμπόσιον_(Πλάτων)
+description: >-
+  Dialogue de Platon sur l'amour ; Diotime y montre que toute production est
+  ποίησις, mais que la poésie seule en a pris le nom.
+sources:
+  - ouvrage: bnf
+    entree: cb120082645
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

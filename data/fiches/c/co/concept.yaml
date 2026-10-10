@@ -1,0 +1,27 @@
+mot: concept
+nature: [ nom masculin ]
+etymologie:
+  - forme: conceptus
+    langue: latin
+    sens: action de recueillir, de recevoir
+explication: >-
+  Conceptus se disait de l'eau qu'on recueille, de l'enfant que la mère conçoit,
+  et, au figuré, de ce que l'esprit conçoit. Concept a dit en français la
+  représentation qu'on se fait des choses (1404), et la conception de l'enfant ;
+  il nomme aujourd'hui une représentation abstraite et générale.
+famille: [ conception, conceptuel, concevoir ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: littre
+    entree: concept
+  - ouvrage: tlfi
+    entree: concept
+  - ouvrage: lewis-short
+    entree: conceptus2
+  - ouvrage: lewis-short
+    entree: concipio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

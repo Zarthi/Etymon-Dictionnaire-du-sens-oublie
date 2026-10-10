@@ -1,0 +1,26 @@
+mot: texte
+nature: [ nom masculin ]
+etymologie:
+  - forme: textus
+    langue: latin
+    sens: tissu, trame
+explication: >-
+  Le latin textus est passé du tissu à l'enchaînement d'un récit, puis au récit
+  et, dans la liturgie, à l'évangile. En français, texte nomme d'abord le volume
+  des évangiles, puis le passage authentique d'un livre saint, opposé à la glose
+  (vers 1220) ; aujourd'hui, tout écrit.
+famille: [ textuel, contexte, textile, texture ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: texte
+  - ouvrage: tlfi
+    entree: texte
+  - ouvrage: lewis-short
+    entree: textus
+    url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=textus2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

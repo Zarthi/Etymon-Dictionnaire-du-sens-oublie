@@ -1,0 +1,30 @@
+mot: roman
+nature: [ adjectif ]
+etymologie:
+  - forme: romanz
+    langue: ancien français
+    sens: langue vulgaire
+  - forme: romanice
+    langue: latin médiéval
+    sens: en langue vulgaire, non en latin
+  - forme: romanus
+    langue: latin
+    sens: romain ; gallo-romain, dans la loi salique
+explication: >-
+  Romanz nommait d'abord la langue parlée, opposée au latin (vers 1125), puis,
+  dès 1155, un long récit écrit dans cette langue, en vers avant la prose. Le
+  mot désigne aujourd'hui une œuvre en prose d'une certaine longueur, qui mêle
+  le réel et l'imaginaire.
+famille: [ romancier, romanesque, romance, romantique ]
+renvois: [ recit ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: roman
+  - ouvrage: tlfi
+    entree: roman
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

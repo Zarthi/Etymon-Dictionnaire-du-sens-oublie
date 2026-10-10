@@ -1,0 +1,34 @@
+mot: convaincre
+nature: [ verbe ]
+etymologie:
+  - forme: convincere
+    langue: latin
+    sens: prouver la culpabilité de, réfuter
+    elements:
+      - forme: con-
+        sens: marque l'achèvement de l'acte
+      - forme: vincere
+        sens: vaincre
+explication: >-
+  Convincere, c'était venir à bout d'un adversaire en prouvant sa faute ou son
+  erreur. Convaincre a d'abord dit en français amener quelqu'un à reconnaître
+  qu'il est coupable (vers 1174), puis, en 1657, l'amener à reconnaître une
+  chose pour vraie ; on convainc encore quelqu'un d'un crime.
+famille: [ conviction, convaincant, vaincre ]
+themes: [ parole, esprit ]
+sources:
+  - ouvrage: littre
+    entree: convaincre
+  - ouvrage: tlfi
+    entree: convaincre
+  - ouvrage: lewis-short
+    entree: convinco
+  - ouvrage: lewis-short
+    entree: cum
+  - ouvrage: lewis-short
+    entree: vinco
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

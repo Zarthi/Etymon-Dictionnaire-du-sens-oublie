@@ -1,0 +1,45 @@
+mot: interpréter
+nature: [ verbe ]
+etymologie:
+  - forme: interpretari
+    langue: latin
+    sens: expliquer, éclaircir ; traduire
+  - forme: interpres
+    langue: latin
+    sens: agent entre deux parties, intermédiaire
+explication: >-
+  Interpres nommait l'intermédiaire qui négocie entre deux parties, et aussi
+  celui qui explique ou traduit. Interpréter n'a reçu que ce second sens :
+  expliquer ce qui est obscur (1155), traduire (vers 1434), donner à une chose
+  un sens (1538) ; puis jouer un rôle ou exécuter une œuvre (1844).
+famille: [ interprète, interprétation, interprétable ]
+themes: [ parole, esprit ]
+tradition:
+  lectures:
+    - texte: L'interprète est nommé de ce qu'il se tient au milieu, entre deux
+        langues, quand il traduit ; on appelle aussi interprète celui qui
+        interprète Dieu auprès des hommes, à qui il fait connaître les mystères
+        divins.
+      citation: Interpres, quod inter partes medius sit duarum linguarum, dum
+        transferet. Sed et qui Deum […] interpretatur et hominum quibus divina
+        indicat mysteria, interpres vocatur
+      sources:
+        - ouvrage: etymologies
+          entree: X, 123
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: interpréter
+  - ouvrage: tlfi
+    entree: interpréter
+  - ouvrage: tlfi
+    entree: interprète
+  - ouvrage: lewis-short
+    entree: interpres
+  - ouvrage: lewis-short
+    entree: interpretor
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

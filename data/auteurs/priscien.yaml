@@ -1,0 +1,13 @@
+nom: Priscien
+nomComplet: Priscianus
+description: >-
+  Grammairien latin chrétien, né à Césarée de Maurétanie, qui vécut à
+  Constantinople.
+sources:
+  - ouvrage: bnf
+    entree: cb12046697k
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

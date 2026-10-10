@@ -1,0 +1,41 @@
+mot: clémence
+nature: [ nom féminin ]
+etymologie:
+  - forme: clementia
+    langue: latin
+    sens: indulgence, douceur
+  - forme: clemens
+    langue: latin
+    sens: calme, doux, en parlant de l'air ou du temps
+explication: >-
+  Clemens a passé du temps calme à l'esprit paisible, sans emportement ;
+  clementia a nommé l'indulgence envers les fautes d'autrui, et chez les auteurs
+  chrétiens celle de Dieu. Le français a reçu le mot pour l'indulgence (881) ;
+  la clémence du temps n'y paraît qu'en 1893.
+famille: [ clément ]
+renvois: [ misericorde ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: Le clément, c'est le miséricordieux, nommé de ce qu'il protège et défend
+        (cluat), comme le patron son client.
+      citation: Clemens, misericors, ab eo quod cluat, id est protegat et tueatur,
+        sicut solet patronus clientem.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 36
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: clémence
+  - ouvrage: tlfi
+    entree: clémence
+  - ouvrage: lewis-short
+    entree: clementia
+  - ouvrage: lewis-short
+    entree: clemens1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

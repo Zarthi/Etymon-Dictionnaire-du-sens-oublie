@@ -1,0 +1,38 @@
+mot: style
+nature: [ nom masculin ]
+etymologie:
+  - forme: stilus
+    langue: latin
+    sens: tige pointue ; poinçon pour écrire
+    croisement:
+      - forme: στῦλος
+        langue: grec ancien
+        sens: colonne
+explication: >-
+  Le stilus était le poinçon dont on écrivait sur la cire ; en latin impérial,
+  le mot désignait déjà la manière d'écrire. En français, la manière d'agir
+  (vers 1290) et celle de parler (vers 1393) précèdent celle d'écrire (1536) ;
+  le poinçon lui-même n'est nommé qu'à la fin du XIVe siècle.
+ecartees:
+  - forme: στῦλος
+    langue: grec ancien
+    sens: colonne, pointe, poinçon
+    selon: [ emile-littre ]
+    raison: Le Lewis & Short refuse tout lien de stilus avec στῦλος ; le TLFi ne lui
+      attribue que la graphie en y.
+famille: [ styler, stylet, stylistique ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: style
+  - ouvrage: tlfi
+    entree: style
+  - ouvrage: lewis-short
+    entree: stilus
+  - ouvrage: bailly
+    entree: στῦλος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

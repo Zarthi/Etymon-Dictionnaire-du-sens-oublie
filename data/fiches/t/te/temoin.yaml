@@ -1,0 +1,43 @@
+mot: témoin
+nature: [ nom masculin ]
+etymologie:
+  - forme: testimonium
+    langue: latin
+    sens: témoignage, déposition, preuve
+    premier: true
+  - forme: testis
+    langue: latin
+    sens: celui qui atteste
+explication: >-
+  Testimonium a désigné la personne à basse époque. En français, témoin a
+  d'abord dit la preuve, le document (vers 1165), puis celui qui a vu et peut
+  certifier (1176) ; le sens de chose reste dans le témoin d'une expérience et
+  le bâton du relais.
+famille: [ témoigner, témoignage, attester, tester ]
+themes: [ droit, société ]
+tradition:
+  lectures:
+    - texte: Les testes se nommaient autrefois superstites, parce qu'on les produisait
+        sur l'état de la cause ; une partie du nom ôtée, on les dit testes.
+      citation: Testes antiquitus superstites dicebantur, eo quod super statum causae
+        proferebantur. Nunc parte ablata nominis, testes vocari.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII, 15, 8
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: littre
+    entree: témoin
+  - ouvrage: littre
+    entree: tester
+  - ouvrage: tlfi
+    entree: témoin
+  - ouvrage: lewis-short
+    entree: testimonium
+  - ouvrage: lewis-short
+    entree: testis1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

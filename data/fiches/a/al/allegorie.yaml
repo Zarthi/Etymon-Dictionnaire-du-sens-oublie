@@ -1,0 +1,50 @@
+mot: allégorie
+nature: [ nom féminin ]
+etymologie:
+  - forme: allegoria
+    langue: latin
+  - forme: ἀλληγορία
+    langue: grec ancien
+    sens: langage qui dit autre chose que ce qu'il paraît dire
+    elements:
+      - forme: ἄλλος
+        sens: autre
+      - forme: ἀγορεύω
+        sens: parler en public, dire
+explication: >-
+  Le mot a d'abord désigné, vers 1119, un discours figuré qui cache un sens sous
+  le sens littéral, souvent pour interpréter la Bible. Étendu en 1694 aux
+  tableaux et bas-reliefs qui figurent une idée par des personnages, il désigne
+  aujourd'hui la représentation d'une idée par une image ou un récit.
+famille: [ allégorique, allégoriquement, agora ]
+renvois: [ metaphore, symbole ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: "L'allegoria est un alieniloquium, un parler autre : elle sonne d'une
+        façon et s'entend d'une autre."
+      citation: Allegoria est alieniloquium. […] Aliud enim sonat, et aliud intellegitur
+      sources:
+        - ouvrage: etymologies
+          entree: I, 37, 22
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: allégorie
+  - ouvrage: tlfi
+    entree: allégorie
+  - ouvrage: lewis-short
+    entree: allegoria
+  - ouvrage: bailly
+    entree: ἀλληγορία
+  - ouvrage: bailly
+    entree: ἀλληγορέω-ῶ
+  - ouvrage: bailly
+    entree: ἄλλος
+  - ouvrage: bailly
+    entree: ἀγορεύω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

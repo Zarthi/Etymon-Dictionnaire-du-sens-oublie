@@ -1,0 +1,26 @@
+mot: tort
+nature: [ nom masculin ]
+etymologie:
+  - forme: tortum
+    langue: latin populaire
+    sens: ce qui est tordu
+explication: >-
+  Tortum a pris en latin populaire le sens d'action contraire au droit ; dès la
+  fin du Xe siècle, à tort veut dire contre le droit. On n'entend plus la
+  torsion dans le mot, qui nomme aujourd'hui la position de qui n'a pas raison,
+  l'action blâmable et le préjudice causé à autrui.
+famille: [ tordre, tortiller ]
+renvois: [ faute ]
+themes: [ morale, droit ]
+sources:
+  - ouvrage: littre
+    entree: tort
+  - ouvrage: tlfi
+    entree: tort
+  - ouvrage: lewis-short
+    entree: tortum
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

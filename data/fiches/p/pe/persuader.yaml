@@ -1,0 +1,33 @@
+mot: persuader
+nature: [ verbe ]
+etymologie:
+  - forme: persuadere
+    langue: latin
+    sens: amener à son avis en parlant, décider à faire
+    elements:
+      - forme: per-
+        sens: préfixe à valeur intensive
+      - forme: suadere
+        sens: conseiller
+explication: >-
+  Persuader a dit en français, en 1370-1372, conseiller, amener à croire ou à
+  vouloir. Le mot ne dit plus le conseil, mais ce qu'il obtient : amener
+  quelqu'un à être convaincu, par le raisonnement ou par les sentiments, ou à
+  faire une chose.
+famille: [ dissuader, suasion, suasoire ]
+renvois: [ convaincre ]
+themes: [ parole, esprit ]
+sources:
+  - ouvrage: littre
+    entree: persuader
+  - ouvrage: tlfi
+    entree: persuader
+  - ouvrage: lewis-short
+    entree: persuadeo
+  - ouvrage: lewis-short
+    entree: suadeo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

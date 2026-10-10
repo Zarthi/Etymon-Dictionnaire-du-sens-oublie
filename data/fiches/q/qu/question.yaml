@@ -1,0 +1,35 @@
+mot: question
+nature: [ nom féminin ]
+etymologie:
+  - forme: quaestio
+    langue: latin
+    sens: recherche
+explication: >-
+  Quaestio, la recherche, a pris dans la langue du droit le sens d'enquête,
+  d'interrogatoire, et d'enquête par la torture. En français, question nomme un
+  point à examiner (1119), puis une demande adressée à quelqu'un (vers 1160) :
+  le mot ne dit plus la recherche, mais ce qu'on cherche à savoir.
+famille: [ questionner, questionnaire, quérir ]
+themes: [ parole, savoir ]
+tradition:
+  lectures:
+    - texte: Quaerere, c'est donner sa peine pour qu'une chose soit recouvrée ; de
+        quaerere vient quaestio, et de là quaestor.
+      citation: ipsum quaerere ab eo quod quae res ut reciperetur datur opera; a
+        quaerendo quaestio, ab his tum quaestor.
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: VI, 79
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+sources:
+  - ouvrage: littre
+    entree: question
+  - ouvrage: tlfi
+    entree: question
+  - ouvrage: lewis-short
+    entree: quaestio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,16 @@
+nom: Leonardo Bruni
+naissance: "1370"
+mort: "1444"
+description: >-
+  Humaniste italien, qui écrivit en latin et en italien ; selon le TLFi, il
+  donna vers 1400 au latin traducere le sens de faire passer d'une langue dans
+  une autre.
+cite: [ Bruni ]
+sources:
+  - ouvrage: bnf
+    entree: cb120276366
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

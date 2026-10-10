@@ -1,0 +1,45 @@
+mot: juste
+nature: [ adjectif ]
+etymologie:
+  - forme: justus
+    langue: latin
+    sens: conforme au droit
+  - forme: jus
+    langue: latin
+    sens: droit, ce qui oblige
+explication: >-
+  Juste a dit dès le XIIe siècle ce qui est conforme à la justice, puis, en
+  1283, au droit. Il s'est appliqué ensuite à ce qui est ajusté : un vêtement
+  dans la seconde moitié du XIVe siècle, une mesure exacte en 1484, et, depuis
+  1625, ce qui suffit à peine.
+ecartees:
+  - forme: jussus
+    langue: latin
+    sens: ordonné, prescrit
+    raison: Littré la rapporte ; le Lewis & Short rattache justus à jus, et le TLFi
+      ne la retient pas.
+famille: [ justice, justement, justesse, justifier, justaucorps ]
+themes: [ morale, droit ]
+tradition:
+  lectures:
+    - texte: Le juste est nommé ainsi parce qu'il garde les droits et vit selon la
+        loi.
+      citation: Iustus dictus quia iura custodit et secundum legem vivit.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 124
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: juste
+  - ouvrage: tlfi
+    entree: juste
+  - ouvrage: lewis-short
+    entree: justus
+  - ouvrage: lewis-short
+    entree: jus2
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

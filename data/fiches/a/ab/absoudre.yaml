@@ -1,0 +1,31 @@
+mot: absoudre
+nature: [ verbe ]
+etymologie:
+  - forme: absolvere
+    langue: latin
+    sens: détacher, délier
+    elements:
+      - forme: ab
+        sens: marquant la séparation
+      - forme: solvere
+        sens: délier
+explication: >-
+  En latin, absolvere disait libérer d'une obligation ou d'une accusation, puis,
+  en latin chrétien, remettre les péchés. Absoudre garde la rémission des péchés
+  et l'acquittement ; délier quelqu'un d'un serment, d'une charge ou d'une dette
+  est vieilli au début du XXe siècle.
+famille: [ absolution, absoute, solution ]
+renvois: [ pardon ]
+themes: [ religion, droit ]
+sources:
+  - ouvrage: littre
+    entree: absoudre
+  - ouvrage: lewis-short
+    entree: absolvo
+  - ouvrage: tlfi
+    entree: absoudre
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

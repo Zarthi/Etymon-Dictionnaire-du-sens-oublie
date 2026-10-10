@@ -1,0 +1,47 @@
+mot: justice
+nature: [ nom féminin ]
+etymologie:
+  - forme: justitia
+    langue: latin
+    sens: conformité avec le droit, équité
+explication: >-
+  Justitia a pris en bas latin le sens de droit et de lois, en latin médiéval
+  celui de pouvoir judiciaire. Justice nomme en français, dès le XIe et le XIIe
+  siècle, le principe moral, la vertu de rendre à chacun son dû et l'institution
+  qui juge ; il a gardé les trois.
+famille: [ juste, justicier, justiciable ]
+themes: [ droit, morale ]
+tradition:
+  lectures:
+    - texte: "Une affaire est cause quand on la propose, jugement quand on la discute,
+        justice quand elle est terminée : le jugement se nomme comme l'action de
+        dire le droit, la justice comme l'état du droit."
+      citation: quae dum praeponitur causa est, dum discutitur iudicium est, dum
+        finitur, iustitia. Vocatum autem iudicium quasi iurisdictio, et iustitia
+        quasi iuris status.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII, 15, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+    - texte: La justice est, parmi les vertus, celle qui ordonne l'homme envers
+        autrui ; son nom même dit une égalité, car on dit couramment des choses
+        mises à égalité qu'elles sont ajustées (iustari).
+      citation: iustitiae proprium est inter alias virtutes ut ordinet hominem in his
+        quae sunt ad alterum. Importat enim aequalitatem quandam, ut ipsum nomen
+        demonstrat, dicuntur enim vulgariter ea quae adaequantur iustari.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae, q. 57, a. 1, co.
+          url: https://www.corpusthomisticum.org/sth3057.html
+sources:
+  - ouvrage: littre
+    entree: justice
+  - ouvrage: tlfi
+    entree: justice
+  - ouvrage: lewis-short
+    entree: justitia
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

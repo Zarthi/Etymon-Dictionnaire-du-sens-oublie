@@ -1,0 +1,39 @@
+mot: pardon
+nature: [ nom masculin ]
+etymologie:
+  - forme: pardonner
+    langue: français
+  - forme: perdonare
+    langue: bas latin
+    sens: donner complètement, remettre
+    elements:
+      - forme: per-
+        sens: complètement
+      - forme: donare
+        sens: donner ; remettre une dette, une peine
+explication: >-
+  Dès la fin du Xe siècle, pardonner disait à la fois laisser la vie à un
+  condamné et remettre la peine d'un péché. Le pardon, attesté en 1130-1140,
+  tient aujourd'hui une offense pour non avenue ; il sert aussi, depuis le XVIe
+  siècle, à s'excuser.
+famille: [ pardonner, pardonnable ]
+renvois: [ grace, clemence ]
+themes: [ morale, religion ]
+sources:
+  - ouvrage: littre
+    entree: pardon
+  - ouvrage: tlfi
+    entree: pardon
+  - ouvrage: littre
+    entree: pardonner
+  - ouvrage: tlfi
+    entree: pardonner
+  - ouvrage: lewis-short
+    entree: dono
+  - ouvrage: lewis-short
+    entree: per1
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

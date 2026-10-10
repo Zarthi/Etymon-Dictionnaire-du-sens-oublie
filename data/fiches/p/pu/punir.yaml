@@ -1,0 +1,30 @@
+mot: punir
+nature: [ verbe ]
+etymologie:
+  - forme: punire
+    langue: latin
+  - forme: poena
+    langue: latin
+    sens: compensation, expiation, châtiment
+explication: >-
+  Poena nommait la compensation due pour un tort aussi bien que l'expiation et
+  le châtiment. Punir, attesté en 1260, ne retient que le châtiment : frapper
+  d'une peine celui qui a commis une faute.
+famille: [ punition, punissable, impuni ]
+themes: [ droit, morale ]
+tradition:
+  renvois: [ peine ]
+sources:
+  - ouvrage: littre
+    entree: punir
+  - ouvrage: tlfi
+    entree: punir
+  - ouvrage: lewis-short
+    entree: punio
+  - ouvrage: lewis-short
+    entree: poena
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

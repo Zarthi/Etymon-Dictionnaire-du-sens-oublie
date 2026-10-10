@@ -1,0 +1,28 @@
+mot: préjugé
+nature: [ nom masculin ]
+etymologie:
+  - forme: préjuger
+    langue: français
+  - forme: praejudicare
+    langue: latin
+    sens: juger d'avance
+explication: >-
+  Praejudicare se disait d'abord en justice. Préjugé a nommé en 1579 ce qui
+  détermine une opinion, puis, chez Montaigne, l'opinion reçue sans examen de
+  son milieu ou de son éducation ; le sens de précédent judiciaire est vieilli.
+famille: [ préjuger, juger, préjudice ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: préjugé
+  - ouvrage: littre
+    entree: préjuger
+  - ouvrage: tlfi
+    entree: préjuger
+  - ouvrage: lewis-short
+    entree: praejudico
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,47 @@
+mot: poème
+nature: [ nom masculin ]
+etymologie:
+  - forme: poema
+    langue: latin
+  - forme: ποίημα
+    langue: grec ancien
+    sens: ce que l'on fait, ouvrage
+explication: >-
+  En grec, ποίημα se disait d'un ouvrage de la main, meuble ou statue, comme
+  d'une création de l'esprit, et en particulier du poème. Le latin poema et le
+  français (1213) n'ont gardé que l'ouvrage de poésie ; depuis 1716, on parle
+  aussi de poème en prose.
+famille: [ poésie, poétique, poète ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: Quand les hommes eurent commencé à se connaître et à connaître leurs
+        dieux, ils célébrèrent leurs louanges en paroles plus relevées et en
+        nombres plus agréables ; parce que ce genre se fait selon une certaine
+        forme, appelée POIOTES, il fut nommé poema, et ceux qui le façonnent,
+        poetae.
+      citation: Cum primum homines exuta feritate rationem vitae habere coepissent,
+        seque ac deos suos nosse […] laudesque eorum et verbis inlustrioribus et
+        iucundioribus numeris extulerunt. Id genus quia forma quadam efficitur,
+        quae POIOTES dicitur, poema vocitatum est, eiusque fictores poetae.
+      auteur: suetone
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 7, 1-2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: poëme
+  - ouvrage: tlfi
+    entree: poème
+  - ouvrage: lewis-short
+    entree: poema
+  - ouvrage: bailly
+    entree: ποίημα
+  - ouvrage: bailly
+    entree: ποιέω-ῶ
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

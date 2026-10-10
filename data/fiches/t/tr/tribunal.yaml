@@ -1,0 +1,43 @@
+mot: tribunal
+nature: [ nom masculin ]
+etymologie:
+  - forme: tribunal
+    langue: latin
+    sens: estrade où siégeaient les magistrats
+    premier: true
+  - forme: tribunus
+    langue: latin
+    sens: chef de tribu
+explication: >-
+  Le français a reçu tribunal au XIIe siècle pour le siège où l'on rend la
+  justice, puis, en 1621, pour le corps des magistrats qui jugent. Le mot
+  désigne aujourd'hui une juridiction et la salle où elle siège, et, au figuré,
+  toute instance d'où vient un jugement.
+famille: [ tribune, tribun ]
+themes: [ droit ]
+tradition:
+  lectures:
+    - texte: "Le tribunal est nommé de ce que le prêtre y distribue (tribuantur) les
+        préceptes de vie : c'est un lieu élevé, d'où tous peuvent entendre ; ou
+        bien de la tribu, qu'on y convoque."
+      citation: Tribunal, eo quod inde a sacerdote tribuantur praecepta vivendi. Est
+        enim locus in sublimi constitutus, unde universi exaudire possint. Alias
+        tribunal a tribu denominatum, quod ad illud tribus convocetur.
+      sources:
+        - ouvrage: etymologies
+          entree: XV, 4, 16
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: littre
+    entree: tribunal
+  - ouvrage: tlfi
+    entree: tribunal
+  - ouvrage: lewis-short
+    entree: tribunal
+  - ouvrage: lewis-short
+    entree: tribunus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

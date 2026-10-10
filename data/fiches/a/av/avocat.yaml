@@ -1,0 +1,34 @@
+mot: avocat
+nature: [ nom masculin ]
+etymologie:
+  - forme: advocatus
+    langue: latin
+    sens: celui qui est appelé au secours
+    elements:
+      - forme: ad
+        sens: à
+      - forme: vocatus
+        sens: appelé
+explication: >-
+  Advocatus avait déjà donné avoué quand avocat a été refait sur lui, au XIIe
+  siècle. L'appel ne s'entend plus dans le mot : l'avocat est celui qui fait
+  profession de plaider, et quiconque intercède pour une personne ou défend une
+  cause.
+famille: [ avoué, avocasser, voix ]
+themes: [ droit, travail ]
+sources:
+  - ouvrage: littre
+    entree: avocat
+  - ouvrage: lewis-short
+    entree: advocatus2
+  - ouvrage: lewis-short
+    entree: advoco
+  - ouvrage: tlfi
+    entree: avocat
+  - ouvrage: tlfi
+    entree: avoué
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

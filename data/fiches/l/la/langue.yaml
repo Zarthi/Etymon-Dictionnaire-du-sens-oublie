@@ -1,0 +1,43 @@
+mot: langue
+nature: [ nom féminin ]
+etymologie:
+  - forme: lingua
+    langue: latin
+    sens: organe de la bouche ; langage d'un peuple
+explication: >-
+  Le latin lingua nommait déjà l'organe et le langage d'un peuple ; le français
+  a reçu les deux sens dès le Xe siècle. L'organe reste dans des expressions qui
+  disent la parole : mauvaises langues (1528), avoir la langue bien pendue
+  (1606), donner sa langue aux chats (1860).
+famille: [ langage, linguistique, bilingue ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: Les langues sont ainsi nommées, en ce sens, pour les paroles que fait la
+        langue, comme on dit la bouche pour les paroles et la main pour
+        l'écriture.
+      citation: Linguae autem dictae in hoc loco pro verbis quae per linguam fiunt […]
+        sicut os dici solet pro verbis, sicut manus pro litteris.
+      sources:
+        - ouvrage: etymologies
+          entree: IX, 1, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+    - texte: La langue tiendrait son nom de ce qu'elle lie la nourriture.
+      citation: Linguae a ligando cibo putat Varro nomen impositum.
+      auteur: varron
+      sources:
+        - ouvrage: etymologies
+          entree: XI, 1, 51
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: littre
+    entree: langue
+  - ouvrage: tlfi
+    entree: langue
+  - ouvrage: lewis-short
+    entree: lingua
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

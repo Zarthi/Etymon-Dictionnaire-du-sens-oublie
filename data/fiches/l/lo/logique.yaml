@@ -1,0 +1,50 @@
+mot: logique
+nature: [ nom féminin ]
+etymologie:
+  - forme: logica
+    langue: latin
+  - forme: λογική
+    langue: grec ancien
+    sens: la science du raisonnement
+  - forme: λόγος
+    langue: grec ancien
+    sens: parole ; raison
+explication: >-
+  Logique a nommé en français la science des lois du raisonnement (vers 1245),
+  puis la disposition à raisonner juste (1718) et l'enchaînement cohérent des
+  idées (1762). Des deux sens de λόγος, le mot a gardé la raison et laissé la
+  parole.
+famille: [ logicien, analogue, chronologie ]
+themes: [ savoir, esprit ]
+tradition:
+  lectures:
+    - texte: "La logique est dite rationnelle, du mot grec qui signifie à la fois la
+        parole et la raison. Les paroles divines relèvent elles aussi des trois
+        parties de la philosophie : de la logique, à la place de laquelle les
+        nôtres revendiquent la théorétique, relèvent le Cantique des cantiques
+        et les Évangiles."
+      citation: Dicta autem Logica, id est rationalis. LOGOS enim apud Graecos et
+        sermonem significat et rationem. […] In his quippe tribus generibus
+        Philosophiae etiam eloquia divina consistunt. […] aut de Logica, pro qua
+        nostri Theoreticam sibi vindicant, ut in Cantico canticorum, et
+        Evangeliis.
+      sources:
+        - ouvrage: etymologies
+          entree: II, 24, 7-8
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: littre
+    entree: logique
+  - ouvrage: tlfi
+    entree: logique
+  - ouvrage: lewis-short
+    entree: logica
+  - ouvrage: bailly
+    entree: λογικός
+  - ouvrage: bailly
+    entree: λόγος
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

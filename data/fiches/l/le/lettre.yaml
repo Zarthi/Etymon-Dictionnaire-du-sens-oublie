@@ -1,0 +1,36 @@
+mot: lettre
+nature: [ nom féminin ]
+etymologie:
+  - forme: littera
+    langue: latin
+    sens: signe d'écriture, lettre de l'alphabet
+explication: >-
+  Au pluriel, litterae disait aussi en latin la missive, l'écrit et la culture.
+  Le français a d'abord pris lettres pour le savoir que donnent les livres (Xe
+  siècle), puis la lettre pour le signe (1130-40), la missive et, du latin
+  chrétien, le sens littéral d'un texte (vers 1170).
+famille: [ lettré, littéral, littérature, allitération ]
+themes: [ parole, savoir ]
+tradition:
+  lectures:
+    - texte: Les litterae sont nommées comme des legiterae, parce qu'elles ouvrent un
+        chemin, iter, à ceux qui lisent, ou parce qu'elles se répètent,
+        iterentur, dans la lecture.
+      citation: Litterae autem dictae quasi legiterae, quod iter legentibus praestent,
+        vel quod in legendo iterentur.
+      sources:
+        - ouvrage: etymologies
+          entree: I, 3, 3
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: lettre
+  - ouvrage: tlfi
+    entree: lettre
+  - ouvrage: lewis-short
+    entree: littera
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

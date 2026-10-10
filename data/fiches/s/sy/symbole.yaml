@@ -1,0 +1,57 @@
+mot: symbole
+nature: [ nom masculin ]
+etymologie:
+  - forme: symbolum
+    langue: latin
+    sens: signe de reconnaissance ; profession de foi
+  - forme: σύμβολον
+    langue: grec ancien
+    sens: objet coupé en deux, dont les moitiés rapprochées faisaient reconnaître
+      leurs porteurs
+  - forme: συμβάλλω
+    langue: grec ancien
+    sens: jeter ensemble, réunir
+    elements:
+      - forme: σύν
+        sens: avec, ensemble
+      - forme: βάλλω
+        sens: lancer, jeter
+explication: >-
+  Le mot est entré en français, à la fin du XIVe siècle, pour nommer le
+  formulaire de la foi, que le latin chrétien appelait symbolum. Le sens de ce
+  qui représente une réalité abstraite ou absente date de 1541 ; il nomme aussi
+  aujourd'hui un signe de convention, en chimie ou en mathématiques.
+famille: [ symbolique, symboliser, symbolisme ]
+themes: [ parole, religion ]
+tradition:
+  lectures:
+    - texte: "Symbolum se traduit du grec par signe ou connaissance : sur le point de
+        partir annoncer l'Évangile aux nations, les Apôtres se donnèrent ce
+        signe, cette marque de leur prédication."
+      citation: Symbolum per linguam Graecam signum vel cognitio interpretatur.
+        Discessuri enim Apostoli ad evangelizandum in gentibus hoc sibi
+        praedicationis signum vel indicium posuerunt.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 19, 57
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: littre
+    entree: symbole
+  - ouvrage: tlfi
+    entree: symbole
+  - ouvrage: lewis-short
+    entree: symbolus
+  - ouvrage: bailly
+    entree: σύμβολον
+  - ouvrage: bailly
+    entree: συμβάλλω
+  - ouvrage: bailly
+    entree: σύν
+  - ouvrage: bailly
+    entree: βάλλω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,50 @@
+mot: grâce
+nature: [ nom féminin ]
+etymologie:
+  - forme: gratia
+    langue: latin
+    sens: faveur, reconnaissance, agrément
+  - forme: gratus
+    langue: latin
+    sens: agréable, bienvenu
+explication: >-
+  Gratia disait la faveur dont on jouit auprès d'un autre et celle qu'on lui
+  fait. Grâce nomme en français la faveur dès le Xe siècle, celle de Dieu vers
+  1050, le remerciement en 1135, la remise d'une peine en 1174 ; l'agrément que
+  disait gratus reste dans la grâce d'une personne.
+famille: [ gracier, gracieux, disgrâce, gratis, gré ]
+renvois: [ merci ]
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: "Grâce se dit de trois façons : l'amour qu'on porte à quelqu'un, le don
+        qu'on lui fait gratuitement, et la reconnaissance qui répond au
+        bienfait. Le don procède de l'amour, et l'action de grâces procède du
+        don."
+      citation: gratia tripliciter accipi consuevit. Uno modo, pro dilectione
+        alicuius, sicut consuevimus dicere quod iste miles habet gratiam regis,
+        idest, rex habet eum gratum. Secundo sumitur pro aliquo dono gratis
+        dato, sicut consuevimus dicere, hanc gratiam facio tibi. Tertio modo
+        sumitur pro recompensatione beneficii gratis dati, secundum quod dicimur
+        agere gratias beneficiorum. Quorum trium secundum dependet ex primo, ex
+        amore enim quo aliquis alium gratum habet, procedit quod aliquid ei
+        gratis impendat. Ex secundo autem procedit tertium, quia ex beneficiis
+        gratis exhibitis gratiarum actio consurgit.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae, q. 110, a. 1, co.
+          url: https://www.corpusthomisticum.org/sth2109.html
+sources:
+  - ouvrage: littre
+    entree: grâce
+  - ouvrage: tlfi
+    entree: grâce
+  - ouvrage: lewis-short
+    entree: gratia
+  - ouvrage: lewis-short
+    entree: gratus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

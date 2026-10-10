@@ -1,0 +1,27 @@
+mot: analyse
+nature: [ nom féminin ]
+etymologie:
+  - forme: ἀνάλυσις
+    langue: grec ancien
+    sens: action de délier
+explication: >-
+  Ἀνάλυσις se disait de la libération, de la dissolution, du départ d'un navire,
+  et de la résolution d'un tout en ses parties. Le français n'a reçu que le
+  dernier sens : l'étude critique d'un ouvrage (avant 1630), une méthode de
+  résolution (1637), la décomposition d'un objet en ses éléments (1690).
+famille: [ analyser, analyste, analytique ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: littre
+    entree: analyse
+  - ouvrage: tlfi
+    entree: analyse
+  - ouvrage: bailly
+    entree: ἀνάλυσις
+  - ouvrage: bailly
+    entree: ἀναλύω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

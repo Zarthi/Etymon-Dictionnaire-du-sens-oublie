@@ -1,6 +1,5 @@
 - { mot: machine, statut: a-faire }
 - { mot: magie, statut: a-faire }
-- { mot: magistrat, statut: a-faire }
 - { mot: magnifique, statut: a-faire }
 - { mot: maison, statut: a-faire }
 - { mot: maître, statut: a-faire }
@@ -32,7 +31,6 @@
 - { mot: messe, statut: a-faire }
 - { mot: messie, statut: a-faire }
 - { mot: mesure, statut: a-faire }
-- { mot: métaphore, statut: a-faire }
 - { mot: métaphysique, statut: a-faire }
 - { mot: métier, statut: a-faire }
 - { mot: meurtre, statut: a-faire }

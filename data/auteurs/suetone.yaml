@@ -1,0 +1,16 @@
+nom: Suétone
+nomComplet: Caius Suetonius Tranquillus
+naissance: vers 69
+mort: vers 126
+description: >-
+  Historien, grammairien et rhéteur romain ; Isidore de Séville cite son livre
+  Des poètes sur l'origine du nom des poètes.
+traditions: [ romaine ]
+sources:
+  - ouvrage: bnf
+    entree: cb119257294
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

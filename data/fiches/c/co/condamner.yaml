@@ -1,0 +1,55 @@
+mot: condamner
+nature: [ verbe ]
+etymologie:
+  - forme: condemnare
+    langue: latin
+  - forme: damnare
+    langue: latin
+    sens: infliger une perte ; condamner à une peine
+  - forme: damnum
+    langue: latin
+    sens: dommage, perte
+explication: >-
+  En droit, damnum désignait aussi l'amende, et damnare, condamner à une peine.
+  Condamner frappe d'une peine judiciaire dès le début du XIIe siècle, puis dit
+  aussi blâmer, déclarer un malade perdu ou interdire l'usage d'une chose ; la
+  perte que nommait damnum ne s'y entend plus.
+famille: [ condamnation, condamnable, damner ]
+renvois: [ absoudre ]
+themes: [ droit, morale ]
+tradition:
+  lectures:
+    - texte: "Damnum vient de l'action d'ôter, demptione : il y a damnum quand on a
+        tiré d'une chose moins qu'elle n'a coûté."
+      citation: Damnum a demptione, cum minus re factum quam quanti constat.
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: V, 176
+          url: https://www.thelatinlibrary.com/varro.ll5.html
+    - texte: Le damnum est la première des huit peines que contiennent les lois ; il
+        tire son nom de la diminution du bien.
+      citation: "Octo genera poenarum in legibus contineri Tullius scribit: id est
+        damnum, vincula, verbera, talionem, ignominiam, exilium, servitutem et
+        mortem. […] Damnum a diminutione rei vocatum."
+      sources:
+        - ouvrage: etymologies
+          entree: V, 27, 4-5
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: littre
+    entree: condamner
+  - ouvrage: tlfi
+    entree: condamner
+  - ouvrage: lewis-short
+    entree: condemno
+  - ouvrage: lewis-short
+    entree: damno
+  - ouvrage: lewis-short
+    entree: damnum
+  - ouvrage: littre
+    entree: damner
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

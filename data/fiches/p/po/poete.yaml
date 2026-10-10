@@ -1,0 +1,44 @@
+mot: poète
+nature: [ nom masculin ]
+etymologie:
+  - forme: poeta
+    langue: latin
+  - forme: ποιητής
+    langue: grec ancien
+    sens: auteur, créateur, artisan
+explication: >-
+  Celui qui compose des vers n'était qu'un des sens de ποιητής ; avant l'époque
+  classique, le latin poeta nommait encore celui qui fabrique, jusqu'à l'auteur
+  d'une ruse. Le français l'a reçu vers 1150 au sens d'écrivain qui fait de la
+  poésie ; depuis 1546, il se dit aussi d'un rêveur.
+famille: [ poésie, poétique, poème ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: "Toute cause qui fait passer une chose du non-être à l'être est ποίησις,
+        et tous les artisans sont des ποιηταί ; pourtant on ne les appelle pas
+        ainsi : une seule partie de la ποίησις, celle qui touche à la musique et
+        aux mètres, a reçu le nom du tout."
+      citation: ἡ γάρ τοι ἐκ τοῦ μὴ ὄντος εἰς τὸ ὂν ἰόντι ὁτῳοῦν αἰτία πᾶσά ἐστι […]
+        ποίησις, ὥστε καὶ αἱ ὑπὸ πάσαις ταῖς τέχναις ἐργασίαι ποιήσεις εἰσὶ καὶ
+        οἱ τούτων δημιουργοὶ πάντες ποιηταί. […] οὐ καλοῦνται ποιηταὶ ἀλλὰ ἄλλα
+        ἔχουσιν ὀνόματα, ἀπὸ δὲ πάσης τῆς ποιήσεως ἓν μόριον ἀφορισθὲν τὸ περὶ
+        τὴν μουσικὴν καὶ τὰ μέτρα τῷ τοῦ ὅλου ὀνόματι προσαγορεύεται.
+      sources:
+        - ouvrage: le-banquet
+          entree: 205b-c
+          url: https://el.wikisource.org/wiki/Συμπόσιον_(Πλάτων)
+sources:
+  - ouvrage: littre
+    entree: poëte
+  - ouvrage: tlfi
+    entree: poète
+  - ouvrage: lewis-short
+    entree: poeta
+  - ouvrage: bailly
+    entree: ποιητής
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

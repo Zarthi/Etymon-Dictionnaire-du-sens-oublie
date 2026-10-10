@@ -1,0 +1,43 @@
+mot: offense
+nature: [ nom féminin ]
+etymologie:
+  - forme: offensa
+    langue: latin
+    sens: action de heurter
+explication: >-
+  Au propre, offensa était rare ; il disait surtout la disgrâce ou le
+  mécontentement qu'on encourt. Offense nomme en français, vers 1225, la parole
+  ou l'action qui blesse quelqu'un dans son honneur ; le mot dit aussi le péché
+  envers Dieu et, en droit, l'insulte publique à un chef d'État.
+famille: [ offenser, offensif, défendre ]
+renvois: [ injure, outrage ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: "Le péché est une offense faite à Dieu, qui le remet comme on remet une
+        offense ; or l'offense s'oppose directement à la grâce : on est dit
+        offensé contre quelqu'un quand on le repousse de sa grâce."
+      citation: Cum enim peccatum sit Dei offensa, eo modo Deus peccatum remittit quo
+        remittit offensam in se commissam. Offensa autem directe opponitur
+        gratiae, ex hoc enim dicitur aliquis alteri esse offensus, quod repellit
+        eum a gratia sua.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIIa, q. 86, a. 2, co.
+          url: https://www.corpusthomisticum.org/sth4084.html
+sources:
+  - ouvrage: littre
+    entree: offense
+  - ouvrage: lewis-short
+    entree: offensa
+  - ouvrage: lewis-short
+    entree: offendo1
+  - ouvrage: tlfi
+    entree: offense
+  - ouvrage: lewis-short
+    entree: defendo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,54 @@
+mot: éloquence
+nature: [ nom féminin ]
+etymologie:
+  - forme: eloquentia
+    langue: latin
+    sens: facilité d'expression, art de la parole
+  - forme: eloquens
+    langue: latin
+  - forme: eloqui
+    langue: latin
+    sens: dire tout haut, énoncer, exprimer
+explication: >-
+  Eloqui disait le fait d'exprimer sa pensée, et en particulier de parler en
+  orateur. Éloquence nomme aujourd'hui l'art de parler de façon à émouvoir et à
+  persuader, et, depuis le milieu du XVIIe siècle, le caractère de ce qui est
+  expressif.
+famille: [ éloquent, loquacité ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: Eloqui et reloqui se disent, dans les sanctuaires sabins, de ceux qui
+        parlent depuis la cella du dieu ; eloquens, de celui qui parle avec
+        abondance.
+      citation: Hinc dicuntur eloqui ac reloqui in fanis Sabinis, e cella dei qui
+        loquuntur. Hinc dictus loquax, qui nimium loqueretur; hinc eloquens, qui
+        copiose loquitur
+      sources:
+        - ouvrage: de-la-langue-latine
+          entree: VI, 57
+          url: https://www.thelatinlibrary.com/varro.ll6.html
+    - texte: "L'éloquent se distingue du bavard : à l'un la pureté de la faconde, à
+        l'autre la témérité d'une parole répandue sans ordre."
+      citation: Inter Eloquentem et loquacem. Sinceritas facundiae eloquentum est,
+        effusa et incondita temeritas, loquacium.
+      sources:
+        - ouvrage: differences
+          entree: I, 179
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: éloquence
+  - ouvrage: littre
+    entree: éloquent
+  - ouvrage: tlfi
+    entree: éloquence
+  - ouvrage: lewis-short
+    entree: eloquentia
+  - ouvrage: lewis-short
+    entree: eloquor
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,42 @@
+mot: sanction
+nature: [ nom féminin ]
+etymologie:
+  - forme: sanctio
+    langue: latin
+    sens: décret rendu inviolable sous peine de malédiction
+  - forme: sancire
+    langue: latin
+    sens: rendre sacré, inviolable
+explication: >-
+  Sanctio désignait aussi la clause d'une loi qui fixait la peine de qui
+  l'enfreindrait. Sanction a nommé en français un précepte au XIVe siècle, puis,
+  en 1765, la peine qui assure le respect d'une loi ; il désigne aujourd'hui
+  aussi toute punition, sans plus rien de sacré.
+famille: [ sanctionner, saint ]
+themes: [ droit ]
+tradition:
+  lectures:
+    - texte: "Sancire, c'est confirmer une chose et la protéger de l'atteinte en
+        fixant une peine : de là vient que les lois et les murs sont dits
+        saints."
+      citation: Item sanctum, quod extat esse sancitum. Sancire est autem confirmare
+        et inrogatione poenae ab iniuria defendere; sic et leges sanctae et muri
+        sancti esse dicuntur.
+      sources:
+        - ouvrage: etymologies
+          entree: XV, 4, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: littre
+    entree: sanction
+  - ouvrage: tlfi
+    entree: sanction
+  - ouvrage: lewis-short
+    entree: sanctio
+  - ouvrage: lewis-short
+    entree: sancio
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

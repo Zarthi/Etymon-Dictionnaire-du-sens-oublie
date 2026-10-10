@@ -1,0 +1,52 @@
+mot: entendre
+nature: [ verbe ]
+etymologie:
+  - forme: intendere
+    langue: latin
+    sens: tendre vers, diriger vers
+    elements:
+      - forme: in
+        sens: en
+      - forme: tendere
+        sens: tendre
+explication: >-
+  Intendere se disait de l'arc qu'on bande, et, au figuré, de l'esprit qu'on
+  dirige vers quelque chose ; le latin chrétien y a ajouté comprendre et
+  écouter. En français, entendre dit avant tout percevoir par l'oreille (vers
+  1050) : l'attention qu'on dirige est devenue ce que l'oreille reçoit.
+famille: [ entente, entendement, sous-entendre, intendant, tendre ]
+themes: [ esprit, parole ]
+tradition:
+  lectures:
+    - texte: "Attendere, c'est regarder ; intendere, c'est accuser, ou viser au
+        meurtre ou à l'outrage : il se prend très rarement en bonne part."
+      citation: Inter Attendere et intendere. Attendere aspicere est, intendere vero
+        criminari, aut ad caedem, aut ad injuriam. Perraro […] tamen in bono
+        est.
+      sources:
+        - ouvrage: differences
+          entree: I, 22
+          url: https://la.wikisource.org/wiki/Differentiae
+    - texte: "Intendere, c'est tendre vers autre chose, ce qui revient à celui qui
+        meut comme à ce qui est mû : la nature tend vers sa fin parce que Dieu
+        l'y meut, comme la flèche que l'archer lance."
+      citation: intendere est in aliud tendere; quod quidem est et moventis, et moti.
+        Secundum quidem igitur quod dicitur intendere finem id quod movetur ad
+        finem ab alio, sic natura dicitur intendere finem, quasi mota ad suum
+        finem a Deo, sicut sagitta a sagittante.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae, q. 12, a. 5, co.
+          url: https://www.corpusthomisticum.org/sth2006.html
+sources:
+  - ouvrage: littre
+    entree: entendre
+  - ouvrage: tlfi
+    entree: entendre
+  - ouvrage: lewis-short
+    entree: intendo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

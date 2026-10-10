@@ -3,7 +3,6 @@
 - { mot: palais, statut: a-faire }
 - { mot: paradis, statut: a-faire }
 - { mot: paradoxe, statut: a-faire }
-- { mot: pardon, statut: a-faire }
 - { mot: paresse, statut: a-faire }
 - { mot: parler, statut: a-faire }
 - { mot: paroisse, statut: a-faire }
@@ -23,7 +22,6 @@
 - { mot: persévérer, statut: a-faire }
 - { mot: personnage, statut: a-faire }
 - { mot: perspective, statut: a-faire }
-- { mot: persuader, statut: a-faire }
 - { mot: perte, statut: a-faire }
 - { mot: pervers, statut: a-faire }
 - { mot: peuple, statut: a-faire }
@@ -36,8 +34,6 @@
 - { mot: plaindre, statut: a-faire }
 - { mot: plaire, statut: a-faire }
 - { mot: plan, statut: a-faire }
-- { mot: poème, statut: a-faire }
-- { mot: poète, statut: a-faire }
 - { mot: poids, statut: a-faire }
 - { mot: point, statut: a-faire }
 - { mot: police, statut: a-faire }
@@ -51,7 +47,6 @@
 - { mot: pouvoir, statut: a-faire }
 - { mot: précaire, statut: a-faire }
 - { mot: précieux, statut: a-faire }
-- { mot: préjugé, statut: a-faire }
 - { mot: présent, statut: a-faire }
 - { mot: président, statut: a-faire }
 - { mot: prêtre, statut: a-faire }
@@ -64,7 +59,6 @@
 - { mot: privilège, statut: a-faire }
 - { mot: prix, statut: a-faire }
 - { mot: problème, statut: a-faire }
-- { mot: procès, statut: a-faire }
 - { mot: prochain, statut: a-faire }
 - { mot: prodigue, statut: a-faire }
 - { mot: profane, statut: a-faire }
@@ -84,5 +78,4 @@
 - { mot: pudeur, statut: a-faire }
 - { mot: puéril, statut: a-faire }
 - { mot: puissance, statut: a-faire }
-- { mot: punir, statut: a-faire }
 - { mot: pur, statut: a-faire }

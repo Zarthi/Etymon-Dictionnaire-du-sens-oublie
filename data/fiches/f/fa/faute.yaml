@@ -1,0 +1,29 @@
+mot: faute
+nature: [ nom féminin ]
+etymologie:
+  - forme: "*fallita"
+    langue: latin populaire
+    sens: manque, action de faillir
+  - forme: fallere
+    langue: latin
+    sens: tromper, décevoir
+explication: >-
+  Faute a d'abord dit le manquement, l'action de faillir (vers 1175), puis aussi
+  le manque, qui reste dans faute de. Il nomme aujourd'hui le manquement à une
+  règle, morale, religieuse, de droit ou d'un art, et la responsabilité qu'on en
+  porte ; la tromperie que disait fallere s'est perdue.
+famille: [ fautif, faillir, falloir ]
+renvois: [ peche ]
+themes: [ morale, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: faute
+  - ouvrage: littre
+    entree: faute
+  - ouvrage: lewis-short
+    entree: fallo
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

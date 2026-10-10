@@ -1,0 +1,27 @@
+mot: écrire
+nature: [ verbe ]
+etymologie:
+  - forme: scribere
+    langue: latin
+    sens: graver avec une pointe ; tracer des lettres
+explication: >-
+  Le trait gratté ou gravé à la pointe ne s'entend plus dans écrire : le latin
+  scribere disait déjà toute écriture et la composition d'un ouvrage, et écrire
+  signifie dès 1050 mettre par écrit, rédiger.
+famille: [ écrit, écriture, écrivain, inscrire, décrire, prescrire, conscrit ]
+renvois: [ lire ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: écrire
+  - ouvrage: tlfi
+    entree: écrire
+  - ouvrage: lewis-short
+    entree: scribo
+  - ouvrage: bailly
+    entree: γράφω
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

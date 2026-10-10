@@ -1,0 +1,30 @@
+mot: coupable
+nature: [ adjectif ]
+etymologie:
+  - forme: culpabilis
+    langue: latin ecclésiastique
+    sens: digne de blâme
+  - forme: culpa
+    langue: latin
+    sens: faute, blâme
+explication: >-
+  Culpa disait la faute au sens large, l'erreur de jugement comprise, et le
+  blâme qu'elle mérite. Coupable se dit dès 1172 de qui a commis une faute, et
+  depuis 1667 d'une chose condamnable ; il désigne aujourd'hui celui qui a
+  commis volontairement un acte répréhensible.
+famille: [ culpabilité, coulpe, coupablement ]
+themes: [ morale, droit ]
+sources:
+  - ouvrage: littre
+    entree: coupable
+  - ouvrage: tlfi
+    entree: coupable
+  - ouvrage: lewis-short
+    entree: culpabilis
+  - ouvrage: lewis-short
+    entree: culpa
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

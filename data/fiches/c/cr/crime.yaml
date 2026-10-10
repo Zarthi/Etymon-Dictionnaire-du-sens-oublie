@@ -1,0 +1,43 @@
+mot: crime
+nature: [ nom masculin ]
+etymologie:
+  - forme: crimen
+    langue: latin
+    sens: accusation, grief
+    premier: true
+  - forme: cernere
+    langue: latin
+    sens: trier ; décider
+explication: >-
+  Crimen nommait le grief porté contre quelqu'un, souvent calomnieux, aussi bien
+  que le méfait. En français, crime désigne dès 1165 un manquement grave à la
+  morale ou à la loi ; il nomme aujourd'hui d'abord l'infraction grave que la
+  loi punit.
+famille: [ criminel, criminalité, récriminer ]
+themes: [ droit, morale ]
+tradition:
+  lectures:
+    - texte: "Crimen se nomme d'après le manque (a carendo) : ce sont le vol, le faux
+        et les autres fautes qui ne tuent pas, mais déshonorent."
+      citation: "Crimen a carendo nomen: ut furtum, falsitas et cetera, quae non
+        occidunt, sed infamant."
+      sources:
+        - ouvrage: etymologies
+          entree: V, 26, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: littre
+    entree: crime
+  - ouvrage: tlfi
+    entree: crime
+  - ouvrage: lewis-short
+    entree: crimen
+  - ouvrage: lewis-short
+    entree: cerno
+  - ouvrage: bailly
+    entree: κρῖμα
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

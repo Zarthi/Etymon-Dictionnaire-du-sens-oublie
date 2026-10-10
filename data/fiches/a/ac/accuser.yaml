@@ -1,0 +1,40 @@
+mot: accuser
+nature: [ verbe ]
+etymologie:
+  - forme: accusare
+    langue: latin
+    sens: appeler à rendre compte, mettre en cause
+    elements:
+      - forme: ad
+        sens: à
+      - forme: causa
+        sens: cause, procès
+explication: >-
+  Au Xe siècle, accuser c'est porter une accusation en justice ; le mot dit
+  aussi reprocher une faute, et, dès 1173, révéler ce qui était caché, d'où
+  accuser le coup ou accuser réception. Dans ce dernier emploi, il n'est plus
+  question de procès.
+ecartees:
+  - forme: cusare
+    langue: latin
+    sens: forger (fréquentatif de cudere)
+    selon: [ priscien ]
+    raison: Littré la rapporte et juge plus vraisemblable le rattachement à causa,
+      que donne le Lewis & Short.
+famille: [ accusation, accusateur, accusatif, cause ]
+renvois: [ defendre ]
+themes: [ droit, morale ]
+sources:
+  - ouvrage: littre
+    entree: accuser
+  - ouvrage: lewis-short
+    entree: accuso
+  - ouvrage: lewis-short
+    entree: causa
+  - ouvrage: tlfi
+    entree: accuser
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

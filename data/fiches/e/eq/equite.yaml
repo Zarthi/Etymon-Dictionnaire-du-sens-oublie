@@ -1,0 +1,53 @@
+mot: équité
+nature: [ nom féminin ]
+etymologie:
+  - forme: aequitas
+    langue: latin
+    sens: égalité, juste proportion
+  - forme: aequus
+    langue: latin
+    sens: de niveau, égal
+explication: >-
+  Appliqué à la conduite, aequitas nommait la justice tempérée de bienveillance,
+  qu'on pouvait invoquer contre le droit strict. Équité désigne aujourd'hui
+  l'appréciation juste de ce qui est dû à chacun ; l'image du terrain de niveau
+  s'est perdue.
+famille: [ équitable, adéquat ]
+themes: [ droit, morale ]
+tradition:
+  lectures:
+    - texte: Aequus se dit de qui est juste selon la nature, parce qu'il est égal ; de
+        là le nom d'aequitas, tiré d'une certaine égalité.
+      citation: Aequus est secundum naturam iustus dictus, ab aequitate, hoc est ab eo
+        quad sit aequalis; unde et aequitas appellata, ab aequalitate quadam
+        scilicet.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 7
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+    - texte: Dans certains cas, suivre la loi posée serait un mal ; il est bon alors
+        de laisser les mots de la loi pour suivre ce que demandent la raison de
+        la justice et l'utilité commune. C'est à quoi ordonne l'epieikeia, qu'on
+        nomme chez nous aequitas.
+      citation: In his ergo et similibus casibus malum esset sequi legem positam,
+        bonum autem est, praetermissis verbis legis, sequi id quod poscit
+        iustitiae ratio et communis utilitas. Et ad hoc ordinatur epieikeia,
+        quae apud nos dicitur aequitas.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae, q. 120, a. 1, co.
+          url: https://www.corpusthomisticum.org/sth3109.html
+sources:
+  - ouvrage: littre
+    entree: équité
+  - ouvrage: tlfi
+    entree: équité
+  - ouvrage: lewis-short
+    entree: aequitas
+  - ouvrage: lewis-short
+    entree: aequus
+redaction:
+  - par: IA
+    detail: Claude Opus 5.5
+    reflexion: élevée
+statut: brouillon

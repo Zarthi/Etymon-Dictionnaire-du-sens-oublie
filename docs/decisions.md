@@ -9,6 +9,52 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-10-10 — Lot : juge, justice, juste, tribunal, procès, crime, coupable, punir, sanction, grâce, pardon, clémence, équité, tort, faute, condamner, absoudre, accuser, défendre, témoin, arbitre, magistrat, avocat, préjugé, offense, vengeance, langue, écrire, lettre, texte, poème, poète, traduire, métaphore, allégorie, symbole, style, roman, théâtre, éloquence, interpréter, révéler, logique, analyse, argument, concept, entendre, convaincre, persuader, question
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| crime : étymon | La chaîne suit le Lewis & Short (crimen, de cerno) ; le grec κρῖμα de Littré n'y entre pas | Le Lewis & Short (1879), plus récent que Littré, tire crimen de cerno et ne cite κρῖμα qu'en comparaison ; le TLFi ne tranche pas | oui |
+| crime : sens premier | premier sur crimen (« accusation, grief ») plutôt que sur cernere (« trier ; décider ») | Le sens d'accusation est celui du mot ; cernere dit seulement d'où il vient | oui |
+| tribunal : sens premier | premier sur tribunal (« estrade où siégeaient les magistrats ») plutôt que sur tribunus (« chef de tribu ») | Le sens de tribunus situe le mot sans être le sien | oui |
+| juste : hypothèse jussus | Écartée (ecartees), sans tenant | Littré la rapporte (« est considéré ») ; le Lewis & Short rattache justus à jus, le TLFi ne la retient pas | oui |
+| justice, juste : longueur de la chaîne | justice s'arrête à justitia ; juste remonte à jus | justus n'ajoute rien à justice ; jus donne à juste son sens premier | non |
+| procès : deux maillons de même forme | processus (latin médiéval, sens juridique) puis processus (latin, « action de s'avancer ») | Le TLFi distingue les deux emprunts | non |
+| punir : lecture d'Isidore | tradition.renvois vers peine au lieu de recopier « Poena dicta quod puniat » (Étymologies, V, 27, 2), déjà sur la fiche peine | Une même lecture sur deux fiches n'ajoute rien | oui |
+| renvois vers les mots du lot confiés à d'autres rédacteurs | Aucun renvoi de juge, justice, crime, coupable vers arbitre, magistrat, équité, faute… | Éviter qu'une relation soit déclarée des deux côtés par deux rédacteurs ; les renvois retenus visent des fiches existantes, des candidats hors lot ou des mots de R1 | oui |
+| justice : renvoi vers droit | Aucun | La fiche droit déclare déjà le renvoi vers justice | non |
+| grâce : chemin | consacré (profane à l'origine, pris dans l'ordre sacré) | gratia nomme la faveur et l'agrément avant la faveur de Dieu (vers 1050) | non |
+| témoin : sens premier | premier sur testimonium (« témoignage, déposition, preuve ») plutôt que sur testis (« celui qui atteste ») | C'est le substantif abstrait qui a donné le mot (Littré, TLFi) ; testis dit seulement d'où il vient, et son sens est celui du mot d'aujourd'hui | oui |
+| faute : étymon | La chaîne suit le TLFi (*fallita, puis fallere) ; le verbe roman fréquentatif de Littré n'y entre pas | Le TLFi est plus récent ; les deux s'accordent sur fallere | oui |
+| tort : longueur de la chaîne | La chaîne s'arrête à tortum (« ce qui est tordu ») | torquere, « tordre », n'ajoute rien au sens ; le tortum classique du Lewis & Short (« corde ») est un autre emploi | non |
+| vengeance : longueur de la chaîne | Arrêt à vindicare (« revendiquer en justice ») | Le TLFi tire vindicare de vindex, le Lewis & Short vindex de vindicare : ils ne s'accordent que sur vindicare | oui |
+| défendre, offense : éléments | defendere et offensa ne sont pas découpés | Littré glose fendere « exciter, pousser » à défendre et « frapper » à offense ; sans sens sûr, l'élément ne s'écrit pas ; la parenté va dans famille (Lewis & Short, defendo) | oui |
+| accuser : cusare | Étymologie écartée, tenant Priscien (fiche d'auteur à créer, notice BnF cb12046697k) | Littré la rapporte et lui préfère causa, que donne le Lewis & Short | oui |
+| accuser, avocat : lectures d'Isidore | Aucune lecture : Étymologies XVIII, 15, 7 lit accusator, Différences I, 26 lit advocare, formes absentes de la chaîne | Règle des formes voisines (consigne des lectures) | oui |
+| condamner, magistrat, équité : deux lectures | Deux voix pour le même mot (Varron et Isidore ; Isidore et Thomas) | Traditions distinctes (romaine, chrétienne) ou lecture différente (le nom ; la vertu) | oui |
+| renvois vers R1 | arbitre et magistrat → juge, absoudre → pardon (équité nomme la justice dans son explication, sans renvoi) | R1 a décidé de ne déclarer aucun renvoi vers les mots de R2 : la relation n'est déclarée que d'un côté | oui |
+| renvois internes à R2 | tort → faute, condamner → absoudre, accuser → défendre (un seul côté) | Notions voisines du même ordre, sans racine commune | non |
+| lettre : origine de littera | La chaîne s'arrête à littera, sans alternatives | Le Littré dit l'origine incertaine (likh selon L. Meyer, linere selon Corssen), le Lewis & Short la tire de lino ; le TLFi ne remonte pas au-delà : aucune hypothèse n'a de tenant récent | oui |
+| écrire : racine *skrabh- | Non reprise dans la chaîne ; scribere porte le sens « graver avec une pointe ; tracer des lettres » (Lewis & Short) | Le rapprochement avec γράφω (Littré) et la racine « creuser » (Lewis & Short) ne sont pas suivis par le TLFi ; le sens de scribere suffit à dire l'entaille | oui |
+| style : στῦλος | Croisement de forme sur stilus (TLFi : graphie en y) ; l'étymon du Littré va dans ecartees | Le Lewis & Short nie tout lien de stilus avec στῦλος ; le TLFi ne lui donne que la graphie | non |
+| symbole : sens premier | premier sur σύμβολον (« objet coupé en deux… ») plutôt que sur συμβάλλω (« jeter ensemble, réunir ») | Le sens du mot est l'objet de reconnaissance ; le verbe dit d'où il vient | oui |
+| roman : sens premier | premier sur romanice (« en langue vulgaire, non en latin ») plutôt que sur romanus (« romain ») | Le récit tient son nom de la langue où il était écrit ; romanus situe sans être le sens du mot | oui |
+| traduire : forge (sens nouveau) | `forge` retiré du maillon latin humaniste : Bruni n'a pas forgé le mot mais lui a donné un sens nouveau (vers 1400) ; il reste nommé dans l'explication | Le champ `forge` dit « mot forgé par un auteur », or le TLFi parle d'un « néologisme sémantique » ; le modèle n'a pas de champ pour un sens nouveau donné par un auteur (limite signalée) | oui |
+| poème / poète : lectures | Isidore (Tranquillus rapporté, VIII, 7, 2) sur poème ; Platon (Banquet, 205b-c) sur poète | Le passage d'Isidore explique le nom poema ; celui de Platon le nom ποιητής : aucune lecture en double | non |
+| poème : voix de la lecture | auteur suetone (Tranquillus, cité par Isidore), tradition romaine | Parole rapportée par l'œuvre d'un autre ; comme Varron, Suétone parle en érudit romain | oui |
+| renvois vers les mots des autres sous-lots | Aucun (traduire → interpréter, symbole → révéler écartés) | Éviter qu'une relation soit déclarée des deux côtés par deux rédacteurs | non |
+| allégorie : renvois | allégorie → métaphore, symbole (déclarés de ce seul côté) ; parabole → allégorie existe déjà | Notions voisines du même ordre, sans racine commune | non |
+| théâtre : sens premier | Sens en tête sur θεάομαι, « regarder, contempler » (dernier maillon, par défaut), plutôt que sur θέατρον | Le sens de θέατρον (« lieu où l'on assiste à un spectacle ») redit le mot ; le verbe dit ce qu'il nommait : le lieu du regard | oui |
+| théâtre : sens de θεάομαι | Pris au TLFi, sans entrée du Bailly | bailly.app n'a pas d'entrée θεάομαι (404) ; le Bailly 1895 de la bibliothèque n'est qu'un scan OCR | oui |
+| éloquence : lecture de Varron | Retenue (tradition romaine), De la langue latine, VI, 57 | Varron lit eloqui (forme de la chaîne) et rapporte son emploi dans les sanctuaires sabins ; le paragraphe est repéré par le Lewis & Short (reloquus) | oui |
+| interpréter : second élément de interpres | Chaîne arrêtée à interpres, sans découpage | Origine du second élément obscure et disputée (Curtius, Littré, Lewis & Short) ; interpres porte déjà le sens qui apprend (« intermédiaire ») | oui |
+| logique : chaîne | logica → λογική → λόγος ; λογικός n'est pas un maillon | λογική est le féminin substantivé de λογικός (Bailly, même entrée) | non |
+| analyse : composition | ἀνάλυσις seul, sans ἀναλύω ni ἀνά + λύω | Le sens « action de délier » est attesté pour la forme ; aucune entrée du Bailly pour ἀνά | non |
+| concept : étymon | conceptus (TLFi) plutôt que conceptum (Littré) | Le TLFi, plus récent, et le Lewis & Short (conceptus, ūs) concordent | oui |
+| entendre : nature | « verbe » écrit dans la fiche | L'entrée du Littré local n'a pas de nature ; l'essai la demande | non |
+| question : lecture de Varron | Retenue, De la langue latine, VI, 79 | Le texte en ligne n'a pas de numéros ; § 79 déduit du Lewis & Short (phrase précédente au § 79, citation d'Accius qui suit au § 80) : à confirmer sur une édition numérotée | oui |
+| persuader / convaincre : renvoi | Déclaré sur persuader seulement | Notions voisines du même ordre, sans racine commune ; un seul côté | non |
+| argument, interpréter : renvois vers les mots des autres sous-lots (accuser, traduire) | Aucun | Éviter qu'une relation soit déclarée des deux côtés par deux rédacteurs | oui |
+
 ## 2026-10-09 — Export pour un autre projet, et couleur des langues
 
 - **Export stable et versionné** (`npm run export` → `export/etymon.json`) : les fiches (statut
