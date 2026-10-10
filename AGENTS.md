@@ -351,7 +351,7 @@ forgé), `data/fiches/c/ch/chiffre.yaml` (filiation, doublet). Points à retenir
 | `historique` | Thibault ou l'agent qui corrige | validateur |
 
 - `redaction` : qui a rédigé la fiche, `{ par: IA | Étymon, detail, reflexion? }` (le modèle
-  d'IA et son niveau de réflexion : « Claude Opus 5.5, réflexion élevée »), affichée une fois en
+  d'IA et son niveau de réflexion : « DeepSeek Flash »), affichée une fois en
   pied de fiche. Une contribution de Thibault ou d'un lecteur s'y ajoute (`par: Étymon`),
   avec une note d'`historique` « corrigée le … ». La simple validation n'y figure pas.
 - `statut` : `a-verifier` (ancienne fiche rédigée de mémoire, s'il en reste ; mention
@@ -471,14 +471,14 @@ dans `sources/`, hors du dépôt). On rédige d'après les sources, jamais de m�
 `atelier/`, et `data/` et `docs/` ne bougent qu'à la clôture :
 1. `npm run lot -- sources <mots>` : par script, `atelier/<id>/sources.md` (Littré, TLFi, entrées du
    Lewis & Short et du Bailly pour les formes d'origine, corpus de réflexe).
-2. **Rédacteur** (Opus) : dossier, fiche et lectures traditionnelles (étape à part, texte source sous les
+2. **Rédacteur** (DeepSeek Flash) : dossier, fiche et lectures traditionnelles (étape à part, texte source sous les
    yeux) dans `atelier/<id>/`, références à créer dans `atelier/references.json`, décisions dans
    `atelier/decisions.md` (`docs/consignes/redacteur.md`).
-3. **Relecteur** neuf (Opus) : un verdict par mot, avec un `remplacement` quand il sait la phrase
+3. **Relecteur** neuf (DeepSeek Flash) : un verdict par mot, avec un `remplacement` quand il sait la phrase
    (`docs/consignes/relecture.md`).
 4. `npm run lot -- reprendre <mots>` : par script, applique les remplacements ; le rédacteur n'est
    repris que pour `atelier/a-reprendre.md`.
-5. **Vérificateur** (Sonnet) : seulement les remarques appliquées et les lectures.
+5. **Vérificateur** (DeepSeek Flash) : seulement les remarques appliquées et les lectures.
 6. `npm run lot -- clore <mots>` : écrit les fiches en `brouillon` (sources tirées du dossier, mots
    retirés des candidats, mot écarté par Thibault refusé), crée les auteurs et ouvrages d'après leur notice
    BnF, reporte les décisions en tête de `docs/decisions.md`, régénère le contrat, lance
