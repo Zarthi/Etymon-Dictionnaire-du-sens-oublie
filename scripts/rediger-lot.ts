@@ -25,7 +25,7 @@ import { DOSSIER_DATA, formaterErreur, validerDepot } from "./valider-fiches.ts"
  * Une fiche peut porter ses lectures traditionnelles (`tradition.lectures`), validées comme dans data/.
  * `npm run lot -- reprendre` et `clore` appellent `rediger` sans passer par la ligne de commande.
  *
- * Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] --dossier [--essai] [--remplacer]
+ * Usage : npm run rediger -- <fichier.json>… --modele "DeepSeek Flash" [--reflexion élevée] --dossier [--essai] [--remplacer]
  */
 export type Brute = Record<string, unknown>;
 
@@ -191,7 +191,7 @@ async function principal(): Promise<number> {
     },
   });
   if (fichiers.length === 0 || (!values.modele && !values.essai)) {
-    console.log('Usage : npm run rediger -- <fichier.json>… --modele "Claude Opus 5.5" [--reflexion élevée] --dossier [--essai] [--remplacer]');
+    console.log('Usage : npm run rediger -- <fichier.json>… --modele "DeepSeek Flash" [--reflexion élevée] --dossier [--essai] [--remplacer]');
     return 1;
   }
   if (!values.dossier) {

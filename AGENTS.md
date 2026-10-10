@@ -652,6 +652,9 @@ etymon/
   demander.
 - Ajouter un backend, un appel réseau ou un appel à une IA dans l'app.
 - Mélanger étymologie historique et lecture traditionnelle dans un même champ.
+- Lancer un modèle d'IA coûteux (Opus, Sonnet, GPT ou tout modèle américain cher) : la rédaction
+  tourne sur un modèle économique (**DeepSeek Flash**), sans exception, et le coût estimé d'un lot
+  est annoncé à Thibault **avant** de le lancer. Un modèle plus cher ne se choisit jamais de soi-même.
 
 ## 11. Travail en cours
 

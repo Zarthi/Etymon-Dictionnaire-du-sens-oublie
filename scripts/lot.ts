@@ -46,7 +46,7 @@ import { DOSSIER_DATA, formaterErreur } from "./valider-fiches.ts";
  *   contrat, vérifie (en ligne, contrôles, validation, tests) et rend un résumé court.
  * data/ et docs/ ne changent qu'à `clore` : le lot se fait dans atelier/.
  *
- * Usage : npm run lot -- sources|reprendre|clore <mot>… [--modele "Claude Opus 5.5"] [--reflexion élevée]
+ * Usage : npm run lot -- sources|reprendre|clore <mot>… [--modele "DeepSeek Flash"] [--reflexion élevée]
  */
 const RACINE = fileURLToPath(new URL("..", import.meta.url));
 const attendre = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -310,11 +310,11 @@ async function clore(mots: string[], moteur: Moteur): Promise<number> {
 async function principal(): Promise<number> {
   const { values, positionals } = parseArgs({
     allowPositionals: true,
-    options: { modele: { type: "string", default: "Claude Opus 5.5" }, reflexion: { type: "string", default: "élevée" } },
+    options: { modele: { type: "string", default: "DeepSeek Flash" }, reflexion: { type: "string", default: "élevée" } },
   });
   const [commande, ...mots] = positionals;
   if (!["sources", "reprendre", "clore"].includes(commande) || mots.length === 0) {
-    console.log('Usage : npm run lot -- sources|reprendre|clore <mot>… [--modele "Claude Opus 5.5"] [--reflexion élevée]');
+    console.log('Usage : npm run lot -- sources|reprendre|clore <mot>… [--modele "DeepSeek Flash"] [--reflexion élevée]');
     return 1;
   }
   if (commande === "sources") return sources(mots);

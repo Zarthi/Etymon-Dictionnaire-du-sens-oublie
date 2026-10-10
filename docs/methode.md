@@ -47,23 +47,25 @@ qu'une ligne d'état ; `data/` et `docs/` ne bougent qu'à la clôture, et le co
 | Étape | Qui | Quoi |
 |---|---|---|
 | 1 | script : `npm run lot -- sources <mots>` | pour chaque mot, `atelier/<id>/sources.md` : le Littré (famille comprise), le TLFi (plan des sens, étymologie et historique, autres articles), le début des entrées du Lewis & Short et du Bailly pour les formes latines et grecques relevées dans ces étymologies, la recherche de leurs radicaux dans le corpus de réflexe (passages ★ d'abord). Une page non lue est signalée (⚠), jamais prise pour une absence ; reprise après un 429 ou un 503 |
-| 2 | rédacteur (Opus, réflexion élevée) | pour chaque mot : dossier d'après `sources.md` (tri compris), fiche, **lectures traditionnelles** (une étape à part, texte source sous les yeux), dans `atelier/<id>/` ; les auteurs et ouvrages à créer dans `atelier/references.json`, les décisions dans `atelier/decisions.md`, les doutes dans `atelier/signalements.md` ; consigne `docs/consignes/redacteur.md` |
-| 3 | relecteur (Opus, réflexion élevée, neuf) | toutes les fiches du lot, d'après leurs dossiers : un verdict par mot, avec un `remplacement` (`{ champ, valeur }`) quand il sait exactement la phrase à écrire ; consigne `docs/consignes/relecture.md` |
+| 2 | rédacteur (DeepSeek Flash) | pour chaque mot : dossier d'après `sources.md` (tri compris), fiche, **lectures traditionnelles** (une étape à part, texte source sous les yeux), dans `atelier/<id>/` ; les auteurs et ouvrages à créer dans `atelier/references.json`, les décisions dans `atelier/decisions.md`, les doutes dans `atelier/signalements.md` ; consigne `docs/consignes/redacteur.md` |
+| 3 | relecteur (DeepSeek Flash, neuf) | toutes les fiches du lot, d'après leurs dossiers : un verdict par mot, avec un `remplacement` (`{ champ, valeur }`) quand il sait exactement la phrase à écrire ; consigne `docs/consignes/relecture.md` |
 | 4 | script : `npm run lot -- reprendre <mots>` | applique les remplacements à `fiche.json`, essaie chaque fiche (typographie, validation avec le dépôt), marque les remarques `appliquee` ; ce qui reste (remarque sans remplacement, remplacement au chemin faux, essai refusé) va dans `atelier/a-reprendre.md` |
 | 4 bis | rédacteur (repris) | seulement pour `atelier/a-reprendre.md`, puis `reprendre` de nouveau |
-| 5 | vérificateur (Sonnet) | seulement les remarques appliquées et ce qu'elles changent, les lectures et le corpus du dossier ; il réécrit le verdict (`accepte`, ou les remarques restées ouvertes) |
+| 5 | vérificateur (DeepSeek Flash) | seulement les remarques appliquées et ce qu'elles changent, les lectures et le corpus du dossier ; il réécrit le verdict (`accepte`, ou les remarques restées ouvertes) |
 | 6 | script : `npm run lot -- clore <mots>` | écrit les fiches (lectures comprises, en `brouillon`), crée les auteurs et ouvrages de `references.json` d'après leur notice BnF, reporte `decisions.md` en tête de `docs/decisions.md` (section datée), régénère le contrat, lance `verifier:en-ligne` (adresses, citations mot pour mot), `verifier`, `valider` et les tests, et rend un résumé court |
 
 Puis le commit et le push du lot, par l'orchestrateur ; Thibault relit. Une remarque restée ouverte
 après le vérificateur ne relance pas de boucle : le mot sort du lot (la clôture refuse un mot dont
 une remarque est ouverte), reste dans l'atelier et va aux signalements.
 
-Moteurs : **Claude Opus 5.5, réflexion élevée** pour le rédacteur et le relecteur, **Sonnet** pour le
-vérificateur (agents du projet `.claude/agents/etymon-redacteur.md`, `etymon-relecteur.md`,
-`etymon-verificateur.md`). Au premier pilote, les fautes venaient de la rédaction (Fable 5.1,
-réflexion élevée), et les propositions du relecteur (Opus 5.5) étaient sobres et exactes : le travail
-est d'abord de fidélité aux sources, d'où Opus pour juger, et un modèle plus léger pour vérifier ce qui
-a été changé et copié.
+Moteurs : **DeepSeek Flash** pour les trois rôles — rédacteur, relecteur neuf, vérificateur (agents du
+projet `.claude/agents/etymon-redacteur.md`, `etymon-relecteur.md`, `etymon-verificateur.md`, modèle
+`openrouter/~deepseek/deepseek-flash-latest`).
+
+**Modèles : des modèles économiques, jamais un modèle américain cher.** Décision de Thibault
+(2026-10-10) après un lot entièrement rédigé en Claude Opus : n'utiliser que des modèles bon marché
+(DeepSeek Flash), sans exception, et **annoncer le coût estimé du lot avant de le lancer** (§8). Un
+choix plus cher ne se fait que si Thibault le demande lui-même.
 
 Un mot sacré (chemin `sacre`) s'arrête après son dossier : il se rédige à part, texte d'origine
 sous les yeux, avec sa lecture `premier` (une par tradition si elles divergent sur le sens du
@@ -171,7 +173,10 @@ par fiche, même rigueur.
   vingt ; les remplacements se font par script ; la clôture est une seule commande.
 - Peu d'appels d'outil par agent : un agent qui écrit dans `atelier/` et rend une ligne d'état ;
   l'orchestrateur n'ouvre rien et ne relaie rien.
-- Le bon modèle à chaque étape : Opus pour rédiger et pour relire, Sonnet pour vérifier ce qui a changé.
+- Le même modèle économique partout (DeepSeek Flash) : un seul tarif bas, et pas de course au moteur.
+- **Annoncer le coût estimé du lot avant de le lancer** (jetons attendus × tarif du modèle), et
+  l'arrêter ou en réduire la taille s'il dépasse ce que Thibault accepte. Un modèle cher ne se choisit
+  jamais de soi-même.
 - Une session neuve par lot, d'environ 50 mots : le cadrage et les consignes se lisent une fois par agent.
 - `data/` et `docs/` ne bougent pas pendant le lot : le hook de fin de tour qui réclame un commit ne se
   déclenche pas.

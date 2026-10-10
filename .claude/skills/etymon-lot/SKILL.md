@@ -11,6 +11,7 @@ Les mots du lot : `$ARGUMENTS`. La méthode est dans `docs/methode.md` §3 ; AGE
 ## Tes règles
 
 - **Bref.** Tu n'ouvres ni fiche, ni dossier, ni verdict, ni `sources.md` ; tu ne relaies aucun rapport. Chaque agent écrit son résultat dans `atelier/` et ne te rend qu'une ligne d'état ; les scripts te rendent un résumé.
+- **Modèles économiques, coût annoncé.** Rédacteur, relecteur et vérificateur tournent sur **DeepSeek Flash** (`openrouter/~deepseek/deepseek-flash-latest`), jamais un modèle américain cher (Opus, Sonnet, GPT…). **Avant de lancer le lot**, annonce à Thibault le coût estimé (jetons attendus × tarif) et attends son accord.
 - **`data/` et `docs/` ne bougent pas** avant la clôture (sauf `npm run liste`, par le rédacteur, pour une langue ou une tradition qui manque). Pas de commit avant la fin.
 - Plus de 50 mots : traite les 50 premiers, dis le reste dans ton compte rendu.
 - **Lance `sources` par paquets de 10 à 15 mots** : au-delà, le réseau sature (TLFi « injoignable »). Accumule les ⚠ et relance-les **une fois** ; ce qui reste injoignable, le rédacteur le consultera lui-même (`npm run dossier -- --consulter <mot>`, ou le RAG `sources`).
@@ -23,7 +24,7 @@ Les mots du lot : `$ARGUMENTS`. La méthode est dans `docs/methode.md` §3 ; AGE
 3. Agent `etymon-relecteur` (les mots) : un verdict par mot, avec `remplacement` quand il sait la phrase.
 4. `npm run lot -- reprendre <mots>` : applique les remplacements. Si `atelier/a-reprendre.md` existe, reprends le rédacteur (`SendMessage` à l'agent de la passe 1 s'il est encore là, sinon un nouvel `etymon-redacteur`, passe « reprise » : il ne lit que `atelier/a-reprendre.md`), puis relance `npm run lot -- reprendre <mots>` une fois.
 5. Agent `etymon-verificateur` (les mots) : ne contrôle que les remarques appliquées et les lectures ; il réécrit les verdicts. Si des remarques restent ouvertes, `npm run lot -- reprendre <mots>`, et une reprise du rédacteur seulement si `atelier/a-reprendre.md` réapparaît. Pas d'autre boucle : un mot dont une remarque reste ouverte sort du lot et va au compte rendu.
-6. `npm run lot -- clore <mots réglés>` : écrit les fiches (lectures comprises), crée les auteurs et ouvrages de `atelier/references.json`, reporte `atelier/decisions.md` en tête de `docs/decisions.md`, régénère le contrat, lance `verifier:en-ligne`, `verifier`, `valider` et les tests, et rend un résumé. Si les agents ne sont pas Claude Opus 5.5 en réflexion élevée, ajoute `--modele "<modèle>" --reflexion "<niveau>"`.
+6. `npm run lot -- clore <mots réglés>` : écrit les fiches (lectures comprises), crée les auteurs et ouvrages de `atelier/references.json`, reporte `atelier/decisions.md` en tête de `docs/decisions.md`, régénère le contrat, lance `verifier:en-ligne`, `verifier`, `valider` et les tests, et rend un résumé. Le modèle des fiches est DeepSeek Flash (défaut de `clore`) ; ne le change pas pour un modèle cher.
    Une étape en échec (✗) : ne corrige rien toi-même ; note-la dans ton compte rendu.
 
 ## Commit et push

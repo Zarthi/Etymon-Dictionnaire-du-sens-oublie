@@ -60,7 +60,7 @@ export const schemaSourceLecture = z
 export const schemaRedaction = z
   .object({
     par: z.enum(REDACTEURS).describe("IA (moteur d'IA) ou Étymon (Thibault, ou un lecteur via Critique)."),
-    detail: z.string().min(1).describe("Modèle d'IA (« Claude Opus 5.5 ») ou nature de la contribution."),
+    detail: z.string().min(1).describe("Modèle d'IA (« DeepSeek Flash ») ou nature de la contribution."),
     reflexion: z.enum(REFLEXIONS).optional().describe("Niveau de réflexion du modèle d'IA qui a rédigé (basse à maximale)."),
   })
   .strict()

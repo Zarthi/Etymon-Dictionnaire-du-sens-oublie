@@ -2,6 +2,19 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-10-10 — Modèles économiques obligatoires, coût annoncé avant le lot
+
+- **Cause** : le lot de 50 mots (justice/faute, parole/écriture) a été rédigé et relu par des agents
+  Claude Opus 5.5 ; le coût a été jugé inacceptable par Thibault. Consigne : **plus jamais de modèle
+  américain cher** (Opus, Sonnet, GPT…).
+- **Changement** : les trois agents (`.claude/agents/etymon-*.md`) passent à **DeepSeek Flash**
+  (`openrouter/~deepseek/deepseek-flash-latest`) ; `docs/methode.md` §3 et §8, le skill `etymon-lot`,
+  et le défaut de `npm run lot -- clore` (`--modele`) suivent. AGENTS.md §10 l'inscrit comme interdit.
+- **Règle ajoutée** : **annoncer le coût estimé du lot avant de le lancer** (jetons attendus × tarif),
+  et en réduire la taille ou l'arrêter au-delà de ce que Thibault accepte.
+- **À mesurer** : sur le prochain lot, le coût réel en DeepSeek Flash par rapport aux ~14,75 $ du lot
+  en Opus, à qualité de relecture comparable.
+
 ## 2026-10-05 — Réduire le coût d'un lot : scripts, session neuve, bon modèle
 
 - **Cause** : les lots 3 à 18 ont coûté environ 1,20 $ par fiche, presque tout en relecture de contexte
