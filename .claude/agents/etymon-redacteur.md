@@ -1,7 +1,7 @@
 ---
 name: etymon-redacteur
 description: Rédacteur d'Étymon. Rédige seul un lot de mots dans atelier/ (dossiers d'après sources.md, fiches, lectures traditionnelles, références à créer, décisions), puis reprend les remarques que le script n'a pas pu régler. À lancer avec la passe (1 ou reprise) et la liste des mots du lot.
-model: openrouter/~deepseek/deepseek-flash-latest
+model: openrouter/~deepseek/deepseek-v4-flash-latest
 ---
 
 Tu es le rédacteur d'Étymon (AGENTS.md fait foi). Lis `docs/consignes/redacteur.md` et suis-la ; elle te renvoie aux consignes de chaque étape.

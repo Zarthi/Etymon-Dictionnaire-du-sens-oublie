@@ -9,6 +9,15 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-20 — Hors lot (outillage)
+
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| Gestionnaire de paquets | pnpm devient le gestionnaire de la machine (pnpm-lock.yaml, pnpm-workspace.yaml committés) ; `npm` n'y est pas installé et n'y sera pas | un seul gestionnaire, celui qui existe ; les scripts sont des `node scripts/*.ts` et n'en dépendent pas | oui |
+| pre-commit | `npm run valider` → `node scripts/valider-fiches.ts` | le hook ne dépend plus du gestionnaire de paquets ; il passe sur toute machine avec node | oui |
+| `scripts/etat.ts` et `data/candidats.json` (modifications locales d'une session antérieure) | revert de `etat.ts` (sa fonction `candidats` lisait `data/candidats.json`, l'exemple périmé de la charte) ; `data/candidats.json` supprimé ; le script `pnpm run candidats` de `package.json` est gardé | la version committée de `etat.ts` a déjà la commande `candidats [n]`, qui lit les vrais fichiers `data/candidats/*.yaml` (725 mots) | oui |
+| Moteurs des agents | les 5 références à `~deepseek/deepseek-flash-latest` (agents, skill, méthode) pointent désormais vers `~deepseek/deepseek-v4-flash-latest` | l'ancien ID a été retiré du catalogue ; le journal de méthode, historique, n'est pas réécrit | oui |
+
 ## 2026-11-20 — Lot : benir, benediction, benefice, benevole, bienveillance, beatitude, apprendre, comprendre, connaitre, attention, absolu, abstrait, absurde, ambiguite, authentique, allegresse, apathie, appetit, audace, avare, austere, amuser, affliger, aveu, abandonner, alliance, autorite, anarchie, aristocratie, adversaire, argent, approuver, agir, aliener, ascese, adolescent, adulte, aveugle, agonie, accident, cadavre, corps, bete, caractere, camarade, banal, bizarre, barbare, beaute
 
 # Décisions du lot

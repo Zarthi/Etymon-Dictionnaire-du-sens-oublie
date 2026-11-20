@@ -60,7 +60,7 @@ une remarque est ouverte), reste dans l'atelier et va aux signalements.
 
 Moteurs : **DeepSeek Flash** pour les trois rôles — rédacteur, relecteur neuf, vérificateur (agents du
 projet `.claude/agents/etymon-redacteur.md`, `etymon-relecteur.md`, `etymon-verificateur.md`, modèle
-`openrouter/~deepseek/deepseek-flash-latest`).
+`openrouter/~deepseek/deepseek-v4-flash-latest`).
 
 **Modèles : des modèles économiques, jamais un modèle américain cher.** Décision de Thibault
 (2026-10-10) après un lot entièrement rédigé en Claude Opus : n'utiliser que des modèles bon marché

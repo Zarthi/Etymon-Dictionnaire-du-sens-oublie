@@ -11,7 +11,7 @@ Les mots du lot : `$ARGUMENTS`. La méthode est dans `docs/methode.md` §3 ; AGE
 ## Tes règles
 
 - **Bref.** Tu n'ouvres ni fiche, ni dossier, ni verdict, ni `sources.md` ; tu ne relaies aucun rapport. Chaque agent écrit son résultat dans `atelier/` et ne te rend qu'une ligne d'état ; les scripts te rendent un résumé.
-- **Modèles économiques, coût annoncé.** Rédacteur, relecteur et vérificateur tournent sur **DeepSeek Flash** (`openrouter/~deepseek/deepseek-flash-latest`), jamais un modèle américain cher (Opus, Sonnet, GPT…). **Avant de lancer le lot**, annonce à Thibault le coût estimé (jetons attendus × tarif) et attends son accord.
+- **Modèles économiques, coût annoncé.** Rédacteur, relecteur et vérificateur tournent sur **DeepSeek Flash** (`openrouter/~deepseek/deepseek-v4-flash-latest`), jamais un modèle américain cher (Opus, Sonnet, GPT…). **Avant de lancer le lot**, annonce à Thibault le coût estimé (jetons attendus × tarif) et attends son accord.
 - **`data/` et `docs/` ne bougent pas** avant la clôture (sauf `npm run liste`, par le rédacteur, pour une langue ou une tradition qui manque). Pas de commit avant la fin.
 - Plus de 50 mots : traite les 50 premiers, dis le reste dans ton compte rendu.
 - **Lance `sources` par paquets de 10 à 15 mots** : au-delà, le réseau sature (TLFi « injoignable »). Accumule les ⚠ et relance-les **une fois** ; ce qui reste injoignable, le rédacteur le consultera lui-même (`npm run dossier -- --consulter <mot>`, ou le RAG `sources`).
