@@ -1,0 +1,38 @@
+mot: agonie
+nature: [ nom féminin ]
+etymologie:
+  - forme: agonia
+    langue: latin ecclésiastique
+    sens: angoisse, puis angoisse de la mort
+  - forme: ἀγωνία
+    langue: grec ancien
+    sens: lutte, angoisse
+explication: >-
+  Agonie a d'abord nommé, en grec, la lutte : celle des jeux et des concours,
+  puis toute lutte et l'angoisse de l'âme. Le latin chrétien l'a prise pour
+  l'angoisse de la mort ; l'agonie garde du grec la lutte, mais n'est plus que
+  celle contre la fin.
+famille: [ agoniser, agonisant, protagoniste ]
+themes: [ corps, santé ]
+tradition:
+  lectures:
+    - texte: "L'agonie est une espèce de crainte : au troisième mode, celle de ce qui
+        ne peut être prévu, comme les infortunes à venir."
+      citation: Tertio modo, ratione improvisionis, quia scilicet provideri non
+        potest, sicut futura infortunia timentur. Et talis timor dicitur agonia
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 41 a. 4 co.
+          url: https://www.corpusthomisticum.org/sth2040.html
+sources:
+  - ouvrage: littre
+    entree: agonie
+  - ouvrage: bailly
+    entree: ἀγωνία
+  - ouvrage: tlfi
+    entree: agonie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

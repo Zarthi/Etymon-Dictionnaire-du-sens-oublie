@@ -1,0 +1,38 @@
+mot: bénir
+nature: [ verbe ]
+etymologie:
+  - forme: benedicere
+    langue: latin
+    sens: dire du bien de
+    elements:
+      - forme: bene
+        sens: bien
+      - forme: dicere
+        sens: dire
+explication: >-
+  Le sens propre, « dire du bien de quelqu'un », s'est effacé : le latin
+  chrétien a pris benedicere pour « louer Dieu », puis pour « répandre ses
+  bienfaits », puis pour « consacrer par un rite ». Bénir dit aujourd'hui le
+  geste du prêtre qui appelle la protection de Dieu.
+famille: [ bénédiction ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "La bénédiction regarde la multiplication : Dieu dit aux créatures qu'il
+        bénit de croître et de se multiplier."
+      citation: Quia, sicut supra dictum est, benedictio ad multiplicationem pertinet,
+        unde dictum est creaturis quas benedixit, crescite et multiplicamini
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 73 a. 3 co.
+          url: https://www.corpusthomisticum.org/sth1065.html
+sources:
+  - ouvrage: littre
+    entree: bénir
+  - ouvrage: tlfi
+    entree: bénir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

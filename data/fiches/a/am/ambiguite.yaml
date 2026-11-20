@@ -1,0 +1,38 @@
+mot: ambiguïté
+nature: [ nom féminin ]
+etymologie:
+  - forme: ambiguitas
+    langue: latin
+    sens: caractère de ce qui va de deux côtés
+    elements:
+      - forme: ambiguus
+        sens: qui hésite, qui va de deux côtés
+      - forme: -itas
+        sens: qualité abstraite de
+explication: >-
+  Le latin ambiguus, de ambigere, « être indécis, hésiter entre deux », nommait
+  proprement ce qui va de deux côtés à la fois. L'ambiguïté dit aujourd'hui ce
+  qui reçoit plusieurs interprétations ou manque de netteté ; l'idée de
+  mouvement s'est perdue.
+famille: [ ambigu, ambivalence ]
+themes: [ parole, esprit ]
+tradition:
+  lectures:
+    - texte: L'ambiguïté, c'est quand ce qui est écrit paraît signifier deux ou
+        plusieurs choses.
+      citation: Ambiguitas est, cum id, quod scriptum est, duas aut plures res
+        significare videtur
+      sources:
+        - ouvrage: etymologies
+          entree: II, [9]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: littre
+    entree: ambiguité
+  - ouvrage: tlfi
+    entree: ambiguïté
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

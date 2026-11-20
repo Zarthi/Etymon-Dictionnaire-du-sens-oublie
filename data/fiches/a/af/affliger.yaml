@@ -1,0 +1,28 @@
+mot: affliger
+nature: [ verbe ]
+etymologie:
+  - forme: affligere
+    langue: latin
+    sens: jeter à terre, abattre en frappant
+    elements:
+      - forme: ad
+        sens: vers
+      - forme: fligere
+        sens: frapper
+explication: >-
+  Affligere signifiait d'abord, au propre, jeter à terre en frappant : le mot
+  disait le coup qui abat physiquement, puis le mal qui frappe et tourmente,
+  corps et âme. Affliger a perdu la violence du coup : il ne dit plus que la
+  peine, la tristesse profonde.
+famille: [ affliction, affligeant ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: affliger
+  - ouvrage: tlfi
+    entree: affliger
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

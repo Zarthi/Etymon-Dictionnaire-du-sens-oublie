@@ -1,0 +1,28 @@
+mot: bénévole
+nature: [ adjectif, nom ]
+etymologie:
+  - forme: benevolus
+    langue: latin
+    sens: bienveillant, dévoué
+    elements:
+      - forme: bene
+        sens: bien
+      - forme: velle
+        sens: vouloir
+explication: >-
+  Bénévole a d'abord signifié « bienveillant », « animé de dispositions
+  favorables » : le mot disait la volonté bonne. Relégué à l'ironie au
+  dix-huitième siècle, avec le lecteur bénévole, il a été repris au dix-neuvième
+  avec le sens de volontaire, qui agit sans y être tenu.
+famille: [ bénévolement, bienveillance ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: littre
+    entree: bénévole
+  - ouvrage: tlfi
+    entree: bénévole
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

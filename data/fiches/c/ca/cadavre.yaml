@@ -1,0 +1,37 @@
+mot: cadavre
+nature: [ nom masculin ]
+etymologie:
+  - forme: cadaver
+    langue: latin
+    sens: corps d'un homme mort
+explication: >-
+  Le mot s'est étendu au figuré : la ville détruite, puis l'arbre abattu, sont
+  devenus des cadavres.
+famille: [ cadavérique, cadavéreux ]
+themes: [ corps, santé ]
+tradition:
+  lectures:
+    - texte: Le cadavre est ainsi nommé du fait de sa chute, parce qu'il ne peut plus
+        se tenir debout.
+      citation: Cadaver autem est, si insepultum iacet. Nam cadaver nominatum a
+        cadendo, quia iam stare non potest
+      sources:
+        - ouvrage: etymologies
+          entree: XI, [35]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+    - texte: Mais qui ne voit que les cadavres tirent leur nom de cadere, « tomber » ?
+      citation: Quis autem non uideat a cadendo esse appellata cadauera?
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: XX
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XX
+sources:
+  - ouvrage: tlfi
+    entree: cadavre
+  - ouvrage: littre
+    entree: cadavre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

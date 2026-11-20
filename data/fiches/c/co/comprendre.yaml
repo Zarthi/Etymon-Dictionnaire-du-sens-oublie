@@ -1,0 +1,27 @@
+mot: comprendre
+nature: [ verbe ]
+etymologie:
+  - forme: compre(he)ndere
+    langue: latin
+    sens: saisir ensemble, embrasser
+    elements:
+      - forme: cum
+        sens: avec, ensemble
+      - forme: prehendere
+        sens: prendre, saisir
+explication: >-
+  Comprendre a d'abord signifié saisir ensemble, embrasser ; la prise matérielle
+  s'est perdue. Le mot dit aujourd'hui ce qu'un tout contient, et la saisie par
+  la pensée, qui coexistent en français depuis l'origine.
+famille: [ appréhender, compréhension, prendre ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: littre
+    entree: comprendre
+  - ouvrage: tlfi
+    entree: comprendre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,28 @@
+mot: adversaire
+nature: [ nom masculin ]
+etymologie:
+  - forme: adversarius
+    langue: latin
+    sens: qui est tourné contre, opposé
+    elements:
+      - forme: adversus
+        sens: tourné contre, opposé
+      - forme: -arius
+        sens: relatif à, qui est du côté de
+explication: >-
+  Adversarius, c'est celui qui est tourné contre : du participe d'advertere,
+  « tourner vers ». En français, le mot a d'abord nommé le diable, l'adversaire
+  par excellence, avant de désigner l'ennemi, celui du parti opposé sur lequel
+  on veut l'avantage : la forme aversier signifiait le grand ennemi.
+famille: [ adverse, adversité ]
+themes: [ guerre, société ]
+sources:
+  - ouvrage: littre
+    entree: adversaire
+  - ouvrage: tlfi
+    entree: adversaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,24 @@
+mot: camarade
+nature: [ nom masculin, nom féminin ]
+etymologie:
+  - forme: camarada
+    langue: espagnol
+    sens: chambrée, celui qui partage la chambre
+  - forme: cámara
+    langue: espagnol
+    sens: chambre
+explication: >-
+  Camarade, venu de l'espagnol, a d'abord nommé la chambrée, le groupe de
+  soldats qui partageait la même chambre : le camarade, c'est celui de la même
+  chambre. Le mot s'est étendu à tout compagnon, puis aux membres d'un même
+  parti ; il a perdu la chambre pour ne garder que l'égalité des compagnons.
+famille: [ camaraderie ]
+themes: [ famille, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: camarade
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,31 @@
+mot: austère
+nature: [ adjectif ]
+etymologie:
+  - forme: austerus
+    langue: latin
+    sens: sévère, rude
+  - forme: αὐστηρός
+    langue: grec ancien
+    sens: sec, âpre, qui rend la langue sèche
+    elements:
+      - forme: αὖος
+        sens: sec
+      - forme: -τερός
+        sens: comparatif, -âtre
+explication: >-
+  Venu du grec αὐστηρός, le mot a d'abord dit ce qui est âcre, en parlant d'une
+  eau, d'un vin : ce qui rend la langue sèche ; puis, au figuré, ce qui est rude
+  et sévère. Le mot a perdu le contact avec la saveur ; l'austérité d'une
+  boisson âpre est devenue celle d'une vie qui refuse le superflu.
+famille: [ austérité, austèrement ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: austère
+  - ouvrage: bailly
+    entree: αὐστηρός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

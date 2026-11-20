@@ -1,0 +1,36 @@
+mot: adolescent
+nature: [ nom masculin, nom féminin ]
+etymologie:
+  - forme: adolescens
+    langue: latin
+    sens: celui qui grandit
+    elements:
+      - forme: adolescere
+        sens: croître, grandir
+      - forme: -ens
+        sens: participant à
+explication: >-
+  Le mot a gardé le grandissement, mais l'a fixé à un âge précis : l'adolescent
+  est celui qui grandit encore, entre l'enfance et l'âge adulte.
+famille: [ adolescence, adulte ]
+themes: [ famille, corps ]
+tradition:
+  lectures:
+    - texte: L'adolescent est ainsi nommé parce qu'il est apte à engendrer, ayant
+        grandi, ou parce qu'il croît et s'accroît.
+      citation: Adolescens dictus, eo quod sit ad gignendum adultus, sive a crescere
+        et augeri
+      sources:
+        - ouvrage: etymologies
+          entree: XI, [15]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: littre
+    entree: adolescent
+  - ouvrage: tlfi
+    entree: adolescent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

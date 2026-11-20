@@ -1,0 +1,32 @@
+mot: bénédiction
+nature: [ nom féminin ]
+etymologie:
+  - forme: benedictio
+    langue: latin ecclésiastique
+    sens: grâce accordée par Dieu
+explication: >-
+  Le mot latin nommait d'abord la grâce que Dieu accorde, puis l'acte rituel qui
+  l'appelle. L'usage a affaibli bénédiction en approbation, souvent seulement
+  verbale, donnée à un projet sans y prendre part.
+famille: [ bénir ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "La bénédiction regarde la multiplication : Dieu dit aux créatures qu'il
+        bénit de croître et de se multiplier."
+      citation: Quia, sicut supra dictum est, benedictio ad multiplicationem pertinet,
+        unde dictum est creaturis quas benedixit, crescite et multiplicamini
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 73 a. 3 co.
+          url: https://www.corpusthomisticum.org/sth1065.html
+sources:
+  - ouvrage: littre
+    entree: bénédiction
+  - ouvrage: tlfi
+    entree: bénédiction
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

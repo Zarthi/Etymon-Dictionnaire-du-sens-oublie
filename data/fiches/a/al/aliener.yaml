@@ -1,0 +1,28 @@
+mot: aliéner
+nature: [ verbe ]
+etymologie:
+  - forme: alienare
+    langue: latin
+    sens: rendre étranger, faire passer à un autre
+    elements:
+      - forme: alienus
+        sens: d'autrui, étranger
+      - forme: -are
+        sens: "verbe : rendre"
+explication: >-
+  Aliéner, c'est rendre alienus, autre, étranger : le mot disait d'abord, en
+  droit, faire passer une propriété à un autre, et, déjà en latin, éloigner,
+  rendre hostile, jusqu'à priver de raison. L'aliénation mentale conserve ce
+  sens propre d'être devenu autre, étranger à soi.
+famille: [ aliénation, aliéné, aliéniste ]
+themes: [ droit, esprit ]
+sources:
+  - ouvrage: littre
+    entree: aliéner
+  - ouvrage: tlfi
+    entree: aliéner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

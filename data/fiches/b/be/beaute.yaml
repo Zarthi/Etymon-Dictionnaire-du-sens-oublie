@@ -1,0 +1,29 @@
+mot: beauté
+nature: [ nom féminin ]
+etymologie:
+  - forme: beauté
+    langue: français
+    sens: caractère de ce qui est beau, qualité d'une personne belle
+  - forme: bel
+    langue: français
+explication: >-
+  Le mot a d'abord dit, en 1100, la qualité d'une personne belle, avant de dire
+  le caractère de ce qui plaît universellement.
+ecartees:
+  - forme: bellitatem
+    langue: latin
+    sens: beauté
+    raison: Mot latin non attesté dans les textes (Littré) ; le TLFi ne le retient
+      pas et dérive beauté de bel, beau.
+famille: [ beau, embellir ]
+themes: [ émotions, esprit ]
+sources:
+  - ouvrage: littre
+    entree: beauté
+  - ouvrage: tlfi
+    entree: beauté
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

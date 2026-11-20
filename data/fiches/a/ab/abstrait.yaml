@@ -1,0 +1,34 @@
+mot: abstrait
+nature: [ adjectif ]
+etymologie:
+  - forme: abstractus
+    langue: latin
+    sens: détaché, séparé de la matière
+explication: >-
+  Abstrait vient d'abstrahere, « tirer hors de, détacher » : en latin déjà, la
+  quantité abstraite est celle qu'on sépare par l'intellect de la matière. Le
+  mot a gardé ce détachement, et il l'a appliqué de la pensée à la peinture :
+  l'art abstrait est celui qui s'est détaché de la figure.
+famille: [ abstraction, abstraire ]
+themes: [ esprit, savoir ]
+tradition:
+  lectures:
+    - texte: La quantité abstraite est celle que nous séparons par l'intellect de la
+        matière et des accidents, pour ne la traiter que par le raisonnement.
+      citation: Abstracta enim quantitas dicitur, quam intellectu a materia
+        separantes, vel ab aliis accidentibus, ut est par, inpar, vel ab
+        huiuscemodi, in sola ratiocinatione tractamus
+      sources:
+        - ouvrage: etymologies
+          entree: II, [14]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: littre
+    entree: abstrait
+  - ouvrage: tlfi
+    entree: abstrait
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

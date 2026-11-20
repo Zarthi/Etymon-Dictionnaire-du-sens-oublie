@@ -1,0 +1,34 @@
+mot: bête
+nature: [ nom féminin, adjectif ]
+etymologie:
+  - forme: bestia
+    langue: latin
+    sens: bête fauve, animal
+explication: >-
+  Bestia a d'abord nommé la bête fauve, l'animal sauvage. En français, bête a
+  désigné l'animal, puis l'homme qui n'a pas d'esprit : l'adjectif a pris le pas
+  sur le nom.
+famille: [ bestial, bêtise, bestiole ]
+themes: [ corps, société ]
+tradition:
+  lectures:
+    - texte: "Les bêtes sont ainsi nommées de la force par laquelle elles sévissent :
+        le nom convient proprement aux lions, aux panthères, aux tigres et aux
+        loups, qui font rage par la gueule ou les griffes."
+      citation: Bestiarum vocabulum proprie convenit leonibus, pardis, tigribus, lupis
+        et vulpibus canibusque et simiis ac ceteris, quae vel ore vel unguibus
+        saeviunt, exceptis serpentibus. Bestiae dictae a vi, qua saeviunt
+      sources:
+        - ouvrage: etymologies
+          entree: XII, [1]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XII
+sources:
+  - ouvrage: littre
+    entree: bête
+  - ouvrage: tlfi
+    entree: bête
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

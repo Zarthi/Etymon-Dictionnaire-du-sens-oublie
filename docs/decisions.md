@@ -9,6 +9,18 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-20 — Lot : benir, benediction, benefice, benevole, bienveillance, beatitude, apprendre, comprendre, connaitre, attention, absolu, abstrait, absurde, ambiguite, authentique, allegresse, apathie, appetit, audace, avare, austere, amuser, affliger, aveu, abandonner, alliance, autorite, anarchie, aristocratie, adversaire, argent, approuver, agir, aliener, ascese, adolescent, adulte, aveugle, agonie, accident, cadavre, corps, bete, caractere, camarade, banal, bizarre, barbare, beaute
+
+# Décisions du lot
+
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| Moteur du lot | `~deepseek/deepseek-flash-latest` n'existe plus dans le catalogue : les trois agents ont tourné sur `~deepseek/deepseek-v4-flash-latest` (DeepSeek V4 Flash, 0,044 $/M entrée, 0,132 $/M sortie) | le modèle nommé dans les agents (.claude/agents/etymon-*.md) a été retiré du catalogue ; même famille, tarif inférieur | oui |
+| `pnpm run dossier -- --consulter <mot>` | le `--` de pnpm fait passer `--consulter` comme un mot : utiliser `node --use-env-proxy scripts/dossier.ts --consulter <mot>` | la commande des consignes, écrite pour npm, transite mal par pnpm | oui |
+| Latin chrétien (bénédiction, béatitude, agonie) | marquer la langue « latin ecclésiastique » dans les fiches, comme ange et alléluia | liste fermée des langues ; cohérence avec les fiches existantes | oui |
+| ascèse | chemin `recent` (mot absent du Littré, attesté en 1890), étymon grec lu au Bailly | le TLFi suffit pour un mot postérieur à 1872 | non |
+| bénédiction / bénéfice / bénévole / bienveillance / bénir | famille *bene-* rédigée au fil des maillons, chacune avec sa source | homogénéité du lot : même radical, formes différentes (dicere, facere, velle) | oui |
+
 ## 2026-10-10 — Lot : juge, justice, juste, tribunal, procès, crime, coupable, punir, sanction, grâce, pardon, clémence, équité, tort, faute, condamner, absoudre, accuser, défendre, témoin, arbitre, magistrat, avocat, préjugé, offense, vengeance, langue, écrire, lettre, texte, poème, poète, traduire, métaphore, allégorie, symbole, style, roman, théâtre, éloquence, interpréter, révéler, logique, analyse, argument, concept, entendre, convaincre, persuader, question
 
 | Sujet | Décision | Raison | Relecture |

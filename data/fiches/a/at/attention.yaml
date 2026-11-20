@@ -1,0 +1,22 @@
+mot: attention
+nature: [ nom féminin ]
+etymologie:
+  - forme: attentio
+    langue: latin
+    sens: tension de l'esprit vers quelque chose
+explication: >-
+  Le latin attentio nommait l'action de tendre l'esprit vers un objet, du verbe
+  attendere, « tendre vers ». Le mot garde cette direction, mais il a glissé de
+  la tension de l'esprit vers le soin, la prévenance envers quelqu'un.
+famille: [ attentif, attentionné ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: littre
+    entree: attention
+  - ouvrage: tlfi
+    entree: attention
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

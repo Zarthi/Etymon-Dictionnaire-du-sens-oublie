@@ -1,0 +1,28 @@
+mot: approuver
+nature: [ verbe ]
+etymologie:
+  - forme: approbare
+    langue: latin
+    sens: trouver bon après examen
+    elements:
+      - forme: ad
+        sens: vers
+      - forme: probare
+        sens: éprouver, juger bon, prouver
+explication: >-
+  Approuver, c'est d'abord prouver : le latin approbare, de probare, « éprouver
+  la valeur de », signifiait juger bon après examen, et à l'origine, en
+  français, démontrer par preuve. Le mot a perdu l'examen : approuver, c'est
+  aujourd'hui trouver bon, souvent avant tout examen.
+famille: [ approbation, prouver, preuve ]
+themes: [ parole, société ]
+sources:
+  - ouvrage: littre
+    entree: approuver
+  - ouvrage: tlfi
+    entree: approuver
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

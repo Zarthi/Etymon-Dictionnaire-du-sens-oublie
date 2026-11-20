@@ -1,0 +1,34 @@
+mot: authentique
+nature: [ adjectif ]
+etymologie:
+  - forme: authenticus
+    langue: latin
+  - forme: αὐθεντικός
+    langue: grec ancien
+    sens: qui consiste en un pouvoir absolu
+    elements:
+      - forme: αὐθέντης
+        sens: qui agit par soi-même, maître absolu
+      - forme: -ικός
+        sens: relatif à
+explication: >-
+  Authentique remonte à αὐθέντης, contraction d'αὐτοέντης, de αὐτός, « même »,
+  et ἐντός, « au dedans ». Le mot nommait l'autorité de celui qui agit de sa
+  propre main : de là l'acte authentique, qui fait foi par lui-même, et la
+  personne vraie, fidèle à ce qu'elle est.
+famille: [ authenticité, authentifier ]
+themes: [ parole, esprit ]
+sources:
+  - ouvrage: littre
+    entree: authentique
+  - ouvrage: bailly
+    entree: αὐθεντικός
+  - ouvrage: bailly
+    entree: αὐθέντης
+  - ouvrage: tlfi
+    entree: authentique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

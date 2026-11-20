@@ -1,0 +1,30 @@
+mot: amuser
+nature: [ verbe ]
+etymologie:
+  - forme: amuser
+    langue: français
+    sens: faire s'attarder, retenir
+  - forme: muser
+    langue: français
+    sens: s'attarder, flâner, perdre son temps
+explication: >-
+  Amuser, c'est d'abord faire muser, faire s'attarder : en 1167, le mot se dit
+  « repaître de vaines espérances, abuser » — amuser l'ennemi, c'est le tromper
+  par des lenteurs. Ce qui retient et fait perdre son temps est devenu ce qui
+  divertit agréablement ; l'idée d'attente et de ruse s'est perdue.
+famille: [ amusant, amusement, musarder ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: amuser
+  - ouvrage: littre
+    entree: muser
+  - ouvrage: tlfi
+    entree: amuser
+  - ouvrage: tlfi
+    entree: muser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

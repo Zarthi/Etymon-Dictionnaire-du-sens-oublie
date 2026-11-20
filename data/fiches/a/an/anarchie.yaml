@@ -1,0 +1,30 @@
+mot: anarchie
+nature: [ nom féminin ]
+etymologie:
+  - forme: ἀναρχία
+    langue: grec ancien
+    sens: absence de chef, état d'un peuple sans chef
+    elements:
+      - forme: ἀν-
+        sens: privatif, sans
+      - forme: ἀρχή
+        sens: commandement, pouvoir
+explication: >-
+  Anarchie est le nom grec de l'absence d'ἀρχή, de commandement : l'état d'un
+  peuple sans chef. Le grec le disait déjà en mauvaise part, manque de chef ou
+  d'autorité ; le français l'a pris au sens de désordre, de confusion née du
+  manque de pouvoir et de règles.
+famille: [ anarchiste, anarchique, archonte ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: littre
+    entree: anarchie
+  - ouvrage: bailly
+    entree: ἀναρχία
+  - ouvrage: tlfi
+    entree: anarchie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

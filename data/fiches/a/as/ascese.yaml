@@ -1,0 +1,28 @@
+mot: ascèse
+nature: [ nom féminin ]
+etymologie:
+  - forme: ἄσκησις
+    langue: grec ancien
+    sens: exercice, pratique, entraînement
+    elements:
+      - forme: ἀσκεῖν
+        sens: exercer, pratiquer, travailler
+      - forme: -σις
+        sens: action de
+explication: >-
+  Ascèse, mot grec apparu en français en 1890, nommait d'abord l'exercice,
+  l'entraînement : celui de l'athlète aux jeux, puis le genre de vie des
+  philosophes. Le mot a appliqué le travail du corps à l'âme : la discipline que
+  la volonté s'impose pour tendre vers un idéal.
+famille: [ ascétique, ascète ]
+themes: [ morale, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: ascèse
+  - ouvrage: bailly
+    entree: ἄσκησις
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

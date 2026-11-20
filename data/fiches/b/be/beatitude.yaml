@@ -1,0 +1,33 @@
+mot: béatitude
+nature: [ nom féminin ]
+etymologie:
+  - forme: beatitudo
+    langue: latin ecclésiastique
+    sens: bonheur parfait
+explication: >-
+  Beatitudo disait l'état de celui qui est beatus, « heureux » ; le latin
+  chrétien en a fait le bonheur parfait des élus dans la vision de Dieu. L'usage
+  courant a élargi le mot à toute félicité ; les huit béatitudes ont nommé les
+  vertus exaltées par le Christ dans le Sermon sur la Montagne.
+famille: [ béat, béatifier ]
+themes: [ religion, émotions ]
+tradition:
+  lectures:
+    - texte: Sous le nom de béatitude, on n'entend rien d'autre que le bien parfait de
+        la nature intellectuelle.
+      citation: Nihil enim aliud sub nomine beatitudinis intelligitur, nisi bonum
+        perfectum intellectualis naturae
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 26 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth1015.html
+sources:
+  - ouvrage: littre
+    entree: béatitude
+  - ouvrage: tlfi
+    entree: béatitude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

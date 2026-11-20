@@ -1,0 +1,30 @@
+mot: allégresse
+nature: [ nom féminin ]
+etymologie:
+  - forme: allègre
+    langue: français
+    sens: vif, gai
+  - forme: alacer
+    langue: latin
+    sens: vif, gai
+explication: >-
+  Allégresse est le nom de l'état d'allègre, celui qui est vif et gai, de
+  vigueur comme de joie : au xvie s., on courait encore avec allégresse,
+  c'est-à-dire avec agilité. Le mot a restreint cette vigueur à la joie vive,
+  bruyante et collective.
+famille: [ allègre ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: allègre
+  - ouvrage: tlfi
+    entree: allégresse
+  - ouvrage: littre
+    entree: allégresse
+  - ouvrage: tlfi
+    entree: allègre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

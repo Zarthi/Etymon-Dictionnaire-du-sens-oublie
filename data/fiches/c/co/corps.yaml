@@ -1,0 +1,35 @@
+mot: corps
+nature: [ nom masculin ]
+etymologie:
+  - forme: corpus
+    langue: latin
+    sens: corps, matière
+explication: >-
+  Corpus disait d'abord l'organisme de l'être vivant, par opposition à l'âme ;
+  le mot a étendu le corps de chair aux corps de métier et d'armée, puis à tout
+  objet matériel.
+famille: [ corporel, corpulence, corporation ]
+renvois: [ cadavre ]
+themes: [ corps ]
+tradition:
+  lectures:
+    - texte: Le corps est ainsi nommé de la corruption ; la chair, de carendo, «
+        manquer », ou de cadendo, « tomber ».
+      citation: Dictum autem corpus a corruptione, et caro a carendo, vel a cadendo
+      sources:
+        - ouvrage: differences
+          entree: 116. Inter Corpus et carnem
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: corps
+  - ouvrage: tlfi
+    entree: corps
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

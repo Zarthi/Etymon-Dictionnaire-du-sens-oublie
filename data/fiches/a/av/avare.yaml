@@ -1,0 +1,32 @@
+mot: avare
+nature: [ adjectif ]
+etymologie:
+  - forme: avarus
+    langue: latin
+    sens: avide d'argent
+explication: >-
+  Avare dit celui qui désire : l'avare est d'abord l'avide d'argent. Le mot dit
+  aujourd'hui la passion d'amasser et de retenir sans en faire usage, et le
+  chiche qui ne donne rien ; l'idée de désir s'est perdue.
+famille: [ avarice ]
+themes: [ argent, morale ]
+tradition:
+  lectures:
+    - texte: "L'avare est ainsi nommé parce qu'il est avide d'or : jamais les
+        richesses ne le rassasient, et plus il a, plus il désire."
+      citation: Avarus ex eo dictus, quod sit avidus auri, et numquam opibus
+        expleatur, et quantum plus habuerit tantum plus cupiat
+      sources:
+        - ouvrage: etymologies
+          entree: X, [9]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: avare
+  - ouvrage: tlfi
+    entree: avare
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

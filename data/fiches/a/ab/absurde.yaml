@@ -1,0 +1,29 @@
+mot: absurde
+nature: [ adjectif ]
+etymologie:
+  - forme: absurdus
+    langue: latin
+    sens: qui sonne mal, dissonant
+explication: >-
+  Absurdus a d'abord qualifié une voix fausse, dissonante ; de la dissonance on
+  est passé à ce qui choque la raison, hors de mise.
+ecartees:
+  - forme: surdus
+    langue: latin
+    sens: sourd
+    raison: "le Littré écarte ab + surdus : absurdus a le même sens qu'absonus,
+      « qui sonne mal », et l'on ne voit pas comment « sourd » pourrait
+      signifier absurde."
+    populaire: true
+famille: [ absurdité, absurdement ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: absurde
+  - ouvrage: littre
+    entree: absurde
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

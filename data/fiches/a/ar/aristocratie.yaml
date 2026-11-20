@@ -1,0 +1,30 @@
+mot: aristocratie
+nature: [ nom féminin ]
+etymologie:
+  - forme: ἀριστοκρατία
+    langue: grec ancien
+    sens: gouvernement des meilleurs
+    elements:
+      - forme: ἄριστος
+        sens: le meilleur, le plus noble
+      - forme: κρατεῖν
+        sens: avoir le pouvoir, être fort
+explication: >-
+  D'ἄριστος, le superlatif de « bon », le mot a glissé de la valeur au sang :
+  l'aristocratie désigne aujourd'hui le gouvernement des nobles, puis la classe
+  des privilégiés, dont la valeur n'est plus en cause.
+famille: [ aristocrate, aristocratique ]
+renvois: [ anarchie ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: littre
+    entree: aristocratie
+  - ouvrage: bailly
+    entree: ἀριστοκρατία
+  - ouvrage: tlfi
+    entree: aristocratie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: absolu
+nature: [ adjectif ]
+etymologie:
+  - forme: absolutus
+    langue: latin
+    sens: achevé, parfait
+explication: >-
+  Absolutus, participe passé d'absolvere, « délier », disait ce qui est mené à
+  son terme, parfait : la France de Roland est asolue, parfaite et sainte. Le
+  pouvoir qui n'admet aucune limite a pris ce nom ; ce qui est achevé n'a plus
+  rien qui le borne.
+famille: [ absoudre, absolution ]
+themes: [ politique, esprit ]
+sources:
+  - ouvrage: littre
+    entree: absolu
+  - ouvrage: tlfi
+    entree: absolu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

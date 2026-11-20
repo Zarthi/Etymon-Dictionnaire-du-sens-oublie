@@ -1,0 +1,28 @@
+mot: aveu
+nature: [ nom masculin ]
+etymologie:
+  - forme: avouer
+    langue: français
+    sens: reconnaître pour seigneur
+  - forme: advocare
+    langue: latin
+    sens: appeler à soi, convoquer
+explication: >-
+  Avouer, c'était à l'origine reconnaître pour seigneur celui dont on tient un
+  fief ; l'aveu, c'était cet acte féodal d'allégeance, puis l'approbation qui
+  autorise. Le mot a glissé vers la confession : avouer, c'est révéler sur soi
+  la vérité qu'on cachait.
+famille: [ avouer, désaveu, avocat ]
+themes: [ parole, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: avouer
+  - ouvrage: tlfi
+    entree: aveu
+  - ouvrage: littre
+    entree: aveu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

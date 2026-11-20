@@ -1,0 +1,35 @@
+mot: aveugle
+nature: [ adjectif, nom ]
+etymologie:
+  - forme: ab oculis
+    langue: latin
+    sens: sans yeux, privé de la vue
+    elements:
+      - forme: ab
+        sens: sans (privation)
+      - forme: oculus
+        sens: œil
+explication: >-
+  Aveugle est venu du bas latin ab oculis, « sans yeux, privé de la vue » : la
+  locution disait la privation. Le mot s'est étendu à ce qui ne voit pas par
+  l'esprit : l'amour et la foi aveugles ont perdu la vue sans que les yeux y
+  soient pour rien.
+ecartees:
+  - forme: ἀπ' ὀμμάτων
+    langue: grec ancien
+    sens: sans yeux
+    raison: Hypothèse moins vraisemblable (Diez, Löfstedt) d'un calque du grec
+      tardif ; l'ellipse de orbus ab oculis, « privé des yeux », l'emporte selon
+      Rohlfs.
+famille: [ aveugler, aveuglement ]
+themes: [ corps, esprit ]
+sources:
+  - ouvrage: littre
+    entree: aveugle
+  - ouvrage: tlfi
+    entree: aveugle
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

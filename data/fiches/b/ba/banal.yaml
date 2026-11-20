@@ -1,0 +1,25 @@
+mot: banal
+nature: [ adjectif ]
+etymologie:
+  - forme: banal
+    langue: français
+    sens: soumis au ban, à la banalité
+  - forme: ban
+    langue: français
+explication: >-
+  Ce qui est banal est d'abord ce qui appartient au ban, au pouvoir du
+  seigneur : le four banal, le moulin banal, que les sujets devaient utiliser
+  contre redevance. Le mot a gardé la disposition commune : banal est ce qui est
+  à la portée de tous, puis ce qui est éculé, sans originalité.
+famille: [ banalité, banaliser ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: banal
+  - ouvrage: littre
+    entree: banal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

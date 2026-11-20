@@ -1,0 +1,28 @@
+mot: connaître
+nature: [ verbe ]
+etymologie:
+  - forme: cognoscere
+    langue: latin
+    sens: apprendre à connaître, connaître
+    elements:
+      - forme: cum
+        sens: avec, ensemble
+      - forme: gnoscere
+        sens: connaître
+explication: >-
+  Le latin cognoscere, de gnoscere, « connaître », signifiait aussi
+  « reconnaître » et, dans la langue biblique, « avoir commerce charnel avec ».
+  Le couple connaître, reconnaître s'est maintenu ; le mot a perdu ce sens
+  charnel et l'idée d'apprendre à connaître.
+famille: [ connaissance, reconnaître, méconnaître ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: littre
+    entree: connaître
+  - ouvrage: tlfi
+    entree: connaître
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

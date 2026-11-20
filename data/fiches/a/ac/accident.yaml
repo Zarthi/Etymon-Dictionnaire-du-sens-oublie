@@ -1,0 +1,28 @@
+mot: accident
+nature: [ nom masculin ]
+etymologie:
+  - forme: accidens
+    langue: latin
+    sens: ce qui arrive, événement fortuit
+    elements:
+      - forme: accidere
+        sens: tomber sur, survenir, advenir
+      - forme: -ens
+        sens: participant à
+explication: >-
+  Accidens disait ce qui arrive, l'événement fortuit, funeste ; le latin en a
+  fait le terme de philosophie : ce qui arrive à un être sans lui appartenir par
+  essence, comme la couleur dans le corps. Aujourd'hui le mot dit l'événement
+  fâcheux, imprévu, qui survient.
+famille: [ accidentel, accidenté ]
+themes: [ corps, société ]
+sources:
+  - ouvrage: littre
+    entree: accident
+  - ouvrage: tlfi
+    entree: accident
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

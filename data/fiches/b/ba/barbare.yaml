@@ -1,0 +1,26 @@
+mot: barbare
+nature: [ adjectif, nom ]
+etymologie:
+  - forme: barbarus
+    langue: latin
+    sens: étranger
+  - forme: βάρβαρος
+    langue: grec ancien
+    sens: étranger, non grec
+explication: >-
+  Barbare était, chez les Grecs, celui dont la langue n'était pas
+  compréhensible : βάρβαρος imitait le bredouillement des étrangers. Il
+  désignait les non-Grecs, sans jugement de cruauté ; il dit aujourd'hui l'homme
+  cruel, sans humanité, et ce qui est inculte, grossier.
+famille: [ barbarie, barbarisme, barbaresque ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: barbare
+  - ouvrage: bailly
+    entree: βάρβαρος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,22 @@
+mot: audace
+nature: [ nom féminin ]
+etymologie:
+  - forme: audacia
+    langue: latin
+    sens: hardiesse
+explication: >-
+  L'audace est d'abord la hardiesse qui se risque, en bonne part. Le mot a
+  glissé, dès le latin, du courage à l'insolence ; l'audace qu'on critique est
+  celle qui ne connaît plus de borne.
+famille: [ audacieux, audacieusement ]
+themes: [ émotions, société ]
+sources:
+  - ouvrage: littre
+    entree: audace
+  - ouvrage: tlfi
+    entree: audace
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

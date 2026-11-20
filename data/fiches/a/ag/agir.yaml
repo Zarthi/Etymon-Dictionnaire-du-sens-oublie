@@ -1,0 +1,22 @@
+mot: agir
+nature: [ verbe ]
+etymologie:
+  - forme: agere
+    langue: latin
+    sens: pousser devant soi, mener, faire
+explication: >-
+  Le latin agere disait pousser devant soi, mener, mettre en mouvement. L'idée
+  de mouvement s'est affaiblie : agir dit aujourd'hui se comporter, exercer une
+  influence, produire un effet.
+famille: [ acte, action, agent ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: agir
+  - ouvrage: tlfi
+    entree: agir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

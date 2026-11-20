@@ -1,0 +1,28 @@
+mot: bénéfice
+nature: [ nom masculin ]
+etymologie:
+  - forme: beneficium
+    langue: latin
+    sens: bienfait
+    elements:
+      - forme: bene
+        sens: bien
+      - forme: facere
+        sens: faire
+explication: >-
+  Beneficium a d'abord nommé le bienfait : le mot disait ce qu'on reçoit, non le
+  gain. Le latin médiéval en a fait une terre concédée en échange d'un service ;
+  le sens de gain, profit, n'apparaît qu'à la fin du xviie s. et domine
+  aujourd'hui.
+famille: [ bénéficier, bénéficiaire ]
+themes: [ argent ]
+sources:
+  - ouvrage: littre
+    entree: bénéfice
+  - ouvrage: tlfi
+    entree: bénéfice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

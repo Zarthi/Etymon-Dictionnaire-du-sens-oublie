@@ -1,0 +1,28 @@
+mot: apprendre
+nature: [ verbe ]
+etymologie:
+  - forme: apprehendere
+    langue: latin
+    sens: prendre, saisir
+    elements:
+      - forme: ad
+        sens: vers, à
+      - forme: prehendere
+        sens: prendre, saisir
+explication: >-
+  Le latin apprehendere disait la prise, « saisir » ; le bas latin l'a employé
+  pour « saisir par l'esprit ». Le français n'a gardé que cette saisie
+  intellectuelle : étudier, recevoir un enseignement, puis être informé de
+  quelque chose.
+famille: [ appréhender, apprentissage ]
+themes: [ savoir ]
+sources:
+  - ouvrage: littre
+    entree: apprendre
+  - ouvrage: tlfi
+    entree: apprendre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

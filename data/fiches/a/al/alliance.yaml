@@ -1,0 +1,31 @@
+mot: alliance
+nature: [ nom féminin ]
+etymologie:
+  - forme: allier
+    langue: français
+    sens: lier, unir
+  - forme: alligare
+    langue: latin
+    sens: lier à
+    elements:
+      - forme: ad
+        sens: vers, à
+      - forme: ligare
+        sens: lier
+explication: >-
+  Alliance est le nom de ce qui unit : il remonte au latin alligare, « lier à ».
+  Le mot a étendu le lien de deux familles par le mariage — l'alliance qu'on
+  porte au doigt — au pacte des peuples et à l'Alliance de Dieu avec les
+  hommes : le mot dit toujours le lien.
+famille: [ allier, allié ]
+themes: [ famille, politique ]
+sources:
+  - ouvrage: littre
+    entree: alliance
+  - ouvrage: tlfi
+    entree: alliance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

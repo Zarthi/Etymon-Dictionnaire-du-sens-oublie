@@ -1,0 +1,23 @@
+mot: autorité
+nature: [ nom féminin ]
+etymologie:
+  - forme: auctoritas
+    langue: latin
+    sens: garantie, crédit
+explication: >-
+  Auctoritas vient d'auctor, « celui qui fait, qui fonde » : le mot disait le
+  crédit de celui qui a créé ou garanti. Le mot a d'abord nommé, en français,
+  l'Écriture qui fait autorité, puis le pouvoir d'imposer l'obéissance.
+  L'autorité a oublié son auteur : elle fait obéir, sans dire qui fonde.
+famille: [ auteur, autoriser, autoritaire ]
+themes: [ société, politique ]
+sources:
+  - ouvrage: littre
+    entree: autorité
+  - ouvrage: tlfi
+    entree: autorité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

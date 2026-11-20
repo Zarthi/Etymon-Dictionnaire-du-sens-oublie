@@ -1,0 +1,26 @@
+mot: adulte
+nature: [ adjectif, nom masculin ]
+etymologie:
+  - forme: adultus
+    langue: latin
+    sens: qui a grandi, parvenu à son terme
+    elements:
+      - forme: adolescere
+        sens: croître, grandir
+      - forme: -tus
+        sens: participe passé
+explication: >-
+  Le mot a d'abord dit celui qui est parvenu au terme de l'enfance ; l'âge
+  adulte vaut aujourd'hui pour le corps et pour l'esprit.
+famille: [ adolescence, adolescent ]
+themes: [ famille, corps ]
+sources:
+  - ouvrage: littre
+    entree: adulte
+  - ouvrage: tlfi
+    entree: adulte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

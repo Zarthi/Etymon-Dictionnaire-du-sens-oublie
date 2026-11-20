@@ -1,0 +1,25 @@
+mot: abandonner
+nature: [ verbe ]
+etymologie:
+  - forme: abandonner
+    langue: français
+    sens: mettre à disposition, laisser au pouvoir de
+  - forme: abandon
+    langue: français
+explication: >-
+  Abandonner, c'était d'abord mettre à disposition, laisser au pouvoir de : le
+  cheval abandonné est lâché, la bride sur le cou, et s'abandonner au danger,
+  c'est s'y exposer tout entier. Le mot a perdu cette force ; abandonner
+  quelqu'un, aujourd'hui, c'est le délaisser.
+famille: [ abandon, abandonné ]
+themes: [ émotions, société ]
+sources:
+  - ouvrage: tlfi
+    entree: abandonner
+  - ouvrage: littre
+    entree: abandonner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

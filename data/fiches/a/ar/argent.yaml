@@ -1,0 +1,24 @@
+mot: argent
+nature: [ nom masculin ]
+etymologie:
+  - forme: argentum
+    langue: latin
+    sens: le métal blanc et brillant
+explication: >-
+  Argentum nommait le métal blanc et brillant ; le mot s'est étendu à la monnaie
+  frappée dans ce métal, puis à toute monnaie, puis à la richesse elle-même, qui
+  n'a plus rien de blanc ni de brillant.
+famille: [ argenter, argentin, argenterie ]
+themes: [ argent ]
+sources:
+  - ouvrage: littre
+    entree: argent
+  - ouvrage: tlfi
+    entree: argent
+  - ouvrage: bailly
+    entree: ἀργός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

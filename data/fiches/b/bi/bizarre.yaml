@@ -1,0 +1,23 @@
+mot: bizarre
+nature: [ adjectif ]
+etymologie:
+  - forme: bizzarro
+    langue: italien
+    sens: coléreux, puis extravagant
+explication: >-
+  Bizarre a d'abord signifié coléreux, emporté : le mot disait la mauvaise
+  humeur, non l'étrangeté. L'italien l'a appliqué à ce qui est extravagant,
+  singulier, et le français en a fait l'étrangeté de ce qui s'écarte de
+  l'ordinaire.
+famille: [ bizarrerie, bizarrement ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: bizarre
+  - ouvrage: littre
+    entree: bizarre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

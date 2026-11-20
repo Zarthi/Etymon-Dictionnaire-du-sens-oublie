@@ -1,0 +1,23 @@
+mot: appétit
+nature: [ nom masculin ]
+etymologie:
+  - forme: appetitus
+    langue: latin
+    sens: vif désir
+explication: >-
+  Le latin appetitus nommait le vif désir, l'élan qui pousse vers un objet, sans
+  le limiter à la table : appétit sensitif, en philosophie, désir amoureux,
+  désir de manger. L'usage courant a resserré le mot sur la faim ; l'appétit de
+  gloire garde l'élan du désir.
+famille: [ appéter, appétence ]
+themes: [ corps, émotions ]
+sources:
+  - ouvrage: littre
+    entree: appétit
+  - ouvrage: tlfi
+    entree: appétit
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,27 @@
+mot: caractère
+nature: [ nom masculin ]
+etymologie:
+  - forme: character
+    langue: latin
+    sens: marque, signe gravé
+  - forme: χαρακτήρ
+    langue: grec ancien
+    sens: signe gravé, empreinte
+explication: >-
+  Le mot a suivi la marque gravée : de l'empreinte de monnaie aux lettres et aux
+  signes, puis aux traits distinctifs d'une chose et à l'ensemble des traits de
+  la personne ; avoir du caractère, c'est être marqué d'une empreinte.
+famille: [ caractériser, caractéristique ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: littre
+    entree: caractère
+  - ouvrage: bailly
+    entree: χαρακτήρ
+  - ouvrage: tlfi
+    entree: caractère
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

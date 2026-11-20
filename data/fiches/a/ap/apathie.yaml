@@ -1,0 +1,30 @@
+mot: apathie
+nature: [ nom féminin ]
+etymologie:
+  - forme: ἀπάθεια
+    langue: grec ancien
+    sens: absence d'affections, impassibilité
+    elements:
+      - forme: ἀ-
+        sens: privatif, sans
+      - forme: πάθος
+        sens: ce qu'on éprouve, affection, passion
+explication: >-
+  Apathie est le nom grec, stoïcien, de l'impassibilité : l'âme du sage qui ne
+  se laisse plus ébranler par les affections. Le mot a gardé la forme privative
+  — sans passion — mais il a perdu l'idéal : l'impassibilité du sage est devenue
+  l'indifférence de l'homme inerte.
+famille: [ apathique, antipathie, sympathie ]
+themes: [ émotions, esprit ]
+sources:
+  - ouvrage: littre
+    entree: apathie
+  - ouvrage: bailly
+    entree: ἀπάθεια
+  - ouvrage: tlfi
+    entree: apathie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

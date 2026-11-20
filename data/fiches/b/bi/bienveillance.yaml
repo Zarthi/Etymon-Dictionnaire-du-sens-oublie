@@ -1,0 +1,28 @@
+mot: bienveillance
+nature: [ nom féminin ]
+etymologie:
+  - forme: bienveillance
+    langue: français
+    sens: disposition favorable
+    modele:
+      forme: benevolentia
+      langue: latin
+      sens: bienveillance
+      relation: calque
+explication: >-
+  Bienveillance a été fait en français sur le modèle du latin benevolentia,
+  composé de bene, « bien », et de velle, « vouloir » : la volonté du bien.
+  L'usage courant y voit surtout une disposition favorable envers quelqu'un ; le
+  mot dit aussi la volonté qui vise le bien et le bonheur d'autrui.
+famille: [ bienveillant, bénévole ]
+themes: [ émotions, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: bienveillance
+  - ouvrage: littre
+    entree: bénévole
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
