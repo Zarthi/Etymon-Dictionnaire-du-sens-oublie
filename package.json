@@ -27,7 +27,8 @@
     "texte": "node --use-env-proxy scripts/texte.ts",
     "liste": "node scripts/liste.ts",
     "corpus": "node --use-env-proxy scripts/corpus.ts",
-    "lot": "node --use-env-proxy scripts/lot.ts"
+    "lot": "node --use-env-proxy scripts/lot.ts",
+    "candidats": "node scripts/etat.ts candidats"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
@@ -48,6 +49,6 @@
     "node": ">=24.2"
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run valider"
+    "pre-commit": "node scripts/valider-fiches.ts"
   }
 }
