@@ -1,0 +1,32 @@
+mot: effort
+nature: [ nom masculin ]
+etymologie:
+  - forme: effort
+    langue: français
+  - forme: s'efforcer
+    langue: ancien français
+  - forme: force
+    langue: ancien français
+    sens: énergie, vigueur physique
+  - forme: fortia
+    langue: latin
+  - forme: fortis
+    langue: latin
+    sens: fort
+explication: >-
+  En 1100 environ, effort disait l'activité de qui emploie ses forces dans un
+  but : a esforz, « à toute force ». Le mot porte la force dans sa racine —
+  fortis, le fort — mais il ne la nomme plus : il dit aujourd'hui la mise en
+  œuvre de toutes ses capacités pour vaincre une résistance.
+famille: [ force, fort, s'efforcer ]
+themes: [ travail, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: effort
+  - ouvrage: tlfi
+    entree: force
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

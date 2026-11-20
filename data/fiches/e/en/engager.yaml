@@ -1,0 +1,28 @@
+mot: engager
+nature: [ verbe ]
+etymologie:
+  - forme: engager
+    langue: français
+  - forme: gage
+    langue: ancien français
+    sens: ce qu'on met en dépôt comme garantie
+  - forme: "*waddi"
+    langue: francique
+    sens: gage
+explication: >-
+  Engager, c'était mettre en gage : donner une chose en garantie d'une dette,
+  puis, dès 1595, donner sa parole en caution. La chose donnée en garantie est
+  devenue la parole liée, puis la participation qui assume les risques de
+  l'action ; le gage matériel ne se lit plus dans le sens courant.
+famille: [ gage, engagement ]
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: engager
+  - ouvrage: tlfi
+    entree: gage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

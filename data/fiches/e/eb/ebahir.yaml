@@ -1,0 +1,28 @@
+mot: ébahir
+nature: [ verbe ]
+etymologie:
+  - forme: ébahir
+    langue: français
+    croisement:
+      - forme: baïf
+        langue: ancien français
+        sens: étonné
+  - forme: baer
+    langue: ancien français
+    sens: ouvrir tout grand
+explication: >-
+  Baer ouvrait tout grand : être ébahi, au XIIe siècle, c'était être frappé de
+  stupeur, bouche bée. Le mot dit aujourd'hui manifester un grand étonnement ;
+  la bouche ouverte ne se lit plus dans le mot.
+famille: [ bayer, ébahissement ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: ébahir
+  - ouvrage: tlfi
+    entree: bayer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

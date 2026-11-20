@@ -1,0 +1,25 @@
+mot: examen
+nature: [ nom masculin ]
+etymologie:
+  - forme: examen
+    langue: latin
+    sens: aiguille de balance
+explication: >-
+  examen disait l'aiguille de la balance. De la pesée exacte, le mot a passé au
+  contrôle, puis, en français, à l'étude minutieuse (1372) et à l'épreuve du
+  candidat (1485).
+famille: [ examiner ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: examen
+  - ouvrage: littre
+    entree: examen
+  - ouvrage: etymologies
+    entree: XVI, 5
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

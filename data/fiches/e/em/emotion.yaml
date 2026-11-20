@@ -1,0 +1,34 @@
+mot: émotion
+nature: [ nom féminin ]
+etymologie:
+  - forme: émotion
+    langue: français
+    modele:
+      forme: motion
+      langue: ancien français
+      sens: mouvement
+      relation: analogie
+  - forme: motion
+    langue: ancien français
+    sens: mouvement
+  - forme: motio
+    langue: latin
+    sens: mouvement ; trouble, frisson
+explication: >-
+  Le mot vient de motion, le mouvement — motio disait aussi le trouble, le
+  frisson. En français il a d'abord dit le trouble moral (avant 1475), puis les
+  mouvements d'une population (1512). Il dit aujourd'hui la conduite réactive et
+  involontaire du corps, ou la chaleur du cœur.
+famille: [ émouvoir, émotionner ]
+renvois: [ sentiment ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: émotion
+  - ouvrage: littre
+    entree: émotion
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

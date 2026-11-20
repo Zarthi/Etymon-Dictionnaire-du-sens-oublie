@@ -1,0 +1,21 @@
+mot: espace
+nature: [ nom masculin ]
+etymologie:
+  - forme: spatium
+    langue: latin
+    sens: champ de course, arène, étendue, durée
+explication: >-
+  spatium disait le champ de course, l'arène, et aussi la durée ; le français a
+  d'abord pris ce second sens (1160), puis l'étendue (ca 1200), et, avec Pascal
+  et Descartes, l'étendue infinie de l'univers et le milieu de la science.
+  L'arène ne se lit plus dans le mot.
+famille: [ spacieux, espacer ]
+themes: [ nature ]
+sources:
+  - ouvrage: tlfi
+    entree: espace
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

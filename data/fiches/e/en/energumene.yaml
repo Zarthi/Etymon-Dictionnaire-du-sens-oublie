@@ -1,0 +1,38 @@
+mot: énergumène
+nature: [ nom ]
+etymologie:
+  - forme: energumenos
+    langue: latin ecclésiastique
+    sens: possédé du démon
+  - forme: ἐνεργούμενος
+    langue: grec ancien
+    sens: possédé du démon
+explication: >-
+  D'abord le possédé du démon (1579) ; dès 1734, quiconque s'emporte
+  violemment ; aujourd'hui, l'individu au comportement inquiétant. Le démon a
+  quitté le mot, reste l'agitation qui dépasse la mesure.
+famille: [ énergie, énergique ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: L'exorcisme est ordonné contre les énergumènes, c'est-à-dire les
+        possédés ; et tous ne le sont pas.
+      citation: Exorcismus enim est contra energumenos, idest arreptitios, ordinatus.
+        Sed non omnes sunt tales.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIIa q. 71 a. 2 arg. 1
+          url: https://www.corpusthomisticum.org/sth4066.html
+sources:
+  - ouvrage: tlfi
+    entree: énergumène
+  - ouvrage: littre
+    entree: énergumène
+  - ouvrage: somme-theologique
+    entree: IIIa q. 71 a. 2 arg. 1
+    url: https://www.corpusthomisticum.org/sth4066.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

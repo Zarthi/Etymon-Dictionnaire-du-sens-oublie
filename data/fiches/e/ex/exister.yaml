@@ -1,0 +1,30 @@
+mot: exister
+nature: [ verbe ]
+etymologie:
+  - forme: existere
+    langue: latin
+    sens: sortir de, se manifester, se montrer
+    elements:
+      - forme: ex-
+        sens: hors de
+      - forme: sistere
+        sens: être debout, stable (dérivé de stare)
+explication: >-
+  existere disait sortir de, se manifester, se montrer : ex- et sistere, se
+  tenir debout. Le mot a dit en français être actuellement (XVe siècle), puis
+  vivre (1760), et aujourd'hui posséder une réalité, durer ; le fait de se tenir
+  debout ne se lit plus dans le mot.
+famille: [ existence, coexister ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: exister
+  - ouvrage: littre
+    entree: exister
+  - ouvrage: tlfi
+    entree: examen
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

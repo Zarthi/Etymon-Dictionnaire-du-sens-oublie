@@ -1,0 +1,39 @@
+mot: énergie
+nature: [ nom féminin ]
+etymologie:
+  - forme: energia
+    langue: bas latin
+    sens: force, énergie
+  - forme: ἐνέργεια
+    langue: grec ancien
+    sens: force en action, activité
+explication: >-
+  ἐνέργεια disait la force en action, par opposition à la force en puissance ;
+  Isidore en faisait une figure qui met les actions sous les yeux. Le mot a dit
+  la puissance d'agir (ca 1500), la fermeté dans l'action (1790), puis, en
+  physique (1877), la capacité à produire du travail.
+famille: [ énergique, énergumène ]
+themes: [ esprit, corps ]
+tradition:
+  lectures:
+    - texte: "Energia figure chez Isidore parmi les figures de l'éloquence : la mise
+        sous les yeux d'actions faites ou quasi faites."
+      citation: Energia est rerum gestarum aut quasi gestarum sub oculis inductio, de
+        qua locuti iam sumus.
+      sources:
+        - ouvrage: etymologies
+          entree: II, 33
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: tlfi
+    entree: énergie
+  - ouvrage: bailly
+    entree: ἐνέργεια
+  - ouvrage: etymologies
+    entree: II, 33
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

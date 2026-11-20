@@ -1,0 +1,26 @@
+mot: évoluer
+nature: [ verbe ]
+etymologie:
+  - forme: évoluer
+    langue: français
+  - forme: évolution
+    langue: français
+  - forme: evolutio
+    langue: latin
+    sens: action de dérouler, de parcourir
+explication: >-
+  evolutio disait l'action de dérouler, de parcourir ; évoluer a d'abord dit
+  manœuvrer (1536), puis, au XIXe siècle, se transformer par étapes successives.
+  Le mouvement de la manœuvre ne se lit plus dans le sens courant.
+famille: [ évolution, évolutionniste ]
+themes: [ temps, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: évoluer
+  - ouvrage: tlfi
+    entree: évolution
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

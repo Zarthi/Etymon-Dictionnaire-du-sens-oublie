@@ -1,0 +1,35 @@
+mot: église
+nature: [ nom féminin ]
+etymologie:
+  - forme: eclěsia
+    langue: latin populaire
+  - forme: ecclēsia
+    langue: latin ecclésiastique
+    sens: communauté de fidèles
+  - forme: ἐκκλησία
+    langue: grec ancien
+    sens: assemblée de citoyens
+    elements:
+      - forme: ἐκ
+        sens: hors de
+      - forme: καλέω
+        sens: convoquer
+explication: >-
+  ἐκκλησία nommait l'assemblée du peuple convoqué, à Athènes ; le grec chrétien
+  l'a prise pour l'assemblée des fidèles, et le mot est passé ainsi au latin,
+  puis au français. En français il a d'abord nommé l'édifice (ca 1050), puis la
+  communauté des chrétiens (1135).
+famille: [ ecclésiastique ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: église
+  - ouvrage: bailly
+    entree: ἐκκλησία
+  - ouvrage: littre
+    entree: église
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,27 @@
+mot: espérance
+nature: [ nom féminin ]
+etymologie:
+  - forme: espérance
+    langue: français
+  - forme: espérer
+    langue: ancien français
+  - forme: sperare
+    langue: latin
+    sens: attendre quelque chose comme devant se réaliser
+explication: >-
+  sperare disait l'attente d'un bien comme devant se réaliser ; espérance a dit
+  cette disposition de l'âme, puis la personne ou la chose sur laquelle on fonde
+  son espoir. Le mot garde la confiance qui regarde l'avenir, et, spécialement,
+  la vertu qui attend de Dieu.
+famille: [ espérer ]
+themes: [ émotions, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: espérance
+  - ouvrage: tlfi
+    entree: espérer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

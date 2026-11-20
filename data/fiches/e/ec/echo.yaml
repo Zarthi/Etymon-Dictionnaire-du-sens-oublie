@@ -1,0 +1,25 @@
+mot: écho
+nature: [ nom masculin ]
+etymologie:
+  - forme: echo
+    langue: latin
+    sens: son répercuté
+  - forme: ἠχώ
+    langue: grec ancien
+    sens: bruit répercuté ; rumeur qui se répand
+explication: >-
+  ἠχώ nommait le bruit qui revient, et la rumeur qui court ; Ἠχώ, la nymphe. En
+  français le mot a dit la nymphe avant le son renvoyé (1225-30, puis 1279). Il
+  dit aujourd'hui la réflexion du son, puis, par extension, ce qui rapporte ou
+  répète une nouvelle.
+themes: [ nature, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: écho
+  - ouvrage: bailly
+    entree: ἠχώ
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

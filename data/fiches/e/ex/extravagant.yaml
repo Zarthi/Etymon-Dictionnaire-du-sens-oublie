@@ -1,0 +1,23 @@
+mot: extravagant
+nature: [ adjectif ]
+etymologie:
+  - forme: extravagans
+    langue: latin médiéval
+  - forme: vagari
+    langue: latin
+    sens: errer
+explication: >-
+  extravagans disait, chez les canonistes, les constitutions qui erraient hors
+  des décrétales ; de là, au XVIe siècle, déraisonnable, bizarre, hors du sens
+  commun. L'errance (vagari) qui faisait sortir du recueil des textes a fait
+  sortir des usages ; le sens juridique ne se lit plus.
+famille: [ extravagance, extravaguer ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: extravagant
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

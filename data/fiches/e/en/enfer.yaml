@@ -1,0 +1,39 @@
+mot: enfer
+nature: [ nom masculin ]
+etymologie:
+  - forme: infernus
+    langue: latin
+    sens: d'en bas
+explication: >-
+  infernus disait proprement « d'en bas » : le latin chrétien en a fait le
+  séjour des morts et le lieu du châtiment éternel, et le français, dès la fin
+  du Xe siècle, le lieu des damnés.
+famille: [ infernal ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: La partie supérieure de l'enfer est inferus, où reposèrent, avant
+        l'avènement du Christ, les âmes des justes ; la partie inférieure est
+        infernus, où sont précipitées les âmes des impies qui ont beaucoup
+        péché.
+      citation: Inter Inferum et infernum. Pars superior inferni inferus est, ubi
+        quieverunt ante adventum Christi animae justorum. Pars vero inferior
+        infernus, in quo truduntur [ Al., traduntur] animae impiorum qui
+        plurimum peccaverunt.
+      sources:
+        - ouvrage: differences
+          entree: 288. Inter Inferum et infernum
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: enfer
+  - ouvrage: littre
+    entree: enfer
+  - ouvrage: differences
+    entree: 288. Inter Inferum et infernum
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

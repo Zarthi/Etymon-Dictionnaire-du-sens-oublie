@@ -1,0 +1,21 @@
+mot: excuser
+nature: [ verbe ]
+etymologie:
+  - forme: excusare
+    langue: latin
+    sens: excuser, justifier, disculper
+explication: >-
+  Le mot a d'abord dit justifier en alléguant des excuses ; il dit aujourd'hui
+  abolir les effets d'une faute, et, de la chose, servir d'excuse.
+famille: [ excuse, accuser, inexcusable ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: excuser
+  - ouvrage: littre
+    entree: excuser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

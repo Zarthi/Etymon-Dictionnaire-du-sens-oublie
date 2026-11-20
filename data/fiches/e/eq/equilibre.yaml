@@ -1,0 +1,26 @@
+mot: équilibre
+nature: [ nom masculin ]
+etymologie:
+  - forme: aequilibrium
+    langue: latin
+    sens: exactitude des balances
+    elements:
+      - forme: aequus
+        sens: égal
+      - forme: libra
+        sens: balance
+explication: >-
+  aequilibrium disait l'exactitude des balances : la balance égale, aequus et
+  libra. Le mot a passé à la physique (Pascal, 1663), aux pouvoirs qui se
+  contiennent (Montesquieu, 1748), puis à l'état du cœur et de l'esprit sans
+  trouble ; la balance ne se lit plus dans le mot.
+famille: [ équilibrer, équilibriste ]
+themes: [ esprit, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: équilibre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

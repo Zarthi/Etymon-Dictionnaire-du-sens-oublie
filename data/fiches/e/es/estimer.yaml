@@ -1,0 +1,27 @@
+mot: estimer
+nature: [ verbe ]
+etymologie:
+  - forme: estimer
+    langue: français
+  - forme: esmer
+    langue: ancien français
+  - forme: aestimare
+    langue: latin
+    sens: évaluer, apprécier
+explication: >-
+  aestimare évaluait, appréciait ; esmer a donné d'abord le jugement de valeur,
+  puis, ca 1500, le cas qu'on fait de quelqu'un. Réfait sur le latin au XIVe
+  siècle, le mot dit aujourd'hui déterminer la valeur d'une chose, et apprécier
+  une personne qui mérite l'admiration.
+famille: [ estime, estimation, mésestimer ]
+themes: [ morale, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: estimer
+  - ouvrage: littre
+    entree: estimer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

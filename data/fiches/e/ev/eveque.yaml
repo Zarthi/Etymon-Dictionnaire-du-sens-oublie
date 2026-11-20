@@ -1,0 +1,47 @@
+mot: évêque
+nature: [ nom masculin ]
+etymologie:
+  - forme: episcopus
+    langue: latin ecclésiastique
+    sens: surveillant, chef de communauté chrétienne
+  - forme: ἐπίσκοπος
+    langue: grec ancien
+    sens: qui observe, qui veille sur
+    elements:
+      - forme: ἐπί
+        sens: sur
+      - forme: σκοπέω
+        sens: examiner, observer
+explication: >-
+  ἐπίσκοπος disait celui qui observe, qui veille sur — le gardien, le magistrat
+  envoyé rendre la justice. Le latin episcopus, raccourci en *episcu, a donné
+  evesque, puis évêque.
+famille: [ archevêque, épiscopal ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le nom d'episcopatus vient, chez Isidore, de ce que celui qui est placé
+        au-dessus surveille, ayant la charge des sujets ; σκοπεῖν dit en latin
+        veiller.
+      citation: Episcopatus autem vocabulum inde dictum, quod ille, qui
+        superefficitur, superintendat, curam scilicet subditorum gerens. SKOPEIN
+        enim Latine intendere dicitur.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 11
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: évêque
+  - ouvrage: bailly
+    entree: ἐπίσκοπος
+  - ouvrage: littre
+    entree: évêque
+  - ouvrage: etymologies
+    entree: VII, 11
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

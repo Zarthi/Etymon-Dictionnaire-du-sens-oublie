@@ -1,0 +1,25 @@
+mot: éclairer
+nature: [ verbe ]
+etymologie:
+  - forme: "*exclariare"
+    langue: latin populaire
+  - forme: exclarare
+    langue: latin
+    sens: éclairer
+explication: >-
+  Le mot rendait déjà clair au Xe siècle : le matin éclairé, le pays illuminé.
+  Dès ca 1220 il faisait comprendre, et l'esprit éclairé est attesté au XVIIe
+  siècle. La lumière du mot, d'abord celle du jour sur les choses, est devenue
+  aussi celle de l'intelligence qu'on donne à l'autre.
+famille: [ éclair, éclairage, éclaircir ]
+themes: [ nature, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: éclairer
+  - ouvrage: littre
+    entree: éclairer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

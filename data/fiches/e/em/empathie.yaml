@@ -1,0 +1,33 @@
+mot: empathie
+nature: [ nom féminin ]
+etymologie:
+  - forme: empathie
+    langue: français
+    modele:
+      forme: sympathie
+      langue: français
+      relation: analogie
+  - langue: grec ancien
+    sens: dans ce qu'on éprouve
+    elements:
+      - forme: ἐν
+        sens: dans
+      - forme: πάθος
+        sens: ce qu'on éprouve
+explication: >-
+  Composé au XXe siècle d'après sympathie, le mot reprend en grec en, « dans »,
+  et πάθος, ce qu'on éprouve, surtout en mal. Ce que le grec disait du mal
+  éprouvé, l'usage d'aujourd'hui en a fait la capacité de s'identifier à autrui.
+themes: [ émotions ]
+sources:
+  - ouvrage: academie
+    entree: empathie
+  - ouvrage: bailly
+    entree: πάθος
+  - ouvrage: bailly
+    entree: ἐμπάθεια
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

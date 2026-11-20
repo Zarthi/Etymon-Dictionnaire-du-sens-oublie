@@ -1,0 +1,43 @@
+mot: exil
+nature: [ nom masculin ]
+etymologie:
+  - forme: ex(s)ilium
+    langue: latin
+    sens: bannissement, lieu d'exil
+explication: >-
+  ex(s)ilium disait le bannissement ; en français, exill a d'abord dit la
+  détresse, le malheur, le tourment (ca 1100), avant le bannissement (1155).
+  L'éloignement a pris le dessus, la détresse ne se lit plus.
+ecartees:
+  - forme: ex solo
+    langue: latin
+    sens: hors du sol
+    raison: Hypothèse rapportée par le Littré, qui juge l'étymologie d'exilium
+      douteuse ; Isidore la lit sous la forme quasi extra solum.
+famille: [ exiler, exilé ]
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: "Exilium vient, chez Isidore, quasi extra solum : l'exilé est celui qui
+        est hors du sol ; le postliminium est ce par quoi reviennent ceux qu'on
+        ramène de l'exil, ceux qui ont été jetés hors du seuil de la patrie."
+      citation: Exilium dictum quasi extra solum. Nam exul dicitur qui extra solum
+        est. Vnde postliminium redeuntibus, hoc est de exilio reducendis, qui
+        sunt eiecti in iniuria, id est extra limen patriae.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 28
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: exil
+  - ouvrage: littre
+    entree: exil
+  - ouvrage: etymologies
+    entree: V, 28
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

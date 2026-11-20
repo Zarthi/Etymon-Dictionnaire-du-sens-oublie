@@ -1,0 +1,40 @@
+mot: économie
+nature: [ nom féminin ]
+etymologie:
+  - forme: oeconomia
+    langue: latin
+    sens: organisation, disposition
+  - forme: οἰκονομία
+    langue: grec ancien
+    sens: direction d'une maison
+explication: >-
+  οἰκονομία disait la direction de la maison ; le français l'a prise en ce sens
+  (Oresme : « yconomie est gouvernement de hotel »), puis pour l'administration
+  des États — l'économie politique est attestée en 1615 —, pour l'art de limiter
+  la dépense (1665), enfin pour le système de la richesse.
+famille: [ économe, économique, économiser ]
+renvois: [ epargne ]
+themes: [ société, argent ]
+tradition:
+  lectures:
+    - texte: La prudence de la maison (oeconomica) se distingue à la fois de la
+        prudence qui gouverne soi-même et de la prudence politique.
+      citation: sicut prudentia communiter dicta, quae est regitiva unius,
+        distinguitur a politica prudentia, ita oportet quod oeconomica
+        distinguatur ab utraque
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 50 a. 3 co.
+          url: https://www.corpusthomisticum.org/sth3047.html
+sources:
+  - ouvrage: tlfi
+    entree: économie
+  - ouvrage: bailly
+    entree: οἰκονομία
+  - ouvrage: tlfi
+    entree: économe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

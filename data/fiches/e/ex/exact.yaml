@@ -1,0 +1,28 @@
+mot: exact
+nature: [ adjectif ]
+etymologie:
+  - forme: exactus
+    langue: latin
+    sens: poussé jusqu'à, achevé
+    elements:
+      - forme: ex-
+        sens: hors de
+      - forme: actus
+        sens: poussé (participe passé de agere)
+explication: >-
+  exactus disait proprement poussé jusqu'au bout, achevé — le participe de
+  exigere, mener à terme, achever la pesée. Le français l'a pris pour ce qui est
+  accompli minutieusement, puis pour ce qui est conforme à la vérité : poussé
+  jusqu'au bout, il ne laisse rien d'approximatif.
+famille: [ exiger, exactitude, inexact ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: exact
+  - ouvrage: littre
+    entree: exact
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

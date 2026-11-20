@@ -1,0 +1,30 @@
+mot: expliquer
+nature: [ verbe ]
+etymologie:
+  - forme: explicare
+    langue: latin
+    sens: déployer, exposer clairement
+    elements:
+      - forme: ex-
+        sens: hors de
+      - forme: plicare
+        sens: plier
+explication: >-
+  explicare déployait : ex- et plicare, déplier ce qui était plié, et aussi
+  exposer clairement. En français le mot a dit d'abord se développer (XIVe
+  siècle), puis rendre clair (ca 1450). Ce qui se déplie est devenu ce qui se
+  fait comprendre ; l'ancienne forme française était esployer, selon Littré.
+famille: [ explication, explicite ]
+themes: [ parole, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: expliquer
+  - ouvrage: littre
+    entree: expliquer
+  - ouvrage: tlfi
+    entree: examen
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

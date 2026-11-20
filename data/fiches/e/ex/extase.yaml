@@ -1,0 +1,43 @@
+mot: extase
+nature: [ nom féminin ]
+etymologie:
+  - forme: ecstasis
+    langue: latin ecclésiastique
+    sens: fait d'être hors de soi
+  - forme: ἔκστασις
+    langue: grec ancien
+    sens: action d'être hors de soi, égarement de l'esprit
+    elements:
+      - forme: ἐξ-
+        sens: hors de
+      - forme: στάσις
+        sens: action de se tenir
+explication: >-
+  ἔκστασις disait le fait d'être hors de soi : l'égarement de l'esprit, par
+  l'étonnement ou la frayeur. Le latin chrétien en a fait l'extase mystique, et
+  le mot dit aujourd'hui le ravissement d'admiration, de joie.
+famille: [ extatique ]
+themes: [ religion, émotions ]
+tradition:
+  lectures:
+    - texte: "L'ecstasis, l'excès de l'esprit, est le premier genre : Pierre, dans le
+        stupor mentis, voit le vase descendu du ciel avec les animaux variés."
+      citation: Primum genus ecstasis, quod est mentis excessus; sicut vidit Petrus
+        vas illud summissum de caelo in stupore mentis cum variis animalibus.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 33
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: extase
+  - ouvrage: bailly
+    entree: ἔκστασις
+  - ouvrage: etymologies
+    entree: VII, 33
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

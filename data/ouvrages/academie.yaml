@@ -1,0 +1,13 @@
+titre: Dictionnaire de l'Académie française
+abrege: Académie
+date: "1986-2024"
+edition: neuvième édition, informatisée par l'ATILF, consultée sur le portail du CNRTL
+licence: non libre
+modeleEntree: https://www.cnrtl.fr/definition/{entree}
+description: >-
+  Le dictionnaire de l'Académie dans son édition la plus récente, achevée en 2024 ; sert de
+  source de faits pour les mots absents du Littré quand le TLFi n'a pas d'article.
+redaction:
+  - par: Étymon
+    detail: créée par l'orchestrateur du lot (clôture), sans notice d'œuvre BnF
+statut: a-verifier

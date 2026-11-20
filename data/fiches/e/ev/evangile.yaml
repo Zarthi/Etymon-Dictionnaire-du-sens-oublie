@@ -1,0 +1,35 @@
+mot: évangile
+nature: [ nom masculin ]
+etymologie:
+  - forme: euangelium
+    langue: latin ecclésiastique
+    sens: bonne nouvelle
+  - forme: εὐαγγέλιον
+    langue: grec ancien
+    sens: récompense, actions de grâces, sacrifice offerts pour une bonne nouvelle
+    elements:
+      - forme: εὖ
+        sens: bien
+      - forme: ἀγγέλλω
+        sens: porter une nouvelle, annoncer
+explication: >-
+  εὐαγγέλιον disait la récompense et le sacrifice offerts pour une bonne
+  nouvelle — on offrait cent bœufs pour en avoir reçu une. Le grec chrétien en a
+  fait la bonne nouvelle même, celle du Christ, et le mot est passé ainsi au
+  latin, puis au français.
+famille: [ évangéliste, évangélique ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: évangile
+  - ouvrage: bailly
+    entree: εὐαγγέλιον
+  - ouvrage: bailly
+    entree: ἀγγέλλω
+  - ouvrage: littre
+    entree: évangile
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

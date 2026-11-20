@@ -1,0 +1,23 @@
+mot: enterrer
+nature: [ verbe ]
+etymologie:
+  - forme: enterrer
+    langue: français
+  - forme: terre
+    langue: ancien français
+    sens: terre
+explication: >-
+  Enterrer, c'est mettre en terre : dès 1100 le corps d'un mort, honoré (« A
+  grant honor pois les unt enterrez »), dès 1140 ce que la terre recouvre, dès
+  1690 ce qu'un amoncellement ensevelit ; le figuré a suivi, jusqu'à faire
+  disparaître complètement, faire oublier.
+famille: [ enterrement, terrestre ]
+themes: [ corps ]
+sources:
+  - ouvrage: tlfi
+    entree: enterrer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

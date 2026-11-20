@@ -1,0 +1,33 @@
+mot: expier
+nature: [ verbe ]
+etymologie:
+  - forme: expiare
+    langue: latin
+    sens: purifier, réparer une faute
+    elements:
+      - forme: ex-
+        sens: exprimant l'achèvement
+      - forme: pius
+        sens: pieux
+explication: >-
+  expiare disait purifier, réparer une faute : ex- et pius, le pieux. En
+  français, d'abord réparer une faute en subissant la peine (ca 1272), puis
+  purifier (ca 1355). Le pieux qui purifie ne se lit plus, reste la peine qui
+  répare.
+famille: [ expiation, inexpiable ]
+themes: [ religion, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: expier
+  - ouvrage: littre
+    entree: expier
+  - ouvrage: tlfi
+    entree: examen
+  - ouvrage: etymologies
+    entree: V, 26
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

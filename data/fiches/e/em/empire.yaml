@@ -1,0 +1,38 @@
+mot: empire
+nature: [ nom masculin ]
+etymologie:
+  - forme: imperium
+    langue: latin
+    sens: pouvoir suprême
+explication: >-
+  imperium nommait le pouvoir suprême. Le français l'a d'abord pris pour l'État
+  de l'empereur (ca 1050), puis pour le pouvoir et l'autorité, et pour
+  l'ascendant qu'on a sur les êtres.
+famille: [ empereur, impérial ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: Auguste est pour les Romains le nom même de l'empire, parce qu'ils
+        augmentaient autrefois la république en l'amplifiant ; le sénat donna ce
+        nom à Octave pour que, ayant agrandi les terres, il fût consacré par le
+        nom et le titre mêmes.
+      citation: Augustus ideo apud Romanos nomen imperii est, eo quod olim augerent
+        rempublicam amplificando. Quod nomen primitus senatus Octavio Caesari
+        tradidit, ut quia auxerat terras, ipso nomine et titulo consecraretur.
+      sources:
+        - ouvrage: etymologies
+          entree: IX, 16
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: empire
+  - ouvrage: etymologies
+    entree: IX, 16
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+  - ouvrage: littre
+    entree: empire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

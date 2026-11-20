@@ -1,0 +1,30 @@
+mot: envahir
+nature: [ verbe ]
+etymologie:
+  - forme: "*invadire"
+    langue: latin populaire
+  - forme: invadere
+    langue: latin
+    sens: pénétrer dans, assaillir, attaquer
+    elements:
+      - forme: in-
+        sens: dans
+      - forme: vadere
+        sens: aller
+explication: >-
+  invadere disait le mouvement qui va dans et force le passage : pénétrer,
+  assaillir, attaquer. Le français l'a d'abord pris pour marcher sur (ca 1100),
+  puis pour la pénétration de force et l'occupation (1570) ; aujourd'hui le mot
+  dit aussi la propagation qui déborde et l'idée qui s'impose à l'esprit.
+famille: [ invasion, envahisseur ]
+themes: [ guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: envahir
+  - ouvrage: littre
+    entree: envahir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

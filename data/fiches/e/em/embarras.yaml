@@ -1,0 +1,44 @@
+mot: embarras
+nature: [ nom masculin ]
+etymologie:
+  - forme: embarras
+    langue: français
+  - forme: embarrasser
+    langue: français
+    sens: causer de la gêne, entraver
+  - forme: embarazar
+    langue: espagnol
+    sens: embarrasser
+  - forme: embaraçar
+    langue: portugais
+  - forme: baraço
+    langue: portugais
+    sens: courroie, corde
+explication: >-
+  Embarazar, « embarrasser », vient du portugais embaraçar, dérivé de baraço,
+  « courroie, corde ». En français, embarras a d'abord dit les obstacles qui
+  entravent la circulation (1552), puis la situation difficile, enfin l'état
+  d'esprit de qui ne sait que faire (1660).
+ecartees:
+  - forme: barra
+    langue: latin médiéval
+    sens: barrière
+    raison: "Littré fait dériver embarrasser de en 1 et barre ; le TLFi écarte la
+      dérivation à partir de barra : le mot n'a qu'un seul -r- dans le domaine
+      ibérique, ce qui s'y oppose."
+famille: [ embarrasser ]
+themes: [ émotions, société ]
+sources:
+  - ouvrage: tlfi
+    entree: embarras
+  - ouvrage: tlfi
+    entree: embarrasser
+  - ouvrage: littre
+    entree: embarras
+  - ouvrage: tlfi
+    entree: barre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

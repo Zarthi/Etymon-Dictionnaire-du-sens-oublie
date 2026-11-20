@@ -1,0 +1,23 @@
+mot: exalter
+nature: [ verbe ]
+etymologie:
+  - forme: exaltare
+    langue: latin
+    sens: exhausser, élever
+explication: >-
+  exaltare haussait. Le mot a d'abord dit en français élever en mérite, en
+  dignité, glorifier (Xe siècle), puis porter à un haut degré d'intensité
+  (1770). La hauteur est devenue celle des honneurs et des sentiments, jusqu'à
+  l'ardeur qui dépasse la mesure.
+famille: [ exaltation, exalté ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: exalter
+  - ouvrage: littre
+    entree: exalter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

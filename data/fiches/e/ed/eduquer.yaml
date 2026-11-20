@@ -1,0 +1,31 @@
+mot: éduquer
+nature: [ verbe ]
+etymologie:
+  - forme: educare
+    langue: latin
+    sens: élever, instruire
+  - forme: educere
+    langue: latin
+    sens: faire sortir, élever
+    elements:
+      - forme: e-
+        sens: hors de
+      - forme: ducere
+        sens: conduire
+explication: >-
+  E-ducere conduisait hors de : élever, c'était tirer hors. Emprunté au latin,
+  mal reçu en français jusqu'au XIXe siècle, le mot dit aujourd'hui donner à un
+  enfant les soins nécessaires à sa formation ; l'image de la conduite hors de
+  s'est perdue.
+famille: [ éducation, éducateur ]
+themes: [ famille, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: éduquer
+  - ouvrage: littre
+    entree: éduquer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

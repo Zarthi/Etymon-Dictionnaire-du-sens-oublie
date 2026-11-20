@@ -1,0 +1,32 @@
+mot: élevé
+nature: [ nom ]
+etymologie:
+  - forme: élevé
+    langue: français
+  - forme: élever
+    langue: français
+    sens: porter plus haut
+  - forme: lever
+    langue: ancien français
+    sens: faire mouvoir de bas en haut
+  - forme: levare
+    langue: latin
+    sens: soulever, élever en l'air
+explication: >-
+  Levare soulevait : élever a d'abord porté une chose plus haut, puis, dès la
+  fin du XIIIe siècle, a mené un enfant à son plein développement. Élevé dit
+  aujourd'hui la hauteur des lieux, des prix et des rangs, et celle de l'esprit.
+famille: [ élever, lever, élévation ]
+themes: [ société, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: élever
+  - ouvrage: tlfi
+    entree: lever
+  - ouvrage: littre
+    entree: élevé
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

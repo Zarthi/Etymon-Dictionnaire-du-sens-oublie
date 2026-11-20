@@ -1,0 +1,21 @@
+mot: étude
+nature: [ nom féminin ]
+etymologie:
+  - forme: studium
+    langue: latin
+    sens: application, zèle
+explication: >-
+  studium disait l'application, le zèle ; le français l'a pris au pluriel
+  studia, tenu pour un féminin singulier, d'où estudie, puis estuide. Le mot a
+  dit l'application et le soin (XIIe siècle), l'application pour apprendre
+  (1174), puis l'observation et le lieu ; le zèle s'est fait examen.
+famille: [ étudier, étudiant, studieux ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: étude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,26 @@
+mot: enchanter
+nature: [ verbe ]
+etymologie:
+  - forme: incantare
+    langue: latin
+    sens: chanter des formules magiques, ensorceler
+explication: >-
+  incantare chantait des formules magiques pour ensorceler ; en français dès le
+  XIIe siècle le mot disait soumettre à un pouvoir magique, puis, au figuré,
+  séduire comme par une emprise, et aujourd'hui, usuel, causer un vif plaisir.
+  Le chant a quitté le mot, reste l'effet qu'il produisait.
+famille: [ enchantement, enchanté, incantation ]
+themes: [ émotions, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: enchanter
+  - ouvrage: littre
+    entree: enchanter
+  - ouvrage: etymologies
+    entree: VIII, 15
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

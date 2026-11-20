@@ -1,0 +1,58 @@
+mot: étymologie
+nature: [ nom féminin ]
+etymologie:
+  - forme: etymologia
+    langue: latin
+  - forme: ἐτυμολογία
+    langue: grec ancien
+    sens: sens véritable ou primitif d'un mot
+    elements:
+      - forme: ἔτυμος
+        sens: vrai
+      - forme: -λογία
+        sens: parole, discours
+explication: >-
+  ἐτυμολογία, de ἔτυμος, « vrai » : proprement la recherche du vrai. D'abord nom
+  du livre d'Isidore (ca 1175), le mot dit aujourd'hui la science de l'origine
+  des mots.
+famille: [ étymologique, étymologiste ]
+themes: [ savoir, parole ]
+tradition:
+  lectures:
+    - texte: "Isidore définit l'étymologie comme l'origine des mots, quand la force du
+        verbe ou du nom est recueillie par l'interprétation ; Aristote
+        l'appelait σύμβολον, Cicéron adnotationem, parce qu'elle fait connaître
+        les noms et les verbes par des choses notables : flumen, parce qu'il a
+        crû en coulant."
+      citation: Etymologia est origo vocabulorum, cum vis verbi vel nominis per
+        interpretationem colligitur. Hanc Aristoteles SUMBOLON, Cicero
+        adnotationem nominavit, quia nomina et verba rerum nota facit exemplo
+        posito; utputa "flumen" quia fluendo crevit, a fluendo dictum.
+      sources:
+        - ouvrage: etymologies
+          entree: I, 29, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+    - texte: L'étymologie du nom n'est pas sa signification.
+      citation: aliud est etymologia nominis, et aliud est significatio nominis.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 92 a. 1 ad 2
+          url: https://www.corpusthomisticum.org/sth3092.html
+sources:
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: ἐτυμολογία
+  - ouvrage: bailly
+    entree: ἔτυμος
+  - ouvrage: etymologies
+    entree: I, 29, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+  - ouvrage: somme-theologique
+    entree: IIa-IIae q. 92 a. 1 ad 2
+    url: https://www.corpusthomisticum.org/sth3092.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

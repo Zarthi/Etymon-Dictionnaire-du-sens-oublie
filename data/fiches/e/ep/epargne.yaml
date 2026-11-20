@@ -1,0 +1,31 @@
+mot: épargne
+nature: [ nom féminin ]
+etymologie:
+  - forme: épargne
+    langue: français
+  - forme: épargner
+    langue: ancien français
+    sens: ne pas tuer, laisser vivre
+  - forme: "*sparanjan"
+    langue: francique
+    sens: traiter avec indulgence
+  - forme: "*sparôn"
+    langue: germanique
+    sens: ne pas tuer
+explication: >-
+  sparôn disait « ne pas tuer » : laisser vivre, traiter avec indulgence, puis
+  employer avec mesure et garder une réserve. De là l'épargne qui amasse (ca
+  1200, « conserver, accumuler ») et les sommes d'argent épargnées ; la vie que
+  le mot épargnait ne se lit plus dans le sens courant.
+famille: [ épargner, épargnant ]
+themes: [ argent ]
+sources:
+  - ouvrage: tlfi
+    entree: épargne
+  - ouvrage: tlfi
+    entree: épargner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

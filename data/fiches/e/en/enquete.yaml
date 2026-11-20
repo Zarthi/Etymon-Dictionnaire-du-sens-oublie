@@ -1,0 +1,30 @@
+mot: enquête
+nature: [ nom féminin ]
+etymologie:
+  - forme: "*inquaesita"
+    langue: latin populaire
+  - forme: inquirere
+    langue: latin
+    sens: rechercher
+explication: >-
+  inquirere cherchait ; la chose recherchée, *inquaesita, a donné enqueste : la
+  recherche (ca 1170), puis la procédure où les témoins sont entendus (1283). Le
+  mot dit aujourd'hui toute recherche menée en recueillant des témoignages, de
+  la procédure de police au sondage.
+famille: [ enquérir, enquêteur ]
+themes: [ droit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: enquête
+  - ouvrage: tlfi
+    entree: enquérir
+  - ouvrage: littre
+    entree: enquête
+  - ouvrage: etymologies
+    entree: XVIII
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

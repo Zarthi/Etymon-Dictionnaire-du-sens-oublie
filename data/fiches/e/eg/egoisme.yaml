@@ -1,0 +1,37 @@
+mot: égoïsme
+nature: [ nom masculin ]
+etymologie:
+  - forme: égoïsme
+    langue: français
+    sens: usage de parler de soi à la première personne
+  - forme: ego
+    langue: latin
+    sens: moi
+explication: >-
+  Le mot est né d'une raillerie : les messieurs de Port-Royal, qui bannissaient
+  de leurs écrits l'usage de parler d'eux-mêmes à la première personne, l'ont
+  tourné en ridicule sous le nom d'égoïsme (1755). Dès 1789 il disait
+  l'attachement excessif à soi-même ; c'est ce sens qui a pris le dessus.
+famille: [ égoïste ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Les pronoms dits finis le sont parce qu'ils définissent une personne
+        certaine, comme ego : « moi », on l'entend aussitôt."
+      citation: Finita pronomina dicta eo, quod definiunt certam personam, ut "ego";
+        me enim statim intelligis.
+      sources:
+        - ouvrage: etymologies
+          entree: I, 8, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: égoïsme
+  - ouvrage: etymologies
+    entree: I, 8, 2
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -9,6 +9,35 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-20 — Lot : ebahir, echo, eclairer, economie, eduquer, effort, effrayer, eglise, egoisme, eleve, embarras, emerveiller, emotion, empathie, empire, enchanter, energie, energumene, enfer, engager, enquete, enterrer, entreprendre, envahir, epargne, equilibre, espace, esperance, espoir, essence, estimer, ethique, etude, etymologie, evangile, eveque, evoluer, exact, exalter, examen, excellence, excuser, exemple, exil, exister, experience, expert, expier, expliquer, extase, extravagant
+
+# Décisions du lot (é — 52 mots)
+
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| mots consacrés (église, évangile, évêque, enfer, extase) | chemin « ordinaire » au dossier, pas `consacre` ; le sens profane premier est celui que la fiche révèle | consigne du lot ; précédent : ange (`data/fiches/a/an/ange.yaml`, sans champ `sacre`) | oui |
+| espérance / espoir | doublets (même étymon sperare, deux voies : dérivation en -ance / déverbal) ; l'essai refusant une cible introuvable, le lien est posé en renvoi du côté espérance seulement ; à convertir en doublet à la clôture ou par Thibault | le validateur exige une fiche existante pour un doublet | oui |
+| examen | lecture traditionnelle retirée : l'Isidore (Étymologies XVI, 5) définit l'étymon lui-même, la citation répète l'étymologie et n'apporte pas de doctrine qui diffère ou complète ; le passage reste au dossier | une lecture n'entre que si elle diffère de l'histoire du mot ou la complète | oui |
+| extase | forme grecque ἔκστασις (Bailly, qui porte le sens « action d'être hors de soi ») et non ἔξτασις (graphie du TLFi) ; les deux faits au dossier | le Bailly a l'entrée et le sens ; le TLFi la renvoie | oui |
+| éclairer | chaîne suivie d'après le TLFi (*exclariare ← exclarare), le Littré (es- + clair) consigné au dossier | deux sources en désaccord : la fiche suit la plus récente | non |
+| embarras | chaîne ibérique (embarazar ← embaraçar ← baraço « courroie, corde ») d'après le TLFi ; l'étymologie du Littré (en + barre) consignée dans `ecartees` | deux sources en désaccord : la fiche suit la plus récente | oui (l'étymon portugais change le sens premier) |
+| énergie | ἐνέργεια non décomposé en ἐν + ἔργω (le Bailly renvoie à ἐνεργής sans décomposer ; le Littré seul décompose) | décomposer exigerait un sens de chaque élément source par source | non |
+| étymologie | ἐτυμολογία décomposé en ἔτυμος « vrai » + -λογία « parole, discours » (le TLFi compose ; la glose de -λογία vient de λόγος, Bailly) | la composition est le fait même du mot ; le TLFi dit « recherche du vrai » pour le composé | oui |
+| élevé | fiche rédigée pour « élevé » (le dossier de sources `atelier/eleve/` couvre aussi élève, déverbal d'élever sur le modèle de l'italien allievo) | le lot porte « élevé » ; les faits d'élève restent au dossier | oui |
+| énorme | thème « nature » posé faute de mieux | un thème « quantité » ou « mesure » manque pour les mots de grandeur | oui (thème à proposer) |
+
+## Reprise du 2026-11-20 (passe « reprise », lot Étymon e-*)
+
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| exister, expliquer | glose de ex- sourcée d'après le TLFi (entrée examen : « ex- "hors de" », avec agere « pousser hors de, chasser ») ; fait consigné aux dossiers (source tlfi, examen) | la valeur convient à existere « sortir de » et à explicare « déployer » | oui |
+| expier | glose de ex- sourcée d'après le même TLFi (« ex- exprimant l'achèvement », d'où « mener à terme, achever »), valeur intensive retenue pour expiare « purifier ; réparer (une faute) » | la valeur convient à la purification menée à terme ; le TLFi ne donne que ces deux valeurs pour ex- | oui |
+| exalter, expert | glose de ex- retirée, et la décomposition avec elle (le schéma ne garde pas un élément sans sens) ; le fait de Littré sur periri, radical de periculum, reste au dossier, l'explication d'expert le dit sans nommer les formes | aucune source consultée ne glose ex- pour exaltare ni experiri, et ni « hors de » ni « exprimant l'achèvement » ne se laissent appliquer à « exhausser » ni à « éprouver » sans invention | oui |
+| embarras | écartée passée à barra (latin médiéval, « barrière »), forme et sens que le dossier donne ; explication réécrite d'après le dossier (embarazar « embarrasser », du portugais embaraçar, dérivé de baraço « courroie, corde ») | le champ `sens` est obligatoire dans `ecartees`, la suppression proposée ne passait pas ; la forme « embarazer » et le sens « entraver comme avec une corde » n'étaient ni dans la chaîne ni dans le dossier | oui |
+| empathie | dossier refait d'après le dictionnaire de l'Académie, 9e éd., sur le portail du CNRTL (TLFi toujours sans article) ; chaîne : composé d'après sympathie, sur le grec ἐν « dans » et πάθος « ce qu'on éprouve » ; ἐμπάθεια (Bailly, « passion ») non posée comme source directe du mot français | aucune source consultée ne dit que le mot français vient de la forme grecque attestée ; la fiche suit l'Académie | oui |
+| empathie (ouvrage) | « dictionnaire-de-l-academie » à créer à la clôture, sans notice BnF d'œuvre (cherchée par SRU, comme le Bailly et le Gaffiot) ; references.json exigeant un cb, la fiche d'ouvrage ne passe pas par le lot | l'Académie 9e est la seule source lexicographique consultable pour ce mot absent du Littré et du TLFi | oui (la source elle-même : l'Académie 9e ne figure pas dans la table du §5) |
+| énorme | thème « nature » gardé, le plus proche d'après le dossier ; thème « quantité » (re)proposé dans signalements.md | le champ `themes` est obligatoire et aucun thème de la liste fermée ne dit « toute grandeur, quantité ou intensité » | oui (thème à ajouter) |
+
 ## 2026-11-20 — Hors lot (outillage)
 
 | sujet | décision | raison | à relire |
@@ -17,6 +46,7 @@ Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a ét�
 | pre-commit | `npm run valider` → `node scripts/valider-fiches.ts` | le hook ne dépend plus du gestionnaire de paquets ; il passe sur toute machine avec node | oui |
 | `scripts/etat.ts` et `data/candidats.json` (modifications locales d'une session antérieure) | revert de `etat.ts` (sa fonction `candidats` lisait `data/candidats.json`, l'exemple périmé de la charte) ; `data/candidats.json` supprimé ; le script `pnpm run candidats` de `package.json` est gardé | la version committée de `etat.ts` a déjà la commande `candidats [n]`, qui lit les vrais fichiers `data/candidats/*.yaml` (725 mots) | oui |
 | Moteurs des agents | les 5 références à `~deepseek/deepseek-flash-latest` (agents, skill, méthode) pointent désormais vers `~deepseek/deepseek-v4-flash-latest` | l'ancien ID a été retiré du catalogue ; le journal de méthode, historique, n'est pas réécrit | oui |
+| Source « Académie 9e » | le Dictionnaire de l'Académie française (9e édition, consultée sur le portail du CNRTL) sert de source de faits, comme le TLFi ; fiche d'ouvrage créée sans notice d'œuvre BnF, comme le Bailly et le Gaffiot | le CNRTL est déjà la source de faits autorisée (§5) ; l'Académie y est hébergée ; à n'employer que pour des faits, jamais sa rédaction ; **source à confirmer par Thibault** (§5 ne la nomme pas) | oui |
 
 ## 2026-11-20 — Lot : benir, benediction, benefice, benevole, bienveillance, beatitude, apprendre, comprendre, connaitre, attention, absolu, abstrait, absurde, ambiguite, authentique, allegresse, apathie, appetit, audace, avare, austere, amuser, affliger, aveu, abandonner, alliance, autorite, anarchie, aristocratie, adversaire, argent, approuver, agir, aliener, ascese, adolescent, adulte, aveugle, agonie, accident, cadavre, corps, bete, caractere, camarade, banal, bizarre, barbare, beaute
 

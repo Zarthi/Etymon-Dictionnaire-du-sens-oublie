@@ -1,0 +1,20 @@
+mot: excellence
+nature: [ nom féminin ]
+etymologie:
+  - forme: excellentia
+    langue: latin
+    sens: supériorité, excellence
+explication: >-
+  excellentia disait la supériorité ; le français l'a prise pour la qualité de
+  ce qui surpasse, puis, en appellatif, pour le titre des hauts dignitaires : la
+  supériorité est devenue manière de s'adresser.
+famille: [ excellent, exceller ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: excellence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,36 @@
+mot: expérience
+nature: [ nom féminin ]
+etymologie:
+  - forme: experientia
+    langue: latin
+    sens: essai, épreuve, tentative
+explication: >-
+  experientia disait l'essai, l'épreuve, la tentative ; le français l'a prise
+  pour la connaissance acquise par la pratique (ca 1265), puis pour l'épreuve
+  provoquée pour étudier un phénomène (1663).
+famille: [ expert, expérimenter ]
+themes: [ savoir ]
+tradition:
+  lectures:
+    - texte: "Isidore distingue l'expérience de la science : l'expérience peut se dire
+        dans le mal, comme celui qui a éprouvé les peines ; la science, dans le
+        bien seulement."
+      citation: Inter Experientiam et scientiam. Experientia in malo dici potest, ut
+        poenas expertus, scientia autem in bono tantum.
+      sources:
+        - ouvrage: differences
+          entree: 186. Inter Experientiam et scientiam
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: expérience
+  - ouvrage: littre
+    entree: expérience
+  - ouvrage: differences
+    entree: 186. Inter Experientiam et scientiam
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

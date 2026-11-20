@@ -1,0 +1,30 @@
+mot: espoir
+nature: [ nom masculin ]
+etymologie:
+  - forme: espoir
+    langue: français
+  - forme: espérer
+    langue: ancien français
+  - forme: sperare
+    langue: latin
+    sens: attendre quelque chose comme devant se réaliser
+explication: >-
+  Le mot est sorti des formes fortes du verbe espérer — [j'] espoir, [tu]
+  espoires —, du latin sperare, qui attendait un bien comme devant se réaliser.
+  Il a dit dès 1155 le sentiment qui porte à espérer ; il dit aujourd'hui
+  l'attente confiante d'un avenir favorable.
+doublets: [ esperance ]
+famille: [ espérer, désespoir ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: espoir
+  - ouvrage: tlfi
+    entree: espérer
+  - ouvrage: littre
+    entree: espoir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

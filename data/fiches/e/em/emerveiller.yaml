@@ -1,0 +1,33 @@
+mot: émerveiller
+nature: [ verbe ]
+etymologie:
+  - forme: émerveiller
+    langue: français
+  - forme: merveille
+    langue: ancien français
+    sens: chose qui frappe d'étonnement
+  - forme: "*mirabilia"
+    langue: latin populaire
+    sens: choses merveilleuses, miracles
+  - forme: mirabilis
+    langue: latin
+    sens: admirable
+explication: >-
+  Merveille vient du mirabilia de la langue de l'Église, les miracles ;
+  émerveiller, c'était, dès 1160, être saisi d'une vive admiration. Le mot dit
+  aujourd'hui provoquer un sentiment d'admiration mêlée de surprise ; le miracle
+  n'est plus dans le mot, reste l'étonnement.
+famille: [ merveille, émerveillement ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: émerveiller
+  - ouvrage: tlfi
+    entree: merveille
+  - ouvrage: littre
+    entree: merveille
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

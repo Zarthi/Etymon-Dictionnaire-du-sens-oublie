@@ -1,0 +1,23 @@
+mot: effrayer
+nature: [ verbe ]
+etymologie:
+  - forme: "*exfridare"
+    langue: bas latin
+  - forme: "*fridu"
+    langue: francique
+    sens: paix
+explication: >-
+  Effrayer vient de *fridu, la paix — le même mot qui a donné l'allemand
+  Friede : le mot disait proprement faire sortir de l'état de tranquillité,
+  troubler. Dès le XIIe siècle il disait remplir de frayeur, sens qui a pris le
+  dessus ; l'idée de la paix troublée ne se lit plus dans le mot.
+famille: [ effroi, effrayant, effroyable ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: effrayer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

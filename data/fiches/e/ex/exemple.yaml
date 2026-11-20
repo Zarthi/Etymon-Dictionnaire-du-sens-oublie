@@ -1,0 +1,44 @@
+mot: exemple
+nature: [ nom masculin ]
+etymologie:
+  - forme: exemplum
+    langue: latin
+    sens: échantillon, modèle
+explication: >-
+  exemplum disait l'échantillon, la reproduction, le modèle ; en français le mot
+  a d'abord dit le bruit, la nouvelle qui court (milieu du XIe siècle), puis le
+  récit dont on tire un enseignement moral, le fait qu'on cite, le modèle à
+  imiter. La nouvelle qui court ne se lit plus dans le mot.
+ecartees:
+  - forme: eximere
+    langue: latin
+    sens: tirer hors
+    raison: "Littré la rapporte : exemplum serait proprement un échantillon ; la
+      dérivation a fait difficulté."
+famille: [ exemplaire, exemplifier ]
+themes: [ parole, savoir ]
+tradition:
+  lectures:
+    - texte: Le paradigma est, chez Isidore, un exemplum d'un dire ou d'un fait,
+        convenant à la chose qu'on propose, pris d'un genre semblable ou
+        dissemblable.
+      citation: 'Paradigma vero est exemplum dicti vel facti alicuius aut ex simili
+        aut ex dissimili genere conveniens eius, quam proponimus, rei, ita: "Tam
+        fortiter periit apud Hipponem Scipio quam Vticae Cato"'
+      sources:
+        - ouvrage: etymologies
+          entree: I, 34
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: exemple
+  - ouvrage: littre
+    entree: exemple
+  - ouvrage: etymologies
+    entree: I, 34
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

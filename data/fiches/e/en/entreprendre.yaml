@@ -1,0 +1,25 @@
+mot: entreprendre
+nature: [ verbe ]
+etymologie:
+  - forme: entreprendre
+    langue: français
+  - forme: emprendre
+    langue: ancien français
+    sens: commencer, mettre en œuvre
+explication: >-
+  Entreprendre, c'était d'abord s'attaquer à (ca 1140) ; le sens « mettre en
+  œuvre » est venu de emprendre, par substitution de préfixe. Le mot dit
+  aujourd'hui surtout le projet qu'on met à exécution avec ses moyens et ses
+  efforts ; l'attaque n'est plus que rare et concrète.
+famille: [ entrepreneur ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: entreprendre
+  - ouvrage: littre
+    entree: entreprendre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

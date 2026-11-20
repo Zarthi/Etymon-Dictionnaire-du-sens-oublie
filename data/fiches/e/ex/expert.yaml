@@ -1,0 +1,35 @@
+mot: expert
+nature: [ adjectif ]
+etymologie:
+  - forme: expertus
+    langue: latin
+    sens: éprouvé, qui a fait ses preuves
+explication: >-
+  expertus disait l'éprouvé, celui qui a fait ses preuves ; le français l'a pris
+  pour l'adroit (1252-62), puis pour le spécialiste dont on demande l'avis.
+  L'épreuve qui passait par le péril s'est faite compétence.
+famille: [ expertise, inexpert ]
+themes: [ savoir, droit ]
+tradition:
+  lectures:
+    - texte: "Isidore distingue expertem et expertum : expertum rerum dit le peritus,
+        l'habile ; expertem, l'ignarum, l'ignorant."
+      citation: Inter Expertem et expertum. Si enim expertum rerum dixerimus,
+        significamus peritum, si expertem, ignarum.
+      sources:
+        - ouvrage: differences
+          entree: 180. Inter Expertem et expertum
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: expert
+  - ouvrage: littre
+    entree: expert
+  - ouvrage: differences
+    entree: 180. Inter Expertem et expertum
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

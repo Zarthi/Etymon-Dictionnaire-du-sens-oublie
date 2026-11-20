@@ -1,0 +1,30 @@
+mot: éthique
+nature: [ nom féminin ]
+etymologie:
+  - forme: ethica
+    langue: latin
+    sens: morale, partie de la philosophie
+  - forme: ἠθικός
+    langue: grec ancien
+    sens: qui concerne les mœurs
+  - forme: ἦθος
+    langue: grec ancien
+    sens: caractère habituel, habitude, manière d'être
+explication: >-
+  ἦθος disait d'abord la demeure habituelle des bêtes — l'écurie, le repaire —,
+  puis l'habitude et le caractère. ἠθικός disait ce qui concerne les mœurs ; le
+  mot dit aujourd'hui la science des principes de l'action morale, et les
+  valeurs qu'on en tire.
+themes: [ morale, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: éthique
+  - ouvrage: bailly
+    entree: ἠθικός
+  - ouvrage: bailly
+    entree: ἦθος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
