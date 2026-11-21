@@ -1,0 +1,26 @@
+mot: mécréant
+nature: [ adjectif ]
+etymologie:
+  - forme: mescreant
+    langue: ancien français
+    sens: qui croit à une fausse religion
+    elements:
+      - forme: mes-
+        sens: mal, à tort
+      - forme: creant
+        sens: croyant
+explication: >-
+  Mécréant qualifiait d'abord celui qui croyait à une fausse religion,
+  c'est-à-dire le non-chrétien. Il ne dit plus que l'absence de foi, ou le
+  scepticisme à l'égard d'une chose.
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: mécréant
+  - ouvrage: littre
+    entree: mécréant
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

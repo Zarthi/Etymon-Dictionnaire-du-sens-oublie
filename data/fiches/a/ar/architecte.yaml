@@ -1,0 +1,45 @@
+mot: architecte
+nature: [ nom masculin ]
+etymologie:
+  - forme: architectus
+    langue: latin
+  - forme: ἀρχιτέκτων
+    langue: grec ancien
+    sens: architecte, constructeur
+    elements:
+      - forme: ἄρχω
+        sens: commander, être le premier
+      - forme: τέκτων
+        sens: charpentier, ouvrier du bois
+explication: >-
+  Le grec nommait le chef des charpentiers, puis tout maître d'œuvre qui conçoit
+  le plan et dirige la construction. Emprunté au XVIe siècle, le mot désigne
+  aussi celui qui organise une œuvre de l'esprit.
+famille: [ architecture, architectural, architectonique ]
+themes: [ travail, maison ]
+tradition:
+  lectures:
+    - texte: L'architecte est dit sage parce qu'il dispose la forme de la maison, à
+        l'égard des artisans inférieurs qui taillent le bois ou préparent les
+        pierres.
+      citation: Ut in genere aedificii, artifex qui disponit formam domus, dicitur
+        sapiens et architector, respectu inferiorum artificum, qui dolant ligna
+        vel parant lapides
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 1 a. 6 co.
+          url: https://www.corpusthomisticum.org/sth1001.html
+sources:
+  - ouvrage: tlfi
+    entree: architecte
+  - ouvrage: littre
+    entree: architecte
+  - ouvrage: bailly
+    entree: ἀρχιτέκτων
+  - ouvrage: bailly
+    entree: τέκτων
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

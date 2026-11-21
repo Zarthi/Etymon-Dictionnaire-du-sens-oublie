@@ -1,0 +1,29 @@
+mot: imbécile
+nature: [ adjectif ]
+etymologie:
+  - forme: imbecillus
+    langue: latin
+    sens: faible de corps et d'esprit
+explication: >-
+  Imbécile a d'abord dit la faiblesse du corps (1496), puis celle de l'esprit
+  (1509). Le mot s'est chargé d'un jugement sur l'intelligence et ne dit plus
+  que la sottise.
+ecartees:
+  - forme: in-bacillus
+    langue: latin
+    sens: sans bâton
+    raison: "La quantité des voyelles s'y oppose : le be d'imbecillus est long, le
+      ba de bacillus bref."
+    populaire: true
+famille: [ imbécillité ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: imbécile
+  - ouvrage: tlfi
+    entree: imbécile
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

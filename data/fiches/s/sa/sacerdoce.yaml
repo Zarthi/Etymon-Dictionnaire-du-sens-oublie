@@ -1,0 +1,21 @@
+mot: sacerdoce
+nature: [ nom masculin ]
+etymologie:
+  - forme: sacerdotium
+    langue: latin
+    sens: dignité sacerdotale, prêtrise
+explication: >-
+  Le mot nomme la fonction de celui qui a la charge du sacré. Le français l'a
+  étendu aux vocations qui demandent un dévouement entier, comme l'enseignement
+  ou le soin.
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: sacerdoce
+  - ouvrage: littre
+    entree: sacerdoce
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

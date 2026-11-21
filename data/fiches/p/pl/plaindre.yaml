@@ -1,0 +1,33 @@
+mot: plaindre
+nature: [ verbe ]
+etymologie:
+  - forme: plangere
+    langue: latin
+    sens: frapper, se frapper la poitrine de douleur
+explication: >-
+  Plangere, c'était frapper, puis se frapper la poitrine en signe de deuil ;
+  plaindre a d'abord dit la lamentation sur un mort. Le mot ne garde plus le
+  geste : il dit la pitié pour le malheur d'autrui, ou la plainte de celui qui
+  souffre.
+famille: [ plainte, plaignant, plaintif ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Plaindre, c'est se frapper la poitrine ou le visage avec des larmes, à la
+        différence des larmes seules et des pleurs avec la voix.
+      citation: Flere est ubertim lacrymas fundere, quasi fluere, plorare est quasi
+        cum voce flere, plangere, cum lacrymis pectus aut faciem tundere.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: plaindre
+  - ouvrage: tlfi
+    entree: plaindre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,22 @@
+mot: consacrer
+nature: [ verbe ]
+etymologie:
+  - forme: consecrare
+    langue: latin
+    sens: rendre sacré en dédiant aux dieux
+explication: >-
+  Consacrer, c'était d'abord dédier une chose aux dieux par un rite. Le mot
+  s'est étendu à toute destination exclusive, puis à ce qui rend une chose
+  durable et respectable : un usage consacré, une formule consacrée.
+famille: [ consécration, consacré, déconsacrer ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: consacrer
+  - ouvrage: littre
+    entree: consacrer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

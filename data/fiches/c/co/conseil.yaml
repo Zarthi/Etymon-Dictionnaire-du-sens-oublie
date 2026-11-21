@@ -1,0 +1,32 @@
+mot: conseil
+nature: [ nom masculin ]
+etymologie:
+  - forme: consilium
+    langue: latin
+    sens: avis, délibération, assemblée délibérante
+explication: >-
+  Conseil a nommé l'avis donné, puis la réunion de ceux qui délibèrent et le
+  corps qui en sort. Le mot unit encore les deux : le conseil est à la fois ce
+  qui aide à décider et ceux qui décident.
+famille: [ conseiller, consulter, consul ]
+themes: [ parole, société ]
+tradition:
+  lectures:
+    - texte: "Le conseil est une recherche touchant les choses douteuses : Dieu, qui
+        ne doute de rien, ne délibère pas."
+      citation: Unde, licet consiliari non competat Deo, secundum quod consilium est
+        inquisitio de rebus dubiis.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 22 a. 1 ad 1
+          url: https://www.corpusthomisticum.org/sth1015.html
+sources:
+  - ouvrage: tlfi
+    entree: conseil
+  - ouvrage: littre
+    entree: conseil
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

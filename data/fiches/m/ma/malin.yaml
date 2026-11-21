@@ -1,0 +1,34 @@
+mot: malin
+nature: [ adjectif ]
+etymologie:
+  - forme: malignus
+    langue: latin
+    sens: de nature mauvaise, méchant
+explication: >-
+  Malin a dit la méchanceté avant l'adresse : le malin est d'abord celui qui se
+  plaît à faire le mal (xiie siècle), et le diable (1530). La finesse et la ruse
+  ne s'y ajoutent qu'au xviie siècle.
+famille: [ malice, malignité ]
+renvois: [ habile ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: La malignité n'est pas la pensée mauvaise, qui est malice, mais le
+        vouloir et l'œuvre de la malice.
+      citation: Cogitatio quippe prava mentis malitia dicitur, malitiae votum vel opus
+        malignitas appellatur.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: malin
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

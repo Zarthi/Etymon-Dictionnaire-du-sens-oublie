@@ -1,0 +1,30 @@
+mot: jour
+nature: [ nom masculin ]
+etymologie:
+  - forme: diurnus
+    langue: latin
+    sens: du jour, diurne
+explication: >-
+  Le mot vient de l'adjectif latin diurnus, « du jour » : il a d'abord nommé
+  l'espace de temps, puis la clarté qui le remplit, et enfin la durée de
+  vingt-quatre heures. La lumière reste dans plein jour.
+famille: [ journal, journée, journalier, bonjour ]
+themes: [ temps, nature ]
+tradition:
+  lectures:
+    - texte: Les choses diurnes sont faites du jour, comme le salaire diurne.
+      citation: Diurna a die facta sunt, ut diurna merces
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: jour
+  - ouvrage: tlfi
+    entree: jour
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

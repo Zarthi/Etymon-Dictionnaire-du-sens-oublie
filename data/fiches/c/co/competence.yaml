@@ -1,0 +1,20 @@
+mot: compétence
+nature: [ nom féminin ]
+etymologie:
+  - forme: competentia
+    langue: bas latin
+    sens: proportion, juste rapport
+explication: >-
+  Compétence vient du latin competentia, « proportion, juste rapport ». Le mot a
+  désigné l'aptitude d'un tribunal, puis la capacité d'une personne dans un
+  domaine : est compétent celui à qui une matière revient.
+famille: [ compétent, incompétence, compétition ]
+themes: [ savoir, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: compétence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

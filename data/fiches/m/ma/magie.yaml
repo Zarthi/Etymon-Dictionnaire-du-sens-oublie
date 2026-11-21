@@ -1,0 +1,41 @@
+mot: magie
+nature: [ nom féminin ]
+etymologie:
+  - forme: magia
+    langue: latin
+    sens: religion des mages, sorcellerie
+  - forme: μαγεία
+    langue: grec ancien
+    sens: religion des mages, magie
+explication: >-
+  Le mot vient des mages perses, prêtres interprètes des songes ; le grec puis
+  le latin l'ont appliqué à la sorcellerie. En français, il a désigné la science
+  occulte, puis l'art de produire des illusions et un charme inexplicable.
+famille: [ magique, magicien, mage ]
+renvois: [ merveille ]
+themes: [ religion, esprit ]
+tradition:
+  lectures:
+    - texte: La magie se distingue de la goétie, au nom plus détestable, et de la
+        théurgie, au nom plus honorable, selon ceux qui prétendent séparer ces
+        arts.
+      citation: quam uel magian uel detestabiliore nomine goetian uel honorabiliore
+        theurgian uocant, qui quasi conantur ista discernere
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: X
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+sources:
+  - ouvrage: littre
+    entree: magie
+  - ouvrage: bailly
+    entree: μαγεία
+  - ouvrage: bailly
+    entree: μάγος
+  - ouvrage: tlfi
+    entree: magie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

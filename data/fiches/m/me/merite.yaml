@@ -1,0 +1,25 @@
+mot: mérite
+nature: [ nom masculin ]
+etymologie:
+  - forme: meritum
+    langue: latin
+    sens: salaire, récompense
+  - forme: merere
+    langue: latin
+    sens: avoir en partage
+explication: >-
+  Meritum nommait d'abord le salaire, la récompense due ; le mot est passé de la
+  paie au droit de la recevoir, puis à la valeur qui la justifie. Le mérite est
+  aujourd'hui la qualité morale, non plus le prix qu'on en tire.
+famille: [ mériter, méritoire, démérite ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: mérite
+  - ouvrage: tlfi
+    entree: mérite
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,33 @@
+mot: office
+nature: [ nom masculin ]
+etymologie:
+  - forme: officium
+    langue: latin
+    sens: devoir, service, charge
+explication: >-
+  Office a nommé le devoir et le service avant la charge et le lieu où on
+  l'exerce. L'office religieux est la prière due à Dieu ; l'office d'un
+  fonctionnaire, la tâche qui lui revient. Le mot garde ce lien entre la
+  fonction et le lieu.
+famille: [ officiel, officier, officieux, officine ]
+themes: [ travail, religion ]
+tradition:
+  lectures:
+    - texte: "Office vient d'efficere, « faire » : une lettre changée pour la beauté
+        du parler en a fait officium."
+      citation: Officium autem ab efficiendo dictum, quasi efficium, propter decorem
+        sermonis una mutata littera;
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: office
+  - ouvrage: littre
+    entree: office
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,32 @@
+mot: péché
+nature: [ nom masculin ]
+etymologie:
+  - forme: peccatum
+    langue: latin ecclésiastique
+    sens: faute contre la loi divine
+  - forme: peccatum
+    langue: latin
+    sens: faute
+explication: >-
+  Peccatum nommait toute faute ; le latin chrétien en a fait la faute contre
+  Dieu. Le français a gardé ce sens religieux et l'a affaibli jusqu'à la faute
+  ordinaire, voire au simple défaut.
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: Certains ont tenu le délit pour un péché léger.
+      citation: Delictum quidam leve putaverunt esse peccatum
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: péché
+  - ouvrage: littre
+    entree: péché
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

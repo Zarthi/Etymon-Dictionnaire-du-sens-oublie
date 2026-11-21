@@ -1,0 +1,26 @@
+mot: insulte
+nature: [ nom féminin ]
+etymologie:
+  - forme: insultus
+    langue: latin médiéval
+    sens: assaut, attaque
+  - forme: insultare
+    langue: latin
+    sens: sauter sur, assaillir
+explication: >-
+  Insulte est d'abord un assaut, une attaque armée ; le mot est passé de la
+  violence faite au corps à celle faite à l'honneur. Il ne désigne plus qu'une
+  parole ou un geste qui offense.
+famille: [ insulter, insultant ]
+renvois: [ injure ]
+themes: [ parole ]
+sources:
+  - ouvrage: tlfi
+    entree: insulte
+  - ouvrage: littre
+    entree: insulte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

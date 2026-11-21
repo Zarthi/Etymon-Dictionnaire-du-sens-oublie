@@ -1,0 +1,32 @@
+mot: noble
+nature: [ adjectif ]
+etymologie:
+  - forme: nobilis
+    langue: latin
+    sens: connu, illustre, digne d'être connu
+explication: >-
+  Le latin nobilis disait ce qui est connu, illustre, digne d'être su. Le
+  français en a fait la qualité de ceux qui sont nés dans une classe élevée,
+  puis une qualité morale : noble se dit d'un caractère élevé comme d'une
+  naissance.
+famille: [ noblesse, ennoblir, ignoble ]
+renvois: [ seigneur ]
+themes: [ société, morale ]
+tradition:
+  lectures:
+    - texte: Noble se dit de celui qui est de bonne naissance, de race généreuse.
+      citation: Nobilis, generosus;
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: noble
+  - ouvrage: tlfi
+    entree: noble
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

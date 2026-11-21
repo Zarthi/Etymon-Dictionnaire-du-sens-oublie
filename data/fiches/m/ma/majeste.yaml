@@ -1,0 +1,30 @@
+mot: majesté
+nature: [ nom féminin ]
+etymologie:
+  - forme: majestas
+    langue: latin
+    sens: grandeur, dignité
+explication: >-
+  Majesté a nommé la grandeur qui impose le respect avant de devenir le titre
+  des souverains. Le mot dit encore cette grandeur, mais l'usage courant l'a
+  réservé aux rois et aux choses qui en ont l'apparence.
+famille: [ majestueux, majeur ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: "La majesté est la grandeur de la patrie : la léser est un crime plus
+        grand que d'atteindre un seul citoyen."
+      citation: Dictus autem reus maiestatis, quia maius est laedere patriam quam
+        civem unum.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: majesté
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

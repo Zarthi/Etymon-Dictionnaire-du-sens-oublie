@@ -1,0 +1,35 @@
+mot: artifice
+nature: [ nom masculin ]
+etymologie:
+  - forme: artificium
+    langue: latin
+    sens: métier, habileté
+    elements:
+      - forme: ars
+        sens: art, habileté
+      - forme: facere
+        sens: faire
+explication: >-
+  Artifice a d'abord dit le métier et l'habileté de l'artisan, puis un moyen
+  ingénieux, et bientôt un procédé qui imite ou qui trompe. Le sens technique
+  survit dans les feux d'artifice.
+famille: [ artificiel, artificier, artificieux ]
+themes: [ esprit, savoir ]
+tradition:
+  lectures:
+    - texte: L'art est libéral par nature ; l'artifice, lui, consiste en ce qui est
+        fait par les mains.
+      citation: Ars est natura liberalis, artificium vero gestum manibus
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: artifice
+  - ouvrage: tlfi
+    entree: artifice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

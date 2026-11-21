@@ -1,0 +1,35 @@
+mot: sacrilège
+nature: [ nom masculin ]
+etymologie:
+  - forme: sacrilegium
+    langue: latin
+    sens: profanation des choses sacrées
+  - forme: sacrilegus
+    langue: latin
+    sens: voleur d'objets sacrés
+    elements:
+      - forme: sacra
+        sens: objets sacrés
+      - forme: legere
+        sens: ramasser, recueillir
+explication: >-
+  Le sacrilège était proprement le vol des objets sacrés. Le mot s'est étendu à
+  toute profanation, puis à toute atteinte à ce qu'une personne ou un groupe
+  tient pour sacré.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le sacrilège est proprement le vol des choses sacrées.
+      citation: Sacrilegium proprie est sacrarum rerum furtum.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 12
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: sacrilège
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,32 @@
+mot: sérieux
+nature: [ adjectif ]
+etymologie:
+  - forme: seriosus
+    langue: latin médiéval
+    sens: sérieux
+explication: >-
+  Le latin serius dit le sérieux. Le français en fait d'abord ce qui mérite
+  considération (1370), puis ce qui s'oppose à l'amusement (1580). Le sérieux
+  est aujourd'hui ce qui compte et ce qui ne rit pas.
+famille: [ sérieusement ]
+themes: [ morale, esprit ]
+tradition:
+  lectures:
+    - texte: "Sont dites sérieuses les choses ordonnées à la dernière fin, comme
+        utiles : le sérieux est ce qui a rapport à ce qui compte le plus."
+      citation: Ea enim quae ad finem ultimum ordinantur, seriosa dicuntur, quasi utilia.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 1 a. 6 arg. 1
+          url: https://www.corpusthomisticum.org/sth2001.html
+sources:
+  - ouvrage: tlfi
+    entree: sérieux
+  - ouvrage: somme-theologique
+    entree: Ia-IIae q. 1 a. 6 arg. 1
+    url: https://www.corpusthomisticum.org/sth2001.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

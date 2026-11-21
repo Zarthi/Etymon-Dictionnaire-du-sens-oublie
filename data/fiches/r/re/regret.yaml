@@ -1,0 +1,48 @@
+mot: regret
+nature: [ nom masculin ]
+etymologie:
+  - forme: regrés
+    langue: ancien français
+    sens: lamentations, plaintes
+  - langue: latin populaire
+    sens: se plaindre, lamenter
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: "*requiritare"
+          langue: latin populaire
+          sens: se plaindre, lamenter
+        - forme: "*gretan"
+          langue: germanique
+          sens: pleurer, se plaindre
+          selon: [ eduard-matzner, friedrich-diez ]
+        - forme: "*recretum"
+          langue: latin
+          sens: ce qui recroît
+          selon: [ honore-chavee ]
+        - forme: "*gratus"
+          langue: latin
+          sens: remercier, reprendre avec reconnaissance
+          selon: [ karl-august-friedrich-mahn ]
+        - forme: "*regradus"
+          langue: latin
+          sens: retour sur ses pas
+          selon: [ emile-littre ]
+    premier: true
+explication: >-
+  Regret a d'abord nommé les lamentations et les plaintes, avant de se fixer sur
+  la peine d'un retour impossible. Son origine reste discutée : le latin
+  requiritari, « se plaindre », ou un verbe germanique, « pleurer ».
+incertain: true
+famille: [ regretter, regrettable ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: regret
+  - ouvrage: littre
+    entree: regret
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

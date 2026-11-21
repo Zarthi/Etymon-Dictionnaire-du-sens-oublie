@@ -1,0 +1,41 @@
+mot: maudire
+nature: [ verbe ]
+etymologie:
+  - forme: maledicere
+    langue: latin ecclésiastique
+    sens: maudire
+    elements:
+      - forme: male
+        langue: latin
+        sens: mal
+      - forme: dicere
+        langue: latin
+        sens: dire
+explication: >-
+  Maledicere, en latin classique, c'était dire du mal ; le latin chrétien en a
+  fait vouer au malheur par la parole. Maudire garde ce poids : il ne dit pas
+  seulement du mal de quelqu'un, il appelle le mal sur lui.
+famille: [ maudit, malédiction ]
+renvois: [ jurer ]
+themes: [ parole, religion ]
+tradition:
+  lectures:
+    - texte: Maudire, c'est souhaiter à autrui le mal en tant que mal et le vouloir
+        pour lui-même ; l'acte est illicite des deux manières, qu'on le commande
+        ou qu'on le souhaite.
+      citation: Si enim aliquis imperet vel optet malum alterius inquantum est malum,
+        quasi ipsum malum intendens, sic maledicere utroque modo erit illicitum.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 76 a. 1
+          url: https://www.corpusthomisticum.org/sth3061.html
+sources:
+  - ouvrage: littre
+    entree: maudire
+  - ouvrage: tlfi
+    entree: maudire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

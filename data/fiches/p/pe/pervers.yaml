@@ -1,0 +1,40 @@
+mot: pervers
+nature: [ adjectif ]
+etymologie:
+  - forme: perversus
+    langue: latin
+    sens: renversé, retourné
+    elements:
+      - forme: per-
+        sens: à travers, contre
+      - forme: versus
+        sens: tourné
+explication: >-
+  Perversus dit ce qui est tourné à l'envers ; appliqué à l'âme, il dit le
+  penchant retourné contre le bien (xiie siècle). Le mot qualifie aujourd'hui
+  une méchanceté réfléchie, et, en médecine, un goût sexuel qui s'écarte de la
+  norme.
+famille: [ perversité, perversion, pervertir ]
+renvois: [ malin ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Le mot dit un amour qui a mal tourné : la perversité de la volonté n'est
+        pas autre chose qu'un mauvais amour."
+      citation: recta voluntas est bonus amor, et perversa voluntas est malus amor
+      auteur: augustin
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 26 a. 3 ad 3
+          url: https://www.corpusthomisticum.org/sth2026.html
+sources:
+  - ouvrage: tlfi
+    entree: pervers
+  - ouvrage: somme-theologique
+    entree: Ia-IIae q. 26 a. 3 ad 3
+    url: https://www.corpusthomisticum.org/sth2026.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

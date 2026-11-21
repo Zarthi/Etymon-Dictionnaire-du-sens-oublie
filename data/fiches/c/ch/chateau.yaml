@@ -1,0 +1,23 @@
+mot: château
+nature: [ nom masculin ]
+etymologie:
+  - forme: castellum
+    langue: latin
+    sens: fortin, redoute
+explication: >-
+  Castellum était un petit fort ; le mot a nommé la forteresse, puis la grande
+  demeure seigneuriale ou royale entourée de jardins. Le sens militaire ne
+  survit que dans château fort.
+famille: [ castel, châtelain, castellan ]
+renvois: [ palais ]
+themes: [ maison, société ]
+sources:
+  - ouvrage: littre
+    entree: château
+  - ouvrage: tlfi
+    entree: château
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

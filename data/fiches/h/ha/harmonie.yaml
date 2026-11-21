@@ -1,0 +1,37 @@
+mot: harmonie
+nature: [ nom féminin ]
+etymologie:
+  - forme: harmonia
+    langue: latin
+    sens: accord
+  - forme: ἁρμονία
+    langue: grec ancien
+    sens: ajustement, juste proportion, accord des sons
+explication: >-
+  Le grec disait l'assemblage des pierres ou des planches, puis la juste
+  proportion du corps et l'accord des sons. Le mot a gardé l'accord musical et
+  s'est étendu à toute convenance entre des parties, puis à la concorde.
+famille: [ harmonieux, harmoniser, harmonique ]
+themes: [ esprit, parole ]
+tradition:
+  lectures:
+    - texte: Le monde lui-même est dit composé d'une certaine harmonie de sons, et le
+        ciel tourne sous la modulation de l'harmonie.
+      citation: Nam et ipse mundus quadam harmonia sonorum fertur esse conpositus, et
+        coelum ipsud sub harmoniae modulatione revolvi.
+      sources:
+        - ouvrage: etymologies
+          entree: III
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_III
+sources:
+  - ouvrage: littre
+    entree: harmonie
+  - ouvrage: bailly
+    entree: ἁρμονία
+  - ouvrage: tlfi
+    entree: harmonie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

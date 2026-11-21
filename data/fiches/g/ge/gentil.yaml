@@ -1,0 +1,35 @@
+mot: gentil
+nature: [ nom masculin ]
+etymologie:
+  - forme: gentilis
+    langue: latin
+    sens: de la même famille, de bonne race
+explication: >-
+  Gentilis désignait celui qui appartient à une même famille, puis, chez les
+  chrétiens, celui qui n'est pas de leur foi. En français, gentil a dit noble,
+  de bonne naissance, puis aimable et doux : la noblesse du sang s'est changée
+  en agrément du caractère.
+famille: [ gentillesse, gentilhomme ]
+renvois: [ genereux ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: Les gentils sont ainsi nommés parce qu'ils sont nés selon la chair, sous
+        le péché, servant les idoles et non encore régénérés.
+      citation: Dicti autem gentiles, quia ita sunt ut fuerunt geniti, id est, sicut
+        in carne descenderunt sub peccato, scilicet idolis servientes et necdum
+        regenerati.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: gentil
+  - ouvrage: tlfi
+    entree: gentil (adjectif)
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,29 @@
+mot: injure
+nature: [ nom féminin ]
+etymologie:
+  - forme: injuria
+    langue: latin
+    sens: injustice, violation du droit
+    elements:
+      - forme: in-
+        langue: latin
+        sens: négation
+      - forme: jus
+        langue: latin
+        sens: droit
+explication: >-
+  Injure nommait d'abord toute violation du droit, tout tort fait à autrui ; le
+  mot s'est resserré sur la parole ou l'acte qui offense. Le sens ancien de
+  « tort » survit dans l'expression « injure du temps ».
+famille: [ injurier, injurieux ]
+themes: [ parole, morale ]
+sources:
+  - ouvrage: littre
+    entree: injure
+  - ouvrage: tlfi
+    entree: injure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

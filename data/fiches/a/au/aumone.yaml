@@ -1,0 +1,26 @@
+mot: aumône
+nature: [ nom féminin ]
+etymologie:
+  - forme: elemosina
+    langue: latin ecclésiastique
+    sens: don charitable
+  - forme: ἐλεημοσύνη
+    langue: grec ancien
+    sens: pitié, compassion
+explication: >-
+  Le grec nommait la pitié avant le don qu'elle inspire ; le latin chrétien a
+  fixé le mot sur le don, et le français n'a gardé que ce sens.
+renvois: [ piete ]
+themes: [ religion, société ]
+sources:
+  - ouvrage: tlfi
+    entree: aumône
+  - ouvrage: bailly
+    entree: ἐλεημοσύνη
+  - ouvrage: littre
+    entree: aumône
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

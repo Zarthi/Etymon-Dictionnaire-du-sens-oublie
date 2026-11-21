@@ -1,0 +1,34 @@
+mot: habile
+nature: [ adjectif ]
+etymologie:
+  - forme: habilis
+    langue: latin
+    sens: souple, maniable, propre à
+explication: >-
+  Habilis voulait dire maniable, aisé à tenir ; le français en tire d'abord apte
+  (xiiie siècle), puis adroit (xve siècle). L'idée de souplesse a cédé la place
+  à celle de maîtrise.
+famille: [ habileté, habiller ]
+themes: [ travail, esprit ]
+tradition:
+  lectures:
+    - texte: "Honorable se dit de ce qui est habile à l'honneur, c'est-à-dire propre à
+        le recevoir : habile veut dire apte."
+      citation: Honorabilis, quasi honore habilis, hoc est aptus.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: habile
+  - ouvrage: tlfi
+    entree: habile
+  - ouvrage: etymologies
+    entree: X
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

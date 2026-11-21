@@ -1,0 +1,31 @@
+mot: décevoir
+nature: [ verbe ]
+etymologie:
+  - forme: dēcipēre
+    langue: latin populaire
+    sens: tromper
+  - forme: decipere
+    langue: latin
+    sens: attraper, tromper
+    elements:
+      - forme: de-
+        langue: latin
+        sens: hors de
+      - forme: capere
+        langue: latin
+        sens: prendre
+explication: >-
+  Décevoir, c'était tromper ; le mot s'est retourné. Il ne dit plus la ruse de
+  celui qui trompe, mais la déconvenue de celui qui attendait autre chose.
+famille: [ déception, déceptif ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: décevoir
+  - ouvrage: tlfi
+    entree: décevoir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

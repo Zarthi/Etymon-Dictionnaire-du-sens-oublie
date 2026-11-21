@@ -1,0 +1,33 @@
+mot: commun
+nature: [ adjectif ]
+etymologie:
+  - forme: communis
+    langue: latin
+    sens: partagé, qui appartient à plusieurs
+explication: >-
+  Commun a d'abord dit ce qui est partagé par plusieurs, puis ce qui est
+  ordinaire, répandu, et enfin ce qui est banal. La mise en commun a laissé
+  place au jugement sur ce que tout le monde a : le commun des hommes, une idée
+  commune.
+famille: [ communauté, commune, communier, communication ]
+themes: [ société, politique ]
+tradition:
+  lectures:
+    - texte: Communes se dit de ce dont beaucoup usent en commun, comme les lettres
+        d'écrire et de lire.
+      citation: Communes dictae, quia multi eas in commune utuntur, ut scribere et
+        legere.
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: commun
+  - ouvrage: tlfi
+    entree: commun
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,33 @@
+mot: merveille
+nature: [ nom féminin ]
+etymologie:
+  - forme: mirabilia
+    langue: latin
+    sens: choses merveilleuses, miracles
+explication: >-
+  Le latin mirabilia, « choses étonnantes », servait surtout, dans la langue de
+  l'Église, pour les miracles. Le français en a fait un singulier : la merveille
+  est ce qui dépasse l'ordinaire, puis ce qui suscite l'admiration.
+famille: [ merveilleux, émerveiller, merveilleusement ]
+themes: [ émotions, esprit ]
+tradition:
+  lectures:
+    - texte: Paul est appelé mirabilis soit parce qu'il fit beaucoup de signes, soit
+        parce qu'il prêcha l'Évangile du Christ d'Orient en Occident chez toutes
+        les nations.
+      citation: Mirabilis, vel quia multa signa fecit, vel quia ab oriente usque ad
+        occasum evangelium Christi in omnibus gentibus praedicavit.
+      sources:
+        - ouvrage: etymologies
+          entree: VII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: littre
+    entree: merveille
+  - ouvrage: tlfi
+    entree: merveille
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

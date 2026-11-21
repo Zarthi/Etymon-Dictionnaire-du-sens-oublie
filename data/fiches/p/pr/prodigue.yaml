@@ -1,0 +1,35 @@
+mot: prodigue
+nature: [ adjectif ]
+etymologie:
+  - forme: prodigus
+    langue: latin
+    sens: qui dépense sans mesure
+explication: >-
+  Prodigus dit celui qui pousse tout au loin et le jette ; le français
+  l'emprunte vers 1265 pour celui qui dilapide son bien, et l'étend à qui donne
+  sans compter.
+famille: [ prodiguer, prodigalité ]
+themes: [ argent, morale ]
+tradition:
+  lectures:
+    - texte: "Le prodigue est celui qui consume tout : il pousse chaque chose plus
+        loin, comme s'il la jetait."
+      citation: Prodigus, sumtuosus atque consumtor, qui omnia porro agit et quasi
+        proicit.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: prodigue
+  - ouvrage: tlfi
+    entree: prodigue
+  - ouvrage: etymologies
+    entree: X
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

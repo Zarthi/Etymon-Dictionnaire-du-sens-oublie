@@ -1,0 +1,24 @@
+mot: minute
+nature: [ nom féminin ]
+etymologie:
+  - forme: minuta
+    langue: latin médiéval
+    sens: chose menue, petite partie
+  - forme: minutus
+    langue: latin
+    sens: petit, menu
+explication: >-
+  Minuta disait une chose menue : la petite écriture d'un brouillon, puis la
+  soixantième partie de l'heure. Le mot garde ces deux sens, la minute du temps
+  et la minute d'un acte.
+famille: [ minutie, minutieux, minuter, minuteur ]
+renvois: [ jour ]
+themes: [ temps ]
+sources:
+  - ouvrage: tlfi
+    entree: minute
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

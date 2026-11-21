@@ -1,0 +1,29 @@
+mot: inconscient
+nature: [ adjectif ]
+etymologie:
+  - forme: inconscient
+    langue: français
+    sens: qui échappe à la conscience
+    elements:
+      - forme: in-
+        sens: privatif
+      - forme: conscient
+        sens: qui a conscience
+explication: >-
+  Le mot est formé en français au xixe siècle : il dit d'abord ce qui échappe à
+  la conscience (1820), puis ce qui se fait sans qu'on s'en rende compte.
+  Employé comme nom à partir de 1877, il désigne l'ensemble des phénomènes qui
+  échappent à la conscience.
+famille: [ inconscience, conscient ]
+renvois: [ instinct ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: inconscient
+  - ouvrage: tlfi
+    entree: inconscient
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

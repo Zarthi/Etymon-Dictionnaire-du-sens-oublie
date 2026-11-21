@@ -1,0 +1,32 @@
+mot: fête
+nature: [ nom féminin ]
+etymologie:
+  - forme: festa
+    langue: latin
+    sens: fête, jour de fête
+explication: >-
+  La fête était le jour consacré au culte, où l'on chômait. Le mot s'est étendu
+  aux réjouissances publiques et privées, puis à tout ce qui réjouit et rompt le
+  cours ordinaire des jours.
+famille: [ fêter, festivité, festin ]
+themes: [ société, religion ]
+tradition:
+  lectures:
+    - texte: Les jours de fête se disent d'après l'usage ; les jours solennels, ceux
+        qui concernent tous, comme les parentales.
+      citation: Festi dies ex consuetudine dicuntur, solemnes vero qui ad omnes
+        pertinent, ut parentalia.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: fête
+  - ouvrage: littre
+    entree: fête
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

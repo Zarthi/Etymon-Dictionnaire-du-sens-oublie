@@ -1,0 +1,40 @@
+mot: fantôme
+nature: [ nom masculin ]
+etymologie:
+  - forme: phantasma
+    langue: latin
+    sens: apparition, spectre
+  - forme: φάντασμα
+    langue: grec ancien
+    sens: apparition, vision, image
+explication: >-
+  Le grec φάντασμα disait toute image offerte à l'esprit, puis le spectre. Le
+  mot français a d'abord dit l'illusion et l'apparition surnaturelle ; il
+  désigne aujourd'hui l'être irréel et ce qui n'a que l'apparence de
+  l'existence.
+famille: [ fantasme, fantastique, fantasmagorie ]
+themes: [ esprit, religion ]
+tradition:
+  lectures:
+    - texte: Ces fantômes sont à celui qui, par les rites trompeurs des faux dieux,
+        cherche à enlacer les âmes misérables et à les détourner du culte du
+        vrai Dieu.
+      citation: Eius enim sunt illa phantasmata, qui miseras animas multorum
+        falsorumque deorum fallacibus sacris cupiens inretire et a uero ueri Dei
+        cultu, quo solo mundantur et sanantur, auertere
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: X
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+sources:
+  - ouvrage: littre
+    entree: fantôme
+  - ouvrage: bailly
+    entree: φάντασμα
+  - ouvrage: tlfi
+    entree: fantôme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

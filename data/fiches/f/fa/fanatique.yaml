@@ -1,0 +1,22 @@
+mot: fanatique
+nature: [ adjectif ]
+etymologie:
+  - forme: fanaticus
+    langue: latin
+    sens: inspiré, exalté, propre au temple
+explication: >-
+  Fanatique a d'abord dit celui qui se croit inspiré par la divinité (1564),
+  avant de désigner le zèle aveugle pour une doctrine (1580). Le lien au temple
+  ne s'entend plus : le mot ne dit plus qu'une passion exclusive.
+famille: [ fanatisme ]
+themes: [ religion, politique ]
+sources:
+  - ouvrage: littre
+    entree: fanatique
+  - ouvrage: tlfi
+    entree: fanatique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

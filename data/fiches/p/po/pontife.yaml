@@ -1,0 +1,54 @@
+mot: pontife
+nature: [ nom masculin ]
+etymologie:
+  - forme: pontifex
+    langue: latin
+    sens: membre du collège sacerdotal romain
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: pontifex
+          sens: celui qui fait le pont
+          elements:
+            - forme: pons
+              sens: pont
+            - forme: facere
+              sens: faire
+        - forme: pontifex
+          sens: celui qui sacrifie sur le pont
+          elements:
+            - forme: pons
+              sens: pont
+            - forme: facere
+              sens: accomplir un sacrifice
+explication: >-
+  Le pontifex était le prêtre romain chargé du culte public ; son nom a été
+  rapproché du pont Sublicius, que gardaient les pontifes, sans que l'origine du
+  mot soit établie. Le français l'a appliqué aux dignitaires de l'Église, puis à
+  toute personne qui fait autorité.
+ecartees:
+  - forme: pomtis
+    sens: cinq
+    raison: "Hypothèse rapportée par le Littré : ponti- serait l'osque pomtis,
+      « cinq », d'où « les cinq sacrificateurs » ; elle n'est pas retenue."
+renvois: [ sacerdoce ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le pontife est le chef des prêtres, comme la voie de ceux qui le suivent.
+      citation: Pontifex princeps sacerdotum est, quasi via sequentium.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 13
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: pontife
+  - ouvrage: littre
+    entree: pontife
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

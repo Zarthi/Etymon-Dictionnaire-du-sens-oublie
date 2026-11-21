@@ -1,0 +1,27 @@
+mot: rançon
+nature: [ nom féminin ]
+etymologie:
+  - forme: redemptio
+    langue: latin
+    sens: action de racheter
+    elements:
+      - forme: re-
+        sens: en retour
+      - forme: emere
+        sens: acheter
+explication: >-
+  Rançon est la forme populaire de redemptio, « rachat » : la somme qui libère
+  un captif. Le sens religieux de rédemption a été repris par l'emprunt
+  rédemption au xiiie siècle, et rançon est resté au prix payé pour la liberté.
+famille: [ rançonner, rançonneur, rédemption, rédimer ]
+themes: [ argent, guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: rançon
+  - ouvrage: littre
+    entree: rançon
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

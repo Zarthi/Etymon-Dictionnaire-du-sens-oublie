@@ -1,0 +1,41 @@
+mot: réfléchir
+nature: [ verbe ]
+etymologie:
+  - forme: reflectere
+    langue: latin
+    sens: courber en arrière, renvoyer
+    elements:
+      - forme: re-
+        sens: en arrière
+      - forme: flectere
+        sens: plier, courber
+explication: >-
+  Réfléchir, c'est d'abord renvoyer la lumière (1269), puis se replier sur soi
+  (1314) ; l'esprit qui revient sur sa propre pensée réfléchit (1609). Le
+  mouvement physique est resté dans le miroir ; le verbe dit aujourd'hui
+  l'attention de la pensée.
+famille: [ réflexion, réflexe ]
+renvois: [ lucide ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: "La volonté et la raison se retournent sur leur propre acte : ce retour
+        sur soi est ce que le mot nomme."
+      citation: ratio hoc modo imperat sibi ipsi, sicut et voluntas movet seipsam, ut
+        supra dictum est, inquantum scilicet utraque potentia reflectitur supra
+        suum actum, et ex uno in aliud tendit.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 17 a. 6 ad 1
+          url: https://www.corpusthomisticum.org/sth2006.html
+sources:
+  - ouvrage: tlfi
+    entree: réfléchir
+  - ouvrage: somme-theologique
+    entree: Ia-IIae q. 17 a. 6 ad 1
+    url: https://www.corpusthomisticum.org/sth2006.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

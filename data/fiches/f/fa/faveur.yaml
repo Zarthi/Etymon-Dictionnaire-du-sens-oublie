@@ -1,0 +1,32 @@
+mot: faveur
+nature: [ nom féminin ]
+etymologie:
+  - forme: favor
+    langue: latin
+    sens: bienveillance, appui
+explication: >-
+  Le mot nommait la bienveillance active, l'appui que l'on prête à quelqu'un ;
+  il désigne aujourd'hui la marque de préférence ou l'avantage accordé. Le
+  sentiment s'est effacé derrière ce qu'il fait obtenir.
+famille: [ défaveur, favoriser ]
+renvois: [ merite ]
+themes: [ société, émotions ]
+tradition:
+  lectures:
+    - texte: Le mot nomme l'aide, le secours prêté à quelqu'un, et se distingue de
+        favum, le miel.
+      citation: Favor adjutorium est, favum vero mel.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: faveur
+  - ouvrage: tlfi
+    entree: faveur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

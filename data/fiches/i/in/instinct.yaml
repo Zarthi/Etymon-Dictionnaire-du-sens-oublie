@@ -1,0 +1,42 @@
+mot: instinct
+nature: [ nom masculin ]
+etymologie:
+  - forme: instinctus
+    langue: latin
+    sens: instigation, impulsion
+    elements:
+      - forme: in-
+        sens: vers
+      - forme: stinguere
+        sens: piquer
+explication: >-
+  Instinctus est l'aiguillon qui pousse : le français l'emprunte au sens
+  d'instigation (1495), puis l'applique aux penchants naturels (1560).
+  L'impulsion venue du dehors est devenue un mouvement intérieur.
+famille: [ instinctif, instinctivement ]
+themes: [ esprit, nature ]
+tradition:
+  lectures:
+    - texte: "Les bêtes sont mues vers leur fin par un instinct naturel, sans la
+        considérer : elles sont mues comme par un autre."
+      citation: bruta animalia moventur ad finem, non quasi considerantia quod per
+        motum suum possunt consequi finem, quod est proprie intendentis, sed
+        concupiscentia finem naturali instinctu, moventur ad finem quasi ab alio
+        mota
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 12 a. 5 ad 3
+          url: https://www.corpusthomisticum.org/sth2006.html
+sources:
+  - ouvrage: littre
+    entree: instinct
+  - ouvrage: tlfi
+    entree: instinct
+  - ouvrage: somme-theologique
+    entree: Ia-IIae q. 12 a. 5 ad 3
+    url: https://www.corpusthomisticum.org/sth2006.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

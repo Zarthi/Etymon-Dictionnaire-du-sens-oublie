@@ -1,0 +1,32 @@
+mot: nécessité
+nature: [ nom féminin ]
+etymologie:
+  - forme: necessitas
+    langue: latin
+    sens: contrainte, ce qui ne peut pas ne pas être
+explication: >-
+  Nécessité a d'abord désigné la misère et le manque, puis ce dont on ne peut se
+  passer, et enfin la contrainte qui ne laisse pas de choix. Le mot réunit
+  aujourd'hui le besoin matériel et l'inéluctable.
+famille: [ nécessaire, nécessiter, nécessiteux ]
+themes: [ morale, esprit ]
+tradition:
+  lectures:
+    - texte: La nécessité contraint quelque chose à se faire ; la necessitudo, elle,
+        est un lien de parenté ou d'affection.
+      citation: Necessitas aliquid fieri cogit, necessitudo autem affectus est vel
+        vinculum propinquitatis.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: nécessité
+  - ouvrage: littre
+    entree: nécessité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

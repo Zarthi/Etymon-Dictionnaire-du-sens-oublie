@@ -1,0 +1,22 @@
+mot: généreux
+nature: [ adjectif ]
+etymologie:
+  - forme: generosus
+    langue: latin
+    sens: de bonne race, noble
+explication: >-
+  Généreux qualifiait d'abord celui de bonne race, puis celui dont l'âme est
+  noble ; la noblesse de naissance est devenue noblesse de cœur. Le mot dit
+  aujourd'hui celui qui donne largement.
+famille: [ générosité, généreusement ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: généreux
+  - ouvrage: tlfi
+    entree: généreux
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

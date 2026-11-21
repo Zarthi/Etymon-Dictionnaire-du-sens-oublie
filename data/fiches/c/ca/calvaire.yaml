@@ -1,0 +1,35 @@
+mot: calvaire
+nature: [ nom masculin ]
+etymologie:
+  - forme: calvaria
+    langue: latin ecclésiastique
+    sens: crâne ; nom du lieu de la crucifixion
+  - forme: κρανίον
+    langue: grec ancien
+    sens: crâne
+  - forme: גולגלתא
+    translitteration: gulgoltā
+    langue: araméen
+    sens: crâne ; sommet
+explication: >-
+  Calvaria nommait le crâne, et par métonymie la colline du supplice. Le
+  français a retenu le nom du lieu pour en faire celui des croix élevées en
+  souvenir, puis des souffrances qui y sont comparées.
+themes: [ religion, émotions ]
+tradition:
+  lectures:
+    - texte: "Le nom du crâne viendrait de ce qu'il est dépourvu de cheveux :
+        calvaria, de calvus, « chauve »."
+      citation: Calvaria ab ossibus calvis dicta, per defectionem
+      sources:
+        - ouvrage: etymologies
+          entree: XI, 27
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: calvaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,31 @@
+mot: mode
+nature: [ nom masculin ]
+etymologie:
+  - forme: modus
+    langue: latin
+    sens: mesure, manière, façon
+explication: >-
+  Modus disait la mesure et la manière ; le français en a tiré le mode, manière
+  d'être ou de faire, et la mode, manière passagère de vivre et de s'habiller.
+  Le genre a séparé les deux sens.
+famille: [ modal, modèle, modique, démoder ]
+themes: [ société, esprit ]
+tradition:
+  lectures:
+    - texte: Les modes sont dits d'après la manière dont ils se comportent dans leurs
+        significations.
+      citation: Modi dicti ab eo, quemadmodum sint in suis significationibus.
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: mode
+  - ouvrage: tlfi
+    entree: mode
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

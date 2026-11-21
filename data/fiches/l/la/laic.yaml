@@ -1,0 +1,23 @@
+mot: laïc
+nature: [ adjectif, nom masculin ]
+etymologie:
+  - forme: laicus
+    langue: latin ecclésiastique
+    sens: qui est du peuple, non clerc
+explication: >-
+  Dans l'Église, le laïc était le chrétien qui n'appartenait pas au clergé,
+  l'homme du peuple. Le mot a servi ensuite à désigner ce qui relève de la vie
+  civile et n'est soumis à aucune autorité religieuse.
+renvois: [ profane ]
+themes: [ religion, société ]
+sources:
+  - ouvrage: tlfi
+    entree: laïc
+  - ouvrage: etymologies
+    entree: VII
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

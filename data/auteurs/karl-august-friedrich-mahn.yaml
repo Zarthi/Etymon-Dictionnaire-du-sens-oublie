@@ -1,0 +1,15 @@
+nom: Karl August Friedrich Mahn
+naissance: "1802"
+mort: "1887"
+description: >-
+  Philologue allemand (1802-1887), spécialiste des langues romanes et du
+  provençal médiéval.
+cite: [ Mahn ]
+sources:
+  - ouvrage: bnf
+    entree: cb125361161
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

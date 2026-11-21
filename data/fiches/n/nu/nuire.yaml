@@ -1,0 +1,26 @@
+mot: nuire
+nature: [ verbe ]
+etymologie:
+  - forme: "*nocere"
+    langue: latin populaire
+    sens: causer du tort
+  - forme: nocere
+    langue: latin
+    sens: causer du tort, faire du mal
+explication: >-
+  Le latin nocere était intransitif et disait causer du tort, faire du mal.
+  L'ancien français nuisir l'a parfois employé transitivement ; nuire demande
+  aujourd'hui un complément introduit par à, et dit le tort causé à quelqu'un ou
+  à quelque chose.
+famille: [ nuisible, nocif ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: nuire
+  - ouvrage: tlfi
+    entree: nuire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

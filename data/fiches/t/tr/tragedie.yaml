@@ -1,0 +1,46 @@
+mot: tragédie
+nature: [ nom féminin ]
+etymologie:
+  - forme: tragoedia
+    langue: latin
+    sens: tragédie
+  - forme: τραγῳδία
+    langue: grec ancien
+    sens: chant du bouc, tragédie
+    elements:
+      - forme: τράγος
+        sens: bouc
+      - forme: ᾠδή
+        sens: chant
+explication: >-
+  Le grec nommait la tragédie le chant du bouc, sans doute lié au sacrifice d'un
+  bouc dans les fêtes de Dionysos. Le mot a désigné la pièce grave et le genre,
+  puis tout événement funeste.
+incertain: true
+famille: [ tragique, tragédien ]
+renvois: [ drame ]
+themes: [ émotions, parole ]
+tradition:
+  lectures:
+    - texte: Les tragédiens sont dits ainsi parce qu'au commencement le prix de ceux
+        qui chantaient était un bouc, que les Grecs appellent tragos.
+      citation: Tragoedi dicti, quod initio canentibus praemium erat hircus, quem
+        Graeci TRAGOS vocant.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: tragédie
+  - ouvrage: bailly
+    entree: τραγῳδία
+  - ouvrage: bailly
+    entree: τραγῳδός
+  - ouvrage: tlfi
+    entree: tragédie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

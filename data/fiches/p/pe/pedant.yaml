@@ -1,0 +1,33 @@
+mot: pédant
+nature: [ nom masculin ]
+etymologie:
+  - forme: pedante
+    langue: italien
+    sens: maître d'école
+  - langue: italien
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: "*paedere"
+          langue: latin populaire
+          sens: instruire
+          selon: [ friedrich-diez ]
+        - forme: pedagogo
+          langue: italien
+          sens: pédagogue, rapproché de pedante, piéton
+explication: >-
+  Pédant est d'abord le maître d'école, au sens neutre (1558), et le mot italien
+  n'a pas d'origine assurée. Dès 1561, il désigne celui qui fait étalage de son
+  savoir : le maître d'école est devenu objet de moquerie.
+famille: [ pédanterie, pédantesque ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: tlfi
+    entree: pédant
+  - ouvrage: bailly
+    entree: παιδεύω
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

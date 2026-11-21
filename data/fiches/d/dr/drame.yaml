@@ -1,0 +1,26 @@
+mot: drame
+nature: [ nom masculin ]
+etymologie:
+  - forme: drama
+    langue: bas latin
+    sens: pièce de théâtre
+  - forme: δρᾶμα
+    langue: grec ancien
+    sens: action, pièce de théâtre
+explication: >-
+  Drame a d'abord désigné toute pièce de théâtre ; dès 1787, il a pris au figuré
+  le sens d'événement terrible. Il nomme aujourd'hui la pièce grave.
+famille: [ dramatique, dramaturge, mélodrame ]
+themes: [ émotions, parole ]
+sources:
+  - ouvrage: littre
+    entree: drame
+  - ouvrage: bailly
+    entree: δρᾶμα
+  - ouvrage: tlfi
+    entree: drame
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,45 @@
+mot: augure
+nature: [ nom masculin ]
+etymologie:
+  - forme: augurium
+    langue: latin
+    sens: présage
+  - forme: augur
+    langue: latin
+    sens: prêtre chargé d'observer et d'interpréter les signes, notamment le vol des
+      oiseaux
+explication: >-
+  L'augure était le prêtre qui lisait dans le vol et les cris des oiseaux ;
+  augurium, le présage qu'il en tirait. Le mot ne désigne plus guère que le
+  signe lui-même, ou la personne dont l'arrivée fait présager quelque chose.
+ecartees:
+  - forme: augere
+    langue: latin
+    sens: accroître
+    raison: "Hypothèse rapportée par le Littré, non retenue : elle ferait de
+      l'augure celui qui accroît ou consacre."
+  - forme: εὖχος
+    langue: grec ancien
+    sens: prière
+    raison: Hypothèse rapportée par le Littré, non retenue.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Le mot viendrait de ce que l'augure recueille les voix et les langues
+        des oiseaux : auspicia comme avium aspicia, auguria comme avium garria."
+      citation: Dicta sunt autem auspicia, quasi avium aspicia, et auguria, quasi
+        avium garria, hoc est avium voces et linguae.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 19
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: augure
+  - ouvrage: littre
+    entree: augure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

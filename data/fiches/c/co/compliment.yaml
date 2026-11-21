@@ -1,0 +1,28 @@
+mot: compliment
+nature: [ nom masculin ]
+etymologie:
+  - forme: complimento
+    langue: italien
+    sens: acte ou expression d'hommage
+  - forme: cumplimiento
+    langue: espagnol
+    sens: accomplissement
+  - forme: complere
+    langue: latin
+    sens: remplir, accomplir
+explication: >-
+  Le mot est venu d'Italie au XVIe siècle ; il tenait d'abord l'achèvement, la
+  perfection, puis la parole qui comble celui à qui on l'adresse. Il désigne
+  aujourd'hui une louange de civilité, souvent brève.
+famille: [ complimenter, complimenteur ]
+themes: [ société, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: compliment
+  - ouvrage: littre
+    entree: compliment
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

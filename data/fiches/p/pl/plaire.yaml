@@ -1,0 +1,22 @@
+mot: plaire
+nature: [ verbe ]
+etymologie:
+  - forme: placere
+    langue: latin
+    sens: être agréable, convenir
+explication: >-
+  Le latin placere disait être agréable et convenir ; l'ancien français en
+  tirait deux infinitifs, plaisir et plaire, et plaire dit aujourd'hui
+  l'agrément qu'une personne ou une chose inspire.
+famille: [ plaisir, plaisant, déplaire ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: plaire
+  - ouvrage: tlfi
+    entree: plaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

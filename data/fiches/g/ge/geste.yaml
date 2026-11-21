@@ -1,0 +1,22 @@
+mot: geste
+nature: [ nom masculin ]
+etymologie:
+  - forme: gestus
+    langue: latin
+    sens: attitude, mouvement du corps, geste
+explication: >-
+  Gestus disait la contenance et le port du corps, avant le mouvement qui
+  exprime une intention. Le français est passé du maintien à l'action
+  significative, puis au geste généreux.
+famille: [ gesticuler, gesticulation, gestuel ]
+themes: [ corps ]
+sources:
+  - ouvrage: tlfi
+    entree: geste
+  - ouvrage: littre
+    entree: geste
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

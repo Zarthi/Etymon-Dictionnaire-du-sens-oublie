@@ -1,0 +1,33 @@
+mot: volonté
+nature: [ nom féminin ]
+etymologie:
+  - forme: voluntas
+    langue: latin
+    sens: faculté de vouloir ; désir, gré
+explication: >-
+  Voluntas dit le désir et le gré autant que la faculté de vouloir ; le français
+  garde d'abord ce sens (fin du xe siècle). La volonté comme puissance de l'âme,
+  capable de se déterminer librement, ne s'établit qu'au xive siècle.
+famille: [ volontaire, volontiers ]
+renvois: [ abnegation ]
+themes: [ esprit, morale ]
+tradition:
+  lectures:
+    - texte: "Le visage est ainsi nommé parce qu'il montre la volonté de l'âme : ce
+        qu'on veut se lit sur lui."
+      citation: Vultus vero dictus, eo quod per eum animi voluntas ostenditur.
+      sources:
+        - ouvrage: etymologies
+          entree: XI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: volonté
+  - ouvrage: etymologies
+    entree: XI
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

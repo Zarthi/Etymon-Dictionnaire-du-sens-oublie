@@ -1,0 +1,21 @@
+mot: lien
+nature: [ nom masculin ]
+etymologie:
+  - forme: ligamen
+    langue: latin
+    sens: lien, cordon, bandage
+explication: >-
+  Lien a d'abord nommé l'attache de corde qui retient, puis ce qui unit les
+  personnes : lien d'amitié, de sang, de mariage. Le mot dit aujourd'hui surtout
+  ce qui attache moralement, alors que l'entrave matérielle reste dans son sens
+  propre.
+famille: [ lier, liaison, ligature ]
+themes: [ société, famille ]
+sources:
+  - ouvrage: tlfi
+    entree: lien
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

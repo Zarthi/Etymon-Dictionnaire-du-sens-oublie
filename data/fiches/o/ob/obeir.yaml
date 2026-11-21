@@ -1,0 +1,29 @@
+mot: obéir
+nature: [ verbe ]
+etymologie:
+  - forme: oboedire
+    langue: latin
+    sens: prêter l'oreille, être soumis
+    elements:
+      - forme: ob-
+        langue: latin
+        sens: vers
+      - forme: audire
+        langue: latin
+        sens: écouter
+explication: >-
+  Obéir, c'était d'abord prêter l'oreille, écouter celui qui parle ; la
+  soumission est venue de cette écoute. Le mot dit aujourd'hui l'exécution d'un
+  ordre, non plus l'attention à la voix.
+famille: [ obéissance, obéissant, désobéir ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: obéir
+  - ouvrage: tlfi
+    entree: obéir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

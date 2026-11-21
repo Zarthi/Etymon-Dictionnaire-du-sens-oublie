@@ -1,0 +1,31 @@
+mot: tolérer
+nature: [ verbe ]
+etymologie:
+  - forme: tolerare
+    langue: latin
+    sens: supporter, endurer
+explication: >-
+  Tolérer, c'était supporter une charge, endurer un mal ; le mot s'est appliqué
+  à ceux qu'on supporte sans les approuver. Il ne dit plus la force de celui qui
+  endure, mais la concession de celui qui pourrait interdire.
+famille: [ tolérance, tolérant, intolérable ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: "Nul n'aime ce qu'il tolère, même s'il aime tolérer : la tolérance
+        suppose qu'on supporte ce qu'on n'approuve pas."
+      citation: nemo quod tolerat amat, etsi tolerare amat.
+      sources:
+        - ouvrage: confessions
+          entree: Liber Decimus
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Decimus
+sources:
+  - ouvrage: littre
+    entree: tolérer
+  - ouvrage: tlfi
+    entree: tolérer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

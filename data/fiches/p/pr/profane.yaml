@@ -1,0 +1,34 @@
+mot: profane
+nature: [ adjectif ]
+etymologie:
+  - forme: profanus
+    langue: latin
+    sens: qui est devant le temple, non consacré
+    elements:
+      - forme: pro
+        sens: devant
+      - forme: fanum
+        sens: lieu consacré, temple
+explication: >-
+  Profanus désignait ce qui se tient devant le temple, hors de l'enceinte
+  sacrée. Le mot a qualifié ce qui n'est pas sacré, puis celui qui viole le
+  sacré, et enfin l'étranger à un savoir ou à un groupe.
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: Profane se dit de ce qui est en dehors du temple.
+      citation: Profanus, quasi porro a fano.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: profane
+  - ouvrage: littre
+    entree: profane
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

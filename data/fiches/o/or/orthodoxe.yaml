@@ -1,0 +1,37 @@
+mot: orthodoxe
+nature: [ adjectif ]
+etymologie:
+  - forme: orthodoxus
+    langue: latin ecclésiastique
+    sens: qui a la vraie foi
+  - forme: ὀρθόδοξος
+    langue: grec ancien
+    sens: qui a la droite croyance
+    elements:
+      - forme: ὀρθός
+        sens: droit, juste
+      - forme: δόξα
+        sens: opinion, croyance
+explication: >-
+  Le mot juge une doctrine à sa conformité à la droite croyance. Il a servi à
+  opposer les fidèles aux hérétiques ; il s'est étendu à toute conformité à une
+  doctrine reçue, puis a nommé les Églises orthodoxes d'Orient.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: L'orthodoxe est celui qui croit droitement.
+      citation: Orthodoxus est recte credens
+      sources:
+        - ouvrage: etymologies
+          entree: VII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: orthodoxe
+  - ouvrage: littre
+    entree: orthodoxe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

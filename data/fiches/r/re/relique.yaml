@@ -1,0 +1,29 @@
+mot: relique
+nature: [ nom féminin ]
+etymologie:
+  - forme: reliquiae
+    langue: latin
+    sens: restes
+  - forme: relinquere
+    langue: latin
+    sens: laisser
+    elements:
+      - forme: re-
+        sens: en arrière
+      - forme: linquere
+        sens: laisser
+explication: >-
+  Reliquiae nommait ce qui reste d'un corps ou d'une armée. Le latin chrétien
+  l'a appliqué aux restes des saints et aux objets qui leur ont appartenu ; le
+  français l'étend à tout ce qui subsiste d'un temps passé.
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: relique
+  - ouvrage: littre
+    entree: relique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

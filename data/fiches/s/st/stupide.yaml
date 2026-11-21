@@ -1,0 +1,32 @@
+mot: stupide
+nature: [ adjectif ]
+etymologie:
+  - forme: stupidus
+    langue: latin
+    sens: frappé de stupeur, immobile
+explication: >-
+  Stupidus dit l'homme frappé, immobile ; le mot est d'abord médical (1377),
+  puis dit l'engourdissement de l'esprit (1534) et la bêtise (1588). La stupeur
+  est restée dans stupéfait ; stupide ne dit plus que le manque d'intelligence.
+famille: [ stupidité, stupéfait ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: "Le stupide est comme de pierre : le mot le rapproche de l'insensible et
+        du sot."
+      citation: Stupidus vero dictus est quasi lapideus, quasi stolidus.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: stupide
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

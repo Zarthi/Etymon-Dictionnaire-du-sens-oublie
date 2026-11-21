@@ -1,0 +1,23 @@
+mot: apparence
+nature: [ nom féminin ]
+etymologie:
+  - forme: apparentia
+    langue: bas latin
+    sens: aspect extérieur, apparence
+explication: >-
+  Le mot a désigné d'abord une preuve apparente, puis l'aspect extérieur d'une
+  chose ; en 1659, il en vient à dire ce qui n'est qu'extérieur et peut tromper.
+  Le sens de vraisemblance, usité du xve au xviie siècle, s'est perdu.
+famille: [ apparent, apparaître, apparition ]
+renvois: [ fantome ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: apparence
+  - ouvrage: tlfi
+    entree: apparence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,35 @@
+mot: impie
+nature: [ adjectif ]
+etymologie:
+  - forme: impius
+    langue: latin
+    sens: qui manque aux devoirs de piété, sacrilège
+    elements:
+      - forme: in-
+        sens: négation
+      - forme: pius
+        sens: pieux
+explication: >-
+  Le latin mesurait l'impiété aux devoirs de piété envers les dieux, les parents
+  et la patrie. Le français l'a d'abord restreinte au mépris de la religion,
+  puis l'a étendue à toute atteinte à des valeurs communément admises.
+renvois: [ sacrilege ]
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: L'impie est dit tel parce qu'il est étranger à la piété de la religion.
+      citation: dictus impius quod sit a pietate religionis alienus.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: impie
+  - ouvrage: littre
+    entree: impie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

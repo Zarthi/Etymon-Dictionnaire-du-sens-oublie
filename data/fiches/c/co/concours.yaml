@@ -1,0 +1,26 @@
+mot: concours
+nature: [ nom masculin ]
+etymologie:
+  - forme: concursus
+    langue: latin
+    sens: affluence vers un point, rencontre
+    elements:
+      - forme: con-
+        sens: avec
+      - forme: cursus
+        sens: course
+explication: >-
+  Concours dit d'abord le recours, l'aide prêtée à une action, puis la rencontre
+  de personnes qui courent vers un même lieu. La rivalité des candidats
+  n'apparaît qu'au xviie siècle ; le secours et la rencontre survivent dans
+  « prêter son concours » et « concours de circonstances ».
+famille: [ concourir, concurrent, concurrence ]
+themes: [ société, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: concours
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

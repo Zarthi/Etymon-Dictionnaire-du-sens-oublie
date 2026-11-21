@@ -1,0 +1,25 @@
+mot: progrès
+nature: [ nom masculin ]
+etymologie:
+  - forme: progressus
+    langue: latin
+    sens: marche en avant, développement
+    elements:
+      - forme: pro
+        sens: en avant
+      - forme: gradi
+        sens: marcher
+explication: >-
+  Progrès a dit d'abord l'avancement d'une action, puis la marche en avant dans
+  l'espace, avant de devenir au xviiie siècle le mouvement de l'humanité vers un
+  état meilleur. Le mot porte aujourd'hui cette idée d'amélioration continue.
+famille: [ progresser, progression, progressif ]
+themes: [ savoir, temps ]
+sources:
+  - ouvrage: tlfi
+    entree: progrès
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

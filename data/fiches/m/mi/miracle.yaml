@@ -1,0 +1,31 @@
+mot: miracle
+nature: [ nom masculin ]
+etymologie:
+  - forme: miraculum
+    langue: latin
+    sens: prodige, merveille
+explication: >-
+  Miraculum nommait toute chose étonnante, digne d'admiration. Le latin chrétien
+  en a fait le fait qui dépasse les forces de la nature et que l'on attribue à
+  Dieu ; le français garde aussi le sens affaibli de chose surprenante.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Est miracle ce qui est plein d'admiration, c'est-à-dire ce dont la cause
+        est absolument cachée à tous.
+      citation: Miraculum autem dicitur quasi admiratione plenum, quod scilicet habet
+        causam simpliciter et omnibus occultam.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 105 a. 7
+          url: https://www.corpusthomisticum.org/sth1103.html
+sources:
+  - ouvrage: tlfi
+    entree: miracle
+  - ouvrage: littre
+    entree: miracle
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

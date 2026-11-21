@@ -1,0 +1,25 @@
+mot: mystique
+nature: [ adjectif ]
+etymologie:
+  - forme: mysticus
+    langue: latin
+    sens: relatif aux mystères
+  - forme: μυστικός
+    langue: grec ancien
+    sens: qui concerne les mystères
+explication: >-
+  Le mot grec appartenait aux mystères, ces cultes dont l'initiation était
+  fermée. La théologie chrétienne l'a appliqué au sens caché de l'Écriture et à
+  l'union avec Dieu ; l'usage moderne l'étend à toute adhésion passionnée.
+renvois: [ oraison ]
+themes: [ religion, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: mystique
+  - ouvrage: littre
+    entree: mystique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

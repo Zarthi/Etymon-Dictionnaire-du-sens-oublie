@@ -1,0 +1,22 @@
+mot: jurer
+nature: [ verbe ]
+etymologie:
+  - forme: jurare
+    langue: latin
+    sens: jurer, prêter serment
+explication: >-
+  Jurer, c'était engager sa parole devant un témoin sacré, ou prendre le ciel à
+  témoin ; l'usage courant en a tiré le juron, parole sans serment. Le mot nomme
+  aujourd'hui aussi bien le serment que l'outrage qui le parodie.
+famille: [ juron, parjurer ]
+themes: [ parole, religion ]
+sources:
+  - ouvrage: littre
+    entree: jurer
+  - ouvrage: tlfi
+    entree: jurer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,37 @@
+mot: docile
+nature: [ adjectif ]
+etymologie:
+  - forme: docilis
+    langue: latin
+    sens: qui se laisse instruire, apte à apprendre
+explication: >-
+  Docilis disait proprement celui qu'on peut instruire : le mot supposait
+  l'enseignement reçu, non la soumission. Emprunté en 1495, il désigne
+  aujourd'hui celui qui obéit facilement et cède sans résistance.
+famille: [ docilité, indocile ]
+renvois: [ simple ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: "La docilité est une pièce de la prudence : l'aptitude à se laisser
+        instruire, utile à toute vertu de l'esprit, sert principalement à la
+        prudence."
+      citation: etsi docilitas utilis sit ad quamlibet virtutem intellectualem,
+        praecipue tamen ad prudentiam
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 49 a. 3 ad 1
+          url: https://www.corpusthomisticum.org/sth3047.html
+sources:
+  - ouvrage: littre
+    entree: docile
+  - ouvrage: tlfi
+    entree: docile
+  - ouvrage: somme-theologique
+    entree: IIa-IIae q. 49 a. 3 ad 1
+    url: https://www.corpusthomisticum.org/sth3047.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

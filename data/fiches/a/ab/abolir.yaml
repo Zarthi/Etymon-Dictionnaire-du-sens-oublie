@@ -1,0 +1,23 @@
+mot: abolir
+nature: [ verbe ]
+etymologie:
+  - forme: abolere
+    langue: latin
+    sens: détruire, faire disparaître
+explication: >-
+  Entré dans la langue comme terme de droit et de religion, abolir s'est dit
+  d'abord d'une loi que l'on révoque, d'un péché que Dieu efface. Il garde ce
+  registre solennel : on abolit une loi, une coutume, une institution, non un
+  détail.
+famille: [ abolition, abolitionniste, abolissable ]
+themes: [ droit, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: abolir
+  - ouvrage: littre
+    entree: abolir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

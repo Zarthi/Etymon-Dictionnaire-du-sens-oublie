@@ -1,0 +1,30 @@
+mot: privé
+nature: [ adjectif ]
+etymologie:
+  - forme: privatus
+    langue: latin
+    sens: particulier, propre, individuel
+explication: >-
+  Privé vient de privatus, « particulier, personnel » : est privé ce qui touche
+  un seul, non le public. Le mot a aussi gardé le sens de ce dont on est
+  dépouillé, dans « privé de ».
+famille: [ priver, privation, privauté ]
+themes: [ société, droit ]
+tradition:
+  lectures:
+    - texte: "La privation dit ce qu'on a eu et qu'on n'a plus : est privé celui à qui
+        manque ce qu'il avait."
+      citation: Quod genus Cicero privationem vocat, qua ostendit aliquid quempiam
+        habuisse, unde privatus est.
+      sources:
+        - ouvrage: etymologies
+          entree: II
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: tlfi
+    entree: privé
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

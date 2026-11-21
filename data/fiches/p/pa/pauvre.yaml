@@ -1,0 +1,30 @@
+mot: pauvre
+nature: [ adjectif ]
+etymologie:
+  - forme: pauper
+    langue: latin
+    sens: qui a peu, pauvre
+explication: >-
+  Pauvre a dit celui qui manque du nécessaire, puis ce qui est digne de pitié ou
+  de peu de valeur. Le français a ajouté au sens matériel une nuance de
+  compassion : le pauvre homme n'est pas seulement sans argent.
+famille: [ pauvreté, appauvrir, paupérisme ]
+renvois: [ necessite ]
+themes: [ société, argent ]
+tradition:
+  lectures:
+    - texte: La pauvreté peut être honnête ; l'indigence, elle, est toujours honteuse.
+      citation: Quod egestas pejor est quam paupertas, paupertas enim potest esse
+        honesta, nam egestas semper turpis est.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: pauvre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

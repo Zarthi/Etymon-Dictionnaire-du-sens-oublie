@@ -1,0 +1,32 @@
+mot: piété
+nature: [ nom féminin ]
+etymologie:
+  - forme: pietas
+    langue: latin
+    sens: respect des devoirs envers les dieux, les parents et la patrie
+explication: >-
+  Pietas ne se limitait pas au culte : il nommait le respect des devoirs envers
+  les dieux, les parents et la patrie. Le français a gardé piété pour le
+  sentiment religieux, et pitié pour la compassion, les deux formes s'étant
+  séparées.
+doublets: [ pitie ]
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: La piété s'exerce entre ceux que le sang lie ; l'affection, entre les
+        étrangers.
+      citation: Pietas inter devinctos sanguine exhibetur, affectio inter extraneos.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: piété
+  - ouvrage: tlfi
+    entree: piété
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

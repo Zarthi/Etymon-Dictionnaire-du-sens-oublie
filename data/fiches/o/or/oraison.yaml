@@ -1,0 +1,33 @@
+mot: oraison
+nature: [ nom féminin ]
+etymologie:
+  - forme: oratio
+    langue: latin ecclésiastique
+    sens: prière
+  - forme: oratio
+    langue: latin
+    sens: discours, parole
+explication: >-
+  Oratio nommait le discours ; le latin chrétien l'a réservé à la prière. Le
+  français a gardé oraison pour la prière et, dans oraison funèbre, pour le
+  discours prononcé en public.
+themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: "Le mot viendrait de la raison de la bouche, oris ratio : la parole est
+        ce que la bouche forme selon la raison."
+      citation: Oratio dicta quasi oris ratio.
+      sources:
+        - ouvrage: etymologies
+          entree: I, 3
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: oraison
+  - ouvrage: littre
+    entree: oraison
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

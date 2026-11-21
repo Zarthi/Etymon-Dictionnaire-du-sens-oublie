@@ -1,0 +1,15 @@
+nom: Honoré Chavée
+naissance: "1815"
+mort: "1877"
+description: >-
+  Linguiste et philosophe belge (1815-1877), prêtre, auteur de travaux sur
+  l'origine des langues.
+cite: [ Chavée ]
+sources:
+  - ouvrage: bnf
+    entree: cb12459704n
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

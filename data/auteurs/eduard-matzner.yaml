@@ -1,0 +1,15 @@
+nom: Eduard Mätzner
+naissance: "1805"
+mort: "1902"
+description: >-
+  Philologue allemand, auteur d'une grammaire historique de l'anglais et de
+  travaux sur les langues germaniques.
+cite: [ Mätzner ]
+sources:
+  - ouvrage: bnf
+    entree: cb124244985
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

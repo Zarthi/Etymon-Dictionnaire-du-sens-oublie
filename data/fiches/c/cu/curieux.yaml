@@ -1,0 +1,32 @@
+mot: curieux
+nature: [ adjectif ]
+etymologie:
+  - forme: curiosus
+    langue: latin
+    sens: qui a soin, avide de savoir, indiscret
+explication: >-
+  Curieux a d'abord dit celui qui prend soin de quelqu'un ou de quelque chose
+  (xiie siècle) ; le désir de voir et de savoir s'impose au xvie siècle. Le mot
+  s'emploie aussi pour ce qui excite ce désir : un objet curieux.
+famille: [ curiosité, curieusement ]
+themes: [ esprit, savoir ]
+tradition:
+  lectures:
+    - texte: La curiosité et le souci sont les racines de la plupart des
+        superstitions.
+      citation: Curiositas et sollicitudo radices plurium superstitionum.
+      sources:
+        - ouvrage: la-doctrine-chretienne
+          entree: II
+          url: https://la.wikisource.org/wiki/De_Doctrina_Christiana/II
+sources:
+  - ouvrage: tlfi
+    entree: curieux
+  - ouvrage: la-doctrine-chretienne
+    entree: II
+    url: https://la.wikisource.org/wiki/De_Doctrina_Christiana/II
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: querelle
+nature: [ nom féminin ]
+etymologie:
+  - forme: querela
+    langue: latin
+    sens: plainte, doléances
+  - forme: queri
+    langue: latin
+    sens: se plaindre
+explication: >-
+  Querelle est d'abord une plainte, et la plainte en justice ; l'affrontement
+  est venu de là. Le mot ne dit plus la doléance, mais le différend où les
+  adversaires s'opposent.
+famille: [ quereller, querelleur ]
+themes: [ société, parole ]
+sources:
+  - ouvrage: littre
+    entree: querelle
+  - ouvrage: tlfi
+    entree: querelle
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

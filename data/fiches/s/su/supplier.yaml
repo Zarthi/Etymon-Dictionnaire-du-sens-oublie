@@ -1,0 +1,29 @@
+mot: supplier
+nature: [ verbe ]
+etymologie:
+  - forme: supplicare
+    langue: latin
+    sens: se prosterner, prier, implorer
+    elements:
+      - forme: sub
+        langue: latin
+        sens: sous
+      - forme: placare
+        langue: latin
+        sens: apaiser
+explication: >-
+  Supplier, c'était chercher à apaiser celui dont on implore la grâce ; le mot a
+  perdu le geste de prosternation. Il ne dit plus que la prière instante, sans
+  l'idée d'apaisement.
+famille: [ supplication, suppliant, supplique ]
+themes: [ parole ]
+sources:
+  - ouvrage: tlfi
+    entree: supplier
+  - ouvrage: littre
+    entree: supplier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

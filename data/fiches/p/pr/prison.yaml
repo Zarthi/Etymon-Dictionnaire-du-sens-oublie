@@ -1,0 +1,23 @@
+mot: prison
+nature: [ nom féminin ]
+etymologie:
+  - forme: prehensio
+    langue: latin
+    sens: action de saisir, prise
+explication: >-
+  Prison a d'abord nommé la prise, l'action de saisir un corps, avant de nommer
+  le lieu où l'on garde les captifs. Le français a gardé les deux idées : la
+  prison retient, et l'on est prisonnier comme on est pris.
+famille: [ prisonnier, emprisonner, prise, prendre ]
+renvois: [ rancon ]
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: prison
+  - ouvrage: littre
+    entree: prison
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

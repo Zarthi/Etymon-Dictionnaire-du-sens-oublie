@@ -1,0 +1,43 @@
+mot: comédie
+nature: [ nom féminin ]
+etymologie:
+  - forme: comoedia
+    langue: latin
+    sens: pièce de théâtre, comédie
+  - forme: κωμῳδία
+    langue: grec ancien
+    sens: comédie
+    elements:
+      - forme: κῶμος
+        sens: fête avec chants et danses en l'honneur de Dionysos
+      - forme: ᾠδή
+        sens: chant
+explication: >-
+  La comédie est née des chants et des danses des fêtes de Dionysos : le grec
+  l'appelait le chant du kômos. Le français a d'abord nommé toute pièce de
+  théâtre, avant la pièce qui fait rire, et il dit aussi la feinte.
+famille: [ comique, comédien, tragi-comédie ]
+renvois: [ drame ]
+themes: [ parole, société ]
+tradition:
+  lectures:
+    - texte: Les comédiens sont dits ainsi soit du lieu, parce qu'ils jouaient autour
+        des villages, que les Grecs appellent kômas, soit de la ripaille.
+      citation: Comoedi appellati sive a loco, quia circum pagos agebant, quos Graeci
+        KOMAS vocant, sive a comisatione.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: comédie
+  - ouvrage: bailly
+    entree: κῶμος
+  - ouvrage: tlfi
+    entree: comédie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

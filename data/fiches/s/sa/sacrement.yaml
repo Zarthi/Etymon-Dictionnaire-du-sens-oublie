@@ -1,0 +1,33 @@
+mot: sacrement
+nature: [ nom masculin ]
+etymologie:
+  - forme: sacramentum
+    langue: latin ecclésiastique
+    sens: rite sacré, lien entre l'homme et Dieu
+  - forme: sacramentum
+    langue: latin
+    sens: serment ; dépôt sacré
+explication: >-
+  Sacramentum était le serment qui liait le soldat, et le dépôt fait aux dieux
+  comme garantie. Le latin chrétien en a fait le lien sacré entre l'homme et
+  Dieu, puis le rite qui le scelle ; le français a gardé ce sens et quelques
+  emplois affaiblis.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: On l'appelle sacramentum parce que violer ce qu'on a promis est une
+        perfidie.
+      citation: vocatum autem sacramentum, quia violare quod quisque promittit
+        perfidiae est.
+      sources:
+        - ouvrage: etymologies
+          entree: V
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: sacrement
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

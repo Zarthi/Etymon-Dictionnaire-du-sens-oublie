@@ -1,0 +1,31 @@
+mot: seigneur
+nature: [ nom masculin ]
+etymologie:
+  - forme: senior
+    langue: latin
+    sens: plus âgé
+explication: >-
+  Seigneur est le cas régime de sire, et vient du latin senior, « plus âgé » :
+  l'ancien, puis le maître. Le mot a nommé le possesseur d'une seigneurie avant
+  de devenir le titre de Dieu ; l'âge y disait l'autorité.
+famille: [ seigneurie, sire, sieur, séniorat ]
+themes: [ société, religion ]
+tradition:
+  lectures:
+    - texte: "On appelle seniores les hommes saints, les pères : l'âge est marque de
+        sagesse et d'autorité."
+      citation: Unde et sanctos viros ac seniores patres dicimus.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: seigneur
+  - ouvrage: tlfi
+    entree: seigneur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

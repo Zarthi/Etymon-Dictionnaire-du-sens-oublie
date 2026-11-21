@@ -1,0 +1,29 @@
+mot: luxe
+nature: [ nom masculin ]
+etymologie:
+  - forme: luxus
+    langue: latin
+    sens: excès, débauche, faste
+explication: >-
+  Le latin luxus disait l'excès et la débauche avant la splendeur. Le français a
+  gardé l'idée d'excès, mais en a fait une marque sociale : le luxe est le
+  raffinement coûteux, et « un luxe de » reste une profusion.
+famille: [ luxueux, luxure, luxuriant ]
+themes: [ argent, société ]
+tradition:
+  lectures:
+    - texte: Le luxe est la dissolution du désir, comme les membres luxés sont ceux
+        qui ont quitté leur place.
+      citation: unde et solutio libidinis luxus, et membra loco mota luxa dicuntur.
+      sources:
+        - ouvrage: etymologies
+          entree: XX
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX
+sources:
+  - ouvrage: tlfi
+    entree: luxe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

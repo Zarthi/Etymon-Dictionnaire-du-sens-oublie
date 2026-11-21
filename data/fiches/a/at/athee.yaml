@@ -1,0 +1,32 @@
+mot: athée
+nature: [ nom masculin ]
+etymologie:
+  - forme: atheos
+    langue: latin ecclésiastique
+    sens: qui ne croit pas en Dieu
+  - forme: ἄθεος
+    langue: grec ancien
+    sens: qui ne croit pas aux dieux
+    elements:
+      - forme: ἀ-
+        sens: privatif, sans
+      - forme: θεός
+        sens: dieu
+explication: >-
+  Le grec qualifiait celui qui ne reconnaît pas les dieux, et pouvait aussi dire
+  l'abandonné des dieux. Le latin chrétien en a fait celui qui nie Dieu, sens
+  que le français a repris au xvie siècle.
+renvois: [ impie, mecreant ]
+themes: [ religion ]
+sources:
+  - ouvrage: bailly
+    entree: ἄθεος
+  - ouvrage: littre
+    entree: athée
+  - ouvrage: tlfi
+    entree: athée
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

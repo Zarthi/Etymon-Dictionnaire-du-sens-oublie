@@ -1,0 +1,27 @@
+mot: abnégation
+nature: [ nom féminin ]
+etymologie:
+  - forme: abnegatio
+    langue: latin ecclésiastique
+    sens: renoncement, détachement de soi
+    elements:
+      - forme: ab-
+        sens: séparation
+      - forme: negare
+        sens: nier
+explication: >-
+  Le latin chrétien a donné au mot le sens de renoncement à soi. Le français
+  l'emploie d'abord pour la seule négation (1377), puis pour le renoncement
+  (1491). Il désigne aujourd'hui le sacrifice consenti de son intérêt ou de
+  soi-même.
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: abnégation
+  - ouvrage: littre
+    entree: abnégation
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

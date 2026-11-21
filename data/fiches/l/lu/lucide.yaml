@@ -1,0 +1,32 @@
+mot: lucide
+nature: [ adjectif ]
+etymologie:
+  - forme: lucidus
+    langue: latin
+    sens: clair, lumineux
+explication: >-
+  Le mot est d'abord celui de la lumière (1478) ; les intervalles lucides des
+  malades (1690) ont porté au sens de clarté de l'esprit, acquis au xixe siècle
+  pour celui qui voit clair dans les choses.
+famille: [ lucidité, translucide, élucider ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: Le lucide est ce qui est éclairé d'ailleurs ; ce qui luit par soi-même
+        est le lucible.
+      citation: lucidum est quod aliunde illuminatur, lucibile quod per se lucet.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: lucide
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

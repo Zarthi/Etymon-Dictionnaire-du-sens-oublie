@@ -1,0 +1,23 @@
+mot: simple
+nature: [ adjectif ]
+etymologie:
+  - forme: simplex
+    langue: latin
+    sens: qui n'est pas composé, d'un seul tenant
+explication: >-
+  Simple a dit d'abord ce qui n'est pas compliqué (vers 1125), puis ce qui est
+  sans détour ni malice. Le sens de crédule et de sot, apparu vers 1175, est
+  resté dans l'emploi méprisant ; les plantes dites simples étaient celles qu'on
+  employait telles quelles.
+famille: [ simplicité, simplifier ]
+themes: [ esprit, morale ]
+sources:
+  - ouvrage: littre
+    entree: simple
+  - ouvrage: tlfi
+    entree: simple
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

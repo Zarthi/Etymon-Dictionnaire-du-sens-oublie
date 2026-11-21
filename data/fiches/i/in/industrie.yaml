@@ -1,0 +1,32 @@
+mot: industrie
+nature: [ nom féminin ]
+etymologie:
+  - forme: industria
+    langue: latin
+    sens: activité, application, zèle
+explication: >-
+  Industrie a d'abord dit l'habileté et l'application d'une personne à son
+  ouvrage ; au xviiie siècle, il a nommé l'ensemble des activités de production.
+  La qualité du travailleur est devenue le système qui l'emploie.
+famille: [ industriel, industrieux, industrialisation ]
+themes: [ travail, argent ]
+tradition:
+  lectures:
+    - texte: "Pécher par industrie, c'est choisir le mal en le sachant : le mot dit
+        l'application réfléchie de l'esprit."
+      citation: Unde dicitur ex certa malitia, vel ex industria peccare, quasi
+        scienter malum eligens.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 78 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth2075.html
+sources:
+  - ouvrage: tlfi
+    entree: industrie
+  - ouvrage: littre
+    entree: industrie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

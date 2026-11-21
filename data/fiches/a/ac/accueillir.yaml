@@ -1,0 +1,29 @@
+mot: accueillir
+nature: [ verbe ]
+etymologie:
+  - forme: "*accolligere"
+    langue: latin populaire
+    sens: recueillir
+    elements:
+      - forme: ad-
+        langue: latin
+        sens: vers
+      - forme: colligere
+        langue: latin
+        sens: recueillir
+explication: >-
+  En ancien français, acoillir signifiait d'abord pousser, attaquer ; le sens de
+  recevoir vient du latin biblique colligere, « recueillir ». Il ne dit plus que
+  la manière de recevoir une personne ou une chose.
+famille: [ accueil, accueillant ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: accueillir
+  - ouvrage: tlfi
+    entree: accueillir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

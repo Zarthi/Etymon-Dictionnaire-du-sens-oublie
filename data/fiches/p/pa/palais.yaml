@@ -1,0 +1,32 @@
+mot: palais
+nature: [ nom masculin ]
+etymologie:
+  - forme: palatium
+    langue: latin
+    sens: palais, résidence impériale
+explication: >-
+  Le palais doit son nom au mont Palatin, où Auguste établit sa demeure :
+  palatium a désigné la maison impériale, puis toute grande résidence princière.
+  Le sens de bâtiment public est venu plus tard.
+famille: [ palatin, palatial ]
+themes: [ maison, politique ]
+tradition:
+  lectures:
+    - texte: "Palatium est dit de Pallas, prince des Arcadiens : en son honneur les
+        Arcadiens bâtirent la ville de Pallantée, et la demeure royale fondée en
+        son nom fut appelée Palatium."
+      citation: Palatium a Pallante principe Arcadum dictum, in cuius honore Arcades
+        Pallanteum oppidum construxerunt, et regiam in ipsius nomine conditam
+        Palatium vocaverunt.
+      sources:
+        - ouvrage: etymologies
+          entree: XV
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: tlfi
+    entree: palais
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

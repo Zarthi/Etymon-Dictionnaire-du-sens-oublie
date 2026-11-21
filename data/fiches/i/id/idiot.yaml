@@ -1,0 +1,27 @@
+mot: idiot
+nature: [ adjectif ]
+etymologie:
+  - forme: idiota
+    langue: latin
+    sens: ignorant, sans instruction
+  - forme: ἰδιώτης
+    langue: grec ancien
+    sens: simple particulier, homme privé
+explication: >-
+  En grec, l'ἰδιώτης est le particulier, celui qui n'exerce ni charge publique
+  ni métier spécial ; par opposition au spécialiste, il devient l'ignorant. Le
+  français a gardé ce dernier sens (xiie siècle), puis celui de sot (xiiie
+  siècle).
+famille: [ idiotie, idiotisme ]
+renvois: [ imbecile, stupide ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: idiot
+  - ouvrage: bailly
+    entree: ἰδιώτης
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

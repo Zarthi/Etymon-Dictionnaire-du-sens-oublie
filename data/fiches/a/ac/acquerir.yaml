@@ -1,0 +1,29 @@
+mot: acquérir
+nature: [ verbe ]
+etymologie:
+  - forme: acquirere
+    langue: latin
+    sens: obtenir en plus, se procurer
+    elements:
+      - forme: ad
+        sens: vers, en plus
+      - forme: quaerere
+        sens: chercher
+explication: >-
+  Acquérir, c'était aller chercher et gagner ; le verbe a pris le sens de se
+  procurer, puis de devenir propriétaire d'un bien ou d'une qualité. Le
+  mouvement qu'il disait s'est effacé : on acquiert aujourd'hui ce qu'on finit
+  par posséder.
+famille: [ acquisition, acquéreur, acquis, requérir ]
+renvois: [ possession ]
+themes: [ argent, société ]
+sources:
+  - ouvrage: tlfi
+    entree: acquérir
+  - ouvrage: littre
+    entree: acquérir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: possession
+nature: [ nom féminin ]
+etymologie:
+  - forme: possessio
+    langue: latin
+    sens: jouissance, propriété, prise de possession
+explication: >-
+  Possession dit le fait de tenir une chose et d'en jouir. Le mot s'est ensuite
+  étendu à l'emprise d'une personne sur les sentiments d'une autre, puis à
+  l'état de celle qu'un démon habite : il nomme aujourd'hui la propriété et la
+  possession diabolique.
+famille: [ posséder, possesseur, possessif ]
+themes: [ droit, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: possession
+  - ouvrage: littre
+    entree: possession
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

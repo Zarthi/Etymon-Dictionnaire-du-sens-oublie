@@ -1,0 +1,30 @@
+mot: art
+nature: [ nom masculin ]
+etymologie:
+  - forme: ars
+    langue: latin
+    sens: habileté, métier, art
+explication: >-
+  Le mot nommait d'abord tout savoir-faire et tout métier réglé, dont les « sept
+  arts » du Moyen Âge. Il s'est resserré, à partir du XVIIIe siècle, sur la
+  création du beau, les beaux-arts.
+famille: [ artisan, artiste, artistique ]
+themes: [ savoir, esprit ]
+tradition:
+  lectures:
+    - texte: L'art est dit ainsi parce qu'il consiste en préceptes et en règles.
+      citation: Ars vero dicta est, quod artis praeceptis regulisque consistat.
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: art
+  - ouvrage: tlfi
+    entree: art
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

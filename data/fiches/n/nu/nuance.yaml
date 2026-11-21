@@ -1,0 +1,21 @@
+mot: nuance
+nature: [ nom féminin ]
+etymologie:
+  - forme: nuer
+    langue: français
+    sens: donner des tons dégradés à une couleur
+explication: >-
+  Nuance est un dérivé du verbe nuer, qui appartient au vocabulaire de la
+  couleur. Le mot a d'abord dit chacun des degrés d'une même couleur, puis toute
+  différence légère, dans les sons, les idées et les sentiments : il ne suppose
+  plus la couleur, mais l'écart presque insensible.
+famille: [ nuancer, nuancé, nuancement ]
+themes: [ esprit, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: nuance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

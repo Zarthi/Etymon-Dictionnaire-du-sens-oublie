@@ -1,0 +1,25 @@
+mot: blâmer
+nature: [ verbe ]
+etymologie:
+  - forme: "*blastemare"
+    langue: latin populaire
+    sens: blasphémer
+  - forme: blasphemare
+    langue: latin ecclésiastique
+    sens: blasphémer
+explication: >-
+  Blasphémer, c'était prononcer contre Dieu des paroles outrageantes ; le terme
+  d'Église est passé au sens courant de réprouver, condamner. Le mot ne dit plus
+  l'outrage à Dieu, mais le jugement défavorable porté sur autrui.
+famille: [ blâme, blâmable ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: blâmer
+  - ouvrage: littre
+    entree: blâmer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,31 @@
+mot: discret
+nature: [ adjectif ]
+etymologie:
+  - forme: discretus
+    langue: latin
+    sens: séparé, divisé ; en bas latin, apte à discerner
+explication: >-
+  Discretus dit d'abord ce qui est séparé, distinct ; le bas latin en tire
+  l'homme qui sait séparer et juger (1165), puis celui qui sait taire un secret
+  (xive siècle). Le mot ne dit plus aujourd'hui que la réserve.
+famille: [ discrétion ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: "Le discret est le docte : le mot se dirait de discere, apprendre."
+      citation: Disertus orator est, discretus est doctus, a discendo dictus.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: discret
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

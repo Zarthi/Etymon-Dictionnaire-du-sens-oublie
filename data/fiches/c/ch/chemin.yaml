@@ -1,0 +1,22 @@
+mot: chemin
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*cammīnus"
+    langue: latin populaire
+    sens: chemin
+explication: >-
+  Le mot vient d'un terme celtique qui disait le pas, passé dans le latin
+  populaire. Il désigne la voie, la distance parcourue et, au figuré, les moyens
+  d'atteindre un but.
+famille: [ cheminer, cheminement, chemineau ]
+themes: [ nature, société ]
+sources:
+  - ouvrage: tlfi
+    entree: chemin
+  - ouvrage: littre
+    entree: chemin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

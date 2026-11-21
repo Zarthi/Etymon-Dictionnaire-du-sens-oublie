@@ -875,3 +875,33 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Néant | Origine retenue `*ne gentem` (latin populaire), `incertain: true` ; hypothèse `ne-ens` dans `ecartees`. | L'origine est discutée ; les deux hypothèses sont conservées. | à relire |
 | Renvois de la tranche 5 | Déclarés d'un seul côté, tous internes à la tranche. | Éviter les doublons et les liens morts. | à relire |
 | Lectures de la tranche 5 | 6 lectures (Isidore) : jardin, monument, monstre, mort, musique, splendeur. | Ce sont les passages du corpus qui glosent réellement le mot. | à relire |
+
+## 2026-11-21 — Lot « cent mots, troisième » (sacré, caractère, sentiments, société, arts)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chemin des mots du troisième lot | Tous en chemin `consacre`. | Mots profanes d'origine, pris dans l'usage sacré ou savant ; aucun n'est né dans l'ordre sacré au sens du §3.3 bis. | à relire |
+| Renvois | Chaque paire déclarée d'un seul côté, interne à sa tranche. | Le validateur refuse une relation déclarée des deux côtés. | à relire |
+| Pontife | Chemin `debattu`, deux hypothèses *pons* + *facere*, sans tenant nommé ; osque *pomtis* en `ecartees`. | Le Littré donne l'étymologie pour douteuse ; la langue « osque » manque à la liste fermée. | à relire |
+| Piété / pitié | Doublet déclaré sur la seule fiche *piété* ; lecture d'Isidore (*pietas* / *affectio*). | *Pitié* porte déjà la lecture de Thomas sur *pietas* ; éviter la répétition. | à relire |
+| Laïc | Nature `adjectif` et `nom masculin`. | Le Littré n'en donne pas ; le TLFi le classe adjectif et substantif. | à relire |
+| Calvaire | Thèmes `religion` et `émotions`. | L'usage figuré d'« épreuve » est courant. | à relire |
+| Maillons dépouillés | Éléments retirés quand un maillon n'a qu'une forme (curieux, docile, fanatique, habile, idiot, lucide, malin, prodigue, stupide, volonté). | Le schéma exige deux éléments ; le sens du maillon porte l'information. | à relire |
+| Pédant | Deux hypothèses en `alternatives` sur le maillon italien ; Diez seul tenant nommé. | Origine incertaine ; Migliorini n'est pas cité. | à relire |
+| Pervers | Lecture de Thomas rapportant Augustin avec `auteur: augustin`. | Règle du §4.7 sur la parole rapportée. | à relire |
+| Simple | Décomposition *sine plica* du Littré hors chaîne. | Attribuée aux grammairiens latins ; formation de *simplex* non établie. | à relire |
+| Sérieux | Chaîne réduite au latin *serius*. | La dérivation française par -eux n'est pas donnée par le dossier. | à relire |
+| Regret | Origine `debattue`, `incertain: true`, quatre hypothèses (*requiritare*, *gretan*, *recretum*, *regradus*) et trois auteurs créés (Mätzner, Chavée, Mahn). | Le Littré et le TLFi donnent l'origine comme discutée. | à relire |
+| Supplier | Décomposition *sub* + *placare*, non *plicare*. | Le Littré, citant Festus, établit *supplico* pour *subplaco*. | à relire |
+| Abolir, industrie | Étymologies du Littré (*ab* + *olescere*, *in* + *struere*) non reprises. | Le TLFi rattache à *abolere* et *industrius* ; la décomposition du Littré est signalée. | à relire |
+| Nécessité | Décomposition *ne* + *cessus* laissée hors chaîne. | Hypothèse incertaine ; la chaîne s'arrête à *necessitas*. | à relire |
+| Geste, palais | Fiches des homonymes *gestus* (mouvement) et *palatium* (édifice). | *Gesta* et *palatum* ne sont pas rédigés ; le modèle impose une chaîne par fiche. | à relire |
+| Mode | Nature `nom masculin` et `nom féminin`. | Le genre sépare le mode (manière) de la mode (usage passager). | à relire |
+| Nuance | Chaîne ouverte sur le français *nuer* + *-ance*. | Mot formé en français, sans étymon latin ni grec. | à relire |
+| Art / artifice | Distinction d'Isidore répartie : *artifice* reçoit *Différences* I-II ; *art* reçoit *Étymologies* I. | Aucune lecture n'est répétée. | à relire |
+| Lectures de la tranche 1 | 12 lectures (Isidore, Thomas), 8 absences justifiées. | Le corpus ne glose que ces mots ; les autres n'ont que des emplois. | à relire |
+| Lectures de la tranche 2 | 13 lectures, 7 absences justifiées. | Idem. | à relire |
+| Lectures de la tranche 3 | 5 lectures (Isidore), 15 absences justifiées. | Idem. | à relire |
+| Lectures de la tranche 4 | 11 lectures (Isidore, Thomas), 9 absences justifiées. | Idem. | à relire |
+| Lectures de la tranche 5 | 13 lectures (Isidore), 7 absences justifiées. | Idem. | à relire |
+| Références | Trois auteurs créés (Mätzner, Chavée, Mahn) pour *regret* ; aucun ouvrage nouveau. | Tenants des hypothèses étymologiques du Littré, identifiés par notices BnF. | à relire |
