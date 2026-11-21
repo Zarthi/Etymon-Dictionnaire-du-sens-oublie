@@ -1,0 +1,37 @@
+mot: misère
+nature: [ nom féminin ]
+etymologie:
+  - forme: miseria
+    langue: latin
+    sens: malheur, adversité, souci, peine
+    premier: true
+  - forme: miser
+    langue: latin
+    sens: misérable, malheureux
+explication: >-
+  miseria disait l'adversité, le souci, la peine ; l'extrême pauvreté n'est
+  attestée qu'en 1611, et c'est elle que le mot dit aujourd'hui. Le mot a aussi
+  nommé la faiblesse et le néant de l'homme (vers 1460), puis la chose
+  méprisable.
+ecartees:
+  - forme: μῖσος
+    langue: grec ancien
+    sens: haine
+    raison: Le Littré n'y voyait qu'une piste (« on pense que les relations
+      étymologiques sont avec » mœstus et μῖσος) ; le TLFi dérive miseria de
+      miser sans s'y arrêter.
+famille: [ misérable, miséricorde, commisération ]
+renvois: [ malheur ]
+themes: [ argent, société ]
+sources:
+  - ouvrage: tlfi
+    entree: misère
+  - ouvrage: littre
+    entree: misère
+  - ouvrage: bailly
+    entree: μῖσος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,46 @@
+mot: hasard
+nature: [ nom masculin ]
+etymologie:
+  - forme: hasart
+    langue: ancien français
+    sens: jeu de dés
+  - forme: azar
+    langue: ancien espagnol
+    sens: coup défavorable au jeu de dés ; sorte de jeu de dés
+  - langue: arabe
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: az-zahr
+          langue: arabe
+          sens: le dé à jouer
+        - forme: yasar
+          langue: arabe
+          sens: groupe de joueurs de dés
+          selon: [ ernest-klein ]
+explication: >-
+  hasart disait d'abord un jeu de dés ; le mot a ensuite dit le mauvais coup, le
+  risque, puis la cause qu'on donne à ce qui arrive sans raison. Le sens de jeu
+  a disparu, celui d'événement fortuit est resté.
+ecartees:
+  - forme: Hasart
+    langue: ancien français
+    sens: nom d'un château de Syrie
+    selon: [ guillaume-de-tyr ]
+    raison: Guillaume de Tyr rapportait que le jeu de dés fut trouvé pendant le
+      siège d'un château nommé Hasart et prit le nom de la localité ; le TLFi
+      retient l'emprunt à l'arabe, et le sens premier, vers 1150, est bien un
+      jeu de dés.
+famille: [ hasarder, hasardeux ]
+renvois: [ chance ]
+themes: [ temps ]
+sources:
+  - ouvrage: tlfi
+    entree: hasard
+  - ouvrage: littre
+    entree: hasard
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

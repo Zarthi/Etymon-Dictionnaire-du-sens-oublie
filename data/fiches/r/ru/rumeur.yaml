@@ -1,0 +1,20 @@
+mot: rumeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: rumor
+    langue: latin
+    sens: bruit vague ; propos colportés
+explication: >-
+  rumor disait le bruit confus et le propos qui court ; le français a gardé les
+  deux. La rumeur est la nouvelle sans certitude qui se répand de bouche à
+  oreille, avec les déformations de chaque bouche, et le bruit sourd d'une
+  foule.
+themes: [ parole ]
+sources:
+  - ouvrage: tlfi
+    entree: rumeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

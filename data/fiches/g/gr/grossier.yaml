@@ -1,0 +1,28 @@
+mot: grossier
+nature: [ adjectif ]
+etymologie:
+  - forme: gros
+    langue: ancien français
+  - forme: grossus
+    langue: bas latin
+    sens: gros, épais
+explication: >-
+  Grossus disait le gros, l'épais ; dès le latin chrétien, au figuré, le rude.
+  En français, grossier a d'abord nommé l'ouvrier qui travaille de grosses
+  pièces (1260) et le commerçant en gros (1305) ; le sens de « rustre, inculte »
+  est de 1550, celui qui choque la bienséance de la fin du XVIIe siècle.
+famille: [ grossir, grossièreté, grossièrement ]
+renvois: [ barbare ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: grossier
+  - ouvrage: tlfi
+    entree: gros
+  - ouvrage: littre
+    entree: grossier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

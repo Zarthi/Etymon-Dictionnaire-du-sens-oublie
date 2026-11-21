@@ -1,0 +1,46 @@
+mot: douleur
+nature: [ nom féminin ]
+etymologie:
+  - forme: dolur
+    langue: ancien français
+  - forme: dolor
+    langue: latin
+    sens: souffrance, douleur
+explication: >-
+  Dolur figure dès la Vie de saint Alexis : le mot dit, comme dolor, la
+  souffrance du corps comme celle de l'âme ; les deux sens sont encore ceux
+  d'aujourd'hui.
+famille: [ douloureux, endolorir ]
+renvois: [ peine ]
+themes: [ corps, émotions ]
+tradition:
+  lectures:
+    - texte: "L'abattement a dans l'âme le nom que la maladie a dans le corps : dolor
+        est ce qui produit l'abattement de l'âme, comme l'aegrotatio celui du
+        corps."
+      citation: Sicut aegrotatio in corpore, sic aegritudo in animo nomen habet non
+        sejunctum a dolore. Dolor igitur aegritudo, id est, causa efficiens
+        aegritudinem in animo, tanquam aegrotationem in corpore.
+      sources:
+        - ouvrage: differences
+          entree: "70"
+          url: https://la.wikisource.org/wiki/Differentiae
+    - texte: "Pour la tristesse, Augustin préfère tristitiam : Cicéron disait plutôt
+        aegritudinem et Virgile dolorem, car aegritudo et dolor se disent plus
+        usuellement des corps."
+      citation: 'De tristitia uero, quam Cicero magis aegritudinem appellat, dolorem
+        autem Vergilius, ubi ait: "Dolent gaudentque", (sed ideo malui
+        tristitiam dicere, quia aegritudo uel dolor usitatius in corporibus
+        dicitur)'
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: XIV
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XIV
+sources:
+  - ouvrage: tlfi
+    entree: douleur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

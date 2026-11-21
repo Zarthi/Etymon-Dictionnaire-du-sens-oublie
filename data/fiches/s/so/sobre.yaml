@@ -1,0 +1,37 @@
+mot: sobre
+nature: [ adjectif ]
+etymologie:
+  - forme: sobrius
+    langue: latin
+    sens: qui n'a pas bu, à jeun ; sobre, frugal, tempérant ; modéré, mesuré
+explication: >-
+  Sobrius disait d'abord celui qui n'a pas bu, à jeun. En français, le premier
+  sens est moral : qui mène une vie honnête (vers 1170) ; la modération de la
+  table ne s'attache à l'homme que vers 1223, d'abord à l'aigle. Le mot dit
+  aujourd'hui la mesure, dans la table comme dans le style.
+famille: [ sobrement ]
+renvois: [ austere ]
+themes: [ morale, nourriture ]
+tradition:
+  lectures:
+    - texte: "Le nom de sobrietas vient de la mesure : le sobrius garde la briam, la
+        mesure ; la sobriété s'attache spécialement à la boisson qui peut
+        enivrer, où il est le plus louable de garder la mesure."
+      citation: Nomen autem sobrietatis sumitur a mensura, dicitur enim aliquis
+        sobrius quasi briam, idest mensuram, servans. Et ideo illam materiam
+        specialiter sibi sobrietas adscribit in qua maxime laudabile est
+        mensuram servare. Huiusmodi autem est potus inebriare valens […]
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae, q. 149, a. 1, co.
+          url: https://www.corpusthomisticum.org/sth3146.html
+sources:
+  - ouvrage: tlfi
+    entree: sobre
+  - ouvrage: littre
+    entree: sobre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

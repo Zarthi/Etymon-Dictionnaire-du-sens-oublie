@@ -1,0 +1,30 @@
+mot: compte
+nature: [ nom masculin ]
+etymologie:
+  - forme: computus
+    langue: bas latin
+    sens: calcul ; quantité dénombrée ; estimation, considération
+    premier: true
+  - forme: computare
+    langue: latin
+    sens: compter, calculer ; mettre au nombre de, considérer comme
+explication: >-
+  Computus disait le calcul, la quantité dénombrée ; la graphie étymologique
+  compte s'est spécialisée pour le calcul, la graphie conte gardant le récit. Le
+  mot a dit très tôt le compte à rendre : les recettes et les dépenses (1231),
+  la chambre des comptes (1309).
+famille: [ compter, comptable, comptabilité ]
+renvois: [ chiffre ]
+themes: [ savoir, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: compte
+  - ouvrage: tlfi
+    entree: compter
+  - ouvrage: littre
+    entree: compte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

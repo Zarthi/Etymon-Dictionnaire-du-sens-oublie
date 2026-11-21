@@ -1,0 +1,27 @@
+mot: caprice
+nature: [ nom masculin ]
+etymologie:
+  - forme: capriccio
+    langue: italien
+    sens: frisson de peur ; désir soudain et bizarre
+  - forme: capra
+    langue: latin
+    sens: chèvre
+explication: >-
+  L'italien disait, du mot de la chèvre, le saut de chèvre. capriccio a d'abord
+  nommé le frisson de peur (XIIIe siècle), puis le désir soudain et l'idée
+  fantasque (XVIe siècle) ; en français depuis 1558, le caprice est la volonté
+  soudaine et changeante, l'exigence obstinée d'un instant.
+famille: [ capricieux, capricer ]
+renvois: [ extravagant, bizarre ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: caprice
+  - ouvrage: littre
+    entree: caprice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

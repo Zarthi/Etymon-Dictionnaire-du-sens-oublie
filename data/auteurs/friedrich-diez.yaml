@@ -1,0 +1,16 @@
+nom: Friedrich Diez
+naissance: "1794"
+mort: "1876"
+description: >-
+  Linguiste et grammairien, spécialiste des langues romanes (1794-1876) ; auteur
+  d'une grammaire et d'un dictionnaire étymologique des langues romanes,
+  fondateur de la romanistique.
+cite: [ Diez ]
+sources:
+  - ouvrage: bnf
+    entree: cb12519508t
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

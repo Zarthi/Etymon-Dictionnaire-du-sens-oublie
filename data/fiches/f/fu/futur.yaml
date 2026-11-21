@@ -1,0 +1,35 @@
+mot: futur
+nature: [ adjectif ]
+etymologie:
+  - forme: futurus
+    langue: latin
+    sens: futur, à venir ; substantivé, avenir
+explication: >-
+  Le latin disait futurus, le participe de l'avenir ; le français l'a emprunté
+  tel quel dès le XIIIe siècle : le temps à venir d'abord, puis le temps
+  grammatical, le verbe du futur disant la chose à venir, et ce que deviendra la
+  société.
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: "Le futur n'est pas, en propre, un temps : ce n'est qu'un présent de
+        l'âme, l'attente des choses à venir, quand le présent de mémoire retient
+        le passé et le présent de contuition le présent."
+      citation: nec futura sunt nec praeterita, nec proprie dicitur, 'tempora sunt
+        tria, praeteritum, praesens, et futurum,' sed fortasse proprie
+        diceretur, 'tempora sunt tria, praesens de praeteritis, praesens de
+        praesentibus, praesens de futuris.' sunt enim haec in anima tria quaedam
+        et alibi ea non video, praesens de praeteritis memoria, praesens de
+        praesentibus contuitus, praesens de futuris expectatio.
+      sources:
+        - ouvrage: confessions
+          entree: XI, 20, 26
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Undecimus
+sources:
+  - ouvrage: tlfi
+    entree: futur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,34 @@
+mot: danger
+nature: [ nom masculin ]
+etymologie:
+  - forme: dangier
+    langue: ancien français
+    sens: "domination, puissance ; estre en dangier de quelqu'un : être à sa merci"
+  - forme: "*dominarium"
+    langue: bas latin
+    sens: propriété, droit de propriété ; possession et pouvoir
+explication: >-
+  dangier disait la puissance, le droit du maître : être en dangier de
+  quelqu'un, c'était être à sa merci, d'où, sans doute, le sens d'aujourd'hui.
+  Le mot a gardé la menace, perdu le pouvoir.
+ecartees:
+  - forme: damnum
+    langue: latin
+    sens: dommage
+    selon: [ friedrich-diez ]
+    raison: Raynouard et Diez en tiraient danger ; le Littré l'écarte, ni le sens de
+      pouvoir ni la forme ne s'expliquent, et le TLFi n'y voit qu'une influence
+      possible sur le vocalisme initial.
+famille: [ dangereux, dangereusement ]
+renvois: [ peril ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: danger
+  - ouvrage: littre
+    entree: danger
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,17 @@
+titre: Confessions
+titreOriginal: Confessionum libri XIII
+auteur: augustin
+date: "400"
+licence: domaine public
+texte: https://la.wikisource.org/wiki/Confessiones
+description: >-
+  Treize livres d'Augustin sur sa vie, le temps et la mémoire (400) ; texte
+  latin de Wikisource.
+sources:
+  - ouvrage: bnf
+    entree: cb120084474
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

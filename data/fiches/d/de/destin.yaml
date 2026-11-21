@@ -1,0 +1,30 @@
+mot: destin
+nature: [ nom masculin ]
+etymologie:
+  - forme: destin
+    langue: ancien français
+    sens: sort, victoire ou défaite
+  - forme: destiner
+    langue: ancien français
+    sens: annoncer ; réserver tel ou tel sort, présager
+  - forme: destinare
+    langue: latin
+    sens: fixer, assujettir ; affecter à ; décider
+explication: >-
+  destinare disait fixer, décider d'avance ; le destin est ce qui a été fixé
+  pour chacun. Le mot a nommé une puissance qui, selon certaines croyances,
+  régirait l'univers en fixant les événements ; il dit aujourd'hui la vie
+  entière d'un être, favorable ou non.
+famille: [ destinée, destiner, destination ]
+renvois: [ fatal, fortune ]
+themes: [ temps, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: destin
+  - ouvrage: tlfi
+    entree: destiner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

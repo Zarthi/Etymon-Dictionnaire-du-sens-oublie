@@ -1,0 +1,28 @@
+mot: salaire
+nature: [ nom masculin ]
+etymologie:
+  - forme: salarium
+    langue: latin
+    sens: ration de sel ; solde pour acheter du sel ; solde, émoluments, traitement
+    premier: true
+  - forme: sal
+    langue: latin
+    sens: sel
+explication: >-
+  Salarium disait la ration de sel, la solde versée pour l'acheter, puis la
+  solde et les émoluments. Le mot a dit d'abord la rémunération d'un travail
+  (vers 1260), et le sens s'est étendu à la récompense (1342), puis, par
+  antiphrase, au châtiment (vers 1359).
+famille: [ salarier ]
+renvois: [ prix ]
+themes: [ travail, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: salaire
+  - ouvrage: littre
+    entree: salaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

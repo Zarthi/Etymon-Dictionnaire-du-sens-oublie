@@ -1,0 +1,27 @@
+mot: flatter
+nature: [ verbe ]
+etymologie:
+  - forme: flater
+    langue: ancien français
+    sens: chercher à tromper en déguisant la vérité
+  - forme: "*flat"
+    langue: francique
+    sens: plat
+explication: >-
+  Flatter aurait d'abord rendu uni, comme quand on passe la main ; en français,
+  le mot a dit tromper en déguisant la vérité (vers 1165), puis chercher à
+  plaire par un excès de louanges (vers 1200), avant de dire caresser de la main
+  (XVe siècle). Il dit aussi, aujourd'hui, l'illusion qu'on entretient.
+famille: [ flatterie, flatteur ]
+renvois: [ louer ]
+themes: [ morale, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: flatter
+  - ouvrage: littre
+    entree: flatter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

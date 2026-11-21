@@ -1,0 +1,25 @@
+mot: dérision
+nature: [ nom féminin ]
+etymologie:
+  - forme: derisio
+    langue: latin
+    sens: moquerie, dérision
+  - forme: deridere
+    langue: latin
+    sens: se moquer de, bafouer
+explication: >-
+  Le mot dit la raillerie mêlée de mépris ; depuis 1806, il dit aussi la chose
+  qu'on traite en moquerie parce qu'elle est sans importance : une dérision,
+  c'est ce qui ne mérite pas mieux que d'être bafoué.
+famille: [ dérisoire, dériseur ]
+themes: [ parole ]
+sources:
+  - ouvrage: tlfi
+    entree: dérision
+  - ouvrage: littre
+    entree: dérisoire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

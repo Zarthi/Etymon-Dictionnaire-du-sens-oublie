@@ -1,0 +1,50 @@
+mot: ironie
+nature: [ nom féminin ]
+etymologie:
+  - forme: ironia
+    langue: latin
+    sens: ironie
+  - forme: εἰρωνεία
+    langue: grec ancien
+    sens: action d'interroger en feignant l'ignorance, ironie socratique
+explication: >-
+  εἰρωνεία disait la feinte ignorance de Socrate, qui interrogeait pour faire
+  découvrir la vérité à celui qu'il questionnait. En français, le mot a d'abord
+  nommé la raillerie qui dit le contraire de ce qu'elle veut faire entendre (fin
+  XIIIe siècle), puis la moquerie sarcastique.
+famille: [ ironique, ironiser ]
+renvois: [ derision ]
+themes: [ parole ]
+tradition:
+  lectures:
+    - texte: L'ironie est une sentence qui, par la prononciation, a un sens
+        contraire ; c'est par elle qu'on dit d'un ton accusateur ou insolent ce
+        que les mots ne disent pas.
+      citation: Ironia est sententia per pronuntiationem contrarium habens
+        intellectum. Hoc enim tropo callide aut per accusationem, aut per
+        insultationem aliquid dicitur
+      sources:
+        - ouvrage: etymologies
+          entree: I, [23]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+    - texte: "L'ironie est parvenue jusqu'au langage du vulgus, qui dit le contraire
+        de ce qu'il signifie ; la voix seule indique ce qu'on veut faire
+        entendre : à qui fait le mal, on dit qu'il fait de bonnes actions."
+      citation: "Nam usque ad illos pervenit vulgi locutio qui propterea mirabiliores
+        sunt, quia contra quam dicitur significant, sicuti est quae appellatur
+        ironia vel antiphrasis. Sed ironia pronuntiatione indicat quid velit
+        intellegi, ut cum dicimus homini mala facienti: Res bonas facis"
+      sources:
+        - ouvrage: la-doctrine-chretienne
+          entree: III, 41
+          url: https://la.wikisource.org/wiki/De_Doctrina_Christiana/III
+sources:
+  - ouvrage: tlfi
+    entree: ironie
+  - ouvrage: bailly
+    entree: εἰρωνεία
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,17 @@
+titre: La doctrine chrétienne
+titreOriginal: De doctrina christiana
+auteur: augustin
+date: "426"
+licence: domaine public
+texte: https://la.wikisource.org/wiki/De_Doctrina_Christiana
+description: >-
+  Quatre livres d'Augustin sur les signes et l'interprétation de l'Écriture
+  (426) ; texte latin de Wikisource.
+sources:
+  - ouvrage: bnf
+    entree: cb135113419
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

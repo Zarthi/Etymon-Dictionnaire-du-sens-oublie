@@ -1,0 +1,57 @@
+mot: fatal
+nature: [ adjectif ]
+etymologie:
+  - forme: fatalis
+    langue: latin
+    sens: du destin, du sort ; funeste, pernicieux
+  - forme: fatum
+    langue: latin
+    sens: ce qui est dit ; destin
+  - forme: fari
+    langue: latin
+    sens: prédire
+explication: >-
+  Le latin disait ce qui a été dit d'avance : fatum, de fari, prédire. Avant
+  1380, fatal qualifiait ce que le destin conduit ; depuis 1651, il dit ce qui
+  entraîne la ruine, et aujourd'hui surtout ce qui entraîne la mort.
+famille: [ fatalité, fatalisme, fatalement ]
+themes: [ temps, santé ]
+tradition:
+  lectures:
+    - texte: Le fatum, ce que les dieux disent, tout ce que Jupiter dit, tirait son
+        nom de fando, c'est-à-dire de loquendo, parler.
+      citation: Fatum autem dicunt esse quidquid dii fantur, quidquid Iuppiter fatur.
+        A fando igitur fatum dicunt, id est a loquendo.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, [90]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+    - texte: L'ordre des causes où la volonté de Dieu a le plus de pouvoir ne reçoit
+        pas le nom de fatum, sinon pour l'entendre dit de fando, parler ; le mot
+        était déjà pris en un autre sens.
+      citation: Ordinem autem causarum, ubi uoluntas Dei plurimum potest, neque
+        negamus, neque fati uocabulo nuncupamus, nisi forte ut fatum a fando
+        dictum intellegamus, id est a loquendo;
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: V
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: fatal
+  - ouvrage: littre
+    entree: fatal
+  - ouvrage: etymologies
+    entree: VIII, [90]
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+  - ouvrage: la-cite-de-dieu
+    entree: V
+    url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_V
+  - ouvrage: differences
+    entree: "219"
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

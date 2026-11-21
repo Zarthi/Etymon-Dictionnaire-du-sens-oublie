@@ -9,6 +9,35 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-21 — Lot : calomnie, complot, flatter, hypocrite, imposteur, ironie, malice, derision, caprice, cynique, rumeur, aurore, destin, fortune, fatal, futur, hasard, chance, catastrophe, crise, danger, chagrin, douleur, deuil, desespoir, horreur, malheur, misere, rage, stupeur, candeur, courtois, honnete, honte, pudeur, sincere, sobre, naif, sot, grossier, budget, calcul, capital, compte, monnaie, profit, gratuit, fisc, salaire, prix
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| aurore | Chaîne arrêtée au latin aurora, sans le rattachement sanscrit du Littré | Le TLFi s'arrête à aurora ; le sanscrit ush est une étymologie dépassée qui n'ajoute pas de sens (règle d'arrêt) | oui |
+| complot, hasard | Chemin debattu : les hypothèses marginales sont citées avec leurs tenants (complot : plot selon Littré, complicitum selon Diez ; hasard : yasar selon Klein, Hasart de Guillaume de Tyr en écartées) | Le TLFi et le Littré les rapportent ; une origine débattue se présente avec toutes ses hypothèses | oui |
+| hasard | Formes arabes écrites en translittération latine (az-zahr, yasar) sans écriture originale | L'écriture arabe n'est dans aucune source consultée (le TLFi ne donne que la translittération) ; écrire l'arabe de mémoire est interdit | oui |
+| imposteur | Sens premier forcé (premier: true) sur impostor « trompeur », non sur impōnere | Le sens de impōnere « placer sur ; abuser, tromper » en tête de fiche serait illisible ; precedent tempus/*tem- | oui |
+| fatal, futur | Lectures de l'étymon (fatum, futurus) portées par la fiche du mot français | lectures.md : l'auteur doit avoir lu le mot, ou une forme de sa chaîne | oui |
+| malice | Sens de malus glosé « mauvais, méchant » d'après le TLFi (article mal, adjectif), non « méchant » seul du Littré | Source la plus récente | non |
+| misère | Sens premier forcé (premier: true) sur miseria « malheur, adversité, souci, peine » | miser « misérable, malheureux » en tête de fiche ne dirait que le sens moderne de misérable ; miseria apprend davantage (cf. imposteur) | oui |
+| crise | Chaîne remontée à κρίνω (κρίσις est un déverbal), sens premier « séparer, trier ; décider, juger » | Règle du déverbal, comme destin ← destinare ; κρίσις et κρίνω sont glossés par Bailly | oui |
+| courtois | curteis gardé sans sens ; le sens premier vient de court « résidence d'un souverain et de son entourage » | Le TLFi ne gloss pas la forme de 1100 ; on ne découpe pas une forme sans sens attesté | oui |
+| chagrin | TLFi suivi contre Littré : chagrin de peine déverbal de chagriner (composé de grigner) ; l'hypothèse du Littré (peau → peine) passe en écartées | Source la plus récente ; le chagrin de peau (turc ṣaġrï) est postérieur et n'a donné que la graphie | oui |
+| malheur | Composé mal + heur en éléments sur le maillon ancien français ; chaîne remontée à augurium | Le TLFi glose augurium lui-même ; règle de la composition | oui |
+| désespoir | Chaîne arrêtée à desesper, fait de dé- et d'espoir ; pas de remontée à espérer puis sperare | Le sens en tête serait celui de l'espérance, qui n'apprend rien pour désespoir | oui |
+| deuil | Chaîne arrêtée au bas latin dolus « douleur » | Ernout-Meillet inaccessible ; le TLFi gloss dolus dans l'article deuil | oui |
+| douleur | Sens de dolor limité à la glose du TLFi « souffrance, douleur » | Perseus 403, Georges inaccessible ; fiche modeste, à relire | oui |
+| candeur | Date du TLFi suivie (1330-34) contre le Littré (« introduit par le XVIe s. ») | Source la plus récente | non |
+| sot | Chaîne arrêtée à sottus avec le sens « sot » du TLFi, circulaire ; origine au-delà inconnue | Le validateur exige un sens sur un maillon ; l'explication dit l'obscurité de l'origine, signalé à Thibault | oui |
+| capital | Chaîne unique arrêtée à capitalis, dérivé de caput ; la double voie du nom (substantivation de l'adjectif, ou emprunt à l'italien capitale) consignée au dossier, sans alternatives dans la chaîne | Les deux chemins passent par capitalis et ne changent pas le sens premier ; aucune alternative ne porte de forme propre au-delà | oui |
+| sobre | Chaîne arrêtée à sobrius sans éléments | Le TLFi ne décompose pas ; le Littré (sine + bria « vase à boire ») et Thomas (bria « mesure ») divergent | oui |
+| salaire | Sens premier sur salarium « ration de sel ; solde pour acheter du sel », avec sal « sel » en maillon | Glose du TLFi, que le Littré commente ; l'histoire du sel est le fait parlant du mot | non |
+| gratuit | Lecture d'Augustin (Confessions II, gratuitum facinus) retenue sur des emplois du mot | Comme pour horreur et stupeur : la doctrine nomme et pense le mal sans motif, sens du latin impérial ; à relire | oui |
+| monnaie | Lecture d'Isidore (moneta a monere) gardée bien que le TLFi y voie l'étymologie populaire | La tradition a lu le mot lui-même ; l'histoire suit le surnom de Junon, la lecture traditionnelle est distincte | oui |
+| capital | caput « tête » gardé comme dernier maillon, sens porté par capitalis | Le TLFi gloss caput lui-même ; la tête explique « qui coûte la tête » | non |
+
 ## 2026-11-20 — Lot : ebahir, echo, eclairer, economie, eduquer, effort, effrayer, eglise, egoisme, eleve, embarras, emerveiller, emotion, empathie, empire, enchanter, energie, energumene, enfer, engager, enquete, enterrer, entreprendre, envahir, epargne, equilibre, espace, esperance, espoir, essence, estimer, ethique, etude, etymologie, evangile, eveque, evoluer, exact, exalter, examen, excellence, excuser, exemple, exil, exister, experience, expert, expier, expliquer, extase, extravagant
 
 # Décisions du lot (é — 52 mots)

@@ -1,0 +1,35 @@
+mot: malice
+nature: [ nom féminin ]
+etymologie:
+  - forme: malitia
+    langue: latin
+    sens: méchanceté ; ruse, finesse
+  - forme: malus
+    langue: latin
+    sens: mauvais, méchant
+explication: >-
+  malitia disait la méchanceté et la ruse ; le français a gardé les deux, et le
+  mot a gagné un sens plus doux : depuis le XVIIe siècle, la malice se dit des
+  petites méchancetés dont on s'amuse d'autrui, la taquinerie sans conséquence.
+famille: [ malicieux, malicieusement ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: La pensée perverse de l'esprit se nomme malitia ; la malignité, c'est le
+        vœu ou l'œuvre de cette malice.
+      citation: Cogitatio quippe prava mentis malitia dicitur, malitiae votum vel opus
+        malignitas appellatur.
+      sources:
+        - ouvrage: differences
+          entree: "358"
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: malice
+  - ouvrage: tlfi
+    entree: mal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

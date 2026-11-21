@@ -1,0 +1,26 @@
+mot: budget
+nature: [ nom masculin ]
+etymologie:
+  - forme: budget
+    langue: anglais
+    sens: sac de cuir ; état annuel fait par le Chancellor of the Exchequer
+  - forme: bougette
+    langue: ancien français
+    sens: petit sac de cuir
+explication: >-
+  Bougette disait le petit sac de cuir ; l'anglais l'a empruntée, et budget a
+  dit le sac de cuir (1432-50), puis l'état annuel fait par le Chancellor of the
+  Exchequer (1733), que le ministre ouvrait en présentant son rapport. Le
+  français l'a repris en 1764 pour les finances de l'Angleterre.
+renvois: [ fisc ]
+themes: [ politique, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: budget
+  - ouvrage: littre
+    entree: budget
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

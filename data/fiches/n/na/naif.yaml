@@ -1,0 +1,22 @@
+mot: naïf
+nature: [ adjectif ]
+etymologie:
+  - forme: nativus
+    langue: latin
+    sens: reçu en naissant, inné ; donné par la nature, naturel
+explication: >-
+  Nativus disait ce qui est reçu en naissant, donné par la nature ; le mot a
+  d'abord dit l'indigène, puis le naturel. Dès 1252, dame naïve nomme la femme
+  sans jugement : le naturel sans apprêt glisse vers la simplicité d'esprit. Il
+  dit aussi d'une peinture qu'elle imite le naturel (1549).
+famille: [ naïveté, natif ]
+renvois: [ sot ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: naïf
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

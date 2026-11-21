@@ -5,7 +5,6 @@
 - { mot: sacrifice, statut: a-faire }
 - { mot: sacrilège, statut: a-faire }
 - { mot: saint, statut: a-faire }
-- { mot: salaire, statut: a-faire }
 - { mot: salut, statut: a-faire }
 - { mot: sanctuaire, statut: a-faire }
 - { mot: santé, statut: a-faire }
@@ -28,9 +27,7 @@
 - { mot: sermon, statut: a-faire }
 - { mot: silence, statut: a-faire }
 - { mot: simple, statut: a-faire }
-- { mot: sincère, statut: a-faire }
 - { mot: sinistre, statut: a-faire }
-- { mot: sobre, statut: a-faire }
 - { mot: société, statut: a-faire }
 - { mot: soin, statut: a-faire }
 - { mot: solennel, statut: a-faire }
@@ -40,7 +37,6 @@
 - { mot: sollicitude, statut: a-faire }
 - { mot: songe, statut: a-faire }
 - { mot: sort, statut: a-faire }
-- { mot: sot, statut: a-faire }
 - { mot: souvenir, statut: a-faire }
 - { mot: souverain, statut: a-faire }
 - { mot: spectacle, statut: a-faire }
@@ -48,7 +44,6 @@
 - { mot: spirituel, statut: a-faire }
 - { mot: splendeur, statut: a-faire }
 - { mot: stoïque, statut: a-faire }
-- { mot: stupeur, statut: a-faire }
 - { mot: stupide, statut: a-faire }
 - { mot: subir, statut: a-faire }
 - { mot: substance, statut: a-faire }

@@ -1,0 +1,42 @@
+mot: chagrin
+nature: [ nom masculin ]
+etymologie:
+  - forme: chagrin
+    langue: français
+    sens: peine, affliction
+  - forme: chagriner
+    langue: français
+    sens: causer du chagrin, rendre triste
+  - forme: grigner
+    langue: français
+    sens: grincer des dents, faire la grimace, être maussade
+explication: >-
+  Chagriner se compose de grigner, grincer des dents, faire la grimace ; le
+  chagrin de peine en est probablement le déverbal. Le Littré y voyait plutôt la
+  peau rude du chagrin, le cuir venu du turc, devenue par métaphore une peine
+  qui ronge.
+ecartees:
+  - forme: chagrin
+    langue: français
+    sens: peau rude et grenue
+    selon: [ emile-littre ]
+    raison: Littré faisait de la peau qui ronge, venue du turc par l'italien
+      zigrino, la métaphore d'une peine qui ronge ; le TLFi fait du chagrin de
+      peine (1450) un déverbal de chagriner, et le mot de peau, plus récent, n'a
+      donné que la graphie.
+incertain: true
+famille: [ chagriner, chagrinant ]
+renvois: [ douleur ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: chagrin
+  - ouvrage: tlfi
+    entree: chagriner
+  - ouvrage: littre
+    entree: chagrin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,15 @@
+nom: Ernest Klein
+naissance: "1899"
+mort: "1983"
+description: >-
+  Philologue et rabbin (1899-1983) ; auteur d'un dictionnaire étymologique de la
+  langue anglaise, où il propose l'arabe yasara comme origine de hasard.
+cite: [ Klein ]
+sources:
+  - ouvrage: bnf
+    entree: cb12158574h
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

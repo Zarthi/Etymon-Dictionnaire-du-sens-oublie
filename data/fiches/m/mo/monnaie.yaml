@@ -1,0 +1,34 @@
+mot: monnaie
+nature: [ nom féminin ]
+etymologie:
+  - forme: moneta
+    langue: latin
+    sens: le temple de Junon Moneta à Rome, où l'on fondait la monnaie ; argent
+      monnayé
+explication: >-
+  Moneta, surnom de Junon, était d'abord dit « mère des muses » ; le temple qui
+  lui était dédié à Rome, où l'on fondait la monnaie, a laissé son nom à ce
+  métal (1170), puis à la pièce frappée par une autorité souveraine (1181-90).
+famille: [ monnayer, monétaire, démonétiser ]
+renvois: [ argent ]
+themes: [ argent, commerce ]
+tradition:
+  lectures:
+    - texte: Le nom de moneta avertit, monet, qu'aucune fraude ne soit faite dans le
+        métal ni dans le poids.
+      citation: Moneta appellata est quia monet ne qua fraus in metallo vel in pondere
+        fiat.
+      sources:
+        - ouvrage: etymologies
+          entree: XVI, 8
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+sources:
+  - ouvrage: tlfi
+    entree: monnaie
+  - ouvrage: littre
+    entree: monnaie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

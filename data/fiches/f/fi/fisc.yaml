@@ -1,0 +1,35 @@
+mot: fisc
+nature: [ nom masculin ]
+etymologie:
+  - forme: fiscus
+    langue: latin
+    sens: panier de jonc ou d'osier ; panier à argent ; trésor, cassette impériale
+explication: >-
+  Fiscus disait d'abord le panier de jonc ou d'osier, celui où les collecteurs
+  d'impôts mettaient l'argent ; sous l'empire, le trésor particulier du prince,
+  par opposition au trésor public. Le mot a gardé le trésor (1278), puis a nommé
+  l'administration des impôts.
+famille: [ fiscal, fiscalité ]
+themes: [ droit, argent ]
+tradition:
+  lectures:
+    - texte: "Le fiscus est le sac public : les exacteurs l'ont, et ils y mettent le
+        dû public, qui est rendu aux rois ; de lui viennent les noms de fiscella
+        et de fiscina."
+      citation: "Fiscus sacculus est publicus, unde et fiscellae et fiscinae dicuntur:
+        hunc habent exactores, et in eo mittunt debitum publicum quod redditur
+        regibus."
+      sources:
+        - ouvrage: etymologies
+          entree: XX, 7
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XX
+sources:
+  - ouvrage: tlfi
+    entree: fisc
+  - ouvrage: littre
+    entree: fisc
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

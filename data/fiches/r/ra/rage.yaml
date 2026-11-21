@@ -1,0 +1,38 @@
+mot: rage
+nature: [ nom féminin ]
+etymologie:
+  - forme: rage
+    langue: ancien français
+    sens: violent transport de colère
+  - forme: "*rabia"
+    langue: latin populaire
+  - forme: rabies
+    langue: latin
+    sens: rage, maladie ; transport furieux, fureur
+explication: >-
+  rabies disait la maladie transmise par le chien enragé et, au figuré, le
+  transport furieux. Le français a dit d'abord la colère violente, la passion
+  immodérée ; la maladie a repris le mot au XIVe siècle.
+famille: [ enragé, rager, rageur ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: "L'hydrophobie naît de la morsure du chien enragé ; qui en est touché
+        se remplit de démence ou tourne à la rage."
+      citation: "Fit autem [aut] ex canis rabidi morsu, aut ex aeris spuma in terra
+        proiecta, quam si homo vel bestia tetigerit, aut dementia repletur aut in
+        rabiem vertitur."
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 15
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: rage
+  - ouvrage: littre
+    entree: rage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

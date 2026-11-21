@@ -1,0 +1,41 @@
+mot: cynique
+nature: [ adjectif ]
+etymologie:
+  - forme: Cynicus
+    langue: latin
+    sens: qui appartient à la secte des cyniques
+  - forme: κυνικός
+    langue: grec ancien
+    sens: de chien ; cynique
+  - forme: κύων
+    langue: grec ancien
+    sens: chien
+explication: >-
+  κυνικός, de chien, nommait l'école de Diogène et d'Antisthène, parce que ses
+  adeptes se moquaient des convenances. Depuis 1674, cynique dit l'impudence et
+  le manque de principes, sans l'école.
+famille: [ cynisme ]
+renvois: [ energumene ]
+themes: [ morale, savoir ]
+tradition:
+  lectures:
+    - texte: "Les Cyniques tiennent leur nom de l'impureté de leur impudence : contre
+        la pudeur humaine, ils s'accouplaient en public comme les chiens dans
+        les rues, et ils ont tiré leur nom des chiens dont ils imitaient la
+        vie."
+      citation: Cynici ab inmunditia inpudentiae nuncupati. […] Vnde et a canibus,
+        quorum vitam imitabantur, etiam vocabulum nomenque traxerunt.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, [14]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: cynique
+  - ouvrage: bailly
+    entree: κυνικός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

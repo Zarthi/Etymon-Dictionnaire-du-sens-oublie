@@ -1,0 +1,24 @@
+mot: sot
+nature: [ adjectif ]
+etymologie:
+  - forme: sottus
+    langue: latin médiéval
+    sens: sot
+explication: >-
+  Sottus paraît vers 800 chez Théodulf, et son origine reste inconnue. Le
+  français l'emploie dès 1155 pour celui qui manque d'intelligence et de
+  jugement ; au XIIIe siècle, il nomme aussi le fou, le bouffon, d'où la sotie
+  (1387).
+famille: [ sottise, sotie, sotard ]
+renvois: [ bete ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: sot
+  - ouvrage: littre
+    entree: sot
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

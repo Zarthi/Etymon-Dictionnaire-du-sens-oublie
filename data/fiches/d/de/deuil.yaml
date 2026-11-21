@@ -1,0 +1,33 @@
+mot: deuil
+nature: [ nom masculin ]
+etymologie:
+  - forme: duel
+    langue: ancien français
+    sens: affliction causée par la mort de quelqu'un
+  - forme: dolus
+    langue: bas latin
+    sens: douleur
+explication: >-
+  Dol disait l'affliction ; duel, dès la Vie de saint Alexis, l'affliction
+  causée par la mort de quelqu'un. Deuil a ensuite dit la perte d'un être cher,
+  puis le temps qu'on porte le deuil et le cortège. La graphie est une réfection
+  de duel, pluriel dueus, sur le modèle d'œil/yeux.
+ecartees:
+  - forme: dolium
+    langue: latin
+    sens: chagrin
+    raison: "Rattachement proposé par le Dictionnaire général, attesté en latin
+      classique sous la forme composée cordolium ; le TLFi l'écarte : il ne rend
+      pas compte des formes de l'ancien français."
+renvois: [ douleur ]
+themes: [ famille ]
+sources:
+  - ouvrage: tlfi
+    entree: deuil
+  - ouvrage: littre
+    entree: deuil
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

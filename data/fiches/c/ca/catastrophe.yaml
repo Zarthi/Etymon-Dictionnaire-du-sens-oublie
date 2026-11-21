@@ -1,0 +1,35 @@
+mot: catastrophe
+nature: [ nom féminin ]
+etymologie:
+  - forme: catastropha
+    langue: latin
+    sens: coup de théâtre ; dénouement d'une tragédie ou d'une comédie
+  - forme: καταστροφή
+    langue: grec ancien
+    sens: bouleversement ; fin, dénouement
+    elements:
+      - forme: κατά
+        sens: sur
+      - forme: στροφή
+        sens: tour
+explication: >-
+  En grec, καταστροφή disait le renversement, la fin, le dénouement, jusqu'à la
+  fin de la vie ; le latin en a fait le coup de théâtre, et Rabelais disait
+  encore la catastrophe d'une maladie. Le mot nomme aujourd'hui l'événement
+  brutal qui bouleverse le cours des choses.
+renvois: [ crise ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: catastrophe
+  - ouvrage: bailly
+    entree: καταστροφή
+  - ouvrage: littre
+    entree: catastrophe
+  - ouvrage: bailly
+    entree: στροφή
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

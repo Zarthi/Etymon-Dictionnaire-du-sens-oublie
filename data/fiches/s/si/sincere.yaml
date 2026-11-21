@@ -1,0 +1,42 @@
+mot: sincère
+nature: [ adjectif ]
+etymologie:
+  - forme: sincerus
+    langue: latin
+    sens: pur, intact, non fardé, non corrompu
+explication: >-
+  Sincerus disait ce qui est pur, intact, sans mélange ni fard, comme le miel.
+  Le mot français a d'abord dit celui qui exprime sans détour ce qu'il ressent
+  (1441), puis ce qui est réellement éprouvé, et enfin l'authentique d'un acte
+  (1804).
+ecartees:
+  - forme: sine cera
+    langue: latin
+    sens: sans cire
+    raison: Le Littré rapporte l'avis des étymologistes latins ; les étymologistes
+      modernes n'admettent pas cette opinion, sine étant trop récent en latin
+      pour une telle composition.
+    populaire: true
+famille: [ sincérité, sincèrement ]
+renvois: [ naif ]
+themes: [ morale, parole ]
+tradition:
+  lectures:
+    - texte: Le sincerus se lit comme ce qui est sans corruption ; son contraire,
+        insincerus, dit le vicié, le corrompu.
+      citation: Sincerus, quasi sine corruptione, cui contrarius insincerus, vitiatus,
+        corruptus.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 242
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: sincère
+  - ouvrage: littre
+    entree: sincère
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

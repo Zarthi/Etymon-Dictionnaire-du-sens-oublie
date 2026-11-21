@@ -1,0 +1,30 @@
+mot: chance
+nature: [ nom féminin ]
+etymologie:
+  - forme: chaance
+    langue: ancien français
+    sens: manière dont peut tourner un événement ; chute des dés
+  - forme: cadentia
+    langue: latin
+    sens: chute
+  - forme: cadere
+    langue: latin
+    sens: tomber
+explication: >-
+  cadentia, forme neutre plurielle du participe de cadere, nommait au jeu la
+  chute de l'osselet ; l'ancien français en a fait la manière dont tourne un
+  événement. Le mot dit aujourd'hui ce qui arrive de favorable ou de
+  défavorable, imprévisible et livré au hasard.
+famille: [ chanceux, malchance ]
+renvois: [ fortune ]
+themes: [ temps ]
+sources:
+  - ouvrage: tlfi
+    entree: chance
+  - ouvrage: littre
+    entree: chance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

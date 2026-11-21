@@ -1,0 +1,37 @@
+mot: horreur
+nature: [ nom féminin ]
+etymologie:
+  - forme: horror
+    langue: latin
+    sens: hérissement, frissonnement ; frisson d'effroi, frisson religieux
+  - forme: horrere
+    langue: latin
+    sens: se hérisser
+explication: >-
+  horror disait le frisson qui hérisse — frisson d'effroi, frisson religieux. Le
+  mot a gardé le saisissement devant ce qui est hideux, et dit aujourd'hui
+  surtout l'aversion morale, le dégoût.
+famille: [ horrifique ]
+renvois: [ epouvante ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: "Le cheval trompé pour couvrir sa mère se précipita, comme d'horreur : il
+        y a dans certains animaux une révérence naturelle pour leurs parents."
+      citation: quod quidam equus, quia deceptus fuit ut matri commisceretur, seipsum
+        praecipitavit, quasi prae horrore, eo quod etiam animalibus aliquibus
+        inest naturalis reverentia ad parentes
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae, q. 154, a. 9, ad 3
+          url: https://www.corpusthomisticum.org/sth3146.html
+sources:
+  - ouvrage: tlfi
+    entree: horreur
+  - ouvrage: littre
+    entree: horreur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

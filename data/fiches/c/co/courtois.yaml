@@ -1,0 +1,24 @@
+mot: courtois
+nature: [ adjectif ]
+etymologie:
+  - forme: curteis
+    langue: ancien français
+  - forme: court
+    langue: ancien français
+    sens: résidence d'un souverain et de son entourage
+explication: >-
+  courtois vient de court, la résidence du souverain et de son entourage ; il a
+  dit l'idéal du monde chevaleresque, que l'amour courtois garde encore, et dit
+  aujourd'hui la politesse raffinée.
+famille: [ courtoisie, courtoisement, discourtois ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: courtois
+  - ouvrage: littre
+    entree: courtois
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

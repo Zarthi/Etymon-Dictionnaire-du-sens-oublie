@@ -1,0 +1,43 @@
+mot: gratuit
+nature: [ adjectif ]
+etymologie:
+  - forme: gratuitus
+    langue: latin
+    sens: désintéressé ; sans motif
+    premier: true
+  - forme: gratus
+    langue: latin
+    sens: agréable
+explication: >-
+  Gratuitus disait ce qui est désintéressé, et déjà, en latin impérial, ce qui
+  se fait sans motif. Le mot a gardé les deux : le don sans contrepartie (1495),
+  et l'acte qui ne repose sur rien (1718), et jusqu'au crime sans cause
+  (Michelet, 1831).
+famille: [ gratuité, gratuitement ]
+renvois: [ benevole ]
+themes: [ morale, argent ]
+tradition:
+  lectures:
+    - texte: La cruauté sans cause surprend, et on lui cherche toujours une cause,
+        même chez l'homme le plus déréglé ; celui qui a aimé un forfait sans
+        motif a aimé un gratuitum facinus, un forfait gratuit.
+      citation: nam et de quo dictum est, vaecordi et nimis crudeli homine, quod
+        gratuito potius malus atque crudelis erat, praedicta est tamen causa […]
+        quid enim non facere potui, qui etiam gratuitum facinus amavi?
+      sources:
+        - ouvrage: confessions
+          entree: II, 5
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Secundus
+        - ouvrage: confessions
+          entree: II, 7
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Secundus
+sources:
+  - ouvrage: tlfi
+    entree: gratuit
+  - ouvrage: littre
+    entree: gratuit
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

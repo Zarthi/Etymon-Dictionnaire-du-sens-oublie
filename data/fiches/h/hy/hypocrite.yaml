@@ -1,0 +1,47 @@
+mot: hypocrite
+nature: [ adjectif ]
+etymologie:
+  - forme: hypocrita
+    langue: bas latin
+    sens: hypocrite
+  - forme: ὑποκριτής
+    langue: grec ancien
+    sens: acteur, comédien ; fourbe
+    elements:
+      - forme: ὑπό
+        sens: sous
+      - forme: κρίνω
+        sens: juger, distinguer
+explication: >-
+  En grec, ὑποκριτής disait celui qui interprète, puis l'acteur qui joue un
+  personnage, et enfin le fourbe. Isidore rapportait l'image des acteurs qui
+  paraissent au théâtre le visage couvert de couleurs, avec des masques de lin ;
+  sa figure passe à ceux qui simulent ce qu'ils ne sont pas.
+famille: [ hypocrisie, hypocritement ]
+renvois: [ mensonge ]
+themes: [ morale, religion ]
+tradition:
+  lectures:
+    - texte: "Hypocrite se rend en latin par simulator : mauvais au dedans,
+        l'hypocrite se montre bon au dehors."
+      citation: Hypocrita Graeco sermone in Latino simulator interpretatur. Qui dum
+        intus malus sit, bonum se palam ostendit.
+      sources:
+        - ouvrage: etymologies
+          entree: X, [118]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: hypocrite
+  - ouvrage: bailly
+    entree: ὑποκριτής
+  - ouvrage: littre
+    entree: hypocrite
+  - ouvrage: etymologies
+    entree: X, [119-120]
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

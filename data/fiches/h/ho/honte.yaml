@@ -1,0 +1,27 @@
+mot: honte
+nature: [ nom féminin ]
+etymologie:
+  - forme: hunte
+    langue: ancien français
+    sens: déshonneur
+  - forme: "*haunipa"
+    langue: francique
+    sens: dédain, mépris, raillerie
+explication: >-
+  haunipa disait le dédain, le mépris, la raillerie ; hunte, le déshonneur,
+  l'opprobre d'une action qui transgresse la norme. Le mot a pris ensuite le
+  sentiment qui retient, timidité, retenue, pudeur (avant 1563). Il dit
+  aujourd'hui l'humiliation devant soi-même et la gêne devant les convenances.
+famille: [ honnir, honteux, éhonté ]
+renvois: [ honneur ]
+themes: [ morale, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: honte
+  - ouvrage: littre
+    entree: honte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

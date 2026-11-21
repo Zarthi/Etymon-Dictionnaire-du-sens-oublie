@@ -1,0 +1,44 @@
+mot: honnête
+nature: [ adjectif ]
+etymologie:
+  - forme: honestus
+    langue: latin
+    sens: honorable, digne de considération ; juste, conforme à la morale ; beau,
+      noble
+explication: >-
+  honestus disait l'homme honorable, digne d'estime, beau et noble ; l'honnête
+  homme, attesté dès 1538, est l'homme affable et de conversation agréable. Le
+  mot a gardé la probité, et son emploi neutre dit aujourd'hui ce qui est
+  simplement passable.
+famille: [ honnêteté, malhonnête, déshonnête ]
+renvois: [ courtois ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: Honestus dit ce qui n'a rien de turpitude ; et qu'est l'honestas, sinon
+        un honneur perpétuel, comme l'état de l'honneur ?
+      citation: Honestus, quod nihil habeat turpitudinis. Nam quid est honestas nisi
+        honor perpetuus, id est quasi honoris status?
+      sources:
+        - ouvrage: etymologies
+          entree: X, [116]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+    - texte: L'honestum est ce qui est désiré pour lui-même, ce qui termine tout
+        entier le mouvement de l'appétit.
+      citation: Id autem quod appetitur ut ultimum, terminans totaliter motum
+        appetitus, sicut quaedam res in quam per se appetitus tendit, vocatur
+        honestum, quia honestum dicitur quod per se desideratur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia, q. 5, a. 6, co.
+          url: https://www.corpusthomisticum.org/sth1003.html
+sources:
+  - ouvrage: tlfi
+    entree: honnête
+  - ouvrage: littre
+    entree: honnête
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

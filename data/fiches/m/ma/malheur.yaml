@@ -1,0 +1,55 @@
+mot: malheur
+nature: [ nom masculin ]
+etymologie:
+  - forme: malheur
+    langue: ancien français
+    sens: coup funeste du sort
+    elements:
+      - forme: mal
+        langue: ancien français
+        sens: souffrance
+      - forme: heur
+        langue: ancien français
+        sens: sort, bonne chance
+  - forme: heur
+    langue: ancien français
+    sens: sort, destin ; bonne chance
+  - forme: agurium
+    langue: bas latin
+  - forme: augurium
+    langue: latin
+    sens: augure, interprétation des présages, présage
+explication: >-
+  mal eür, le coup funeste du sort, est fait de mal et de heur ; heur vient
+  d'augurium, le présage que l'on lisait dans les oiseaux, et bon öur disait
+  déjà, vers 1121, la chance heureuse. Le mot a gardé l'événement funeste du
+  sort.
+famille: [ malheureux, malheureusement ]
+renvois: [ bonheur ]
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: Les auspicia sont dits quasi avium aspicia, comme la vue des oiseaux, et
+        les auguria quasi avium garria, les voix et les langues des oiseaux ;
+        l'augurium est quasi avigerium, ce que les oiseaux portent.
+      citation: Dicta sunt autem auspicia, quasi avium aspicia, et auguria, quasi
+        avium garria, hoc est avium voces et linguae. […] Item augurium, quasi
+        avigerium, quod aves gerunt.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, [19]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: malheur
+  - ouvrage: littre
+    entree: mal
+  - ouvrage: tlfi
+    entree: heur
+  - ouvrage: littre
+    entree: heur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

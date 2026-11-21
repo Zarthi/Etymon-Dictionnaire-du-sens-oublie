@@ -1,0 +1,34 @@
+mot: prix
+nature: [ nom masculin ]
+etymologie:
+  - forme: pretium
+    langue: latin
+    sens: valeur d'une chose ; argent ; récompense, salaire
+explication: >-
+  Pretium disait ce que vaut une chose, et l'argent qui la paye. Le mot a
+  d'abord dit la somme à payer (vers 1050), puis ce qu'une chose vaut dans le
+  commerce (1160-74) ; très tôt aussi la récompense donnée au vainqueur
+  (1176-81), et, par antiphrase, le châtiment (1643).
+famille: [ précieux, vilipender ]
+renvois: [ valeur ]
+themes: [ argent, commerce ]
+tradition:
+  lectures:
+    - texte: "Le pretium est nommé de ce qu'on le donne le premier : en échange de
+        lui, on doit posséder la chose qu'on convoitait."
+      citation: Pretium vocatum eo quod prius eum damus, ut pro eius vice rem, quam
+        adpetimus, possidere debeamus.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 34
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: prix
+  - ouvrage: littre
+    entree: prix
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

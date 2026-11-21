@@ -1,0 +1,50 @@
+mot: fortune
+nature: [ nom féminin ]
+etymologie:
+  - forme: fortuna
+    langue: latin
+    sens: fortune, sort ; heureuse fortune ; au pluriel, biens, richesses
+  - forme: fors
+    langue: latin
+    sens: sort
+explication: >-
+  fortuna disait le sort que rien n'explique ; la déesse Fortuna distribuait
+  sans examen des biens et des maux, à bons et à méchants. Le français a gardé
+  le tour du sort, puis les richesses que le sort apporte : la fortune
+  d'aujourd'hui est d'abord une somme d'argent.
+famille: [ fortuné, infortuné, fortuit ]
+renvois: [ hasard ]
+themes: [ argent ]
+tradition:
+  lectures:
+    - texte: "La fortune tient son nom des choses fortuites : elle est comme une
+        divinité qui se joue des affaires humaines par des cas variés ; c'est
+        pourquoi on la dit aveugle, venant sans examen des mérites aussi bien
+        aux bons qu'aux méchants."
+      citation: Fortunam a fortuitis nomen habere dicunt, quasi deam quandam res
+        humanas variis casibus et fortuitis inludentem; unde et caecam
+        appellant, eo quod passim in quoslibet incurrens sine ullo examine
+        meritorum, et ad bonos et ad malos venit.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, [94]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+    - texte: La fortune dite bonne arrive fortuitement, sans aucun examen des mérites,
+        aux hommes bons comme aux méchants ; c'est pourquoi elle est nommée
+        Fortuna.
+      citation: fortuna uero, quae dicitur bona, sine ullo examine meritorum fortuito
+        accidit hominibus et bonis et malis, unde etiam Fortuna nominatur.
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: IV
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: fortune
+  - ouvrage: littre
+    entree: fortune
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

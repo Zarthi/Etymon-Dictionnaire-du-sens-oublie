@@ -1,0 +1,37 @@
+mot: candeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: candor
+    langue: latin
+    sens: blancheur ; éclat
+  - forme: candere
+    langue: latin
+    sens: être blanc, brillant
+explication: >-
+  candor disait la blancheur, l'éclat ; appliqué au domaine moral dès Ovide, il
+  disait la probité. La candeur a gardé la pureté de l'âme qui se voit dans un
+  comportement simple, et nomme aujourd'hui, souvent avec ironie, l'innocence de
+  celui qui n'a pas d'expérience.
+famille: [ incandescent ]
+renvois: [ sincere ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Le cercle lacté, la Voie lactée, tient son nom du candor : il est dit
+        ainsi parce qu'il est blanc."
+      citation: Lacteus circulus via est, quae in sphaera videtur, a candore dicta,
+        quia alba est.
+      sources:
+        - ouvrage: etymologies
+          entree: III, XLVI, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_III
+sources:
+  - ouvrage: tlfi
+    entree: candeur
+  - ouvrage: littre
+    entree: candeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

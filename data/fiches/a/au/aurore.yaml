@@ -1,0 +1,31 @@
+mot: aurore
+nature: [ nom féminin ]
+etymologie:
+  - forme: aurora
+    langue: latin
+    sens: moment où le jour se lève
+explication: >-
+  Le latin disait de l'heure qui précède le lever du soleil ; le français y a
+  ajouté la couleur orangée du ciel à ce moment, puis le commencement prometteur
+  de toute chose, et jusqu'à la lueur des régions polaires, l'aurore boréale.
+famille: [ auroral ]
+themes: [ temps, nature ]
+tradition:
+  lectures:
+    - texte: Aurora est l'exorde du jour qui se luit, le premier éclat de l'air ; le
+        latin la nomme par dérivation quasi eororam.
+      citation: Est autem aurora diei clarescentis exordium et primus splendor aeris,
+        qui Graece NOS dicitur; quam nos per derivationem auroram vocamus, quasi
+        eororam.
+      sources:
+        - ouvrage: etymologies
+          entree: V, [14]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: aurore
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

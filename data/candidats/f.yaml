@@ -6,7 +6,6 @@
 - { mot: fanatique, statut: a-faire }
 - { mot: fantaisie, statut: a-faire }
 - { mot: fantôme, statut: a-faire }
-- { mot: fatal, statut: a-faire }
 - { mot: fatigue, statut: a-faire }
 - { mot: faveur, statut: a-faire }
 - { mot: félicité, statut: a-faire }
@@ -20,14 +19,11 @@
 - { mot: fille, statut: a-faire }
 - { mot: fils, statut: a-faire }
 - { mot: fin, statut: a-faire }
-- { mot: fisc, statut: a-faire }
-- { mot: flatter, statut: a-faire }
 - { mot: folie, statut: a-faire }
 - { mot: fonction, statut: a-faire }
 - { mot: force, statut: a-faire }
 - { mot: forme, statut: a-faire }
 - { mot: formidable, statut: a-faire }
-- { mot: fortune, statut: a-faire }
 - { mot: fou, statut: a-faire }
 - { mot: fraternité, statut: a-faire }
 - { mot: frivole, statut: a-faire }
@@ -35,4 +31,3 @@
 - { mot: fruit, statut: a-faire }
 - { mot: frustrer, statut: a-faire }
 - { mot: fureur, statut: a-faire }
-- { mot: futur, statut: a-faire }

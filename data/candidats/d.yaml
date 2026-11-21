@@ -1,4 +1,3 @@
-- { mot: danger, statut: a-faire }
 - { mot: débat, statut: a-faire }
 - { mot: décevoir, statut: a-faire }
 - { mot: décider, statut: a-faire }
@@ -15,15 +14,11 @@
 - { mot: démon, statut: a-faire }
 - { mot: dénoncer, statut: a-faire }
 - { mot: dépendre, statut: a-faire }
-- { mot: dérision, statut: a-faire }
-- { mot: désespoir, statut: a-faire }
 - { mot: désinvolte, statut: a-faire }
 - { mot: désolé, statut: a-faire }
 - { mot: despote, statut: a-faire }
-- { mot: destin, statut: a-faire }
 - { mot: détester, statut: a-faire }
 - { mot: détruire, statut: a-faire }
-- { mot: deuil, statut: a-faire }
 - { mot: diable, statut: a-faire }
 - { mot: diagnostic, statut: a-faire }
 - { mot: dieu, statut: a-faire }
@@ -43,7 +38,6 @@
 - { mot: dogme, statut: a-faire }
 - { mot: dominer, statut: a-faire }
 - { mot: don, statut: a-faire }
-- { mot: douleur, statut: a-faire }
 - { mot: doux, statut: a-faire }
 - { mot: drame, statut: a-faire }
 - { mot: dur, statut: a-faire }

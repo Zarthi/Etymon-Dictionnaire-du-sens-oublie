@@ -1,0 +1,32 @@
+mot: désespoir
+nature: [ nom masculin ]
+etymologie:
+  - forme: desesper
+    langue: ancien français
+    sens: perte de l'espoir
+    elements:
+      - forme: dé-
+        langue: français
+        sens: priver de
+      - forme: espoir
+        langue: ancien français
+        sens: sentiment qui porte à espérer
+explication: >-
+  desesper disait la perte de l'espoir ; il a ensuite dit l'affliction
+  elle-même, puis le découragement. Le mot nomme aujourd'hui l'état de celui qui
+  juge sa situation sans issue, et l'accablement qui le suit.
+famille: [ espoir, désespérer ]
+renvois: [ angoisse ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: désespoir
+  - ouvrage: tlfi
+    entree: dé-
+  - ouvrage: tlfi
+    entree: espoir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

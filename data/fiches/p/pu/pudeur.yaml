@@ -1,0 +1,42 @@
+mot: pudeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: pudor
+    langue: latin
+    sens: sentiment de réserve et de honte ; honneur, déshonneur
+explication: >-
+  Emprunt du XVIe siècle au latin pudor, qui disait ensemble la retenue qui
+  honore et le déshonneur qui menace. En français, le mot a d'abord dit
+  l'appréhension de ce qui peut atteindre la dignité (1542), puis la gêne devant
+  les réalités sexuelles (1580).
+famille: [ impudeur, impudent, pudique, pudibond ]
+renvois: [ honte ]
+themes: [ morale, corps ]
+tradition:
+  lectures:
+    - texte: "Deux mots voisins se séparent : le pudor est du corps, la pudicitia de
+        l'esprit."
+      citation: Inter Pudorem et pudicitiam. Pudor corporis est, pudicitia mentis.
+      sources:
+        - ouvrage: differences
+          entree: "418"
+          url: https://la.wikisource.org/wiki/Differentiae
+    - texte: "Le nom de pudicitia vient de pudor, où se dit la verecundia : la
+        pudicitia regarde surtout ce dont on rougit le plus."
+      citation: Respondeo dicendum quod, sicut dictum est, nomen pudicitiae a pudore
+        sumitur, in quo verecundia significatur. Et ideo oportet quod pudicitia
+        proprie sit circa illa de quibus homines magis verecundantur […]
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae, q. 151, a. 4, co.
+          url: https://www.corpusthomisticum.org/sth3146.html
+sources:
+  - ouvrage: tlfi
+    entree: pudeur
+  - ouvrage: littre
+    entree: pudeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,32 @@
+mot: crise
+nature: [ nom féminin ]
+etymologie:
+  - forme: crisis
+    langue: latin
+    sens: phase grave d'une maladie
+  - forme: κρίσις
+    langue: grec ancien
+    sens: décision, jugement ; ce qui décide, issue, dénouement
+  - forme: κρίνω
+    langue: grec ancien
+    sens: séparer, trier ; décider, juger
+explication: >-
+  κρίνω disait séparer, trier ; κρίσις, l'action de décider, le moment qui
+  départage, et en médecine la phase où la maladie se juge. Le mot a gardé
+  l'accès brutal et le moment décisif ; il nomme aujourd'hui la situation de
+  trouble où l'équilibre se rompt, dans une vie, une société, une économie.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: crise
+  - ouvrage: bailly
+    entree: κρίσις
+  - ouvrage: bailly
+    entree: κρίνω
+  - ouvrage: littre
+    entree: crise
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

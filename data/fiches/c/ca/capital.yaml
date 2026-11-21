@@ -1,0 +1,44 @@
+mot: capital
+nature: [ adjectif ]
+etymologie:
+  - forme: capitalis
+    langue: latin
+    sens: qui peut coûter la tête à quelqu'un ; qui se trouve en tête, important
+    premier: true
+  - forme: caput
+    langue: latin
+    sens: tête
+explication: >-
+  Capitalis disait ce qui peut coûter la tête, et ce qui se trouve en tête,
+  l'important. Le nom vient de l'adjectif substantivé, ou d'un emprunt à
+  l'italien capitale ; il a dit le principal d'une dette (1567), les biens que
+  l'on fait valoir (1606), la richesse comme moyen de production (Say).
+famille: [ capitaliste, capitaliser ]
+themes: [ argent, droit ]
+tradition:
+  lectures:
+    - texte: "Capitale se dit de la tête : le péché puni de la peine capitale l'est de
+        la tête ; au figuré, le vice capital est celui dont les autres naissent,
+        comme la tête commande aux membres."
+      citation: Respondeo dicendum quod capitale a capite dicitur. Caput autem proprie
+        quidem est quoddam membrum animalis, quod est principium et directivum
+        totius animalis. Unde metaphorice omne principium caput vocatur, et
+        etiam homines qui alios dirigunt et gubernant, capita aliorum dicuntur.
+        Dicitur ergo vitium capitale uno modo a capite proprie dicto, et
+        secundum hoc, peccatum capitale dicitur peccatum quod capitis poena
+        punitur. Sed sic nunc non intendimus de capitalibus peccatis, sed
+        secundum quod alio modo dicitur peccatum capitale a capite prout
+        metaphorice significat principium vel directivum aliorum. Et sic dicitur
+        vitium capitale ex quo alia vitia oriuntur […]
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae, q. 84, a. 3, co.
+          url: https://www.corpusthomisticum.org/sth2075.html
+sources:
+  - ouvrage: tlfi
+    entree: capital
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

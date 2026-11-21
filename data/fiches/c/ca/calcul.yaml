@@ -1,0 +1,40 @@
+mot: calcul
+nature: [ nom masculin ]
+etymologie:
+  - forme: calculer
+    langue: français
+  - forme: calculus
+    langue: latin
+    sens: caillou
+explication: >-
+  Calculus a nommé le caillou ; comme on comptait avec de petits cailloux, le
+  mot a nommé la supputation. Le calcul a gardé les deux : le calcul des nombres
+  (1484) et le calcul qui se forme dans le corps (1546). Il dit aussi, en emploi
+  péjoratif, la combinaison de moyens en vue de son intérêt.
+famille: [ calculer, calculateur, calculable ]
+renvois: [ compte, chiffre ]
+themes: [ savoir, argent ]
+tradition:
+  lectures:
+    - texte: Le calculus est le petit caillou rond et lisse, nommé de ce qu'il se
+        foule sans peine ; son contraire est le scrupulus, le caillou menu et
+        rugueux qui blesse le pied, d'où vient le scrupule de l'esprit.
+      citation: "Calculus est lapillus terrae admixtus, rotundus atque durissimus, et
+        omni puritate lenissimus. Dictus autem calculus quod sine molestia
+        brevitate sui calcetur: cuius contrarius est scrupus, lapillus minutus
+        et asper, qui si inciderit in calciamentum, nocet et molestia est animo;
+        unde et animi molestiam scrupulum dicimus […]"
+      sources:
+        - ouvrage: etymologies
+          entree: XVI, 5
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+sources:
+  - ouvrage: tlfi
+    entree: calcul
+  - ouvrage: littre
+    entree: calcul
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

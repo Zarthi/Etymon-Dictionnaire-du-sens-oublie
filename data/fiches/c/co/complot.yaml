@@ -1,0 +1,34 @@
+mot: complot
+nature: [ nom masculin ]
+etymologie:
+  - forme: complot
+    langue: ancien français
+    sens: foule compacte ; accord concerté entre des personnes ; conjuration
+  - langue: ancien français
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: plot
+          langue: anglais
+          sens: morceau de terre, champ, plan, menée, intrigue
+          selon: [ emile-littre ]
+        - forme: complicitum
+          langue: latin médiéval
+          sens: complicité
+          selon: [ friedrich-diez ]
+explication: >-
+  complot a dit la foule compacte, puis l'accord entre des personnes (1180-90)
+  et la conjuration (1213-14). L'origine reste obscure : on a proposé un radical
+  plot que l'anglais garde, ou complicitum, avec doute.
+famille: [ comploter, comploteur ]
+themes: [ politique ]
+sources:
+  - ouvrage: tlfi
+    entree: complot
+  - ouvrage: littre
+    entree: complot
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

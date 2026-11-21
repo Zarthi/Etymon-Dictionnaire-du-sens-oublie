@@ -1,0 +1,45 @@
+mot: stupeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: stupor
+    langue: latin
+    sens: engourdissement, physique ou mental
+  - forme: stupeo
+    langue: latin
+    sens: être engourdi, demeurer immobile
+explication: >-
+  stupeo disait l'immobilité de l'engourdi ; stupor disait l'engourdissement du
+  corps et de l'esprit. Attesté d'abord en médecine (1377), stupeur a pris le
+  saisissement de l'étonnement profond ; le mot dit aujourd'hui le choc qui
+  prive de ses moyens.
+famille: [ stupide, stupéfier ]
+renvois: [ etonner ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: "Le stupor est causé par l'imagination de l'insolite : un mal peu
+        accoutumé, offert à notre considération, paraît grand à notre estime."
+      citation: Secundo, ratione dissuetudinis, quia scilicet aliquod malum
+        inconsuetum nostrae considerationi offertur, et sic est magnum nostra
+        reputatione. Et hoc modo est stupor, qui causatur ex insolita
+        imaginatione.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae, q. 41, a. 4, co.
+          url: https://www.corpusthomisticum.org/sth2040.html
+    - texte: L'admiration est le principe de la philosophie, le stupor en est
+        l'obstacle.
+      citation: Unde admiratio est principium philosophandi, sed stupor est
+        philosophicae considerationis impedimentum.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae, q. 41, a. 4, ad 5
+          url: https://www.corpusthomisticum.org/sth2040.html
+sources:
+  - ouvrage: tlfi
+    entree: stupeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,15 @@
+nom: Guillaume de Tyr
+naissance: vers 1130
+mort: "1186"
+description: >-
+  Chanoine d'Acre, archevêque de Tyr, historien des croisades (vers 1130-1186) ;
+  son histoire rapporte que le jeu de dés nommé hasart vint d'un château de
+  Syrie de ce nom.
+sources:
+  - ouvrage: bnf
+    entree: cb11906346f
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

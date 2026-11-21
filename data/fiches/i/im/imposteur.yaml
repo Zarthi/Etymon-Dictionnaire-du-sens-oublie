@@ -1,0 +1,35 @@
+mot: imposteur
+nature: [ nom masculin ]
+etymologie:
+  - forme: impostor
+    langue: latin
+    sens: trompeur
+    premier: true
+  - forme: impōnere
+    langue: latin
+    sens: placer sur ; donner une charge ; imposer un tribut ; abuser, tromper
+    elements:
+      - forme: in
+        sens: dans
+      - forme: ponere
+        sens: mettre
+explication: >-
+  Le latin disait aussi impōnere abuser, tromper ; impostor nommait le trompeur,
+  qui abuse autrui par des mensonges et de fausses promesses pour en tirer
+  profit, ou se fait passer pour ce qu'il n'est pas, usurpant un nom, une
+  qualité.
+famille: [ imposture ]
+renvois: [ mensonge, hypocrite ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: imposteur
+  - ouvrage: tlfi
+    entree: imposer
+  - ouvrage: littre
+    entree: imposteur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

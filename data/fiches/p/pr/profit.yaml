@@ -1,0 +1,30 @@
+mot: profit
+nature: [ nom masculin ]
+etymologie:
+  - forme: profectus
+    langue: latin
+    sens: avancement, progrès ; succès, profit
+  - forme: proficere
+    langue: latin
+    elements:
+      - forme: pro-
+        sens: en avant
+      - forme: facere
+        sens: faire
+explication: >-
+  Profectus disait l'avancement, le progrès. Le mot a dit d'abord l'avantage en
+  général (XIIe siècle), puis le revenu pécuniaire (1160-74), et le gain a fini
+  par dominer : profits et pertes (1832), profit brut (1936).
+famille: [ profitable, profiter ]
+renvois: [ benefice ]
+themes: [ argent, commerce ]
+sources:
+  - ouvrage: tlfi
+    entree: profit
+  - ouvrage: littre
+    entree: profit
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

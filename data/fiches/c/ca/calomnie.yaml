@@ -1,0 +1,34 @@
+mot: calomnie
+nature: [ nom féminin ]
+etymologie:
+  - forme: calumnia
+    langue: latin
+    sens: accusation fausse portée devant les tribunaux ; en général, accusation
+      injuste
+explication: >-
+  Mot refait sur le latin : l'ancien français disait calenge, chalenge,
+  reproche, défi. L'accusation fausse se portait devant les tribunaux ; la
+  calomnie est restée l'accusation qu'on sait fausse et qu'on porte malgré tout
+  pour jeter le discrédit.
+famille: [ calomnier, calomniateur, calomnieux ]
+renvois: [ rumeur, mensonge ]
+themes: [ parole, droit ]
+tradition:
+  lectures:
+    - texte: La calomnie est le débat du procès d'autrui ; le nom vient de calvendo,
+        duper.
+      citation: Calumnia est iurgium alienae litis, a calvendo, id est decipiendo dicta.
+      sources:
+        - ouvrage: etymologies
+          entree: V, [8]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: calomnie
+  - ouvrage: littre
+    entree: calomnie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
