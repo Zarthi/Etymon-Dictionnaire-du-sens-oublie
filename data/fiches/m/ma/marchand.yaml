@@ -1,0 +1,29 @@
+mot: marchand
+nature: [ nom ]
+etymologie:
+  - forme: "*mercatans"
+    langue: latin populaire
+    sens: qui fait le marchand
+  - forme: mercatus
+    langue: latin
+    sens: marché, trafic
+  - forme: merx
+    langue: latin
+    sens: marchandise
+explication: >-
+  Marchand vient d'un participe latin populaire qui disait « faisant le
+  marchand », sur mercatus, le marché, et merx, la marchandise. Le mot a désigné
+  celui qui achète et revend ; il s'emploie aujourd'hui comme nom et comme
+  adjectif.
+famille: [ marchandise, marchander, marché, commerce ]
+themes: [ commerce, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: marchand
+  - ouvrage: littre
+    entree: marchand
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

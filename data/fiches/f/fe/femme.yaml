@@ -1,0 +1,39 @@
+mot: femme
+nature: [ nom féminin ]
+etymologie:
+  - forme: femina
+    langue: latin
+    sens: femelle, femme, épouse
+explication: >-
+  Le latin femina nommait d'abord la femelle, de tout animal ; il a pris le sens
+  de femme et d'épouse, et a supplanté les mots latins qui disaient la femme et
+  l'épouse. Le français garde les deux sens, la personne de sexe féminin et
+  l'épouse.
+ecartees:
+  - forme: foemina
+    langue: latin
+    sens: celle qui nourrit, allaite
+    raison: Hypothèse rapportée par le Littré, qui y voit un composé de foe- et
+      -mina ; le TLFi rattache le mot au latin femina sans ce composé.
+famille: [ féminin, féminité, féministe ]
+themes: [ famille, société ]
+tradition:
+  lectures:
+    - texte: Femina est dite d'après les parties des cuisses, femora, où le sexe se
+        distingue de l'homme.
+      citation: Femina vero a partibus femorum dicta, ubi sexus species a viro
+        distinguitur.
+      sources:
+        - ouvrage: etymologies
+          entree: XI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: femme
+  - ouvrage: littre
+    entree: femme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -19,7 +19,6 @@
 - { mot: rejeter, statut: a-faire }
 - { mot: relique, statut: a-faire }
 - { mot: remarquer, statut: a-faire }
-- { mot: remède, statut: a-faire }
 - { mot: remords, statut: a-faire }
 - { mot: rencontrer, statut: a-faire }
 - { mot: renoncer, statut: a-faire }
@@ -39,7 +38,6 @@
 - { mot: revanche, statut: a-faire }
 - { mot: rêve, statut: a-faire }
 - { mot: révolution, statut: a-faire }
-- { mot: riche, statut: a-faire }
 - { mot: rigueur, statut: a-faire }
 - { mot: rire, statut: a-faire }
 - { mot: rite, statut: a-faire }

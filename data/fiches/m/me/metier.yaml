@@ -1,0 +1,31 @@
+mot: métier
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*misterium"
+    langue: latin populaire
+    sens: service, fonction
+    croisement:
+      - forme: mysterium
+        langue: latin
+        sens: rite, mystère
+  - forme: ministerium
+    langue: latin
+    sens: service, fonction
+    premier: true
+  - forme: minister
+    langue: latin
+    sens: serviteur
+explication: >-
+  Ministerium nommait le service d'un serviteur, et spécialement le service de
+  Dieu. Le mot a désigné la fonction et le besoin, puis l'occupation qui fait
+  vivre et l'habileté qu'elle demande ; il se dit aussi de la machine à tisser.
+famille: [ ministre, ministère, ministériel ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: métier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

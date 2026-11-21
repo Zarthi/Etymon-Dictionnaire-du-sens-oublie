@@ -1,0 +1,32 @@
+mot: usure
+nature: [ nom féminin ]
+etymologie:
+  - forme: usura
+    langue: latin
+    sens: intérêt de l'argent ; usage du capital prêté
+  - forme: usus
+    langue: latin
+    sens: usage, jouissance
+explication: >-
+  Usura nommait l'intérêt de l'argent prêté. Le français l'a employé au sens
+  neutre d'intérêt, puis l'a restreint, au XVIIe siècle, à l'intérêt excessif ;
+  l'altération par l'usage relève d'un autre mot, dérivé de user.
+famille: [ usurier, usuraire ]
+themes: [ argent, droit ]
+tradition:
+  lectures:
+    - texte: L'usure est l'accroissement du capital, ainsi nommée de l'usage de
+        l'argent prêté.
+      citation: Vsura est incrementum fenoris, ab usu aeris crediti nuncupata.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 15
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: usure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

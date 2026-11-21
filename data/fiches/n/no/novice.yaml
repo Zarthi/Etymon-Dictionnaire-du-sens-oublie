@@ -1,0 +1,20 @@
+mot: novice
+nature: [ nom ]
+etymologie:
+  - forme: novicius
+    langue: latin
+    sens: nouveau, récent
+explication: >-
+  Novicius disait ce qui est nouveau, et en latin chrétien celui qui commence
+  dans un ordre religieux. Le mot a gardé ce sens, et désigne plus largement
+  celui qui manque d'expérience.
+famille: [ noviciat ]
+themes: [ religion, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: novice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

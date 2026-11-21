@@ -1,0 +1,38 @@
+mot: maladie
+nature: [ nom féminin ]
+etymologie:
+  - forme: malade
+    langue: français
+    sens: dont la santé est altérée
+  - forme: male habitus
+    langue: latin
+    sens: qui est en mauvais état, malade
+    elements:
+      - forme: male
+        sens: mal
+      - forme: habitus
+        sens: état, disposition
+explication: >-
+  Male habitus disait ce qui est en mauvais état. Le mot a désigné l'altération
+  de la santé, puis celle des animaux et des plantes, et s'est étendu aux
+  troubles de l'âme, des sociétés et à la manie.
+ecartees:
+  - forme: male aptus
+    langue: latin
+    sens: mal apte
+    selon: [ emile-littre ]
+    raison: Le TLFi rattache malade à male habitus, « qui est en mauvais état ».
+famille: [ malade, maladif, maladivement ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: maladie
+  - ouvrage: tlfi
+    entree: malade
+  - ouvrage: littre
+    entree: malade
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

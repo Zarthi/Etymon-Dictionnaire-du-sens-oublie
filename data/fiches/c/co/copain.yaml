@@ -1,0 +1,27 @@
+mot: copain
+nature: [ nom masculin ]
+etymologie:
+  - forme: copain
+    langue: français
+    sens: camarade
+  - forme: compain
+    langue: ancien français
+    sens: compagnon
+  - forme: companio
+    langue: bas latin
+    sens: celui qui partage le pain
+explication: >-
+  Copain est la forme dénasalisée de l'ancien compain, le compagnon ; il a
+  d'abord désigné un camarade, puis un amoureux. Le mot est familier, là où
+  compagnon a gardé un usage plus large.
+doublets: [ compagnon ]
+famille: [ copine, copinage ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: copain
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

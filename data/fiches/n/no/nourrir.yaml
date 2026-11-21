@@ -1,0 +1,20 @@
+mot: nourrir
+nature: [ verbe ]
+etymologie:
+  - forme: nutrire
+    langue: latin
+    sens: nourrir, alimenter, entretenir
+explication: >-
+  Nourrir a d'abord voulu dire élever un enfant, puis alimenter ; le mot s'est
+  étendu à l'entretien matériel et à ce qui fait vivre l'esprit : nourrir un
+  sentiment, une réflexion.
+famille: [ nourriture, nourrice, nourrisson ]
+themes: [ nourriture, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: nourrir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

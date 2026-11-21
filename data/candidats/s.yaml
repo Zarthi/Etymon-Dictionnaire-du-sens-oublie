@@ -7,7 +7,6 @@
 - { mot: saint, statut: a-faire }
 - { mot: salut, statut: a-faire }
 - { mot: sanctuaire, statut: a-faire }
-- { mot: santé, statut: a-faire }
 - { mot: sapience, statut: a-faire }
 - { mot: satisfaire, statut: a-faire }
 - { mot: sauvage, statut: a-faire }
@@ -27,7 +26,6 @@
 - { mot: silence, statut: a-faire }
 - { mot: simple, statut: a-faire }
 - { mot: sinistre, statut: a-faire }
-- { mot: soin, statut: a-faire }
 - { mot: solennel, statut: a-faire }
 - { mot: solidaire, statut: a-faire }
 - { mot: solide, statut: a-faire }

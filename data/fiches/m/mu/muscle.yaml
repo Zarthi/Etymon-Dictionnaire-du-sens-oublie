@@ -1,0 +1,38 @@
+mot: muscle
+nature: [ nom masculin ]
+etymologie:
+  - forme: musculus
+    langue: latin
+    sens: petite souris, puis muscle
+    elements:
+      - forme: mus
+        sens: souris
+      - forme: -culus
+        sens: diminutif
+explication: >-
+  Musculus, diminutif de mus, « souris », a désigné le muscle par analogie de
+  forme, comme le grec μῦς et le latin lacertus, « lézard ». Le mot garde
+  aujourd'hui l'organe et, au figuré, la force physique.
+famille: [ musculaire, musclé, musculation, muscler ]
+themes: [ corps ]
+tradition:
+  lectures:
+    - texte: Les musculi, les muscles, sont dits comme masculi, les mâles.
+      citation: et dicti musculi quasi masculi.
+      sources:
+        - ouvrage: etymologies
+          entree: XII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XII
+sources:
+  - ouvrage: tlfi
+    entree: muscle
+  - ouvrage: bailly
+    entree: μῦς
+  - ouvrage: etymologies
+    entree: XII
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

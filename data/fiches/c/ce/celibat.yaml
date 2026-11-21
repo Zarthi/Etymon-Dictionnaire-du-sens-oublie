@@ -1,0 +1,35 @@
+mot: célibat
+nature: [ nom masculin ]
+etymologie:
+  - forme: caelibatus
+    langue: latin
+    sens: célibat
+explication: >-
+  Caelibatus nommait l'état de celui qui n'est pas marié ; le mot a désigné la
+  continence, puis, par extension, l'isolement affectif.
+famille: [ célibataire ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: "Le célibat de Jean et le mariage d'Abraham ont servi le Christ selon les
+        temps : Jean gardait la continence dans l'acte, Abraham dans la seule
+        disposition."
+      citation: Unde Augustinus dicit, in libro de bono coniugali, quod Ioannis
+        caelibatus et Abrahae connubium pro temporum distributione Christo
+        militaverunt, sed continentiam Ioannes etiam in opere, Abraham vero in
+        solo habitu habebat.
+      auteur: augustin
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae, q. 152 a. 4 ad 1
+          url: https://www.corpusthomisticum.org/sth3146.html
+sources:
+  - ouvrage: tlfi
+    entree: célibat
+  - ouvrage: littre
+    entree: célibat
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

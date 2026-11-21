@@ -1,0 +1,28 @@
+mot: instruire
+nature: [ verbe ]
+etymologie:
+  - forme: instruere
+    langue: latin
+    sens: assembler dans, dresser, munir, outiller
+    elements:
+      - forme: in-
+        sens: dans
+      - forme: struere
+        sens: bâtir
+explication: >-
+  Le latin instruere disait qu'on assemble et dispose, qu'on munit et outille ;
+  il a pris à l'époque impériale le sens de former l'esprit. Le mot a gardé
+  l'idée de former l'esprit et de munir quelqu'un de connaissances, puis celle
+  d'informer et de mettre une affaire en état.
+famille: [ instruction, instructif ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: instruire
+  - ouvrage: littre
+    entree: instruire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

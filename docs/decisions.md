@@ -9,6 +9,48 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-21 — Lot : ancêtre, femme, fille, fils, fiancé, fraternité, ménage, maison, nourrir, pédagogie, disciple, instruire, diplôme, novice, maître, patron, compagnon, copain, baptême, célibat, dégoût, déjeuner, fruit, gourmand, ivre, maladie, médecin, muscle, pharmacie, santé, soin, fatigue, gêne, guérir, remède, affaire, bureau, commerce, client, marchand, marché, métier, profession, tâche, usure, riche, valeur, gagner, pension, trésor
+
+# Décisions du lot « famille, corps et travail »
+
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| ancêtre | chaîne ouverte au latin antecessor, sans maillon français | le TLFi donne l'ancien français anceisor, mais le premier maillon est la langue source directe | oui |
+| femme | hypothèse foemina du Littré mise dans `ecartees` | le TLFi rattache femina au latin sans ce composé | oui |
+| pédagogie | deux maillons grecs, παιδαγωγία puis παιδαγωγός, sens premier forcé sur παιδαγωγία | le composé est παιδαγωγός, non παιδαγωγία ; le sens de pédagogie est l'éducation | oui |
+| patron | sens premier forcé sur patronus, pater ajouté comme maillon | le mot vient de pater, mais le sens premier de patron est le protecteur | oui |
+| baptême | chemin `consacre`, non `sacre` | mot profane à l'origine (immersion), pris dans l'ordre chrétien | oui |
+| copain | doublet déclaré sur copain vers compagnon | même étymon companio, voies nominative et accusative | oui |
+| fiancé | nature « nom masculin » et « nom féminin » fournie | le Littré ne donne que le participe passé | oui |
+| compagnon | modèle gahlaiba porté en langue germanique | le gotique n'est pas dans la liste fermée ; le TLFi parle d'un mot germanique du type gotique | oui |
+| maître | étymologie du Littré et du TLFi à magister, faute d'accès à maître2 | l'article maître2 du TLFi renvoie 404 | oui |
+| ménage | chaîne mansionaticum puis mansio, sans manere | le Littré et le TLFi donnent mansionaticum dérivé de mansio ; manere n'ajoute pas de sens à la fiche | oui |
+| dégoût | chaîne arrêtée à goût, sans remonter à gustus | gustus n'ajoute que « action de goûter », déjà porté par goût | oui |
+| dégoût | dégoûter porté comme premier maillon, goût comme second | le TLFi fait de dégoût le déverbal de dégoûter, et de dégoûter un dérivé de goût | oui |
+| gourmand | chaîne arrêtée au français gourmand, `incertain: true` | l'origine est obscure ; le rattachement à gourmet est douteux et relégué dans `ecartees` | oui |
+| gourmand | hypothèse celtique du Littré non retenue | l'irlandais ne figure pas dans la liste fermée et le TLFi ne la suit pas | oui |
+| ivre | hypothèse e + bria du Littré mise dans `ecartees` | le Littré lui-même la juge peu sûre | oui |
+| maladie | chaîne malade puis male habitus | le TLFi donne male habitus ; le Littré propose male aptus, écarté | oui |
+| médecin | chaîne médeciner, medicus, mederi | le TLFi fait de médecin un dérivé régressif de médeciner, contre la dérivation directe de medicinus chez le Littré | oui |
+| soin | chemin `debattu`, trois hypothèses | le TLFi juge l'étymologie incertaine et rapporte *sunni, somnium et sunnis | oui |
+| fruit | homonyme frit, déverbal d'effriter, laissé hors de la fiche | le TLFi le signale comme un mot distinct, altéré en fruit sous l'influence de fruit | oui |
+| gêne | attraction de géhenne laissée hors de la chaîne | c'est une attraction de forme et de sens, non l'étymologie | oui |
+| affaire | chaîne française seule, sans maillon latin | le TLFi donne un dérivé de faire par le préfixe a-, sans étymon latin propre | oui |
+| bureau | chaîne ouverte à burel, ancien français, sans bure ni *bura | l'origine de bure est obscure et le sens premier est porté par burel | oui |
+| commerce | commercium décomposé en cum + merx | le Littré donne cette composition et les parties parlent encore | oui |
+| client | hypothèse cluere mise dans `ecartees` | le Littré y rattache cliens, mais le TLFi ne reprend pas ce rapprochement | oui |
+| marchand | chaîne *mercatans, mercatus, merx | le TLFi reconstruit le participe, le Littré donne mercari et merx | oui |
+| marché | chaîne mercatus puis merx | le TLFi donne mercatus issu de merx ; merx ajoute « marchandise » | oui |
+| métier | sens premier forcé sur ministerium ; *misterium croisé avec mysterium | le TLFi explique le croisement ; minister n'ajoute que « serviteur » | oui |
+| profession | chaîne professio puis profiteri | le TLFi donne le supin de profiteri comme base | oui |
+| tâche | chaîne tasca puis taxare | le TLFi donne tasca issu de taxare | oui |
+| usure | chaîne usura puis usus ; sens d'altération laissé hors de la fiche | ce sens vient d'un dérivé de user, non de usura | oui |
+| riche | chaîne arrêtée à *riki, sans gotique reiks | reiks n'ajoute pas de sens et le gotique manque à la liste fermée | oui |
+| valeur | chaîne valorem puis valere | le Littré et le TLFi donnent valere comme base | oui |
+| gagner | chaîne *waidanjan, sans bas latin ganare | ganare est d'origine inconnue et distinct de *waidanjan | oui |
+| pension | chaîne pensio puis pendere | le TLFi donne pendere « peser, payer » comme base | oui |
+| trésor | hypothèse θέω du Littré mise dans `ecartees` | le Bailly donne à θέω le sens de « courir », non « poser » | oui |
+
 ## 2026-11-21 — Lot : arme, bourreau, combat, conquerir, cruel, fureur, guerre, heros, lache, meurtre, pitie, supplice, torture, trahir, traitre, tuer, vaincre, victime, victoire, violence
 
 | Sujet | Décision | Raison | Relecture |

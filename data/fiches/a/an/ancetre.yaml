@@ -1,0 +1,20 @@
+mot: ancêtre
+nature: [ nom masculin ]
+etymologie:
+  - forme: antecessor
+    langue: latin
+    sens: éclaireur, prédécesseur
+explication: >-
+  Le latin antecessor désignait d'abord l'éclaireur qui marche devant ; il a
+  pris le sens de prédécesseur, puis, en latin médiéval, celui d'ancêtre. Le
+  français a gardé ce dernier sens, et l'étend au précurseur.
+famille: [ ancestral ]
+themes: [ famille ]
+sources:
+  - ouvrage: tlfi
+    entree: ancêtre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

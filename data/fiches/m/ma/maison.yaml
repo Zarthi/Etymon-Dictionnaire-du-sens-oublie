@@ -1,0 +1,22 @@
+mot: maison
+nature: [ nom féminin ]
+etymologie:
+  - forme: mansio
+    langue: latin
+    sens: demeure, habitation
+explication: >-
+  Le latin mansio disait le séjour et la demeure ; le français a fait maison, le
+  bâtiment où l'on habite et ceux qui y vivent, puis toute institution ou
+  entreprise installée en un lieu.
+famille: [ maisonnette, maisonnée, mas ]
+themes: [ maison, famille ]
+sources:
+  - ouvrage: littre
+    entree: maison
+  - ouvrage: tlfi
+    entree: maison
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

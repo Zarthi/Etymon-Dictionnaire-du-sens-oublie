@@ -1,0 +1,37 @@
+mot: santé
+nature: [ nom féminin ]
+etymologie:
+  - forme: sanitas
+    langue: latin
+    sens: santé du corps et de l'esprit
+  - forme: sanus
+    langue: latin
+    sens: sain
+explication: >-
+  Sanitas, dérivé de sanus, « sain », disait la santé du corps et de l'esprit.
+  Le mot a étendu son sens à l'équilibre moral, puis à l'état sanitaire des
+  collectivités et aux politiques de santé publique.
+famille: [ sain, sanitaire ]
+themes: [ santé ]
+tradition:
+  lectures:
+    - texte: La santé est l'intégrité du corps et la juste mesure d'une nature faite
+        de chaud et d'humide, c'est-à-dire du sang ; sanitas serait dite comme
+        sanguinis status, l'état du sang.
+      citation: Sanitas est integritas corporis et temperantia naturae ex calido et
+        humido, quod est sanguis; unde et sanitas dicta est, quasi sanguinis
+        status.
+      sources:
+        - ouvrage: etymologies
+          entree: IV
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: santé
+  - ouvrage: littre
+    entree: santé
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

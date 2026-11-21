@@ -2,8 +2,6 @@
 - { mot: décevoir, statut: a-faire }
 - { mot: décider, statut: a-faire }
 - { mot: défaut, statut: a-faire }
-- { mot: dégoût, statut: a-faire }
-- { mot: déjeuner, statut: a-faire }
 - { mot: délégué, statut: a-faire }
 - { mot: délire, statut: a-faire }
 - { mot: délivrer, statut: a-faire }
@@ -23,9 +21,7 @@
 - { mot: dignité, statut: a-faire }
 - { mot: dilemme, statut: a-faire }
 - { mot: dimanche, statut: a-faire }
-- { mot: diplôme, statut: a-faire }
 - { mot: discerner, statut: a-faire }
-- { mot: disciple, statut: a-faire }
 - { mot: discipline, statut: a-faire }
 - { mot: discret, statut: a-faire }
 - { mot: disgrâce, statut: a-faire }

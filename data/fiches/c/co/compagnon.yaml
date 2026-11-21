@@ -1,0 +1,30 @@
+mot: compagnon
+nature: [ nom masculin ]
+etymologie:
+  - forme: companio
+    langue: bas latin
+    sens: celui qui partage le pain
+    elements:
+      - forme: cum
+        sens: avec
+      - forme: panis
+        sens: pain
+    modele:
+      forme: gahlaiba
+      langue: germanique
+      sens: compagnon, celui qui partage le pain
+      relation: calque
+explication: >-
+  Companio, formé de cum, avec, et panis, pain, disait celui qui partage le
+  pain ; c'est un calque d'un mot germanique. Le mot a gardé l'idée de vie
+  commune et d'aide, puis a désigné l'ouvrier qui a terminé son apprentissage.
+famille: [ compagne, compagnonnage, accompagner ]
+themes: [ société, travail ]
+sources:
+  - ouvrage: tlfi
+    entree: compagnon
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

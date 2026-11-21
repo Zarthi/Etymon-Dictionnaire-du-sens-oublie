@@ -1,0 +1,28 @@
+mot: client
+nature: [ nom masculin ]
+etymologie:
+  - forme: cliens
+    langue: latin
+    sens: protégé d'un patronus ; vassal
+explication: >-
+  Client nommait à Rome le citoyen pauvre qui se plaçait sous la protection d'un
+  patron. Le mot a désigné celui qui confie ses intérêts à un homme de loi, puis
+  celui qui achète ; le lien de dépendance s'est effacé devant la relation
+  d'achat.
+ecartees:
+  - forme: cluere
+    langue: latin
+    sens: entendre
+    selon: [ emile-littre ]
+    raison: Le Littré y rattache cliens ; le TLFi donne cliens pour étymon sans
+      reprendre ce rapprochement.
+famille: [ clientèle, clientélisme ]
+themes: [ commerce, société ]
+sources:
+  - ouvrage: tlfi
+    entree: client
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

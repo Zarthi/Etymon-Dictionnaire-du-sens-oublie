@@ -1,0 +1,23 @@
+mot: tâche
+nature: [ nom féminin ]
+etymologie:
+  - forme: tasca
+    langue: latin médiéval
+    sens: redevance en fruits due au propriétaire
+  - forme: taxare
+    langue: latin
+    sens: fixer, évaluer ; imposer
+explication: >-
+  Tasca désignait une redevance fixée que le tenancier devait pour un champ. Le
+  mot a pris le sens de travail fixé, imposé pour un temps et un prix, puis de
+  travail à accomplir.
+famille: [ tâcher, tâcheron ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: tâche
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

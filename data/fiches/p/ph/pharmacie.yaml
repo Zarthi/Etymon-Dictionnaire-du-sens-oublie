@@ -1,0 +1,42 @@
+mot: pharmacie
+nature: [ nom féminin ]
+etymologie:
+  - forme: pharmacia
+    langue: bas latin
+    sens: ensemble des médicaments
+  - forme: φαρμακεία
+    langue: grec ancien
+    sens: emploi de médicaments
+  - forme: φαρμακεύειν
+    langue: grec ancien
+    sens: donner un médicament
+  - forme: φάρμακον
+    langue: grec ancien
+    sens: drogue, remède ou poison
+explication: >-
+  Le grec φάρμακον nommait toute drogue, salutaire ou malfaisante, le remède
+  comme le poison. Par φαρμακεία, l'emploi des médicaments, le mot est venu au
+  français pour la science, la profession et le lieu où l'on prépare les
+  remèdes.
+famille: [ pharmacien, pharmaceutique ]
+themes: [ santé ]
+tradition:
+  lectures:
+    - texte: La pharmacie est le soin des médicaments.
+      citation: Pharmacia est medicamentorum curatio.
+      sources:
+        - ouvrage: etymologies
+          entree: IV
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: pharmacie
+  - ouvrage: bailly
+    entree: φάρμακον
+  - ouvrage: littre
+    entree: pharmacie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

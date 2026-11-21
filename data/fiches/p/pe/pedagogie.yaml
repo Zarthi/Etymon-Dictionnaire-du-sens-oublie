@@ -1,0 +1,34 @@
+mot: pédagogie
+nature: [ nom féminin ]
+etymologie:
+  - forme: παιδαγωγία
+    langue: grec ancien
+    sens: direction, éducation des enfants
+    premier: true
+  - forme: παιδαγωγός
+    langue: grec ancien
+    sens: qui conduit les enfants
+    elements:
+      - forme: παῖς
+        sens: enfant
+      - forme: ἄγω
+        sens: conduire
+explication: >-
+  En grec, παιδαγωγία disait la direction et l'éducation des enfants ; le
+  παιδαγωγός était l'esclave chargé de les conduire à l'école, puis leur
+  précepteur. Le mot désigne aujourd'hui la science et les méthodes de
+  l'enseignement.
+famille: [ pédagogue, pédagogique ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: bailly
+    entree: παιδαγωγία
+  - ouvrage: bailly
+    entree: παιδαγωγός
+  - ouvrage: tlfi
+    entree: pédagogie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

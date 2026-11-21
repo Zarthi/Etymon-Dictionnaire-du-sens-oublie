@@ -1,0 +1,29 @@
+mot: médecin
+nature: [ nom masculin ]
+etymologie:
+  - forme: médeciner
+    langue: français
+  - forme: medicus
+    langue: latin
+    sens: médecin
+  - forme: mederi
+    langue: latin
+    sens: soigner, traiter
+explication: >-
+  Medicus, « médecin », vient de mederi, « soigner ». Le mot a évincé l'ancien
+  mire ; son sens figuré de guérisseur des âmes est attesté au xviie siècle, et
+  l'usage courant garde le praticien de la médecine.
+famille: [ médecine, médical, médeciner ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: médecin
+  - ouvrage: littre
+    entree: médecin
+  - ouvrage: tlfi
+    entree: remède
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

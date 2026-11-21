@@ -1,0 +1,30 @@
+mot: fille
+nature: [ nom féminin ]
+etymologie:
+  - forme: filia
+    langue: latin
+    sens: enfant du sexe féminin, jeune personne
+explication: >-
+  Fille a d'abord nommé la personne de sexe féminin par son origine, la fille
+  de ; il a pris le sens de jeune personne non mariée, puis celui de femme, avec
+  des emplois particuliers comme fille d'honneur ou fille de joie.
+famille: [ fillette, filleul, belle-fille ]
+themes: [ famille ]
+tradition:
+  lectures:
+    - texte: "La fille, comme le fils, est dite de la famille : les enfants sont les
+        premiers dans l'ordre des naissances."
+      citation: Filius et filia a familia dicti sunt; ipsi enim primi in ordine
+        nascentium existunt.
+      sources:
+        - ouvrage: etymologies
+          entree: IX
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: fille
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

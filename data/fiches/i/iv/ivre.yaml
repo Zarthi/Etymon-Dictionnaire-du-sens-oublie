@@ -1,0 +1,29 @@
+mot: ivre
+nature: [ adjectif ]
+etymologie:
+  - forme: ebrius
+    langue: latin
+    sens: ivre
+explication: >-
+  Le latin ebrius disait l'ivresse du vin ; le mot a pris très tôt le sens
+  figuré de trouble de l'esprit et d'exaltation par une passion. L'usage courant
+  garde les deux, l'ivresse propre et l'exaltation.
+ecartees:
+  - forme: bria
+    langue: latin
+    sens: mesure ; d'où ebrius, celui qui est hors de la mesure
+    selon: [ emile-littre ]
+    raison: "Le Littré la juge peu sûre : bria est probablement un mot étranger et
+      récent."
+famille: [ ivresse, enivrer, ébriété ]
+themes: [ corps, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: ivre
+  - ouvrage: littre
+    entree: ivre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

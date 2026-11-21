@@ -1,0 +1,25 @@
+mot: ménage
+nature: [ nom masculin ]
+etymologie:
+  - forme: mansionaticum
+    langue: bas latin
+    sens: habitation
+  - forme: mansio
+    langue: latin
+    sens: séjour, demeure
+explication: >-
+  Ménage a d'abord nommé la demeure, puis l'administration des biens et les
+  soins du foyer ; il désigne aujourd'hui les tâches domestiques, le couple et
+  son foyer.
+famille: [ ménager, ménagère, déménager ]
+themes: [ maison, famille ]
+sources:
+  - ouvrage: littre
+    entree: ménage
+  - ouvrage: tlfi
+    entree: ménage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

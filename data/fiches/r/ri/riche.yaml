@@ -1,0 +1,21 @@
+mot: riche
+nature: [ adjectif ]
+etymologie:
+  - forme: "*riki"
+    langue: francique
+    sens: puissant
+explication: >-
+  Riche a d'abord dit la puissance et la force, avant de dire la fortune. Le
+  sens de « puissant » est resté dans les premiers textes ; celui de « qui
+  possède des biens » n'est assuré qu'au XIIIe siècle, et le mot s'est étendu à
+  ce qui abonde.
+famille: [ richesse, richement, richissime, enrichir ]
+themes: [ argent, société ]
+sources:
+  - ouvrage: tlfi
+    entree: riche
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

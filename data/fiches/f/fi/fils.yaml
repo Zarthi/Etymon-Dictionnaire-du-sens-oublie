@@ -1,0 +1,30 @@
+mot: fils
+nature: [ nom masculin ]
+etymologie:
+  - forme: filius
+    langue: latin
+    sens: fils, enfant
+explication: >-
+  Le latin filius disait le fils et l'enfant ; le français a gardé la forme du
+  nominatif ancien, fils, employée comme vocatif. Le mot nomme le fils, puis
+  l'homme considéré par son origine, et le Fils de Dieu.
+famille: [ filial, fiston, petit-fils ]
+themes: [ famille ]
+tradition:
+  lectures:
+    - texte: "Le fils, comme la fille, est dit de la famille : les enfants sont les
+        premiers dans l'ordre des naissances."
+      citation: Filius et filia a familia dicti sunt; ipsi enim primi in ordine
+        nascentium existunt.
+      sources:
+        - ouvrage: etymologies
+          entree: IX
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: fils
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

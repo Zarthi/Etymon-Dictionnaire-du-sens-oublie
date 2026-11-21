@@ -1,0 +1,29 @@
+mot: disciple
+nature: [ nom masculin ]
+etymologie:
+  - forme: discipulus
+    langue: latin
+    sens: élève, apprenti
+explication: >-
+  Le latin discipulus nommait l'élève et l'apprenti ; les chrétiens
+  l'appliquèrent aux apôtres. Le mot dit aujourd'hui celui qui reçoit
+  l'enseignement d'un maître ou suit sa doctrine.
+famille: [ discipline, condisciple ]
+themes: [ savoir, religion ]
+tradition:
+  lectures:
+    - texte: Le disciple est dit de la discipline, et la discipline de
+        l'apprentissage.
+      citation: "Discipulus a disciplina dictus: disciplina autem a discendo vocata."
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: disciple
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

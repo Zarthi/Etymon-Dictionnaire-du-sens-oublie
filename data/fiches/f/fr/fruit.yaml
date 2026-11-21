@@ -1,0 +1,34 @@
+mot: fruit
+nature: [ nom masculin ]
+etymologie:
+  - forme: fructus
+    langue: latin
+    sens: usage, jouissance ; rapport, revenu ; fruits de la terre
+  - forme: frui
+    langue: latin
+    sens: jouir de
+explication: >-
+  Fructus disait l'usage et la jouissance, puis le rapport et le revenu, avant
+  de désigner les fruits de la terre. Le français a gardé le sens concret du
+  produit végétal et le sens figuré de résultat ou de profit.
+famille: [ fruitier, fructueux, fructifier ]
+themes: [ nourriture, nature ]
+tradition:
+  lectures:
+    - texte: Le nom de la jouissance semble tiré des fruits sensibles.
+      citation: Unde a sensibilibus fructibus nomen fruitionis derivatum videtur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 11 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth2006.html
+sources:
+  - ouvrage: tlfi
+    entree: fruit
+  - ouvrage: etymologies
+    entree: V
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,36 @@
+mot: soin
+nature: [ nom masculin ]
+etymologie:
+  - forme: soin
+    langue: français
+    sens: souci, préoccupation
+  - langue: germanique
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: "*sunni"
+          sens: souci, peine
+        - forme: somnium
+          langue: latin
+          sens: songe, rêve
+        - forme: sunnis
+          langue: bas latin
+          sens: empêchement, excuse légitime
+explication: >-
+  Le mot est attesté vers 1100 au sens de souci ; il a pris celui d'exactitude,
+  puis de charge et d'attention portée à quelqu'un. Les soins disent aujourd'hui
+  les actes par lesquels on conserve ou rétablit la santé, et l'attention prise
+  à bien faire.
+incertain: true
+famille: [ soigner, soigneux, soigneusement ]
+themes: [ santé, travail ]
+sources:
+  - ouvrage: tlfi
+    entree: soin
+  - ouvrage: littre
+    entree: soin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

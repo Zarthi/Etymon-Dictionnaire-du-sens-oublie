@@ -1,4 +1,3 @@
-- { mot: tâche, statut: a-faire }
 - { mot: tact, statut: a-faire }
 - { mot: talent, statut: a-faire }
 - { mot: tempérament, statut: a-faire }
@@ -16,7 +15,6 @@
 - { mot: tradition, statut: a-faire }
 - { mot: tragédie, statut: a-faire }
 - { mot: tranquille, statut: a-faire }
-- { mot: trésor, statut: a-faire }
 - { mot: tribu, statut: a-faire }
 - { mot: tribut, statut: a-faire }
 - { mot: triomphe, statut: a-faire }

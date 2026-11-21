@@ -1,0 +1,28 @@
+mot: gêne
+nature: [ nom féminin ]
+etymologie:
+  - forme: gehenne
+    langue: ancien français
+    sens: torture pour obtenir un aveu
+  - forme: gehir
+    langue: ancien français
+    sens: avouer, confesser, reconnaître
+  - forme: "*jehhjan"
+    langue: francique
+    sens: dire, avouer
+explication: >-
+  Gehenne nommait la torture qui fait avouer, et gêne en garde la contrainte et
+  le malaise. Le mot a quitté la torture pour la douleur morale, puis la gêne
+  physique, l'embarras et la timidité.
+famille: [ gêner, gênant, gêné ]
+themes: [ corps, émotions ]
+sources:
+  - ouvrage: littre
+    entree: gêne
+  - ouvrage: tlfi
+    entree: gêne
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

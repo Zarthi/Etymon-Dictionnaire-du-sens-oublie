@@ -1,0 +1,31 @@
+mot: maître
+nature: [ nom masculin ]
+etymologie:
+  - forme: magister
+    langue: latin
+    sens: celui qui commande, dirige, conduit ; maître qui enseigne
+explication: >-
+  Magister disait celui qui commande et qui enseigne ; le mot a gardé ces deux
+  autorités, celle du chef et celle de l'enseignant, et s'est étendu aux maîtres
+  d'un art ou d'un métier.
+famille: [ maîtresse, maîtrise, maîtriser ]
+themes: [ savoir, travail ]
+tradition:
+  lectures:
+    - texte: Le maître est le plus grand dans la station, car les Grecs nomment la
+        station steron.
+      citation: 'Magister, maior in statione: nam "steron" Graece statio dicitur.'
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: magister
+  - ouvrage: littre
+    entree: maître
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

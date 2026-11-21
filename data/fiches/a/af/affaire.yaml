@@ -1,0 +1,21 @@
+mot: affaire
+nature: [ nom féminin ]
+etymologie:
+  - forme: affaire
+    langue: français
+    sens: ce que l'on a à faire
+explication: >-
+  Affaire est le verbe faire précédé de à, employé comme nom. Le mot a pris le
+  sens d'entreprise et de procès ; au pluriel, il désigne les objets personnels.
+famille: [ affairé, affairement ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: tlfi
+    entree: affaire
+  - ouvrage: littre
+    entree: affaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

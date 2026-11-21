@@ -1,0 +1,31 @@
+mot: marché
+nature: [ nom masculin ]
+etymologie:
+  - forme: mercatus
+    langue: latin
+    sens: commerce, trafic ; marché public
+  - forme: merx
+    langue: latin
+    sens: marchandise
+explication: >-
+  Mercatus disait le commerce et le lieu où l'on vend. Le mot a gardé le sens du
+  lieu public de vente, puis s'est étendu à l'ensemble des échanges et à la
+  convention entre deux partenaires.
+famille: [ marchander, marchandise, marchand, commerce ]
+themes: [ commerce, argent ]
+tradition:
+  lectures:
+    - texte: Le marché est nommé d'après le commerce.
+      citation: Mercatum autem a conmercio nominatum.
+      sources:
+        - ouvrage: etymologies
+          entree: XV, 45
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: tlfi
+    entree: marché
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

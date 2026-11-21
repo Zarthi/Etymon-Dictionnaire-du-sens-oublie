@@ -1,0 +1,22 @@
+mot: bureau
+nature: [ nom masculin ]
+etymologie:
+  - forme: burel
+    langue: ancien français
+    sens: étoffe grossière de laine brune
+explication: >-
+  Bureau vient de burel, l'étoffe de laine brune qui couvrait la table des
+  comptes. Le mot a désigné cette table, puis la pièce où elle se trouvait, le
+  service administratif et ceux qui le dirigent.
+famille: [ buraliste, bureaucratie, bureaucrate ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: littre
+    entree: bureau
+  - ouvrage: tlfi
+    entree: bureau
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

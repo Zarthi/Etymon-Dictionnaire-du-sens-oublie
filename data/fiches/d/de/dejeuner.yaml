@@ -1,0 +1,25 @@
+mot: déjeuner
+nature: [ verbe ]
+etymologie:
+  - forme: disjejunare
+    langue: bas latin
+    sens: rompre le jeûne
+    elements:
+      - forme: dis-
+        sens: séparation, cessation
+      - forme: jejunare
+        sens: jeûner
+explication: >-
+  Le mot vient du bas latin disjejunare, qui disait littéralement rompre le
+  jeûne. Il a d'abord nommé le repas du matin ; depuis le xixe siècle, il
+  désigne le repas de midi, et le repas du matin s'appelle petit déjeuner.
+famille: [ déjeuneur, petit-déjeuner ]
+themes: [ nourriture ]
+sources:
+  - ouvrage: tlfi
+    entree: déjeuner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

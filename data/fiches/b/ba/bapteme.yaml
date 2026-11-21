@@ -1,0 +1,39 @@
+mot: baptême
+nature: [ nom masculin ]
+etymologie:
+  - forme: baptisma
+    langue: latin ecclésiastique
+    sens: ablution, lavage rituel
+  - forme: βάπτισμα
+    langue: grec ancien
+    sens: immersion, baptême
+  - forme: βαπτίζω
+    langue: grec ancien
+    sens: plonger, immerger
+explication: >-
+  Le mot vient du grec βάπτισμα, l'immersion, et de βαπτίζω, plonger : le rite
+  chrétien a gardé l'image du bain. Le français l'a étendu à toute initiation,
+  et à des cérémonies profanes.
+famille: [ baptismal, baptiser ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: "Baptême se traduit en latin par tinctio, teinture : l'homme y est changé
+        par l'esprit de grâce et devient autre qu'il n'était."
+      citation: Baptismum Graece, Latine tinctio interpretatur; quae idcirco tinctio
+        dicitur, quia ibi homo spiritu gratiae in melius inmutatur, et longe
+        aliud quam erat efficitur.
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: baptême
+  - ouvrage: bailly
+    entree: βάπτισμα
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

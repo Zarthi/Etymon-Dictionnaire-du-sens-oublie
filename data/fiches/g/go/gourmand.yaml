@@ -1,0 +1,30 @@
+mot: gourmand
+nature: [ adjectif ]
+etymologie:
+  - forme: gourmand
+    langue: français
+    sens: qui mange avec avidité et excès
+explication: >-
+  Le mot est attesté en 1354 pour celui qui mange avec avidité ; il qualifie
+  aujourd'hui celui qui aime la bonne nourriture et sait l'apprécier. Son
+  origine reste obscure et son rattachement à gourmet est douteux.
+ecartees:
+  - forme: gourmet
+    langue: français
+    sens: valet
+    selon: [ emile-littre ]
+    raison: "Hypothèse jugée douteuse par le TLFi : gourmet n'a pris le sens de
+      gourmand que bien plus tard."
+incertain: true
+famille: [ gourmandise, gourmander, gourmandiller ]
+themes: [ nourriture ]
+sources:
+  - ouvrage: tlfi
+    entree: gourmand
+  - ouvrage: littre
+    entree: gourmand
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

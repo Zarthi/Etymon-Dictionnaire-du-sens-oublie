@@ -1,0 +1,23 @@
+mot: pension
+nature: [ nom féminin ]
+etymologie:
+  - forme: pensio
+    langue: latin
+    sens: paiement, indemnité ; pesée
+  - forme: pendere
+    langue: latin
+    sens: peser ; payer
+explication: >-
+  Pensio disait proprement une pesée, puis le paiement, car on pesait le métal
+  pour payer. Le mot a désigné la nourriture et le logement qu'on paie dans une
+  pension, puis la somme versée régulièrement.
+famille: [ pensionnaire, pensionnat, pensionner ]
+themes: [ argent, société ]
+sources:
+  - ouvrage: tlfi
+    entree: pension
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

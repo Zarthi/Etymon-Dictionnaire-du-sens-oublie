@@ -1,0 +1,25 @@
+mot: valeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: valorem
+    langue: latin
+    sens: valeur
+  - forme: valere
+    langue: latin
+    sens: être fort, valoir
+explication: >-
+  Valor disait le mérite d'une personne, avant de désigner ce que vaut une chose
+  en argent. Le mot a gardé le sens de qualité morale et celui de prix ; le sens
+  ancien de bravoure au combat a vieilli.
+famille: [ valeureux, valoir, évaluer ]
+themes: [ argent, morale ]
+sources:
+  - ouvrage: littre
+    entree: valeur
+  - ouvrage: tlfi
+    entree: valeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

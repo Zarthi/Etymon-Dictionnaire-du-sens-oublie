@@ -1,0 +1,35 @@
+mot: remède
+nature: [ nom masculin ]
+etymologie:
+  - forme: remedium
+    langue: latin
+    sens: remède, médicament ; préservatif, expédient
+  - forme: mederi
+    langue: latin
+    sens: soigner, traiter
+explication: >-
+  Remedium, dérivé de mederi, « soigner », désignait le médicament et, au
+  figuré, l'expédient. Le mot garde aujourd'hui le moyen thérapeutique et
+  s'étend à ce qui combat un mal moral ou social.
+famille: [ remédier, irrémédiable ]
+themes: [ santé ]
+tradition:
+  lectures:
+    - texte: Puisque tout plaisir apaise la tristesse, les remèdes corporels apaisent
+        la tristesse.
+      citation: Unde, cum omnis delectatio tristitiam mitiget, per huiusmodi remedia
+        corporalia tristitia mitigatur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 38 a. 5 co.
+          url: https://www.corpusthomisticum.org/sth2026.html
+sources:
+  - ouvrage: tlfi
+    entree: remède
+  - ouvrage: littre
+    entree: remède
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

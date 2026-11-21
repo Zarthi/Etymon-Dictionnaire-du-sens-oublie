@@ -1,0 +1,36 @@
+mot: fiancé
+nature: [ nom masculin, nom féminin ]
+etymologie:
+  - forme: fiancé
+    langue: français
+    sens: personne engagée par une promesse de mariage
+  - forme: fiancer
+    langue: français
+    sens: engager sa parole, promettre en mariage
+  - forme: fiance
+    langue: ancien français
+    sens: serment de fidélité, confiance
+  - forme: fier
+    langue: ancien français
+    sens: avoir confiance
+  - forme: "*fidare"
+    langue: latin populaire
+    sens: avoir confiance, se confier
+explication: >-
+  Fiancer, c'était d'abord engager sa parole, à partir de fiance, la confiance :
+  les fiancés se sont promis l'un à l'autre. Le mot a gardé la promesse
+  solennelle de mariage, tandis que fiance est devenu vieilli.
+famille: [ fiancer, fiançailles, fiance ]
+themes: [ famille, société ]
+sources:
+  - ouvrage: tlfi
+    entree: fiance
+  - ouvrage: tlfi
+    entree: fier
+  - ouvrage: tlfi
+    entree: fiancer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,20 @@
+mot: gagner
+nature: [ verbe ]
+etymologie:
+  - forme: "*waidanjan"
+    langue: francique
+    sens: faire paître le bétail
+explication: >-
+  Gagner vient d'un mot francique qui disait « faire paître le bétail » ; la
+  langue d'oïl en a tiré « cultiver », puis « tirer un profit du travail », et
+  enfin « acquérir » en général. Le sens rural ne survit que dans gagnage.
+famille: [ gain, gagnant, gagne-pain, regagner ]
+themes: [ argent, travail ]
+sources:
+  - ouvrage: tlfi
+    entree: gagner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

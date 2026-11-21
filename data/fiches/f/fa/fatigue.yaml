@@ -1,0 +1,27 @@
+mot: fatigue
+nature: [ nom féminin ]
+etymologie:
+  - forme: fatiguer
+    langue: français
+    sens: épuiser, lasser
+  - forme: fatigare
+    langue: latin
+    sens: épuiser, tourmenter
+explication: >-
+  Fatigare disait l'épuisement et le tourment ; le mot a désigné l'action de
+  fatiguer, puis le travail pénible qui cause la diminution des forces. L'usage
+  courant garde la fatigue du corps, l'usure des choses et le découragement.
+famille: [ fatiguer, fatigant, fatigué, défatiguer ]
+themes: [ corps, travail ]
+sources:
+  - ouvrage: tlfi
+    entree: fatigue
+  - ouvrage: tlfi
+    entree: fatiguer
+  - ouvrage: littre
+    entree: fatiguer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: diplôme
+nature: [ nom masculin ]
+etymologie:
+  - forme: diploma
+    langue: latin
+    sens: brevet, pièce officielle
+  - forme: δίπλωμα
+    langue: grec ancien
+    sens: tablette pliée en deux
+explication: >-
+  Diploma était à Rome une pièce officielle, et le grec δίπλωμα une tablette
+  pliée en deux. Le mot désigne aujourd'hui le titre délivré par une université
+  ou un établissement, et, par extension, l'examen qui y conduit.
+famille: [ diplômé, diplomatique ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: tlfi
+    entree: diplôme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

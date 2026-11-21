@@ -1,0 +1,42 @@
+mot: trésor
+nature: [ nom masculin ]
+etymologie:
+  - forme: thesaurus
+    langue: latin
+    sens: trésor caché ; dépôt de richesses
+  - forme: θησαυρός
+    langue: grec ancien
+    sens: dépôt, trésor
+explication: >-
+  Thesaurus, emprunté au grec θησαυρός, nommait un dépôt de choses précieuses,
+  souvent enfoui. Le mot a gardé le sens de richesses accumulées et a pris celui
+  de chose très précieuse, puis de recueil où l'on rassemble un savoir.
+ecartees:
+  - forme: θέω
+    langue: grec ancien
+    sens: courir
+    selon: [ emile-littre ]
+    raison: Le Littré rattache θησαυρός à θέω, « poser », mais le Bailly donne à θέω
+      le sens de « courir » ; le rapprochement est abandonné.
+famille: [ trésorerie, trésorier, thésauriser ]
+themes: [ argent, savoir ]
+tradition:
+  lectures:
+    - texte: Le trésor, selon le sens propre du grec, est nommé d'après la position,
+        c'est-à-dire d'après ce qui a été déposé et mis en réserve.
+      citation: Thesaurum iuxta Graecam proprietatem APO TES THESEOS, a positione, hoc
+        est a reposito, nominatur.
+      sources:
+        - ouvrage: etymologies
+          entree: XVI, 6
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+sources:
+  - ouvrage: tlfi
+    entree: trésor
+  - ouvrage: bailly
+    entree: θησαυρός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

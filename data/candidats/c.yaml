@@ -8,7 +8,6 @@
 - { mot: catholique, statut: a-faire }
 - { mot: cause, statut: a-faire }
 - { mot: célèbre, statut: a-faire }
-- { mot: célibat, statut: a-faire }
 - { mot: censure, statut: a-faire }
 - { mot: cérémonie, statut: a-faire }
 - { mot: chaos, statut: a-faire }
@@ -23,13 +22,10 @@
 - { mot: ciel, statut: a-faire }
 - { mot: cimetière, statut: a-faire }
 - { mot: clergé, statut: a-faire }
-- { mot: client, statut: a-faire }
 - { mot: colonie, statut: a-faire }
 - { mot: comédie, statut: a-faire }
-- { mot: commerce, statut: a-faire }
 - { mot: commun, statut: a-faire }
 - { mot: communion, statut: a-faire }
-- { mot: compagnon, statut: a-faire }
 - { mot: compétence, statut: a-faire }
 - { mot: complice, statut: a-faire }
 - { mot: compliment, statut: a-faire }
@@ -46,7 +42,6 @@
 - { mot: contrat, statut: a-faire }
 - { mot: contrition, statut: a-faire }
 - { mot: conversion, statut: a-faire }
-- { mot: copain, statut: a-faire }
 - { mot: corrompre, statut: a-faire }
 - { mot: coutume, statut: a-faire }
 - { mot: créer, statut: a-faire }

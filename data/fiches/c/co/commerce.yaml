@@ -1,0 +1,37 @@
+mot: commerce
+nature: [ nom masculin ]
+etymologie:
+  - forme: commercium
+    langue: latin
+    sens: négoce, trafic ; relations entre les hommes
+    elements:
+      - forme: cum
+        sens: avec
+      - forme: merx
+        sens: marchandise
+explication: >-
+  Commercium nommait le négoce et, plus largement, les rapports entre les
+  hommes. Le français a d'abord dit l'échange des marchandises, puis l'ensemble
+  des activités d'achat et de vente ; le sens de relations humaines ne subsiste
+  que dans la langue littéraire.
+famille: [ commerçant, commercial, marchand, marché ]
+themes: [ commerce, argent ]
+tradition:
+  lectures:
+    - texte: Le commerce tire son nom des marchandises, que ce mot désigne comme les
+        choses mises en vente.
+      citation: Commercium dictum a mercibus, quo nomine res venales appellamus.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 35
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: commerce
+  - ouvrage: littre
+    entree: commerce
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,19 @@
+mot: fraternité
+nature: [ nom féminin ]
+etymologie:
+  - forme: fraternitas
+    langue: latin
+    sens: confraternité, relations entre frères
+explication: >-
+  Le latin fraternitas nommait le lien entre frères ; le mot a étendu ce lien à
+  l'amitié et à la solidarité entre les hommes.
+famille: [ fraternel, confraternité, frère ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: fraternité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

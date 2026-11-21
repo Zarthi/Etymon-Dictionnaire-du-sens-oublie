@@ -1,0 +1,28 @@
+mot: dégoût
+nature: [ nom masculin ]
+etymologie:
+  - forme: dégoûter
+    langue: français
+    sens: inspirer du dégoût
+  - forme: goût
+    langue: français
+    sens: saveur
+explication: >-
+  Dégoût est le déverbal de dégoûter, formé sur goût avec le préfixe dé-. Il a
+  nommé d'abord le manque d'appétit (1595), puis, avant 1630, le déplaisir et le
+  chagrin, et en 1636 l'aversion. L'usage courant garde l'aversion et la
+  répugnance pour un aliment, et le manque d'appétit.
+famille: [ dégoûter, dégoûtant, dégoûté ]
+themes: [ émotions, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: dégoût
+  - ouvrage: tlfi
+    entree: dégoûter
+  - ouvrage: tlfi
+    entree: goût
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

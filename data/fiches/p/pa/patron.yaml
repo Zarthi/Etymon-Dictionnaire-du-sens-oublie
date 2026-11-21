@@ -1,0 +1,37 @@
+mot: patron
+nature: [ nom ]
+etymologie:
+  - forme: patronus
+    langue: latin
+    sens: protecteur, défenseur, ancien maître d'un affranchi
+    premier: true
+  - forme: pater
+    langue: latin
+    sens: père
+explication: >-
+  Patronus nommait le protecteur, le défenseur, l'ancien maître d'un affranchi ;
+  le mot vient de pater, père. Du protecteur, le sens est passé au guide, puis
+  au modèle dessiné qui sert à découper ou à coudre, et le mot nomme aussi le
+  saint patron et le chef d'entreprise.
+famille: [ patronage, patronal, patronner ]
+themes: [ travail, société ]
+tradition:
+  lectures:
+    - texte: Les patrons sont dits des pères, parce qu'ils témoignent à leurs clients
+        l'affection de pères qui les gouvernent.
+      citation: Patroni a patribus dicti sunt, quod huiusmodi affectum clientibus
+        exhibeant ut quasi patres illos regant.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: patron
+  - ouvrage: littre
+    entree: patron
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
