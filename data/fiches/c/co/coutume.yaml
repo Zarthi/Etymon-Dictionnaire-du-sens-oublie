@@ -1,0 +1,29 @@
+mot: coutume
+nature: [ nom féminin ]
+etymologie:
+  - forme: consuetudinem
+    langue: latin
+    sens: habitude, usage
+explication: >-
+  Le mot a d'abord dit la manière de se comporter, puis l'usage établi dans un
+  groupe. Il désigne aujourd'hui le droit non écrit et les usages sociaux.
+famille: [ coutumier, accoutumer, coutumièrement ]
+renvois: [ moeurs ]
+themes: [ société, droit ]
+tradition:
+  lectures:
+    - texte: La coutume charnelle est indomptée, et l'esprit la combat.
+      citation: Dictum est enim hoc propter indomitam carnalem consuetudinem, adversus
+        quam spiritus concupiscit
+      sources:
+        - ouvrage: la-doctrine-chretienne
+          entree: I
+          url: https://la.wikisource.org/wiki/De_Doctrina_Christiana/I
+sources:
+  - ouvrage: tlfi
+    entree: coutume
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

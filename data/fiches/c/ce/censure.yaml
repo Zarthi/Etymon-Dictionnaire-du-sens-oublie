@@ -1,0 +1,37 @@
+mot: censure
+nature: [ nom féminin ]
+etymologie:
+  - forme: censura
+    langue: latin
+    sens: charge, dignité de censeur
+  - forme: census
+    langue: latin
+    sens: recensement
+explication: >-
+  Le censeur romain jugeait des patrimoines et contrôlait les mœurs. Censura a
+  désigné sa charge, puis le jugement et l'examen ; le mot s'est dit du blâme de
+  l'Église et, à partir de 1790, du contrôle des publications.
+famille: [ censeur, censurer, censurable ]
+themes: [ société, politique ]
+tradition:
+  lectures:
+    - texte: "La justice tient la censure, la libéralité la bonté : c'est la sentence
+        d'Ambroise que rapporte la Somme."
+      citation: Unde et Ambrosius dicit, in I de Offic., quod iustitia censuram tenet,
+        liberalitas bonitatem.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 117 a. 6 arg. 2
+          url: https://www.corpusthomisticum.org/sth3109.html
+sources:
+  - ouvrage: tlfi
+    entree: censure
+  - ouvrage: tlfi
+    entree: censeur
+  - ouvrage: littre
+    entree: censure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

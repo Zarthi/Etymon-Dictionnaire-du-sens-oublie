@@ -1,0 +1,28 @@
+mot: idée
+nature: [ nom féminin ]
+etymologie:
+  - forme: idée
+    langue: français
+  - forme: idea
+    langue: latin
+    sens: idée, type de choses ; forme visible
+  - forme: ἰδέα
+    langue: grec ancien
+    sens: forme visible, aspect ; forme distinctive, espèce
+explication: >-
+  Le grec ἰδέα disait l'aspect, la forme que l'on voit ; Platon en a fait le
+  type intelligible, et le français y voit aujourd'hui une représentation de
+  l'esprit, parfois une opinion.
+famille: [ idéal, idéologie, idéogramme ]
+renvois: [ image, opinion ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: littre
+    entree: idée
+  - ouvrage: tlfi
+    entree: idée
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

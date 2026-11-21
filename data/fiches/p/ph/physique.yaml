@@ -1,0 +1,39 @@
+mot: physique
+nature: [ adjectif ]
+etymologie:
+  - forme: physica
+    langue: latin
+    sens: la physique, les sciences naturelles
+  - forme: φυσική
+    langue: grec ancien
+    sens: étude de la nature
+  - forme: φύσις
+    langue: grec ancien
+    sens: nature
+explication: >-
+  Le grec φύσις disait la nature et la naissance. Physique a d'abord désigné la
+  médecine, puis la connaissance des choses de la nature, avant de se
+  spécialiser dans la science des corps et de la matière.
+famille: [ physicien, physiquement, physiologie, métaphysique ]
+renvois: [ matiere ]
+themes: [ savoir, nature ]
+tradition:
+  lectures:
+    - texte: Les physiciens sont dits ainsi parce qu'ils traitent des natures.
+      citation: Physici dicti, quia de naturis tractant.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 4
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: physique
+  - ouvrage: bailly
+    entree: φυσικός
+  - ouvrage: bailly
+    entree: φύσις
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

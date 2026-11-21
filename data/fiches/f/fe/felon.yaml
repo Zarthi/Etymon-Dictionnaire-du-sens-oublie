@@ -1,0 +1,31 @@
+mot: félon
+nature: [ adjectif ]
+etymologie:
+  - forme: felo
+    langue: bas latin
+    sens: déloyal, félon
+  - forme: "*fillo"
+    langue: francique
+    sens: frapper, maltraiter
+explication: >-
+  Félon désignait celui qui manquait à la foi jurée envers son seigneur. Le mot
+  a gardé le sens de déloyal, et l'idée de foi rompue reste présente.
+ecartees:
+  - forme: fel
+    langue: latin
+    sens: bile
+    raison: Le Littré l'indique, mais le français félon ne descend pas de fel, et le
+      sens de « bile » ne rend pas compte de « déloyal ».
+incertain: true
+famille: [ félonie, félonne ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: littre
+    entree: félon
+  - ouvrage: tlfi
+    entree: félon
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,30 @@
+mot: phénomène
+nature: [ nom masculin ]
+etymologie:
+  - forme: φαινόμενα
+    langue: grec ancien
+    sens: phénomènes célestes
+  - forme: φαινόμενον
+    langue: grec ancien
+    sens: ce qui apparaît
+  - forme: φαίνω
+    langue: grec ancien
+    sens: faire briller, faire paraître
+explication: >-
+  Le mot vient du grec φαινόμενα, « phénomènes célestes », titre d'un poème
+  d'Aratos : c'est le pluriel de φαινόμενον, « ce qui apparaît », dérivé de
+  φαίνω, « faire briller ». De là les faits observables, puis, avec Kant, ce qui
+  se manifeste à la conscience ; l'usage courant y ajoute l'extraordinaire.
+famille: [ phénoménal, phénoménologie, épiphénomène ]
+renvois: [ figure ]
+themes: [ savoir, nature ]
+sources:
+  - ouvrage: tlfi
+    entree: phénomène
+  - ouvrage: bailly
+    entree: φαίνω
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

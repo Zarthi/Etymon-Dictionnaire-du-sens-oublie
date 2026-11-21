@@ -1,0 +1,34 @@
+mot: catholique
+nature: [ adjectif ]
+etymologie:
+  - forme: catholicus
+    langue: latin
+    sens: universel
+  - forme: καθολικός
+    langue: grec ancien
+    sens: général, universel
+explication: >-
+  Le grec καθολικός voulait dire « général, universel » ; l'expression ἡ
+  καθολικὴ ἐκκλησία, « l'Église universelle », a donné au latin catholicus son
+  sens chrétien. Le mot a désigné en français l'Église romaine, puis ses
+  fidèles, tandis que le sens général s'est effacé.
+renvois: [ chretien ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Catholicus y est lu comme « universel » ou « général ».
+      citation: Catholicus universalis sive generalis interpretatur.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 14, 4
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: catholique
+  - ouvrage: bailly
+    entree: καθολικός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

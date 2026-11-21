@@ -1,0 +1,26 @@
+mot: détester
+nature: [ verbe ]
+etymologie:
+  - forme: detestari
+    langue: latin
+    sens: détourner en prenant les dieux à témoin, exécrer
+    elements:
+      - forme: de-
+        sens: en détournant
+      - forme: testari
+        sens: prendre à témoin
+explication: >-
+  Détester, c'était d'abord détourner un mal en prenant les dieux à témoin. Le
+  mot a gardé la force du rejet, mais il ne dit plus le geste religieux qui le
+  fondait.
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: détester
+  - ouvrage: tlfi
+    entree: détester
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

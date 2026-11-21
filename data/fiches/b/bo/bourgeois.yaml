@@ -1,0 +1,25 @@
+mot: bourgeois
+nature: [ nom ]
+etymologie:
+  - forme: burgensis
+    langue: bas latin
+    sens: de bourg
+  - forme: burgus
+    langue: bas latin
+    sens: bourg
+explication: >-
+  Bourgeois a d'abord désigné l'habitant d'un bourg, d'une ville affranchie. Dès
+  1635, le mot prend un sens péjoratif ; il a ensuite désigné la classe
+  intermédiaire entre nobles et paysans, puis l'homme attaché à son confort.
+famille: [ bourgeoisie, bourgeoisement, petit-bourgeois ]
+themes: [ société, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: bourgeois
+  - ouvrage: littre
+    entree: bourgeois
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

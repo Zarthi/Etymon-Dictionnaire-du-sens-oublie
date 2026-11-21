@@ -1,0 +1,36 @@
+mot: opprimer
+nature: [ verbe ]
+etymologie:
+  - forme: opprimere
+    langue: latin
+    sens: presser contre, accabler
+    elements:
+      - forme: ob
+        sens: contre
+      - forme: premere
+        sens: presser
+explication: >-
+  Opprimer, c'est d'abord presser et accabler. Le mot a pris le sens de
+  soumettre par la violence et d'empêcher de parler ou de se manifester.
+famille: [ oppression, oppresseur, oppressif ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: Le frère réduit à la pauvreté ne doit pas être opprimé comme un esclave,
+        mais traité comme un mercenaire ou un colon.
+      citation: si paupertate compulsus vendiderit se tibi frater tuus, non eum
+        opprimes servitute famulorum, sed quasi mercenarius et colonus erit
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 105 a. 4 ad 1
+          url: https://www.corpusthomisticum.org/sth2098.html
+sources:
+  - ouvrage: tlfi
+    entree: opprimer
+  - ouvrage: littre
+    entree: opprimer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

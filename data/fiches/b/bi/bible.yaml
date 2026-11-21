@@ -1,0 +1,43 @@
+mot: bible
+nature: [ nom féminin ]
+etymologie:
+  - forme: biblia
+    langue: latin ecclésiastique
+    sens: livres sacrés
+  - forme: βιβλία
+    langue: grec ancien
+    sens: les livres
+  - forme: βιβλίον
+    langue: grec ancien
+    sens: papier à écrire, lettre, livre
+  - forme: βίβλος
+    langue: grec ancien
+    sens: écorce intérieure ou moelle du papyrus
+explication: >-
+  Le grec βίβλος désignait l'écorce du papyrus qui servait à écrire ; βιβλίον,
+  « livre », et son pluriel βιβλία, « les livres », ont donné le latin biblia,
+  « livres sacrés ». Le mot a nommé en français la Sainte Écriture, puis tout
+  livre de référence.
+renvois: [ dogme ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Le grec biblion y est lu comme « livres », et theke comme « dépôt » : la
+        bibliothèque est le lieu où on les dépose."
+      citation: Nam BIBLION librorum, THEKE repositio interpretatur.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: bible
+  - ouvrage: bailly
+    entree: βιβλίον
+  - ouvrage: littre
+    entree: bible
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

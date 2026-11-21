@@ -1,0 +1,27 @@
+mot: instituer
+nature: [ verbe ]
+etymologie:
+  - forme: instituere
+    langue: latin
+    sens: établir
+    elements:
+      - forme: in
+        sens: dans
+      - forme: statuere
+        sens: établir
+explication: >-
+  Instituer, c'est établir quelque chose de durable : le latin instituere disait
+  à la fois placer, fonder et organiser. Le mot a gardé ce sens, et désigne
+  aussi l'acte de désigner un héritier.
+famille: [ institution, instituteur, institut ]
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: instituer
+  - ouvrage: littre
+    entree: instituer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

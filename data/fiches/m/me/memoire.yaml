@@ -1,0 +1,25 @@
+mot: mémoire
+nature: [ nom féminin ]
+etymologie:
+  - forme: mémoire
+    langue: français
+  - forme: memoria
+    langue: latin
+    sens: mémoire, souvenir ; témoignage du passé
+explication: >-
+  Le latin memoria disait la faculté de se souvenir et le souvenir lui-même. Le
+  français a distingué la mémoire, faculté, des mémoires, récit, et le mot dit
+  aujourd'hui aussi la capacité d'un ordinateur.
+famille: [ mémorial, mémoriser, mémorable ]
+renvois: [ songe ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: littre
+    entree: mémoire
+  - ouvrage: tlfi
+    entree: mémoire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,31 @@
+mot: solide
+nature: [ adjectif ]
+etymologie:
+  - forme: solidus
+    langue: latin
+    sens: solide, massif
+explication: >-
+  Le latin solidus disait ce qui est massif et consistant. Le mot a gardé ce
+  sens matériel, puis a dit ce qui résiste et ce qui est bien établi : un
+  solide, une solide réputation.
+famille: [ solidité, solidifier, solidaire, solidarité, consolider ]
+renvois: [ substance, matiere ]
+themes: [ nature, savoir ]
+tradition:
+  lectures:
+    - texte: Tout ce qui soutient quelque chose est dit solum, comme solide.
+      citation: Sed et solum dicitur omne quod aliquid sustinet, quasi solidum.
+      sources:
+        - ouvrage: etymologies
+          entree: XI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: tlfi
+    entree: solide
+  - ouvrage: littre
+    entree: solide
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

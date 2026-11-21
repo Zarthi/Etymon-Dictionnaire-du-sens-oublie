@@ -1,0 +1,31 @@
+mot: hostie
+nature: [ nom féminin ]
+etymologie:
+  - forme: hostia
+    langue: latin
+    sens: victime, victime expiatoire
+explication: >-
+  Le latin hostia désignait la victime offerte aux dieux ; les chrétiens en ont
+  fait le nom de la victime eucharistique. Le mot dit aujourd'hui le pain
+  consacré à la messe, et, en poésie, toute victime offerte.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Les hosties étaient chez les anciens les sacrifices offerts avant de
+        partir contre l'ennemi.
+      citation: Hostiae apud veteres dicebantur sacrificia quae fiebant antequam ad
+        hostem pergerent.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 33
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: hostie
+  - ouvrage: littre
+    entree: hostie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

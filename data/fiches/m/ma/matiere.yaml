@@ -1,0 +1,34 @@
+mot: matière
+nature: [ nom féminin ]
+etymologie:
+  - forme: materia
+    langue: latin
+    sens: matière, substance
+explication: >-
+  Le latin materia disait la substance dont une chose est faite. Le mot a gardé
+  ce sens, puis a désigné le sujet d'un ouvrage ou d'un enseignement, et, en
+  philosophie, ce qui s'oppose à la forme.
+famille: [ matériel, matériellement, immatériel, matérialisme ]
+renvois: [ forme ]
+themes: [ nature, savoir ]
+tradition:
+  lectures:
+    - texte: Dieu a fait le monde d'une matière informe, qu'il a faite de presque
+        rien.
+      citation: tu enim, domine, fecisti mundum de materia informi, quam fecisti de
+        nulla re paene nullam rem, unde faceres magna, quae miramur filii
+        hominum.
+      sources:
+        - ouvrage: confessions
+          entree: XII
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Duodecimus
+sources:
+  - ouvrage: tlfi
+    entree: matière
+  - ouvrage: littre
+    entree: matière
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

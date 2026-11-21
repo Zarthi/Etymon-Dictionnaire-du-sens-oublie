@@ -1,0 +1,20 @@
+mot: quiétude
+nature: [ nom féminin ]
+etymologie:
+  - forme: quietudo
+    langue: latin
+    sens: repos
+explication: >-
+  Quiétude est le repos de l'âme, celui que cherche le contemplatif. Le mot a
+  gardé ce calme intérieur, mais il est devenu rare et littéraire.
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: quiétude
+  - ouvrage: tlfi
+    entree: quiétude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

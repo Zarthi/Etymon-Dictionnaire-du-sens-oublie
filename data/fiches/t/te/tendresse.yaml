@@ -1,0 +1,25 @@
+mot: tendresse
+nature: [ nom féminin ]
+etymologie:
+  - forme: tendre
+    langue: français
+    sens: tendre, délicat
+  - forme: tener
+    langue: latin
+    sens: tendre, délicat
+explication: >-
+  Tendresse est d'abord la tendreté, la qualité de ce qui est tendre. Le mot a
+  quitté le corps pour le cœur : il dit aujourd'hui l'affection qui s'attendrit.
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: tendresse
+  - ouvrage: tlfi
+    entree: tendresse
+  - ouvrage: littre
+    entree: tendre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

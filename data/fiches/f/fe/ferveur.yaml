@@ -1,0 +1,29 @@
+mot: ferveur
+nature: [ nom féminin ]
+etymologie:
+  - forme: fervor
+    langue: latin
+    sens: bouillonnement, chaleur, ardeur
+explication: >-
+  Ferveur est d'abord un bouillonnement, une chaleur qui monte. Le mot a
+  transporté cette chaleur dans l'âme : il dit aujourd'hui l'ardeur du
+  sentiment, non celle du feu.
+themes: [ émotions, religion ]
+tradition:
+  lectures:
+    - texte: "La ferveur appartient à l'amour : elle est l'ardeur qui le porte."
+      citation: Fervor enim, sicut supra dictum est, pertinet ad amorem.
+      sources:
+        - ouvrage: somme-theologique
+          entree: I-II, q. 48, a. 2
+          url: https://www.corpusthomisticum.org/sth2040.html
+sources:
+  - ouvrage: littre
+    entree: ferveur
+  - ouvrage: tlfi
+    entree: ferveur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

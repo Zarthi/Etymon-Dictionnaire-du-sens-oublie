@@ -1,0 +1,35 @@
+mot: candidat
+nature: [ nom masculin ]
+etymologie:
+  - forme: candidatus
+    langue: latin
+    sens: vêtu de blanc
+  - forme: candidus
+    langue: latin
+    sens: blanc
+explication: >-
+  À Rome, les postulants aux charges publiques portaient la toge blanche, la
+  toga candida. Candidat a désigné celui qui brigue une charge, puis toute
+  personne qui se présente à une élection ou à un examen.
+famille: [ candidature, candide, candeur ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: La toge blanche, blanchie à la craie, était celle que portaient les
+        candidats, c'est-à-dire ceux qui briguaient une magistrature.
+      citation: Toga candida eademque cretata in qua candidati, id est magistratum
+        petentes, ambiebant, addita creta quo candidior insigniorque esset.
+      sources:
+        - ouvrage: etymologies
+          entree: XIX, 6
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XIX
+sources:
+  - ouvrage: littre
+    entree: candidat
+  - ouvrage: tlfi
+    entree: candidat
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

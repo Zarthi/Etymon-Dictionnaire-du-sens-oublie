@@ -1,0 +1,25 @@
+mot: horizon
+nature: [ nom masculin ]
+etymologie:
+  - forme: horizon
+    langue: latin
+    sens: borne de la vue, horizon
+  - forme: ὁρίζων
+    langue: grec ancien
+    sens: qui borne, limite
+explication: >-
+  Le latin horizon, emprunté au grec ὁρίζων, « qui borne », a d'abord désigné la
+  ligne où le ciel et la terre se joignent. Le mot s'est ensuite étendu à
+  l'étendue visible, puis, au figuré, à ce qui s'ouvre à la pensée.
+famille: [ horizontal, horizontalité ]
+themes: [ nature, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: horizon
+  - ouvrage: bailly
+    entree: ὁρίζων
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

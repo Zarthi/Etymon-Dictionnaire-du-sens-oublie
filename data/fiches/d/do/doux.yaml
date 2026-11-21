@@ -1,0 +1,31 @@
+mot: doux
+nature: [ adjectif ]
+etymologie:
+  - forme: dulcis
+    langue: latin
+    sens: doux, sucré, agréable
+explication: >-
+  Doux a d'abord dit ce qui flatte le goût. Le mot a gagné l'ouïe, le toucher,
+  puis le caractère : il dit aujourd'hui la bienveillance autant que la saveur.
+renvois: [ tendresse ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Le sang est dit suavis parce qu'il est doux ; les hommes chez qui le sang
+        domine sont doux et bienveillants.
+      citation: Sanguis Latine vocatus quod suavis sit, unde et homines, quibus
+        dominatur sanguis, dulces et blandi sunt.
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 5
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: littre
+    entree: doux
+  - ouvrage: tlfi
+    entree: doux
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

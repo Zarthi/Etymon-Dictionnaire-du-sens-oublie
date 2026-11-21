@@ -1,0 +1,24 @@
+mot: silence
+nature: [ nom masculin ]
+etymologie:
+  - forme: silence
+    langue: français
+  - forme: silentium
+    langue: latin
+    sens: silence
+explication: >-
+  Le latin silentium disait le fait de se taire ; le silence a d'abord été
+  l'absence de parole, puis l'absence de bruit. Le mot garde ce double sens, du
+  fait de se taire à l'absence de bruit.
+famille: [ silencieux, silencieusement ]
+themes: [ parole, esprit ]
+sources:
+  - ouvrage: littre
+    entree: silence
+  - ouvrage: tlfi
+    entree: silence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,33 @@
+mot: bonheur
+nature: [ nom masculin ]
+etymologie:
+  - forme: bonheur
+    langue: français
+    sens: bonne chance, heureux hasard
+    elements:
+      - forme: bon
+        sens: bon
+      - forme: heur
+        sens: chance, sort, destinée
+    premier: true
+  - forme: heur
+    langue: français
+    sens: sort, destinée, chance
+  - forme: augurium
+    langue: latin
+    sens: augure, présage
+explication: >-
+  Bonheur a d'abord dit la bonne chance, le présage favorable. Le mot a glissé
+  du hasard heureux à l'état durable où l'on se dit heureux.
+renvois: [ jovial ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: bonheur
+  - ouvrage: tlfi
+    entree: bonheur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

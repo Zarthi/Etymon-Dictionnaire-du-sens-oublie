@@ -1,0 +1,26 @@
+mot: nostalgie
+nature: [ nom féminin ]
+etymologie:
+  - forme: nostalgia
+    langue: latin
+    sens: mal du retour
+    elements:
+      - forme: νόστος
+        sens: retour
+      - forme: ἄλγος
+        sens: douleur
+explication: >-
+  Nostalgie a été forgée pour nommer le mal qui saisissait les exilés. Le mot a
+  quitté la médecine pour le regret de tout ce qui est perdu : un lieu, un
+  temps, un être.
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: nostalgie
+  - ouvrage: tlfi
+    entree: nostalgie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

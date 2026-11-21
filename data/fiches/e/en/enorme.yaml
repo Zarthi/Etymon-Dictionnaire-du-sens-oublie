@@ -1,0 +1,28 @@
+mot: énorme
+nature: [ adjectif ]
+etymologie:
+  - forme: enormis
+    langue: latin
+    sens: hors de la norme
+    elements:
+      - forme: e-
+        sens: hors de
+      - forme: norma
+        sens: règle
+explication: >-
+  enormis disait proprement « hors de la norme » : en français, d'abord qui
+  dépasse toute mesure (1340), avant les dimensions considérables (1547). La
+  règle dont le mot disait l'écart s'est perdue ; reste la grandeur, et au
+  figuré ce qui sort de l'ordinaire, en mal comme, familier, en bien.
+famille: [ énormément, énormité ]
+themes: [ quantité ]
+sources:
+  - ouvrage: tlfi
+    entree: énorme
+  - ouvrage: littre
+    entree: énorme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

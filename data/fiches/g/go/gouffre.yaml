@@ -1,0 +1,27 @@
+mot: gouffre
+nature: [ nom masculin ]
+etymologie:
+  - forme: colfus
+    langue: latin populaire
+    sens: golfe, creux
+  - forme: κόλπος
+    langue: grec ancien
+    sens: pli, creux, sein
+explication: >-
+  Gouffre est le doublet de golfe : le grec κόλπος, pli ou creux, désignait le
+  sein et le repli de la côte. Le français en a fait le trou marin, puis le trou
+  sans fond, et, au figuré, ce qui engloutit.
+famille: [ engouffrer, golfe ]
+themes: [ nature ]
+sources:
+  - ouvrage: littre
+    entree: gouffre
+  - ouvrage: tlfi
+    entree: gouffre
+  - ouvrage: bailly
+    entree: κόλπος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

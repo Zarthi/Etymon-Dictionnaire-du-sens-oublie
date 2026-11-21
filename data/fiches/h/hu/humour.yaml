@@ -1,0 +1,31 @@
+mot: humour
+nature: [ nom masculin ]
+etymologie:
+  - forme: humour
+    langue: français
+  - forme: humour
+    langue: anglais
+    sens: tempérament, inclination ; gaieté, aptitude à voir le comique
+  - forme: humeur
+    langue: ancien français
+    sens: humeur, tempérament
+  - forme: humor
+    langue: latin
+    sens: liquide, humeur
+explication: >-
+  L'humour est un aller-retour : l'ancien français humeur est passé en anglais,
+  où il a pris le sens de tempérament enjoué, avant de revenir en français. Le
+  mot disait d'abord un liquide du corps.
+famille: [ humeur, humoral, humoriste ]
+renvois: [ subtil ]
+themes: [ émotions, esprit ]
+sources:
+  - ouvrage: littre
+    entree: humour
+  - ouvrage: tlfi
+    entree: humour
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

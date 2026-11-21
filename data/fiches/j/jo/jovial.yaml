@@ -1,0 +1,25 @@
+mot: jovial
+nature: [ adjectif ]
+etymologie:
+  - forme: jovialis
+    langue: latin
+    sens: de Jupiter
+    premier: true
+  - forme: Jovis
+    langue: latin
+    sens: Jupiter
+explication: >-
+  Jovial veut dire « de Jupiter ». L'astrologie ancienne faisait de Jupiter une
+  planète bienfaisante, qui donnait la joie. Le mot a gardé la gaieté, perdu le
+  ciel et le dieu.
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: jovial
+  - ouvrage: tlfi
+    entree: jovial
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

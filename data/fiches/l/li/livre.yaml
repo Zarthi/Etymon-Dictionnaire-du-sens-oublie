@@ -1,0 +1,24 @@
+mot: livre
+nature: [ nom masculin ]
+etymologie:
+  - forme: livre
+    langue: français
+  - forme: liber
+    langue: latin
+    sens: pellicule intérieure de l'écorce, support d'écriture
+explication: >-
+  Le latin liber disait la fine pellicule de l'écorce sur laquelle on écrivait.
+  Le mot a désigné le support, puis l'ouvrage ; le sens de l'écorce s'est perdu.
+famille: [ librairie, libraire, livret ]
+renvois: [ journal, histoire ]
+themes: [ savoir, parole ]
+sources:
+  - ouvrage: littre
+    entree: livre
+  - ouvrage: tlfi
+    entree: livre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

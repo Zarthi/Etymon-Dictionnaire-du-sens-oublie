@@ -1,0 +1,22 @@
+mot: mœurs
+nature: [ nom féminin ]
+etymologie:
+  - forme: mores
+    langue: latin
+    sens: habitudes, coutumes
+explication: >-
+  Mœurs désignait les usages et les habitudes d'un peuple, puis les règles
+  morales qui les commandent. Le mot s'emploie aujourd'hui surtout pour les
+  comportements jugés selon le bien et le mal.
+famille: [ moral, morale, morigéner ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: mœurs
+  - ouvrage: littre
+    entree: mœurs
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

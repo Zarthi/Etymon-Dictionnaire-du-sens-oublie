@@ -1,0 +1,32 @@
+mot: lumière
+nature: [ nom féminin ]
+etymologie:
+  - forme: luminaria
+    langue: bas latin
+    sens: lumière, astre
+explication: >-
+  Lumière vient du bas-latin luminaria, les astres qui éclairent. Le mot a gardé
+  la clarté matérielle, puis a dit ce qui éclaire l'esprit : la raison, les
+  connaissances, les lumières d'un siècle.
+famille: [ luminaire, luminosité, lumineux, illuminer ]
+renvois: [ ombre ]
+themes: [ nature, savoir ]
+tradition:
+  lectures:
+    - texte: Les deux yeux sont comme les deux luminaires du soleil et de la lune.
+      citation: Caput namque ad coelum refertur, in quo sunt duo oculi, quasi duo
+        luminaria solis et lunae.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: lumière
+  - ouvrage: tlfi
+    entree: lumière
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

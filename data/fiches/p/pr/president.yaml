@@ -1,0 +1,25 @@
+mot: président
+nature: [ nom masculin ]
+etymologie:
+  - forme: praesidens
+    langue: latin
+    sens: celui qui préside
+  - forme: praesidere
+    langue: latin
+    sens: présider
+explication: >-
+  Président a d'abord désigné celui qui préside une assemblée. Le mot s'est
+  étendu au chef d'une institution, puis au chef de l'État.
+famille: [ présidence, présidentiel, présider ]
+renvois: [ candidat ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: littre
+    entree: président
+  - ouvrage: tlfi
+    entree: président
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

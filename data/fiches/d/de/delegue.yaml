@@ -1,0 +1,21 @@
+mot: délégué
+nature: [ nom masculin ]
+etymologie:
+  - forme: delegare
+    langue: latin
+    sens: envoyer en mission
+explication: >-
+  Délégué est le participe de déléguer : celui à qui une mission est confiée. Le
+  mot désigne aujourd'hui celui qui représente un groupe ou une autorité.
+famille: [ déléguer, délégation, délégataire ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: tlfi
+    entree: déléguer
+  - ouvrage: tlfi
+    entree: délégué
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

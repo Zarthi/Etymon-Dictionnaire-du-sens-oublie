@@ -1,0 +1,39 @@
+mot: contrat
+nature: [ nom masculin ]
+etymologie:
+  - forme: contractus
+    langue: latin
+    sens: convention, pacte
+  - forme: contrahere
+    langue: latin
+    sens: tirer ensemble, resserrer
+    elements:
+      - forme: cum
+        sens: ensemble
+      - forme: trahere
+        sens: tirer
+explication: >-
+  Le contrat est un lien : contrahere disait l'action de resserrer. Le mot a
+  désigné l'accord qui oblige, puis l'acte qui le constate.
+famille: [ contracter, contractuel, contractualiser ]
+renvois: [ concurrence ]
+themes: [ droit, société ]
+tradition:
+  lectures:
+    - texte: "Le contrat est un pacte : le magicien qui agit par un pacte avec le
+        démon fait comme un contrat privé."
+      citation: unde cum magus aliquid facit per pactum initum cum Daemone, hoc fit
+        quasi per quendam privatum contractum.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 110 a. 4 ad 2
+          url: https://www.corpusthomisticum.org/sth1103.html
+sources:
+  - ouvrage: tlfi
+    entree: contrat
+  - ouvrage: littre
+    entree: contrat
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

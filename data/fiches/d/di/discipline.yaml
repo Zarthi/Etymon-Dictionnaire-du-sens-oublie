@@ -1,0 +1,30 @@
+mot: discipline
+nature: [ nom féminin ]
+etymologie:
+  - forme: disciplina
+    langue: latin
+    sens: enseignement, science
+explication: >-
+  Le latin disciplina désignait l'instruction et les règles de vie ; en latin
+  chrétien, il a dit la règle monastique et le châtiment. En français,
+  discipline a d'abord désigné un châtiment, puis l'enseignement et les
+  sciences ; il nomme aujourd'hui une branche du savoir et l'ordre imposé à un
+  groupe.
+famille: [ discipliner, discipliné, indiscipline ]
+themes: [ savoir, morale ]
+tradition:
+  lectures:
+    - texte: La discipline tire son nom de l'action d'apprendre.
+      citation: Disciplina a discendo nomen accepit
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: discipline
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

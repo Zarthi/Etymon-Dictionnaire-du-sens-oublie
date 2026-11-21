@@ -1,0 +1,34 @@
+mot: concurrence
+nature: [ nom féminin ]
+etymologie:
+  - forme: concurrence
+    langue: français
+    sens: rencontre, convergence
+    elements:
+      - forme: concurrent
+        sens: qui court avec, rival
+      - forme: -ence
+        sens: suffixe de nom d'action
+  - forme: concurrens
+    langue: latin
+    sens: courant ensemble
+    elements:
+      - forme: con-
+        sens: ensemble
+      - forme: currere
+        sens: courir
+explication: >-
+  Le mot a d'abord dit la rencontre de deux éléments, puis la rivalité pour un
+  même objet. Il désigne aujourd'hui surtout la rivalité commerciale.
+famille: [ concurrent, concurrencer, concurrentiel ]
+themes: [ commerce, société ]
+sources:
+  - ouvrage: tlfi
+    entree: concurrence
+  - ouvrage: tlfi
+    entree: concurrent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,29 @@
+mot: oppression
+nature: [ nom féminin ]
+etymologie:
+  - forme: oppressio
+    langue: latin
+    sens: action de presser, d'accabler
+explication: >-
+  Oppression a d'abord dit l'action de presser et d'accabler, puis l'état de
+  celui qui subit cette violence. Le mot désigne aujourd'hui l'action
+  d'opprimer, et garde le sens médical de gêne respiratoire.
+famille: [ opprimer, oppresseur, oppressif ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: L'oppression tyrannique est une violence que même les plus grands
+        subissent parfois.
+      citation: a tyrannica oppressione, quam interdum etiam maiores patiuntur
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 108 a. 5 ad 2
+          url: https://www.corpusthomisticum.org/sth1103.html
+sources:
+  - ouvrage: tlfi
+    entree: oppression
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

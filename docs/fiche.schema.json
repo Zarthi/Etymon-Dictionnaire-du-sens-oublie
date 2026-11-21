@@ -671,7 +671,8 @@
           "nature",
           "météo",
           "temps",
-          "politique"
+          "politique",
+          "quantité"
         ]
       },
       "description": "Thèmes (liste fermée : data/themes.json), un ou deux."

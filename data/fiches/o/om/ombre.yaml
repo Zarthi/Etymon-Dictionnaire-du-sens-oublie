@@ -1,0 +1,42 @@
+mot: ombre
+nature: [ nom féminin ]
+etymologie:
+  - forme: umbra
+    langue: latin
+    sens: ombre, fantôme, apparence
+explication: >-
+  Le latin umbra disait l'ombre projetée, mais aussi le fantôme et l'apparence.
+  Le français a gardé ces sens : l'ombre qui protège, l'ombre du mort, l'ombre
+  d'un doute, et ce qui dissimule.
+ecartees:
+  - forme: ὄμβρος
+    langue: grec ancien
+    sens: pluie
+    raison: Le Littré propose ce rapprochement par le sanskrit ambhas, mais le
+      Bailly le donne pour non apparenté au latin imber.
+famille: [ ombreux, ombrelle, pénombre, ombrer, sombre ]
+themes: [ nature, esprit ]
+tradition:
+  lectures:
+    - texte: L'ombre de la cité céleste a servi sur terre à la signifier, non à la
+        présenter.
+      citation: Vmbra sane quaedam ciuitatis huius et imago prophetica ei
+        significandae potius quam praesentandae seruiuit in terris, quo eam
+        tempore demonstrari oportebat, et dicta est etiam ipsa ciuitas sancta
+        merito significantis imaginis, non…
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: XV
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XV
+sources:
+  - ouvrage: tlfi
+    entree: ombre
+  - ouvrage: littre
+    entree: ombre
+  - ouvrage: bailly
+    entree: ὄμβρος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

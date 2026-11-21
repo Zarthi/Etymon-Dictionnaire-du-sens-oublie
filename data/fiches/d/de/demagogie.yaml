@@ -1,0 +1,32 @@
+mot: démagogie
+nature: [ nom féminin ]
+etymologie:
+  - forme: δημαγωγία
+    langue: grec ancien
+    sens: art de conduire le peuple
+  - forme: δημαγωγός
+    langue: grec ancien
+    sens: qui conduit le peuple
+    elements:
+      - forme: δῆμος
+        sens: peuple
+      - forme: ἄγω
+        sens: conduire
+explication: >-
+  Le mot grec désignait l'art de conduire le peuple, et déjà, en mauvaise part,
+  l'art de capter sa faveur. Le français a gardé ce sens péjoratif : la
+  flatterie des passions populaires.
+famille: [ démagogue, démagogique ]
+themes: [ politique ]
+sources:
+  - ouvrage: bailly
+    entree: δημαγωγία
+  - ouvrage: bailly
+    entree: δημαγωγός
+  - ouvrage: tlfi
+    entree: démagogie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

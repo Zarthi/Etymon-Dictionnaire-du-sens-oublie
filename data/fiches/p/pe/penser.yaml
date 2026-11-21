@@ -1,0 +1,25 @@
+mot: penser
+nature: [ verbe ]
+etymologie:
+  - forme: penser
+    langue: français
+  - forme: pensare
+    langue: latin
+    sens: peser, apprécier, évaluer
+explication: >-
+  Penser vient de peser : le latin pensare disait évaluer, apprécier, avant de
+  dire réfléchir. Le français garde ce sens de l'évaluation quand penser veut
+  dire estimer ou croire.
+famille: [ pensée, pensable, impensable ]
+renvois: [ raison ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: penser
+  - ouvrage: tlfi
+    entree: penser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

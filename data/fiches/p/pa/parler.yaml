@@ -1,0 +1,31 @@
+mot: parler
+nature: [ verbe ]
+etymologie:
+  - forme: parler
+    langue: français
+  - forme: parabolare
+    langue: bas latin
+    sens: parler
+  - forme: parabola
+    langue: latin
+    sens: comparaison, parabole
+  - forme: παραβολή
+    langue: grec ancien
+    sens: comparaison, rapprochement
+explication: >-
+  Parler vient de parabola, la comparaison, la parabole. Le bas latin parabolare
+  a dit parler, et le français a retenu le mot sans plus y entendre la
+  comparaison.
+famille: [ parole, parlement, parleur ]
+renvois: [ silence ]
+themes: [ parole ]
+sources:
+  - ouvrage: littre
+    entree: parler
+  - ouvrage: tlfi
+    entree: parler
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

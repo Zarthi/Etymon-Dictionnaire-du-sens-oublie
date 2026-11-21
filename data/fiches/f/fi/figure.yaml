@@ -1,0 +1,34 @@
+mot: figure
+nature: [ nom féminin ]
+etymologie:
+  - forme: figura
+    langue: latin
+    sens: configuration, forme, aspect, représentation
+explication: >-
+  Le latin figura disait la configuration, l'aspect, la représentation et les
+  tours du langage. Le français a gardé ces sens ; l'usage courant a déplacé le
+  mot vers l'apparence visible et le visage, tandis que la rhétorique conserve
+  les figures de style.
+famille: [ figurer, figuratif, figuration, défigurer, figurine ]
+renvois: [ ombre ]
+themes: [ nature, parole ]
+tradition:
+  lectures:
+    - texte: La figure montre la croix du Seigneur ; en hébreu, le mot est interprété
+        comme signe.
+      citation: figuram demonstrans Dominicae crucis, unde et Hebraice signum
+        interpretatur.
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: figure
+  - ouvrage: littre
+    entree: figure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

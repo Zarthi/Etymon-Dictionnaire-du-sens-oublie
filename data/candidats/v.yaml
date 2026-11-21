@@ -4,7 +4,6 @@
 - { mot: veiller, statut: a-faire }
 - { mot: vénal, statut: a-faire }
 - { mot: vénérer, statut: a-faire }
-- { mot: vertige, statut: a-faire }
 - { mot: vice, statut: a-faire }
 - { mot: vie, statut: a-faire }
 - { mot: vierge, statut: a-faire }
@@ -19,7 +18,6 @@
 - { mot: vocation, statut: a-faire }
 - { mot: vœu, statut: a-faire }
 - { mot: voisin, statut: a-faire }
-- { mot: voix, statut: a-faire }
 - { mot: voler, statut: a-faire }
 - { mot: volonté, statut: a-faire }
 - { mot: voyage, statut: a-faire }

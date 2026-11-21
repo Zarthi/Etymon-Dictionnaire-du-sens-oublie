@@ -1,0 +1,35 @@
+mot: inquiet
+nature: [ adjectif ]
+etymologie:
+  - forme: inquietus
+    langue: latin
+    sens: qui s'agite, qui ne trouve pas le repos
+    elements:
+      - forme: in-
+        sens: négation
+      - forme: quietus
+        sens: tranquille, en repos
+explication: >-
+  Inquiet dit l'agitation, le manque de repos ; le latin impérial y joint déjà
+  le trouble moral. Le mot dit aujourd'hui le souci de l'âme, la crainte de ce
+  qui peut venir.
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Tu nous as faits pour toi, et notre cœur est sans repos tant qu'il ne
+        repose pas en toi.
+      citation: fecisti nos ad te et inquietum est cor nostrum donec requiescat in te.
+      sources:
+        - ouvrage: confessions
+          entree: I, 1
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Primus
+sources:
+  - ouvrage: littre
+    entree: inquiet
+  - ouvrage: tlfi
+    entree: inquiet
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

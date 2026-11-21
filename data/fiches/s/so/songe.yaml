@@ -1,0 +1,25 @@
+mot: songe
+nature: [ nom masculin ]
+etymologie:
+  - forme: songe
+    langue: français
+  - forme: somnium
+    langue: latin
+    sens: songe, rêve ; vision
+explication: >-
+  Le latin somnium disait le rêve et la vision de la nuit. Songe a été peu à peu
+  supplanté par rêve, mais il garde le sens du rêve porteur d'un avertissement
+  et de la rêverie.
+famille: [ songer, songeur, songerie ]
+renvois: [ reve ]
+themes: [ esprit, religion ]
+sources:
+  - ouvrage: littre
+    entree: songe
+  - ouvrage: tlfi
+    entree: songe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

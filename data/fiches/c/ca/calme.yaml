@@ -1,0 +1,32 @@
+mot: calme
+nature: [ adjectif ]
+etymologie:
+  - forme: calma
+    langue: italien
+    sens: calme, repos
+    premier: true
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: cauma
+          sens: chaleur du jour
+        - forme: calare
+          sens: se relâcher
+explication: >-
+  Calme a d'abord décrit la mer et le temps, puis les personnes. Son origine
+  reste obscure : on l'a rapproché de la chaleur du jour, moment où tout
+  s'apaise.
+incertain: true
+renvois: [ quietude, serenite ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: calme
+  - ouvrage: tlfi
+    entree: calme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

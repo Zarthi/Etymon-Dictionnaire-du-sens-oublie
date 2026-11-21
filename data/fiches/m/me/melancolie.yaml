@@ -1,0 +1,40 @@
+mot: mélancolie
+nature: [ nom féminin ]
+etymologie:
+  - forme: melancholia
+    langue: latin
+    sens: bile noire, mal de la bile noire
+  - forme: μελαγχολία
+    langue: grec ancien
+    sens: bile noire
+    elements:
+      - forme: μέλας
+        sens: noir
+      - forme: χολή
+        sens: bile
+explication: >-
+  Mélancolie vient du grec melancholia, « bile noire ». En français, le mot a
+  d'abord dit la tristesse, avant de nommer la bile noire dans la médecine ; il
+  a gardé la tristesse, perdu le liquide.
+renvois: [ nostalgie ]
+themes: [ émotions, santé ]
+tradition:
+  lectures:
+    - texte: "La mélancolie est dite de la bile noire : les Grecs nomment melan le
+        noir et chole la bile."
+      citation: Melancholia dicta est a nigro felle. Graeci enim nigrum MELAN vocant,
+        fel autem CHOLEN appellant.
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 9
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: littre
+    entree: mélancolie
+  - ouvrage: tlfi
+    entree: mélancolie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

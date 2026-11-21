@@ -1,0 +1,36 @@
+mot: dimanche
+nature: [ nom masculin ]
+etymologie:
+  - forme: dies dominicus
+    langue: latin ecclésiastique
+    sens: jour du Seigneur
+  - forme: dominicus
+    langue: latin
+    sens: seigneurial
+  - forme: dominus
+    langue: latin
+    sens: seigneur
+explication: >-
+  Le latin dies dominicus, « jour du Seigneur », a donné par contraction le
+  français dimanche. Le mot a gardé le sens du jour consacré au culte, puis il a
+  désigné le jour de repos hebdomadaire.
+renvois: [ messe ]
+themes: [ religion, temps ]
+tradition:
+  lectures:
+    - texte: Le jour dominical est ainsi nommé parce qu'on y célèbre la joie de la
+        résurrection du Seigneur.
+      citation: Dominicus dies proinde vocatur, quia in eo resurrectionis Domini
+        nostri gaudium celebratur.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 19
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: dimanche
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

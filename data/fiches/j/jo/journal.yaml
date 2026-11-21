@@ -1,0 +1,24 @@
+mot: journal
+nature: [ nom masculin ]
+etymologie:
+  - forme: journal
+    langue: français
+  - forme: diurnalis
+    langue: latin
+    sens: de chaque jour
+explication: >-
+  Le latin diurnalis disait ce qui revient chaque jour ; les Romains appelaient
+  acta diurna les nouvelles du jour. Le journal est d'abord un registre
+  quotidien, puis la publication qui rend compte de l'actualité.
+famille: [ journalier, journalisme, journaliste ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: littre
+    entree: journal
+  - ouvrage: tlfi
+    entree: journal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

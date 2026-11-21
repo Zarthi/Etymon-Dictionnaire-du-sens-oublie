@@ -1,6 +1,4 @@
-- { mot: racine, statut: a-faire }
 - { mot: radical, statut: a-faire }
-- { mot: raison, statut: a-faire }
 - { mot: rançon, statut: a-faire }
 - { mot: rapport, statut: a-faire }
 - { mot: ravir, statut: a-faire }
@@ -19,7 +17,6 @@
 - { mot: rejeter, statut: a-faire }
 - { mot: relique, statut: a-faire }
 - { mot: remarquer, statut: a-faire }
-- { mot: remords, statut: a-faire }
 - { mot: rencontrer, statut: a-faire }
 - { mot: renoncer, statut: a-faire }
 - { mot: réparer, statut: a-faire }
@@ -36,10 +33,8 @@
 - { mot: retraite, statut: a-faire }
 - { mot: réussir, statut: a-faire }
 - { mot: revanche, statut: a-faire }
-- { mot: rêve, statut: a-faire }
 - { mot: révolution, statut: a-faire }
 - { mot: rigueur, statut: a-faire }
-- { mot: rire, statut: a-faire }
 - { mot: rite, statut: a-faire }
 - { mot: rival, statut: a-faire }
 - { mot: robuste, statut: a-faire }

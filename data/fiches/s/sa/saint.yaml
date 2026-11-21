@@ -1,0 +1,40 @@
+mot: saint
+nature: [ adjectif ]
+etymologie:
+  - forme: sanctus
+    langue: latin
+    sens: sacré, inviolable
+  - forme: sancire
+    langue: latin
+    sens: prescrire par la loi
+  - forme: sacer
+    langue: latin
+    sens: sacré
+explication: >-
+  Le latin sanctus, participe de sancire, « prescrire par la loi », disait ce
+  qui est consacré et inviolable. Le mot a pris le sens chrétien de celui qui
+  est admis à la sainteté, puis il a qualifié toute personne ou chose marquée
+  par la présence de Dieu.
+renvois: [ dieu ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Les saints sont dits ainsi parce que ceux qui voulaient se purifier
+        étaient touchés par le sang de la victime.
+      citation: Sanctus a veteri consuetudine appellatus eo quod hi, qui purificari
+        volebant, sanguine hostiae tangebantur, et ex hoc sancti nomen
+        acceperunt.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: saint
+  - ouvrage: tlfi
+    entree: saint
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

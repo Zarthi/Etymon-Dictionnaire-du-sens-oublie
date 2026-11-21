@@ -1,0 +1,35 @@
+mot: chrétien
+nature: [ adjectif ]
+etymologie:
+  - forme: christianus
+    langue: latin ecclésiastique
+  - forme: Christus
+    langue: latin
+    sens: Christ
+  - forme: Χριστός
+    langue: grec ancien
+    sens: oint
+explication: >-
+  Le grec Χριστός, « oint », a donné le latin Christus, puis christianus et le
+  français chrétien. Le mot a d'abord désigné ceux qui professent la religion du
+  Christ, puis ce qui est conforme à sa doctrine et à sa morale.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Les chrétiens sont nommés d'après le Christ, comme les Juifs d'après
+        Juda.
+      citation: A Christo enim Christiani sunt cognominati, sicut a Iuda Iudaei.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 14
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: chrétien
+  - ouvrage: bailly
+    entree: χριστός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

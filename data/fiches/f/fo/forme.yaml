@@ -1,0 +1,38 @@
+mot: forme
+nature: [ nom féminin ]
+etymologie:
+  - forme: forma
+    langue: latin
+    sens: forme, figure, apparence
+explication: >-
+  Le latin forma disait le contour, la figure, et le moule qui la donne. Le
+  français a gardé les deux ; l'usage courant oppose la forme au fond, comme si
+  elle n'était que l'apparence.
+ecartees:
+  - forme: "*fer-"
+    langue: indo-européen
+    sens: porter
+    raison: Le Littré rapporte l'hypothèse de Curtius, mais le TLFi donne forma
+      comme emprunt latin sans la retenir.
+famille: [ former, formation, formel, informe, réforme, uniforme ]
+renvois: [ figure ]
+themes: [ nature, savoir ]
+tradition:
+  lectures:
+    - texte: Les formes des mots sont ainsi dites parce qu'elles nous informent de
+        chaque chose.
+      citation: Formae verborum inde dictae eo, quod nos ad unamquamque rem informent.
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: forme
+  - ouvrage: littre
+    entree: forme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

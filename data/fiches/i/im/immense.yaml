@@ -1,0 +1,39 @@
+mot: immense
+nature: [ adjectif ]
+etymologie:
+  - forme: immensus
+    langue: latin
+    sens: sans limite, infini
+    elements:
+      - forme: in-
+        sens: non
+      - forme: mensus
+        sens: mesuré
+explication: >-
+  Immense dit littéralement non mesuré, de in- et mensus. L'adjectif a glissé du
+  sens strict d'illimité à celui de très grand, qu'on peut mesurer.
+famille: [ immensité, immensément, immensurable ]
+renvois: [ enorme ]
+themes: [ nature ]
+tradition:
+  lectures:
+    - texte: Certains se représentent Dieu comme une masse douée d'une puissance
+        immense, qui aurait fait le ciel et la terre.
+      citation: alii enim cum haec verba legunt vel audiunt, cogitant deum, quasi
+        hominem aut quasi aliquam molem immensa praeditam potestate novo quodam
+        et repentino placito extra se ipsam tamquam locis distantibus, fecisse
+        caelum et terram, duo magna…
+      sources:
+        - ouvrage: confessions
+          entree: XII
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Duodecimus
+sources:
+  - ouvrage: tlfi
+    entree: immense
+  - ouvrage: littre
+    entree: immense
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

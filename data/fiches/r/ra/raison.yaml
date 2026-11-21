@@ -1,0 +1,24 @@
+mot: raison
+nature: [ nom féminin ]
+etymologie:
+  - forme: raison
+    langue: français
+  - forme: ratio
+    langue: latin
+    sens: calcul, compte, raison
+explication: >-
+  Le latin ratio disait le calcul et le compte avant de dire la faculté de
+  comprendre. La raison garde le sens de compte dans « rendre raison ».
+famille: [ raisonner, raisonnement, rationnel, rationner ]
+renvois: [ science ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: littre
+    entree: raison
+  - ouvrage: tlfi
+    entree: raison
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

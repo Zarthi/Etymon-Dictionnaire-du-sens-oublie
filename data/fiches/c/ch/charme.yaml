@@ -1,0 +1,33 @@
+mot: charme
+nature: [ nom masculin ]
+etymologie:
+  - forme: carmen
+    langue: latin
+    sens: chant, formule d'enchantement
+explication: >-
+  Charme a d'abord nommé la formule chantée qui enchante. Le mot a retenu le
+  pouvoir de la formule, puis l'attrait qui s'en dégage ; l'arbre du même nom
+  vient d'un autre latin.
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Le carmen est tout ce qui est contenu dans des pieds ; on croit qu'il a
+        reçu ce nom parce qu'on le prononce par morceaux, ou parce que ceux qui
+        le chantaient paraissaient avoir perdu l'esprit.
+      citation: "Carmen vocatur quidquid pedibus continetur: cui datum nomen
+        existimant seu quod carptim pronuntietur […] seu quod qui illa canerent
+        carere mentem existimabantur."
+      sources:
+        - ouvrage: etymologies
+          entree: I, 4
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: charme
+  - ouvrage: tlfi
+    entree: charme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

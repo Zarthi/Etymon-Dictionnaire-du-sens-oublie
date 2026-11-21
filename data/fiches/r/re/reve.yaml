@@ -1,0 +1,38 @@
+mot: rêve
+nature: [ nom masculin ]
+etymologie:
+  - forme: rêve
+    langue: français
+  - forme: resver
+    langue: ancien français
+    sens: vagabonder, délirer
+  - langue: ancien français
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: "*esver"
+          langue: ancien français
+          sens: vagabonder
+        - forme: "*reexvadere"
+          langue: latin
+          sens: s'échapper, évader
+explication: >-
+  Rêve est un déverbal de rêver, qui disait d'abord vagabonder, délirer. Le mot
+  a pris le sens du rêve de la nuit quand il a supplanté songe. L'origine de
+  rêver reste incertaine.
+incertain: true
+famille: [ rêver, rêveur, rêverie ]
+renvois: [ idee ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: rêve
+  - ouvrage: tlfi
+    entree: rêve
+  - ouvrage: tlfi
+    entree: rêver
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

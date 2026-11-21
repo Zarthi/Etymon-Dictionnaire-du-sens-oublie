@@ -1,0 +1,25 @@
+mot: liturgie
+nature: [ nom féminin ]
+etymologie:
+  - forme: liturgia
+    langue: latin ecclésiastique
+    sens: service de Dieu, culte
+  - forme: λειτουργία
+    langue: grec ancien
+    sens: service public
+explication: >-
+  Le grec λειτουργία, « service public », désignait une charge assumée pour la
+  cité ; les chrétiens l'ont pris pour le service de Dieu. Le mot désigne
+  aujourd'hui l'ensemble réglé des cérémonies du culte.
+renvois: [ messe ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: liturgie
+  - ouvrage: bailly
+    entree: λειτουργία
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

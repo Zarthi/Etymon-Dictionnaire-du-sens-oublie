@@ -1,0 +1,42 @@
+mot: subtil
+nature: [ adjectif ]
+etymologie:
+  - forme: subtil
+    langue: français
+  - forme: subtilis
+    langue: latin
+    sens: fin, menu, délié ; délicat, pénétrant
+    elements:
+      - forme: sub
+        langue: latin
+        sens: sous
+      - forme: tela
+        langue: latin
+        sens: toile
+explication: >-
+  Selon une hypothèse de Corssen, le latin subtilis serait pour sub-telis, de
+  sub, sous, et tela, toile : finement tissé. Il a gardé le sens de fin, délié,
+  puis a dit ce qui est délicat et pénétrant. Ce qui est subtil se laisse
+  difficilement saisir.
+incertain: true
+famille: [ subtilité, subtiliser, subtilement ]
+renvois: [ penser ]
+themes: [ esprit, savoir ]
+tradition:
+  lectures:
+    - texte: Subtilis vient de l'exténuation, de ce qui est rendu mince et délié.
+      citation: Subtilis ab extenuatione dictus.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: subtil
+  - ouvrage: tlfi
+    entree: subtil
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

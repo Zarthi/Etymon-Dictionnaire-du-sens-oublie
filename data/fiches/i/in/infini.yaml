@@ -1,0 +1,39 @@
+mot: infini
+nature: [ adjectif ]
+etymologie:
+  - forme: infinitus
+    langue: latin
+    sens: sans fin, sans limites
+    elements:
+      - forme: in-
+        sens: non
+      - forme: finitus
+        sens: fini
+explication: >-
+  Infini dit ce qui n'a pas de fin, de in- et finitus. Le mot a d'abord servi
+  pour des quantités trop grandes à mesurer, avant de désigner ce qui est sans
+  bornes, puis l'être infini.
+famille: [ infiniment, infinité, infinitésimal, infinitif ]
+renvois: [ immense, horizon, mesure ]
+themes: [ savoir, esprit ]
+tradition:
+  lectures:
+    - texte: L'infini qui tient à la forme non déterminée par la matière a raison de
+        perfection.
+      citation: Forma autem non perficitur per materiam, sed magis per eam eius
+        amplitudo contrahitur, unde infinitum secundum quod se tenet ex parte
+        formae non determinatae per materiam, habet rationem perfecti.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 7 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth1003.html
+sources:
+  - ouvrage: tlfi
+    entree: infini
+  - ouvrage: littre
+    entree: infini
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

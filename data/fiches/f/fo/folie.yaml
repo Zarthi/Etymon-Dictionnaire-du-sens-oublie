@@ -1,0 +1,27 @@
+mot: folie
+nature: [ nom féminin ]
+etymologie:
+  - forme: fou
+    langue: français
+    sens: fou, déraisonnable
+  - forme: follis
+    langue: latin
+    sens: soufflet, outre gonflée
+explication: >-
+  Folie est le nom de l'état de fou. Fou vient de follis, le soufflet, l'outre
+  gonflée : l'image d'une tête enflée et vide a donné l'idée de déraison. Le mot
+  a gardé l'image du vide, mais il dit aujourd'hui le trouble de l'esprit.
+renvois: [ vertige ]
+themes: [ esprit, santé ]
+sources:
+  - ouvrage: littre
+    entree: folie
+  - ouvrage: tlfi
+    entree: folie
+  - ouvrage: littre
+    entree: fou
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

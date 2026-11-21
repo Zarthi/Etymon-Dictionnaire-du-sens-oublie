@@ -1,0 +1,37 @@
+mot: hiérarchie
+nature: [ nom féminin ]
+etymologie:
+  - forme: hierarchia
+    langue: latin médiéval
+    sens: ordre et subordination des anges
+  - forme: ἱεραρχία
+    langue: grec ancien
+    sens: ordre et subordination des anges
+    elements:
+      - forme: ἱερός
+        sens: sacré
+      - forme: ἄρχω
+        sens: commander
+explication: >-
+  Hiérarchie est née dans le vocabulaire chrétien pour l'ordre des anges, puis a
+  désigné les degrés de l'Église. Le mot s'applique aujourd'hui à toute
+  organisation graduée.
+famille: [ hiérarchique, hiérarque, hiérarchiser ]
+themes: [ société, religion ]
+tradition:
+  lectures:
+    - texte: La hiérarchie est un saint principat, c'est-à-dire un pouvoir sacré.
+      citation: Respondeo dicendum quod hierarchia est sacer principatus, ut dictum est.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 108 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth1103.html
+sources:
+  - ouvrage: littre
+    entree: hiérarchie
+  - ouvrage: tlfi
+    entree: hiérarchie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

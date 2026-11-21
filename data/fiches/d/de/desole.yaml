@@ -1,0 +1,27 @@
+mot: désolé
+nature: [ adjectif ]
+etymologie:
+  - forme: desolare
+    langue: latin
+    sens: rendre seul, dépeupler, ravager
+    elements:
+      - forme: de-
+        sens: privé de
+      - forme: solus
+        sens: seul
+explication: >-
+  Désolé a d'abord dit un lieu rendu seul, une terre dévastée. Le mot a passé
+  des choses aux personnes : celui qui reste seul est accablé, puis simplement
+  affligé.
+renvois: [ melancolie ]
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: désoler
+  - ouvrage: tlfi
+    entree: désoler
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

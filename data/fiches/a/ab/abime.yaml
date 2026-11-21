@@ -1,0 +1,40 @@
+mot: abîme
+nature: [ nom masculin ]
+etymologie:
+  - forme: abyssus
+    langue: latin ecclésiastique
+    sens: abîme, gouffre sans fond
+  - forme: ἄβυσσος
+    langue: grec ancien
+    sens: sans fond
+explication: >-
+  Le mot est d'abord biblique : il traduit le latin abyssus, le gouffre sans
+  fond de la Genèse et l'enfer du Nouveau Testament. Passé dans la langue
+  profane, il dit toute profondeur dont on ne peut mesurer le fond, puis, au
+  figuré, ce qui est insondable.
+famille: [ abîmer, abîmé, abysse, abyssal ]
+renvois: [ gouffre ]
+themes: [ nature, religion ]
+tradition:
+  lectures:
+    - texte: "Le nom abyssi signifie une immensité désordonnée des eaux : la Somme y
+        voit l'informité de l'eau, au second jour de la création."
+      citation: Informitas vero aquae, quae est media, significatur nomine abyssi,
+        quia hoc nomen significat quandam immensitatem inordinatam aquarum, ut
+        Augustinus dicit, contra Faustum.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 69 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth1065.html
+sources:
+  - ouvrage: tlfi
+    entree: abîme
+  - ouvrage: bailly
+    entree: ἄβυσσος
+  - ouvrage: littre
+    entree: abîme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

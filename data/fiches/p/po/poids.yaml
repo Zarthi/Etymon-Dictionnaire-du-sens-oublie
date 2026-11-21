@@ -1,0 +1,29 @@
+mot: poids
+nature: [ nom masculin ]
+etymologie:
+  - forme: pensum
+    langue: latin
+    sens: chose pesée
+explication: >-
+  Poids vient du latin pensum, chose pesée, et non de pondus, malgré son d. Le
+  mot dit la force qui attire les corps, puis, au figuré, ce qui pèse : une
+  charge, une influence, une importance.
+ecartees:
+  - forme: pondus
+    langue: latin
+    sens: poids
+    raison: Littré et le TLFi montrent que poids vient de pensum ; le d est une
+      fausse étymologie introduite au xvie siècle d'après pondus.
+famille: [ peser, pesanteur, pesant, pondérer, prépondérant ]
+renvois: [ force ]
+themes: [ nature, savoir ]
+sources:
+  - ouvrage: littre
+    entree: poids
+  - ouvrage: tlfi
+    entree: poids
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

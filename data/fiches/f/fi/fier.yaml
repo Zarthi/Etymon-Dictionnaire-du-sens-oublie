@@ -1,0 +1,21 @@
+mot: fier
+nature: [ verbe ]
+etymologie:
+  - forme: ferus
+    langue: latin
+    sens: farouche, sauvage, indompté
+explication: >-
+  Fier a d'abord dit le farouche, l'indompté, comme un animal sauvage. Le mot a
+  glissé vers l'orgueil et la hauteur, puis vers la dignité de celui qui ne se
+  laisse pas abaisser.
+themes: [ émotions ]
+sources:
+  - ouvrage: littre
+    entree: fier
+  - ouvrage: tlfi
+    entree: fier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

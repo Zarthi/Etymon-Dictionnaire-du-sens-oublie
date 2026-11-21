@@ -1,0 +1,20 @@
+mot: communion
+nature: [ nom féminin ]
+etymologie:
+  - forme: communio
+    langue: latin
+    sens: mise en commun, communauté
+explication: >-
+  Le latin communio disait la mise en commun et la communauté ; les auteurs
+  chrétiens l'ont appliqué à l'union des fidèles en Dieu et à la participation à
+  l'eucharistie. Le mot garde aujourd'hui ces deux sens, religieux et profane.
+renvois: [ hostie ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: communion
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

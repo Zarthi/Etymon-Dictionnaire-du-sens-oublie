@@ -1,0 +1,38 @@
+mot: mystère
+nature: [ nom masculin ]
+etymologie:
+  - forme: mystère
+    langue: français
+  - forme: mysterium
+    langue: latin
+    sens: initiation, secret
+  - forme: μυστήριον
+    langue: grec ancien
+    sens: initiation, secret
+explication: >-
+  Le grec μυστήριον disait l'initiation aux cultes à mystères, et le secret qui
+  l'entoure. Le mot a dit le secret religieux, puis ce qui reste
+  incompréhensible. Le mystère est ce qui est fermé, réservé à l'initié.
+famille: [ mystérieux, mystique, mystifier ]
+renvois: [ silence ]
+themes: [ religion, esprit ]
+tradition:
+  lectures:
+    - texte: "Le mot grec mysterium dit ce qui a une disposition secrète et cachée :
+        le mystère est ce qui reste fermé."
+      citation: unde et Graece mysterium dicitur, quod secretam et reconditam habeat
+        dispositionem.
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: littre
+    entree: mystère
+  - ouvrage: tlfi
+    entree: mystère
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

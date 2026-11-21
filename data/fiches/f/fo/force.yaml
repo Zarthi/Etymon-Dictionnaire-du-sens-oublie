@@ -1,0 +1,26 @@
+mot: force
+nature: [ nom féminin ]
+etymologie:
+  - forme: fortia
+    langue: latin
+    sens: forces
+  - forme: fortis
+    langue: latin
+    sens: fort, vigoureux
+explication: >-
+  Le latin fortia, pluriel de fortis, désignait les forces ; devenu singulier,
+  le mot a dit la vigueur physique, puis la contrainte et la puissance d'action.
+  La physique en a fait une grandeur, et la langue morale une faculté.
+incertain: true
+famille: [ forcer, forcé, effort, fort, fortifié ]
+themes: [ nature, société ]
+sources:
+  - ouvrage: tlfi
+    entree: force
+  - ouvrage: littre
+    entree: force
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

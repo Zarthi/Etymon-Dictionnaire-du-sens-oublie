@@ -1,0 +1,20 @@
+mot: culte
+nature: [ nom masculin ]
+etymologie:
+  - forme: cultus
+    langue: latin
+    sens: action de cultiver, soigner
+explication: >-
+  Le latin cultus, « action de cultiver, soigner », s'est dit du soin rendu aux
+  dieux comme aux champs. Le mot s'est spécialisé dans l'hommage religieux et
+  désigne l'ensemble des pratiques par lesquelles on honore une divinité.
+renvois: [ liturgie ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: culte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,31 @@
+mot: dieu
+nature: [ nom masculin ]
+etymologie:
+  - forme: deus
+    langue: latin
+    sens: dieu
+explication: >-
+  Le latin deus désignait les dieux du paganisme ; le christianisme en a fait le
+  nom du Dieu unique. Le mot garde ce sens, mais il sert aussi d'interjection et
+  entre dans des locutions où sa force propre s'est effacée.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Deus est rattaché au grec DEOS, et FOBOS, « crainte », explique son
+        nom : Dieu est celui qui inspire la crainte à ceux qui l'honorent."
+      citation: Nam Deus Graece DEOS, FOBOS dicitur, id est timor, unde tractum est
+        Deus, quod eum colentibus sit timor.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: littre
+    entree: dieu
+  - ouvrage: tlfi
+    entree: dieu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

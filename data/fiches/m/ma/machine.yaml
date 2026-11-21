@@ -1,0 +1,28 @@
+mot: machine
+nature: [ nom féminin ]
+etymologie:
+  - forme: machina
+    langue: latin
+    sens: machine, engin
+  - forme: μηχανή
+    langue: grec ancien
+    sens: invention ingénieuse, machine
+explication: >-
+  Le grec μηχανή disait une invention ingénieuse, un engin, et, au figuré, un
+  expédient. Le mot français a suivi l'histoire des techniques : machine de
+  guerre, machine à vapeur, machine-outil, et, au figuré, machination.
+famille: [ machiner, machination, machinisme, machiniste, mécanique ]
+renvois: [ force, physique ]
+themes: [ travail, savoir ]
+sources:
+  - ouvrage: littre
+    entree: machine
+  - ouvrage: bailly
+    entree: μηχανή
+  - ouvrage: tlfi
+    entree: machine
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

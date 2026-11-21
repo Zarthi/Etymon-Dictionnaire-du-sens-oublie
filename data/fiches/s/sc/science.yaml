@@ -1,0 +1,23 @@
+mot: science
+nature: [ nom féminin ]
+etymologie:
+  - forme: science
+    langue: français
+  - forme: scientia
+    langue: latin
+    sens: savoir
+explication: >-
+  Le latin scientia disait le savoir. La science est devenue un ensemble de
+  connaissances vérifiées, et le mot garde ce sens de savoir.
+famille: [ scientifique, sciemment, conscience ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: littre
+    entree: science
+  - ouvrage: tlfi
+    entree: science
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

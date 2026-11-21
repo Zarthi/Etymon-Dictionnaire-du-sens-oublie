@@ -1,0 +1,30 @@
+mot: vertige
+nature: [ nom masculin ]
+etymologie:
+  - forme: vertigo
+    langue: latin
+    sens: mouvement de rotation, tournoiement
+explication: >-
+  Vertige est un tournoiement : le latin vertigo dit le mouvement circulaire,
+  celui de la tête ou du vent. Le mot a gardé le tournis, et y a ajouté le
+  trouble devant le vide.
+themes: [ santé, émotions ]
+tradition:
+  lectures:
+    - texte: Le vertige est un tourbillon de vent qui emporte la terre en cercle.
+      citation: Vertigo autem est quotienscumque ventus consurgit, et terram in
+        circuitum mittit.
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 7
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: littre
+    entree: vertige
+  - ouvrage: tlfi
+    entree: vertige
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

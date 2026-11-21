@@ -1,0 +1,29 @@
+mot: paresse
+nature: [ nom féminin ]
+etymologie:
+  - forme: pigritia
+    langue: latin
+    sens: paresse, indolence
+explication: >-
+  Paresse a d'abord nommé l'indolence, le refus de l'effort. Le mot a gardé ce
+  refus, mais il dit aussi aujourd'hui le ralentissement, la langueur de ce qui
+  traîne.
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: La torpeur est de celui qui dort, la paresse de celui qui veille.
+      citation: Inter Pigritiam et torporem. Torpor dormitantis est, pigritia vigilantis.
+      sources:
+        - ouvrage: differences
+          entree: "426"
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: paresse
+  - ouvrage: tlfi
+    entree: paresse
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

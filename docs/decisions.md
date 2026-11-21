@@ -812,3 +812,32 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chaîne de *redouter* | *douter* (ancien sens « craindre »), *dubitare*, « hésiter » | le Littré : redouter = *re-* + *douter*, qui signifiait craindre | à relire |
 | Renvois | *crainte* → *peur* ; *terreur* → *épouvante* | notions voisines sans racine commune, d'un seul côté | à relire |
 | Lecture traditionnelle | *timide* : Isidore, *Étymologies* X, 272 (« Timidus, quod timeat diu ») | vérifiée en ligne (1/1) ; pistes non retenues : *pavor*, *angustia*, *terror*, *sollicitus* | faite |
+
+## 2026-11-21 — Lot « cent mots » (religion, esprit, émotions, société, matière)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Sacré | Chemin `ordinaire`, fiche rédigée comme les autres. | L'adjectif français est dérivé de *sacer*, mais ce n'est pas un nom sacré reçu d'un texte d'origine (comme *manne* ou *sabbat*) ; il n'a donc pas été arrêté comme mot sacré. | Oui |
+| Messe | Hypothèse hébraïque *missah* mise dans `ecartees`, la chaîne suit *missa*, « congé ». | Le Littré rapporte *missah* mais juge *missa* plus probable ; le TLFi retient *missa*. | Oui |
+| Renvois | Chaque paire n'est déclarée que d'un côté. | Le validateur refuse une relation déclarée des deux côtés. | Oui |
+| Lectures | Lectures écrites pour les 14 mots au drapeau `tradition` ; aucune pour les 6 autres. | Le corpus de réflexe n'a donné de passage glosant le mot que pour ces 14 mots. | Oui |
+| Renvois | Chaque paire de renvois n'est déclarée que d'un côté ; les paires ont été orientées pour éviter les doublons. | Le validateur refuse une relation déclarée des deux côtés. | Oui |
+| Rêve | Chemin `debattu`, avec deux hypothèses sur l'origine de rêver (*esver et *reevadere) et `incertain: true`. | Le TLFi donne l'origine comme incertaine, avec deux pistes. | Oui |
+| Subtil | `incertain: true` ; la décomposition sub- + tela est présentée comme une hypothèse. | Le Littré l'attribue à Corssen ; le TLFi ne la reprend pas comme certaine. | Oui |
+| Lectures | Lectures ajoutées pour image, histoire, mystère et subtil ; les autres mots n'ont pas de passage traditionnel qui lise réellement le mot. | Le corpus de réflexe ne fournit pas de lecture utile pour les autres mots. | Oui |
+| Nature de rire | `verbe` et `nom masculin`. | Le Littré donne les deux entrées. | Oui |
+| calme | chaîne présentée comme débattue, avec `incertain: true` | le Littré donne l'origine inconnue et le TLFi propose une adjectivation ; les deux hypothèses de Diez sont conservées | oui |
+| bonheur | le maillon français `bonheur` porte `premier: true` | le sens premier est celui du composé (« bonne chance »), non celui du lointain `augurium` | oui |
+| charme | fiche rédigée sur le sens « formule, enchantement » | l'homonyme arbre (carpinus) est signalé, non traité dans la chaîne | oui |
+| fier | fiche rédigée sur l'adjectif (de `ferus`) | l'homonyme verbe (de `fidere`) est signalé, non traité | oui |
+| désolé | `nature` fournie : adjectif | le Littré ne donne que le participe passé, le TLFi donne l'adjectif | oui |
+| détester | `nature` fournie : verbe | le Littré ne donne pas de nature exploitée par le script | oui |
+| nostalgie | chaîne ordinaire, non `forge` | Harder n'a pas de fiche d'auteur ; le mot est présenté comme une formation savante sur le grec | oui |
+| doux | lecture traditionnelle retenue sur `dulcis` par le texte d'Isidore sur le sang | le passage lit bien `dulcis`, mais à travers `sanguis` | oui |
+| candidat | drapeau `tradition` posé sans passage ★ | Isidore lit candidati et explique la toge blanche (Étymologies XIX, 6) ; la lecture est précise et retenue. | oui |
+| félon | chemin `debattu`, `incertain: true` | L'origine est discutée : le TLFi retient *fillo, le Littré liste plusieurs hypothèses. | oui |
+| concurrence | chaîne ouverte par le français concurrence, dérivé de concurrent | Le TLFi fait dériver le mot de concurrent, avec le suffixe -ence ; le latin concurrens est le maillon suivant. | oui |
+| délégué | usage et étymologie tirés de déléguer | Le TLFi n'a pas d'entrée propre pour le nom délégué. | oui |
+| Thème *quantité* | ajouté à `data/themes.json` | aucun thème existant ne couvrait *énorme* ; valeur demandée par le rédacteur et validée par le schéma | à relire |
+| Corpus de la tranche 5 | passages retenus seulement quand ils lisent le mot ; résultats hors sujet écartés | le script renvoyait des radicaux voisins (`forci`, `horizon`, `egalement`, `pens`) | à relire |
+| Renvois de la tranche 5 | identifiants ASCII, déclarés d'un seul côté, vers des mots de la tranche | éviter les doublons et les liens morts | à relire |

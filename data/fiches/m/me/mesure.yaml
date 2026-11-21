@@ -1,0 +1,33 @@
+mot: mesure
+nature: [ nom féminin ]
+etymologie:
+  - forme: mensura
+    langue: latin
+    sens: mesure
+explication: >-
+  Le latin mensura disait l'action de mesurer et son résultat. Le mot a gardé la
+  mesure matérielle, puis a dit la modération et le moyen ; la langue morale y
+  voit la retenue, la langue scientifique une grandeur.
+famille: [ mesurer, mesuré, mesurable, démesure ]
+renvois: [ poids ]
+themes: [ savoir, morale ]
+tradition:
+  lectures:
+    - texte: Dieu a disposé toutes choses dans la mesure, le nombre et le poids.
+      citation: qui omnia in mensura et numero et pondere disposuisti
+      sources:
+        - ouvrage: confessions
+          entree: V
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Quintus
+sources:
+  - ouvrage: littre
+    entree: mesure
+  - ouvrage: bailly
+    entree: μέτρον
+  - ouvrage: tlfi
+    entree: mesure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

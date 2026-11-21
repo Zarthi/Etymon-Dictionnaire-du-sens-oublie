@@ -1,0 +1,28 @@
+mot: mythe
+nature: [ nom masculin ]
+etymologie:
+  - forme: mythe
+    langue: français
+  - forme: mythos
+    langue: bas latin
+    sens: récit, fable
+  - forme: μῦθος
+    langue: grec ancien
+    sens: suite de paroles qui ont un sens, discours, fiction, mythe
+explication: >-
+  Le grec μῦθος disait la parole, le récit, sans l'opposition moderne au vrai.
+  Le mythe est devenu un récit fabuleux, puis une croyance collective ; le mot
+  garde ce sens de parole qui raconte.
+famille: [ mythique, mythologie, mythomane ]
+renvois: [ mystere ]
+themes: [ parole, religion ]
+sources:
+  - ouvrage: littre
+    entree: mythe
+  - ouvrage: tlfi
+    entree: mythe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

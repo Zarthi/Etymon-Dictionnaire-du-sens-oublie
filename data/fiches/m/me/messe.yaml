@@ -1,0 +1,39 @@
+mot: messe
+nature: [ nom féminin ]
+etymologie:
+  - forme: missa
+    langue: latin ecclésiastique
+    sens: congé
+  - forme: mittere
+    langue: latin
+    sens: envoyer, laisser aller
+explication: >-
+  Le latin missa, « congé », vient de la formule ite, missa est, par laquelle on
+  renvoyait les fidèles à la fin de l'office. Le mot a désigné la célébration
+  eucharistique, puis la musique composée pour elle.
+ecartees:
+  - forme: missah
+    langue: hébreu
+    sens: offrande
+    raison: Le Littré juge l'origine missa, « congé », plus probable.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Missa est le nom donné au moment du sacrifice, quand les catéchumènes
+        sont renvoyés dehors.
+      citation: "Missa tempore sacrificii est, quando catechumeni foris mittuntur,
+        clamante levita:"
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 4
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: messe
+  - ouvrage: littre
+    entree: messe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

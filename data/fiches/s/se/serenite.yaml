@@ -1,0 +1,30 @@
+mot: sérénité
+nature: [ nom féminin ]
+etymologie:
+  - forme: serenitas
+    langue: latin
+    sens: clarté du ciel, calme
+explication: >-
+  Sérénité vient de la clarté du ciel sans nuages. Le mot dit aujourd'hui le
+  calme intérieur, la paix que rien ne trouble.
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Les accidents de l'âme atteignent le sage sans troubler la sérénité de sa
+        sagesse.
+      citation: Accidunt autem animo sapientis salua serenitate sapientiae propter
+        illa, quae commoda uel incommoda appellant.
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: IX, 4
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_IX
+sources:
+  - ouvrage: littre
+    entree: sérénité
+  - ouvrage: tlfi
+    entree: sérénité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,38 @@
+mot: racine
+nature: [ nom féminin ]
+etymologie:
+  - forme: radicina
+    langue: bas latin
+    sens: racine
+  - forme: radix
+    langue: latin
+    sens: racine
+explication: >-
+  Le latin radicina, diminutif de radix, disait la racine de la plante. Le mot a
+  gardé ce sens, puis a dit la base d'un organe, l'origine d'une famille ou
+  d'une idée, et, en linguistique, l'élément irréductible d'un mot.
+famille: [ enraciner, enracinement, raciné, raifort ]
+renvois: [ substance ]
+themes: [ nature, savoir ]
+tradition:
+  lectures:
+    - texte: La racine est ainsi appelée parce qu'elle s'enfonce dans la terre comme
+        par des rayons.
+      citation: Radix appellatur quod quasi radiis quibusdam fixa terris in profunda
+        dimergitur.
+      sources:
+        - ouvrage: etymologies
+          entree: XVII, 14
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVII
+sources:
+  - ouvrage: littre
+    entree: racine
+  - ouvrage: bailly
+    entree: ῥίζα
+  - ouvrage: tlfi
+    entree: racine
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

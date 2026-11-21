@@ -1,0 +1,34 @@
+mot: moine
+nature: [ nom masculin ]
+etymologie:
+  - forme: monachus
+    langue: bas latin
+    sens: anachorète, solitaire
+  - forme: μοναχός
+    langue: grec ancien
+    sens: seul, solitaire
+  - forme: μόνος
+    langue: grec ancien
+    sens: seul
+explication: >-
+  Le grec μοναχός, « solitaire », vient de μόνος, « seul ». Le mot a nommé celui
+  qui vit à l'écart du monde, puis celui qui suit la règle d'un monastère.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Monachus est un mot grec, ainsi nommé parce qu'il est seul.
+      citation: Monachus Graeca etymologia vocatus, eo quod sit singularis.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: moine
+  - ouvrage: bailly
+    entree: μοναχός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

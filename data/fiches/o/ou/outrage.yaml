@@ -1,0 +1,24 @@
+mot: outrage
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*ultraticum"
+    langue: latin populaire
+    sens: action d'aller au-delà
+  - forme: ultra
+    langue: latin
+    sens: au-delà
+explication: >-
+  Outrage a d'abord nommé une parole contraire à l'honneur, puis une offense. Le
+  mot désigne aujourd'hui une offense grave.
+famille: [ outrager, outrageant, outrageusement ]
+themes: [ morale, droit ]
+sources:
+  - ouvrage: littre
+    entree: outrage
+  - ouvrage: tlfi
+    entree: outrage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

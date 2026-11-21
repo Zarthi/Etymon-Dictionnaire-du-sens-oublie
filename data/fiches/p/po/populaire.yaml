@@ -1,0 +1,35 @@
+mot: populaire
+nature: [ adjectif ]
+etymologie:
+  - forme: popularis
+    langue: latin
+    sens: du peuple
+  - forme: populus
+    langue: latin
+    sens: peuple
+explication: >-
+  Populaire a d'abord dit ce qui appartient au peuple, puis ce qui est répandu
+  dans le peuple. Le mot en est venu à désigner ce qui plaît au plus grand
+  nombre, et parfois ce qui est vulgaire.
+famille: [ peuple, populace, popularité, populisme ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: Dans la démocratie, le pouvoir appartient au peuple, en tant que les
+        princes peuvent être élus parmi les populaires.
+      citation: et ex democratia, idest potestate populi, inquantum ex popularibus
+        possunt eligi principes, et ad populum pertinet electio principum
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 105 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth2098.html
+sources:
+  - ouvrage: littre
+    entree: populaire
+  - ouvrage: tlfi
+    entree: populaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: rire
+nature: [ verbe, nom masculin ]
+etymologie:
+  - forme: rire
+    langue: français
+  - forme: ridere
+    langue: latin
+    sens: rire, sourire, se moquer
+explication: >-
+  Le latin ridere disait rire, sourire, et avoir un aspect riant. Le français a
+  gardé le rire comme manifestation de gaieté, et le sens de moquerie dans
+  « rire de ».
+famille: [ sourire, risible, dérision ]
+renvois: [ humour, parler ]
+themes: [ émotions, parole ]
+sources:
+  - ouvrage: littre
+    entree: rire
+  - ouvrage: tlfi
+    entree: rire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

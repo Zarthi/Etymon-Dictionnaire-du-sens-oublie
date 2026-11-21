@@ -1,0 +1,28 @@
+mot: confesser
+nature: [ verbe ]
+etymologie:
+  - forme: confiteri
+    langue: latin ecclésiastique
+    sens: avouer, reconnaître
+explication: >-
+  Le latin confiteri, « avouer, reconnaître », a pris chez les chrétiens le sens
+  d'avouer ses fautes devant Dieu. Le mot dit aujourd'hui la confession des
+  péchés, mais aussi l'aveu d'une croyance ou d'un fait.
+renvois: [ priere ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: La confession est la déclaration d'une faute que l'on cesse de commettre.
+      citation: "Confessio autem erroris professio est desinendi:"
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 78
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: confesser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

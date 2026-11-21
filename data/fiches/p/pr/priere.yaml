@@ -1,0 +1,33 @@
+mot: prière
+nature: [ nom féminin ]
+etymologie:
+  - forme: precaria
+    langue: bas latin
+    sens: charte de précaire, supplique
+  - forme: preces
+    langue: latin
+    sens: prières
+explication: >-
+  Le bas latin precaria, « supplique », vient de preces, « prières ». Le mot a
+  d'abord dit une demande instante, puis l'élévation de l'âme vers Dieu ; il a
+  pris la place d'oraison dans l'usage courant.
+renvois: [ culte ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le latin precarium est dit ainsi parce qu'on y accède par une prière, la
+        prece.
+      citation: Et dictum precarium quia prece aditur, quasi precadium, R pro D
+        littera commutata.
+      sources:
+        - ouvrage: etymologies
+          entree: V
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: prière
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

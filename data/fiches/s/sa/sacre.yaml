@@ -1,0 +1,39 @@
+mot: sacré
+nature: [ nom masculin ]
+etymologie:
+  - forme: sacrer
+    langue: français
+    sens: consacrer
+  - forme: sacrare
+    langue: latin
+    sens: consacrer à une divinité, rendre sacré
+  - forme: sacer
+    langue: latin
+    sens: sacré, inviolable
+explication: >-
+  Le latin sacer disait ce qui ne peut être touché sans souillure, d'où le
+  double sens de « sacré » et de « maudit ». Le français en a fait le participe
+  de sacrer, puis un adjectif qui dit l'appartenance à la divinité et, par
+  antiphrase, renforce une injure.
+renvois: [ dieu ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le feu sacré, l'érysipèle, est dit sacrum ignem par antiphrase, parce
+        qu'il est execrandum, « maudit ».
+      citation: Erisipela est quem Latini sacrum ignem appellant, id est execrandum
+        per antiphrasim.
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 4
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: sacrer
+  - ouvrage: littre
+    entree: sacré
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

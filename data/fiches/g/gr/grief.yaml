@@ -1,0 +1,22 @@
+mot: grief
+nature: [ adjectif ]
+etymologie:
+  - forme: gravis
+    langue: latin
+    sens: pesant, lourd, fâcheux
+explication: >-
+  Grief a d'abord désigné le mal et la peine, puis le dommage subi et le motif
+  de plainte. Le nom garde le sens d'un dommage dont on se plaint.
+famille: [ grever, aggraver ]
+renvois: [ outrage ]
+themes: [ droit, morale ]
+sources:
+  - ouvrage: littre
+    entree: grief
+  - ouvrage: tlfi
+    entree: grief
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: voix
+nature: [ nom féminin ]
+etymologie:
+  - forme: voix
+    langue: français
+  - forme: vox
+    langue: latin
+    sens: voix, son de la voix, accent, ton, mot, vocable
+explication: >-
+  Le latin vox disait la voix et le mot. Le français a gardé la voix comme son,
+  et la voix comme parole ou opinion ; en grammaire, la voix est la forme du
+  verbe.
+famille: [ vocal, vocalise, vociférer ]
+renvois: [ parler, silence ]
+themes: [ parole, corps ]
+sources:
+  - ouvrage: littre
+    entree: voix
+  - ouvrage: tlfi
+    entree: voix
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

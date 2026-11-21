@@ -1,0 +1,40 @@
+mot: clergé
+nature: [ nom masculin ]
+etymologie:
+  - forme: clericatus
+    langue: latin ecclésiastique
+    sens: état de clerc
+  - forme: clericus
+    langue: latin ecclésiastique
+  - forme: κλῆρος
+    langue: grec ancien
+    sens: sort, héritage
+explication: >-
+  Le latin clericus vient du grec κλῆρος, « sort, héritage » : les clercs sont
+  la part du Seigneur. Le mot a d'abord nommé l'état de clerc, puis le corps
+  entier de ceux qui servent l'Église.
+renvois: [ moine ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: Les clercs sont dits ainsi parce qu'ils sont la part du Seigneur, ou
+        parce qu'ils ont le Seigneur pour part.
+      citation: Propterea ergo dicti clerici, quia de sorte sunt Domini, vel quia
+        Domini partem habent.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 12
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: clergé
+  - ouvrage: etymologies
+    entree: VII
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+  - ouvrage: littre
+    entree: clergé
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

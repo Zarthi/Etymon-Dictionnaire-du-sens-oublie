@@ -1,0 +1,34 @@
+mot: dogme
+nature: [ nom masculin ]
+etymologie:
+  - forme: dogma
+    langue: latin
+    sens: doctrine, thèse
+  - forme: δόγμα
+    langue: grec ancien
+    sens: opinion, pensée
+explication: >-
+  Le grec δόγμα, « opinion, pensée », puis « décision, décret », a donné le
+  latin dogma. Le mot s'est spécialisé dans la doctrine religieuse, puis il a
+  désigné toute opinion tenue pour certaine.
+themes: [ religion, savoir ]
+tradition:
+  lectures:
+    - texte: "Les philosophes ont nommé dogma d'après putando, « penser » : « je pense
+        que ceci est bon », « je pense que ceci est vrai »."
+      citation: Dogma a putando philosophi nominaverunt, id est, 'hoc puto esse
+        bonum,' 'hoc puto esse verum.'
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: dogme
+  - ouvrage: bailly
+    entree: δόγμα
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

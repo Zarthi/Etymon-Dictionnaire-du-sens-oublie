@@ -1,0 +1,30 @@
+mot: humeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: humor
+    langue: latin
+    sens: eau, humidité, liquide
+explication: >-
+  Humeur a d'abord nommé les liquides du corps. La médecine ancienne en faisait
+  le tempérament ; le mot a quitté le corps pour l'âme, où il dit la disposition
+  passagère.
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Les quatre humeurs gouvernent la santé ; leur équilibre fait le corps
+        sain, leur déséquilibre le corps malade.
+      citation: Ex his quattuor humoribus reguntur sani, ex ipsis laeduntur infirmi.
+      sources:
+        - ouvrage: etymologies
+          entree: IV, 5
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: littre
+    entree: humeur
+  - ouvrage: tlfi
+    entree: humeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

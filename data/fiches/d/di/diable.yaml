@@ -1,0 +1,45 @@
+mot: diable
+nature: [ nom masculin ]
+etymologie:
+  - forme: diabolus
+    langue: latin ecclésiastique
+  - forme: διάβολος
+    langue: grec ancien
+    sens: calomniateur
+  - forme: διαβάλλειν
+    langue: grec ancien
+    sens: jeter entre, calomnier
+    elements:
+      - forme: διά
+        sens: à travers
+      - forme: βάλλειν
+        sens: jeter
+explication: >-
+  Le grec διάβολος, « calomniateur », vient de διαβάλλειν, « jeter entre,
+  calomnier ». Les chrétiens en ont fait le nom de l'ange déchu, et le mot
+  désigne aujourd'hui l'esprit du mal, souvent réduit à une figure de langage.
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Le grec διάβολος, rendu par diabolus, y est lu comme « accusateur » : il
+        rapporte à Dieu les crimes qu'il inspire, ou accuse les élus par des
+        crimes inventés."
+      citation: Graece vero diabolus criminator vocatur, quod vel crimina, in qua ipse
+        inlicit, ad Deum referat, vel quia electorum innocentiam criminibus
+        fictis accusat;
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 11
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: diable
+  - ouvrage: bailly
+    entree: διάβολος
+  - ouvrage: bailly
+    entree: διαβάλλω
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

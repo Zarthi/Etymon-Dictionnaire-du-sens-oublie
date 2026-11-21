@@ -1,0 +1,35 @@
+mot: remords
+nature: [ nom masculin ]
+etymologie:
+  - forme: remorsum
+    langue: latin
+    sens: morsure qui revient
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: mordere
+        sens: mordre
+explication: >-
+  Le mot a gardé l'image de la plaie rouverte, mais il ne dit plus que le
+  tourment moral, la conscience qui mord de nouveau.
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Le pécheur subit une triple peine ; la première vient de lui-même, le
+        remords de la conscience.
+      citation: Unde triplicem poenam incurrit, unam quidem a seipso, quae est
+        conscientiae remorsus, aliam vero ab homine, tertiam vero a Deo.
+      sources:
+        - ouvrage: somme-theologique
+          entree: I-II, q. 87, a. 1
+          url: https://www.corpusthomisticum.org/sth2085.html
+sources:
+  - ouvrage: littre
+    entree: remords
+  - ouvrage: tlfi
+    entree: remords
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

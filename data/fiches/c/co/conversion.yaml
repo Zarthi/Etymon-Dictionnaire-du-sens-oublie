@@ -1,0 +1,19 @@
+mot: conversion
+nature: [ nom féminin ]
+etymologie:
+  - forme: conversio
+    langue: latin
+    sens: action de se tourner, mouvement
+explication: >-
+  Le latin conversio disait l'action de se tourner et tout changement ; les
+  chrétiens y ont ajouté le retour à Dieu. Le mot désigne aujourd'hui l'adoption
+  d'une religion ou d'une opinion, et plus généralement un changement de forme.
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: conversion
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

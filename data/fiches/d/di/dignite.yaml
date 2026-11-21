@@ -1,0 +1,35 @@
+mot: dignité
+nature: [ nom féminin ]
+etymologie:
+  - forme: dignitas
+    langue: latin
+    sens: mérite, considération
+  - forme: dignus
+    langue: latin
+    sens: digne
+explication: >-
+  Dignitas nommait le mérite qui rend quelqu'un digne de considération, puis la
+  charge qui donne un rang éminent. Le mot désigne aujourd'hui la valeur propre
+  de la personne, qui appelle le respect.
+famille: [ digne, dignement, indigne ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: De l'innocence naît la dignité, de la dignité l'honneur, de l'honneur le
+        pouvoir, du pouvoir la liberté.
+      citation: ex innocentia nascitur dignitas, ex dignitate honor, ex honore
+        imperium, ex imperio libertas
+      sources:
+        - ouvrage: etymologies
+          entree: II
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: tlfi
+    entree: dignité
+  - ouvrage: littre
+    entree: dignité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

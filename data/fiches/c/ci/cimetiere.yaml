@@ -1,0 +1,26 @@
+mot: cimetière
+nature: [ nom masculin ]
+etymologie:
+  - forme: cimiterium
+    langue: latin ecclésiastique
+  - forme: κοιμητήριον
+    langue: grec ancien
+    sens: lieu de repos, dortoir
+  - forme: κοιμάω
+    langue: grec ancien
+    sens: dormir
+explication: >-
+  Le grec κοιμητήριον, « dortoir », vient de κοιμάω, « dormir » ; les chrétiens
+  ont nommé ainsi le lieu où reposent les morts. Le mot a gardé ce sens
+  funéraire et désigne aujourd'hui tout lieu consacré aux sépultures.
+themes: [ religion, société ]
+sources:
+  - ouvrage: tlfi
+    entree: cimetière
+  - ouvrage: bailly
+    entree: κοιμητήριον
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

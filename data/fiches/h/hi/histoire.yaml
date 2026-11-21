@@ -1,0 +1,36 @@
+mot: histoire
+nature: [ nom féminin ]
+etymologie:
+  - forme: histoire
+    langue: français
+  - forme: historia
+    langue: latin
+    sens: recherche, information
+  - forme: ἱστορία
+    langue: grec ancien
+    sens: information, recherche intelligente de la vérité
+explication: >-
+  Le grec ἱστορία disait l'enquête, la recherche de la vérité, avant de dire le
+  récit. L'histoire est devenue le récit autant que la recherche.
+famille: [ historien, historique, historiographie ]
+renvois: [ mythe, memoire ]
+themes: [ savoir, temps ]
+tradition:
+  lectures:
+    - texte: Le mot grec historia vient de ἱστορεῖν, « voir » ou « connaître ».
+      citation: Dicta autem Graece historia APO TOU ISTOREIN, id est a videre vel
+        cognoscere.
+      sources:
+        - ouvrage: etymologies
+          entree: I
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: histoire
+  - ouvrage: tlfi
+    entree: histoire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

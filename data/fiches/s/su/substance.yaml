@@ -1,0 +1,38 @@
+mot: substance
+nature: [ nom féminin ]
+etymologie:
+  - forme: substantia
+    langue: latin
+    sens: être, essence, réalité d'une chose
+    elements:
+      - forme: sub-
+        sens: sous
+      - forme: stare
+        sens: se tenir debout
+explication: >-
+  Le latin substantia disait ce qui se tient dessous les qualités. Le mot a
+  gardé le sens philosophique de ce qui existe en soi, puis a désigné, dans la
+  langue courante, la matière dont un corps est fait.
+famille: [ substantiel, substantif, substantiellement, consubstantiel ]
+themes: [ savoir, nature ]
+tradition:
+  lectures:
+    - texte: Chacune des personnes divines est pleine substance, et toutes ensemble
+        une seule substance.
+      citation: Ita Pater et Filius et Spiritus Sanctus et singulus quisque horum
+        Deus, et simul omnes unus Deus et singulus quisque horum plena
+        substantia, et simul omnes una substantia.
+      sources:
+        - ouvrage: la-doctrine-chretienne
+          entree: I
+          url: https://la.wikisource.org/wiki/De_Doctrina_Christiana/I
+sources:
+  - ouvrage: tlfi
+    entree: substance
+  - ouvrage: littre
+    entree: substance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
