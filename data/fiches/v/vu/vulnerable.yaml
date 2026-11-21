@@ -1,0 +1,26 @@
+mot: vulnérable
+nature: [ adjectif ]
+etymologie:
+  - forme: vulnerabilis
+    langue: bas latin
+    sens: qui peut être blessé
+  - forme: vulnus
+    langue: latin
+    sens: blessure
+explication: >-
+  Vulnus est la blessure, et vulnerabilis, ce qui peut la recevoir. Le mot n'a
+  longtemps dit que le corps ; il s'est étendu à ce qui peut être attaqué, puis
+  touché dans ses sentiments ou sa réputation.
+famille: [ vulnérabilité, invulnérable ]
+renvois: [ robuste ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: vulnérable
+  - ouvrage: littre
+    entree: vulnérable
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

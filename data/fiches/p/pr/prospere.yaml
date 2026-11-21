@@ -1,0 +1,22 @@
+mot: prospère
+nature: [ adjectif ]
+etymologie:
+  - forme: prosperus
+    langue: latin
+    sens: heureux, propice, favorable
+explication: >-
+  Le mot a d'abord dit ce qui est florissant, puis, au XVe siècle, ce qui est
+  propice et favorable. Ce premier sens, vieilli, est revenu au XIXe siècle, et
+  prospère se dit aujourd'hui des affaires qui réussissent.
+famille: [ prospérer, prospérité ]
+themes: [ argent, société ]
+sources:
+  - ouvrage: tlfi
+    entree: prospère
+  - ouvrage: littre
+    entree: prospère
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

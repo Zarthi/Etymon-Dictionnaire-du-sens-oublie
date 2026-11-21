@@ -1,0 +1,27 @@
+mot: recevoir
+nature: [ verbe ]
+etymologie:
+  - forme: recipere
+    langue: latin
+    sens: prendre en retour, accueillir
+    elements:
+      - forme: re-
+        sens: en retour
+      - forme: capere
+        sens: prendre
+explication: >-
+  Recipere disait prendre en retour, retirer, puis accueillir et accepter ; le
+  re- y marquait le retour. En français, recevoir ne dit plus ce mouvement de
+  retour : il dit l'accueil de ce qui est donné ou transmis.
+famille: [ réception, receveur, reçu, recette, récipient ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: recevoir
+  - ouvrage: littre
+    entree: recevoir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

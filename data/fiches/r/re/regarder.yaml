@@ -1,0 +1,27 @@
+mot: regarder
+nature: [ verbe ]
+etymologie:
+  - forme: regarder
+    langue: français
+    sens: diriger les yeux vers
+    elements:
+      - forme: re-
+        sens: en arrière, de nouveau
+      - forme: garder
+        sens: regarder, faire attention
+explication: >-
+  Regarder vient de garder au sens de « regarder », avec re- qui marque le
+  mouvement en arrière et la répétition. Le mot dit aujourd'hui l'acte de
+  diriger les yeux ; il s'est étendu à l'attention et à la considération.
+famille: [ regard, regardant, regardable ]
+themes: [ corps, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: regarder
+  - ouvrage: littre
+    entree: regarder
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

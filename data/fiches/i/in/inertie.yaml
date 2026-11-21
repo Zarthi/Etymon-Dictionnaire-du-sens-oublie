@@ -1,0 +1,31 @@
+mot: inertie
+nature: [ nom féminin ]
+etymologie:
+  - forme: inertia
+    langue: latin
+    sens: inaction, indolence
+  - forme: iners
+    langue: latin
+    sens: sans art, sans habileté
+    elements:
+      - forme: in-
+        sens: sans
+      - forme: ars
+        sens: art, habileté
+explication: >-
+  L'inerte était celui qui manquait d'art, d'habileté ; inertia, l'inaction et
+  l'indolence. La physique en a fait la propriété qu'a la matière de persévérer
+  dans son état, et le mot dit aujourd'hui l'absence de réaction, dans les corps
+  comme dans les esprits.
+famille: [ inerte ]
+themes: [ nature, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: inertie
+  - ouvrage: littre
+    entree: inertie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

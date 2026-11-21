@@ -1,0 +1,22 @@
+mot: sinistre
+nature: [ adjectif ]
+etymologie:
+  - forme: sinister
+    langue: latin
+    sens: gauche
+explication: >-
+  Sinister disait la gauche ; il a pris le sens de funeste, et le français l'a
+  gardé sans la gauche, que senestre continuait de nommer. Le mot dit
+  aujourd'hui le malheur annoncé et l'aspect lugubre.
+renvois: [ spectre ]
+themes: [ émotions, société ]
+sources:
+  - ouvrage: littre
+    entree: sinistre
+  - ouvrage: tlfi
+    entree: sinistre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

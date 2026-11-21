@@ -1,0 +1,19 @@
+mot: spectre
+nature: [ nom masculin ]
+etymologie:
+  - forme: spectrum
+    langue: latin
+    sens: simulacre, image, apparition
+explication: >-
+  Spectrum nommait les simulacres émanés des objets dans la philosophie
+  épicurienne. Le français en a fait l'apparition d'un mort, puis, avec Newton,
+  la lumière décomposée en rayons colorés.
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: spectre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

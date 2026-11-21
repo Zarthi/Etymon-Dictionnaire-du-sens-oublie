@@ -1,0 +1,22 @@
+mot: perdre
+nature: [ verbe ]
+etymologie:
+  - forme: perdere
+    langue: latin
+    sens: détruire, ruiner ; employer inutilement
+explication: >-
+  Perdere, formé de per et dare, « donner », disait détruire, ruiner, et aussi
+  employer sans profit. Le français a retenu l'idée de privation : perdre, c'est
+  cesser d'avoir, non plus dissiper.
+famille: [ perte, perdition, perdant ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: perdre
+  - ouvrage: littre
+    entree: perdre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

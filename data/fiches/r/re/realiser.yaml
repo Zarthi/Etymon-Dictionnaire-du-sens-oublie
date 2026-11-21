@@ -1,0 +1,26 @@
+mot: réaliser
+nature: [ verbe ]
+etymologie:
+  - forme: réaliser
+    langue: français
+    sens: rendre réel
+  - forme: realis
+    langue: latin
+    sens: réel
+explication: >-
+  Réaliser, c'est rendre réel : donner existence à un projet, à une promesse. Le
+  mot a pris un second sens, se représenter une chose comme réelle, puis, par
+  emprunt à l'anglais, celui de comprendre : réaliser une situation, c'en saisir
+  la réalité.
+famille: [ réalisation, réalisable, réalisateur, réaliste, réalité ]
+themes: [ esprit, travail ]
+sources:
+  - ouvrage: littre
+    entree: réaliser
+  - ouvrage: tlfi
+    entree: réaliser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

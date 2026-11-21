@@ -1,0 +1,23 @@
+mot: sauver
+nature: [ verbe ]
+etymologie:
+  - forme: salvare
+    langue: bas latin
+    sens: rendre bien portant ; conserver ; délivrer
+  - forme: salvus
+    langue: latin
+    sens: bien portant, sauf
+explication: >-
+  Salvus disait celui qui est sain et sauf, et salvare, le fait de le garder
+  tel. Le latin chrétien en a tiré le salut de l'âme, sens qui vient en français
+  après celui de tirer d'un danger ; se sauver dit encore la fuite.
+renvois: [ secours ]
+themes: [ santé, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: sauver
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

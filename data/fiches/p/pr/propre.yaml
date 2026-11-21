@@ -1,0 +1,35 @@
+mot: propre
+nature: [ adjectif ]
+etymologie:
+  - forme: proprius
+    langue: latin
+    sens: qui appartient en propre ; spécial, caractéristique
+explication: >-
+  Proprius disait ce qui est à soi, puis ce qui est le propre d'une chose. Le
+  sens de « net, sans saleté » est une extension française, venue de l'idée de
+  ce qui convient bien ; il s'est répandu au XVIIe siècle.
+famille: [ propreté, propriété, approprier ]
+themes: [ maison ]
+tradition:
+  lectures:
+    - texte: "Les noms propres sont dits propres parce qu'ils sont spéciaux : ils ne
+        désignent qu'une seule personne."
+      citation: Propria nomina dicta quia specialia sunt. Unius enim tantum personam
+        significant.
+      sources:
+        - ouvrage: etymologies
+          entree: I, 7, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: tlfi
+    entree: propre
+  - ouvrage: littre
+    entree: propre
+  - ouvrage: etymologies
+    entree: I, 7, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

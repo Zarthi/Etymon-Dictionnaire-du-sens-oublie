@@ -1,0 +1,29 @@
+mot: scrupule
+nature: [ nom masculin ]
+etymologie:
+  - forme: scrupulus
+    langue: latin
+    sens: petite pierre pointue
+explication: >-
+  La petite pierre qui fait achopper le pied a donné son nom au plus petit des
+  poids romains, puis au point qui arrête la conscience. Le mot ne dit plus
+  guère que cette inquiétude morale.
+themes: [ morale, esprit ]
+tradition:
+  lectures:
+    - texte: Le tourment de l'âme reçoit le nom de scrupule.
+      citation: unde et animi molestiam scrupulum dicimus
+      sources:
+        - ouvrage: etymologies
+          entree: XVI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+sources:
+  - ouvrage: littre
+    entree: scrupule
+  - ouvrage: tlfi
+    entree: scrupule
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

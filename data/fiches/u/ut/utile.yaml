@@ -1,0 +1,34 @@
+mot: utile
+nature: [ adjectif ]
+etymologie:
+  - forme: utilis
+    langue: latin
+    sens: qui sert, profitable
+  - forme: uti
+    langue: latin
+    sens: se servir de
+explication: >-
+  Utile dit ce dont l'usage est avantageux, sens attesté dès 1260. Le mot a
+  ensuite désigné ce qui est profitable, et le substantif l'utile, au XVIIe
+  siècle, ce qui sert.
+famille: [ utilité, utiliser, utilitaire ]
+themes: [ morale, travail ]
+tradition:
+  lectures:
+    - texte: "L'utile ne se mesure pas au moment : ce qui est apte convient au temps,
+        ce qui est utile vaut pour toujours."
+      citation: Aptum ad tempus, utile ad perpetuum.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: utile
+  - ouvrage: littre
+    entree: utile
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

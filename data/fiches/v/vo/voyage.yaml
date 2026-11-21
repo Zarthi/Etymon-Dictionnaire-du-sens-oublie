@@ -1,0 +1,32 @@
+mot: voyage
+nature: [ nom masculin ]
+etymologie:
+  - forme: viaticum
+    langue: latin
+    sens: provisions de route, argent pour le voyage
+explication: >-
+  Viaticum disait les provisions et l'argent dont on se munit pour la route ; le
+  mot a désigné le voyage lui-même dès l'Antiquité tardive. Voyage ne dit plus
+  les vivres emportés, mais le déplacement et le séjour hors de chez soi.
+famille: [ voyager, voyageur, viatique ]
+renvois: [ aventure, vagabond ]
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: "Le sacrement de l'eucharistie convient aux voyageurs, et c'est pourquoi
+        on l'appelle viatique : le mot viaticum dit la provision de route."
+      citation: Sed hoc sacramentum competit viatoribus, unde et viaticum dicitur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIIa q. 79 a. 2 arg. 1
+          url: https://www.corpusthomisticum.org/sth4079.html
+sources:
+  - ouvrage: tlfi
+    entree: voyage
+  - ouvrage: littre
+    entree: voyage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

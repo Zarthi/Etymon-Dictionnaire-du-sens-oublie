@@ -1,0 +1,37 @@
+mot: prévenir
+nature: [ verbe ]
+etymologie:
+  - forme: praevenire
+    langue: latin
+    sens: devancer, prendre les devants
+    elements:
+      - forme: prae-
+        sens: avant
+      - forme: venire
+        sens: venir
+explication: >-
+  Prévenir, c'est venir avant ; praevenire disait devancer, et l'on prévient une
+  difficulté en la devançant. Le mot a pris le sens d'avertir, comme on devance
+  quelqu'un en lui apprenant ce qu'il ignore encore.
+famille: [ prévention, prévenant, prévenance, préventif, prévenu ]
+themes: [ temps, parole ]
+tradition:
+  lectures:
+    - texte: La grâce prévient l'homme, c'est-à-dire qu'elle le devance pour le rendre
+        bon, sans que son libre arbitre l'ait devancée.
+      citation: Divina quippe gratia praevenitur homo, ut bonus sit, nec humanum
+        arbitrium Dei gratiam antecedit
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: prévenir
+  - ouvrage: littre
+    entree: prévenir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

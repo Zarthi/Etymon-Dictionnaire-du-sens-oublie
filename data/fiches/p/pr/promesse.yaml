@@ -1,0 +1,19 @@
+mot: promesse
+nature: [ nom féminin ]
+etymologie:
+  - forme: promissa
+    langue: bas latin
+    sens: action de promettre
+explication: >-
+  Promissa est issue du participe passé substantivé de promittere, promettre. Le
+  mot a d'abord nommé l'engagement, puis l'espérance que donnent certaines
+  choses.
+themes: [ parole, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: promesse
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

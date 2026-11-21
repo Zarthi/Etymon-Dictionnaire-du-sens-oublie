@@ -1,0 +1,23 @@
+mot: rester
+nature: [ verbe ]
+etymologie:
+  - forme: restare
+    langue: latin
+    sens: s'arrêter, demeurer
+explication: >-
+  Restare disait s'arrêter, se tenir, et aussi être de reste. Rester a gardé
+  l'idée de demeurer sur place et celle de ce qui subsiste ; il ne dit plus
+  l'arrêt, mais la continuation.
+famille: [ reste, restant ]
+renvois: [ demeurer ]
+themes: [ temps ]
+sources:
+  - ouvrage: tlfi
+    entree: rester
+  - ouvrage: littre
+    entree: rester
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: original
+nature: [ adjectif ]
+etymologie:
+  - forme: originalis
+    langue: latin
+    sens: qui existe dès l'origine, primitif
+  - forme: origo
+    langue: latin
+    sens: origine, naissance
+explication: >-
+  Original a d'abord dit ce qui vient de l'origine, puis ce qui émane
+  directement de son auteur, par opposition à la copie. Le sens d'« unique, hors
+  du commun » est venu au XVIIe siècle.
+famille: [ origine, originalité, originaire ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: original
+  - ouvrage: littre
+    entree: original
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

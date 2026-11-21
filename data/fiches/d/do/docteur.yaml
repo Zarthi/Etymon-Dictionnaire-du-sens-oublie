@@ -1,0 +1,21 @@
+mot: docteur
+nature: [ nom masculin ]
+etymologie:
+  - forme: doctor
+    langue: latin
+    sens: celui qui enseigne
+explication: >-
+  Doctor nommait celui qui enseigne. Le mot a désigné le savant, puis le titre
+  universitaire, et l'usage courant en a fait le médecin.
+famille: [ doctoral, doctorat, doctoresse ]
+themes: [ savoir, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: docteur
+  - ouvrage: littre
+    entree: docteur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

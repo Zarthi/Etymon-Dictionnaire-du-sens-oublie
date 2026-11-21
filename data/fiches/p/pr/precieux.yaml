@@ -1,0 +1,25 @@
+mot: précieux
+nature: [ adjectif ]
+etymologie:
+  - forme: pretiosus
+    langue: latin
+    sens: qui a du prix, coûteux
+  - forme: pretium
+    langue: latin
+    sens: prix, valeur
+explication: >-
+  Tout ce qui est précieux a son prix : pretiosus vient de pretium, « prix,
+  valeur ». Le mot a d'abord dit ce qui est vénérable ou cher, avant la valeur
+  marchande ; au XVIIe siècle, il a aussi dit le raffinement affecté.
+famille: [ prix, préciosité ]
+themes: [ argent ]
+sources:
+  - ouvrage: tlfi
+    entree: précieux
+  - ouvrage: littre
+    entree: précieux
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

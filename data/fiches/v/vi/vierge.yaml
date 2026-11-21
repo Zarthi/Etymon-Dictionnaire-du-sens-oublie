@@ -1,0 +1,19 @@
+mot: vierge
+nature: [ nom féminin ]
+etymologie:
+  - forme: virgo
+    langue: latin
+    sens: jeune fille, vierge
+explication: >-
+  Virgo nommait la jeune fille, et spécialement les Vestales et Diane ; l'usage
+  chrétien l'a appliqué à la mère du Christ. Le mot qualifie aussi ce qui n'a
+  pas été touché : terre vierge, cire vierge.
+themes: [ corps, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: vierge
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

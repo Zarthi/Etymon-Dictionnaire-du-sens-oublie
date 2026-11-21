@@ -1,0 +1,22 @@
+mot: pur
+nature: [ adjectif ]
+etymologie:
+  - forme: purus
+    langue: latin
+    sens: sans tache, sans souillure
+explication: >-
+  Purus disait ce qui n'a point de tache ; le mot a dit en français ce qui est
+  sans mélange, puis ce qui est chaste et sans souillure. Il en reste l'idée de
+  ce qui est exempt de tout élément étranger, et l'emploi de renforcement :
+  purement, pur hasard.
+themes: [ morale, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: pur
+  - ouvrage: littre
+    entree: pur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

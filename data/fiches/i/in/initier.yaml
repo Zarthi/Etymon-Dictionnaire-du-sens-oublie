@@ -1,0 +1,26 @@
+mot: initier
+nature: [ verbe ]
+etymologie:
+  - forme: initiare
+    langue: latin
+    sens: admettre aux mystères
+    premier: true
+  - forme: initium
+    langue: latin
+    sens: commencement
+explication: >-
+  Initier, c'était d'abord faire entrer dans les mystères, dans un savoir
+  réservé. Le mot s'est étendu à la révélation d'un savoir caché, puis à
+  l'enseignement des premiers éléments d'un art ou d'une science.
+famille: [ initiation, initiative, initial, initié, initiateur ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: tlfi
+    entree: initier
+  - ouvrage: littre
+    entree: initier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

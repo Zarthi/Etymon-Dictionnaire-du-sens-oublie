@@ -1,0 +1,23 @@
+mot: réclamer
+nature: [ verbe ]
+etymologie:
+  - forme: reclamare
+    langue: latin
+    sens: crier contre, appeler à plusieurs reprises
+explication: >-
+  Reclamare était un cri : on criait contre, on appelait à plusieurs reprises.
+  Réclamer demande aujourd'hui ce qui est dû et proteste contre ce qui paraît
+  injuste ; le cri s'y est effacé.
+famille: [ réclamation, réclame, réclamant, revendiquer ]
+renvois: [ rejeter ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: réclamer
+  - ouvrage: littre
+    entree: réclamer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

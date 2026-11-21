@@ -1,0 +1,15 @@
+nom: Saumaise
+nomComplet: Claude Saumaise
+naissance: "1588"
+mort: "1653"
+description: >-
+  Érudit et polygraphe protestant, fixé en Hollande et professeur à Leyde ;
+  philologue et commentateur des textes anciens.
+sources:
+  - ouvrage: bnf
+    entree: cb12003602h
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

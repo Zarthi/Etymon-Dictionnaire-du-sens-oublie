@@ -1,0 +1,25 @@
+mot: possible
+nature: [ adjectif ]
+etymologie:
+  - forme: possibilis
+    langue: latin
+    sens: possible
+  - forme: posse
+    langue: latin
+    sens: pouvoir
+explication: >-
+  Possible dit ce qui peut être, sans que cela implique une réalisation. Il
+  qualifie aussi ce qui est faisable ou admissible, et sert dans des tours
+  impersonnels à marquer ce qu'on peut supposer.
+famille: [ possibilité, impossible ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: possible
+  - ouvrage: littre
+    entree: possible
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

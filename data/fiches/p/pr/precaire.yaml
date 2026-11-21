@@ -1,0 +1,35 @@
+mot: précaire
+nature: [ adjectif ]
+etymologie:
+  - forme: precarius
+    langue: latin
+    sens: obtenu par prière ; mal assuré
+  - forme: precari
+    langue: latin
+    sens: prier, demander
+explication: >-
+  Précaire a désigné en droit ce qu'on tient d'une concession révocable, obtenue
+  sur demande. De cette insécurité juridique est venu le sens moderne, ce dont
+  la durée n'est pas garantie.
+famille: [ précarité, précairement ]
+themes: [ droit, société ]
+tradition:
+  lectures:
+    - texte: "Ce qui est précaire s'obtient par la prière : le mot se dit de ce qui
+        est accordé à qui le demande."
+      citation: Et dictum precarium quia prece aditur, quasi precadium, R pro D
+        littera commutata.
+      sources:
+        - ouvrage: etymologies
+          entree: V
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: précaire
+  - ouvrage: littre
+    entree: précaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

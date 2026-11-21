@@ -927,3 +927,30 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Chef, qualité, fonction | Composition non découpée en `elements` quand le schéma exige deux éléments. | Le sens du maillon porte seul l'information. | à relire |
 | Lectures traditionnelles | 26 lectures (Isidore, Thomas) : 11 en T1, 4 en T2, 2 en T3, 2 en T4, 7 en T5 ; 74 absences justifiées. | Le corpus ne glose que ces mots ; les autres passages emploient le mot ou glosent un voisin. | à relire |
 | Références | Aucun auteur ni ouvrage nouveau. | Isidore, Thomas, *Étymologies*, *Différences* et *Somme théologique* ont déjà leur fiche. | à relire |
+
+## 2026-11-21 — Lot « cent mots, cinquième » (conscience, action, liens, société, corps)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chemins | Tous en `ordinaire`, sauf *mal* en `debattu`. | Aucun mot n'est né dans l'ordre sacré ; *mal* a une origine discutée entre le TLFi et le Littré. | à relire |
+| Renvois | Chaque paire déclarée d'un seul côté, interne à sa tranche. | Le validateur refuse une relation déclarée des deux côtés. | à relire |
+| Suicide | Maillon français forgé sur *sui* et *-cide*, `modele: homicide (analogie)`. | Mot de 1734 formé sur des éléments latins, sans forgeur identifié ; règle du mot forgé en français. | à relire |
+| Scrupule, solennel, pur | Chaînes arrêtées quand le maillon n'ajoute rien (*scrupus*, *solus* + *annus*, racine sanskrite *pu*). | Règle d'arrêt d'AGENTS.md §3.2 ; décomposition non sourcée non écrite. | à relire |
+| Vierge | Sens premier « jeune fille », non « femme intacte ». | *Virgo* nomme d'abord la jeune fille ; la virginité comme trait propre vient de l'usage chrétien. | à relire |
+| Tradition, sinistre, prochain | Doubles *trahison*, *senestre*, *proisme* cités sans renvoi. | Aucune fiche correspondante : un doublet ne se déclare que vers une fiche existante. | à relire |
+| Décider, observer, corrompre, incarner, prévenir, informer | Décompositions reprises (*de-* + *caedere*, *ob-* + *servare*, *cum-* + *rumpere*, *in-* + *caro*, *prae-* + *venire*, *in-* + *forma*). | Explicitées par le Littré et le TLFi ; elles portent le sens. | à relire |
+| Initier | `premier: true` sur *initiare* ; *initium* ajouté après. | Sinon le sens affiché serait « commencement » au lieu de l'admission aux mystères. | à relire |
+| Inertie | Sens premier porté par *iners* « sans art », non par *inertia*. | Le TLFi donne ce sens propre à *inertia* ; *iners* explique le passage à l'inaction. | à relire |
+| Réussir | Chaîne arrêtée à l'italien *riuscire*. | Langue source directe ; *exire* n'ajoute rien au sens déjà porté par les éléments. | à relire |
+| Réaliser, regarder, reconnaître, remarquer | Maillon français (*réaliser*, *re-* + *garder*, *re-* + *connaître*, *re-* + *marquer*). | Les sources donnent la formation française, non un étymon latin direct. | à relire |
+| Oublier, nier | *\*oblitare* retenu ; *nec aio* et l'hypothèse *lividus* en `ecartees`. | Le TLFi ne retient que *\*oblitare* ; le Littré réfute *nec aio*. | à relire |
+| Rencontrer | Chaîne arrêtée à l'ancien français *encontrer*. | Le TLFi ne donne aucun étymon latin ; *incontra* serait une reconstruction non sourcée. | à relire |
+| Repos, retraite | Chaînes par le verbe (*reposer*, *retraire*). | Règle du déverbal ; éviter un maillon sans sens propre. | à relire |
+| Sûr | Découpe *se-* « sans » + *cura* « soin ». | Le Littré l'établit ; Isidore la glose (*quasi sine cura*). | à relire |
+| Rival, voyage, vagabond | *Rivus*, *via*, *vagari* non portés en `elements`. | Le schéma exige deux éléments ; le sens du maillon garde l'essentiel. | à relire |
+| Tribu | Origine débattue figurée : *tribus* avec alternatives de Saumaise (grec τριττύς) et Corssen (*tri* + *bu*) ; deux auteurs créés. | Le Littré rapporte les deux hypothèses ; notices BnF pour Saumaise et Corssen (Corssen existait déjà). | à relire |
+| Mal | Origine `debattue` : substantivation de l'adverbe (TLFi) ou dérivé de *malus* (Littré), deux alternatives avec leurs tenants. | Débat ouvert, sans hypothèse réfutée. | à relire |
+| Frugal, précieux, réel, normal, robuste, rustique, vulnérable, vilain | Maillon de base ajouté (*frux*, *pretium*, *res*, *norma*, *robur*, *rus*, *vulnus*, *villa*). | La base porte le sens qui éclaire le mot et devient le sens premier affiché. | à relire |
+| Altérer, facile, faible, perdre, vif, vigueur, défaut, perte, luxure, original | Chaîne arrêtée à l'étymon direct. | La base n'ajoute qu'un sens grammatical ou identique. | à relire |
+| Lectures traditionnelles | 27 lectures : 6 en T1, 4 en T2, 4 en T3, 7 en T4, 6 en T5 ; 73 absences justifiées. | Le corpus ne glose que ces mots ; les autres passages emploient la forme ou glosent un voisin. | à relire |
+| Références | Deux auteurs créés pour *tribu* : Saumaise et Corssen. | Tenants des hypothèses du Littré, identifiés par notices BnF. | à relire |

@@ -1,0 +1,28 @@
+mot: réussir
+nature: [ verbe ]
+etymologie:
+  - forme: riuscire
+    langue: italien
+    sens: aboutir, avoir une issue
+    elements:
+      - forme: ri-
+        sens: de nouveau
+      - forme: uscire
+        sens: sortir
+explication: >-
+  Réussir, c'est d'abord sortir : l'italien riuscire, « sortir de nouveau », a
+  pris le sens d'aboutir à une issue. Le français a gardé l'issue, bonne ou
+  mauvaise, avant d'y attacher le seul bon résultat.
+famille: [ réussite, réussi ]
+renvois: [ succomber ]
+themes: [ société, travail ]
+sources:
+  - ouvrage: tlfi
+    entree: réussir
+  - ouvrage: littre
+    entree: réussir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,19 @@
+mot: vice
+nature: [ nom masculin ]
+etymologie:
+  - forme: vitium
+    langue: latin
+    sens: défaut, imperfection, tare
+explication: >-
+  Vitium nommait toute tare, celle d'un corps comme celle de l'âme. Le français
+  garde les deux : le vice moral, et le vice d'une marchandise, d'une forme ou
+  d'un raisonnement.
+themes: [ morale, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: vice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

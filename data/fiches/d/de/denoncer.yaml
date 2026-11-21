@@ -1,0 +1,22 @@
+mot: dénoncer
+nature: [ verbe ]
+etymologie:
+  - forme: denuntiare
+    langue: latin
+    sens: notifier, annoncer, déclarer
+explication: >-
+  Denuntiare était une déclaration officielle, sans blâme : on dénonçait la
+  guerre avant de la faire. Le mot a pris en français le sens de signaler un
+  coupable, et s'emploie aujourd'hui en mauvaise part.
+renvois: [ infame ]
+themes: [ parole, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: dénoncer
+  - ouvrage: littre
+    entree: dénoncer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: défaut
+nature: [ nom masculin ]
+etymologie:
+  - forme: defaute
+    langue: ancien français
+    sens: manque, disette
+explication: >-
+  Défaut a d'abord dit le manque, la pénurie : il vient de l'ancien français
+  defaute, formé sur défaillir. Le sens s'est déplacé de l'absence vers
+  l'imperfection, puis vers le point faible d'une personne ou d'une chose.
+famille: [ défaillir, défaillance, faute ]
+renvois: [ mal ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: défaut
+  - ouvrage: littre
+    entree: défaut
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

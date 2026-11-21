@@ -1,0 +1,35 @@
+mot: orient
+nature: [ nom masculin ]
+etymologie:
+  - forme: oriens
+    langue: latin
+    sens: levant, est
+  - forme: oriri
+    langue: latin
+    sens: se lever
+explication: >-
+  Orient nomme le point où le soleil se lève. Le mot a désigné les pays de
+  l'est, puis un ensemble de cultures et, par image, l'éclat d'une perle ou le
+  début d'une réussite.
+famille: [ oriental, orientation, orienter ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: L'orient nomme le Christ ; regarder l'occident, c'est regarder l'homme
+        mortel et faillible.
+      citation: Dom., vocat te oriens, idest Christus, et tu attendis occidentem,
+        idest ad hominem mortalem et errare potentem.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 189 a. 10 co.
+          url: https://www.corpusthomisticum.org/sth3183.html
+sources:
+  - ouvrage: tlfi
+    entree: orient
+  - ouvrage: littre
+    entree: orient
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

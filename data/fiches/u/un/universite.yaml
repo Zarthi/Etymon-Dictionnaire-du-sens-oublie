@@ -1,0 +1,34 @@
+mot: université
+nature: [ nom féminin ]
+etymologie:
+  - forme: universitas
+    langue: latin médiéval
+    sens: communauté, corporation
+  - forme: universus
+    langue: latin
+    sens: tout entier
+explication: >-
+  Université a d'abord nommé toute communauté ou corporation. Celle des maîtres
+  et des étudiants a pris ce nom au XIIIe siècle, et il est resté à
+  l'institution d'enseignement supérieur.
+famille: [ universitaire, univers ]
+themes: [ savoir, société ]
+tradition:
+  lectures:
+    - texte: Universitas est dite de l'un, parce qu'elle est rassemblée dans l'unité.
+      citation: Hinc et universitas ab uno cognominata est, propter quod in unitatem
+        colligitur.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: université
+  - ouvrage: tlfi
+    entree: université
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

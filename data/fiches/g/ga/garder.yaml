@@ -1,0 +1,23 @@
+mot: garder
+nature: [ verbe ]
+etymologie:
+  - forme: "*wardôn"
+    langue: germanique
+    sens: regarder, prendre garde
+explication: >-
+  Garder vient d'un mot germanique qui disait regarder et prendre garde. Le sens
+  de regard est resté dans regarder ; garder dit aujourd'hui conserver, protéger
+  et retenir.
+famille: [ garde, gardien, regard, regarder ]
+renvois: [ sur ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: garder
+  - ouvrage: littre
+    entree: garder
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

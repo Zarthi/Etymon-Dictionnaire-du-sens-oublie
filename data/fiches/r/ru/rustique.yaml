@@ -1,0 +1,39 @@
+mot: rustique
+nature: [ adjectif ]
+etymologie:
+  - forme: rusticus
+    langue: latin
+    sens: de la campagne, paysan
+  - forme: rus
+    langue: latin
+    sens: campagne
+explication: >-
+  Rus est la campagne : rusticus, celui qui y vit, le paysan. Comme le paysan
+  était tenu pour grossier, le mot a pris le sens de « sans raffinement » ;
+  refait sur le latin au XIVe siècle, il a remplacé la forme ancienne.
+famille: [ rusticité, rustre ]
+renvois: [ vilain ]
+themes: [ nature, maison ]
+tradition:
+  lectures:
+    - texte: Le rustique est le travailleur de la campagne ; le rustican, le père de
+        famille qui y possède un domaine.
+      citation: Inter Rusticum et rusticanum. Rusticus operarius dici potest,
+        rusticanus pater familias.
+      sources:
+        - ouvrage: differences
+          entree: "488"
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: rustique
+  - ouvrage: littre
+    entree: rustique
+  - ouvrage: differences
+    entree: "488"
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

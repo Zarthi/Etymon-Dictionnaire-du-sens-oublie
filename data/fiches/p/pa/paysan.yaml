@@ -1,0 +1,25 @@
+mot: paysan
+nature: [ nom ]
+etymologie:
+  - forme: païsant
+    langue: ancien français
+    sens: habitant du pays
+  - forme: pagensis
+    langue: bas latin
+    sens: du canton, du territoire rural
+explication: >-
+  Paysan a d'abord désigné celui qui habite la campagne et cultive la terre ; il
+  a aussi dit l'habitant du pays, l'autochtone. Le mot garde l'image d'un homme
+  de la campagne, parfois prise en mauvaise part.
+famille: [ paysannerie, pays ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: tlfi
+    entree: paysan
+  - ouvrage: littre
+    entree: paysan
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

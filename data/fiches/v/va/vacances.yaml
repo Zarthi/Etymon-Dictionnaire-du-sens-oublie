@@ -1,0 +1,22 @@
+mot: vacances
+nature: [ nom féminin ]
+etymologie:
+  - forme: vacantia
+    langue: latin
+    sens: état de ce qui est vacant, vide
+explication: >-
+  Vacances est le pluriel de vacance, du latin vacantia, l'état de ce qui est
+  vacant. Le pluriel a pris le sens de période pendant laquelle on ne travaille
+  pas.
+famille: [ vacance, vacant, vacataire ]
+themes: [ temps ]
+sources:
+  - ouvrage: littre
+    entree: vacance
+  - ouvrage: tlfi
+    entree: vacances
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

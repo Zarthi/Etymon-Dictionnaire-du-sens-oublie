@@ -1,0 +1,33 @@
+mot: sollicitude
+nature: [ nom féminin ]
+etymologie:
+  - forme: sollicitudo
+    langue: latin
+    sens: inquiétude, souci
+explication: >-
+  Sollicitudo nommait l'inquiétude, le souci qui tient l'esprit en éveil. Le mot
+  s'est adouci : il dit aujourd'hui les soins attentifs et affectueux que l'on
+  prodigue à quelqu'un.
+famille: [ solliciter, sollicitation, solliciteur ]
+themes: [ émotions, morale ]
+tradition:
+  lectures:
+    - texte: "La sollicitude est un souci modéré et tempérable, tandis que le souci
+        (cura) est sans mesure : Isidore distingue la sollicitude, réglée, de
+        l'inquiétude sans frein."
+      citation: Sollicitudo moderata est, atque temperabilis, cura vero sine
+        moderatione est;
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: sollicitude
+  - ouvrage: littre
+    entree: sollicitude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

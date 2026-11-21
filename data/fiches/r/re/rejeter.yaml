@@ -1,0 +1,27 @@
+mot: rejeter
+nature: [ verbe ]
+etymologie:
+  - forme: rejectare
+    langue: latin
+    sens: renvoyer, repousser
+    elements:
+      - forme: re-
+        sens: en arrière
+      - forme: jactare
+        sens: jeter
+explication: >-
+  Rejectare disait renvoyer, faire rebondir, et le mot a pris le sens de
+  repousser et de vomir. Rejeter garde cette idée de rejet physique, d'où le
+  refus d'une opinion ou d'une personne.
+famille: [ rejet, rejeton, rejetable ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: rejeter
+  - ouvrage: littre
+    entree: rejeter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: robuste
+nature: [ adjectif ]
+etymologie:
+  - forme: robustus
+    langue: latin
+    sens: solide, dur, fort
+  - forme: robur
+    langue: latin
+    sens: chêne ; force
+explication: >-
+  Robur est le chêne, et robustus, fait de chêne, donc dur et fort. Le mot a
+  gardé cette idée de solidité physique, puis l'a étendue aux choses et aux
+  caractères.
+famille: [ robustesse ]
+themes: [ corps, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: robuste
+  - ouvrage: littre
+    entree: robuste
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,22 @@
+mot: vagabond
+nature: [ adjectif ]
+etymologie:
+  - forme: vagabundus
+    langue: bas latin
+    sens: errant
+explication: >-
+  Vagabundus, dérivé de vagari « errer çà et là », disait celui qui va sans
+  fixer sa route. Le mot a gardé ce sens, et il a pris celui du délit : le
+  vagabond est celui que la loi saisit pour son absence de domicile fixe.
+famille: [ vagabonder, vagabondage ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: vagabond
+  - ouvrage: littre
+    entree: vagabond
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

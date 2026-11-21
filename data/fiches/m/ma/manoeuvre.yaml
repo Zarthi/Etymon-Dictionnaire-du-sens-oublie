@@ -1,0 +1,29 @@
+mot: manœuvre
+nature: [ nom féminin ]
+etymologie:
+  - forme: manuopera
+    langue: latin populaire
+    sens: travail fait avec la main
+    elements:
+      - forme: manus
+        langue: latin
+        sens: main
+      - forme: opera
+        langue: latin
+        sens: œuvre, activité
+explication: >-
+  Manœuvre a d'abord nommé le travail manuel. Le mot a suivi les gestes qu'il
+  désigne, ceux du marin, du soldat, puis l'habileté à conduire une affaire, et
+  il nomme aussi l'ouvrier sans qualification.
+famille: [ manœuvrer, manœuvrier, manouvrier ]
+themes: [ travail, guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: manœuvre
+  - ouvrage: littre
+    entree: manœuvre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

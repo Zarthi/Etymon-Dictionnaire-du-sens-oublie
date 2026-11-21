@@ -1,0 +1,26 @@
+mot: vilain
+nature: [ nom ]
+etymologie:
+  - forme: villanus
+    langue: bas latin
+    sens: habitant d'un village astreint à des services
+  - forme: villa
+    langue: latin
+    sens: domaine, maison de campagne
+explication: >-
+  Villanus était l'habitant du domaine rural, l'homme de la campagne. Le mépris
+  social a fait de vilain le roturier, puis l'homme bas et laid : le mot est
+  passé du rang à la laideur et à la bassesse morale.
+famille: [ vilenie, vil ]
+renvois: [ propre ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: vilain
+  - ouvrage: littre
+    entree: vilain
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

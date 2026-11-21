@@ -1,0 +1,27 @@
+mot: décider
+nature: [ verbe ]
+etymologie:
+  - forme: decidere
+    langue: latin
+    sens: couper, retrancher
+    elements:
+      - forme: de-
+        sens: hors de
+      - forme: caedere
+        sens: couper
+explication: >-
+  Le latin decidere disait couper, retrancher, avant de dire trancher une
+  question. Le français a gardé ce passage de l'acte matériel au jugement : une
+  décision tranche, et l'idée de couper n'y est plus sensible.
+famille: [ décision, décisif, décidé, décideur ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: littre
+    entree: décider
+  - ouvrage: tlfi
+    entree: décider
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,41 @@
+mot: tribu
+nature: [ nom féminin ]
+etymologie:
+  - forme: tribus
+    langue: latin
+    sens: division du peuple romain
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: τριττύς
+          langue: grec ancien
+          sens: tiers d'une tribu
+          selon: [ saumaise ]
+        - forme: "*tribhu"
+          langue: latin
+          sens: troisième partie
+          elements:
+            - forme: tri
+              langue: latin
+              sens: trois
+            - forme: "*bhu"
+              langue: indo-européen
+              sens: être
+          selon: [ paul-wilhelm-corssen ]
+explication: >-
+  Tribus nommait la division politique du peuple romain. La Vulgate a employé ce
+  mot pour les lignages d'Israël, et il a pris le sens d'un groupe de familles
+  issues d'une même souche, puis d'un peuple.
+famille: [ tribal ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: tribu
+  - ouvrage: littre
+    entree: tribu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

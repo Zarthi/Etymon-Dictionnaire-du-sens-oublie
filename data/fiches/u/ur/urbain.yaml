@@ -1,0 +1,26 @@
+mot: urbain
+nature: [ adjectif ]
+etymologie:
+  - forme: urbanus
+    langue: latin
+    sens: de la ville ; poli, de bon ton
+  - forme: urbs
+    langue: latin
+    sens: ville
+explication: >-
+  Urbanus disait à la fois ce qui est de la ville et ce qui a les manières de la
+  ville, la politesse. Le français a repris les deux sens, mais urbain dit
+  aujourd'hui surtout la ville, et urbanité la courtoisie.
+famille: [ urbanité, urbanisme, urbaniser ]
+renvois: [ paysan ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: urbain
+  - ouvrage: littre
+    entree: urbain
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

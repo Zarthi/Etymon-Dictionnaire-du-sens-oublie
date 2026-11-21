@@ -1,0 +1,32 @@
+mot: suicide
+nature: [ nom masculin ]
+etymologie:
+  - forme: suicide
+    langue: français
+    sens: meurtre de soi-même
+    elements:
+      - forme: sui
+        langue: latin
+        sens: de soi-même
+      - forme: -cide
+        langue: latin
+        sens: action de tuer
+    modele:
+      forme: homicide
+      langue: français
+      relation: analogie
+explication: >-
+  Le mot est attesté en 1734 ; il nommait le fait de se donner la mort, sur le
+  modèle d'homicide. Il a désigné en 1752 la personne qui se suicide, et s'étend
+  aujourd'hui aux actes qui ruinent la carrière ou l'image de leur auteur.
+themes: [ morale, santé ]
+sources:
+  - ouvrage: littre
+    entree: suicide
+  - ouvrage: tlfi
+    entree: suicide
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

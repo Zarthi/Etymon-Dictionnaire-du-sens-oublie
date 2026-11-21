@@ -1,0 +1,22 @@
+mot: rival
+nature: [ nom ]
+etymologie:
+  - forme: rivalis
+    langue: latin
+    sens: riverain, celui qui use du même cours d'eau
+explication: >-
+  Rivalis désignait le riverain, celui qui a droit au même cours d'eau ; les
+  riverains se disputaient l'eau. Le mot ne dit plus le voisinage, mais la
+  concurrence et la prétention à un même objet.
+famille: [ rivaliser, rivalité ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: rival
+  - ouvrage: littre
+    entree: rival
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

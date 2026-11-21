@@ -1,0 +1,26 @@
+mot: oublier
+nature: [ verbe ]
+etymologie:
+  - forme: "*oblitare"
+    langue: latin populaire
+    sens: oublier
+  - forme: oblivisci
+    langue: latin
+    sens: ne plus penser à, perdre de vue
+explication: >-
+  Oublier, c'est perdre de vue : oblivisci disait qu'une chose sortait de la
+  pensée. Le français a hérité d'un verbe populaire formé sur son participe, et
+  le mot dit aujourd'hui la perte du souvenir, volontaire ou non.
+famille: [ oubli, inoubliable, oublieux, oubliable ]
+renvois: [ reconnaitre ]
+themes: [ esprit, temps ]
+sources:
+  - ouvrage: tlfi
+    entree: oublier
+  - ouvrage: littre
+    entree: oublier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

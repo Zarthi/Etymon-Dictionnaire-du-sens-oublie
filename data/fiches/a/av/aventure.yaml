@@ -1,0 +1,22 @@
+mot: aventure
+nature: [ nom féminin ]
+etymologie:
+  - forme: "*adventura"
+    langue: latin populaire
+    sens: ce qui doit arriver
+explication: >-
+  Aventure a d'abord nommé le sort, ce qui doit arriver à chacun. Le mot en est
+  venu aux événements imprévus, puis aux entreprises hasardeuses ; il ne dit
+  plus la destinée, mais l'incertitude de ce qui advient.
+famille: [ aventurer, aventureux, aventurier, mésaventure ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: aventure
+  - ouvrage: littre
+    entree: aventure
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,36 @@
+mot: informer
+nature: [ verbe ]
+etymologie:
+  - forme: informare
+    langue: latin
+    sens: donner une forme, façonner
+    elements:
+      - forme: in-
+        sens: dans
+      - forme: forma
+        sens: forme
+explication: >-
+  Informer, c'est donner une forme ; informare façonnait la matière, et
+  instruire, c'était former l'esprit. Le mot dit aujourd'hui, le plus souvent,
+  transmettre des faits, sans avoir perdu le sens de donner une forme.
+famille: [ information, informateur, informe, informité ]
+themes: [ savoir, parole ]
+tradition:
+  lectures:
+    - texte: Les formes des mots sont ainsi nommées parce qu'elles nous forment à
+        chaque chose.
+      citation: Formae verborum inde dictae eo, quod nos ad unamquamque rem informent
+      sources:
+        - ouvrage: etymologies
+          entree: I, [3]
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: informer
+  - ouvrage: tlfi
+    entree: informer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,27 @@
+mot: incarner
+nature: [ verbe ]
+etymologie:
+  - forme: incarnare
+    langue: latin ecclésiastique
+    sens: revêtir la forme humaine
+    elements:
+      - forme: in-
+        sens: dans
+      - forme: caro
+        sens: chair
+explication: >-
+  S'incarner, c'est entrer dans la chair ; le latin ecclésiastique incarnare
+  disait que le Verbe a pris un corps. Le mot s'est étendu à toute idée qui
+  prend forme visible, puis à l'acteur qui donne corps à un personnage.
+famille: [ incarnation, incarné, incarnat ]
+themes: [ religion, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: incarner
+  - ouvrage: littre
+    entree: incarner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

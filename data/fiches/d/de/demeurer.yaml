@@ -1,0 +1,22 @@
+mot: demeurer
+nature: [ verbe ]
+etymologie:
+  - forme: demorari
+    langue: latin
+    sens: tarder, s'attarder, rester
+explication: >-
+  Demorari voulait dire tarder, s'attarder, puis rester en un lieu. Demeurer a
+  perdu l'idée de retard : il dit aujourd'hui le séjour et la résidence
+  durables.
+famille: [ demeure, demeurant, demeuré ]
+themes: [ maison ]
+sources:
+  - ouvrage: tlfi
+    entree: demeurer
+  - ouvrage: littre
+    entree: demeurer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

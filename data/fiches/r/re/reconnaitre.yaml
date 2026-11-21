@@ -1,0 +1,39 @@
+mot: reconnaître
+nature: [ verbe ]
+etymologie:
+  - forme: reconnaître
+    langue: français
+    sens: retrouver dans sa mémoire
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: connaître
+        sens: savoir, être informé
+explication: >-
+  Reconnaître, c'est connaître de nouveau : retrouver dans une perception
+  présente une chose déjà connue. Le mot s'est étendu à l'aveu — reconnaître un
+  fait, une dette — et à l'exploration d'un lieu, sans quitter cette
+  connaissance retrouvée.
+famille: [ reconnaissance, reconnaissable, reconnaissant ]
+themes: [ esprit, société ]
+tradition:
+  lectures:
+    - texte: "Reconnaître, c'est retrouver dans la mémoire : ce qui est reconnu quand
+        on entend le nom de la vie bienheureuse était déjà là, enfoui dans la
+        mémoire."
+      citation: propterea reperta in memoria recognoscitur quando beatae vitae nomen
+        auditur
+      sources:
+        - ouvrage: confessions
+          entree: X
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Decimus
+sources:
+  - ouvrage: littre
+    entree: reconnaître
+  - ouvrage: tlfi
+    entree: reconnaître
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

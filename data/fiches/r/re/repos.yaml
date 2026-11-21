@@ -1,0 +1,30 @@
+mot: repos
+nature: [ nom masculin ]
+etymologie:
+  - forme: reposer
+    langue: français
+  - forme: repausare
+    langue: bas latin
+    sens: remettre, réconforter, reposer
+  - forme: pausare
+    langue: latin
+    sens: cesser, s'arrêter
+explication: >-
+  Le repos est d'abord la pause : pausare disait cesser, s'arrêter, et repausare
+  délasser. Le mot dit aujourd'hui l'état de calme et l'interruption du travail,
+  plus que l'arrêt qui le constitue.
+famille: [ reposer, reposant, reposé, reposoir ]
+renvois: [ vacances, retraite ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: repos
+  - ouvrage: tlfi
+    entree: reposer
+  - ouvrage: littre
+    entree: reposer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,26 @@
+mot: remarquer
+nature: [ verbe ]
+etymologie:
+  - forme: remarquer
+    langue: français
+    sens: arrêter son regard, son attention
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: marquer
+        sens: faire une marque
+explication: >-
+  Remarquer est formé de re- et marquer. Le mot dit l'attention qui distingue :
+  on remarque ce qui se détache du reste ; le sens de « marquer de nouveau » est
+  vieilli.
+famille: [ remarque, remarquable, remarquablement ]
+renvois: [ observer ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: remarquer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

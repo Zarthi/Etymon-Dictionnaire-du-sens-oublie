@@ -1,0 +1,25 @@
+mot: réel
+nature: [ adjectif ]
+etymologie:
+  - forme: realis
+    langue: bas latin
+    sens: réel, effectif ; qui concerne les biens
+  - forme: res
+    langue: latin
+    sens: chose, bien
+explication: >-
+  Realis est formé sur res, « chose » : est réel ce qui est une chose, par
+  opposition aux personnes et aux mots. Le droit a d'abord dit les droits réels,
+  portant sur les biens ; l'usage s'est ensuite étendu à tout ce qui existe.
+famille: [ réalité, réaliser, réalisme ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: réel
+  - ouvrage: littre
+    entree: réel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,34 @@
+mot: occident
+nature: [ nom masculin ]
+etymologie:
+  - forme: occidens
+    langue: latin
+    sens: couchant, ouest
+  - forme: occidere
+    langue: latin
+    sens: tomber, se coucher
+explication: >-
+  Occident nomme le point où le soleil se couche. Il a désigné les régions de
+  l'ouest, puis la partie latine de l'Europe et, au XXe siècle, le camp opposé à
+  l'Est.
+famille: [ occidental, occidentaliser ]
+renvois: [ orient ]
+themes: [ politique, nature ]
+tradition:
+  lectures:
+    - texte: L'occident est ainsi nommé parce qu'il fait mourir et finir le jour.
+      citation: Occidens, quod diem faciat occidere atque interire.
+      sources:
+        - ouvrage: etymologies
+          entree: III
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_III
+sources:
+  - ouvrage: tlfi
+    entree: occident
+  - ouvrage: littre
+    entree: occident
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,34 @@
+mot: talent
+nature: [ nom masculin ]
+etymologie:
+  - forme: talentum
+    langue: latin
+    sens: poids, somme d'argent
+  - forme: τάλαντον
+    langue: grec ancien
+    sens: plateau de balance, poids, talent
+explication: >-
+  Le talent antique était un poids et une somme d'argent. Les langues romanes en
+  ont tiré le désir, comme le poids qui fait pencher la balance, puis la
+  parabole évangélique en a fait le don naturel à faire fructifier.
+themes: [ esprit, argent ]
+tradition:
+  lectures:
+    - texte: "Le talent est un bien confié : celui qui l'a reçu doit le faire
+        fructifier, selon les lieux et les temps."
+      citation: homo talentum sibi creditum tenetur utiliter dispensare, servata
+        opportunitate locorum et temporum et aliarum rerum, ut dictum est.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 71 a. 1 ad 2
+          url: https://www.corpusthomisticum.org/sth3061.html
+sources:
+  - ouvrage: tlfi
+    entree: talent
+  - ouvrage: littre
+    entree: talent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

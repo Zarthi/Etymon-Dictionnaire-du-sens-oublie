@@ -1,0 +1,28 @@
+mot: répondre
+nature: [ verbe ]
+etymologie:
+  - forme: respondere
+    langue: latin
+    sens: répondre, promettre en retour
+    elements:
+      - forme: re-
+        sens: en retour
+      - forme: spondere
+        sens: promettre
+explication: >-
+  Respondere unissait l'idée de répondre et celle de promettre en retour : la
+  réponse engageait. Le mot ne dit plus aujourd'hui que la parole donnée en
+  retour à une question ou à un appel.
+famille: [ réponse, responsable, répondeur, répondant ]
+renvois: [ reclamer ]
+themes: [ parole ]
+sources:
+  - ouvrage: tlfi
+    entree: répondre
+  - ouvrage: littre
+    entree: répondre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

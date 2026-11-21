@@ -1,0 +1,28 @@
+mot: corrompre
+nature: [ verbe ]
+etymologie:
+  - forme: corrumpere
+    langue: latin
+    sens: détruire, altérer
+    elements:
+      - forme: cum-
+        sens: avec, tout à fait
+      - forme: rumpere
+        sens: rompre
+explication: >-
+  Corrompre, c'est rompre ; corrumpere brisait l'intégrité d'une chose, matière
+  ou âme. Le mot dit aujourd'hui l'altération, celle d'une matière, d'un texte
+  ou d'une âme, et la séduction par dons : il ne dit plus la rupture, mais
+  l'altération qui en résulte.
+famille: [ corruption, corruptible, corrupteur, corrompu ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: corrompre
+  - ouvrage: littre
+    entree: corrompre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

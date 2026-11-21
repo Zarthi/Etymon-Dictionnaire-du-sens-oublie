@@ -1,0 +1,27 @@
+mot: persévérer
+nature: [ verbe ]
+etymologie:
+  - forme: perseverare
+    langue: latin
+    sens: continuer, persister
+    elements:
+      - forme: per-
+        sens: à travers, jusqu'au bout
+      - forme: severus
+        sens: sévère, rigoureux
+explication: >-
+  Persévérer, c'est tenir jusqu'au bout ; le latin perseverare tenait à severus,
+  « sévère, rigoureux ». Le mot dit aujourd'hui la constance dans un effort ; la
+  sévérité de la racine n'y est plus entendue.
+famille: [ persévérance, persévérant, persévéramment ]
+themes: [ morale, esprit ]
+sources:
+  - ouvrage: littre
+    entree: persévérer
+  - ouvrage: tlfi
+    entree: persévérer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: succès
+nature: [ nom masculin ]
+etymologie:
+  - forme: successus
+    langue: latin
+    sens: approche, marche en avant, réussite
+explication: >-
+  Succès a d'abord dit l'issue d'une affaire, heureuse ou malheureuse. À partir
+  du XVIIe siècle, employé seul, il n'a plus désigné que l'issue favorable, puis
+  l'approbation du public.
+famille: [ insuccès ]
+renvois: [ prospere ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: succès
+  - ouvrage: littre
+    entree: succès
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

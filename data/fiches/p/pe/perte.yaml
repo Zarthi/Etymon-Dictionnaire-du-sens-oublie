@@ -1,0 +1,22 @@
+mot: perte
+nature: [ nom féminin ]
+etymologie:
+  - forme: "*perdita"
+    langue: latin populaire
+    sens: chose perdue, perdition
+explication: >-
+  Perte est le participe de perdre devenu nom : ce qui est perdu. Le mot a
+  d'abord nommé la privation d'un être cher, puis la ruine, avant la privation
+  d'un bien.
+famille: [ perdre, perdition ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: perte
+  - ouvrage: littre
+    entree: perte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

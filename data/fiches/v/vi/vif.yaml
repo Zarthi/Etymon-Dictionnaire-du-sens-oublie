@@ -1,0 +1,35 @@
+mot: vif
+nature: [ adjectif ]
+etymologie:
+  - forme: vivus
+    langue: latin
+    sens: vivant, animé
+explication: >-
+  Vif a d'abord voulu dire vivant, et le mot garde ce sens dans « chair vive »
+  ou « enterré vif ». Il a pris celui d'intense, puis celui d'ardent et de
+  rapide, en parlant des couleurs, des sentiments et de l'esprit.
+famille: [ vivacité, vivant, vivement ]
+renvois: [ vigueur ]
+themes: [ esprit, corps ]
+tradition:
+  lectures:
+    - texte: "Le vif est celui qui vivra ; le vivant, celui qui mourra : la différence
+        porte sur l'avenir de la vie."
+      citation: Inter Vivum et viventem. Vivum de victuro dicimus; viventem, de morituro.
+      sources:
+        - ouvrage: differences
+          entree: "591"
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: vif
+  - ouvrage: littre
+    entree: vif
+  - ouvrage: differences
+    entree: "591"
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: impératif
+nature: [ adjectif, nom masculin ]
+etymologie:
+  - forme: imperativus
+    langue: bas latin
+    sens: qui exprime un ordre
+  - forme: imperare
+    langue: latin
+    sens: commander
+explication: >-
+  Né comme terme de grammaire, l'impératif a désigné un mode verbal avant de
+  qualifier ce qui s'impose : une nécessité, un devoir. L'ordre grammatical est
+  devenu l'urgence ou la prescription morale.
+famille: [ impérieux, impérieusement, impérativement ]
+themes: [ parole, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: impératif
+  - ouvrage: littre
+    entree: impératif
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

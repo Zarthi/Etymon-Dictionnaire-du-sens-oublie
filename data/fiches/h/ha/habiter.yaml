@@ -1,0 +1,23 @@
+mot: habiter
+nature: [ verbe ]
+etymologie:
+  - forme: habitare
+    langue: latin
+    sens: avoir souvent, séjourner habituellement
+explication: >-
+  Habiter, fréquentatif de habere, disait avoir souvent, être souvent en un
+  lieu. Le mot ne dit plus l'avoir : il dit le fait de résider, d'occuper une
+  demeure.
+famille: [ habitation, habitant, habitat, cohabiter ]
+renvois: [ demeurer, rester ]
+themes: [ maison ]
+sources:
+  - ouvrage: tlfi
+    entree: habiter
+  - ouvrage: littre
+    entree: habiter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

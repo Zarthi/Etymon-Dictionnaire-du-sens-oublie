@@ -1,0 +1,28 @@
+mot: prochain
+nature: [ adjectif ]
+etymologie:
+  - forme: "*propeanus"
+    langue: latin populaire
+    sens: tout proche
+explication: >-
+  L'adjectif latin populaire *propeanus vient de prope, près : il disait d'abord
+  ce qui est proche dans le temps ou l'espace. Employé comme nom, il a désigné
+  son semblable.
+themes: [ temps, société ]
+tradition:
+  lectures:
+    - texte: "Le nom de prochain est relatif : nul n'est prochain que d'un autre."
+      citation: Proximi enim nomen ad aliquid est, nec quisquam esse proximus nisi
+        proximo potest.
+      sources:
+        - ouvrage: la-doctrine-chretienne
+          entree: I
+          url: https://la.wikisource.org/wiki/De_Doctrina_Christiana/I
+sources:
+  - ouvrage: tlfi
+    entree: prochain
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

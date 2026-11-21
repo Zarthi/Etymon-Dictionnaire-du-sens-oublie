@@ -1,0 +1,22 @@
+mot: rencontrer
+nature: [ verbe ]
+etymologie:
+  - forme: encontrer
+    langue: ancien français
+    sens: aller à la rencontre de, trouver sur son chemin
+explication: >-
+  Les premières attestations françaises disent combattre, vers 1175, puis
+  trouver par hasard, vers 1225. Le mot s'est ensuite étendu à toute rencontre,
+  fortuite ou voulue.
+famille: [ rencontre, rencontreur ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: rencontrer
+  - ouvrage: littre
+    entree: rencontrer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

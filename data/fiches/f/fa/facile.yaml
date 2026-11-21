@@ -1,0 +1,21 @@
+mot: facile
+nature: [ adjectif ]
+etymologie:
+  - forme: facilis
+    langue: latin
+    sens: aisé à faire, qui se fait sans peine
+explication: >-
+  Mot tardif, emprunté au latin au XVe siècle, il a gardé le sens de ce qui se
+  fait sans peine, puis l'a étendu au caractère de qui se prête aisément à tout.
+famille: [ facilité, faciliter, facilement ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: facile
+  - ouvrage: littre
+    entree: facile
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

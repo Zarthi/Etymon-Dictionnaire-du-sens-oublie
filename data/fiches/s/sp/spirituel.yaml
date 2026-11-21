@@ -1,0 +1,32 @@
+mot: spirituel
+nature: [ adjectif ]
+etymologie:
+  - forme: spiritalis
+    langue: bas latin
+    sens: qui se rapporte à l'âme et à l'Esprit, par opposition à corporel
+  - forme: spiritus
+    langue: latin
+    sens: souffle, principe vital
+explication: >-
+  Les Pères l'opposaient à corporel : spiritalis disait ce qui vient de
+  l'Esprit. Le mot a couvert en français la vie de l'âme et la piété, puis, en
+  1573, la finesse d'esprit.
+themes: [ religion, esprit ]
+tradition:
+  lectures:
+    - texte: Le chrême, devenu spiritalis, a donné son nom au Seigneur, parce que
+        celui-ci a été oint de l'Esprit.
+      citation: Nam chrisma Graece, Latine unctio nuncupatur, quae etiam Domino nomen
+        adcommodavit facta spiritalis, quia Spiritu unctus est a Deo Patre
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 3
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: spirituel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

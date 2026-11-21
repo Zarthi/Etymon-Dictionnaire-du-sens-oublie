@@ -1,0 +1,28 @@
+mot: observer
+nature: [ verbe ]
+etymologie:
+  - forme: observare
+    langue: latin
+    sens: garder autour, surveiller, respecter
+    elements:
+      - forme: ob-
+        sens: devant, autour
+      - forme: servare
+        sens: garder, conserver
+explication: >-
+  Observer, c'est d'abord garder autour : observare réunissait le sens de
+  veiller sur et celui de respecter une règle. Le mot a gardé ces deux faces,
+  observer les astres et observer la loi ; l'usage les sépare.
+famille: [ observation, observateur, observatoire, observance, observable ]
+renvois: [ regarder ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: littre
+    entree: observer
+  - ouvrage: tlfi
+    entree: observer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

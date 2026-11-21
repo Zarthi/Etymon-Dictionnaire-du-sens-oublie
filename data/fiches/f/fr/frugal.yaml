@@ -1,0 +1,39 @@
+mot: frugal
+nature: [ adjectif ]
+etymologie:
+  - forme: frugalis
+    langue: bas latin
+    sens: sobre, tempérant
+  - forme: frux
+    langue: latin
+    sens: fruit, moisson
+explication: >-
+  Frugalis vient de frux, « fruit, moisson » : l'homme frugal se nourrissait des
+  fruits de la terre, et sa tempérance tenait à cette simplicité. Le mot ne dit
+  plus que la sobriété de table, sans le rapport au fruit.
+famille: [ frugalité, frugalement ]
+renvois: [ luxure ]
+themes: [ nourriture ]
+tradition:
+  lectures:
+    - texte: Frugalis est nommé d'après frux, c'est-à-dire le fruit, ou la
+        parcimonie ; d'autres y entendent la modestie et la tempérance.
+      citation: Frugalis a fruge nominatus, id est a fructu vel parsimonia, sive, ut
+        alii volunt, a modestia et temperantia.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 95
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: frugal
+  - ouvrage: littre
+    entree: frugal
+  - ouvrage: etymologies
+    entree: X, 95
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

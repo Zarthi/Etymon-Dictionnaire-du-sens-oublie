@@ -1,0 +1,25 @@
+mot: personnage
+nature: [ nom masculin ]
+etymologie:
+  - forme: personagium
+    langue: bas latin
+    sens: étendue d'un bénéfice
+  - forme: persona
+    langue: latin
+    sens: masque de théâtre, rôle
+explication: >-
+  Le mot a d'abord nommé une situation religieuse importante, puis un dignitaire
+  ecclésiastique ; il a ensuite désigné un rôle au théâtre et dans les récits.
+  Il dit aujourd'hui un personnage de fiction ou une personne qui se distingue.
+famille: [ personne, personnifier ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: personnage
+  - ouvrage: littre
+    entree: personnage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,29 @@
+mot: indigène
+nature: [ adjectif ]
+etymologie:
+  - forme: indigena
+    langue: latin
+    sens: originaire du pays
+explication: >-
+  Indigène dit ce qui est né dans le pays où il vit. À l'époque coloniale, le
+  mot a servi à désigner les populations natives des territoires colonisés.
+famille: [ indigénat ]
+themes: [ société, nature ]
+tradition:
+  lectures:
+    - texte: L'indigène est celui qui est né de là, c'est-à-dire né dans le même lieu.
+      citation: Indigena vocatus quod inde sit genitus, id est in eodem loco natus.
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: indigène
+  - ouvrage: littre
+    entree: indigène
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,22 @@
+mot: vigueur
+nature: [ nom féminin ]
+etymologie:
+  - forme: vigor
+    langue: latin
+    sens: énergie physique ou mentale, vitalité
+explication: >-
+  Vigor disait l'énergie du corps et de l'esprit, et déjà la force d'une loi. Le
+  français a gardé les deux : la vigueur d'un homme, et l'entrée en vigueur d'un
+  texte.
+famille: [ vigoureux, vigoureusement ]
+themes: [ corps, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: vigueur
+  - ouvrage: littre
+    entree: vigueur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

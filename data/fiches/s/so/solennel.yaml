@@ -1,0 +1,32 @@
+mot: solennel
+nature: [ adjectif ]
+etymologie:
+  - forme: sollemnis
+    langue: latin
+    sens: qui revient tous les ans ; consacré
+explication: >-
+  La fête sollemnis revenait chaque année ; le mot a qualifié la cérémonie
+  publique et la gravité qui l'accompagne, puis, par ironie, une gravité
+  affectée.
+themes: [ société, religion ]
+tradition:
+  lectures:
+    - texte: La solennité vient des choses sacrées, reçue de manière qu'on ne doive
+        pas la changer pour cause de religion ; son nom est tiré de solitum, ce
+        qui est ferme et solide.
+      citation: Sollemnitas a sacris dicitur, ita suscepta ut mutari ob religionem non
+        debeat, ab solito, id est firmo atque solido nominata.
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: solennel
+  - ouvrage: littre
+    entree: solennel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

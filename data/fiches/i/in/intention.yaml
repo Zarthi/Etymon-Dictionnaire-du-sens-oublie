@@ -1,0 +1,38 @@
+mot: intention
+nature: [ nom féminin ]
+etymologie:
+  - forme: intentio
+    langue: latin
+    sens: tension, application de l'esprit
+    elements:
+      - forme: in-
+        sens: vers
+      - forme: tendere
+        sens: tendre
+explication: >-
+  Intentio disait d'abord la tension par laquelle l'esprit se porte vers un
+  objet. Le mot dit aujourd'hui le but ainsi visé, le dessein prémédité, et
+  garde, dans un sens cognitif, l'application de l'esprit à un objet de
+  connaissance.
+famille: [ intentionnel, intentionné, intentionnalité ]
+renvois: [ decider ]
+themes: [ esprit, morale ]
+tradition:
+  lectures:
+    - texte: "Les êtres qui agissent en vue d'une fin n'y parviennent pas par hasard,
+        mais par intention : ils y tendent."
+      citation: non a casu, sed ex intentione perveniunt ad finem
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 2 a. 3
+          url: https://www.corpusthomisticum.org/sth1002.html
+sources:
+  - ouvrage: tlfi
+    entree: intention
+  - ouvrage: littre
+    entree: intention
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

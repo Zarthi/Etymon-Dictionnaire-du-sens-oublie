@@ -1,0 +1,25 @@
+mot: usage
+nature: [ nom masculin ]
+etymologie:
+  - forme: usaticum
+    langue: bas latin
+    sens: usage, coutume
+  - forme: usus
+    langue: latin
+    sens: usage, pratique
+explication: >-
+  Usage a d'abord nommé une pratique reçue, la coutume. Il a pris ensuite le
+  sens de l'emploi d'une chose, puis celui des manières reçues dans le monde, le
+  bon usage.
+famille: [ user, usuel, usager ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: littre
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

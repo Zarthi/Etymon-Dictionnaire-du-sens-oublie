@@ -1,0 +1,26 @@
+mot: normal
+nature: [ adjectif ]
+etymologie:
+  - forme: normalis
+    langue: latin
+    sens: fait à l'équerre ; conforme à la règle
+  - forme: norma
+    langue: latin
+    sens: équerre, règle
+explication: >-
+  Norma est l'équerre, et normalis, ce qui est fait à l'équerre, donc droit et
+  conforme à la règle. Le mot a pris au XIXe siècle le sens statistique de ce
+  qui est le plus fréquent, puis celui de ce qui ne dévie pas de la moyenne.
+famille: [ norme, normalité, normaliser ]
+renvois: [ original ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: normal
+  - ouvrage: littre
+    entree: normal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,24 @@
+mot: pays
+nature: [ nom masculin ]
+etymologie:
+  - forme: pagensis
+    langue: bas latin
+    sens: du canton, du territoire rural
+  - forme: pagus
+    langue: latin
+    sens: canton, district rural
+explication: >-
+  Pays a nommé une région, puis le territoire dont on est originaire, la patrie.
+  Il désigne aujourd'hui une nation, un État, ou une contrée.
+famille: [ paysan, paysage, dépayser ]
+themes: [ société, politique ]
+sources:
+  - ouvrage: littre
+    entree: pays
+  - ouvrage: tlfi
+    entree: pays
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

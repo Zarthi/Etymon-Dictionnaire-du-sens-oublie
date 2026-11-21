@@ -1,0 +1,33 @@
+mot: réconcilier
+nature: [ verbe ]
+etymologie:
+  - forme: reconciliare
+    langue: latin
+    sens: rétablir la concorde, réconcilier
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: conciliare
+        sens: réunir, concilier
+explication: >-
+  Reconciliare, c'était ramener à la paix. Le mot a d'abord dit l'accord renoué
+  entre deux hommes, puis le retour du pécheur à Dieu, puis l'accord des choses.
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: On est réconcilié quand, après le péché, on revient par la pénitence,
+        comme on est concilié à Dieu quand on se convertit.
+      citation: Nam sicut conciliamur Deo, quando primum a gentilitate convertimur,
+        ita reconciliamur, quando post peccatum poenitendo regredimur.
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: réconcilier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

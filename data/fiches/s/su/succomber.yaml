@@ -1,0 +1,26 @@
+mot: succomber
+nature: [ verbe ]
+etymologie:
+  - forme: succumbere
+    langue: latin
+    sens: s'affaisser sous, être vaincu
+    elements:
+      - forme: sub-
+        sens: sous
+      - forme: cumbere
+        sens: s'enfoncer
+explication: >-
+  Le latin succumbere disait qu'on s'affaisse sous une charge. Le mot a pris le
+  sens de la défaite, de la tentation à laquelle on cède, de la mort même, sans
+  perdre celui du corps qui plie sous le poids.
+themes: [ morale, guerre ]
+sources:
+  - ouvrage: littre
+    entree: succomber
+  - ouvrage: tlfi
+    entree: succomber
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

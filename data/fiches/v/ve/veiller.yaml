@@ -1,0 +1,22 @@
+mot: veiller
+nature: [ verbe ]
+etymologie:
+  - forme: vigilare
+    langue: latin
+    sens: être éveillé, ne pas dormir
+explication: >-
+  Veiller, c'était rester éveillé, et le mot a gardé ce sens. Il s'est chargé
+  d'une attention soutenue : veiller sur quelqu'un ou veiller à une affaire,
+  c'est y prendre garde, comme celui qui ne dort pas.
+famille: [ veille, veillée, veilleur, vigilant, surveiller ]
+themes: [ société, santé ]
+sources:
+  - ouvrage: littre
+    entree: veiller
+  - ouvrage: tlfi
+    entree: veiller
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

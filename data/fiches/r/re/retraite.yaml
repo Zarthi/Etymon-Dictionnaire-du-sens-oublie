@@ -1,0 +1,30 @@
+mot: retraite
+nature: [ nom féminin ]
+etymologie:
+  - forme: retraire
+    langue: ancien français
+    sens: retirer, se retirer
+  - forme: retrahere
+    langue: latin
+    sens: tirer en arrière, retirer
+    elements:
+      - forme: re-
+        sens: en arrière
+      - forme: trahere
+        sens: tirer
+explication: >-
+  Retraite est le substantif de retrait, participe de retraire, du latin
+  retrahere « tirer en arrière ». Le mot a d'abord dit le mouvement de recul,
+  puis le lieu où l'on se retire et la cessation d'activité.
+famille: [ retrait, retraité, retraiter ]
+themes: [ travail, société ]
+sources:
+  - ouvrage: tlfi
+    entree: retraite
+  - ouvrage: tlfi
+    entree: retraire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

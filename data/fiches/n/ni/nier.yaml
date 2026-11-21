@@ -1,0 +1,28 @@
+mot: nier
+nature: [ verbe ]
+etymologie:
+  - forme: negare
+    langue: latin
+    sens: dire non, affirmer que... ne... pas
+explication: >-
+  Nier, c'est dire non ; negare affirmait qu'une chose n'est pas. Le mot a gardé
+  ce refus, et il s'étend au refus d'admettre, de reconnaître ou de tenir
+  compte ; nier une dette, nier Dieu.
+ecartees:
+  - forme: nec aio
+    langue: latin
+    sens: ne pas dire
+    raison: "Le Littré l'écarte : la régularité de la conjugaison exclut la
+      composition avec aio."
+famille: [ négation, négatif, négateur, abnégation, niable ]
+themes: [ parole, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: nier
+  - ouvrage: littre
+    entree: nier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

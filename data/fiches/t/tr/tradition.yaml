@@ -1,0 +1,22 @@
+mot: tradition
+nature: [ nom féminin ]
+etymologie:
+  - forme: traditio
+    langue: latin
+    sens: action de remettre, de transmettre, livraison
+explication: >-
+  Traditio était une remise, une livraison, et le latin chrétien en a fait
+  l'enseignement transmis de bouche en bouche. Le mot dit aujourd'hui ce qui est
+  reçu du passé. L'ancienne langue en avait tiré trahison, de la même idée de
+  livrer.
+themes: [ religion, société ]
+sources:
+  - ouvrage: tlfi
+    entree: tradition
+  - ouvrage: littre
+    entree: tradition
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

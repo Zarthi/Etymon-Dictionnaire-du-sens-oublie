@@ -1,0 +1,37 @@
+mot: sûr
+nature: [ adjectif ]
+etymologie:
+  - forme: securus
+    langue: latin
+    sens: sans souci, tranquille
+    elements:
+      - forme: se-
+        sens: sans
+      - forme: cura
+        sens: soin, souci
+explication: >-
+  Securus disait celui qui est sans souci, à l'abri du danger. Le mot a déplacé
+  l'accent de la tranquillité vers la certitude : sûr dit aujourd'hui ce dont on
+  ne doute pas et ce sur quoi l'on peut compter.
+famille: [ sûreté, sécurité, sûrement, assurer ]
+renvois: [ repos ]
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: "Securus se dit comme sine cura, sans soin : le mot dit l'absence de
+        souci, non la certitude."
+      citation: Securus, quasi sine cura;
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: sûr
+  - ouvrage: littre
+    entree: sûr
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

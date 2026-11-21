@@ -1,0 +1,22 @@
+mot: innocent
+nature: [ adjectif ]
+etymologie:
+  - forme: innocens
+    langue: latin
+    sens: qui ne fait pas de mal, inoffensif
+explication: >-
+  Innocens disait celui qui ne nuit pas ; il a désigné ensuite qui n'est pas
+  coupable, puis, en 1360, celui qui ne connaît pas le mal : le naïf. Le mot a
+  quitté l'action pour l'ignorance.
+renvois: [ pur ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: innocent
+  - ouvrage: littre
+    entree: innocent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

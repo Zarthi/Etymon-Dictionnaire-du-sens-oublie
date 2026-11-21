@@ -1,0 +1,29 @@
+mot: rôle
+nature: [ nom masculin ]
+etymologie:
+  - forme: rollus
+    langue: latin médiéval
+    sens: rouleau, parchemin roulé
+  - forme: rotulus
+    langue: bas latin
+    sens: petite roue, rouleau
+  - forme: rota
+    langue: latin
+    sens: roue
+explication: >-
+  Rôle nommait le rouleau de parchemin où l'on inscrivait une liste, celle des
+  soldats ou des affaires d'un tribunal. De la liste des parties on est passé au
+  texte que récite l'acteur, puis à la part tenue dans la vie.
+famille: [ enrôler, contrôle, rouleau ]
+renvois: [ personnage ]
+themes: [ société, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: rôle
+  - ouvrage: littre
+    entree: rôle
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

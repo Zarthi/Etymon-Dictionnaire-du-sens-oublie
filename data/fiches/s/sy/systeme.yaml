@@ -1,0 +1,25 @@
+mot: système
+nature: [ nom masculin ]
+etymologie:
+  - forme: systema
+    langue: latin
+    sens: ensemble
+  - forme: σύστημα
+    langue: grec ancien
+    sens: réunion en un corps, ensemble
+explication: >-
+  Système a d'abord nommé un ensemble dont les parties sont coordonnées par une
+  loi. Le mot s'est étendu à toute construction de l'esprit, puis à tout
+  ensemble organisé, politique, technique ou vivant.
+famille: [ systématique ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: tlfi
+    entree: système
+  - ouvrage: littre
+    entree: système
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

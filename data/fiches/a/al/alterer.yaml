@@ -1,0 +1,22 @@
+mot: altérer
+nature: [ verbe ]
+etymologie:
+  - forme: alterare
+    langue: bas latin
+    sens: rendre autre, changer
+explication: >-
+  Alterare disait d'abord changer la nature d'une chose, le plus souvent pour la
+  gâter. La soif est venue par le sens de « troubler, affecter », que le mot a
+  pris au XVIe siècle.
+famille: [ altération, altérable, altérant, altérité, désaltérer ]
+themes: [ santé ]
+sources:
+  - ouvrage: tlfi
+    entree: altérer
+  - ouvrage: littre
+    entree: altérer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,38 @@
+mot: satisfaire
+nature: [ verbe ]
+etymologie:
+  - forme: satisfacere
+    langue: latin
+    sens: faire assez, s'acquitter envers quelqu'un
+    elements:
+      - forme: satis
+        sens: assez
+      - forme: facere
+        sens: faire
+explication: >-
+  Satisfacere, c'était faire assez : payer ce qu'on doit, réparer une offense,
+  répondre à une exigence. Satisfaire garde ce sens de dette acquittée dans
+  l'idée de contenter un désir ou un besoin.
+famille: [ satisfaction, satisfait, satisfaisant, satisfactoire ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "La satisfaction est de retrancher les causes du péché et ses
+        suggestions, et de ne pas le commettre une seconde fois : le mot dit
+        l'accomplissement d'une pénitence, non le contentement d'un désir."
+      citation: Satisfactio autem est causas peccatorum et suggestiones excludere et
+        ultra peccatum non iterare.
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: satisfaire
+  - ouvrage: littre
+    entree: satisfaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,22 @@
+mot: secours
+nature: [ nom masculin ]
+etymologie:
+  - forme: succursum
+    langue: latin populaire
+    sens: aide
+  - forme: succurrere
+    langue: latin
+    sens: venir en aide
+explication: >-
+  Le mot nommait l'aide portée dans le danger, puis les troupes qui viennent la
+  donner, puis l'argent et les soins. Le cri « au secours ! » garde le premier
+  sens.
+themes: [ société, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: secours
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

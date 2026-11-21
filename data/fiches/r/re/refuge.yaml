@@ -1,0 +1,21 @@
+mot: refuge
+nature: [ nom masculin ]
+etymologie:
+  - forme: refugium
+    langue: latin
+    sens: action de se réfugier ; asile
+  - forme: refugere
+    langue: latin
+    sens: s'enfuir
+explication: >-
+  Refugium nommait l'action de se réfugier et le lieu où l'on se met à l'abri.
+  Le français garde le lieu et le recours, et a perdu la fuite.
+themes: [ maison, société ]
+sources:
+  - ouvrage: tlfi
+    entree: refuge
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

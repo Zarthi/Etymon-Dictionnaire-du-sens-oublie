@@ -1,0 +1,35 @@
+mot: luxure
+nature: [ nom féminin ]
+etymologie:
+  - forme: luxuria
+    langue: latin
+    sens: surabondance, excès
+explication: >-
+  Luxuria disait la surabondance et la profusion, sans idée sexuelle ; le latin
+  chrétien l'a appliqué au plaisir charnel. Le français n'a retenu que ce sens
+  restreint, et le mot ne dit plus l'excès en général.
+famille: [ luxurieux, luxuriance ]
+themes: [ morale, corps ]
+tradition:
+  lectures:
+    - texte: "L'âme qui se détourne de Dieu donne à ses vices le nom des biens qu'elle
+        cherche : la luxure veut s'appeler satiété et abondance, alors que Dieu
+        seul est plénitude."
+      citation: luxuria satietatem atque abundantiam se cupit vocari
+      sources:
+        - ouvrage: confessions
+          entree: II, 6, 13
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Secundus
+sources:
+  - ouvrage: tlfi
+    entree: luxure
+  - ouvrage: littre
+    entree: luxure
+  - ouvrage: confessions
+    entree: II, 6, 13
+    url: https://la.wikisource.org/wiki/Confessiones
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

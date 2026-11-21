@@ -1,0 +1,28 @@
+mot: infâme
+nature: [ adjectif ]
+etymologie:
+  - forme: infamis
+    langue: latin
+    sens: mal famé, décrié
+explication: >-
+  Infamis disait celui dont la renommée est mauvaise, et, en droit, celui qu'une
+  condamnation flétrit. Le mot exprime aujourd'hui la bassesse morale et le
+  dégoût qu'elle inspire.
+renvois: [ scandale ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: L'infâme est celui qui est comme sans bonne renommée.
+      citation: Hoc quoque et infamium, quasi sine bona fama.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 26
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: infâme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

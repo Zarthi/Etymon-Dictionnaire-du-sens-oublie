@@ -1,0 +1,23 @@
+mot: faible
+nature: [ adjectif ]
+etymologie:
+  - forme: "*febilis"
+    langue: latin populaire
+    sens: digne d'être pleuré, misérable
+explication: >-
+  La forme populaire *febilis vient du latin qui disait ce qui mérite les
+  larmes, donc le misérable ; elle a passé de là à « sans force ». Le mot ne dit
+  plus le misérable, mais le manque de vigueur ou de pouvoir.
+famille: [ faiblesse, faiblir, faiblement ]
+renvois: [ robuste ]
+themes: [ corps ]
+sources:
+  - ouvrage: tlfi
+    entree: faible
+  - ouvrage: littre
+    entree: faible
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

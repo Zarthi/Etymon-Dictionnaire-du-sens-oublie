@@ -1,0 +1,27 @@
+mot: séduire
+nature: [ verbe ]
+etymologie:
+  - forme: seducere
+    langue: latin
+    sens: détourner du droit chemin, amener à l'écart
+    elements:
+      - forme: se-
+        sens: à part
+      - forme: ducere
+        sens: mener
+explication: >-
+  Séduire a d'abord signifié détourner du droit chemin, au sens moral et
+  religieux. Le mot en est venu à l'action de plaire et d'attirer ; l'idée
+  d'égarement ne s'y entend plus.
+famille: [ séducteur, séduction, séduisant, séduit ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: séduire
+  - ouvrage: littre
+    entree: séduire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

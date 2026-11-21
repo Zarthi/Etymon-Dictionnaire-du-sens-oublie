@@ -1,0 +1,46 @@
+mot: mal
+nature: [ nom masculin ]
+etymologie:
+  - forme: mal
+    langue: ancien français
+    sens: ce qui est mauvais ; souffrance
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: male
+          sens: mal, de mauvaise manière
+          selon: [ tlfi ]
+        - forme: malus
+          sens: mauvais, méchant
+          selon: [ littre ]
+explication: >-
+  Le mot a d'abord nommé le mal moral, avant la maladie et la douleur du corps.
+  Son origine est discutée : il peut venir de la substantivation de l'adverbe
+  mal, ou de l'adjectif latin malus, dont le sens premier aurait été « noir,
+  sale ».
+famille: [ malheur, malice, malade ]
+themes: [ morale, santé ]
+tradition:
+  lectures:
+    - texte: "Il y a deux maux : celui que l'homme fait, qui est le péché, et celui
+        qu'il subit, qui est le châtiment."
+      citation: "Dupliciter malum appellatur: unum, quod homo facit, alterum, quod
+        patitur. Quod facit, peccatum est; quod patitur, poena."
+      sources:
+        - ouvrage: etymologies
+          entree: V, 27, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: mal
+  - ouvrage: littre
+    entree: mal
+  - ouvrage: etymologies
+    entree: V, 27, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
