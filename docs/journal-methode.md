@@ -2,6 +2,24 @@
 
 Chaque ajustement de la méthode (`docs/methode.md`), et sa cause. Le plus récent en haut.
 
+## 2026-11-21 — Économie du lot : tranches, essais groupés, pilote gratuit
+
+- **Cause** : mesure du 2026-11-20 (lots benir…beauté et e-\*, 100 fiches) : 0,08-0,12 $/fiche, tout
+  en entrée re-facturée à chaque appel d'outil — le contexte d'un agent grandit avec le lot (coût
+  quadratique). But : < 0,05 $/fiche.
+- **Le lot par tranches** d'une vingtaine de mots, rédacteur et relecteur (`docs/methode.md` §1.2,
+  §3) : trois tranches divisent l'entrée totale par ~2. Un fil conducteur
+  (`atelier/fil-conducteur.md`, écrit par le rédacteur, lu par la tranche suivante et par le
+  relecteur) garde familles, doublets et renvois d'une tranche à l'autre — il remplace le lot
+  porté en tête (§1.2 assoupli : un seul rédacteur **par tranche**, plus par lot). La clôture ne
+  le lit pas.
+- **Essais groupés** (consigne du rédacteur, générée) : un seul `rediger --essai` par paquet de
+  dix fiches au lieu d'un appel par fiche — même contrôle, cinq appels au lieu de cinquante.
+- **Pilote gratuit** : le vérificateur tourne sur `opencode/deepseek-v4.1-flash-free` (0 $) ;
+  marche arrière prévue : limites de débit ou verdict douteux signalés en tête de sa ligne
+  d'état, reprise sur le modèle payant. Rôle le moins risqué (il ne réécrit pas les fiches ; ses
+  verdicts passent par la clôture et Thibault). Mesurera si l'étendre au relecteur tient la qualité.
+
 ## 2026-10-10 — Modèles économiques obligatoires, coût annoncé avant le lot
 
 - **Cause** : le lot de 50 mots (justice/faute, parole/écriture) a été rédigé et relu par des agents

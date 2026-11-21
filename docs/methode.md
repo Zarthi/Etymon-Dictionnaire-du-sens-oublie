@@ -11,8 +11,7 @@ coût d'un lot, les consultations et les reprises mécaniques confiées à des s
 1. **Les sources d'abord, l'écriture ensuite.** On ne rédige jamais de mémoire : la fiche
    n'affirme rien qui ne soit dans le dossier de sources du mot. La mémoire guide la recherche,
    elle ne la remplace pas (AGENTS.md §2.1).
-2. **Un seul rédacteur par lot.** Il lit le cadrage une fois, garde le lot en tête (familles,
-   doublets, renvois entre ses mots) et corrige sa manière d'un mot à l'autre.
+2. **Un seul rédacteur par tranche.** Le lot est traité par tranches d'une vingtaine de mots : le contexte d'un agent est re-facturé à chaque appel d'outil, et cette re-facturation grandit avec le lot (quadratique) ; trois tranches divisent l'entrée totale par ~2. Un **fil conducteur** (`atelier/fil-conducteur.md`) porte familles, doublets et renvois d'une tranche à l'autre, et remplace le lot porté en tête. Mesure du 2026-11-20 : 0,08-0,12 $/fiche ; objectif < 0,05 $/fiche.
 3. **Un œil qui n'a pas écrit relit.** Un second agent, neuf, relit tout le lot d'après les
    dossiers. Au premier pilote, c'est lui qui a trouvé les vraies erreurs.
 4. **Le mécanique aux scripts, le jugement aux modèles.** Ce qu'un script peut faire (Littré,
@@ -47,8 +46,8 @@ qu'une ligne d'état ; `data/` et `docs/` ne bougent qu'à la clôture, et le co
 | Étape | Qui | Quoi |
 |---|---|---|
 | 1 | script : `npm run lot -- sources <mots>` | pour chaque mot, `atelier/<id>/sources.md` : le Littré (famille comprise), le TLFi (plan des sens, étymologie et historique, autres articles), le début des entrées du Lewis & Short et du Bailly pour les formes latines et grecques relevées dans ces étymologies, la recherche de leurs radicaux dans le corpus de réflexe (passages ★ d'abord). Une page non lue est signalée (⚠), jamais prise pour une absence ; reprise après un 429 ou un 503 |
-| 2 | rédacteur (DeepSeek Flash) | pour chaque mot : dossier d'après `sources.md` (tri compris), fiche, **lectures traditionnelles** (une étape à part, texte source sous les yeux), dans `atelier/<id>/` ; les auteurs et ouvrages à créer dans `atelier/references.json`, les décisions dans `atelier/decisions.md`, les doutes dans `atelier/signalements.md` ; consigne `docs/consignes/redacteur.md` |
-| 3 | relecteur (DeepSeek Flash, neuf) | toutes les fiches du lot, d'après leurs dossiers : un verdict par mot, avec un `remplacement` (`{ champ, valeur }`) quand il sait exactement la phrase à écrire ; consigne `docs/consignes/relecture.md` |
+| 2 | rédacteur (DeepSeek Flash) | **par tranches d'une vingtaine de mots** (fil conducteur `atelier/fil-conducteur.md`, lu d'abord, enrichi à mesure) : pour chaque mot, dossier d'après `sources.md`, fiche, lectures traditionnelles (une étape à part, texte source sous les yeux) dans `atelier/<id>/` ; **essais par paquets d'une dizaine de fiches** (`npm run rediger -- atelier/<id>/fiche.json … --dossier --essai`) ; les auteurs et ouvrages à créer dans `atelier/references.json`, les décisions dans `atelier/decisions.md`, les doutes dans `atelier/signalements.md` ; consigne `docs/consignes/redacteur.md` |
+| 3 | relecteur (DeepSeek Flash, neuf) | **par tranches**, toutes les fiches du lot, d'après leurs dossiers (fil conducteur lu d'abord) : un verdict par mot, avec un `remplacement` (`{ champ, valeur }`) quand il sait exactement la phrase à écrire ; consigne `docs/consignes/relecture.md` |
 | 4 | script : `npm run lot -- reprendre <mots>` | applique les remplacements à `fiche.json`, essaie chaque fiche (typographie, validation avec le dépôt), marque les remarques `appliquee` ; ce qui reste (remarque sans remplacement, remplacement au chemin faux, essai refusé) va dans `atelier/a-reprendre.md` |
 | 4 bis | rédacteur (repris) | seulement pour `atelier/a-reprendre.md`, puis `reprendre` de nouveau |
 | 5 | vérificateur (DeepSeek Flash) | seulement les remarques appliquées et ce qu'elles changent, les lectures et le corpus du dossier ; il réécrit le verdict (`accepte`, ou les remarques restées ouvertes) |

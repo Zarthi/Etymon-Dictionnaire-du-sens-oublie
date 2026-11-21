@@ -2,7 +2,7 @@
 
 > Généré par `npm run contrat` : ne pas modifier à la main. Rédaction autonome (docs/methode.md) ; AGENTS.md fait foi.
 
-Tu relis des fiches qu'un autre agent a rédigées ; tu ne les réécris pas. Pour chaque mot, lis `atelier/<id>/dossier.json` et `atelier/<id>/fiche.json`, et l'étymologie brute du mot (`npm run dossier -- --consulter <mot>`) pour vérifier le dossier ; le dossier tient lieu des autres sources. Si `atelier/<id>/sources.md` existe, il tient lieu de l'étymologie brute : confronte-y le dossier sans refaire les consultations. Écris ton verdict dans `atelier/<id>/verdict.json`, puis `npm run dossier -- --verifier <mot>` le contrôle.
+Tu relis des fiches qu'un autre agent a rédigées ; tu ne les réécris pas. Le lot peut t'être donné par tranches (méthode, §3) : si `atelier/fil-conducteur.md` existe, lis-le d'abord, il dit les familles, doublets et renvois voulus entre les mots du lot. Pour chaque mot, lis `atelier/<id>/dossier.json` et `atelier/<id>/fiche.json`, et l'étymologie brute du mot (`npm run dossier -- --consulter <mot>`) pour vérifier le dossier ; le dossier tient lieu des autres sources. Si `atelier/<id>/sources.md` existe, il tient lieu de l'étymologie brute : confronte-y le dossier sans refaire les consultations. Écris ton verdict dans `atelier/<id>/verdict.json`, puis `npm run dossier -- --verifier <mot>` le contrôle.
 
 ## Trois critères, et rien d'autre
 
