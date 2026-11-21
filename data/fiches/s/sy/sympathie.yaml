@@ -1,0 +1,32 @@
+mot: sympathie
+nature: [ nom féminin ]
+etymologie:
+  - forme: sympathia
+    langue: latin
+    sens: accord, affinité
+  - forme: συμπάθεια
+    langue: grec ancien
+    sens: communauté de souffrance
+    elements:
+      - forme: σύν
+        langue: grec ancien
+        sens: avec
+      - forme: πάθος
+        langue: grec ancien
+        sens: souffrance, passion
+explication: >-
+  Le grec συμπάθεια dit proprement souffrir avec. Le mot français a retenu
+  l'accord et l'attrait entre personnes, et le sens de compassion reste dans
+  l'idée de partager la peine.
+renvois: [ consoler ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: sympathie
+  - ouvrage: littre
+    entree: sympathie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

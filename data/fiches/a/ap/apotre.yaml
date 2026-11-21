@@ -1,0 +1,42 @@
+mot: apôtre
+nature: [ nom masculin ]
+etymologie:
+  - forme: apostolus
+    langue: latin
+    sens: envoyé
+  - forme: ἀπόστολος
+    langue: grec ancien
+    sens: envoyé, messager
+explication: >-
+  Le grec nommait un envoyé ; le mot a désigné les premiers disciples du Christ,
+  puis tout propagateur d'une doctrine. Il n'évoque plus aujourd'hui qu'un
+  envoyé chargé d'une mission, religieuse ou militante.
+renvois: [ martyr ]
+themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: Les apôtres sont des envoyés ; leur nom indique la mission reçue.
+      citation: Apostoli missi interpretantur. Hoc enim eorum nomen indicat.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 9, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: ἀπόστολος
+  - ouvrage: littre
+    entree: apôtre
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VII, 9, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

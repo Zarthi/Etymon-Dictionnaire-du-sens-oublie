@@ -1,0 +1,31 @@
+mot: apocalypse
+nature: [ nom féminin ]
+etymologie:
+  - forme: apocalypsis
+    langue: latin
+    sens: révélation
+  - forme: ἀποκάλυψις
+    langue: grec ancien
+    sens: action de découvrir, révélation
+explication: >-
+  Le grec nommait un dévoilement, la révélation de Dieu ; le titre du livre de
+  Jean a lié le mot à la fin du monde. L'usage courant retient surtout la
+  catastrophe.
+renvois: [ oracle ]
+themes: [ religion, temps ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: ἀποκάλυψις
+  - ouvrage: littre
+    entree: apocalypse
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

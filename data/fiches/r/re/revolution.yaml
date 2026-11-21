@@ -1,0 +1,21 @@
+mot: révolution
+nature: [ nom féminin ]
+etymologie:
+  - forme: revolutio
+    langue: latin
+    sens: retour périodique, révolution d'un astre
+  - forme: revolvere
+    langue: latin
+    sens: rouler en arrière, revenir
+explication: >-
+  Révolution nommait le retour périodique d'un astre. Le mot désigne aujourd'hui
+  un changement brusque, notamment politique.
+themes: [ politique, société ]
+sources:
+  - ouvrage: tlfi
+    entree: revolution
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

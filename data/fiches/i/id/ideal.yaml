@@ -1,0 +1,26 @@
+mot: ideal
+nature: [ adjectif ]
+etymologie:
+  - forme: idealis
+    langue: latin médiéval
+    sens: qui concerne l'idée
+  - forme: ἰδέα
+    langue: grec ancien
+    sens: forme, idée
+explication: >-
+  Idealis qualifiait ce qui concerne l'idée. Le mot a pris le sens d'un modèle
+  de perfection, alors qu'il désignait d'abord un rapport à l'idée.
+renvois: [ identite ]
+themes: [ esprit, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: idéal
+  - ouvrage: littre
+    entree: idéal
+  - ouvrage: tlfi
+    entree: ideal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

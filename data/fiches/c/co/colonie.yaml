@@ -1,0 +1,25 @@
+mot: colonie
+nature: [ nom féminin ]
+etymologie:
+  - forme: colonia
+    langue: latin
+    sens: propriété rurale, établissement de colons
+    elements:
+      - forme: colonus
+        sens: cultivateur
+      - forme: colere
+        sens: cultiver, habiter
+explication: >-
+  Colonia nommait d'abord une propriété rurale, puis un établissement de Romains
+  hors de Rome. Le mot désigne aujourd'hui un territoire administré par un autre
+  pays.
+renvois: [ ville ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: tlfi
+    entree: colonie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

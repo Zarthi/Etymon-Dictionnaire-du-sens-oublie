@@ -1,0 +1,31 @@
+mot: consoler
+nature: [ verbe ]
+etymologie:
+  - forme: consolari
+    langue: latin
+    sens: réconforter, consoler
+explication: >-
+  Le latin consolari disait le réconfort. Le mot français a gardé ce sens, mais
+  il s'applique aujourd'hui à toute peine, grande ou petite.
+renvois: [ solitude ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Le consolateur est ainsi nommé parce qu'il s'applique à celui seul à qui
+        il parle et qu'il allège sa solitude par son entretien.
+      citation: Et inde dictus consolator, quod soli se adplicat cui loquitur, et
+        solitudinem levat adloquio suo.
+      sources:
+        - ouvrage: etymologies
+          entree: livre X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: consoler
+  - ouvrage: littre
+    entree: consoler
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

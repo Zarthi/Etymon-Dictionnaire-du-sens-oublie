@@ -1,9 +1,5 @@
-- { mot: idéal, statut: a-faire }
-- { mot: identité, statut: a-faire }
 - { mot: idiot, statut: a-faire }
-- { mot: idole, statut: a-faire }
 - { mot: ignorer, statut: a-faire }
-- { mot: imagination, statut: a-faire }
 - { mot: imbécile, statut: a-faire }
 - { mot: impératif, statut: a-faire }
 - { mot: impertinent, statut: a-faire }
@@ -12,8 +8,6 @@
 - { mot: incarner, statut: a-faire }
 - { mot: inconscient, statut: a-faire }
 - { mot: indigène, statut: a-faire }
-- { mot: individu, statut: a-faire }
-- { mot: indulgence, statut: a-faire }
 - { mot: industrie, statut: a-faire }
 - { mot: inertie, statut: a-faire }
 - { mot: infâme, statut: a-faire }
@@ -30,6 +24,4 @@
 - { mot: intérieur, statut: a-faire }
 - { mot: intime, statut: a-faire }
 - { mot: intrigue, statut: a-faire }
-- { mot: intuition, statut: a-faire }
-- { mot: invention, statut: a-faire }
 - { mot: inviter, statut: a-faire }

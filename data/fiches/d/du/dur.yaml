@@ -1,0 +1,21 @@
+mot: dur
+nature: [ adjectif ]
+etymologie:
+  - forme: durus
+    langue: latin
+    sens: dur, solide
+explication: >-
+  Le latin durus disait ce qui résiste au toucher, et déjà ce qui est âpre ou
+  pénible ; le français a gardé ces deux sens.
+renvois: [ sauvage ]
+themes: [ nature, morale ]
+sources:
+  - ouvrage: littre
+    entree: dur
+  - ouvrage: tlfi
+    entree: dur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

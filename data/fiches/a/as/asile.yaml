@@ -1,0 +1,19 @@
+mot: asile
+nature: [ nom masculin ]
+etymologie:
+  - forme: asylum
+    langue: latin
+    sens: lieu inviolable, refuge
+explication: >-
+  Asile nommait le lieu inviolable où celui qui fuyait trouvait refuge. Le mot
+  désigne aujourd'hui un lieu de protection et l'accueil des personnes en
+  danger.
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: asile
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

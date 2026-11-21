@@ -1,0 +1,29 @@
+mot: serf
+nature: [ nom ]
+etymologie:
+  - forme: servus
+    langue: latin
+    sens: esclave
+explication: >-
+  Serf vient de servus, l'esclave. Le mot désigne aujourd'hui le paysan attaché
+  à la terre et la personne soumise.
+themes: [ société, travail ]
+tradition:
+  lectures:
+    - texte: Les esclaves sont ceux qui ont été pris à la guerre, comme conservés.
+      citation: Servi sunt in bello capti, quasi servati;
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: serf
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

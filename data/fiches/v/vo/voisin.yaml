@@ -1,0 +1,22 @@
+mot: voisin
+nature: [ adjectif ]
+etymologie:
+  - forme: vicinus
+    langue: latin
+  - forme: vicus
+    langue: latin
+    sens: quartier, village
+explication: >-
+  Le latin vicinus disait celui qui habite le même vicus, le même quartier ; le
+  français a gardé l'idée de proximité.
+themes: [ société, maison ]
+sources:
+  - ouvrage: littre
+    entree: voisin
+  - ouvrage: tlfi
+    entree: voisin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

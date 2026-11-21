@@ -1,0 +1,21 @@
+mot: réputation
+nature: [ nom féminin ]
+etymologie:
+  - forme: reputatio
+    langue: latin
+    sens: compte, considération
+  - forme: reputare
+    langue: latin
+    sens: compter, estimer
+explication: >-
+  Reputatio nommait le compte et la considération. Le mot désigne aujourd'hui
+  l'opinion que l'on a de quelqu'un.
+themes: [ société, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: reputation
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

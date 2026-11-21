@@ -1,0 +1,23 @@
+mot: félicité
+nature: [ nom féminin ]
+etymologie:
+  - forme: felicitas
+    langue: latin
+    sens: bonheur, chance
+  - forme: felix
+    langue: latin
+    sens: fécond, heureux
+explication: >-
+  Felix disait d'abord ce qui porte du fruit, puis ce qui est heureux. Félicité
+  a gardé le bonheur intense, et le lien avec la fécondité s'est effacé.
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: félicité
+  - ouvrage: littre
+    entree: félicité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,40 @@
+mot: amen
+nature: [ nom masculin ]
+etymologie:
+  - forme: amen
+    langue: latin
+  - forme: אמן
+    translitteration: āmēn
+    langue: hébreu
+    sens: sûreté, vérité ; vraiment
+explication: >-
+  Le mot hébreu dit la solidité et la certitude ; la liturgie en a fait
+  l'assentiment qui conclut la prière. Il ne désigne plus aujourd'hui que cette
+  formule, et parfois l'accord donné à une parole.
+renvois: [ hymne ]
+themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: Le mot signifie « vraiment » ou « fidèlement » ; c'est un mot hébreu.
+      citation: Amen significat vere, sive fideliter, quod et ipsud Hebraeum est.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 19, 20
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: amen
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VI, 19, 20
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

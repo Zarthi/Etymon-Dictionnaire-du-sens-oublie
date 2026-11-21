@@ -1,0 +1,51 @@
+mot: cérémonie
+nature: [ nom féminin ]
+etymologie:
+  - forme: caerimonia
+    langue: latin
+    sens: vénération, culte
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: Caere
+          sens: ville d'Étrurie où furent mis à l'abri les objets sacrés
+        - forme: kar
+          langue: sanskrit
+          sens: faire
+explication: >-
+  Le latin caerimonia nommait la vénération due aux dieux et le culte qui
+  l'exprime. Le mot s'est étendu aux formes extérieures de toute solennité, puis
+  à leur apparat.
+renvois: [ hymne ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: Les cérémonies sont les choses sacrées du culte ; le mot est rapproché de
+        carendo, parce que les hommes se privent de ces choses dans l'usage
+        profane.
+      citation: Caerimoniae apud Latinos dicuntur sacra omnia quae apud Graecos orgia
+        vocantur. Proprie autem visum est doctoribus a carendo appellari
+        caerimonias, quasi carimonias; eo quod ea quae in sacris divinis
+        offeruntur, in suo usu id carerent homines.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 19, 36
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: cérémonie
+  - ouvrage: etymologies
+    entree: VI, 19, 36
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

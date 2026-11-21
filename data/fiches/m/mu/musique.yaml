@@ -1,0 +1,33 @@
+mot: musique
+nature: [ nom féminin ]
+etymologie:
+  - forme: musica
+    langue: latin
+  - forme: μουσική
+    langue: grec ancien
+    sens: art des Muses
+explication: >-
+  Le grec μουσική disait l'art des Muses, bien plus large que les sons ; le
+  français a gardé le mot pour l'art des sons.
+renvois: [ spectacle ]
+themes: [ savoir, émotions ]
+tradition:
+  lectures:
+    - texte: La musique doit son nom aux Muses, par dérivation.
+      citation: Et dicta Musica per derivationem a Musis.
+      sources:
+        - ouvrage: etymologies
+          entree: III
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_III
+sources:
+  - ouvrage: littre
+    entree: musique
+  - ouvrage: tlfi
+    entree: musique
+  - ouvrage: bailly
+    entree: μοῦσα
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

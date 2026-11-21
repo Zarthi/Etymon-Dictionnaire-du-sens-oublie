@@ -1,0 +1,21 @@
+mot: ciel
+nature: [ nom masculin ]
+etymologie:
+  - forme: caelum
+    langue: latin
+    sens: ciel, voûte céleste
+explication: >-
+  Le latin caelum disait la voûte du ciel et le séjour de la divinité ; le
+  français a gardé les deux sens.
+renvois: [ splendeur ]
+themes: [ nature, religion ]
+sources:
+  - ouvrage: littre
+    entree: ciel
+  - ouvrage: tlfi
+    entree: ciel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

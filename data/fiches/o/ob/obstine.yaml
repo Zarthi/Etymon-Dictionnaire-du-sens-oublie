@@ -1,0 +1,22 @@
+mot: obstiné
+nature: [ adjectif ]
+etymologie:
+  - forme: obstinatus
+    langue: latin
+    sens: constant, opiniâtre, résolu
+  - forme: obstinare
+    langue: latin
+    sens: s'obstiner, persévérer
+explication: >-
+  Obstinatus disait la fermeté de celui qui s'attache à son dessein. Le mot
+  français a gardé cette constance, mais il désigne aujourd'hui un entêtement
+  qui refuse de céder.
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: obstiné
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

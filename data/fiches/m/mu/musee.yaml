@@ -1,0 +1,25 @@
+mot: musée
+nature: [ nom masculin ]
+etymologie:
+  - forme: museum
+    langue: latin
+  - forme: μουσεῖον
+    langue: grec ancien
+    sens: temple des Muses
+explication: >-
+  Le grec μουσεῖον disait le sanctuaire des Muses ; le mot français a glissé du
+  lieu du savoir au lieu où l'on conserve les œuvres.
+renvois: [ monument ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: littre
+    entree: musée
+  - ouvrage: tlfi
+    entree: musée
+  - ouvrage: bailly
+    entree: μουσεῖον
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

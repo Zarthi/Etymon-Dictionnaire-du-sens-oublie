@@ -1,0 +1,25 @@
+mot: imagination
+nature: [ nom féminin ]
+etymologie:
+  - forme: imaginatio
+    langue: latin
+    sens: image, représentation
+  - forme: imaginari
+    langue: latin
+    sens: se représenter
+explication: >-
+  Imaginatio nommait l'image qui se forme dans l'esprit. Le mot a pris le sens
+  de la faculté créatrice, alors qu'il désignait d'abord une représentation
+  reçue.
+renvois: [ invention ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: imagination
+  - ouvrage: littre
+    entree: imagination
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

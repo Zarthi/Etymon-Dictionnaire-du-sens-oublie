@@ -1,0 +1,18 @@
+mot: rigueur
+nature: [ nom féminin ]
+etymologie:
+  - forme: rigor
+    langue: latin
+    sens: raideur, dureté
+explication: >-
+  Rigor nommait la raideur et la dureté. Le mot a pris le sens de sévérité et
+  d'exactitude.
+themes: [ morale, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: rigueur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

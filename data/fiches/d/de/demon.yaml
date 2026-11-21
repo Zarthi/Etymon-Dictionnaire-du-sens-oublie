@@ -1,0 +1,43 @@
+mot: démon
+nature: [ nom masculin ]
+etymologie:
+  - forme: daemon
+    langue: latin
+    sens: génie, divinité
+  - forme: δαίμων
+    langue: grec ancien
+    sens: divinité, génie, puissance divine
+explication: >-
+  Le grec nommait une divinité ou un génie, sans idée de mal ; le christianisme
+  en a fait l'ange déchu. Le mot ne dit plus aujourd'hui qu'un esprit mauvais ou
+  une puissance obsédante.
+renvois: [ idole ]
+themes: [ religion, esprit ]
+tradition:
+  lectures:
+    - texte: Les démons sont dits savants et connaisseurs des choses.
+      citation: Daemonas a Graecis dictos aiunt, quasi DAEMONAS, id est peritos ac
+        rerum scios.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 11, 15
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: δαίμων
+  - ouvrage: littre
+    entree: démon
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VIII, 11, 15
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

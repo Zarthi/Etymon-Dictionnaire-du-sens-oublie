@@ -1,0 +1,33 @@
+mot: invention
+nature: [ nom féminin ]
+etymologie:
+  - forme: inventio
+    langue: latin
+    sens: action de trouver
+  - forme: invenire
+    langue: latin
+    sens: trouver
+explication: >-
+  Inventio nommait l'action de trouver ce qui existait déjà. Le mot a pris le
+  sens de création de quelque chose de nouveau, alors qu'il disait d'abord une
+  découverte.
+renvois: [ theorie ]
+themes: [ savoir, travail ]
+tradition:
+  lectures:
+    - texte: L'invention est le fait d'aller à la rencontre de ce que l'on cherche.
+      citation: in id venire quod quaeritur
+      sources:
+        - ouvrage: etymologies
+          entree: X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: invention
+  - ouvrage: littre
+    entree: invention
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

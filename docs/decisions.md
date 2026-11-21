@@ -841,3 +841,37 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Thème *quantité* | ajouté à `data/themes.json` | aucun thème existant ne couvrait *énorme* ; valeur demandée par le rédacteur et validée par le schéma | à relire |
 | Corpus de la tranche 5 | passages retenus seulement quand ils lisent le mot ; résultats hors sujet écartés | le script renvoyait des radicaux voisins (`forci`, `horizon`, `egalement`, `pens`) | à relire |
 | Renvois de la tranche 5 | identifiants ASCII, déclarés d'un seul côté, vers des mots de la tranche | éviter les doublons et les liens morts | à relire |
+
+## 2026-11-21 — Lot « cent mots, deuxième » (religion, esprit, émotions, société, matière)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chemin des mots du deuxième lot | Tous en chemin `consacre`. | Ce sont des mots profanes à l'origine, pris dans l'ordre sacré ; aucun n'a été arrêté comme mot sacré par origine au sens du §3.3 bis. | à relire |
+| Amen, apocalypse, messie | Traités en `consacre`, non en `sacre`. | Leur étymon est profane (adverbe, révélation, onction) même si l'usage est sacré. | à relire |
+| Cérémonie | Origine de *caerimonia* présentée en alternatives (*carere* / *Caere* / *kar*), sans `incertain`. | L'origine est débattue, mais la forme latine est attestée ; les hypothèses concurrentes sont dans la chaîne. | à relire |
+| Catéchisme | Chaîne arrêtée au latin *catechismus*. | Le sens latin (« instruction orale ») suffit et le Bailly n'a pas été consulté pour le grec *katēkhismos*. | à relire |
+| Lectures de la tranche 1 | 11 lectures retenues (Isidore, *Étymologies*), 9 absences justifiées. | Le corpus ne donne un passage glosant le mot que pour ces 11 mots ; les autres n'ont que des occurrences d'emploi. | à relire |
+| Renvois | Chaque paire n'est déclarée que d'un côté ; les paires ont été orientées. | Le validateur refuse une relation déclarée des deux côtés. | à relire |
+| Axiome | Chaîne arrêtée à ἀξίωμα, sans remonter à ἀξιόω ni ἄξιος. | Remonter jusqu'à « digne » déplacerait le sens premier vers une notion trop générale. | à relire |
+| Débat | Chaîne passant par le verbe *débattre*. | Débat est un déverbal ; le sens premier est porté par le verbe. | à relire |
+| Diagnostic | Chaîne passant par l'adjectif *diagnostique*, puis διαγνωστικός. | Diagnostic est une formation récente tirée de diagnostique. | à relire |
+| Méditer | Chaîne remontant à *medeor*, « soigner ». | Le sens de « soin appliqué » éclaire l'exercice et la préparation longue. | à relire |
+| Sceptique | Renvoi vers *critique* plutôt que vers *paradoxe*. | *Paradoxe* renvoie déjà à *sceptique* ; une seconde déclaration aurait doublé la relation. | à relire |
+| Lectures de la tranche 2 | Quatre lectures (Isidore) : discerner, invention, paradoxe, sapience. | Ce sont les seuls passages du corpus qui glosent réellement le mot. | à relire |
+| Références de la tranche 2 | Aucun auteur ni ouvrage nouveau. | Les lectures puisent dans *Étymologies* et *Différences*, déjà présents. | à relire |
+| Consoler | Chaîne latine `consolari` ; lecture d'Isidore en `tradition.lectures`. | Le Littré propose `cum` + `solus`, mais le TLFi ne retient que `consolari`. | à relire |
+| Hystérie | Chaîne française → grec `ὑστέρα`, sans `forge`. | Dérivé régressif de *hystérique* ; aucun auteur n'est donné pour la formation. | à relire |
+| Manie | `mānia` (« mère des lares ») mise dans `ecartees`. | Le Littré l'écarte expressément ; la chaîne retenue est le grec `μανία`. | à relire |
+| Paisible | Chaîne française → ancien français `pais` → latin `pax`. | Dérivé français de *paix*, non emprunt latin direct. | à relire |
+| Repentir, ressentiment, trouble | Chaîne française, un seul maillon. | Déverbaux ou dérivés français ; le maillon français porte le sens attesté. | à relire |
+| Tempérance | Lecture d'Augustin, *La Cité de Dieu*, XIX. | Isidore ne glose pas `temperantia` ; Augustin en donne le sens de vertu qui freine les désirs. | à relire |
+| Tempérament | Renvoi vers *tempérance* retiré. | Les deux mots partagent la racine *temper-* ; la règle réserve les renvois aux notions sans racine commune. | à relire |
+| Lectures de la tranche 3 | 4 lectures (consoler, manie, modeste, tempérance) ; 16 absences justifiées. | Le corpus ne glose pas les autres mots. | à relire |
+| Tranche 4 du deuxième lot | Chaînes ouvertes par le français ou le latin selon le TLFi ; aucune nouvelle référence. | Les 20 fiches s'appuient sur le Littré et le TLFi déjà présents ; les cas limites sont signalés. | à relire |
+| Village | Chaîne corrigée : `village` → `ville` → `villa`. | Le TLFi fait de `village` une formation française sur `ville` et `-age`. | à relire |
+| Monstre | `monere` ajouté comme maillon. | La source dit `monstrum` formé sur `monere`, « avertir ». | à relire |
+| Mort | Sens du maillon précisé en « cessation de la vie ». | L'explication distingue `mors` de `mortuus`. | à relire |
+| Mécanique, musée, néant, tempête | Accents rétablis dans le champ `mot`, identifiant ASCII. | Le champ `mot` doit porter l'orthographe française. | à relire |
+| Néant | Origine retenue `*ne gentem` (latin populaire), `incertain: true` ; hypothèse `ne-ens` dans `ecartees`. | L'origine est discutée ; les deux hypothèses sont conservées. | à relire |
+| Renvois de la tranche 5 | Déclarés d'un seul côté, tous internes à la tranche. | Éviter les doublons et les liens morts. | à relire |
+| Lectures de la tranche 5 | 6 lectures (Isidore) : jardin, monument, monstre, mort, musique, splendeur. | Ce sont les passages du corpus qui glosent réellement le mot. | à relire |

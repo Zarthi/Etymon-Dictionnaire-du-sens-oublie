@@ -1,0 +1,43 @@
+mot: hérésie
+nature: [ nom féminin ]
+etymologie:
+  - forme: haeresis
+    langue: latin
+    sens: choix, doctrine choisie
+  - forme: αἵρεσις
+    langue: grec ancien
+    sens: action de prendre, choix
+explication: >-
+  Le grec nommait le choix, l'option prise ; le mot a désigné la doctrine
+  choisie contre l'enseignement reçu. Il ne dit plus aujourd'hui qu'une opinion
+  condamnée par une autorité.
+themes: [ religion, savoir ]
+tradition:
+  lectures:
+    - texte: "L'hérésie tire son nom de l'élection : chacun choisit la doctrine qui
+        lui semble la meilleure."
+      citation: Haeresis Graece ab electione vocatur, quod scilicet unusquisque id
+        sibi eligat quod melius illi esse videtur.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 3, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: αἵρεσις
+  - ouvrage: littre
+    entree: hérésie
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VIII, 3, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

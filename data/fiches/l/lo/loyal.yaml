@@ -1,0 +1,18 @@
+mot: loyal
+nature: [ adjectif ]
+etymologie:
+  - forme: legalis
+    langue: latin
+    sens: conforme à la loi
+explication: >-
+  Legalis disait d'abord ce qui est conforme à la loi. Loyal a pris le sens
+  d'honnête, puis celui de fidèle à ses engagements.
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: loyal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

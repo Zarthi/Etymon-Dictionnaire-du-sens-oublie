@@ -1,0 +1,45 @@
+mot: messie
+nature: [ nom masculin ]
+etymologie:
+  - forme: Messias
+    langue: latin
+    sens: Messie
+  - forme: mešîḥā
+    langue: araméen
+    sens: oint
+  - forme: מָשִׁיחַ
+    translitteration: māšīaḥ
+    langue: hébreu
+    sens: oint
+explication: >-
+  L'hébreu nommait l'oint, le roi ou le prêtre consacré par l'onction ; le mot a
+  désigné le libérateur attendu. Il ne dit plus aujourd'hui qu'un sauveur espéré
+  ou un homme providentiel.
+renvois: [ apotre ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: Messie est le mot hébreu ; en grec, Christ ; en latin, oint.
+      citation: Messias autem Hebraice dicitur, Graece Christus, Latina autem
+        locutione unctus.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 2, 6
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: messie
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VII, 2, 6
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

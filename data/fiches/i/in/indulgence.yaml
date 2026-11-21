@@ -1,0 +1,26 @@
+mot: indulgence
+nature: [ nom féminin ]
+etymologie:
+  - forme: indulgentia
+    langue: latin
+    sens: bienveillance, faveur
+explication: >-
+  Le latin indulgentia nommait la bienveillance et la faveur ; l'Église en a
+  fait la remise des peines dues au péché. Le mot dit aujourd'hui cette remise,
+  ou la disposition à pardonner.
+renvois: [ contrition ]
+themes: [ religion, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: indulgence
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

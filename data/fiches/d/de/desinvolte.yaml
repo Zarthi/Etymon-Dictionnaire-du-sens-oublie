@@ -1,0 +1,29 @@
+mot: désinvolte
+nature: [ adjectif ]
+etymologie:
+  - forme: disinvolto
+    langue: italien
+    sens: dégagé, sans embarras
+    elements:
+      - forme: dis-
+        langue: italien
+        sens: négation
+      - forme: involto
+        langue: italien
+        sens: enveloppé, embarrassé
+explication: >-
+  En italien, disinvolto dit proprement ce qui n'est pas enveloppé, donc ce qui
+  est dégagé. Le français a pris le mot pour une aisance d'allure, parfois trop
+  libre.
+renvois: [ modeste ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: désinvolte
+  - ouvrage: littre
+    entree: désinvolte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

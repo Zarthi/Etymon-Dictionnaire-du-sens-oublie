@@ -1,0 +1,33 @@
+mot: monument
+nature: [ nom masculin ]
+etymologie:
+  - forme: monumentum
+    langue: latin
+    sens: ce qui rappelle le souvenir
+  - forme: monere
+    langue: latin
+    sens: avertir, faire penser
+explication: >-
+  Le latin monumentum disait ce qui fait penser, en particulier au mort ; le mot
+  français désigne aujourd'hui un édifice commémoratif.
+renvois: [ ruine ]
+themes: [ société, religion ]
+tradition:
+  lectures:
+    - texte: Les monuments et les mémoires sont ainsi nommés parce qu'ils avertissent
+        l'esprit.
+      citation: Monumenta itaque et memoriae pro mentis admonitione dictae.
+      sources:
+        - ouvrage: etymologies
+          entree: XV
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: littre
+    entree: monument
+  - ouvrage: tlfi
+    entree: monument
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

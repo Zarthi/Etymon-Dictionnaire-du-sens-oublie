@@ -1,0 +1,25 @@
+mot: tempête
+nature: [ nom féminin ]
+etymologie:
+  - forme: "*tempesta"
+    langue: latin populaire
+  - forme: tempestas
+    langue: latin
+    sens: temps, mauvais temps
+  - forme: tempus
+    langue: latin
+    sens: temps
+explication: >-
+  Le latin tempestas disait le temps et le mauvais temps ; le français a gardé
+  le second sens, celui de la bourrasque.
+themes: [ météo, nature ]
+sources:
+  - ouvrage: littre
+    entree: tempête
+  - ouvrage: tlfi
+    entree: tempête
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

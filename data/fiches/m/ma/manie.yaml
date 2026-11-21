@@ -1,0 +1,39 @@
+mot: manie
+nature: [ nom féminin ]
+etymologie:
+  - forme: mania
+    langue: bas latin
+    sens: folie
+  - forme: μανία
+    langue: grec ancien
+    sens: folie, égarement
+explication: >-
+  Le grec μανία nommait l'égarement de l'esprit. Le mot français a gardé ce sens
+  médical, et il désigne aussi une habitude obsédante ou un goût excessif.
+ecartees:
+  - forme: mānia
+    langue: latin
+    sens: mère des larves, des mânes
+    raison: "Le Littré l'écarte : le rapprochement avec les mânes est une erreur, le
+      mot vient du grec μανία."
+    populaire: true
+renvois: [ trouble ]
+themes: [ santé, esprit ]
+tradition:
+  lectures:
+    - texte: La manie est appelée d'après l'insanité ou la fureur.
+      citation: Mania ab insania vel furore vocata.
+      sources:
+        - ouvrage: etymologies
+          entree: livre IV
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IV
+sources:
+  - ouvrage: tlfi
+    entree: manie
+  - ouvrage: littre
+    entree: manie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

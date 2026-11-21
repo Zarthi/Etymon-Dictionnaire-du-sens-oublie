@@ -1,0 +1,32 @@
+mot: triomphe
+nature: [ nom masculin ]
+etymologie:
+  - forme: triumphus
+    langue: latin
+    sens: honneur rendu au général vainqueur
+  - forme: θρίαμβος
+    langue: grec ancien
+    sens: chant, procession en l'honneur de Dionysos
+explication: >-
+  Triomphe nommait l'honneur rendu au général vainqueur. Le mot désigne
+  aujourd'hui une victoire ou un succès éclatant.
+themes: [ guerre, société ]
+tradition:
+  lectures:
+    - texte: Le triomphe est dit du grec, de l'exultation.
+      citation: triumphum, qui dictus est APO TES THRIAMBES, id est ab exultatione.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: tlfi
+    entree: triomphe
+  - ouvrage: etymologies
+    entree: XVIII
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

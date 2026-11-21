@@ -1,0 +1,37 @@
+mot: oracle
+nature: [ nom masculin ]
+etymologie:
+  - forme: oraculum
+    langue: latin
+    sens: parole divine, réponse
+explication: >-
+  Le latin oraculum désignait le lieu où l'on venait consulter le dieu, puis la
+  réponse qu'on y recevait. Le mot dit aujourd'hui cette réponse, ou une parole
+  qui fait autorité.
+themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: Les oracles sont dits ainsi parce qu'ils rendent des réponses ; oracula
+        vient de os, « bouche ».
+      citation: Oracula dicta eo quod inde responsa redduntur; et oracula ab ore.
+      sources:
+        - ouvrage: etymologies
+          entree: XV, 4, 3
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: oracle
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: XV, 4, 3
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

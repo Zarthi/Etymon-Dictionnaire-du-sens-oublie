@@ -1,0 +1,30 @@
+mot: mort
+nature: [ nom ]
+etymologie:
+  - forme: mors
+    langue: latin
+    sens: cessation de la vie
+explication: >-
+  Le latin mors disait la cessation de la vie ; le français a gardé le mot pour
+  la fin de la vie et pour la Mort personnifiée.
+renvois: [ tombe ]
+themes: [ religion, santé ]
+tradition:
+  lectures:
+    - texte: Le nom mors viendrait de l'amertume de la mort, ou de Mars, qui fait les
+        morts.
+      citation: Mors dicta, quod sit amara, vel a Marte, qui est effector mortium.
+      sources:
+        - ouvrage: etymologies
+          entree: XI, 31
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XI
+sources:
+  - ouvrage: littre
+    entree: mort
+  - ouvrage: tlfi
+    entree: mort
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

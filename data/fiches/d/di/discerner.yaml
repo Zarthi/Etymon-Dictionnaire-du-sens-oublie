@@ -1,0 +1,36 @@
+mot: discerner
+nature: [ verbe ]
+etymologie:
+  - forme: discernere
+    langue: latin
+    sens: séparer, trier
+    elements:
+      - forme: dis-
+        sens: à part
+      - forme: cernere
+        sens: trier, séparer
+explication: >-
+  Discernere, c'était séparer pour trier. Le mot dit aujourd'hui reconnaître une
+  chose parmi d'autres, alors qu'il désignait d'abord une séparation matérielle.
+renvois: [ intuition ]
+themes: [ esprit, savoir ]
+tradition:
+  lectures:
+    - texte: Discerner, c'est diviser en deux parties ; secerner, c'est choisir
+        séparément beaucoup de choses parmi beaucoup.
+      citation: Discernit qui in duas partes dividit, secernit, qui ex multis seorsum
+        multa eligit.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: discerner
+  - ouvrage: tlfi
+    entree: discerner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

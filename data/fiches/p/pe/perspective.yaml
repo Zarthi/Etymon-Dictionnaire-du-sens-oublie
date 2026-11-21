@@ -1,0 +1,29 @@
+mot: perspective
+nature: [ nom féminin ]
+etymologie:
+  - forme: perspectiva
+    langue: latin
+    sens: science de la vision
+  - forme: perspicere
+    langue: latin
+    sens: voir à travers
+    elements:
+      - forme: per-
+        sens: à travers
+      - forme: specere
+        sens: regarder
+explication: >-
+  Perspectiva était la science de ce qui se voit à travers. Le mot a pris le
+  sens de l'art de figurer la profondeur, puis celui d'un point de vue.
+renvois: [ theorie ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: perspective
+  - ouvrage: littre
+    entree: perspective
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

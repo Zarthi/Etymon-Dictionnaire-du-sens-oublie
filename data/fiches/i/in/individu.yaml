@@ -1,0 +1,23 @@
+mot: individu
+nature: [ nom masculin ]
+etymologie:
+  - forme: individuum
+    langue: latin
+    sens: ce qui ne peut être divisé
+    elements:
+      - forme: in-
+        sens: non
+      - forme: dividere
+        sens: diviser
+explication: >-
+  Individuum nommait ce qui ne peut être divisé. Le mot désigne aujourd'hui la
+  personne singulière, considérée à part des autres.
+themes: [ société, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: individu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,21 @@
+mot: union
+nature: [ nom féminin ]
+etymologie:
+  - forme: unio
+    langue: latin
+    sens: unité, union
+  - forme: unus
+    langue: latin
+    sens: un
+explication: >-
+  Union nommait le fait de ne faire qu'un. Le mot désigne aujourd'hui
+  l'association, l'alliance et le mariage.
+themes: [ politique, société ]
+sources:
+  - ouvrage: tlfi
+    entree: union
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

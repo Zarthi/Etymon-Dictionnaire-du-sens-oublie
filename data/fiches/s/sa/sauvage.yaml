@@ -1,0 +1,26 @@
+mot: sauvage
+nature: [ adjectif ]
+etymologie:
+  - forme: salvaticus
+    langue: latin
+    sens: des bois, sauvage
+  - forme: silvaticus
+    langue: latin
+    sens: des bois
+  - forme: silva
+    langue: latin
+    sens: forêt
+explication: >-
+  Le latin silva disait la forêt ; le mot a qualifié ce qui vit dans les bois,
+  puis ce qui échappe à la culture et à la société.
+themes: [ nature, société ]
+sources:
+  - ouvrage: littre
+    entree: sauvage
+  - ouvrage: tlfi
+    entree: sauvage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

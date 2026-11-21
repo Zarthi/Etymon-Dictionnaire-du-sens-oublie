@@ -1,0 +1,26 @@
+mot: doctrine
+nature: [ nom féminin ]
+etymologie:
+  - forme: doctrina
+    langue: latin
+    sens: enseignement
+explication: >-
+  Le latin doctrina nommait l'enseignement ; le mot a désigné le contenu de cet
+  enseignement, puis un corps de thèses. Il ne dit plus aujourd'hui qu'un
+  ensemble de principes, souvent religieux ou politique.
+renvois: [ heresie ]
+themes: [ religion, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: doctrine
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

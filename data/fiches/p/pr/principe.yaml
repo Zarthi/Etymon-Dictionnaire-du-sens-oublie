@@ -1,0 +1,23 @@
+mot: principe
+nature: [ nom masculin ]
+etymologie:
+  - forme: principium
+    langue: latin
+    sens: commencement
+  - forme: princeps
+    langue: latin
+    sens: le premier
+explication: >-
+  Principium disait le commencement, ce qui vient en premier. Le mot a pris le
+  sens de fondement et de règle, alors qu'il désignait d'abord un début.
+themes: [ savoir, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: principe
+  - ouvrage: littre
+    entree: principe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

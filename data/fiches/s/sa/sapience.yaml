@@ -1,0 +1,34 @@
+mot: sapience
+nature: [ nom féminin ]
+etymologie:
+  - forme: sapientia
+    langue: latin
+    sens: sagesse, goût
+  - forme: sapere
+    langue: latin
+    sens: avoir du goût, juger
+explication: >-
+  Sapientia venait de sapere, qui disait avoir du goût, puis juger. Le mot dit
+  aujourd'hui une sagesse, alors qu'il désignait d'abord un discernement du
+  goût.
+renvois: [ critique ]
+themes: [ savoir, morale ]
+tradition:
+  lectures:
+    - texte: La prudence est répartie dans les choses humaines, la sagesse dans les
+        divines.
+      citation: Prudentia in humanis rebus, sapientia in divinis distribuitur
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: sapience
+  - ouvrage: littre
+    entree: sapience
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

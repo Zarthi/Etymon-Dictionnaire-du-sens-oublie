@@ -1,0 +1,20 @@
+mot: cause
+nature: [ nom féminin ]
+etymologie:
+  - forme: causa
+    langue: latin
+    sens: affaire, procès ; motif
+explication: >-
+  Causa nommait d'abord l'affaire portée en justice, puis le motif qui la fonde.
+  Le mot dit aujourd'hui ce qui produit un effet, alors que le sens juridique
+  survit dans « avoir gain de cause ».
+renvois: [ principe ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: cause
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

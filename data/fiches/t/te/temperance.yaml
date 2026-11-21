@@ -1,0 +1,33 @@
+mot: tempérance
+nature: [ nom féminin ]
+etymologie:
+  - forme: temperantia
+    langue: latin
+    sens: modération, mesure, retenue ; sobriété
+  - forme: temperare
+    langue: latin
+    sens: mêler, modérer
+explication: >-
+  Temperantia disait la modération et la mesure. Le mot français en a fait une
+  vertu, celle qui règle les désirs, et il garde l'idée d'une mesure dans les
+  plaisirs.
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: La tempérance est la vertu qui freine les désirs charnels.
+      citation: maxime illa, quae Graece *swfrosu/nh, Latine temperantia nominatur,
+        qua carnales frenantur libidines
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: livre XIX
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_XIX
+sources:
+  - ouvrage: tlfi
+    entree: tempérance
+  - ouvrage: littre
+    entree: tempérance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

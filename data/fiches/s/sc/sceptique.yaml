@@ -1,0 +1,26 @@
+mot: sceptique
+nature: [ adjectif ]
+etymologie:
+  - forme: σκεπτικός
+    langue: grec ancien
+    sens: qui observe, qui réfléchit
+  - forme: σκέπτεσθαι
+    langue: grec ancien
+    sens: observer
+explication: >-
+  Le sceptique grec était celui qui observe et examine. Le mot a fini par
+  désigner celui qui doute, alors qu'il disait d'abord une attention à voir.
+renvois: [ critique ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: bailly
+    entree: σκεπτικός
+  - ouvrage: littre
+    entree: sceptique
+  - ouvrage: tlfi
+    entree: sceptique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,43 @@
+mot: hymne
+nature: [ nom masculin, nom féminin ]
+etymologie:
+  - forme: hymnus
+    langue: latin
+    sens: chant de louange
+  - forme: ὕμνος
+    langue: grec ancien
+    sens: chant, hymne
+explication: >-
+  Le grec nommait un chant, souvent de louange ; le mot a désigné le chant
+  liturgique, puis tout chant solennel. Il désigne aujourd'hui un chant ou un
+  poème de louange, religieux ou profane.
+themes: [ religion, parole ]
+tradition:
+  lectures:
+    - texte: L'hymne est un chant de louange ; le mot grec est rendu en latin par
+        laus.
+      citation: Hymnus est canticum laudantium, quod de Graeco in Latinum laus
+        interpretatur, pro eo quod sit carmen laetitiae et laudis.
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 19, 17
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: ὕμνος
+  - ouvrage: littre
+    entree: hymne
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VI, 19, 17
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

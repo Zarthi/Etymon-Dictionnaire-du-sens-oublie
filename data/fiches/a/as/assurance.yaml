@@ -1,0 +1,22 @@
+mot: assurance
+nature: [ nom féminin ]
+etymologie:
+  - forme: assurer
+    langue: français
+    sens: rendre sûr, garantir
+  - forme: assecurare
+    langue: bas latin
+    sens: mettre en sécurité, protéger
+explication: >-
+  Assecurare, c'était mettre en sécurité. Assurance a dit la certitude et la
+  garantie, puis le contrat qui garantit contre un risque ; le mot désigne
+  aujourd'hui l'activité qui couvre ces risques.
+themes: [ argent, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: assurance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

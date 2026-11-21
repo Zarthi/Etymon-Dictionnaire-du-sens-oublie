@@ -1,0 +1,18 @@
+mot: tranquille
+nature: [ adjectif ]
+etymologie:
+  - forme: tranquillus
+    langue: latin
+    sens: calme, paisible, sans trouble
+explication: >-
+  Tranquillus s'est dit d'abord de la mer calme. Le mot français a étendu ce
+  calme aux lieux et aux personnes, et il dit aujourd'hui l'absence de trouble.
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: tranquille
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

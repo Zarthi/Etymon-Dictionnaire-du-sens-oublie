@@ -1,0 +1,22 @@
+mot: repentir
+nature: [ nom masculin ]
+etymologie:
+  - forme: repentir
+    langue: français
+    sens: regret d'un acte considéré comme une faute
+  - forme: se repentir
+    langue: français
+    sens: regretter d'avoir mal agi
+explication: >-
+  Repentir est le substantif de se repentir. Il a d'abord dit le regret d'une
+  faute, et l'usage religieux en a fait le regret douloureux des péchés.
+renvois: [ ressentiment ]
+themes: [ morale, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: repentir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

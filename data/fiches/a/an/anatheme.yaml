@@ -1,0 +1,31 @@
+mot: anathème
+nature: [ nom masculin ]
+etymologie:
+  - forme: anathema
+    langue: latin
+    sens: chose vouée, exécration
+  - forme: ἀνάθεμα
+    langue: grec ancien
+    sens: offrande votive ; malédiction
+explication: >-
+  Le grec nommait une offrande vouée aux dieux ; le même mot en est venu à
+  désigner ce qui est maudit, puis la malédiction elle-même. Il ne dit plus
+  aujourd'hui qu'une réprobation solennelle.
+renvois: [ heresie ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: ἀνάθεμα
+  - ouvrage: littre
+    entree: anathème
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

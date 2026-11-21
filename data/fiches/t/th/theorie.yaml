@@ -1,0 +1,30 @@
+mot: theorie
+nature: [ nom féminin ]
+etymologie:
+  - forme: theoria
+    langue: bas latin
+    sens: contemplation
+  - forme: θεωρία
+    langue: grec ancien
+    sens: action de voir, contemplation
+  - forme: θεωρέω
+    langue: grec ancien
+    sens: observer
+explication: >-
+  Theoria, c'était l'action de contempler, de regarder. Le mot dit aujourd'hui
+  un système abstrait, alors qu'il désignait d'abord une vision.
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: théorie
+  - ouvrage: bailly
+    entree: θεωρία
+  - ouvrage: littre
+    entree: théorie
+  - ouvrage: tlfi
+    entree: theorie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

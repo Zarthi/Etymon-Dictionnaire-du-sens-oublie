@@ -1,0 +1,23 @@
+mot: ruine
+nature: [ nom féminin ]
+etymologie:
+  - forme: ruina
+    langue: latin
+    sens: chute, écroulement
+  - forme: ruere
+    langue: latin
+    sens: s'écrouler, tomber
+explication: >-
+  Le latin ruina disait l'écroulement ; le français a fini par nommer ce qui
+  reste debout après la chute.
+themes: [ temps, société ]
+sources:
+  - ouvrage: littre
+    entree: ruine
+  - ouvrage: tlfi
+    entree: ruine
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,35 @@
+mot: diagnostic
+nature: [ nom masculin ]
+etymologie:
+  - forme: diagnostic
+    langue: français
+    sens: identification d'une maladie
+  - forme: diagnostique
+    langue: français
+    sens: propre à discerner
+  - forme: διαγνωστικός
+    langue: grec ancien
+    sens: propre à discerner
+    elements:
+      - forme: διά
+        sens: à travers
+      - forme: γιγνώσκω
+        sens: connaître
+explication: >-
+  Le grec διαγνωστικός disait ce qui permet de discerner à travers les signes.
+  Le mot s'est spécialisé dans l'identification d'une maladie, puis dans
+  l'analyse d'une situation.
+renvois: [ discerner ]
+themes: [ savoir, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: diagnostic
+  - ouvrage: littre
+    entree: diagnostic
+  - ouvrage: littre
+    entree: diagnostique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: chaos
+nature: [ nom masculin ]
+etymologie:
+  - forme: chaos
+    langue: latin
+  - forme: χάος
+    langue: grec ancien
+    sens: ouverture, abîme
+explication: >-
+  Le grec désignait une ouverture, un abîme ; le mot nomme aujourd'hui le
+  désordre primordial ou la confusion qui précède toute forme.
+renvois: [ tempete ]
+themes: [ nature, savoir ]
+sources:
+  - ouvrage: littre
+    entree: chaos
+  - ouvrage: tlfi
+    entree: chaos
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

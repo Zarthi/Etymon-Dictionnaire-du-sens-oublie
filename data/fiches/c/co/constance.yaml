@@ -1,0 +1,19 @@
+mot: constance
+nature: [ nom féminin ]
+etymologie:
+  - forme: constantia
+    langue: latin
+    sens: permanence, continuité ; fermeté de caractère
+explication: >-
+  Constantia disait ce qui se tient et demeure. Le mot français a retenu la
+  persévérance dans un dessein, plus que l'idée de durée.
+renvois: [ obstine ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: constance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

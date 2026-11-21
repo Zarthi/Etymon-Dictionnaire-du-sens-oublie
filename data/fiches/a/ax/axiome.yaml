@@ -1,0 +1,25 @@
+mot: axiome
+nature: [ nom masculin ]
+etymologie:
+  - forme: axioma
+    langue: latin
+    sens: proposition évidente
+  - forme: ἀξίωμα
+    langue: grec ancien
+    sens: proposition, principe
+explication: >-
+  Le grec ἀξίωμα disait une proposition que l'on juge digne d'être admise. Le
+  mot a pris le sens d'une vérité évidente et non démontrable, alors qu'il
+  désignait d'abord une proposition.
+renvois: [ principe ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: axiome
+  - ouvrage: littre
+    entree: axiome
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

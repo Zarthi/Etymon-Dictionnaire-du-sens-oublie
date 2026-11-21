@@ -1,0 +1,24 @@
+mot: spectacle
+nature: [ nom masculin ]
+etymologie:
+  - forme: spectaculum
+    langue: latin
+    sens: ce qui est donné à voir
+  - forme: spectare
+    langue: latin
+    sens: regarder
+explication: >-
+  Le latin spectaculum disait ce qui est donné à voir ; le français a retenu le
+  sens de représentation offerte à un public.
+renvois: [ splendeur ]
+themes: [ société, émotions ]
+sources:
+  - ouvrage: littre
+    entree: spectacle
+  - ouvrage: tlfi
+    entree: spectacle
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

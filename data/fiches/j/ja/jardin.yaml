@@ -1,0 +1,35 @@
+mot: jardin
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*hortus gardinus"
+    langue: latin médiéval
+    sens: jardin clos
+    elements:
+      - forme: hortus
+        sens: jardin
+      - forme: "*gart"
+        langue: francique
+        sens: clôture
+explication: >-
+  Le composé latin disait un jardin entouré d'une clôture ; le français a gardé
+  le mot en laissant tomber l'idée de clôture.
+renvois: [ village ]
+themes: [ nature, maison ]
+tradition:
+  lectures:
+    - texte: Le nom hortus viendrait de ce que quelque chose y naît toujours.
+      citation: Hortus nominatus quod semper ibi aliquid oriatur.
+      sources:
+        - ouvrage: etymologies
+          entree: XVII, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVII
+sources:
+  - ouvrage: littre
+    entree: jardin
+  - ouvrage: tlfi
+    entree: jardin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

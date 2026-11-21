@@ -1,0 +1,29 @@
+mot: cathédrale
+nature: [ nom féminin ]
+etymologie:
+  - forme: cathedralis
+    langue: bas latin
+    sens: qui concerne le siège
+  - forme: cathedra
+    langue: latin
+    sens: siège, chaire
+explication: >-
+  Le latin cathedralis est l'adjectif de cathedra, le siège de l'évêque :
+  l'église cathédrale est celle où ce siège est établi. L'usage en a fait par
+  ellipse le nom de l'église principale du diocèse.
+renvois: [ chapelle ]
+themes: [ religion, maison ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: cathédrale
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

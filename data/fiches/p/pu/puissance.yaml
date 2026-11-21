@@ -1,0 +1,21 @@
+mot: puissance
+nature: [ nom féminin ]
+etymologie:
+  - forme: puissant
+    langue: français
+    sens: qui a du pouvoir
+  - forme: posse
+    langue: latin
+    sens: pouvoir
+explication: >-
+  Puissance vient de puissant, du latin posse, « pouvoir ». Le mot désigne
+  aujourd'hui la force, le pouvoir et l'état qui l'exerce.
+themes: [ politique, guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: puissance
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

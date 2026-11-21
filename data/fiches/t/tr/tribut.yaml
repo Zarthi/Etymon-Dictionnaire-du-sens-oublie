@@ -1,0 +1,33 @@
+mot: tribut
+nature: [ nom masculin ]
+etymologie:
+  - forme: tributum
+    langue: latin
+    sens: impôt, taxe
+  - forme: tribuere
+    langue: latin
+    sens: répartir, attribuer
+explication: >-
+  Tribut nommait l'impôt payé au vainqueur. Le mot désigne aujourd'hui ce que
+  l'on doit par obligation ou par hommage.
+renvois: [ colonie ]
+themes: [ argent, politique ]
+tradition:
+  lectures:
+    - texte: Les impôts sont appelés tributs, du fait de porter.
+      citation: Vectigalia sunt tributa, a vehendo dicta.
+      sources:
+        - ouvrage: etymologies
+          entree: XVI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+sources:
+  - ouvrage: tlfi
+    entree: tribut
+  - ouvrage: etymologies
+    entree: XVI
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVI
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

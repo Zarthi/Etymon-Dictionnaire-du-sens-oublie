@@ -1,0 +1,33 @@
+mot: village
+nature: [ nom masculin ]
+etymologie:
+  - forme: village
+    langue: ancien français
+    sens: groupe d'habitations rurales
+    elements:
+      - forme: ville
+        sens: ferme, domaine
+      - forme: -age
+        sens: suffixe collectif
+  - forme: ville
+    langue: ancien français
+    sens: ferme, domaine
+  - forme: villa
+    langue: latin
+    sens: maison de campagne, domaine
+explication: >-
+  Le latin villa disait la maison de campagne et son domaine ; le français a
+  formé village sur ville avec le suffixe -age, pour désigner le groupe
+  d'habitations.
+renvois: [ voisin ]
+themes: [ société, maison ]
+sources:
+  - ouvrage: littre
+    entree: village
+  - ouvrage: tlfi
+    entree: village
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

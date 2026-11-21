@@ -1,0 +1,35 @@
+mot: monstre
+nature: [ nom masculin ]
+etymologie:
+  - forme: monstrum
+    langue: latin
+    sens: prodige, avertissement des dieux
+  - forme: monere
+    langue: latin
+    sens: avertir, faire penser
+explication: >-
+  Le latin monstrum, de monere, « avertir », désignait un prodige qui
+  avertissait de la volonté des dieux ; le français a retenu le sens de prodige,
+  puis d'être étrange ou effrayant.
+renvois: [ spectacle ]
+themes: [ émotions, nature ]
+tradition:
+  lectures:
+    - texte: Le nom monstrum viendrait de monitus ou de monstrare, parce qu'il montre
+        quelque chose et le signifie aussitôt.
+      citation: Monstrum sane a monitu vel monstrando dictum, quod aliquid
+        significando demonstret et statim.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: monstre
+  - ouvrage: tlfi
+    entree: monstre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

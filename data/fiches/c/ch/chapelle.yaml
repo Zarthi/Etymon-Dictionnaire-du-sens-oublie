@@ -1,0 +1,28 @@
+mot: chapelle
+nature: [ nom féminin ]
+etymologie:
+  - forme: capella
+    langue: latin médiéval
+    sens: petite cape
+  - forme: cappa
+    langue: latin
+    sens: manteau à capuchon
+explication: >-
+  Le latin capella est un diminutif de cappa, « cape » : il a désigné la chape
+  de saint Martin, puis le lieu où on la gardait. Le mot ne dit plus aujourd'hui
+  qu'un édifice secondaire, sans souvenir du vêtement.
+themes: [ religion, maison ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: chapelle
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

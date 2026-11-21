@@ -1,0 +1,26 @@
+mot: catéchisme
+nature: [ nom masculin ]
+etymologie:
+  - forme: catechismus
+    langue: latin ecclésiastique
+    sens: instruction orale de la foi
+explication: >-
+  Le latin catechismus nommait l'instruction orale de la foi ; le mot a désigné
+  le livre qui la contient, puis tout exposé élémentaire. Il ne dit plus
+  aujourd'hui qu'un enseignement élémentaire ou un résumé de doctrine.
+renvois: [ doctrine ]
+themes: [ religion, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: catéchisme
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

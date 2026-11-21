@@ -1,0 +1,23 @@
+mot: solidaire
+nature: [ adjectif ]
+etymologie:
+  - forme: solide
+    langue: français
+    sens: entier, massif
+  - forme: solidus
+    langue: latin
+    sens: plein, entier
+explication: >-
+  Solidaire vient de solide, au sens d'entier : dans l'obligation solidaire,
+  chacun répond pour le tout. Le mot désigne aujourd'hui le lien qui rend des
+  personnes responsables les unes des autres.
+renvois: [ union ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: solidaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

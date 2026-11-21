@@ -1,0 +1,23 @@
+mot: trouble
+nature: [ nom masculin, adjectif ]
+etymologie:
+  - forme: trouble
+    langue: français
+    sens: agitation, désordre
+  - forme: troubler
+    langue: français
+    sens: mettre en désordre, agiter
+explication: >-
+  Trouble est le déverbal de troubler. Il a d'abord dit le désordre et
+  l'agitation, puis le mot a désigné ce qui brouille la vue et ce qui agite
+  l'âme.
+renvois: [ tranquille ]
+themes: [ émotions, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: trouble
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

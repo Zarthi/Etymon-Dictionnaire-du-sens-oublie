@@ -1,0 +1,26 @@
+mot: atome
+nature: [ nom masculin ]
+etymologie:
+  - forme: atomus
+    langue: latin
+  - forme: ἄτομος
+    langue: grec ancien
+    sens: qu'on ne peut couper, indivisible
+explication: >-
+  Le mot désignait la particule que l'on croyait insécable ; il nomme
+  aujourd'hui la plus petite partie d'un corps simple, dont la physique a montré
+  qu'elle se divise.
+renvois: [ mecanique ]
+themes: [ nature, savoir ]
+sources:
+  - ouvrage: littre
+    entree: atome
+  - ouvrage: tlfi
+    entree: atome
+  - ouvrage: bailly
+    entree: ἄτομος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

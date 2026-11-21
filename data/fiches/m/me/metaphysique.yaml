@@ -1,0 +1,32 @@
+mot: metaphysique
+nature: [ nom féminin ]
+etymologie:
+  - forme: metaphysica
+    langue: latin médiéval
+    sens: les traités qui viennent après la physique
+  - forme: μεταφυσικά
+    langue: grec ancien
+    sens: après les choses naturelles
+    elements:
+      - forme: μετά
+        sens: après
+      - forme: φυσικά
+        sens: choses naturelles
+explication: >-
+  Le mot est né d'un classement : les traités d'Aristote placés après ceux de la
+  physique. Il a fini par nommer une discipline, comme s'il désignait un au-delà
+  de la nature.
+renvois: [ principe ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: métaphysique
+  - ouvrage: littre
+    entree: métaphysique
+  - ouvrage: tlfi
+    entree: metaphysique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

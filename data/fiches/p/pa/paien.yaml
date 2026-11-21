@@ -1,0 +1,39 @@
+mot: païen
+nature: [ adjectif, nom masculin ]
+etymologie:
+  - forme: paganus
+    langue: latin
+    sens: paysan, habitant du village
+explication: >-
+  Le latin paganus nommait l'habitant du pagus, puis le civil opposé au soldat ;
+  les clercs, qui se disaient soldats du Christ, en ont fait le nom des fidèles
+  des cultes anciens. Il désigne aujourd'hui qui n'appartient pas aux grandes
+  religions révélées, ou un incroyant.
+renvois: [ demon ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: Les païens tirent leur nom des pagi, les villages athéniens où ils sont
+        apparus.
+      citation: Pagani ex pagis Atheniensium dicti, ubi exorti sunt.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 10, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: païen
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VIII, 10, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

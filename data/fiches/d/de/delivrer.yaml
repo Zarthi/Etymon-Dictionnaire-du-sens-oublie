@@ -1,0 +1,21 @@
+mot: délivrer
+nature: [ verbe ]
+etymologie:
+  - forme: deliberare
+    langue: latin ecclésiastique
+    sens: mettre en liberté
+  - forme: liberare
+    langue: latin
+    sens: libérer
+explication: >-
+  Délivrer, c'était mettre en liberté. Le mot a pris le sens de remettre une
+  chose ou une personne, et celui d'accoucher.
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: delivrer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

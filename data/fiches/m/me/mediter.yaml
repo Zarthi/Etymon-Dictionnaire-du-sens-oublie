@@ -1,0 +1,27 @@
+mot: mediter
+nature: [ verbe ]
+etymologie:
+  - forme: meditari
+    langue: latin
+    sens: s'exercer, préparer
+  - forme: medeor
+    langue: latin
+    sens: soigner
+explication: >-
+  Meditari était le fréquentatif de medeor, soigner : méditer, c'était s'exercer
+  avec soin, préparer longtemps. Le mot dit aujourd'hui une réflexion
+  intérieure, alors qu'il désignait d'abord un soin appliqué.
+renvois: [ theorie ]
+themes: [ esprit, religion ]
+sources:
+  - ouvrage: tlfi
+    entree: méditer
+  - ouvrage: littre
+    entree: méditer
+  - ouvrage: tlfi
+    entree: mediter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

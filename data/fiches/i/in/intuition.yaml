@@ -1,0 +1,29 @@
+mot: intuition
+nature: [ nom féminin ]
+etymologie:
+  - forme: intuitio
+    langue: latin médiéval
+    sens: vue, regard
+  - forme: intueri
+    langue: latin
+    sens: regarder attentivement
+    elements:
+      - forme: in-
+        sens: dans
+      - forme: tueri
+        sens: voir, regarder
+explication: >-
+  Intuitio, c'était d'abord l'action de regarder. La philosophie a fait de cette
+  vue directe une connaissance immédiate, sans passage par le raisonnement.
+renvois: [ imagination ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: intuition
+  - ouvrage: littre
+    entree: intuition
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

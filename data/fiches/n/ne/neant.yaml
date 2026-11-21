@@ -1,0 +1,28 @@
+mot: néant
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*ne gentem"
+    langue: latin populaire
+    sens: pas un être, personne
+explication: >-
+  Le mot viendrait d'une locution populaire qui nie l'existence de quelqu'un ;
+  il a pris le sens de rien, puis de non-être.
+ecartees:
+  - forme: ne-ens
+    langue: latin
+    sens: non-être
+    raison: Le Littré y voit la négation ne- et ens, « être » ; le TLFi rattache
+      plutôt la forme à *ne gentem.
+incertain: true
+renvois: [ chaos ]
+themes: [ savoir, religion ]
+sources:
+  - ouvrage: littre
+    entree: néant
+  - ouvrage: tlfi
+    entree: néant
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

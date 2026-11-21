@@ -1,0 +1,25 @@
+mot: critique
+nature: [ adjectif ]
+etymologie:
+  - forme: criticus
+    langue: latin
+    sens: qui juge
+  - forme: κριτικός
+    langue: grec ancien
+    sens: capable de discerner
+explication: >-
+  Le grec κριτικός désignait celui qui sait discerner, sans idée de blâme. Le
+  mot a pris le sens d'un jugement défavorable, alors qu'il nommait d'abord une
+  capacité de discernement.
+renvois: [ discerner ]
+themes: [ savoir, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: critique
+  - ouvrage: bailly
+    entree: κριτικός
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

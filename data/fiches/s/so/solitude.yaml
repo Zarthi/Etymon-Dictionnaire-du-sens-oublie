@@ -1,0 +1,24 @@
+mot: solitude
+nature: [ nom féminin ]
+etymologie:
+  - forme: solitudo
+    langue: latin
+    sens: solitude, abandon, lieu désert
+  - forme: solus
+    langue: latin
+    sens: seul
+explication: >-
+  Solitudo disait l'abandon et le lieu désert, sur solus, « seul ». Le mot
+  français a gardé les deux sens : l'état de celui qui est seul et le lieu où
+  l'on est seul.
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: solitude
+  - ouvrage: littre
+    entree: solitude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

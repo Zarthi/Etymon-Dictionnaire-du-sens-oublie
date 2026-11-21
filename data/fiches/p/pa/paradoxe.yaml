@@ -1,0 +1,39 @@
+mot: paradoxe
+nature: [ nom masculin ]
+etymologie:
+  - forme: paradoxon
+    langue: latin
+    sens: chose contraire à l'opinion
+  - forme: παράδοξος
+    langue: grec ancien
+    sens: contraire à l'attente
+    elements:
+      - forme: παρά
+        sens: contre, à côté de
+      - forme: δόξα
+        sens: opinion
+explication: >-
+  Le grec παράδοξος qualifiait ce qui va contre l'attente. Le mot a pris le sens
+  d'une affirmation surprenante, puis d'une contradiction logique, alors qu'il
+  disait d'abord un écart d'opinion.
+renvois: [ sceptique ]
+themes: [ esprit, savoir ]
+tradition:
+  lectures:
+    - texte: Le paradoxe, c'est quand nous disons que quelque chose est arrivé contre
+        toute attente.
+      citation: Paradoxon est, cum dicimus inopinatum aliquid accidisse
+      sources:
+        - ouvrage: etymologies
+          entree: II
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_II
+sources:
+  - ouvrage: tlfi
+    entree: paradoxe
+  - ouvrage: bailly
+    entree: παράδοξος
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

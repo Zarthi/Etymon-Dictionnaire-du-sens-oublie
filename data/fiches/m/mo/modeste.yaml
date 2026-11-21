@@ -1,0 +1,30 @@
+mot: modeste
+nature: [ adjectif ]
+etymologie:
+  - forme: modestus
+    langue: latin
+    sens: mesuré, modéré ; réservé, discret
+explication: >-
+  Modestus disait ce qui garde la mesure. Le mot français a retenu la retenue et
+  la discrétion, et il qualifie aujourd'hui ce qui reste sans éclat.
+renvois: [ temperance ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: "Modeste est ainsi nommé de la mesure et du tempérament : il n'agit ni
+        plus ni moins qu'il ne faut."
+      citation: Modestus dictus a modo et temperie, nec plus quicquam nec minus agens.
+      sources:
+        - ouvrage: etymologies
+          entree: livre X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: modeste
+  - ouvrage: littre
+    entree: modeste
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

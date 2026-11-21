@@ -1,0 +1,31 @@
+mot: debat
+nature: [ nom masculin ]
+etymologie:
+  - forme: débat
+    langue: français
+    sens: discussion, contestation
+  - forme: débattre
+    langue: français
+    sens: battre de çà et de là
+    elements:
+      - forme: dé-
+        sens: de côté et d'autre
+      - forme: battre
+        sens: frapper
+explication: >-
+  Débat est un déverbal de débattre, qui disait battre de çà et de là. Le mot a
+  gardé l'idée d'un choc, mais il nomme aujourd'hui un échange d'arguments.
+renvois: [ dilemme ]
+themes: [ parole, société ]
+sources:
+  - ouvrage: tlfi
+    entree: débat
+  - ouvrage: littre
+    entree: débat
+  - ouvrage: tlfi
+    entree: debat
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

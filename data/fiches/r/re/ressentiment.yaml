@@ -1,0 +1,25 @@
+mot: ressentiment
+nature: [ nom masculin ]
+etymologie:
+  - forme: ressentiment
+    langue: français
+    sens: souvenir d'une injure, d'un préjudice
+    elements:
+      - forme: ressentir
+        langue: français
+        sens: éprouver, sentir
+      - forme: -ment
+        langue: français
+        sens: suffixe de nom d'action
+explication: >-
+  Ressentiment est formé sur ressentir, avec le suffixe -ment. Il a d'abord dit
+  le souvenir d'une injure, puis le sentiment durable qui en reste.
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: ressentiment
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

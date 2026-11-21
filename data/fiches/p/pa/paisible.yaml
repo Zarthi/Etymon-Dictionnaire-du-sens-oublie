@@ -1,0 +1,27 @@
+mot: paisible
+nature: [ adjectif ]
+etymologie:
+  - forme: paisible
+    langue: français
+    sens: qui est en paix
+  - forme: pais
+    langue: ancien français
+    sens: paix
+  - forme: pax
+    langue: latin
+    sens: paix
+explication: >-
+  Paisible est formé sur pais, ancienne forme de paix. Le mot dit d'abord ce qui
+  est en paix, puis il a désigné ce qui est calme et sans trouble.
+renvois: [ tranquille ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: paisible
+  - ouvrage: littre
+    entree: paisible
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

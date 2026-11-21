@@ -1,0 +1,33 @@
+mot: réforme
+nature: [ nom féminin ]
+etymologie:
+  - forme: réformer
+    langue: français
+    sens: rendre sa forme ancienne
+  - forme: reformare
+    langue: latin
+    sens: rendre sa forme ancienne
+explication: >-
+  Réforme, c'était d'abord le rétablissement d'une discipline ancienne. Le mot
+  désigne aujourd'hui un changement destiné à améliorer.
+renvois: [ revolution ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: Réformez-vous dans la nouveauté de votre esprit.
+      citation: sed reformamini in nouitate mentis uestrae
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: X
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: reforme
+  - ouvrage: la-cite-de-dieu
+    entree: X
+    url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

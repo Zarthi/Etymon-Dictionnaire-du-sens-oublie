@@ -1,0 +1,28 @@
+mot: mécanique
+nature: [ adjectif ]
+etymologie:
+  - forme: mechanicus
+    langue: latin
+  - forme: μηχανικός
+    langue: grec ancien
+    sens: inventif, relatif aux machines
+  - forme: μηχανή
+    langue: grec ancien
+    sens: invention, machine
+explication: >-
+  Le grec μηχανή disait l'invention et la machine ; le mot français a désigné
+  l'art de les construire, puis la science des mouvements et ce qui se fait
+  comme une machine.
+themes: [ savoir, travail ]
+sources:
+  - ouvrage: littre
+    entree: mécanique
+  - ouvrage: tlfi
+    entree: mécanique
+  - ouvrage: bailly
+    entree: μηχανή
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

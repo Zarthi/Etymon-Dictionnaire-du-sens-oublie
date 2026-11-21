@@ -1,0 +1,35 @@
+mot: privilège
+nature: [ nom masculin ]
+etymologie:
+  - forme: privilegium
+    langue: latin
+    sens: loi concernant un particulier
+    elements:
+      - forme: privus
+        sens: propre, particulier
+      - forme: lex
+        sens: loi
+explication: >-
+  Privilegium nommait une loi faite pour un particulier. Le mot désigne
+  aujourd'hui un avantage réservé à une personne ou à un groupe.
+renvois: [ propriete ]
+themes: [ droit, politique ]
+tradition:
+  lectures:
+    - texte: Les privilèges sont les lois des particuliers, comme des lois privées.
+      citation: Privilegia autem sunt leges privatorum, quasi privatae leges.
+      sources:
+        - ouvrage: etymologies
+          entree: V
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: privilege
+  - ouvrage: etymologies
+    entree: V
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

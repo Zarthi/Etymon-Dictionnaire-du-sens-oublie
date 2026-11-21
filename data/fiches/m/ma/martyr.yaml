@@ -1,0 +1,45 @@
+mot: martyr
+nature: [ nom masculin, nom féminin ]
+etymologie:
+  - forme: martyr
+    langue: latin
+    sens: témoin
+  - forme: μάρτυς
+    langue: grec ancien
+    sens: témoin
+explication: >-
+  Le grec nommait le témoin ; le mot a désigné celui qui témoigne de sa foi
+  jusqu'à la mort. Il s'est étendu à qui souffre pour une cause, et à qui
+  souffre beaucoup.
+themes: [ religion, guerre ]
+tradition:
+  lectures:
+    - texte: Les martyrs sont des témoins ; ils ont souffert pour le témoignage du
+        Christ.
+      citation: Martyres Graeca lingua, Latine testes dicuntur, unde et testimonia
+        Graece martyria nuncupantur. Testes autem ideo vocati sunt, quia propter
+        testimonium Christi passiones sustinuerunt, et usque ad mortem pro
+        veritate certaverunt.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 11, 1
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: bailly
+    entree: μάρτυς
+  - ouvrage: littre
+    entree: martyr
+  - ouvrage: tlfi
+    entree: usage
+  - ouvrage: etymologies
+    entree: VII, 11, 1
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

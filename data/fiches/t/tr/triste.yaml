@@ -1,0 +1,18 @@
+mot: triste
+nature: [ adjectif ]
+etymologie:
+  - forme: tristis
+    langue: latin
+    sens: triste, affligé, fâcheux
+explication: >-
+  Tristis disait l'affliction et la tristesse. Le mot français a gardé ce sens,
+  et il qualifie aujourd'hui ce qui éprouve ou inspire de la tristesse.
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: triste
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

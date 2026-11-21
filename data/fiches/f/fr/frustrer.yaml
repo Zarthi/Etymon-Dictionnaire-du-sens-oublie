@@ -1,0 +1,22 @@
+mot: frustrer
+nature: [ verbe ]
+etymologie:
+  - forme: frustrare
+    langue: latin
+    sens: tromper, décevoir
+explication: >-
+  Frustrare disait tromper une attente. Le mot français a déplacé le sens vers
+  la privation : frustrer, c'est aujourd'hui priver quelqu'un de ce qui lui est
+  dû.
+renvois: [ ressentiment ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: frustrer
+  - ouvrage: littre
+    entree: frustrer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

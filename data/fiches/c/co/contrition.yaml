@@ -1,0 +1,25 @@
+mot: contrition
+nature: [ nom féminin ]
+etymologie:
+  - forme: contritio
+    langue: latin ecclésiastique
+    sens: broyage, écrasement
+explication: >-
+  Le latin contritio nommait le broyage, l'écrasement ; la langue chrétienne l'a
+  appliqué au repentir. Il ne dit plus aujourd'hui qu'un regret religieux, sans
+  l'image du broiement.
+themes: [ religion, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: contrition
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

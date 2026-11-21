@@ -1,0 +1,25 @@
+mot: hystérie
+nature: [ nom féminin ]
+etymologie:
+  - forme: hystérie
+    langue: français
+    sens: trouble attribué à la matrice
+  - forme: ὑστέρα
+    langue: grec ancien
+    sens: matrice
+explication: >-
+  Hystérie est un dérivé régressif de hystérique, formé sur le grec ὑστέρα,
+  « matrice ». Le mot a désigné un trouble que l'on croyait venir de l'utérus ;
+  cette origine s'est effacée.
+renvois: [ manie ]
+themes: [ santé, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: hystérie
+  - ouvrage: littre
+    entree: hystérie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

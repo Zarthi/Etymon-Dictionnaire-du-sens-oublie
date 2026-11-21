@@ -1,0 +1,21 @@
+mot: ville
+nature: [ nom féminin ]
+etymologie:
+  - forme: villa
+    langue: latin
+    sens: maison de campagne, domaine rural
+  - forme: vicus
+    langue: latin
+    sens: groupe de maisons, village
+explication: >-
+  Villa nommait la maison de campagne. Le mot désigne aujourd'hui
+  l'agglomération urbaine.
+themes: [ société, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: ville
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

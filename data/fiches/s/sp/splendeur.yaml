@@ -1,0 +1,31 @@
+mot: splendeur
+nature: [ nom féminin ]
+etymologie:
+  - forme: splendor
+    langue: latin
+    sens: éclat, brillance
+  - forme: splendere
+    langue: latin
+    sens: briller
+explication: >-
+  Le latin splendor disait l'éclat, la magnificence et la gloire ; le français a
+  gardé ces sens, matériels et figurés.
+themes: [ nature, société ]
+tradition:
+  lectures:
+    - texte: La splendeur est ainsi nommée parce qu'elle manifeste.
+      citation: Splendor autem appellatur propter quod manifestat.
+      sources:
+        - ouvrage: etymologies
+          entree: VII, 26
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VII
+sources:
+  - ouvrage: littre
+    entree: splendeur
+  - ouvrage: tlfi
+    entree: splendeur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

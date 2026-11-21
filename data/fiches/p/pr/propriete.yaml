@@ -1,0 +1,18 @@
+mot: propriété
+nature: [ nom féminin ]
+etymologie:
+  - forme: proprietas
+    langue: latin
+    sens: qualité propre, possession
+explication: >-
+  Proprietas nommait le propre d'une chose, puis la possession. Le mot désigne
+  aujourd'hui le droit de posséder et le bien possédé.
+themes: [ droit, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: propriete
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

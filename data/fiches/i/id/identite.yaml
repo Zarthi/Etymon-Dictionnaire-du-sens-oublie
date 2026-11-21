@@ -1,0 +1,27 @@
+mot: identite
+nature: [ nom féminin ]
+etymologie:
+  - forme: identitas
+    langue: bas latin
+    sens: qualité de ce qui est le même
+  - forme: idem
+    langue: latin
+    sens: le même
+explication: >-
+  Identitas disait la qualité de ce qui est le même. Le mot a pris le sens du
+  sentiment d'être soi, alors qu'il désignait d'abord une qualité d'être le
+  même.
+renvois: [ imagination ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: identité
+  - ouvrage: littre
+    entree: identité
+  - ouvrage: tlfi
+    entree: identite
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

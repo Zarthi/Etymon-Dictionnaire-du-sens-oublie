@@ -1,0 +1,30 @@
+mot: carême
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*quaresima"
+    langue: latin populaire
+    sens: quarantième jour
+  - forme: quadragesima
+    langue: latin
+    sens: quarantième
+explication: >-
+  Le latin populaire *quaresima est l'altération de quadragesima,
+  « quarantième » : le mot désignait le quarantième jour avant Pâques, puis la
+  période de jeûne qui y mène. Il ne dit plus aujourd'hui qu'une période
+  d'abstinence, souvent réduite à une image de privation.
+renvois: [ contrition ]
+themes: [ religion, nourriture ]
+sources:
+  - ouvrage: tlfi
+    entree: historique
+  - ouvrage: tlfi
+    entree: étymologie
+  - ouvrage: littre
+    entree: carême
+  - ouvrage: tlfi
+    entree: usage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

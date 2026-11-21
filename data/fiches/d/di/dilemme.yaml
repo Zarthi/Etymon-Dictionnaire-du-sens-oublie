@@ -1,0 +1,30 @@
+mot: dilemme
+nature: [ nom masculin ]
+etymologie:
+  - forme: dilemma
+    langue: bas latin
+    sens: argument à deux prémisses
+  - forme: δίλημμα
+    langue: grec ancien
+    sens: argument à deux fins
+    elements:
+      - forme: δίς
+        sens: deux fois
+      - forme: λῆμμα
+        sens: prémisse, prise
+explication: >-
+  Le grec δίλημμα était un argument à deux fins. Le mot a pris le sens d'un
+  choix forcé entre deux solutions également mauvaises, alors qu'il désignait
+  d'abord une forme d'argument.
+renvois: [ paradoxe ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: dilemme
+  - ouvrage: bailly
+    entree: δίλημμα
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
