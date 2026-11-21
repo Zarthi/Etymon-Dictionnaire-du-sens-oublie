@@ -1,0 +1,31 @@
+mot: carnaval
+nature: [ nom masculin ]
+etymologie:
+  - forme: carnovale
+    langue: italien
+  - forme: carnelevare
+    langue: latin médiéval
+    sens: ôter la viande
+    elements:
+      - forme: carne
+        langue: latin
+        sens: viande
+      - forme: levare
+        langue: latin
+        sens: ôter
+explication: >-
+  Le mot est venu de l'italien, où il désignait l'entrée en carême, temps où
+  l'on s'abstenait de viande. Il nomme aujourd'hui les fêtes qui précèdent ce
+  temps, avec leurs cortèges et leurs masques.
+renvois: [ grotesque ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: carnaval
+  - ouvrage: littre
+    entree: carnaval
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

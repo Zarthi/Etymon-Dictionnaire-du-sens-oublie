@@ -1,0 +1,23 @@
+mot: créer
+nature: [ verbe ]
+etymologie:
+  - forme: creare
+    langue: latin
+    sens: faire naître, produire, engendrer
+explication: >-
+  Le latin creare disait faire venir au monde, et aussi nommer à une charge. Le
+  français en a d'abord tiré « tirer du néant », en parlant de Dieu, avant d'en
+  faire l'acte de l'homme qui invente ou fonde.
+famille: [ créateur, création, créature ]
+renvois: [ detruire ]
+themes: [ travail ]
+sources:
+  - ouvrage: tlfi
+    entree: créer
+  - ouvrage: lewis-short
+    entree: creo1
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

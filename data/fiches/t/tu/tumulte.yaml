@@ -1,0 +1,30 @@
+mot: tumulte
+nature: [ nom masculin ]
+etymologie:
+  - forme: tumultus
+    langue: latin
+    sens: soulèvement, agitation, désordre
+explication: >-
+  Tumultus nommait le soulèvement soudain, souvent une sédition civile. Le mot
+  dit aujourd'hui le bruit et le désordre d'une foule, ou l'agitation
+  intérieure.
+famille: [ tumultueux ]
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: Le tumulte est un trouble si grand qu'il fait naître une crainte plus
+        grande ; son nom se lit comme une crainte multiple.
+      citation: Quid est enim aliud tumultus nisi perturbatio tanta ut maior timor
+        oriatur? Vnde etiam dictus tumultus, quasi timor multus.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: tlfi
+    entree: tumulte
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,26 @@
+mot: impertinent
+nature: [ adjectif ]
+etymologie:
+  - forme: impertinens
+    langue: bas latin
+    sens: qui est sans rapport avec
+    elements:
+      - forme: in-
+        sens: non
+      - forme: pertinens
+        sens: qui se rapporte à
+explication: >-
+  Impertinent s'est dit d'abord, en procédure, de ce qui ne se rapporte pas à la
+  cause ; le mot a glissé de l'à-propos manqué à l'insolence. Ce qui est hors de
+  propos en vient à blesser la bienséance.
+famille: [ impertinence, impertinemment ]
+renvois: [ insolent ]
+themes: [ société, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: impertinent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

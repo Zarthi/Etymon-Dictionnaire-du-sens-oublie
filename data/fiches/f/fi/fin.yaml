@@ -1,0 +1,30 @@
+mot: fin
+nature: [ nom féminin ]
+etymologie:
+  - forme: finis
+    langue: latin
+    sens: limite, but
+explication: >-
+  Finis nommait à la fois la limite et le but où l'on tend. Le français a gardé
+  les deux : la fin d'une chose est son terme, et la fin qu'on poursuit est ce
+  qu'on veut atteindre.
+famille: [ final, finesse ]
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: On appelle fin du bien ce terme où, une fois parvenu, on est heureux.
+      citation: Finis autem boni appellatur, quo quisque cum peruenerit beatus est.
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: VIII
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: fin
+  - ouvrage: littre
+    entree: fin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

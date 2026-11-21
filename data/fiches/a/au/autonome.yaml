@@ -1,0 +1,30 @@
+mot: autonome
+nature: [ adjectif ]
+etymologie:
+  - forme: αὐτόνομος
+    langue: grec ancien
+    sens: qui se régit par ses propres lois
+    elements:
+      - forme: αὐτός
+        sens: soi-même
+      - forme: νόμος
+        sens: loi
+explication: >-
+  Le mot grec s'appliquait aux États comme aux personnes ; le français le
+  reprend en 1751 pour les cités grecques, et l'étend avant 1815 à la personne
+  qui se fait sa règle ; il se dit aussi des ensembles qui fonctionnent sans
+  dépendre d'un autre.
+famille: [ autonomie, autonomiste ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: littre
+    entree: autonome
+  - ouvrage: bailly
+    entree: αὐτόνομος
+  - ouvrage: tlfi
+    entree: autonome
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,33 @@
+mot: pompe
+nature: [ nom féminin ]
+etymologie:
+  - forme: pompa
+    langue: latin
+    sens: procession, cortège, apparat
+  - forme: πομπή
+    langue: grec ancien
+    sens: convoi, escorte
+explication: >-
+  La pompa latine était la procession, le cortège qui accompagne. Le mot a
+  désigné le faste de ces cortèges, puis l'apparat en général et la recherche
+  trop visible du grand dans le style.
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: "Le mot vient du grec : pompe, c'est être montré publiquement."
+      citation: Pompa dicta est Graeca significatione, APO TOU POMPEUEIN, hoc est
+        publice ostentari.
+      sources:
+        - ouvrage: etymologies
+          entree: XVIII, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XVIII
+sources:
+  - ouvrage: tlfi
+    entree: pompe
+  - ouvrage: littre
+    entree: pompe
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

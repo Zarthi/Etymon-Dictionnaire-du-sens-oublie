@@ -1,0 +1,21 @@
+mot: point
+nature: [ nom masculin ]
+etymologie:
+  - forme: punctum
+    langue: latin
+    sens: piqûre, point
+explication: >-
+  Punctum nommait la piqûre et la marque qu'elle laisse, puis l'espace le plus
+  petit. Le mot dit aujourd'hui un endroit précis, un signe de ponctuation ou
+  une unité de mesure.
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: point
+  - ouvrage: littre
+    entree: point
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

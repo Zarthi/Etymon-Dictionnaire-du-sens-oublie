@@ -1,0 +1,23 @@
+mot: manière
+nature: [ nom féminin ]
+etymologie:
+  - forme: manier
+    langue: ancien français
+    sens: qu'on fait fonctionner à la main
+  - forme: manuarius
+    langue: latin
+    sens: de main
+explication: >-
+  Le mot vient de l'ancien adjectif manier, « qu'on fait fonctionner à la
+  main » : manière, c'est d'abord la façon d'agir (1119), puis, au pluriel, les
+  usages du monde (1662).
+famille: [ maniéré, maniérer ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: manière
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

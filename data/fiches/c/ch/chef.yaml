@@ -1,0 +1,32 @@
+mot: chef
+nature: [ nom masculin ]
+etymologie:
+  - forme: "*capum"
+    langue: latin populaire
+  - forme: caput
+    langue: latin
+    sens: tête
+explication: >-
+  Chef a nommé la tête, sens vieilli au xviie siècle et survivant dans
+  couvre-chef ; de « tête » viennent celui qui est à la tête d'un groupe (1172)
+  et le point principal d'une chose (xiiie siècle).
+famille: [ chef-d'œuvre, chef-lieu, couvre-chef, achever ]
+themes: [ société, politique ]
+tradition:
+  lectures:
+    - texte: Toute origine est dite tête par métaphore, et ceux qui dirigent les
+        autres sont dits leurs têtes.
+      citation: Unde metaphorice omne principium caput vocatur, et etiam homines qui
+        alios dirigunt et gubernant, capita aliorum dicuntur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 84 a. 3 co.
+          url: https://www.corpusthomisticum.org/sth2075.html
+sources:
+  - ouvrage: tlfi
+    entree: chef
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

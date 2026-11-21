@@ -1,0 +1,40 @@
+mot: héritage
+nature: [ nom masculin ]
+etymologie:
+  - forme: héritier
+    langue: français
+  - forme: hereditarius
+    langue: latin
+    sens: héréditaire, d'héritage
+  - forme: hereditas
+    langue: latin
+    sens: hérédité, succession
+explication: >-
+  Héritage est dérivé de héritier, refait sur le latin hereditarius,
+  « héréditaire, d'héritage », lui-même dérivé de hereditas, « succession ». Le
+  mot dit d'abord la transmission d'un bien, avant de s'étendre à ce qui est
+  reçu des générations.
+famille: [ hériter, héritier, hérédité, héréditaire ]
+themes: [ famille, droit ]
+tradition:
+  lectures:
+    - texte: Héritage se dit des biens dont on a pris possession, ou de l'airain,
+        parce que celui qui possède un champ en paie le cens.
+      citation: Dicta autem hereditas a rebus aditis, sive ab aere, quia qui possidet
+        agrum et censum solvit
+      sources:
+        - ouvrage: etymologies
+          entree: livre V
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: héritage
+  - ouvrage: tlfi
+    entree: héritier
+  - ouvrage: littre
+    entree: héritage
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

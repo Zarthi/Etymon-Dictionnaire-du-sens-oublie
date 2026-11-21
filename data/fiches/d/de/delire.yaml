@@ -1,0 +1,23 @@
+mot: délire
+nature: [ nom masculin ]
+etymologie:
+  - forme: delirium
+    langue: latin
+    sens: transport au cerveau, délire
+explication: >-
+  Délire nommait un transport au cerveau, l'égarement de l'esprit malade ; le
+  mot s'est étendu à l'exaltation de l'imagination et à l'enthousiasme excessif,
+  où la maladie n'est plus en vue.
+famille: [ délirer, délirant, delirium ]
+renvois: [ fou ]
+themes: [ santé, esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: délire
+  - ouvrage: littre
+    entree: délire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

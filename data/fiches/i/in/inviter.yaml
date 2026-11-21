@@ -1,0 +1,22 @@
+mot: inviter
+nature: [ verbe ]
+etymologie:
+  - forme: invitare
+    langue: latin
+    sens: inviter, convier, en particulier à table
+explication: >-
+  Invitare, c'est convier, appeler à venir, et d'abord convier à table. Le mot a
+  gardé ce sens, puis s'est étendu à toute sollicitation : inviter à faire,
+  inviter au calme.
+famille: [ invitation, invité, désinviter ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: inviter
+  - ouvrage: littre
+    entree: inviter
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

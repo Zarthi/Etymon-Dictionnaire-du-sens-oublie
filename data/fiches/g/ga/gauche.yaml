@@ -1,0 +1,40 @@
+mot: gauche
+nature: [ adjectif ]
+etymologie:
+  - forme: guauche
+    langue: ancien français
+    sens: mal tourné, de travers
+  - langue: ancien français
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: ganche
+          langue: ancien français
+          sens: chose de travers, tromperie
+          selon: [ emile-littre ]
+        - forme: "*walkan"
+          langue: francique
+          sens: fouler
+explication: >-
+  Le mot a d'abord dit ce qui est de travers, puis la main de ce côté, quand
+  senestre a vieilli. Il garde l'idée de maladresse et nomme, depuis 1790, le
+  côté opposé à la droite en politique.
+ecartees:
+  - forme: welk
+    langue: germanique
+    sens: faible
+    selon: [ friedrich-diez ]
+    raison: Le Littré objecte qu'on ne trouve pas gauche au sens de faible et que
+      l'historique ne s'accorde pas avec cette explication.
+famille: [ gaucher, gaucherie, gauchir ]
+themes: [ politique ]
+sources:
+  - ouvrage: tlfi
+    entree: gauche
+  - ouvrage: littre
+    entree: gauche
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

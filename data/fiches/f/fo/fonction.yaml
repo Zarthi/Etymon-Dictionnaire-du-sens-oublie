@@ -1,0 +1,23 @@
+mot: fonction
+nature: [ nom féminin ]
+etymologie:
+  - forme: functio
+    langue: latin
+    sens: accomplissement, exécution
+explication: >-
+  Functio nommait l'accomplissement d'une tâche ; le mot a désigné l'exercice
+  d'une charge (1566), puis le rôle d'un élément dans un ensemble (1680) et la
+  relation mathématique entre deux variables (1694).
+famille: [ fonctionner, fonctionnel, fonctionnaire ]
+renvois: [ titre ]
+themes: [ travail, savoir ]
+sources:
+  - ouvrage: littre
+    entree: fonction
+  - ouvrage: tlfi
+    entree: fonction
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

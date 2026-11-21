@@ -1,0 +1,35 @@
+mot: testament
+nature: [ nom masculin ]
+etymologie:
+  - forme: testamentum
+    langue: latin
+    sens: testament, dernières volontés
+  - forme: testari
+    langue: latin
+    sens: prendre à témoin
+explication: >-
+  Le testament romain était d'abord une déclaration faite devant témoins, d'où
+  son nom. Les traducteurs chrétiens l'ont employé pour rendre le grec διαθήκη,
+  « alliance », et la Bible s'est divisée en deux Testaments.
+famille: [ testamentaire, tester ]
+themes: [ droit, religion ]
+tradition:
+  lectures:
+    - texte: Le testament est ainsi nommé parce qu'il ne peut être confirmé ni lu
+        avant la mort du testateur, scellé qu'il est.
+      citation: Testamentum vocatum quia, nisi testator mortuus fuerit, nec confirmari
+        potest nec sciri quid in eo scriptum sit, quia clausum et obsignatum est
+      sources:
+        - ouvrage: etymologies
+          entree: V, 24, 2
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: littre
+    entree: testament
+  - ouvrage: tlfi
+    entree: testament
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

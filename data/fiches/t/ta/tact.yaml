@@ -1,0 +1,21 @@
+mot: tact
+nature: [ nom masculin ]
+etymologie:
+  - forme: tactus
+    langue: latin
+    sens: action de toucher, sens du toucher
+explication: >-
+  Tact a d'abord nommé le sens du toucher ; au XVIIIe siècle, il a pris le sens
+  de jugement fin et rapide des convenances, qui s'ajoute au premier.
+famille: [ tactile, tactilement, taction ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: tact
+  - ouvrage: littre
+    entree: tact
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

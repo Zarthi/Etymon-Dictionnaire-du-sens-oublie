@@ -1,0 +1,33 @@
+mot: rapport
+nature: [ nom masculin ]
+etymologie:
+  - forme: rapporter
+    langue: ancien français
+    sens: transmettre ce qu'on a vu ou entendu
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: apporter
+        sens: porter
+  - forme: apportare
+    langue: latin
+    sens: porter quelque chose à quelqu'un
+explication: >-
+  Rapport est le déverbal de rapporter, qui vient du latin apportare, « porter
+  quelque chose à quelqu'un » ; il a d'abord dit l'action de rapporter ce qu'on
+  a vu (1214), puis la convenance entre deux choses (1538) et toute relation, y
+  compris la proportion (1690).
+famille: [ rapporter, rapporteur ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: rapport
+  - ouvrage: tlfi
+    entree: apporter
+  - ouvrage: tlfi
+    entree: rapport
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

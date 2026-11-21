@@ -1,0 +1,32 @@
+mot: temple
+nature: [ nom masculin ]
+etymologie:
+  - forme: templum
+    langue: latin
+    sens: espace délimité pour les augures ; édifice consacré
+explication: >-
+  Templum désignait d'abord l'espace que l'augure délimitait dans le ciel ou sur
+  la terre pour y prendre les présages. Il a nommé ensuite l'édifice consacré à
+  un dieu, sens que le français a retenu.
+famille: [ templier ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Le nom de temple est général : les anciens appelaient temples tout grand
+        lieu, et le mot se dit comme « toit vaste »."
+      citation: "Templi nomen generale; pro locis enim quibuscumque magnis antiqui
+        templa dicebant: et templa dicta quasi tecta ampla."
+      sources:
+        - ouvrage: etymologies
+          entree: XV, 7
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+sources:
+  - ouvrage: littre
+    entree: temple
+  - ouvrage: tlfi
+    entree: temple
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

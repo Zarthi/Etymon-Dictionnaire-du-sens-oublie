@@ -1,0 +1,32 @@
+mot: blesser
+nature: [ verbe ]
+etymologie:
+  - forme: "*blettiare"
+    langue: latin populaire
+    sens: meurtrir
+  - forme: "*bleizza"
+    langue: francique
+    sens: ecchymose, trace d'une blessure
+explication: >-
+  Blesser vient d'un mot qui disait la meurtrissure, la trace d'un coup ; il a
+  pris le sens de meurtrir, puis de faire une blessure. Il dit aujourd'hui la
+  blessure du corps ou de l'amour-propre.
+ecartees:
+  - forme: bletzen
+    langue: allemand
+    sens: rapiécer
+    selon: [ friedrich-diez ]
+    raison: "Hypothèse abandonnée : le TLFi fait venir blesser du francique
+      *bleizza, « ecchymose », par un gallo-roman *blettiare."
+famille: [ blessure, blessant, blessé ]
+themes: [ corps, émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: blesser
+  - ouvrage: littre
+    entree: blesser
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,27 @@
+mot: insolent
+nature: [ adjectif ]
+etymologie:
+  - forme: insolens
+    langue: latin
+    sens: inaccoutumé, insolite
+    elements:
+      - forme: in-
+        sens: non
+      - forme: solens
+        sens: habituel
+explication: >-
+  Insolent a d'abord dit ce qui sort de l'usage, l'insolite ; de
+  l'extraordinaire on est passé à l'excessif, puis à l'effronté. Le mot ne garde
+  aujourd'hui que l'arrogance et l'insulte.
+famille: [ insolence, insolemment ]
+themes: [ société, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: insolent
+  - ouvrage: littre
+    entree: insolent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

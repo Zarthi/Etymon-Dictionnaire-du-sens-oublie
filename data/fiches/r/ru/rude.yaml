@@ -1,0 +1,20 @@
+mot: rude
+nature: [ adjectif ]
+etymologie:
+  - forme: rudis
+    langue: latin
+    sens: brut, inculte, grossier
+explication: >-
+  Rude a d'abord dit ce qui est brut, non dégrossi ; de là le dur au toucher, le
+  pénible à supporter, le sévère. Le mot qualifie aujourd'hui ce qui est
+  difficile ou dur, et garde l'idée d'un défaut de façonnage.
+famille: [ rudesse, rudement, rudoyer, rudiment ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: rude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

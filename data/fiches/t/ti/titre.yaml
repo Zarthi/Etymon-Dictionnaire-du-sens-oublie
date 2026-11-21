@@ -1,0 +1,22 @@
+mot: titre
+nature: [ nom masculin ]
+etymologie:
+  - forme: titulus
+    langue: latin
+    sens: inscription
+explication: >-
+  Titulus disait une inscription, sur un tombeau ou en tête d'un livre ; le mot
+  en a tiré la désignation d'une œuvre (1200), puis ce qui établit un droit
+  (1283) et une dignité (1479).
+famille: [ titulaire, titrer, tilde ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: littre
+    entree: titre
+  - ouvrage: tlfi
+    entree: titre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

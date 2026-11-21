@@ -1,0 +1,26 @@
+mot: guide
+nature: [ nom masculin ]
+etymologie:
+  - forme: guida
+    langue: occitan
+    sens: celui qui conduit
+  - forme: guidar
+    langue: occitan
+    sens: conduire
+  - forme: "*widan"
+    langue: germanique
+    sens: attacher, atteler
+explication: >-
+  Guida, en ancien provençal, nommait celui qui montre le chemin. Le mot a
+  étendu son sens aux ouvrages qui orientent, puis aux pièces qui dirigent un
+  mouvement.
+famille: [ guider, guidage, guidon ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: guide
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

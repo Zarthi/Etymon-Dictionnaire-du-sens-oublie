@@ -1,0 +1,26 @@
+mot: subir
+nature: [ verbe ]
+etymologie:
+  - forme: subire
+    langue: latin
+    sens: aller sous ; se charger de, supporter, subir
+    elements:
+      - forme: sub
+        sens: sous
+      - forme: ire
+        sens: aller
+explication: >-
+  Subire, c'est aller sous, puis se charger de, supporter, et en droit subir une
+  peine. Le français a d'abord employé subir au sens juridique, avant d'en faire
+  l'endurance de tout ce qu'on ne choisit pas.
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: subir
+  - ouvrage: littre
+    entree: subir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

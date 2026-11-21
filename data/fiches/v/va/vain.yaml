@@ -1,0 +1,29 @@
+mot: vain
+nature: [ adjectif ]
+etymologie:
+  - forme: vanus
+    langue: latin
+    sens: vide, sans consistance
+explication: >-
+  Vain a d'abord dit le vide, ce qui n'a pas de consistance ; il a qualifié ce
+  qui est sans effet, puis l'homme plein de lui-même et vide de mérite. Le mot
+  réunit aujourd'hui l'inutile et l'orgueil.
+ecartees:
+  - forme: Venus
+    langue: latin
+    sens: déesse de l'amour
+    selon: [ isidore-de-seville ]
+    raison: Isidore tire vanus de Venus ; cette origine n'est pas retenue.
+famille: [ vanité, vainement, vaniteux ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: vain
+  - ouvrage: etymologies
+    entree: livre X
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

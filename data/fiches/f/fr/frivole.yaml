@@ -1,0 +1,34 @@
+mot: frivole
+nature: [ adjectif ]
+etymologie:
+  - forme: frivolus
+    langue: latin
+    sens: de peu de valeur, futile
+explication: >-
+  Le latin frivola désignait, selon Festus, des vases fêlés, et frivolus ce qui
+  est de peu de valeur. Le mot n'a gardé que ce second sens : il qualifie ce qui
+  est léger, sans consistance.
+famille: [ frivolité, frivolement ]
+renvois: [ vain ]
+themes: [ morale, esprit ]
+tradition:
+  lectures:
+    - texte: Frivola désigne proprement les vases de terre inutiles.
+      citation: Proprie autem frivola vocantur fictilia vasa inutilia.
+      sources:
+        - ouvrage: etymologies
+          entree: livre IX
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: frivole
+  - ouvrage: littre
+    entree: frivole
+  - ouvrage: etymologies
+    entree: livre IX
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

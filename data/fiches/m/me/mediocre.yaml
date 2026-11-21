@@ -1,0 +1,25 @@
+mot: médiocre
+nature: [ adjectif ]
+etymologie:
+  - forme: mediocris
+    langue: latin
+    sens: moyen, ordinaire
+  - forme: medius
+    langue: latin
+    sens: qui est au milieu
+explication: >-
+  Mediocris disait ce qui se tient au milieu, entre le grand et le petit. Le mot
+  a gardé ce sens, puis a pris celui de ce qui reste au-dessous de ce qu'on
+  attend.
+famille: [ médiocrement, médiocrité ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: médiocre
+  - ouvrage: littre
+    entree: médiocre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,32 @@
+mot: grave
+nature: [ adjectif ]
+etymologie:
+  - forme: gravis
+    langue: latin
+    sens: pesant
+explication: >-
+  Gravis disait ce qui pèse. Le mot a pris le sens moral de ce qui a de
+  l'importance ou de la dignité, et celui du son bas ; il a supplanté l'adjectif
+  grief.
+famille: [ gravement ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: La gravité vient du poids de l'âme et du jugement ; la pesanteur, elle,
+        est celle du corps.
+      citation: Gravitas ex pondere animi, et ex sententia constat, gravitudo autem
+        corporis est.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: grave
+  - ouvrage: littre
+    entree: grave
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

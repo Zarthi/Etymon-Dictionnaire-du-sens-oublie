@@ -1,0 +1,20 @@
+mot: vil
+nature: [ adjectif ]
+etymologie:
+  - forme: vilis
+    langue: latin
+    sens: à bas prix
+explication: >-
+  Vil vient de vilis, « à bas prix » : il a pris le sens de basse condition et
+  celui de mépris. Il qualifie aujourd'hui l'abject et le honteux, et survit
+  dans à vil prix.
+famille: [ vileté, vilenie, avilir, vilipender ]
+themes: [ morale, argent ]
+sources:
+  - ouvrage: tlfi
+    entree: vil
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

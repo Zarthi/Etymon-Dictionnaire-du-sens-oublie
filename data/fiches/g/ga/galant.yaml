@@ -1,0 +1,22 @@
+mot: galant
+nature: [ adjectif ]
+etymologie:
+  - forme: galer
+    langue: ancien français
+    sens: dissiper en plaisirs
+explication: >-
+  Galant est le participe présent de l'ancien verbe galer, « dissiper en
+  plaisirs ». Il a dit le bon vivant, puis l'homme hardi et brave, l'homme
+  d'honneur, avant de se fixer sur celui qui fait la cour aux femmes.
+famille: [ galanterie, galantin, galantiser ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: galant
+  - ouvrage: littre
+    entree: galant
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

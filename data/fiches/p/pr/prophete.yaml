@@ -1,0 +1,27 @@
+mot: prophète
+nature: [ nom masculin ]
+etymologie:
+  - forme: propheta
+    langue: latin ecclésiastique
+    sens: interprète d'un dieu, prophète
+  - forme: προφήτης
+    langue: grec ancien
+    sens: interprète d'un dieu, celui qui annonce l'avenir
+explication: >-
+  Le grec προφήτης désignait celui qui parle pour un dieu et explique sa
+  volonté ; annoncer l'avenir n'était qu'un de ses offices. Prophète a gardé le
+  sens biblique et s'est étendu à celui qui prédit, souvent avec méfiance.
+famille: [ prophétie, prophétique, prophétiser ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: littre
+    entree: prophete
+  - ouvrage: bailly
+    entree: προφήτης
+  - ouvrage: tlfi
+    entree: prophete
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

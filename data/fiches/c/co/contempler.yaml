@@ -1,0 +1,22 @@
+mot: contempler
+nature: [ verbe ]
+etymologie:
+  - forme: contemplari
+    langue: latin
+    sens: regarder attentivement, considérer par la pensée
+explication: >-
+  Contempler est emprunté au latin contemplari, qui unit le regard et la pensée.
+  Il a d'abord dit l'attention absorbée par un objet, puis la considération par
+  l'esprit ; l'usage courant y joint aujourd'hui l'admiration.
+famille: [ contemplation, contemplatif, contemplateur ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: contempler
+  - ouvrage: littre
+    entree: contempler
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

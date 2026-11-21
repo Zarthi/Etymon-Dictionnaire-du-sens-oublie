@@ -1,0 +1,22 @@
+mot: niais
+nature: [ adjectif ]
+etymologie:
+  - forme: "*nidax"
+    langue: latin
+    sens: pris au nid
+explication: >-
+  Niais s'est dit du faucon encore au nid, qui n'a pas appris à voler ; l'image
+  a désigné l'homme sans expérience, gauche et sot. Le mot ne dit plus l'oiseau,
+  mais la simplicité de celui qui n'a rien appris du monde.
+famille: [ niaiserie, déniaiser, niaisement ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: niais
+  - ouvrage: littre
+    entree: niais
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

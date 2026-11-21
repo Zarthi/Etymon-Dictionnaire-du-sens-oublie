@@ -1,0 +1,38 @@
+mot: démence
+nature: [ nom féminin ]
+etymologie:
+  - forme: dementia
+    langue: latin
+    sens: égarement de l'esprit, folie
+    elements:
+      - forme: de-
+        sens: privé de
+      - forme: mens
+        sens: esprit, intelligence
+explication: >-
+  Démence a nommé l'aliénation mentale ; la médecine en a fait la détérioration
+  acquise et irréversible des facultés, tandis que, par exagération, le mot
+  désigne une conduite insensée.
+famille: [ dément, démentiel ]
+themes: [ santé, esprit ]
+tradition:
+  lectures:
+    - texte: La démence est ainsi nommée comme une diminution de l'esprit.
+      citation: Dementia autem dicta, quasi diminutio mentis.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: démence
+  - ouvrage: littre
+    entree: démence
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

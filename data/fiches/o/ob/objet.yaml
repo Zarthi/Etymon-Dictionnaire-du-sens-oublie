@@ -1,0 +1,19 @@
+mot: objet
+nature: [ nom masculin ]
+etymologie:
+  - forme: objectum
+    langue: latin médiéval
+    sens: ce qui est placé devant
+explication: >-
+  Objectum, en latin scolastique, disait ce qui est placé devant l'esprit, par
+  opposition au sujet. Le mot en est venu à toute chose qui se présente aux
+  sens, puis au but d'une action ou d'un désir.
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: objet
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,20 @@
+mot: sermon
+nature: [ nom masculin ]
+etymologie:
+  - forme: sermo
+    langue: latin
+    sens: discours, entretien, propos
+explication: >-
+  Sermo était la parole ordinaire, l'entretien ; les chrétiens en ont fait le
+  discours prononcé en chaire pour instruire. Le français a gardé ce sens
+  religieux, et sermonner dit la remontrance plus que l'enseignement.
+famille: [ sermonner, sermonneur ]
+themes: [ religion, parole ]
+sources:
+  - ouvrage: littre
+    entree: sermon
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

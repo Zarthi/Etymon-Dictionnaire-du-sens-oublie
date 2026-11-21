@@ -1,0 +1,34 @@
+mot: tentation
+nature: [ nom féminin ]
+etymologie:
+  - forme: temptatio
+    langue: latin ecclésiastique
+    sens: sollicitation au péché
+  - forme: temptare
+    langue: latin
+    sens: essayer, éprouver
+explication: >-
+  Le latin temptare voulait dire essayer, éprouver ; temptatio, l'épreuve. Le
+  latin chrétien en a fait la sollicitation au mal, et le français a gardé ce
+  sens moral : la tentation n'est plus une épreuve, mais un attrait vers ce qui
+  est défendu.
+famille: [ tenter, tentateur ]
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: Le mouvement même de la concupiscence est appelé tentation de la chair.
+      citation: passio ipsa concupiscentiae vocatur tentatio carnis.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 77 a. 6 s. c.
+          url: https://www.corpusthomisticum.org/sth2075.html
+sources:
+  - ouvrage: littre
+    entree: tentation
+  - ouvrage: tlfi
+    entree: tentation
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: formidable
+nature: [ adjectif ]
+etymologie:
+  - forme: formidabilis
+    langue: latin
+    sens: redoutable, qui inspire la crainte
+  - forme: formido
+    langue: latin
+    sens: crainte
+explication: >-
+  Formidabilis disait ce qui est à craindre. Depuis le xixe siècle, le mot s'est
+  retourné : il dit ce qui frappe par sa grandeur, et souvent ce qui est
+  excellent.
+renvois: [ terrible ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: formidable
+  - ouvrage: littre
+    entree: formidable
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

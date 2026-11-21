@@ -1,0 +1,21 @@
+mot: intégrité
+nature: [ nom féminin ]
+etymologie:
+  - forme: integritas
+    langue: latin
+    sens: état d'être intact
+explication: >-
+  Integritas disait l'état de ce qui est intact et entier ; le français en a
+  tiré d'abord la chasteté (xive siècle), puis la probité d'une personne
+  incorruptible (avant 1465).
+famille: [ intègre, intégral ]
+renvois: [ morale ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: intégrité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

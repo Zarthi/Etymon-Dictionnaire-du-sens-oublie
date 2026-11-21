@@ -1,0 +1,20 @@
+mot: compromis
+nature: [ nom masculin ]
+etymologie:
+  - forme: compromissum
+    langue: latin
+    sens: convention d'arbitrage
+explication: >-
+  Compromis est d'abord l'acte par lequel deux parties s'en remettent à un
+  arbitre (1243) ; le sens d'accord par concessions mutuelles date de 1611 et a
+  pris souvent un ton péjoratif.
+famille: [ compromettre, compromission, compromissoire ]
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: compromis
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

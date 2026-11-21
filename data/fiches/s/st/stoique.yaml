@@ -1,0 +1,39 @@
+mot: stoïque
+nature: [ adjectif ]
+etymologie:
+  - forme: stoicus
+    langue: latin
+    sens: stoïcien
+  - forme: Στωικός
+    langue: grec ancien
+  - forme: στοά
+    langue: grec ancien
+    sens: portique
+explication: >-
+  Stoïque désignait l'adepte de la doctrine de Zénon, qui enseignait sous le
+  portique d'Athènes ; le mot a pris le sens de fermeté devant la douleur et
+  l'adversité, sans que la doctrine soit toujours en vue.
+famille: [ stoïcisme, stoïcien, stoïquement ]
+renvois: [ brave ]
+themes: [ morale, esprit ]
+tradition:
+  lectures:
+    - texte: Les stoïciens sont dits ainsi du lieu où ils enseignaient.
+      citation: Stoici a loco dicti.
+      sources:
+        - ouvrage: etymologies
+          entree: livre VIII
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: tlfi
+    entree: stoïque
+  - ouvrage: bailly
+    entree: στοά
+  - ouvrage: etymologies
+    entree: livre VIII
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

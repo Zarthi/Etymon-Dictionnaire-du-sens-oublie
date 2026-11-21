@@ -1,0 +1,39 @@
+mot: perfide
+nature: [ adjectif ]
+etymologie:
+  - forme: perfidus
+    langue: latin
+    sens: qui viole sa foi
+    elements:
+      - forme: per-
+        sens: transgression
+      - forme: fides
+        sens: foi
+explication: >-
+  Perfide vient de perfidus, celui qui viole la foi jurée : la trahison est dans
+  le mot, et elle suppose une confiance trompée. L'usage l'a étendu à ce qui est
+  dangereux sous des apparences inoffensives.
+famille: [ perfidie, perfidement ]
+themes: [ morale, société ]
+tradition:
+  lectures:
+    - texte: Le perfide est celui qui trompe et n'a pas de foi, comme s'il perdait la
+        foi.
+      citation: Perfidus, quia fraudulentus est et sine fide, quasi perdens fidem.
+      sources:
+        - ouvrage: etymologies
+          entree: livre X
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: tlfi
+    entree: perfide
+  - ouvrage: littre
+    entree: perfide
+  - ouvrage: etymologies
+    entree: livre X
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

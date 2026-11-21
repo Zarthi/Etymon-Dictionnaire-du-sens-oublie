@@ -1,0 +1,23 @@
+mot: pécher
+nature: [ verbe ]
+etymologie:
+  - forme: peccare
+    langue: latin
+    sens: commettre une faute, faillir
+explication: >-
+  Peccare disait, en latin classique déjà, commettre une faute ou être
+  défectueux. Le sens religieux de faute contre la loi divine l'a emporté, mais
+  le sens profane survit dans pécher par excès ou par défaut.
+famille: [ péché, pécheur, impeccable ]
+renvois: [ tentation ]
+themes: [ religion, morale ]
+sources:
+  - ouvrage: littre
+    entree: pecher
+  - ouvrage: tlfi
+    entree: pecher
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

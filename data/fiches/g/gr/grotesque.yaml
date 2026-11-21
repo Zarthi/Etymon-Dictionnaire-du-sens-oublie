@@ -1,0 +1,22 @@
+mot: grotesque
+nature: [ adjectif ]
+etymologie:
+  - forme: grottesca
+    langue: italien
+    sens: peinture de grotte, ornement mural fantaisiste
+  - forme: grotta
+    langue: italien
+    sens: grotte
+explication: >-
+  L'italien grottesca nommait l'ornement fantastique imité des salles
+  souterraines de la Domus Aurea. Le mot a désigné ces figures, puis ce qui
+  prête à rire par son extravagance.
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: grotesque
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,33 @@
+mot: face
+nature: [ nom féminin ]
+etymologie:
+  - forme: facia
+    langue: bas latin
+    sens: portrait
+  - forme: facies
+    langue: latin
+    sens: forme, figure, aspect
+explication: >-
+  En latin, facies disait la forme et l'aspect d'une chose, puis le visage. Le
+  français a gardé ce dernier sens et en a tiré celui de côté visible d'un objet
+  ou d'une question.
+famille: [ effacer, facette, façade ]
+themes: [ corps ]
+tradition:
+  lectures:
+    - texte: La face est ainsi nommée parce qu'elle fait connaître l'homme.
+      citation: Facies dicta est, eo quod notitiam faciat hominis.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: face
+  - ouvrage: lewis-short
+    entree: facies
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

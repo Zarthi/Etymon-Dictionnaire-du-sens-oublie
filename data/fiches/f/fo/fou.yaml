@@ -1,0 +1,22 @@
+mot: fou
+nature: [ nom masculin ]
+etymologie:
+  - forme: follis
+    langue: latin
+    sens: outre gonflée, soufflet
+explication: >-
+  Le latin tardif fit de follis, l'outre gonflée, le nom de l'idiot ; fol a
+  désigné vers 1100 celui qui déraisonne. L'usage a étendu le mot à
+  l'engouement, à l'imprudence et au bouffon attaché aux grands.
+famille: [ folie, affoler, follement, folichon ]
+themes: [ esprit, santé ]
+sources:
+  - ouvrage: tlfi
+    entree: fou
+  - ouvrage: littre
+    entree: fou
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

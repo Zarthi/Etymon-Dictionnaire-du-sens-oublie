@@ -1,0 +1,30 @@
+mot: morale
+nature: [ nom féminin ]
+etymologie:
+  - forme: moral
+    langue: français
+    sens: relatif aux mœurs
+  - forme: moralis
+    langue: latin
+    sens: relatif aux mœurs
+  - forme: mos
+    langue: latin
+    sens: mœurs
+explication: >-
+  Morale est le féminin substantivé de moral, qui vient du latin mos,
+  « mœurs » : le mot nomme d'abord la science des règles de conduite (1637),
+  puis l'ensemble des règles admises et la leçon qu'on tire d'un récit.
+famille: [ moral, moralité, moraliste ]
+themes: [ morale, savoir ]
+sources:
+  - ouvrage: littre
+    entree: moral
+  - ouvrage: tlfi
+    entree: moral
+  - ouvrage: tlfi
+    entree: morale
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

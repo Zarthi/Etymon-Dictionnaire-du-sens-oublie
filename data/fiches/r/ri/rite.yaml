@@ -1,0 +1,30 @@
+mot: rite
+nature: [ nom masculin ]
+etymologie:
+  - forme: ritus
+    langue: latin
+    sens: rite, cérémonie religieuse ; usage, coutume
+explication: >-
+  Le latin ritus nommait la cérémonie religieuse et, plus largement, l'usage
+  reçu. Le français l'a d'abord pris au sens de coutume avant de le fixer sur
+  les pratiques du culte ; il désigne aujourd'hui toute pratique réglée.
+famille: [ rituel ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le rite relève de la justice, comme ce qui est droit, d'où vient ce qui
+        est pieux, équitable et saint.
+      citation: Ritus vero ad justitiam pertinet, quasi […] rectum, ex quo pium,
+        aequum, sanctumque
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: rite
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

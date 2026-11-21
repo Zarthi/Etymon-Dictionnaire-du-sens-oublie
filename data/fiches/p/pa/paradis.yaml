@@ -1,0 +1,30 @@
+mot: paradis
+nature: [ nom masculin ]
+etymologie:
+  - forme: paradisus
+    langue: latin
+    sens: jardin, parc
+  - forme: παράδεισος
+    langue: grec ancien
+    sens: parc, lieu planté d'arbres
+  - forme: pairi-daēza
+    langue: persan
+    sens: enclos
+explication: >-
+  Le mot a désigné un enclos, puis un jardin. En français, il a d'abord nommé le
+  séjour des âmes bienheureuses, puis le jardin d'Éden ; l'usage courant en a
+  fait un lieu de délices, et le sens de jardin clos s'est perdu.
+famille: [ paradisiaque ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: paradis
+  - ouvrage: bailly
+    entree: παράδεισος
+  - ouvrage: tlfi
+    entree: paradis
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

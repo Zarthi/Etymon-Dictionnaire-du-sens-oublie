@@ -1,0 +1,33 @@
+mot: paroisse
+nature: [ nom féminin ]
+etymologie:
+  - forme: parochia
+    langue: latin médiéval
+    sens: ressort d'une église, paroisse
+  - forme: paroecia
+    langue: latin
+    sens: séjour en pays étranger
+  - forme: παροικία
+    langue: grec ancien
+    sens: séjour en pays étranger
+    elements:
+      - forme: παρά
+        sens: près, auprès
+      - forme: οἶκος
+        sens: maison
+explication: >-
+  Le grec παροικία nommait le séjour en pays étranger, et les premiers chrétiens
+  l'appliquèrent à leur communauté. Paroisse a désigné le ressort d'une église,
+  puis ses fidèles et son église ; le sens de séjour étranger a disparu.
+famille: [ paroissial, paroissien ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: paroisse
+  - ouvrage: tlfi
+    entree: paroisse
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

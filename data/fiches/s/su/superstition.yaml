@@ -1,0 +1,31 @@
+mot: superstition
+nature: [ nom féminin ]
+etymologie:
+  - forme: superstitio
+    langue: latin
+    sens: crainte religieuse, croyance irrationnelle
+explication: >-
+  Le latin superstitio disait une crainte religieuse excessive ou mal réglée, et
+  le mot est resté péjoratif. Il s'est étendu aux croyances irrationnelles les
+  plus diverses, puis à l'attachement excessif à une pratique.
+famille: [ superstitieux ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: La superstition est dite ainsi parce qu'elle est une observance superflue
+        ou surajoutée.
+      citation: Superstitio dicta eo quod sit superflua aut superinstituta observatio.
+      sources:
+        - ouvrage: etymologies
+          entree: VIII, 6
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VIII
+sources:
+  - ouvrage: littre
+    entree: superstition
+  - ouvrage: tlfi
+    entree: superstition
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

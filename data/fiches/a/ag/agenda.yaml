@@ -1,0 +1,20 @@
+mot: agenda
+nature: [ nom masculin ]
+etymologie:
+  - forme: agenda
+    langue: bas latin
+    sens: choses à faire
+explication: >-
+  Agenda est en latin le pluriel de « ce qui doit être fait » ; le mot a désigné
+  un registre de comptes (1535) avant le carnet où l'on note ses tâches (1662).
+themes: [ temps ]
+sources:
+  - ouvrage: littre
+    entree: agenda
+  - ouvrage: tlfi
+    entree: agenda
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

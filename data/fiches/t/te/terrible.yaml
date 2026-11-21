@@ -1,0 +1,32 @@
+mot: terrible
+nature: [ adjectif ]
+etymologie:
+  - forme: terribilis
+    langue: latin
+    sens: effrayant, épouvantable
+  - forme: terrere
+    langue: latin
+    sens: épouvanter
+explication: >-
+  Terribilis disait ce qui inspire l'épouvante. Le mot s'est affaibli jusqu'à
+  qualifier ce qui est très fort, très pénible ou, familièrement, remarquable.
+famille: [ terriblement, terreur ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Seul ce qui vient d'une cause extérieure est terrible ; ce qui vient de
+        notre volonté ne l'est pas.
+      citation: sicut dictum est, illud solum habet rationem terribilis, quod ex causa
+        extrinseca provenit, non autem quod provenit ex voluntate nostra.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 42 a. 4 co.
+          url: https://www.corpusthomisticum.org/sth2040.html
+sources:
+  - ouvrage: tlfi
+    entree: terrible
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

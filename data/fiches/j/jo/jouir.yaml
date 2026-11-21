@@ -1,0 +1,25 @@
+mot: jouir
+nature: [ verbe ]
+etymologie:
+  - forme: "*gaudire"
+    langue: latin populaire
+    sens: se réjouir, éprouver du plaisir
+  - forme: gaudere
+    langue: latin
+    sens: se réjouir, éprouver une joie intime
+explication: >-
+  Gaudere disait la joie intime, le plaisir pris à quelque chose. Jouir a
+  d'abord dit l'accueil joyeux, puis le profit tiré de la possession d'un bien ;
+  le plaisir sexuel et le simple bien-être ont suivi.
+famille: [ jouissance, réjouir, éjouir ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: jouir
+  - ouvrage: littre
+    entree: jouir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

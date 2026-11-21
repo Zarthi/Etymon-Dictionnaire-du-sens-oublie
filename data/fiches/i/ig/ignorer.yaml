@@ -1,0 +1,22 @@
+mot: ignorer
+nature: [ verbe ]
+etymologie:
+  - forme: ignorare
+    langue: latin
+    sens: ne pas connaître, être dans l'ignorance
+explication: >-
+  Ignorer, c'est d'abord ne pas savoir ; le mot a pris le sens de ne pas vouloir
+  savoir, puis celui de traiter quelqu'un comme s'il n'existait pas. Le savoir
+  manque, mais l'usage y ajoute souvent le refus.
+famille: [ ignorance, ignorant, ignoré ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: tlfi
+    entree: ignorer
+  - ouvrage: littre
+    entree: ignorer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

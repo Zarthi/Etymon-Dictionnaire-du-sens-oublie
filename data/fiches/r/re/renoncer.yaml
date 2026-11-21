@@ -1,0 +1,36 @@
+mot: renoncer
+nature: [ verbe ]
+etymologie:
+  - forme: renuntiare
+    langue: latin
+    sens: annoncer en retour ; renvoyer, renoncer à
+    elements:
+      - forme: re-
+        sens: en retour
+      - forme: nuntiare
+        sens: annoncer
+explication: >-
+  Renuntiare, c'est annoncer en retour, puis renvoyer, refuser : renoncer à. En
+  français, le verbe a d'abord dit « annoncer, rapporter », avant de prendre le
+  sens d'abandonner un droit ou un projet.
+famille: [ renoncement, renonciation, renonce ]
+renvois: [ resigner ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: Renuntiatur se dit de ce qu'on excuse et de ce qu'on répudie.
+      citation: renuntiatur de excusando et repudiando
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: renoncer
+  - ouvrage: littre
+    entree: renoncer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

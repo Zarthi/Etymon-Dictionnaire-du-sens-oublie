@@ -1,0 +1,22 @@
+mot: vénérer
+nature: [ verbe ]
+etymologie:
+  - forme: venerari
+    langue: latin
+    sens: révérer, honorer les dieux
+explication: >-
+  Venerari était le verbe latin du culte rendu aux dieux, puis de l'honneur dû
+  aux personnes. Vénérer a gardé ce respect profond, mais le geste religieux
+  s'est effacé devant le seul sentiment d'admiration.
+famille: [ vénération, vénérable ]
+themes: [ religion ]
+sources:
+  - ouvrage: tlfi
+    entree: venerer
+  - ouvrage: littre
+    entree: venerer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: brutal
+nature: [ adjectif ]
+etymologie:
+  - forme: brutalis
+    langue: latin médiéval
+    sens: qui tient de la brute
+explication: >-
+  Brutal a d'abord qualifié l'homme qui tient de la brute ; le mot a gardé cette
+  violence, puis s'est étendu au langage grossier et aux choses faites sans
+  ménagement. Il dit aujourd'hui la force brusque plus que la bestialité.
+famille: [ brutalité, brutaliser, brutalement, brute, abrutir ]
+renvois: [ rude ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: brutal
+  - ouvrage: littre
+    entree: brutal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

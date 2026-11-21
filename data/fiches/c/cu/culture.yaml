@@ -1,0 +1,29 @@
+mot: culture
+nature: [ nom féminin ]
+etymologie:
+  - forme: cultura
+    langue: latin
+    sens: soin donné à la terre, culture
+  - forme: colere
+    langue: latin
+    sens: cultiver, soigner
+explication: >-
+  Cultura nommait le travail de la terre et le soin qu'on lui donne. Le mot
+  s'est étendu au soin de l'esprit, puis à l'ensemble des connaissances et des
+  œuvres d'une société.
+famille: [ culturel, agriculture ]
+themes: [ savoir, société ]
+sources:
+  - ouvrage: lewis-short
+    entree: cultura
+  - ouvrage: lewis-short
+    entree: colo1
+  - ouvrage: littre
+    entree: culture
+  - ouvrage: tlfi
+    entree: culture
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

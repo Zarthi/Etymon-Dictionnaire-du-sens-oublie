@@ -905,3 +905,25 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Lectures de la tranche 4 | 11 lectures (Isidore, Thomas), 9 absences justifiées. | Idem. | à relire |
 | Lectures de la tranche 5 | 13 lectures (Isidore), 7 absences justifiées. | Idem. | à relire |
 | Références | Trois auteurs créés (Mätzner, Chavée, Mahn) pour *regret* ; aucun ouvrage nouveau. | Tenants des hypothèses étymologiques du Littré, identifiés par notices BnF. | à relire |
+
+## 2026-11-21 — Lot « cent mots, quatrième » (culte, caractère, mémoire, société, monde)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Chemins | Treize mots en `consacre` (paradis, paroisse, prêtre, prophète, providence, sacrifice, salut, sanctuaire, tentation, testament, vocation, vœu, noël) ; les autres en `ordinaire`. | Mots profanes passés dans l'ordre sacré, sans être nés sacrés au sens du §3.3 bis. | à relire |
+| Renvois | Chaque paire déclarée d'un seul côté, interne à sa tranche. | Le validateur refuse une relation déclarée des deux côtés. | à relire |
+| Paradis | Chaîne poussée au persan `pairi-daēza`, « enclos ». | C'est lui qui donne le sens premier ; παράδεισος porte « jardin ». | à relire |
+| Prophète | Chaîne arrêtée à προφήτης. | Le Bailly donne à φάω « briller », non « dire » : pas de découpage πρό + φάω. | à relire |
+| Temple, salut, vénérer, superstition | Cognats et comparaisons du Littré laissés hors chaîne. | τέμενος, ὅλος, Venus, `superstare` ne sont pas des filiations établies par le TLFi. | à relire |
+| Fou | La pièce des échecs (arabe *al fil*) n'est pas traitée. | Autre mot, sans rapport avec *fou* « insensé ». | à relire |
+| Obscène, vain, mauvais, gauche, trouver, blesser | Hypothèses du Littré passées en `ecartees` au profit du TLFi (*ob-scaevinus*, Venus, gotique, *welk*, *turbare*, *bletzen*). | Le TLFi retient une autre origine ou la donne pour abandonnée. | à relire |
+| Provençal, gotique, ancien haut-allemand | Notés `occitan` ou `germanique`. | `data/langues.json` ne distingue pas ces valeurs. | à relire |
+| Confort | Chaîne par l'anglais *comfort*, puis l'ancien français. | Le sens moderne (1815) est un emprunt à l'anglais. | à relire |
+| Chose | Doublet *cause* déclaré sur la seule fiche *chose*. | Même étymon *causa*, deux voies ; *cause* a déjà sa fiche et ne le déclare pas. | à relire |
+| Pompe | Fiche du sens « faste, cortège » (*pompa*) ; homonyme néerlandais non traité. | Deux origines sans rapport ; une fiche par mot. | à relire |
+| Souvenir | Nature `nom masculin` écrite à la main. | Le script choisit le verbe impersonnel ; la fiche est celle du nom. | à relire |
+| Héritage, réserve, morale, rapport | Entrées voisines consultées (*héritier*, *réserver*, *moral*, *apporter*). | Le dossier du lot ne donnait que le renvoi ; les faits viennent de l'entrée voisine. | à relire |
+| Intérêt | Chaîne arrêtée à *interest*, « il importe ». | Remonter à *interesse* n'ajouterait qu'une explication grammaticale. | à relire |
+| Chef, qualité, fonction | Composition non découpée en `elements` quand le schéma exige deux éléments. | Le sens du maillon porte seul l'information. | à relire |
+| Lectures traditionnelles | 26 lectures (Isidore, Thomas) : 11 en T1, 4 en T2, 2 en T3, 2 en T4, 7 en T5 ; 74 absences justifiées. | Le corpus ne glose que ces mots ; les autres passages emploient le mot ou glosent un voisin. | à relire |
+| Références | Aucun auteur ni ouvrage nouveau. | Isidore, Thomas, *Étymologies*, *Différences* et *Somme théologique* ont déjà leur fiche. | à relire |

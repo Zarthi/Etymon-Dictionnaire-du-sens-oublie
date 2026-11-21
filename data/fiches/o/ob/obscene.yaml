@@ -1,0 +1,23 @@
+mot: obscène
+nature: [ adjectif ]
+etymologie:
+  - forme: obscenus
+    langue: latin
+    sens: de mauvais augure, sinistre
+explication: >-
+  Obscène a d'abord dit ce qui est de mauvais augure, sinistre ; le latin
+  lui-même l'a employé pour ce qui est sale et impudique. Le mot ne garde que
+  cette seconde charge, celle de ce qui offense la pudeur.
+famille: [ obscénité, obscènement ]
+renvois: [ vulgaire ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: obscène
+  - ouvrage: littre
+    entree: obscène
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

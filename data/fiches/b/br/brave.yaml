@@ -1,0 +1,25 @@
+mot: brave
+nature: [ adjectif ]
+etymologie:
+  - forme: bravo
+    langue: italien
+    sens: hardi, courageux
+  - forme: brau
+    langue: occitan
+    sens: sauvage, farouche
+explication: >-
+  Brave est venu d'Italie au XVIe siècle avec le sens de hardi et vaillant ;
+  l'adjectif provençal dont il descend disait pourtant « sauvage, farouche ». Le
+  français y a ajouté le sens affaibli de bon et honnête (un brave homme).
+famille: [ bravoure, braver, bravade, bravache ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: brave
+  - ouvrage: littre
+    entree: brave
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

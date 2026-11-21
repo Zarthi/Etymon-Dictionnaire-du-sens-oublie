@@ -1,0 +1,36 @@
+mot: détruire
+nature: [ verbe ]
+etymologie:
+  - forme: "*destrugere"
+    langue: latin populaire
+  - forme: destruere
+    langue: latin
+    sens: démolir une construction
+    elements:
+      - forme: de-
+        sens: renversement
+      - forme: struere
+        sens: bâtir
+explication: >-
+  Destruere, c'était défaire l'édifice que struere avait bâti. Le mot a pris le
+  sens général d'anéantir, et s'emploie pour un être, une institution ou une
+  œuvre.
+themes: [ guerre ]
+tradition:
+  lectures:
+    - texte: Construire, c'est édifier ; détruire, c'est exterminer.
+      citation: Construere est aedificare, destruere vero exterminare.
+      sources:
+        - ouvrage: differences
+          entree: I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: détruire
+  - ouvrage: littre
+    entree: détruire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

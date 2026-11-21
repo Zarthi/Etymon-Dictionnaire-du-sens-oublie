@@ -1,0 +1,23 @@
+mot: réseau
+nature: [ nom masculin ]
+etymologie:
+  - forme: retiolum
+    langue: latin
+    sens: petit filet
+explication: >-
+  Retiolum est un petit filet ; le mot a gardé ce sens matériel (1599), puis il
+  a dit un entrecroisement de lignes (1762) et un ensemble de personnes ou de
+  postes en relation (1828).
+famille: [ résille ]
+renvois: [ rapport ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: réseau
+  - ouvrage: tlfi
+    entree: réseau
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

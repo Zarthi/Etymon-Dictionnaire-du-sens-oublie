@@ -1,0 +1,25 @@
+mot: magnifique
+nature: [ adjectif ]
+etymologie:
+  - forme: magnificus
+    langue: latin
+    sens: qui fait grand, fastueux
+    elements:
+      - forme: magnus
+        sens: grand
+      - forme: facere
+        sens: faire
+explication: >-
+  Magnificus, proprement « qui fait grand », disait d'abord celui qui dépense
+  avec faste. Le mot en est venu à dire ce qui est d'une grande beauté, puis,
+  familièrement, ce qui est excellent.
+renvois: [ pompe ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: magnifique
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

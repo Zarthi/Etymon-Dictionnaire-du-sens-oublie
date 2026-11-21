@@ -1,0 +1,27 @@
+mot: résigner
+nature: [ verbe ]
+etymologie:
+  - forme: resignare
+    langue: latin
+    sens: rompre le sceau, ouvrir ; annuler, renoncer à
+    elements:
+      - forme: re-
+        sens: en arrière
+      - forme: signare
+        sens: marquer, sceller
+explication: >-
+  Resignare, c'est rompre le sceau, puis annuler un acte et y renoncer. Le
+  français a d'abord dit renoncer à, se démettre d'un office ; le sens
+  d'accepter sans révolte vient de la soumission à la volonté divine.
+famille: [ résignation, résigné ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: résigner
+  - ouvrage: littre
+    entree: résigner
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

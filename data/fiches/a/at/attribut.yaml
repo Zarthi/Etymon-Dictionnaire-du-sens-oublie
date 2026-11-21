@@ -1,0 +1,23 @@
+mot: attribut
+nature: [ nom masculin ]
+etymologie:
+  - forme: attributum
+    langue: latin médiéval
+    sens: chose attribuée
+  - forme: attribuere
+    langue: latin
+    sens: donner en propre
+explication: >-
+  Attributum est ce qu'on donne en propre ; le mot a dit ce qui est propre à une
+  personne (xive siècle), puis la fonction grammaticale du verbe être (1680).
+famille: [ attribution, attribuer, attributif ]
+renvois: [ qualite ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: attribut
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,24 @@
+mot: salut
+nature: [ nom masculin ]
+etymologie:
+  - forme: salus
+    langue: latin
+    sens: salut, conservation, santé
+explication: >-
+  Le latin salus disait la santé et la conservation de l'être intact. Le
+  christianisme en a fait le salut de l'âme, délivré du péché ; le mot sert
+  aussi à saluer, et les deux sens se sont séparés sans que le premier
+  disparaisse.
+famille: [ saluer, salutaire, salubre ]
+renvois: [ paradis ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: salut
+  - ouvrage: tlfi
+    entree: salut
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

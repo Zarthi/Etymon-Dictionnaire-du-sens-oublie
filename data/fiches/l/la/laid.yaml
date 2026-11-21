@@ -1,0 +1,29 @@
+mot: laid
+nature: [ adjectif ]
+etymologie:
+  - forme: laiþ
+    langue: francique
+    sens: désagréable, rebutant
+explication: >-
+  Laid a d'abord dit l'odieux, ce qui inspire le mépris ou le dégoût ; le sens
+  esthétique, attesté dès le XIIe siècle, ne s'est répandu qu'à partir du XIVe
+  et a fait oublier le premier.
+ecartees:
+  - forme: laedere
+    langue: latin
+    sens: blesser
+    raison: "Le Littré l'écarte : le sens et la forme ne rendent pas compte de
+      l'histoire de laid, que l'étymologie germanique explique."
+famille: [ laideur, enlaidir, laideron, laidement ]
+renvois: [ vil ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: laid
+  - ouvrage: littre
+    entree: laid
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

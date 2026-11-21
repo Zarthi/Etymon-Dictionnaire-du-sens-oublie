@@ -1,0 +1,25 @@
+mot: faillir
+nature: [ verbe ]
+etymologie:
+  - forme: "*fallire"
+    langue: latin populaire
+    sens: manquer, faire défaut
+  - forme: fallere
+    langue: latin
+    sens: tromper, échapper à
+explication: >-
+  Fallere, c'est tromper et échapper à. Le verbe a pris le sens de manquer,
+  faire défaut, puis celui de commettre une faute ; faillir à garde l'idée de
+  manquer à un engagement.
+famille: [ faute, faillite, défaillir, faillible, falloir ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: faillir
+  - ouvrage: littre
+    entree: faillir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

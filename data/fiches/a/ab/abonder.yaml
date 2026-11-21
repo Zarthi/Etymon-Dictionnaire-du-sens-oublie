@@ -1,0 +1,21 @@
+mot: abonder
+nature: [ verbe ]
+etymologie:
+  - forme: abundare
+    langue: latin
+    sens: couler en abondance
+explication: >-
+  Abundare nommait l'eau qui coule à pleins bords ; le verbe dit aujourd'hui
+  l'affluence des choses.
+famille: [ abondance, abondant, abondamment ]
+themes: [ quantité ]
+sources:
+  - ouvrage: littre
+    entree: abonder
+  - ouvrage: tlfi
+    entree: abonder
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

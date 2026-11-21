@@ -1,0 +1,30 @@
+mot: pieux
+nature: [ adjectif ]
+etymologie:
+  - forme: pius
+    langue: latin
+    sens: qui remplit ses devoirs envers les dieux, les parents, la patrie
+explication: >-
+  Le latin pius disait l'homme qui rendait aux dieux, à sa famille et à sa
+  patrie ce qu'il leur devait. Pieux s'est resserré sur les devoirs envers Dieu,
+  puis sur le sentiment de respect ; la piété envers les siens ne s'y entend
+  plus.
+famille: [ piété, impie, expier ]
+themes: [ religion, morale ]
+tradition:
+  lectures:
+    - texte: L'amour des enfants est dit pieux, comme celui des épouses est juste.
+      citation: Justus amor est uxorum, pius filiorum, crudelis contra naturam, ut
+        Pasiphae, obscenus meretricum.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: pieux
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

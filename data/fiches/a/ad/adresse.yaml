@@ -1,0 +1,25 @@
+mot: adresse
+nature: [ nom féminin ]
+etymologie:
+  - forme: adresse
+    langue: ancien français
+    sens: chemin droit
+  - forme: adresser
+    langue: ancien français
+    sens: mettre à droit, diriger
+explication: >-
+  Adresse a d'abord nommé un chemin droit, puis l'habileté d'aller droit au but
+  (1559) ; les indications qui permettent d'atteindre un destinataire datent de
+  1690.
+famille: [ adresser, maladresse ]
+themes: [ société, savoir ]
+sources:
+  - ouvrage: littre
+    entree: adresse
+  - ouvrage: tlfi
+    entree: adresse
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

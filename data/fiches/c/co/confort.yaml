@@ -1,0 +1,25 @@
+mot: confort
+nature: [ nom masculin ]
+etymologie:
+  - forme: comfort
+    langue: anglais
+    sens: bien-être matériel, aisance
+  - forme: confort
+    langue: ancien français
+    sens: ce qui rend fort, réconfort
+explication: >-
+  Confort a d'abord nommé le réconfort, ce qui rend fort. Passé en anglais, il
+  est revenu au XIXe siècle avec le sens matériel de bien-être et d'aisance, que
+  le français ne lui connaissait pas.
+famille: [ conforter, confortable, réconfort, déconfort ]
+themes: [ maison ]
+sources:
+  - ouvrage: tlfi
+    entree: confort
+  - ouvrage: littre
+    entree: confort
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

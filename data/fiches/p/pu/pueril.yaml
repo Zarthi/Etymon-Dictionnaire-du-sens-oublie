@@ -1,0 +1,21 @@
+mot: puéril
+nature: [ adjectif ]
+etymologie:
+  - forme: puerilis
+    langue: latin
+    sens: de l'enfance, irréfléchi
+explication: >-
+  Puéril a d'abord qualifié, avec blâme, ce qui ne convient qu'à un enfant ; le
+  sens neutre de « relatif à l'enfance » est venu au XVIe siècle, mais le mot
+  dit le plus souvent le manque de maturité et de sérieux.
+famille: [ puérilement, puérilité ]
+renvois: [ niais ]
+themes: [ esprit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: puéril
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

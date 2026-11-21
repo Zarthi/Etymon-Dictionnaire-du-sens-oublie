@@ -1,0 +1,38 @@
+mot: sacrifice
+nature: [ nom masculin ]
+etymologie:
+  - forme: sacrificium
+    langue: latin
+    sens: offrande à la divinité
+    elements:
+      - forme: sacer
+        sens: sacré
+      - forme: facere
+        sens: faire
+explication: >-
+  Sacrificium nommait l'offrande faite à la divinité, l'acte qui rend une chose
+  sacrée. Le mot s'est étendu au renoncement volontaire, où l'acte religieux
+  n'est plus qu'une image ; le sens d'offrande rituelle survit dans les
+  religions.
+famille: [ sacrifier, sacrificateur, sacrificiel ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le sacrifice est dit comme une chose faite sacrée, consacrée par la
+        prière mystique en mémoire de la passion du Seigneur.
+      citation: Sacrificium dictum quasi sacrum factum, quia prece mystica consecratur
+        in memoriam pro nobis Dominicae passionis
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 38
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: littre
+    entree: sacrifice
+  - ouvrage: tlfi
+    entree: sacrifice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

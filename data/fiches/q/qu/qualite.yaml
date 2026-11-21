@@ -1,0 +1,37 @@
+mot: qualité
+nature: [ nom féminin ]
+etymologie:
+  - forme: qualitas
+    langue: latin
+    sens: manière d'être
+    modele:
+      forme: ποιότης
+      langue: grec ancien
+      sens: qualité
+      relation: calque
+explication: >-
+  Qualitas disait la manière d'être, bonne ou mauvaise ; le mot français a
+  d'abord gardé ce sens neutre, puis il a désigné ce qui est jugé bon (1633), et
+  aujourd'hui l'excellence.
+famille: [ qualitatif, qualifier ]
+themes: [ savoir ]
+tradition:
+  lectures:
+    - texte: Les noms de qualité sont ainsi dits parce qu'ils montrent de quelle sorte
+        chacun est.
+      citation: Porro qualitatis nomina ex eo dicta, quia per ea qualis quisque sit
+        ostenditur
+      sources:
+        - ouvrage: etymologies
+          entree: I, 18
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_I
+sources:
+  - ouvrage: littre
+    entree: qualité
+  - ouvrage: tlfi
+    entree: qualité
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,22 @@
+mot: habitude
+nature: [ nom féminin ]
+etymologie:
+  - forme: habitudo
+    langue: bas latin
+    sens: manière d'être, disposition ; relation
+explication: >-
+  Habitudo disait la manière d'être, l'état, et aussi la relation. Le mot
+  français a d'abord nommé un rapport, puis la disposition du corps, avant de se
+  fixer sur la disposition acquise par répétition.
+famille: [ habituer, habituel, déshabituer ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: habitude
+  - ouvrage: littre
+    entree: habitude
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

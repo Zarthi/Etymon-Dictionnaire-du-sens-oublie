@@ -1,0 +1,25 @@
+mot: sanctuaire
+nature: [ nom masculin ]
+etymologie:
+  - forme: sanctuarium
+    langue: bas latin
+    sens: lieu sacré, sanctuaire
+  - forme: sanctus
+    langue: latin
+    sens: consacré, saint
+explication: >-
+  Le bas latin sanctuarium nommait le lieu sacré. Le mot a désigné la partie la
+  plus sainte d'un édifice, puis un lieu protégé, un refuge.
+famille: [ saint, sanctifier, sanctification ]
+renvois: [ temple ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: sanctuaire
+  - ouvrage: tlfi
+    entree: sanctuaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

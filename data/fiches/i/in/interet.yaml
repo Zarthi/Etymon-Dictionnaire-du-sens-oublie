@@ -1,0 +1,24 @@
+mot: intérêt
+nature: [ nom masculin ]
+etymologie:
+  - forme: interest
+    langue: latin
+    sens: il importe, il y a de la différence
+explication: >-
+  Interest est en latin la troisième personne de interesse : « il importe »,
+  « il y a de la différence ». Le français en a tiré d'abord le dommage (1290),
+  puis le dédommagement et le profit d'un capital, avant le sens de ce qui
+  importe à quelqu'un (1467).
+famille: [ intéresser, intéressant, désintérêt ]
+renvois: [ important ]
+themes: [ argent, société ]
+sources:
+  - ouvrage: littre
+    entree: intérêt
+  - ouvrage: tlfi
+    entree: intérêt
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

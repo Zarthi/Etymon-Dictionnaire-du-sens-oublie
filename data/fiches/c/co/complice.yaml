@@ -1,0 +1,22 @@
+mot: complice
+nature: [ adjectif ]
+etymologie:
+  - forme: complex
+    langue: bas latin
+    sens: uni, associé
+explication: >-
+  Complex disait ce qui est uni, associé ; le latin ecclésiastique l'a employé
+  pour désigner celui qui s'associe pour commettre un méfait, sens que le
+  français a gardé dès 1327.
+famille: [ complicité, complication ]
+themes: [ droit, société ]
+sources:
+  - ouvrage: littre
+    entree: complice
+  - ouvrage: tlfi
+    entree: complice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

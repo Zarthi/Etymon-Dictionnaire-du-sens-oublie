@@ -1,0 +1,40 @@
+mot: prêtre
+nature: [ nom masculin ]
+etymologie:
+  - forme: presbyter
+    langue: latin ecclésiastique
+    sens: ancien, prêtre
+  - forme: πρεσβύτερος
+    langue: grec ancien
+    sens: plus âgé, ancien
+  - forme: πρέσβυς
+    langue: grec ancien
+    sens: vieux, âgé
+explication: >-
+  Le prêtre chrétien était d'abord l'ancien de la communauté ; le grec
+  πρεσβύτερος dit l'âge avant la fonction. Le français a gardé le seul sens
+  sacerdotal, et le nom ne dit plus un homme vieux.
+famille: [ prêtresse, prêtrise ]
+renvois: [ sacrifice ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: "Les prêtres sont dits en grec comme des anciens : le nom vient de l'âge,
+        non du sacerdoce."
+      citation: presbyteri autem in Graeco dicuntur quasi seniores.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 184 a. 6 ad 1
+          url: https://www.corpusthomisticum.org/sth3183.html
+sources:
+  - ouvrage: littre
+    entree: pretre
+  - ouvrage: bailly
+    entree: πρέσβυς
+  - ouvrage: tlfi
+    entree: pretre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

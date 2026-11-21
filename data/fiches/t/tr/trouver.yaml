@@ -1,0 +1,29 @@
+mot: trouver
+nature: [ verbe ]
+etymologie:
+  - forme: "*tropare"
+    langue: latin populaire
+    sens: composer, inventer un air
+explication: >-
+  Trouver vient de *tropare « composer, inventer un air », puis « composer un
+  poème » ; il a pris le sens d'inventer, découvrir. En français, le verbe dit
+  d'abord rencontrer par hasard, puis découvrir ce qu'on cherche.
+ecartees:
+  - forme: turbare
+    langue: latin
+    sens: remuer, fouiller
+    selon: [ friedrich-diez ]
+    raison: "Hypothèse de Diez, retenue par le Littré : turbare aurait donné
+      chercher, puis trouver. Le TLFi fait venir le mot de *tropare."
+famille: [ trouvaille, trouvère, troubadour, controuver, introuvable ]
+themes: [ savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: trouver
+  - ouvrage: littre
+    entree: trouver
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

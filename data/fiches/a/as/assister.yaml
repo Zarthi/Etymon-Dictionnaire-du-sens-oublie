@@ -1,0 +1,28 @@
+mot: assister
+nature: [ verbe ]
+etymologie:
+  - forme: adsistere
+    langue: latin
+    sens: se tenir debout auprès
+    elements:
+      - forme: ad
+        sens: auprès
+      - forme: sistere
+        sens: être debout
+explication: >-
+  Le verbe disait se tenir debout auprès de quelqu'un ; de là deux emplois que
+  le français distingue : être présent à un événement, et prêter aide à une
+  personne (1465).
+famille: [ assistance, assistant ]
+renvois: [ complice ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: assister
+  - ouvrage: tlfi
+    entree: assister
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

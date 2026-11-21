@@ -1,0 +1,26 @@
+mot: intime
+nature: [ adjectif ]
+etymologie:
+  - forme: intimus
+    langue: latin
+    sens: ce qui est le plus en dedans, le fond de
+  - forme: intus
+    langue: latin
+    sens: en dedans
+explication: >-
+  Intimus, superlatif de intus, « en dedans », disait ce qui est le plus au
+  fond. Le mot a d'abord qualifié les liens les plus étroits, puis ce qui touche
+  au fond de l'âme ; l'intime est aujourd'hui ce qui est le plus personnel et le
+  plus caché.
+famille: [ intimité, intimement ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: intime
+  - ouvrage: tlfi
+    entree: intime
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

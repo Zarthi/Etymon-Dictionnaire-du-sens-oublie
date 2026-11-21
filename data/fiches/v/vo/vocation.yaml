@@ -1,0 +1,37 @@
+mot: vocation
+nature: [ nom féminin ]
+etymologie:
+  - forme: vocatio
+    langue: latin
+    sens: appel, invitation
+  - forme: vocare
+    langue: latin
+    sens: appeler
+  - forme: vox
+    langue: latin
+    sens: voix
+explication: >-
+  Vocatio était l'action d'appeler ; le latin chrétien en a fait l'appel de
+  Dieu. Vocation dit aujourd'hui l'inclination pour un métier ou un état, et la
+  voix qui appelle n'est plus entendue que par image.
+famille: [ vocatif, vocal ]
+themes: [ religion, travail ]
+tradition:
+  lectures:
+    - texte: "La vocation est l'exécution de la prédestination : l'appel par lequel
+        Dieu conduit celui qu'il a destiné."
+      citation: Est autem executio praedestinationis vocatio et magnificatio
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 23 a. 2 co.
+          url: https://www.corpusthomisticum.org/sth1015.html
+sources:
+  - ouvrage: tlfi
+    entree: vocation
+  - ouvrage: littre
+    entree: vocation
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

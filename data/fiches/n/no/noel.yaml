@@ -1,0 +1,23 @@
+mot: noël
+nature: [ nom masculin ]
+etymologie:
+  - forme: natalis
+    langue: latin
+    sens: de naissance ; jour de naissance
+explication: >-
+  Natalis dies était le jour de la naissance ; le latin chrétien l'a appliqué à
+  la naissance du Christ. L'ancien français nael est devenu noël par
+  dissimilation, et le mot nomme aujourd'hui la fête, sa période et ses chants,
+  non plus une naissance.
+famille: [ natal, nativité ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: noel
+  - ouvrage: tlfi
+    entree: noel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

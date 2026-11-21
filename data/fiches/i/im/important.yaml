@@ -1,0 +1,19 @@
+mot: important
+nature: [ adjectif ]
+etymologie:
+  - forme: importante
+    langue: italien
+    sens: qui a de l'importance
+explication: >-
+  Le mot vient d'Italie au xvie siècle : il a dit ce qui a de grands effets ou
+  une grande valeur, puis, au xviie siècle, celui qui affiche son importance.
+famille: [ importance, importer ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: important
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

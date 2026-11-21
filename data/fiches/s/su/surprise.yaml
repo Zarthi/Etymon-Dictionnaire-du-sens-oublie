@@ -1,0 +1,22 @@
+mot: surprise
+nature: [ nom féminin ]
+etymologie:
+  - forme: surprendre
+    langue: français
+    sens: prendre à l'improviste
+explication: >-
+  Surprise est le féminin du participe passé de surprendre, composé de sur et de
+  prendre. Dans cet emploi, le mot a désigné l'action de saisir quelqu'un au
+  dépourvu, à la guerre, puis l'émotion que cause l'inattendu.
+famille: [ surprendre, surprenant, surpris ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: surprise
+  - ouvrage: littre
+    entree: surprise
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

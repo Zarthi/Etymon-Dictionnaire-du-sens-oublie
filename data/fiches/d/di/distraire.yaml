@@ -1,0 +1,27 @@
+mot: distraire
+nature: [ verbe ]
+etymologie:
+  - forme: distrahere
+    langue: latin
+    sens: tirer en divers sens, séparer
+    elements:
+      - forme: dis-
+        sens: en divers sens
+      - forme: trahere
+        sens: tirer
+explication: >-
+  Distrahere, c'est tirer en divers sens, séparer. Le mot a d'abord dit l'action
+  de détourner une partie d'un tout, puis celle de détourner l'esprit de son
+  objet ; il s'est affaibli jusqu'au simple divertissement.
+famille: [ distraction, distrait, distraitement ]
+themes: [ esprit ]
+sources:
+  - ouvrage: tlfi
+    entree: distraire
+  - ouvrage: littre
+    entree: distraire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

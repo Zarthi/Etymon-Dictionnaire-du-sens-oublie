@@ -1,0 +1,25 @@
+mot: vulgaire
+nature: [ adjectif ]
+etymologie:
+  - forme: vulgaris
+    langue: latin
+    sens: du peuple, commun
+  - forme: vulgus
+    langue: latin
+    sens: foule, peuple
+explication: >-
+  Vulgaire a d'abord désigné ce qui est commun à tous, en particulier la langue
+  du peuple ; il a pris un sens péjoratif, celui de grossier et de sans
+  distinction, qui domine aujourd'hui.
+famille: [ vulgarité, vulgariser, vulgairement ]
+themes: [ société, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: vulgaire
+  - ouvrage: littre
+    entree: vulgaire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

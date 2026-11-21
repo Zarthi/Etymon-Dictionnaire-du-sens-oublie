@@ -1,0 +1,25 @@
+mot: ravir
+nature: [ verbe ]
+etymologie:
+  - forme: "*rapire"
+    langue: latin populaire
+    sens: enlever de force
+  - forme: rapere
+    langue: latin
+    sens: entraîner avec soi, enlever de force
+explication: >-
+  Rapere, c'est entraîner avec soi, enlever de force. Le mot dit d'abord
+  l'enlèvement, puis le transport au ciel ou hors de soi ; ravir quelqu'un,
+  c'est aujourd'hui le transporter de plaisir ou d'admiration.
+famille: [ ravissement, ravisseur, rapt, rapace, ravissant ]
+themes: [ émotions ]
+sources:
+  - ouvrage: tlfi
+    entree: ravir
+  - ouvrage: littre
+    entree: ravir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

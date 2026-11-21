@@ -1,0 +1,35 @@
+mot: mauvais
+nature: [ adjectif ]
+etymologie:
+  - forme: malifatius
+    langue: latin populaire
+    sens: qui est affecté d'un mauvais sort
+    elements:
+      - forme: malum
+        langue: latin
+        sens: mauvais
+      - forme: fatum
+        langue: latin
+        sens: destinée
+explication: >-
+  Malifatius, formé sur malum et fatum, disait celui que le sort a mal traité.
+  Le mot a glissé du malheur à la mauvaise qualité et à la méchanceté.
+ecartees:
+  - forme: balvavêsei
+    langue: germanique
+    sens: méchanceté
+    selon: [ friedrich-diez ]
+    raison: "Hypothèse abandonnée : elle suppose un changement de b en m que le
+      Littré même jugeait difficile."
+renvois: [ mediocre ]
+themes: [ morale ]
+sources:
+  - ouvrage: tlfi
+    entree: mauvais
+  - ouvrage: littre
+    entree: mauvais
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

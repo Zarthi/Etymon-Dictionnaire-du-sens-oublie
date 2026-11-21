@@ -1,0 +1,29 @@
+mot: réserve
+nature: [ nom féminin ]
+etymologie:
+  - forme: réserver
+    langue: français
+  - forme: reservare
+    langue: latin
+    sens: garder en arrière, mettre à part
+    elements:
+      - forme: re-
+        sens: en arrière
+      - forme: servare
+        sens: garder
+explication: >-
+  Reservare, c'est garder en arrière, mettre à part. Réserve a d'abord nommé une
+  clause qui restreint un acte, puis ce qu'on met de côté pour plus tard ;
+  l'attitude de retenue, qui ne se livre pas, en dérive.
+famille: [ réserver, réservé, réservation, réservoir ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: réserver
+  - ouvrage: tlfi
+    entree: réserve
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

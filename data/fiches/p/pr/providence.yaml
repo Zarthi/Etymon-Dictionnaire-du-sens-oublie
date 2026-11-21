@@ -1,0 +1,35 @@
+mot: providence
+nature: [ nom féminin ]
+etymologie:
+  - forme: providentia
+    langue: latin
+    sens: prévision, prévoyance
+    elements:
+      - forme: pro
+        sens: en avant
+      - forme: videre
+        sens: voir
+explication: >-
+  Le latin providentia disait la prévoyance, l'action de voir d'avance. La
+  pensée chrétienne en a fait le nom du gouvernement divin du monde ; l'usage
+  courant garde ce sens et appelle providence un secours inespéré.
+famille: [ provident, prudent ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: En Dieu, la providence est la raison qui ordonne les choses à leur fin.
+      citation: Ipsa igitur ratio ordinis rerum in finem, providentia in Deo nominatur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia q. 22 a. 1 co.
+          url: https://www.corpusthomisticum.org/sth1015.html
+sources:
+  - ouvrage: littre
+    entree: providence
+  - ouvrage: tlfi
+    entree: providence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

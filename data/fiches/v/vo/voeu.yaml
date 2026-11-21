@@ -1,0 +1,30 @@
+mot: vœu
+nature: [ nom masculin ]
+etymologie:
+  - forme: votum
+    langue: latin
+    sens: promesse faite aux dieux, souhait
+explication: >-
+  Votum était la promesse faite aux dieux en échange d'une faveur, puis le
+  souhait lui-même. Le français a gardé le vœu religieux et le vœu du nouvel
+  an ; entre les deux, la promesse s'est affaiblie en simple désir.
+famille: [ votif, vote ]
+themes: [ religion ]
+tradition:
+  lectures:
+    - texte: Le vœu tire son nom de la volonté, comme de ce qui le meut premièrement.
+      citation: Et pro tanto votum a voluntate accepit nomen quasi a primo movente.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 88 a. 1 ad 2
+          url: https://www.corpusthomisticum.org/sth3082.html
+sources:
+  - ouvrage: littre
+    entree: voeu
+  - ouvrage: tlfi
+    entree: voeu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

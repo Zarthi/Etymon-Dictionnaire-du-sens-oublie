@@ -1,0 +1,19 @@
+mot: célèbre
+nature: [ adjectif ]
+etymologie:
+  - forme: celeber
+    langue: latin
+    sens: fréquenté par une foule nombreuse
+explication: >-
+  Celeber disait d'un lieu qu'une foule le fréquentait, et d'une fête qu'elle
+  rassemblait du monde ; le mot français n'en a gardé que la renommée.
+famille: [ célébrité, célébrer ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: célèbre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

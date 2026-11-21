@@ -1,7 +1,4 @@
-- { mot: ignorer, statut: a-faire }
 - { mot: impératif, statut: a-faire }
-- { mot: impertinent, statut: a-faire }
-- { mot: important, statut: a-faire }
 - { mot: incarner, statut: a-faire }
 - { mot: indigène, statut: a-faire }
 - { mot: inertie, statut: a-faire }
@@ -9,11 +6,6 @@
 - { mot: informer, statut: a-faire }
 - { mot: initier, statut: a-faire }
 - { mot: innocent, statut: a-faire }
-- { mot: insolent, statut: a-faire }
-- { mot: intégrité, statut: a-faire }
 - { mot: intention, statut: a-faire }
-- { mot: intérêt, statut: a-faire }
 - { mot: intérieur, statut: a-faire }
-- { mot: intime, statut: a-faire }
 - { mot: intrigue, statut: a-faire }
-- { mot: inviter, statut: a-faire }

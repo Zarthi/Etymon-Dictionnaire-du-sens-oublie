@@ -1,0 +1,27 @@
+mot: souvenir
+nature: [ nom masculin ]
+etymologie:
+  - forme: subvenire
+    langue: latin
+    sens: venir en aide, subvenir
+    elements:
+      - forme: sub
+        sens: sous
+      - forme: venire
+        sens: venir
+explication: >-
+  Subvenire, c'est venir en aide, subvenir. Les langues romanes en ont tiré le
+  sens de venir en mémoire ; le nom souvenir, attesté à la fin du XIIIe siècle,
+  dit ce qui reste dans la mémoire.
+famille: [ souvenance, ressouvenir, subvenir ]
+themes: [ esprit ]
+sources:
+  - ouvrage: littre
+    entree: souvenir
+  - ouvrage: tlfi
+    entree: souvenir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
