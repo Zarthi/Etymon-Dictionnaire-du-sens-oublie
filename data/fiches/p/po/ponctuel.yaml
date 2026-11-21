@@ -1,0 +1,25 @@
+mot: ponctuel
+nature: [ adjectif ]
+etymologie:
+  - forme: punctualis
+    langue: latin médiéval
+    sens: qui va à un point
+  - forme: punctum
+    langue: latin
+    sens: point
+explication: >-
+  Punctualis disait ce qui va à un point, et le mot s'est dit d'un moment précis
+  avant de qualifier celui qui s'y tient. Il dit aujourd'hui l'exactitude à
+  l'heure dite, et, par extension, ce qui porte sur un point précis.
+famille: [ ponctualité, ponctuellement ]
+themes: [ temps, société ]
+sources:
+  - ouvrage: tlfi
+    entree: ponctuel
+  - ouvrage: littre
+    entree: ponctuel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

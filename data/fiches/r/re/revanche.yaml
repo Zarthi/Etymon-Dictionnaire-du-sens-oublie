@@ -1,0 +1,29 @@
+mot: revanche
+nature: [ nom féminin ]
+etymologie:
+  - forme: revanche
+    langue: français
+  - forme: revancher
+    langue: français
+    sens: rendre la pareille, se venger
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: vengier
+        langue: ancien français
+        sens: venger
+explication: >-
+  Le mot a d'abord dit la vengeance, puis l'action de rendre la pareille. Il
+  désigne aujourd'hui la seconde partie qui permet au vaincu de reprendre
+  l'avantage, et l'idée de compensation dans en revanche.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: revanche
+  - ouvrage: tlfi
+    entree: revancher
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

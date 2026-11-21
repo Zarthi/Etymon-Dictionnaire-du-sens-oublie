@@ -954,3 +954,21 @@ Thibault a délégué ces décisions à l'agent, y compris la modification d'AGE
 | Altérer, facile, faible, perdre, vif, vigueur, défaut, perte, luxure, original | Chaîne arrêtée à l'étymon direct. | La base n'ajoute qu'un sens grammatical ou identique. | à relire |
 | Lectures traditionnelles | 27 lectures : 6 en T1, 4 en T2, 4 en T3, 7 en T4, 6 en T5 ; 73 absences justifiées. | Le corpus ne glose que ces mots ; les autres passages emploient la forme ou glosent un voisin. | à relire |
 | Références | Deux auteurs créés pour *tribu* : Saumaise et Corssen. | Tenants des hypothèses du Littré, identifiés par notices BnF. | à relire |
+
+## 2026-11-22 — Lot « dernières fiches » (temps et conduite, apparence et valeur)
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| Périmètre | 34 fiches, les derniers candidats `a-faire` : 17 « vie, temps et conduite », 17 « apparence, don et valeur ». | Épuise la file de candidats ; plus aucun mot en attente. | à relire |
+| Plan | Chaîne arrêtée à *planus* ; le sens de « projet » (déverbal de *planter*, confondu avec *plan*) est dit dans l'explication, non dans la chaîne. | Le TLFi donne deux étymologies distinctes du nom, confondues ; le modèle n'admet deux étymons qu'en `alternatives` (origines débattues), ce qui n'est pas le cas ici. | à relire |
+| Prudence | Trois maillons : *prudentia* → *prudens* → *providens* (*pro-* + *videre*). | Le TLFi établit *prudens* < *providens* ; les maillons rendent l'image « voir devant », sens premier. | à relire |
+| Présent | Lecture d'Augustin retenue (*Confessions*, XI, 14, 17) après recherche versée au dossier, `sources.md` n'ayant pas tiré de forme latine pour le nom. | *Praesens* est dans la chaîne et le passage lit le mot lui-même. | à relire |
+| Quotidien | Lecture de Thomas (IIIa q. 79 a. 4) écartée. | La phrase citée est d'Ambroise, rapportée par Thomas, et porte sur le pain eucharistique plus que sur le mot. | à relire |
+| Renvois | Trois renvois, tous d'un seul côté et internes à la tranche : *obstacle* → *problème*, *plan* → *vision*, *prudence* → *responsable*. | Notions voisines sans racine commune ; relation déclarée une fois pour éviter le double sens. | à relire |
+| Sort | Hypothèse du Littré (*sors* de *serere*, d'après Mommsen) laissée au dossier, hors chaîne. | N'ajoute pas de sens nécessaire et n'est pas reprise par le TLFi ; la chaîne s'arrête à « lot, part ». | à relire |
+| Assassin | Sens premier : arabe ḥašīš « cannabis, haschisch ». | Maillon le plus lointain attesté qui porte un sens ; la secte puis le meurtrier en dérivent. | à relire |
+| Don | La fiche traite le don « présent », non l'homonyme *don* « seigneur » (de *dominus*). | Deux mots distincts ; le second relève d'une autre fiche. | à relire |
+| Prouesse, revanche | Chaînes françaises (*prouesse* sur *preux* + *-esse* ; *revanche* par le déverbal *revancher*, *re-* + *vengier*), sans remontée au latin. | Le dossier ne donne aucune forme latine ; on ne remonte pas au-delà sans source. | à relire |
+| Voler | Les deux sens, « se déplacer dans l'air » et « dérober », dans une seule fiche. | Le TLFi les traite en un même article et rattache le second au *voler* de la fauconnerie. | à relire |
+| Lectures traditionnelles | 6 lectures : 3 en T1 (présent, prudence, problème) et 3 en T2 (don, fantaisie, offrir) ; 28 absences justifiées. | Le corpus ne glose que ces mots ; les autres emplois ne portent pas sur le mot lui-même. | à relire |
+| Références | Aucune création : les ouvrages cités (*Confessions*, *Différences*, *Étymologies*, *Somme théologique*) existaient déjà. | — | à relire |

@@ -1,0 +1,32 @@
+mot: don
+nature: [ nom masculin ]
+etymologie:
+  - forme: donum
+    langue: latin
+    sens: action de donner, présent
+explication: >-
+  Don a d'abord nommé l'acte de donner et la chose donnée. Il s'est étendu à ce
+  qui vient de Dieu ou de la nature, puis à l'aptitude innée, sens le plus
+  courant aujourd'hui.
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: Donum vient de dare, « donner » ; munus, de munire ou de monere.
+      citation: Dictum autem donum a dando, munus a muniendo, vel a monendo.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: don
+  - ouvrage: littre
+    entree: don
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

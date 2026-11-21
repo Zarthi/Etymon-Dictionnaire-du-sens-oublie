@@ -1,0 +1,27 @@
+mot: sujet
+nature: [ nom masculin, adjectif ]
+etymologie:
+  - forme: subjectus
+    langue: latin
+    sens: soumis, assujetti
+    elements:
+      - forme: sub-
+        sens: sous
+      - forme: jacere
+        sens: jeter
+explication: >-
+  Le mot a d'abord qualifié ce qui est soumis à une autorité, puis la personne
+  soumise à un prince. La langue scolastique lui a donné le sens de ce dont une
+  science traite ; le français en a fait le sujet dont on parle.
+themes: [ société, parole ]
+sources:
+  - ouvrage: tlfi
+    entree: sujet
+  - ouvrage: somme-theologique
+    entree: Ia q. 1 a. 7 co.
+    url: https://www.corpusthomisticum.org/sth1001.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

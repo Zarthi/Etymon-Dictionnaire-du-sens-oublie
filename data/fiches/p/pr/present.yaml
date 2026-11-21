@@ -1,0 +1,32 @@
+mot: présent
+nature: [ adjectif ]
+etymologie:
+  - forme: praesens
+    langue: latin
+    sens: qui est là, devant soi ; actuel
+explication: >-
+  Praesens disait ce qui est là, devant soi, et s'opposait à ce qui est absent.
+  Le mot en est venu à désigner le temps où l'on parle, par opposition au passé
+  et au futur : est présent ce qui est là maintenant.
+famille: [ présence, présentement, omniprésent ]
+themes: [ temps ]
+tradition:
+  lectures:
+    - texte: Le présent, s'il demeurait toujours présent et ne passait pas, ne serait
+        plus le temps, mais l'éternité.
+      citation: praesens autem si semper esset praesens nec in praeteritum transiret,
+        non iam esset tempus, sed aeternitas
+      sources:
+        - ouvrage: confessions
+          entree: XI, 14, 17
+          url: https://la.wikisource.org/wiki/Confessiones/Liber_Undecimus
+sources:
+  - ouvrage: tlfi
+    entree: présent
+  - ouvrage: littre
+    entree: présent
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

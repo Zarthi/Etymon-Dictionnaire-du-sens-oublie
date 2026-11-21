@@ -1,0 +1,21 @@
+mot: voler
+nature: [ verbe ]
+etymologie:
+  - forme: volare
+    langue: latin
+    sens: voler, aller rapidement
+explication: >-
+  Le latin volare disait le vol de l'oiseau et tout mouvement rapide. Au XVIe
+  siècle, le verbe a pris le sens de dérober, par le langage de la chasse au vol
+  où le faucon vole sa proie ; les deux sens coexistent.
+themes: [ nature, société ]
+sources:
+  - ouvrage: tlfi
+    entree: voler
+  - ouvrage: littre
+    entree: voler
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

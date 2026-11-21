@@ -1,0 +1,37 @@
+mot: offrir
+nature: [ verbe ]
+etymologie:
+  - forme: offerre
+    langue: latin
+    sens: porter devant, présenter, procurer
+    elements:
+      - forme: ob-
+        sens: devant, vers
+      - forme: ferre
+        sens: porter
+explication: >-
+  Offrir, c'est d'abord porter devant, mettre sous les yeux. Le français en a
+  fait le verbe du don et de la proposition ; l'offrande religieuse garde le
+  sens de présentation à Dieu.
+themes: [ société ]
+tradition:
+  lectures:
+    - texte: Offerre, c'est présenter de soi-même ; inferre, c'est porter dedans.
+      citation: Offerre est ultro praebere, inferre importare.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: offrir
+  - ouvrage: littre
+    entree: offrir
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

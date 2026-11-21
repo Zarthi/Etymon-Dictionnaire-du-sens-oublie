@@ -1,0 +1,25 @@
+mot: assassin
+nature: [ nom masculin ]
+etymologie:
+  - forme: assassino
+    langue: italien
+    sens: tueur, membre de la secte des Haschischins
+  - forme: حشيش
+    translitteration: ḥašīš
+    langue: arabe
+    sens: cannabis, haschisch
+explication: >-
+  Le mot est entré en français au XIIe siècle comme nom de la secte des
+  Haschischins, puis il a désigné au XVIe siècle le meurtrier gagé. L'arabe
+  nommait le chanvre enivrant dont cette secte faisait usage.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: assassin
+  - ouvrage: littre
+    entree: assassin
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,21 @@
+mot: sort
+nature: [ nom masculin ]
+etymologie:
+  - forme: sors
+    langue: latin
+    sens: lot, part, sort
+explication: >-
+  Sors était le lot tiré au sort, la part qui échoit ; le mot a glissé du tirage
+  à la puissance qui fixe le destin, puis au hasard lui-même.
+famille: [ sorte, sortilège ]
+themes: [ religion ]
+sources:
+  - ouvrage: littre
+    entree: sort
+  - ouvrage: tlfi
+    entree: sort
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

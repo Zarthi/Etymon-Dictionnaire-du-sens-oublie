@@ -1,0 +1,27 @@
+mot: dépendre
+nature: [ verbe ]
+etymologie:
+  - forme: dependere
+    langue: latin
+    sens: être suspendu à
+    elements:
+      - forme: de-
+        sens: de
+      - forme: pendere
+        sens: être suspendu
+explication: >-
+  Dependere, c'est être suspendu à quelque chose, pendre de là ; le mot a gardé
+  cette image pour toute relation où l'on tient à un autre : dépendre d'une
+  autorité, d'une cause.
+famille: [ dépendance, dépendant ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: dépendre
+  - ouvrage: littre
+    entree: dépendre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,25 @@
+mot: superflu
+nature: [ adjectif ]
+etymologie:
+  - forme: superfluus
+    langue: bas latin
+    sens: débordant, excessif, inutile
+    elements:
+      - forme: super
+        sens: au-dessus
+      - forme: fluere
+        sens: couler
+explication: >-
+  Le latin disait ce qui déborde en coulant. Le mot ne retient plus que l'idée
+  de ce qui est en trop, et le nom désigne ce dont on peut se passer.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: superflu
+  - ouvrage: littre
+    entree: superflu
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

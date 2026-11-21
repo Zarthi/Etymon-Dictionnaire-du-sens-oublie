@@ -1,0 +1,22 @@
+mot: vie
+nature: [ nom féminin ]
+etymologie:
+  - forme: vita
+    langue: latin
+    sens: vie
+explication: >-
+  Vita disait la vie, et déjà la manière de vivre et les moyens de subsister ;
+  le français a étendu le mot à la durée de l'existence et à l'ensemble des
+  événements qui la remplissent.
+famille: [ vital, viable ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: vie
+  - ouvrage: tlfi
+    entree: vie
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

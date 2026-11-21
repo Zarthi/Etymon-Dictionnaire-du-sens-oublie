@@ -1,0 +1,18 @@
+mot: intrigue
+nature: [ nom féminin ]
+etymologie:
+  - forme: intrigo
+    langue: italien
+    sens: affaire compliquée, embrouillement
+explication: >-
+  Le mot italien nommait une affaire compliquée. Il a pris en français le sens
+  de liaison amoureuse et de trame d'une œuvre, puis celui de menées secrètes.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: intrigue
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,38 @@
+mot: fantaisie
+nature: [ nom féminin ]
+etymologie:
+  - forme: phantasia
+    langue: bas latin
+    sens: imagination, idée, conception de l'esprit
+  - forme: φαντασία
+    langue: grec ancien
+    sens: apparition, image qui s'offre à l'esprit
+explication: >-
+  Le mot a d'abord nommé la faculté d'imaginer et ses productions ; il en est
+  venu au caprice et à l'envie passagère, puis à ce qui s'écarte du modèle
+  ordinaire, dans les arts et les objets.
+themes: [ esprit ]
+tradition:
+  lectures:
+    - texte: La phantasia est l'image d'un corps qu'on a vu, ensuite figurée dans
+        l'âme par la pensée.
+      citation: Phantasia est imago alicujus corporis visa, et cogitando postea in
+        animo figurata, ut puta, avi vel patris species, quem aliquando vidimus,
+        ac dum cogitando memoramus, phantasiam dicimus.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: fantaisie
+  - ouvrage: bailly
+    entree: φαντασία
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

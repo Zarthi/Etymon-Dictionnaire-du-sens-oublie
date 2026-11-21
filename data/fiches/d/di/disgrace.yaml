@@ -1,0 +1,23 @@
+mot: disgrâce
+nature: [ nom féminin ]
+etymologie:
+  - forme: disgrazia
+    langue: italien
+    sens: malheur, défaveur
+    elements:
+      - forme: dis-
+        sens: préfixe négatif
+      - forme: grazia
+        sens: grâce, faveur
+explication: >-
+  Le mot italien nommait le malheur, puis la perte des faveurs d'un maître. Le
+  français y a joint le sens de manque de grâce, dans l'aspect ou les manières.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: disgrâce
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

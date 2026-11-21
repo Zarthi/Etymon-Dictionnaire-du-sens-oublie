@@ -1,0 +1,43 @@
+mot: prudence
+nature: [ nom féminin ]
+etymologie:
+  - forme: prudentia
+    langue: latin
+    sens: prévoyance, sagesse
+  - forme: prudens
+    langue: latin
+    sens: qui prévoit
+  - forme: providens
+    langue: latin
+    sens: qui prévoit
+    elements:
+      - forme: pro-
+        sens: en avant
+      - forme: videre
+        sens: voir
+explication: >-
+  Prudentia nommait la prévoyance, la capacité de voir d'avance ; le mot dit
+  aujourd'hui la circonspection dans l'action, et la prudence comme vertu
+  cardinale.
+famille: [ prudent, prudemment ]
+themes: [ morale ]
+tradition:
+  lectures:
+    - texte: La prudence a pour domaine les choses humaines, la sagesse les divines.
+      citation: Prudentia in humanis rebus, sapientia in divinis distribuitur
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: prudence
+  - ouvrage: tlfi
+    entree: prudent
+  - ouvrage: littre
+    entree: prudence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,23 @@
+mot: responsable
+nature: [ adjectif ]
+etymologie:
+  - forme: responsum
+    langue: latin
+    sens: réponse
+  - forme: respondere
+    langue: latin
+    sens: répondre
+explication: >-
+  Responsable est celui qui doit rendre compte de ses actes et répondre de ceux
+  des personnes dont il a la charge. Le mot s'est étendu à celui qui est cause
+  de quelque chose, puis à celui qui est réfléchi et sérieux.
+famille: [ responsabilité, irresponsable ]
+themes: [ morale, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: responsable
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

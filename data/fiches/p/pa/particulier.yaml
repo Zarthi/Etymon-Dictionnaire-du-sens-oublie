@@ -1,0 +1,19 @@
+mot: particulier
+nature: [ adjectif ]
+etymologie:
+  - forme: particularis
+    langue: latin
+    sens: qui se rapporte à une part, partiel
+explication: >-
+  Le mot disait ce qui ne concerne qu'une part ou un individu, par opposition au
+  général. Il en est venu à désigner ce qui sort de l'ordinaire, et le nom, une
+  personne privée.
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: particulier
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

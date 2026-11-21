@@ -1,0 +1,21 @@
+mot: charisme
+nature: [ nom masculin ]
+etymologie:
+  - forme: χάρισμα
+    langue: grec ancien
+    sens: faveur, grâce accordée par Dieu
+explication: >-
+  Le grec χάρισμα appartient à la théologie de Paul : il y désigne le don
+  gratuit de Dieu pour le bien de la communauté. Le français l'a repris, puis
+  l'a étendu au pouvoir de fascination qu'un homme exerce sur un groupe.
+themes: [ politique, société ]
+sources:
+  - ouvrage: bailly
+    entree: χάρισμα
+  - ouvrage: tlfi
+    entree: charisme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

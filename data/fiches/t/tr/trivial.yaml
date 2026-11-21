@@ -1,0 +1,19 @@
+mot: trivial
+nature: [ adjectif ]
+etymologie:
+  - forme: trivialis
+    langue: latin
+    sens: de la croisée de chemin, de place publique ; grossier
+explication: >-
+  Le latin qualifiait ce qui se trouvait à la croisée des chemins, donc ce qui
+  était commun et sans distinction. L'école a appelé trivium les trois arts
+  élémentaires, et le mot est resté attaché à ce qui est banal ou grossier.
+themes: [ parole, société ]
+sources:
+  - ouvrage: tlfi
+    entree: trivial
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

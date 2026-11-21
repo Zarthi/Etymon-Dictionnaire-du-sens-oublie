@@ -1,0 +1,22 @@
+mot: vivre
+nature: [ verbe ]
+etymologie:
+  - forme: vivere
+    langue: latin
+    sens: vivre, être en vie
+explication: >-
+  Vivere disait être en vie, et déjà passer sa vie d'une certaine manière ou
+  vivre de quelque chose ; le français a gardé ces sens : vivre, c'est être en
+  vie et mener son existence.
+famille: [ vivant, vivacité ]
+themes: [ société ]
+sources:
+  - ouvrage: littre
+    entree: vivre
+  - ouvrage: tlfi
+    entree: vivre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

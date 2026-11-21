@@ -1,0 +1,27 @@
+mot: réparer
+nature: [ verbe ]
+etymologie:
+  - forme: reparare
+    langue: latin
+    sens: préparer de nouveau, remettre en état
+    elements:
+      - forme: re-
+        sens: de nouveau
+      - forme: parare
+        sens: disposer
+explication: >-
+  Reparare, c'est préparer de nouveau, refaire ce qui a été défait ; le français
+  a gardé le sens de remettre en état, et l'a étendu aux torts : réparer un
+  dommage, une offense.
+famille: [ réparation, réparable, réparateur ]
+themes: [ travail, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: réparer
+  - ouvrage: littre
+    entree: réparer
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

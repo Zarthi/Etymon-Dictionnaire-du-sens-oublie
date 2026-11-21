@@ -1,0 +1,21 @@
+mot: intérieur
+nature: [ adjectif, nom masculin ]
+etymologie:
+  - forme: interior
+    langue: latin
+    sens: qui est au-dedans
+explication: >-
+  Le latin interior s'employait au propre et au figuré. Le français l'a dit très
+  tôt de l'âme, puis de la vie psychique, et l'emploie comme nom pour le dedans
+  d'un bâtiment ou d'un pays.
+themes: [ esprit, maison ]
+sources:
+  - ouvrage: tlfi
+    entree: intérieur
+  - ouvrage: littre
+    entree: intérieur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,26 @@
+mot: prouesse
+nature: [ nom féminin ]
+etymologie:
+  - forme: prouesse
+    langue: français
+    sens: bravoure, vaillance
+    elements:
+      - forme: preux
+        langue: ancien français
+        sens: vaillant, brave
+      - forme: -esse
+        langue: français
+        sens: suffixe formant un nom d'état
+explication: >-
+  Le mot nommait la vaillance du chevalier et ses exploits. Il a quitté l'usage
+  noble et ne se dit plus guère, souvent avec ironie, que d'un exploit éclatant
+  ou ridicule.
+themes: [ guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: prouesse
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

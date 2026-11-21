@@ -1,0 +1,26 @@
+mot: opportun
+nature: [ adjectif ]
+etymologie:
+  - forme: opportunus
+    langue: latin
+    sens: qui pousse vers le port ; favorable
+    elements:
+      - forme: ob
+        sens: vers
+      - forme: portus
+        sens: port
+explication: >-
+  Opportunus qualifiait le vent qui pousse au port ; le mot a passé du vent
+  favorable au moment favorable, puis à ce qui convient à la situation.
+famille: [ opportunité, inopportun, opportunisme ]
+themes: [ temps, société ]
+sources:
+  - ouvrage: tlfi
+    entree: opportun
+  - ouvrage: littre
+    entree: opportun
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

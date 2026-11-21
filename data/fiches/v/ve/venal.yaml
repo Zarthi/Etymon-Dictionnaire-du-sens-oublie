@@ -1,0 +1,18 @@
+mot: vénal
+nature: [ adjectif ]
+etymologie:
+  - forme: venalis
+    langue: latin
+    sens: à vendre, qui se vend
+explication: >-
+  Le latin disait simplement ce qui est à vendre. Le mot a gardé ce sens, et
+  s'est chargé d'un blâme pour ce qui s'achète au mépris de la morale.
+themes: [ argent, morale ]
+sources:
+  - ouvrage: tlfi
+    entree: vénal
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

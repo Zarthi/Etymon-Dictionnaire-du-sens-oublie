@@ -1,0 +1,25 @@
+mot: protéger
+nature: [ verbe ]
+etymologie:
+  - forme: protegere
+    langue: latin
+    sens: couvrir devant, abriter
+    elements:
+      - forme: pro-
+        sens: devant
+      - forme: tegere
+        sens: couvrir
+explication: >-
+  Protegere, c'est couvrir par-devant, abriter, et le latin l'employait déjà
+  pour « garantir, protéger » ; le français en a gardé la protection, et l'a
+  étendue à l'appui donné à une personne ou à une activité.
+famille: [ protection, protecteur, protégé ]
+themes: [ droit, société ]
+sources:
+  - ouvrage: tlfi
+    entree: protéger
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

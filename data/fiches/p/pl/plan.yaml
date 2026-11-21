@@ -1,0 +1,21 @@
+mot: plan
+nature: [ adjectif ]
+etymologie:
+  - forme: planus
+    langue: latin
+    sens: plat, uni, égal
+explication: >-
+  Plan est la forme substantivée de l'adjectif plan, « plat, uni » : une surface
+  plane, puis le dessin qui la représente. Le sens de projet vient d'un autre
+  plan, déverbal de planter, qui s'est confondu avec le premier.
+famille: [ planifier, planification ]
+renvois: [ vision ]
+themes: [ travail, maison ]
+sources:
+  - ouvrage: tlfi
+    entree: plan
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

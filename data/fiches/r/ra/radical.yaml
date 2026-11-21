@@ -1,0 +1,19 @@
+mot: radical
+nature: [ adjectif ]
+etymologie:
+  - forme: radicalis
+    langue: bas latin
+    sens: qui tient à la racine, premier, fondamental
+explication: >-
+  Le mot dit d'abord ce qui tient à la racine, au principe d'une chose. En
+  politique, il a désigné ceux qui veulent aller au fond des réformes ; l'usage
+  courant en a fait le synonyme d'extrême ou de total.
+themes: [ politique ]
+sources:
+  - ouvrage: tlfi
+    entree: radical
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

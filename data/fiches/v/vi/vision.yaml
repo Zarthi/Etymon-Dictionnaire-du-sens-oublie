@@ -1,0 +1,22 @@
+mot: vision
+nature: [ nom féminin ]
+etymologie:
+  - forme: visio
+    langue: latin
+    sens: action de voir
+explication: >-
+  Visio disait l'action de voir, et déjà ce qui s'offre à la vue ou à l'esprit.
+  Le français a d'abord retenu le sens surnaturel d'une vision, puis a étendu le
+  mot à la manière de voir et à la conception d'un ensemble de choses.
+famille: [ visionnaire, visuel ]
+themes: [ esprit, savoir ]
+sources:
+  - ouvrage: tlfi
+    entree: vision
+  - ouvrage: littre
+    entree: vision
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

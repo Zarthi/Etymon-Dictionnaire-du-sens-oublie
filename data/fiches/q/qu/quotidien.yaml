@@ -1,0 +1,30 @@
+mot: quotidien
+nature: [ adjectif ]
+etymologie:
+  - forme: quotidianus
+    langue: latin
+    sens: de tous les jours
+  - forme: quotidie
+    langue: latin
+    sens: chaque jour
+    elements:
+      - forme: quotus
+        sens: chaque
+      - forme: dies
+        sens: jour
+explication: >-
+  Le mot dit d'abord ce qui revient chaque jour ; il a désigné le journal qui
+  paraît tous les jours, puis, depuis 1836, ce qui est banal à force de se
+  répéter.
+famille: [ quotidiennement, quotidienneté ]
+themes: [ temps, société ]
+sources:
+  - ouvrage: littre
+    entree: quotidien
+  - ouvrage: tlfi
+    entree: quotidien
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

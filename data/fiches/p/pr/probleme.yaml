@@ -1,0 +1,40 @@
+mot: problème
+nature: [ nom masculin ]
+etymologie:
+  - forme: problema
+    langue: latin
+    sens: question à résoudre
+  - forme: πρόβλημα
+    langue: grec ancien
+    sens: ce qu'on a devant soi ; obstacle ; question proposée
+    elements:
+      - forme: προ-
+        sens: devant
+      - forme: βάλλειν
+        sens: jeter
+explication: >-
+  En grec, πρόβλημα était ce qu'on a devant soi : un obstacle, puis une question
+  proposée. Le mot a gardé la question à résoudre, et l'usage courant en a fait,
+  depuis le xviiie siècle, une difficulté d'ordre pratique.
+famille: [ problématique ]
+themes: [ savoir, société ]
+tradition:
+  lectures:
+    - texte: Les problemata, que les Latins appellent propositiones, sont des
+        questions qui ont quelque chose à résoudre par la discussion.
+      citation: Problemata autem, quae Latine appellantur propositiones, quaestiones
+        sunt habentes aliquid quod disputatione solvendum sit
+      sources:
+        - ouvrage: etymologies
+          entree: VI, 14
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: problème
+  - ouvrage: bailly
+    entree: πρόβλημα
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
