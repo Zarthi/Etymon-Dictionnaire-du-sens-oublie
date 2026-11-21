@@ -1,0 +1,23 @@
+mot: public
+nature: [ adjectif ]
+etymologie:
+  - forme: publicus
+    langue: latin
+    sens: qui concerne le peuple ou l'État ; d'un usage public ; commun à tous
+explication: >-
+  Le français a retenu du latin publicus deux faces : ce qui touche la
+  collectivité (1238) et ce qui est connu de tous (1330) ou ouvert à tous
+  (1538). Aujourd'hui, public qualifie ce qui relève de l'État comme ce qui est
+  accessible à tous.
+famille: [ publicité, publication, république ]
+themes: [ société, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: public
+  - ouvrage: littre
+    entree: public
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

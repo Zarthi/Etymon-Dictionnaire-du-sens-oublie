@@ -1,0 +1,33 @@
+mot: peuple
+nature: [ nom masculin ]
+etymologie:
+  - forme: populus
+    langue: latin
+    sens: peuple, ensemble des habitants d'un État ; ensemble des citoyens
+explication: >-
+  Le mot a désigné d'abord l'ensemble des hommes d'un même pays et les sujets
+  d'un souverain ; il nomme aujourd'hui la population d'un État ou d'une nation,
+  et, dans un sens social, les classes les moins favorisées.
+famille: [ peuplade, peuplement, peupler ]
+themes: [ société, politique ]
+tradition:
+  lectures:
+    - texte: Le peuple (populus) est l'universalité des citoyens avec les anciens ; la
+        plèbe (plebs) en est la partie humble et abaissée.
+      citation: Plebs a populo eo distat, quod populus est generalis universitas
+        civium cum senioribus, plebs autem pars humilis et abjecta.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: peuple
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

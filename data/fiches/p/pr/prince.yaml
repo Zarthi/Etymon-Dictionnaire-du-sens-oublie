@@ -1,0 +1,40 @@
+mot: prince
+nature: [ nom masculin ]
+etymologie:
+  - forme: princeps
+    langue: latin
+    sens: qui occupe la première place
+    elements:
+      - forme: primus
+        sens: premier
+      - forme: capere
+        sens: prendre
+explication: >-
+  Princeps désignait celui qui occupait la première place, puis l'empereur,
+  quand le prince du sénat eut concentré le pouvoir entre ses mains. Le mot
+  nomme aujourd'hui un membre d'une famille souveraine ou un titre de noblesse.
+famille: [ princesse, principauté, principal ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: Le nom de princeps vient de ce qu'il prend (capiat) le premier, comme
+        municeps vient de ce qu'il prend les charges (munia).
+      citation: Dictus autem princeps a capiendi significatione, quod primus capiat,
+        sicut municeps ab eo quod munia capiat.
+      sources:
+        - ouvrage: etymologies
+          entree: IX
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: prince
+  - ouvrage: littre
+    entree: prince
+  - ouvrage: etymologies
+    entree: IX
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

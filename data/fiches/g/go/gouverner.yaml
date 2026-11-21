@@ -1,0 +1,30 @@
+mot: gouverner
+nature: [ verbe ]
+etymologie:
+  - forme: gubernare
+    langue: latin
+    sens: diriger un navire ; diriger, gouverner
+  - forme: κυβερνάω
+    langue: grec ancien
+    sens: diriger un navire
+explication: >-
+  Le latin gubernare, emprunté au grec κυβερνάω, disait d'abord diriger un
+  navire, puis diriger les hommes. Le français a retenu les deux sens : le
+  politique dès le XIe siècle, le maritime dans gouvernail.
+famille: [ gouvernement, gouvernail, gouverneur ]
+renvois: [ dominer ]
+themes: [ politique ]
+sources:
+  - ouvrage: tlfi
+    entree: gouverner
+  - ouvrage: etymologies
+    entree: XIX, 4
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XIX
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

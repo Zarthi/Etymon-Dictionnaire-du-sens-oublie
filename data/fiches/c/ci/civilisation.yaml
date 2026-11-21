@@ -1,0 +1,26 @@
+mot: civilisation
+nature: [ nom féminin ]
+etymologie:
+  - forme: civilisation
+    langue: français
+    sens: action de rendre civil
+    elements:
+      - forme: civiliser
+        sens: rendre civil
+      - forme: -ation
+        sens: suffixe de nom d'action
+explication: >-
+  Le mot est formé sur civiliser. Il a d'abord désigné l'action de rendre civil
+  un procès criminel, puis le mouvement par lequel un peuple quitte l'état de
+  nature, et aujourd'hui l'ensemble des valeurs et des connaissances d'une
+  société.
+famille: [ civiliser, civil, civilité ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: civilisation
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

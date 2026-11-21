@@ -71,7 +71,8 @@
               "néerlandais",
               "allemand",
               "anglais",
-              "indo-européen"
+              "indo-européen",
+              "sanskrit"
             ],
             "description": "Langue (liste fermée : data/langues.json)."
           },
@@ -128,7 +129,8 @@
                     "néerlandais",
                     "allemand",
                     "anglais",
-                    "indo-européen"
+                    "indo-européen",
+                    "sanskrit"
                   ]
                 },
                 "sens": {
@@ -192,7 +194,8 @@
                     "néerlandais",
                     "allemand",
                     "anglais",
-                    "indo-européen"
+                    "indo-européen",
+                    "sanskrit"
                   ],
                   "description": "Langue (liste fermée : data/langues.json)."
                 },
@@ -269,7 +272,8 @@
                         "néerlandais",
                         "allemand",
                         "anglais",
-                        "indo-européen"
+                        "indo-européen",
+                        "sanskrit"
                       ]
                     },
                     "sens": {
@@ -325,7 +329,8 @@
                               "néerlandais",
                               "allemand",
                               "anglais",
-                              "indo-européen"
+                              "indo-européen",
+                              "sanskrit"
                             ]
                           },
                           "sens": {
@@ -451,7 +456,8 @@
                   "néerlandais",
                   "allemand",
                   "anglais",
-                  "indo-européen"
+                  "indo-européen",
+                  "sanskrit"
                 ],
                 "description": "Langue (liste fermée : data/langues.json)."
               },
@@ -567,7 +573,8 @@
               "néerlandais",
               "allemand",
               "anglais",
-              "indo-européen"
+              "indo-européen",
+              "sanskrit"
             ],
             "description": "Langue (liste fermée : data/langues.json)."
           },

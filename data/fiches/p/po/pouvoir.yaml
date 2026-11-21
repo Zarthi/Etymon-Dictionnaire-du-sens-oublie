@@ -1,0 +1,20 @@
+mot: pouvoir
+nature: [ verbe ]
+etymologie:
+  - forme: "*potere"
+    langue: latin populaire
+    sens: être capable, avoir la force de
+explication: >-
+  Le latin populaire disait la capacité et la force ; le verbe est devenu
+  l'auxiliaire de la possibilité et de la permission, et son infinitif
+  substantivé a pris le sens d'autorité et de puissance.
+famille: [ puissant ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: tlfi
+    entree: pouvoir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

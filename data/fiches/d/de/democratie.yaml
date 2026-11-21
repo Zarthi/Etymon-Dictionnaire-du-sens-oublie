@@ -1,0 +1,46 @@
+mot: démocratie
+nature: [ nom féminin ]
+etymologie:
+  - forme: democratia
+    langue: bas latin
+    sens: gouvernement du peuple
+  - forme: δημοκρατία
+    langue: grec ancien
+    sens: gouvernement populaire
+    elements:
+      - forme: δῆμος
+        sens: peuple
+      - forme: κράτος
+        sens: autorité
+explication: >-
+  Le mot vient de democratia, emprunté au grec δημοκρατία, « gouvernement
+  populaire ». Il a d'abord désigné le gouvernement du peuple, puis, par
+  métonymie, l'État qui vit sous ce régime.
+famille: [ démocrate, démocratique, démocratiser ]
+renvois: [ republique ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: Le régime du peuple est nommé democratia, et c'est de lui que viennent
+        les plébiscites.
+      citation: Aliud autem regimen est populi, quod nominatur democratia, et secundum
+        hoc sumuntur plebiscita.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 95 a. 4
+          url: https://www.corpusthomisticum.org/sth2095.html
+sources:
+  - ouvrage: tlfi
+    entree: démocratie
+  - ouvrage: bailly
+    entree: δημοκρατία
+  - ouvrage: littre
+    entree: démocratie
+  - ouvrage: somme-theologique
+    entree: Ia-IIae q. 95 a. 4 co.
+    url: https://www.corpusthomisticum.org/sth2095.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

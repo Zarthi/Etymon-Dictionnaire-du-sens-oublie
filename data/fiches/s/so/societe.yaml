@@ -1,0 +1,24 @@
+mot: société
+nature: [ nom féminin ]
+etymologie:
+  - forme: societas
+    langue: latin
+    sens: association, réunion, compagnie
+  - forme: socius
+    langue: latin
+    sens: compagnon, associé
+explication: >-
+  Le mot vient de societas, « association, compagnie », dérivé de socius,
+  « compagnon ». Il a d'abord nommé la compagnie et l'union des hommes, puis la
+  communauté organisée et le milieu de la vie collective.
+famille: [ social, sociable, sociétaire ]
+renvois: [ civilisation ]
+themes: [ société ]
+sources:
+  - ouvrage: tlfi
+    entree: société
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

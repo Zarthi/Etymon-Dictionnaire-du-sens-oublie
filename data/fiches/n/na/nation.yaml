@@ -1,0 +1,21 @@
+mot: nation
+nature: [ nom féminin ]
+etymologie:
+  - forme: natio
+    langue: latin
+    sens: naissance ; ensemble d'individus nés dans le même lieu
+explication: >-
+  Le mot latin disait la naissance et l'ensemble de ceux qui sont nés dans le
+  même lieu ; en français, il a d'abord désigné les peuples païens dans la
+  Bible, puis un groupe humain uni par une origine et une culture (vers 1175),
+  et enfin la collectivité qui constitue l'État (1789).
+famille: [ national, nationalité ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: tlfi
+    entree: nation
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

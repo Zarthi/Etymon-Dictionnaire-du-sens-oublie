@@ -1,0 +1,44 @@
+mot: tyran
+nature: [ nom masculin ]
+etymologie:
+  - forme: tyrannus
+    langue: latin
+    sens: souverain, despote, usurpateur
+  - forme: τύραννος
+    langue: grec ancien
+    sens: maître absolu, puis usurpateur
+explication: >-
+  Le mot vient de tyrannus, emprunté au grec τύραννος, qui désignait le maître
+  absolu, puis celui qui usurpait le pouvoir dans un État libre. Le français en
+  a fait le souverain qui exerce le pouvoir de façon arbitraire, sans respect
+  des lois.
+famille: [ tyrannie, tyrannique, tyrannicide ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: À l'origine, tyran et roi n'étaient pas distingués, les rois forts étant
+        dits tyrans. L'usage a ensuite appelé tyrans les rois très mauvais, qui
+        exerçaient une domination dissolue et très cruelle.
+      citation: Tyranni Graece dicuntur. Idem Latine et reges. Nam apud veteres inter
+        regem et tyrannum nulla discretio erat […] Iam postea in usum accidit
+        tyrannos vocari pessimos atque inprobos reges, luxuriosae dominationis
+        cupiditatem et crudelissimam dominationem in populis exercentes.
+      sources:
+        - ouvrage: etymologies
+          entree: IX, 3, 19-20
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: tyran
+  - ouvrage: bailly
+    entree: τύραννος
+  - ouvrage: littre
+    entree: tyran
+  - ouvrage: etymologies
+    entree: IX, 3, 19-20
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

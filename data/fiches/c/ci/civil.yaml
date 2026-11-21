@@ -1,0 +1,39 @@
+mot: civil
+nature: [ adjectif ]
+etymologie:
+  - forme: civilis
+    langue: latin
+    sens: qui concerne le citoyen, sa vie, ses droits
+  - forme: civis
+    langue: latin
+    sens: citoyen
+explication: >-
+  Le mot vient de civilis, « qui concerne le citoyen, sa vie, ses droits »,
+  dérivé de civis, « citoyen ». Il a d'abord dit ce qui relève du citoyen et de
+  la cité, par opposition au criminel, puis les rapports des particuliers, par
+  opposition au militaire et au religieux.
+famille: [ civique, civilité, civiliser, civilisation ]
+renvois: [ societe ]
+themes: [ droit, société ]
+tradition:
+  lectures:
+    - texte: "Le mot est distingué de civicum : civile dit ce qui appartient à la
+        cité, civicum ce que font les citoyens eux-mêmes."
+      citation: Inter Civile et civicum. Civile est quod ad civitatem pertinet,
+        civicum, quod ipsi cives faciunt.
+      sources:
+        - ouvrage: differences
+          entree: livres I et II
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: civil
+  - ouvrage: tlfi
+    entree: civil
+  - ouvrage: differences
+    entree: livres I et II
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

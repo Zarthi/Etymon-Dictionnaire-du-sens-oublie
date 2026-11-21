@@ -24,7 +24,6 @@
 - { mot: perspective, statut: a-faire }
 - { mot: perte, statut: a-faire }
 - { mot: pervers, statut: a-faire }
-- { mot: peuple, statut: a-faire }
 - { mot: pharmacie, statut: a-faire }
 - { mot: phénomène, statut: a-faire }
 - { mot: physique, statut: a-faire }
@@ -36,15 +35,12 @@
 - { mot: plan, statut: a-faire }
 - { mot: poids, statut: a-faire }
 - { mot: point, statut: a-faire }
-- { mot: police, statut: a-faire }
-- { mot: politique, statut: a-faire }
 - { mot: pompe, statut: a-faire }
 - { mot: ponctuel, statut: a-faire }
 - { mot: pontife, statut: a-faire }
 - { mot: populaire, statut: a-faire }
 - { mot: possession, statut: a-faire }
 - { mot: possible, statut: a-faire }
-- { mot: pouvoir, statut: a-faire }
 - { mot: précaire, statut: a-faire }
 - { mot: précieux, statut: a-faire }
 - { mot: présent, statut: a-faire }
@@ -52,7 +48,6 @@
 - { mot: prêtre, statut: a-faire }
 - { mot: prévenir, statut: a-faire }
 - { mot: prière, statut: a-faire }
-- { mot: prince, statut: a-faire }
 - { mot: principe, statut: a-faire }
 - { mot: prison, statut: a-faire }
 - { mot: privé, statut: a-faire }
@@ -72,7 +67,6 @@
 - { mot: prouesse, statut: a-faire }
 - { mot: providence, statut: a-faire }
 - { mot: prudence, statut: a-faire }
-- { mot: public, statut: a-faire }
 - { mot: puéril, statut: a-faire }
 - { mot: puissance, statut: a-faire }
 - { mot: pur, statut: a-faire }

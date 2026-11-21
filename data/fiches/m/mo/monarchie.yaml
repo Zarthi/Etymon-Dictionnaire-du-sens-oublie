@@ -1,0 +1,48 @@
+mot: monarchie
+nature: [ nom féminin ]
+etymologie:
+  - forme: monarchia
+    langue: bas latin
+    sens: gouvernement d'un seul
+  - forme: μοναρχία
+    langue: grec ancien
+    sens: commandement d'un seul
+    elements:
+      - forme: μόνος
+        sens: seul, unique
+      - forme: ἄρχω
+        sens: commander, être le chef
+explication: >-
+  Le mot vient de monarchia, emprunté au grec μοναρχία, « commandement d'un
+  seul ». Il a d'abord désigné le gouvernement par un seul chef, puis
+  spécialement le régime où le chef d'État est un roi héréditaire.
+famille: [ monarque, monarchique, monarchisme ]
+renvois: [ democratie ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: "Le mot est tiré de la singularité et du commandement : il nomme le
+        principat unique d'Alexandre et de César."
+      citation: Monarchae sunt, qui singularem possident principatum, qualis fuit
+        Alexander apud Graecos, et Iulius apud Romanos. Hinc et monarchia
+        dicitur. MONAS quippe singularitas Graeco nomine, ARCHE principatus est.
+      sources:
+        - ouvrage: etymologies
+          entree: IX, 3, 23
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: monarchie
+  - ouvrage: bailly
+    entree: μοναρχία
+  - ouvrage: bailly
+    entree: μόνος
+  - ouvrage: bailly
+    entree: ἄρχω
+  - ouvrage: etymologies
+    entree: IX, 3, 23
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

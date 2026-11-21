@@ -1,0 +1,28 @@
+mot: police
+nature: [ nom féminin ]
+etymologie:
+  - forme: politia
+    langue: bas latin
+  - forme: πολιτεία
+    langue: grec ancien
+    sens: constitution d'un État, gouvernement ; ensemble des citoyens
+  - forme: πόλις
+    langue: grec ancien
+    sens: cité
+explication: >-
+  Le mot grec nommait la constitution et le gouvernement de la cité, et le bas
+  latin politia l'organisation politique. Police a désigné le bon ordre et
+  l'administration (1365), puis l'administration chargée de la sécurité publique
+  (1651), avant de nommer le corps qui maintient l'ordre public.
+famille: [ policier, policer, policé ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: police
+  - ouvrage: bailly
+    entree: πολιτεία
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

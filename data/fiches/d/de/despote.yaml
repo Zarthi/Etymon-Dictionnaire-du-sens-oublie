@@ -1,0 +1,35 @@
+mot: despote
+nature: [ nom masculin ]
+etymologie:
+  - forme: despotes
+    langue: bas latin
+    sens: maître
+  - forme: δεσπότης
+    langue: grec ancien
+    sens: maître absolu
+explication: >-
+  Le mot vient de despotes, emprunté au grec δεσπότης, « maître », qui désignait
+  le maître de maison et le maître des esclaves, puis le maître absolu. Il a
+  pris en français le sens de chef d'État au pouvoir arbitraire, et s'étend à
+  quiconque impose tyranniquement sa volonté.
+ecartees:
+  - forme: dasa
+    langue: sanskrit
+    sens: contrée
+    selon: [ emile-littre ]
+    raison: Le Littré rattache δεσπότης à un composé sanscrit, dasa, « contrée », et
+      patis, « maître » ; hypothèse non retenue, la chaîne s'arrête à δεσπότης.
+famille: [ despotique, despotisme, despotiquement ]
+renvois: [ tyran ]
+themes: [ politique ]
+sources:
+  - ouvrage: littre
+    entree: despote
+  - ouvrage: bailly
+    entree: δεσπότης
+  - ouvrage: tlfi
+    entree: despote
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

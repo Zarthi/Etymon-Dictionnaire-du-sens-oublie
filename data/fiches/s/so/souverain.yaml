@@ -1,0 +1,34 @@
+mot: souverain
+nature: [ adjectif ]
+etymologie:
+  - forme: superanus
+    langue: bas latin
+    sens: qui est au-dessus
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: super
+          sens: sur, au-dessus
+          selon: [ littre ]
+        - forme: "*supranus"
+          sens: qui est au-dessus
+          selon: [ tlfi ]
+explication: >-
+  Le mot vient de superanus, issu de super ou de *supranus, « au-dessus » : il
+  disait d'abord ce qui est au plus haut degré, puis, en politique, celui qui
+  détient la souveraineté. Le nom désigne aujourd'hui le chef d'un État
+  monarchique ou l'État dont la puissance ne relève d'aucune autre.
+famille: [ souverainement, souveraineté, suzerain ]
+renvois: [ prince ]
+themes: [ politique, droit ]
+sources:
+  - ouvrage: littre
+    entree: souverain
+  - ouvrage: tlfi
+    entree: souverain
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

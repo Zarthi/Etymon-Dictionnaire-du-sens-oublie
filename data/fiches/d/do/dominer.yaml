@@ -1,0 +1,38 @@
+mot: dominer
+nature: [ verbe ]
+etymologie:
+  - forme: dominari
+    langue: latin
+    sens: dominer, être maître
+  - forme: dominus
+    langue: latin
+    sens: seigneur
+explication: >-
+  Le mot vient de dominari, « être maître », dérivé de dominus, « seigneur ». Il
+  a d'abord dit l'autorité du maître sur ce qui lui appartient, puis la
+  suprématie en général, et s'emploie aussi d'un lieu qui surplombe.
+famille: [ domination, dominant, dominateur ]
+themes: [ politique ]
+tradition:
+  lectures:
+    - texte: Le nom du Seigneur dit la puissance et la crainte, là où celui de Dieu
+        dit la nature et l'amour.
+      citation: Inter Deum et Dominum ita quidam definierunt, ut in Dei appellatione
+        Patrem, in Domino Filium intelligerent. […] Primum enim naturae nomen
+        est pertinens ad amorem; secundum potestatis, congruens ad timorem.
+      sources:
+        - ouvrage: differences
+          entree: II, 1-2
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: tlfi
+    entree: dominer
+  - ouvrage: littre
+    entree: dominer
+  - ouvrage: differences
+    entree: livres I et II, II, 1-2
+    url: https://la.wikisource.org/wiki/Differentiae
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

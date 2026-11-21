@@ -1,0 +1,41 @@
+mot: république
+nature: [ nom féminin ]
+etymologie:
+  - forme: res publica
+    langue: latin
+    sens: la chose publique, l'État
+    elements:
+      - forme: res
+        sens: chose
+      - forme: publica
+        sens: publique
+explication: >-
+  En français, république a d'abord nommé l'État en général (1520), puis un État
+  sans monarchie héréditaire (1549), et enfin un régime fondé sur la
+  souveraineté du peuple (1620).
+famille: [ républicain ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: Tous les chrétiens ne forment qu'une seule république, quel que soit le
+        monastère ou le lieu où chacun dépense pour les frères indigents.
+      citation: Nec est attendendum, ut ibidem subditur, in quibus monasteriis vel in
+        quo loco indigentibus fratribus quisquis hoc quod habebat impenderit,
+        omnium enim Christianorum una respublica est.
+      sources:
+        - ouvrage: somme-theologique
+          entree: IIa-IIae q. 187 a. 4 co.
+          url: https://www.corpusthomisticum.org/sth3183.html
+sources:
+  - ouvrage: tlfi
+    entree: république
+  - ouvrage: littre
+    entree: république
+  - ouvrage: somme-theologique
+    entree: IIa-IIae q. 187 a. 4 co.
+    url: https://www.corpusthomisticum.org/sth3183.html
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

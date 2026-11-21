@@ -1,0 +1,33 @@
+mot: sénat
+nature: [ nom masculin ]
+etymologie:
+  - forme: senatus
+    langue: latin
+    sens: assemblée des anciens
+explication: >-
+  Le mot a désigné l'assemblée romaine et les conseils politiques des États
+  modernes (1636) et des assemblées de notables. Il désigne aujourd'hui une
+  assemblée politique ou un conseil chargé de veiller au respect de la
+  Constitution.
+famille: [ sénateur, sénatorial ]
+themes: [ politique, droit ]
+tradition:
+  lectures:
+    - texte: "Le nom du sénat vient de l'âge : ses membres étaient les plus anciens
+        (seniores)."
+      citation: Senatui nomen aetas dedit, quod seniores essent.
+      sources:
+        - ouvrage: etymologies
+          entree: IX
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+sources:
+  - ouvrage: tlfi
+    entree: sénat
+  - ouvrage: etymologies
+    entree: IX
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_IX
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

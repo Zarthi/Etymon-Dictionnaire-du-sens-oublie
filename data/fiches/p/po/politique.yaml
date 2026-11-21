@@ -1,0 +1,41 @@
+mot: politique
+nature: [ adjectif ]
+etymologie:
+  - forme: politicus
+    langue: latin
+  - forme: πολιτικός
+    langue: grec ancien
+    sens: de citoyen, qui concerne la cité ou l'État
+  - forme: πόλις
+    langue: grec ancien
+    sens: cité
+explication: >-
+  En français, politique s'est d'abord dit du bon gouvernement (1365), puis de
+  ce qui concerne les affaires de l'État et de ceux qui les conduisent.
+famille: [ politiquement, politiquer ]
+themes: [ politique, société ]
+tradition:
+  lectures:
+    - texte: "La partie appétitive obéit à la raison, non sans quelque contradiction :
+        la raison lui commande par un pouvoir politique, celui qu'on exerce sur
+        des hommes libres qui ont le droit de contredire."
+      citation: Pars enim appetitiva obedit rationi non omnino ad nutum, sed cum
+        aliqua contradictione, unde philosophus dicit, in I Polit., quod ratio
+        imperat appetitivae principatu politico, quo scilicet aliquis praeest
+        liberis, qui habent ius in aliquo contradicendi.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 58 a. 2 co.
+          url: https://www.corpusthomisticum.org/sth2055.html
+sources:
+  - ouvrage: tlfi
+    entree: politique
+  - ouvrage: bailly
+    entree: πολιτικός
+  - ouvrage: bailly
+    entree: πόλις
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

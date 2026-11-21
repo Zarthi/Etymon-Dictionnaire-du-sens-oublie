@@ -9,6 +9,30 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-21 — Lot : peuple, pouvoir, prince, politique, police, public, republique, senat, citoyen, nation, souverain, monarchie, democratie, despote, tyran, gouverner, dominer, societe, civil, civilisation
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| public | Chaîne arrêtée à publicus ; la parenté avec populus n'est pas retenue. | Le Littré dérive publicus de populus, le TLFi (Ernout-Meillet) le dit corrélatif mais sans rapport étymologique. | oui |
+| politique, police | πόλις est un maillon de la chaîne, non un élément de πολιτικός / πολιτεία. | Le schéma exige au moins deux éléments ; le suffixe -ικός n'a pas de glose sourcée. | oui |
+| pouvoir | Le mot est traité comme verbe et nom (infinitif substantivé), la chaîne s'arrêtant à *potere. | Les sources TLFi du verbe et du nom données dans sources.md le permettent ; aucune lecture traditionnelle. | oui |
+| peuple | Le radical indo-européen pla « emplir » du Littré n'est pas retenu. | Reconstruction sans forme attestée ; la chaîne s'arrête à populus. | oui |
+| souverain | Chaîne avec alternatives super / *supranus ; le bas latin superanus est le maillon direct. | Le Littré dérive superanus de super ; le TLFi y voit aussi un type *supranus, dérivé de supra, et superanus pourrait n'être qu'une relatinisation. | oui |
+| souverain | Aucune lecture traditionnelle. | Le corpus ne donne rien pour superanus ; les passages de super portent sur superbia. | oui |
+| monarchie | La lecture d'Isidore (Étymologies IX, 3, 23) est retenue. | Isidore explique monarchia par μονάς et ἀρχή. | oui |
+| démocratie | Le Bailly ne donne pas d'entrée consultable pour δῆμος ni κράτος ; leurs sens sont pris au Littré. | Le dossier le note ; les deux éléments sont glosés par le Littré. | oui |
+| démocratie | La lecture de Thomas d'Aquin (Somme, Ia-IIae q. 95 a. 4) est retenue. | Thomas range la démocratie parmi les régimes. | oui |
+| despote | Le composé sanscrit dasa + patis n'est pas retenu ; la chaîne s'arrête à δεσπότης, et l'hypothèse figure en écartée. | Le Littré la rapporte sans la fonder ; le grec δεσπότης est la source directe. | oui |
+| tyran | La lecture d'Isidore (Étymologies IX, 3, 19-20) est retenue. | Isidore rapporte l'extension de tyran aux rois mauvais. | oui |
+| gouverner | Aucune lecture traditionnelle. | Isidore lit gubernator, forme voisine absente de la chaîne ; la consigne exige que l'auteur ait lu le mot ou une forme de sa chaîne. | oui |
+| dominer | La lecture d'Isidore (Différences, II, 1-2) est retenue. | Isidore distingue Deus et Dominus. | oui |
+| société | Aucune lecture traditionnelle. | Le corpus ne donne pas de passage qui explique societas ; Thomas d'Aquin (IIa-IIae q. 114 a. 2) reste une piste. | oui |
+| civil | La lecture d'Isidore (Différences, Inter Civile et civicum) est retenue. | Isidore distingue civile de civicum, et civile est une forme de la chaîne. | oui |
+| civilisation | Le mot est traité comme un dérivé de civiliser, avec un seul maillon français. | Le TLFi donne la dérivation par civiliser + -ation ; le Littré renvoie à civiliser. | oui |
+| civilisation | Aucune lecture traditionnelle. | Aucun auteur traditionnel ne lit civilisation, mot dérivé de civiliser. | oui |
+
 ## 2026-11-21 — Lot : calomnie, complot, flatter, hypocrite, imposteur, ironie, malice, derision, caprice, cynique, rumeur, aurore, destin, fortune, fatal, futur, hasard, chance, catastrophe, crise, danger, chagrin, douleur, deuil, desespoir, horreur, malheur, misere, rage, stupeur, candeur, courtois, honnete, honte, pudeur, sincere, sobre, naif, sot, grossier, budget, calcul, capital, compte, monnaie, profit, gratuit, fisc, salaire, prix
 
 | Sujet | Décision | Raison | Relecture |

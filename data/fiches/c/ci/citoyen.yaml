@@ -1,0 +1,27 @@
+mot: citoyen
+nature: [ nom ]
+etymologie:
+  - forme: civitadanus
+    langue: bas latin
+  - forme: civitas
+    langue: latin
+    sens: cité
+explication: >-
+  Citoyen vient de cité : il a désigné l'habitant d'une ville (1154-73) et celui
+  qui jouit du droit de cité (vers 1160), puis le membre d'un État qui a des
+  droits politiques (1751).
+famille: [ citoyenneté, concitoyen, civique ]
+themes: [ politique, société ]
+sources:
+  - ouvrage: littre
+    entree: citoyen
+  - ouvrage: tlfi
+    entree: citoyen
+  - ouvrage: etymologies
+    entree: XV, 2
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_XV
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon
