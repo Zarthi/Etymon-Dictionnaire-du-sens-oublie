@@ -38,7 +38,7 @@ export function lireLot(contenu: Brute | Brute[]): { fiches: Brute[]; auteurs: B
 }
 
 /** Une référence sans fiche n'est pas une faute de rédaction : elle est à créer (étape 4). */
-const A_CREER = /« ([^»]+) » sans fiche \(data\/(auteurs|ouvrages)\)/;
+const A_CREER = /« ([^»]+) » sans fiche \((?:auteur : )?data\/(auteurs|ouvrages)(?:, ouvrage : data\/ouvrages)?\)/;
 
 /** Ce qu'une rédaction a fait, ou, en essai, ce qu'elle ferait. `id` est celui du mot (`auteurs/x` pour une référence). */
 export interface Bilan {

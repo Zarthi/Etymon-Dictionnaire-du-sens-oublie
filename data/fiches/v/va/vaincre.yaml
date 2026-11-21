@@ -1,0 +1,28 @@
+mot: vaincre
+nature: [ verbe ]
+etymologie:
+  - forme: vincere
+    langue: latin
+    sens: vaincre, triompher
+explication: >-
+  Vincere disait la victoire à la guerre et le fait de l'emporter. Le mot s'est
+  étendu à toute supériorité, puis à la maîtrise de soi. Le Littré y voyait un
+  rapport avec vincire, « lier » ; le TLFi s'en tient à vincere.
+ecartees:
+  - forme: vincire
+    langue: latin
+    sens: lier
+    selon: [ emile-littre ]
+    raison: Le Littré y voit l'origine de vincere, mais le TLFi ne retient que vincere.
+famille: [ vainqueur, vaincu, invincible, victoire ]
+themes: [ guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: vaincre
+  - ouvrage: littre
+    entree: vaincre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

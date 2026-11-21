@@ -1,0 +1,20 @@
+mot: guerre
+nature: [ nom féminin ]
+etymologie:
+  - forme: "*werra"
+    langue: francique
+    sens: troubles, désordres, querelle
+explication: >-
+  Guerre vient du francique *werra, qui disait le trouble et la querelle, et qui
+  a remplacé le latin bellum. Le mot désigne aujourd'hui le conflit armé entre
+  États ou groupes, et toute lutte.
+famille: [ guerrier, guerroyer, guérilla ]
+themes: [ guerre, politique ]
+sources:
+  - ouvrage: tlfi
+    entree: guerre
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,30 @@
+mot: arme
+nature: [ nom féminin ]
+etymologie:
+  - forme: arma
+    langue: latin
+    sens: armes, équipement du combattant
+explication: >-
+  Le latin arma est un pluriel neutre, devenu en français un féminin singulier.
+  Le mot désignait l'équipement du combattant ; il nomme aujourd'hui
+  l'instrument de combat, et, au figuré, tout moyen de lutte.
+famille: [ armer, armure, armée, désarmer ]
+themes: [ guerre ]
+tradition:
+  lectures:
+    - texte: Les armes sont ce dont on se défend ; les traits, ce qu'on lance.
+      citation: Arma sunt quibus defendimur [Al., defendimus], tela quae mittimus
+        [Al., emittimus].
+      sources:
+        - ouvrage: differences
+          entree: I et II, Inter Arma et tela
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: arme
+  - ouvrage: tlfi
+    entree: arme
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

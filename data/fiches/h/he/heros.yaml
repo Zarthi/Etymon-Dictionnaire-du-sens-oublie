@@ -1,0 +1,37 @@
+mot: héros
+nature: [ nom masculin ]
+etymologie:
+  - forme: heros
+    langue: latin
+    sens: demi-dieu
+  - forme: ἥρως
+    langue: grec ancien
+    sens: demi-dieu ; chef, guerrier noble
+explication: >-
+  Le grec ἥρως nommait le demi-dieu et, chez Homère, le chef ou le guerrier
+  noble ; le latin heros a transmis le sens de demi-dieu. Le français a d'abord
+  désigné les demi-dieux de la mythologie, puis l'homme de courage et le
+  personnage principal d'une œuvre.
+famille: [ héroïne, héroïque, héroïsme ]
+themes: [ guerre ]
+tradition:
+  lectures:
+    - texte: Le nom Heros viendrait de Junon, que les Grecs appellent Héra ; les
+        fables grecques donnent ce nom à un fils de Junon.
+      citation: Hoc enim nomen a Iunone dicitur tractum, [...] Heros fuerit nuncupatus.
+      sources:
+        - ouvrage: la-cite-de-dieu
+          entree: X
+          url: https://la.wikisource.org/wiki/De_civitate_Dei/Liber_X
+sources:
+  - ouvrage: littre
+    entree: héros
+  - ouvrage: bailly
+    entree: ἥρως
+  - ouvrage: tlfi
+    entree: héros
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

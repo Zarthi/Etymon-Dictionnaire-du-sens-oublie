@@ -1,0 +1,19 @@
+mot: torture
+nature: [ nom féminin ]
+etymologie:
+  - forme: tortura
+    langue: bas latin
+    sens: action de tordre
+explication: >-
+  Tortura, en latin, désignait l'action de tordre ; le mot a pris le sens de
+  souffrance infligée, puis de violence exercée pour obtenir un aveu.
+famille: [ torturer, tortionnaire, tortueux, tortuosité ]
+themes: [ droit, corps ]
+sources:
+  - ouvrage: tlfi
+    entree: torture
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

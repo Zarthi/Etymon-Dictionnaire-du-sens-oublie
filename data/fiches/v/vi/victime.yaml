@@ -1,0 +1,47 @@
+mot: victime
+nature: [ nom féminin ]
+etymologie:
+  - forme: victima
+    langue: latin
+    sens: animal offert en sacrifice
+    premier: true
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: vincire
+          sens: lier
+          selon: [ emile-littre ]
+        - forme: vincere
+          sens: vaincre
+          selon: [ emile-littre ]
+        - forme: vigere
+          sens: être fort, être vigoureux
+          selon: [ paul-wilhelm-corssen ]
+explication: >-
+  Victima désignait l'animal offert en sacrifice. Le mot s'est étendu à la
+  personne qui souffre ou meurt pour une cause. Son origine latine est
+  discutée : le lien, la victoire ou la vigueur de la bête.
+famille: [ victimaire, victimer, victimiser ]
+themes: [ religion, société ]
+tradition:
+  lectures:
+    - texte: D'autres pensent que la victime est ainsi nommée parce qu'elle tombait
+        frappée d'un coup, ou parce qu'on la conduisait liée aux autels.
+      citation: Alii victimam dictam putaverunt, quia ictu percussa cadebat, vel quia
+        vincta ad aras ducebatur.
+      hypothese: vincire
+      sources:
+        - ouvrage: etymologies
+          entree: VI
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_VI
+sources:
+  - ouvrage: tlfi
+    entree: victime
+  - ouvrage: littre
+    entree: victime
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

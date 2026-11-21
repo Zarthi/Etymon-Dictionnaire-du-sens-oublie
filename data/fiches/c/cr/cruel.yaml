@@ -1,0 +1,37 @@
+mot: cruel
+nature: [ adjectif ]
+etymologie:
+  - forme: crudelis
+    langue: latin
+    sens: cruel
+  - forme: crudus
+    langue: latin
+    sens: cru, non cuit
+explication: >-
+  Crudelis, dérivé de crudus, « cru, non cuit », a donné cruel ; le français a
+  gardé le sens moral, sans l'idée de cuisson.
+famille: [ cruauté, cruellement, cru ]
+themes: [ morale, émotions ]
+tradition:
+  lectures:
+    - texte: Le cruel est celui qui est cru, comme ce que les Grecs appellent omos,
+        qui n'est ni cuit ni propre à être mangé.
+      citation: Crudelis, hoc est crudus, quem Graeci OMON appellant per
+        translationem, quasi non coctus nec esui habilis.
+      sources:
+        - ouvrage: etymologies
+          entree: X, 48
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+sources:
+  - ouvrage: littre
+    entree: cruel
+  - ouvrage: etymologies
+    entree: X, 48
+    url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_X
+  - ouvrage: tlfi
+    entree: cruel
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

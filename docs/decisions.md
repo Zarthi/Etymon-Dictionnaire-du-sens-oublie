@@ -9,6 +9,29 @@ changer un principe d'AGENTS.md (l'agent y décide pour le lot en cours, sans to
 
 Relecture : `à relire` (par défaut), `confirmée`, `infirmée : <ce qui a été fait>`.
 
+## 2026-11-21 — Lot : arme, bourreau, combat, conquerir, cruel, fureur, guerre, heros, lache, meurtre, pitie, supplice, torture, trahir, traitre, tuer, vaincre, victime, victoire, violence
+
+| Sujet | Décision | Raison | Relecture |
+|---|---|---|---|
+| sujet | décision | raison | à relire |
+|---|---|---|---|
+| bourreau | chemin `debattu`, deux hypothèses (boia, bourre) | Le Littré (d'après Diez) tire le mot de boia, « carcan » ; le TLFi le dérive de bourre. Les deux sources sont citées ; boia est placé en premier. | oui |
+| arme | sens latin `arma` pris au TLFi | Le Lewis & Short n'a pas d'entrée arma ; le TLFi glose l'équipement guerrier. | oui |
+| héros | ouvrage cité `la-cite-de-dieu` | L'identifiant du corpus est `cite-de-dieu`, celui de l'ouvrage dans data/ est `la-cite-de-dieu`. | non |
+| fureur | lecture d'Isidore sur `furiosus` | Le passage cite `furor` et définit le dérivé ; c'est la seule lecture trouvée. | oui |
+| combat | élément `battre` en français | Le composé est français ; `battre` est donné comme élément français, non comme forme latine. | oui |
+| pitié | sens latin `pietas` pris au TLFi | Le Lewis & Short n'a pas d'entrée pietas ; le TLFi glose pietas et son évolution. | oui |
+| pitié | doublet `piété` non déclaré | La fiche `piete` n'existe pas ; le doublet est signalé sans être écrit. | oui |
+| supplice | sens latin `supplicium` pris au TLFi | Le Lewis & Short n'a pas d'entrée supplicium ; le TLFi glose le mot. | oui |
+| torture | sens latin `tortura` pris au TLFi | Le Lewis & Short n'a pas d'entrée tortura ; le TLFi glose le mot. | oui |
+| trahir | sens latin `tradere` pris au TLFi | Le Lewis & Short n'a pas d'entrée tradere ; le TLFi glose le mot. | oui |
+| traître | sens latin `traditor` pris au TLFi | Le Lewis & Short n'a pas d'entrée traditor ; le TLFi glose le mot. | oui |
+| tuer | origine `debattu`, `*tutare` puis `tuditare` | Le TLFi suit Diez et *tutare ; le Littré défend tuditare. `*tutare` est placé en premier, selon la source la plus récente. | oui |
+| vaincre | `vincire` mis dans `ecartees` | Le Littré rapproche vaincre de vincire, mais le TLFi s'en tient à vincere. | oui |
+| victime | origine `debattu`, trois hypothèses | Le Littré rapporte vincire, vincere et vigere ; Corssen tient pour vigere. Aucun tenant n'est cité faute de fiche d'auteur. | oui |
+| victoire | sens latin `victoria` pris au TLFi | Le Lewis & Short n'a pas d'entrée victoria ; le TLFi glose le mot. | oui |
+| violence | sens latin `violentia` pris au TLFi | Le Lewis & Short n'a pas d'entrée violentia ; le TLFi glose le mot. | oui |
+
 ## 2026-11-21 — Lot : peuple, pouvoir, prince, politique, police, public, republique, senat, citoyen, nation, souverain, monarchie, democratie, despote, tyran, gouverner, dominer, societe, civil, civilisation
 
 | Sujet | Décision | Raison | Relecture |

@@ -1,0 +1,21 @@
+mot: victoire
+nature: [ nom féminin ]
+etymologie:
+  - forme: victoria
+    langue: latin
+    sens: victoire
+explication: >-
+  Victoria nommait la victoire à la guerre et la déesse qui la donnait. Le mot
+  s'est étendu à tout succès, puis à la maîtrise de soi.
+famille: [ vaincre, vainqueur, victorieux ]
+themes: [ guerre ]
+sources:
+  - ouvrage: tlfi
+    entree: victoire
+  - ouvrage: littre
+    entree: victoire
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

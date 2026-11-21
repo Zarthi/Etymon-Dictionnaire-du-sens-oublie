@@ -1,0 +1,41 @@
+mot: tuer
+nature: [ verbe ]
+etymologie:
+  - forme: tuer
+    langue: ancien français
+    sens: faire mourir
+  - langue: latin populaire
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: "*tutare"
+          sens: protéger, couvrir ; éteindre
+          selon: [ friedrich-diez ]
+        - forme: tuditare
+          sens: frapper, assommer
+          selon: [ emile-littre ]
+explication: >-
+  L'origine est discutée : le TLFi rattache tuer à *tutare, « couvrir pour
+  protéger », d'où « éteindre » ; le Littré, d'après Diez, retient la même idée,
+  mais préfère tuditare, « frapper ». Le sens de faire mourir vient de l'idée
+  d'étouffer un feu ou de frapper.
+ecartees:
+  - forme: θύειν
+    langue: grec ancien
+    sens: sacrifier, tuer
+    raison: "Le Littré l'écarte : la forme grecque ne rend pas compte du t ou du d
+      initial."
+famille: [ tuable, tuerie, tueur ]
+renvois: [ meurtre ]
+themes: [ guerre, société ]
+sources:
+  - ouvrage: tlfi
+    entree: tuer
+  - ouvrage: littre
+    entree: tuer
+  - ouvrage: bailly
+    entree: θύω
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon

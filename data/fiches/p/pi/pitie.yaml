@@ -1,0 +1,32 @@
+mot: pitié
+nature: [ nom féminin ]
+etymologie:
+  - forme: pietas
+    langue: latin
+    sens: piété, sentiment du devoir
+explication: >-
+  Pietas nommait le devoir envers les dieux et les parents ; le mot a glissé
+  vers la clémence et la compassion, puis, en français, vers la grâce accordée
+  aux coupables.
+famille: [ apitoyer, pitoyable, impitoyable ]
+themes: [ morale, émotions ]
+tradition:
+  lectures:
+    - texte: Le nom de piété implique la révérence envers le père et la patrie ;
+        puisque le père de tous est Dieu, le culte de Dieu est aussi nommé
+        piété.
+      citation: Sed nomen pietatis importat reverentiam quam habemus ad patrem et ad
+        patriam. Et quia pater omnium Deus est, etiam cultus Dei pietas
+        nominatur.
+      sources:
+        - ouvrage: somme-theologique
+          entree: Ia-IIae q. 68 a. 4 ad 2
+          url: https://www.corpusthomisticum.org/sth2055.html
+sources:
+  - ouvrage: tlfi
+    entree: pitié
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

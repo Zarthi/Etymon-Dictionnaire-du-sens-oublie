@@ -1,0 +1,22 @@
+mot: traître
+nature: [ adjectif ]
+etymologie:
+  - forme: traditor
+    langue: latin
+    sens: celui qui livre, celui qui trahit
+explication: >-
+  Traditor, c'est celui qui livre : le latin nommait ainsi celui qui remettait
+  une personne ou une chose. Le français en a fait celui qui manque à la foi,
+  puis un adjectif pour ce qui est perfide.
+famille: [ trahir, trahison, traîtrise ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: traître
+  - ouvrage: littre
+    entree: traître
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

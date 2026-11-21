@@ -1,0 +1,20 @@
+mot: trahir
+nature: [ verbe ]
+etymologie:
+  - forme: tradere
+    langue: latin
+    sens: transmettre, confier, livrer
+explication: >-
+  Tradere disait transmettre, confier, livrer. Livrer quelqu'un à ses ennemis,
+  c'est le trahir : le mot dit le manquement à la foi et s'est étendu à la
+  révélation d'un secret.
+famille: [ trahison, traître, traîtrise ]
+themes: [ morale, société ]
+sources:
+  - ouvrage: tlfi
+    entree: trahir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

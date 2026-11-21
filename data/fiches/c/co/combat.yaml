@@ -1,0 +1,31 @@
+mot: combat
+nature: [ nom masculin ]
+etymologie:
+  - forme: combattre
+    langue: français
+    sens: se mesurer avec un adversaire
+    elements:
+      - forme: cum
+        langue: latin
+        sens: avec
+      - forme: battre
+        sens: frapper
+explication: >-
+  Combat est le déverbal de combattre, fait de cum, « avec », et battre,
+  « frapper » : se frapper l'un l'autre. Le mot a d'abord désigné l'action de se
+  mesurer avec un adversaire, puis toute lutte ou opposition.
+famille: [ combattre, combattant, combatif, combativité ]
+renvois: [ guerre ]
+themes: [ guerre ]
+sources:
+  - ouvrage: littre
+    entree: combat
+  - ouvrage: littre
+    entree: combattre
+  - ouvrage: tlfi
+    entree: combat
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

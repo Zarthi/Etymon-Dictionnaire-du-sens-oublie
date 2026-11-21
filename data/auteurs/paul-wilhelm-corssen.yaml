@@ -1,0 +1,14 @@
+nom: Paul Wilhelm Corssen
+cite: [ Corssen ]
+naissance: "1820"
+mort: "1875"
+description: >-
+  Philologue allemand (1820-1875), spécialiste de philologie étrusque et latine.
+sources:
+  - ouvrage: bnf
+    entree: cb165443939
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

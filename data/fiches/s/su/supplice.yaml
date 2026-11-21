@@ -1,0 +1,34 @@
+mot: supplice
+nature: [ nom masculin ]
+etymologie:
+  - forme: supplicium
+    langue: latin
+    sens: action de ployer les genoux ; châtiment
+explication: >-
+  Supplicium désignait l'action de ployer les genoux, puis le châtiment : à
+  Rome, le condamné était voué aux dieux par une prière et un sacrifice. Le mot
+  ne dit plus que la peine elle-même.
+famille: [ supplicier, supplicié, supplication ]
+renvois: [ torture ]
+themes: [ droit, corps ]
+tradition:
+  lectures:
+    - texte: "Le supplice, au sens propre, n'est pas n'importe quelle punition : le
+        condamné est voué de façon que ses biens soient consacrés et versés au
+        domaine public."
+      citation: Supplicium proprie dictum non qui quoquo modo punitur, sed ita
+        damnatur ut bona eius consecrentur et in publico redigantur.
+      sources:
+        - ouvrage: etymologies
+          entree: V, 12
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: tlfi
+    entree: supplice
+  - ouvrage: littre
+    entree: supplice
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

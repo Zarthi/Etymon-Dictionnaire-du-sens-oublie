@@ -1,0 +1,31 @@
+mot: conquérir
+nature: [ verbe ]
+etymologie:
+  - forme: conquirere
+    langue: latin
+    sens: chercher de tous côtés, rassembler
+    elements:
+      - forme: cum
+        langue: latin
+        sens: avec
+      - forme: quaerere
+        langue: latin
+        sens: chercher
+explication: >-
+  Conquérir vient de conquirere, « chercher de tous côtés, rassembler » : le
+  latin dit la recherche et le rassemblement, le français en a fait la prise par
+  les armes. Le mot s'emploie aujourd'hui pour toute acquisition obtenue par
+  l'effort.
+famille: [ conquête, conquérant, reconquérir ]
+renvois: [ vaincre ]
+themes: [ guerre, politique ]
+sources:
+  - ouvrage: littre
+    entree: conquérir
+  - ouvrage: tlfi
+    entree: conquérir
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

@@ -1,0 +1,21 @@
+mot: lâche
+nature: [ adjectif ]
+etymologie:
+  - forme: laxus
+    langue: latin
+    sens: relâché, lâche
+explication: >-
+  Lâche vient du latin laxus, « relâché, lâche ». Le mot garde le sens concret
+  de « peu tendu » et le sens moral de « sans courage ».
+famille: [ lâcheté, lâcher, laxisme ]
+themes: [ morale ]
+sources:
+  - ouvrage: littre
+    entree: lâche
+  - ouvrage: tlfi
+    entree: lâche
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

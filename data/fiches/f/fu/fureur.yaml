@@ -1,0 +1,33 @@
+mot: fureur
+nature: [ nom féminin ]
+etymologie:
+  - forme: furor
+    langue: latin
+    sens: égarement, violente colère
+explication: >-
+  Fureur vient du latin furor, qui disait l'égarement et la colère violente. Le
+  mot désigne aujourd'hui un emportement passionné ou la violence des éléments.
+famille: [ furieux, furie, furibond ]
+renvois: [ rage ]
+themes: [ émotions ]
+tradition:
+  lectures:
+    - texte: Le furieux est celui qui se conduit à la manière des bêtes, et la fureur
+        ne le quitte pas ; le furiatus est celui qui entre en fureur pour une
+        cause.
+      citation: Furiosus est qui ferarum ritu fertur, et ab eo furor nunquam recedit,
+        furiatus qui furit ex causa.
+      sources:
+        - ouvrage: differences
+          entree: Inter Furiatum et furiosum
+          url: https://la.wikisource.org/wiki/Differentiae
+sources:
+  - ouvrage: littre
+    entree: fureur
+  - ouvrage: tlfi
+    entree: fureur
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

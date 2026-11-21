@@ -1,0 +1,21 @@
+mot: violence
+nature: [ nom féminin ]
+etymologie:
+  - forme: violentia
+    langue: latin
+    sens: force violente, caractère emporté
+explication: >-
+  Violentia disait le caractère emporté et la force qui ne se contient pas. Le
+  mot en est venu à nommer la contrainte exercée sur autrui, puis l'ardeur des
+  sentiments et la force des choses.
+famille: [ violent, violemment, violenter, violer ]
+renvois: [ guerre ]
+themes: [ société, droit ]
+sources:
+  - ouvrage: tlfi
+    entree: violence
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+    reflexion: élevée
+statut: brouillon

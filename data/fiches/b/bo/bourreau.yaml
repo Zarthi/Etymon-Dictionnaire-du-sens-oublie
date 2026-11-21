@@ -1,0 +1,51 @@
+mot: bourreau
+nature: [ nom masculin ]
+etymologie:
+  - forme: bouriaus
+    langue: ancien français
+    sens: bourrelet
+    premier: true
+  - langue: latin
+    alternatives:
+      mode: debattue
+      formes:
+        - forme: boia
+          sens: carcan
+          selon: [ friedrich-diez ]
+        - forme: bourre
+          langue: français
+          sens: bourre, bourrelet
+          selon: [ tlfi ]
+explication: >-
+  L'origine de bourreau est discutée : le Littré, d'après Diez, le rattache au
+  latin boia, « carcan » ; le TLFi le dérive de bourre, « bourrelet ». Le mot a
+  d'abord désigné un bourrelet, puis l'exécuteur des arrêts de justice.
+ecartees:
+  - forme: Borel
+    langue: français
+    sens: nom d'un seigneur de Bellecombe
+    selon: [ emile-littre ]
+    raison: Le Littré rapporte l'hypothèse mais note que les annalistes ne disent
+      pas ce que signifiait le surnom ; si Borel signifiait bourreau, la
+      dérivation serait inverse.
+famille: [ bourreler, bourrelle ]
+themes: [ droit ]
+tradition:
+  lectures:
+    - texte: Le carcan des condamnés est comme le joug du bœuf, une sorte de lien.
+      citation: Boia est torques damnatorum, quasi iugum in bove ex genere vinculorum
+        est.
+      hypothese: boia
+      sources:
+        - ouvrage: etymologies
+          entree: V, 12
+          url: https://la.wikisource.org/wiki/Etymologiarum_libri_XX/Liber_V
+sources:
+  - ouvrage: littre
+    entree: bourreau
+  - ouvrage: tlfi
+    entree: bourreau
+redaction:
+  - par: IA
+    detail: DeepSeek Flash
+statut: brouillon
