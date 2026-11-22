@@ -24,19 +24,22 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - name: Validation des fiches, candidats et comptes
-        run: npm run valider
+        run: pnpm run valider
       - name: Build (assemble aussi src/generes/, requis par la vérification des types)
-        run: npm run build
+        run: pnpm run build
       - name: Vérification des types
-        run: npm run check
+        run: pnpm run check
       - name: Tests (dont contrat et consignes à jour)
-        run: npm test
+        run: pnpm test
       - name: Site construit, pour la publication
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-pages-artifact@v5
